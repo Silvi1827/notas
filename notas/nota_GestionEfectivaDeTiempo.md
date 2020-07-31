@@ -370,3 +370,17 @@ Keep it simple
 - Flexibilidad
 - Evaluación para rediseñar
 - Facilitar los ambientes
+## Bonus
+### *Los beneficios de la técnica Pomodoro en la educación en línea*
+
+Técnica Pomodoro
+- Bloques de tiempo
+- 25 minutos de trabajo
+- 5 minutos de tiempo
+
+¿Porque es importante?
+- Enfoque
+- Concentración
+- Frustración
+- Productividad
+- Resultados
