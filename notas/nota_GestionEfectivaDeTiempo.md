@@ -299,3 +299,62 @@ Bloquea tus aplicaciones por un periodo de tiempo
 - Forest
 
 Te ayuda a gestionar el tiempo que utilizaras para una tarea
+## Modulo 3. Profundizar en estrategias complementarias
+###Clase 16 *Emociones y tiempo libre*
+***Pensamientos recurrentes***
+Hay pensamientos recurrentes que debemos procurar de que sean positivos, evitar pensamientos de angustia e indisposición. Es importante empezar a hacer una tarea, enfocarte y tener en cuenta que esa tarea te llevara a cumplir la meta propuesta.
+La angustia y la indisposición surgen como resultado de pensar en actividades futuras, es mejor enfocarte en ser productivo tarea por tarea. Es necesario para evitar la indisposición planear y definir un espacio en tu tiempo libre.
+
+Tiempo libre
+- Igual de necesario
+- Complementa nuestra capacidad de ser productivos
+- No debe ser el tiempo que sobre, se debe planear también
+- Se relaciona directamente con ser creativos
+
+El tiempo libre activa nuestro pensamiento divergente, elimina la tensión o estrés, ayuda a que tengamos interacción social, a motivarnos y a desarrollar nuestro proyectos personales.
+
+Creatividad
+- Espacios sin tensión
+- Interacción con otros
+- Motivaciones diferentes
+- Proyectos personales
+
+***Pensamiento divergente: genera ideas creativas de forma espontánea e inconsciente
+Tiempo libre: siempre es necesario y debe ser planeado***
+###Clase 17 *Transporte y cumplimientos de compromisos*
+Los tiempos de desplazamiento y de espera pueden incidir en el cumplimiento de nuestros compromisos. Si tenemos en cuenta que dentro del día tenemos actividades de desplazamientos debemos planearlo, organizarlo y tenerlo en cuenta como tarea, ya que influye en el cumplimiento de nuestros compromisos.
+
+***Tiempos de tránsito***
+- Compromisos en lugares diferentes
+- Transporte público
+- Espacios de traslado a pie
+- Búsqueda de parqueadores
+
+***Rutas críticas***
+- ¿Es necesario ir?
+- Opción cercana
+- Orden de trayectos
+
+***Compromisos***
+- Responsabilidad con otros
+- Respetar el tiempo de otros
+- Horas de llegada
+- Honor a la palabra
+- Atención sostenida
+###Clase 18 *Optimizar el proceso para alcanzar resultados*
+***¿Enfoque en el proceso o en resultados?***
+Cuando te enfrentar a una tarea te estas enfrentado en solo tener rápido ese resultado o en verdad estas disfrutando de llegar a ese resultado.
+
+***¿Dónde está la motivación?***
+Puede que el resultado sea algo simple como sea recibir tu diploma pero en el proceso estamos logrando un aprendizaje útil, el desarrollo de una habilidad o encontrar una nueva pasión.
+
+Cada etapa de un proceso puede ser optimizado y simplificado, una forma de lograrlo es manteniendo las cosas simples (keep it simple).
+
+Keep it simple
+- Dividir en actividades o problemas más pequeños
+- Identificar ejemplos a seguir
+- Hablar con otros de sus buenas practicas
+- Desapegarse de ideas o preconceptos
+- Pedir ayuda
+
+***Keep it simple (mantener las cosas simples): tal cual su nombre lo dice, mantiene las cosas sencillas para permitirnos optimizar las tareas y disfrutar del proceso***
