@@ -1,7 +1,7 @@
 # Gestion Efectiva del Tiempo
-### Modulo 1. Conocer los conceptos de la gestión del tiempo
-#### Clase 1 *Expert Session: gestiona tu tiempo y resuelve tus dudas con Beatriz Ibañez*
-#### Clase 2 *Por qué o para qué gestionar el tiempo*
+## Modulo 1. Conocer los conceptos de la gestión del tiempo
+### Clase 1 *Expert Session: gestiona tu tiempo y resuelve tus dudas con Beatriz Ibañez*
+### Clase 2 *Por qué o para qué gestionar el tiempo*
 De seguro más de una vez en la semana te sientes abrumado y no sabes por donde comenzar el trabajo que tienes.
 
 En la actualidad hemos desarrollado una sensación de urgencia porque en las tendencias actuales, sentimos que todo va más rápido y que la velocidad aumenta, haciéndonos sentir que debemos cumplir más tareas y nos genera la necesidad de ser más efectivos.
@@ -14,12 +14,11 @@ La gestión del tiempos nos ayuda a entender como comenzar el trabajo. Los proce
 Los procesos cambian, la gestión debe cambiar
 - Tiempo: 24 horas, 7 días
 - Flujos de trabajo: procesos y actividades en todos los aspectos de tu vida.
+
 Debemos enfocarnos en mejorar y optimizar los flujos de trabajo y las tareas que debemos hacer, y así evitar sentirnos inefectivos. Es necesario tomar la decisión sobre que tareas vamos hacer y cuales no son necesarios realizarlas.
 
 *Para tener una optimización eficaz de nuestro tiempo, debemos hacer que la tecnología trabaje a nuestro favor y no sea una fuente de inefectividad*
-
-
-#### Clase 3 *Productividad*
+### Clase 3 *Productividad*
 Multitasking: Multitarea
 
 ![src/gestion_1.png](src/gestion_1.png)
@@ -47,10 +46,7 @@ La grafica nos enseña tres puntos importantes:
 - Eficacia: es el tiempo que debemos tratar de lograr. Consiste en entregarle el tiempo necesario para lograr obtener un producto de calidad
 
 ***Recuerda: estar ocupado no es lo mismo que ser productivo***
-
-
-
-#### Clase 4 *Entiéndete para organizarte*
+### Clase 4 *Entiéndete para organizarte*
 Todos tenemos el mismo tiempo, pero todos los utilizamos de manera diferente.
 ***¿En qué utilizas tu tiempo actualmente?***
 Sabes cuánto demoras o que proporción de tu tiempo utilizas para estudiar o pasar tiempo con tu familia.
@@ -64,15 +60,12 @@ Autoevaluarte te ayudara a ser consciente del tiempo, para que puedas organizart
 
 ***¿En qué aspecto de tu vida necesitas gestionar el tiempo?***
 No es necesario centrarse en una sola área para gestionar tu tiempo, tu vida es una sola. Para ayudarte, puedes utilizar el mapa de áreas de vida en donde elijes de 3 a 5 áreas principales sobre las cuales quieres trabajar en un término de tiempo.
-
-
-
-#### Clase 5 *Metas y áreas de mi vida*
+### Clase 5 *Metas y áreas de mi vida*
 Teniendo las áreas y las metas principales trazadas en nuestro mapa ya se consideran objetivos. Cualquier actividad fuera de nuestro mapa de prioridades no es productiva y nos desenfoca. Con las áreas y metas listas, debemos iniciar a definir las actividades específicas y una tiempo en el que lo vamos a hacer.
 Si una meta no tiene unas actividades claras solo se quedará como una intensión.
 
 Después de definir las áreas y metas que debemos abordar, es necesario que definamos unas actividades y tareas específicas. Al tener las tareas y un marco temporal hacemos que nuestras metas sean más realistas y construimos una ruta para ejecutarlas.
-#### Clase 6 *Priorización de tareas*
+### Clase 6 *Priorización de tareas*
 Ya tenemos áreas en que te deseas enfocar, metas u objetivos y un listado de actividades. Pero para lograr ser productivo es necesario que definamos qué es lo importante y qué es lo urgente.
 *Urgente:* requieren atención inmediata, desplaza nuestra atención y tiene fecha de entrega.
 *Importante:* producen resultados tangibles, están alineadas a una meta o estrategia común y los efectos de no realizarlas son más graves.
@@ -87,10 +80,7 @@ Ya tenemos áreas en que te deseas enfocar, metas u objetivos y un listado de ac
 La matriz de criterios de priorización también se conoce como Matriz de gestión de tiempo. Esta matriz se popularizo por el libro de los 7 Hábitos de la gente altamente efectiva de Stephen R. Covey. Covey afirma que más que gestionar el tiempo debemos gestionar la atención.
 
 ***La productividad está ligada a la Regla de Pareto, el 20% de nuestras actividades producen el 80% de los resultado. Las actividades adicionales no generan impacto relevante.***
-
-
-
-#### Clase 7 *Administración de tareas compartidas*
+### Clase 7 *Administración de tareas compartidas*
 La administración de tareas compartidas difiere un poco de tienes un equipos y necesitas delegar tareas, y organizar las tareas de tu equipo. Nos enfocaremos en las tareas que tú puedes organizar y realizar
 
 Tipos de tareas
@@ -105,10 +95,7 @@ Seguimiento
 - Hago seguimiento a otros
 
 El seguimiento es el espacio en donde buscamos a otras personas o que otra persona nos busca y esto quita tiempo, por lo cual es necesario reducir al máximo el espacio para esto. Debemos hacer el seguimiento algo efectivo, que pueda ser solucionado en el primer canal de comunicación y utilizando el menor tiempo posible. Cuando tenemos actividades de dependencia es vital que se genere un orden de actividades en un sistema definido, sencillo y que no requiera de mucho tiempo. Es importante tener un calendario general con actividades según prioridad, responsabilidades y fechas clave. Algunas estrategias que pueden servir son: crear recordatorios, tableros de trabajo y seguir herramientas colaborativas que simplifiquen el seguimiento y la ejecución.
-
-
-
-#### Clase 8 *Estrategias para realizar seguimiento*
+### Clase 8 *Estrategias para realizar seguimiento*
 Adicional a estar atento a lo que debes entregar a otras personas y lo que tienes pendiente por recibir, es importante que estas actividades las hagas de una forma organizada e intencional. Que manejes algún sistema definido, que sea sencillo y que no tengas que dedicarle mucho tiempo extra, será clave para sacarle provecho a tu tiempo y el de otros.
 Mi recomendación es, crear un calendario general a la hora de repartir responsabilidades y reflejar estas fechas clave en las agendas de todos. Tener claro la precedencia de las tareas, en que orden deben ser realizadas con prioridades y registrar en tu agenda tanto la fecha de entrega, como la fecha en que vas a realizar tu parte.
 
@@ -116,10 +103,7 @@ Algunos tips cuando alguien debe entregarte una tarea, son:
 - Crear recordatorios para preguntar a otros sobre las entregas pendientes.
 - Usar boards de trabajo conjunto con notificaciones.
 - Seguir una herramienta colaborativa de trabajo que simplifique el seguimiento y la ejecución.
-
-
-
-#### Clase 9 *Procrastinación e indecisión*
+### Clase 9 *Procrastinación e indecisión*
 ***¿Qué es procrastinación?***
 La procrastinación hace que pospongamos actividades y desviar la atención en actividades más gratificantes que son ladrones del tiempo.
 
@@ -162,3 +146,156 @@ También se enfoca en cinco fases de trabajo que son:
 
 ***Procrastinación: Acción de aplazar tareas.
 Ladrones de tiempo: Actividades, personas o cosas que te distraen. La única forma de salir de una tarea es afrontándola.***
+## Modulo 2. Implementar técnicas de gestión
+### Clase 10 *Claves para decidir sobre tu tiempo*
+***Buenas practicas***
+- Mentalidad: si hay suficiente tiempo
+- 3 C: Calma, claridad y conexión
+- Pausas entre tareas
+- Aparta espacio para planear
+- Agenda y convierte tareas
+- Saber cerrar un tema
+- Piensa en el retorno de la actividad
+- Toma decisiones
+- Define cuánto tiempo tardará
+- Diferencia entre planear y llenar una agenda
+- Escribe tus logos al finalizar el día
+
+***Mejor no…***
+- Decir que sí a todo
+- Trabajar de más
+- Ponerte metas poco realistas
+- Caer en distracciones
+- Quedarte en actividades innecesarias
+- Ser multitarea
+- Tener malos hábitos de alimentación
+- Tener un espacio desordenado
+
+***Distracción: te quita el foco de una tarea
+Actividad innecesaria: la que haces, pero no aporta a tus metas y objetivos***
+### Clase 11 *Fechas de entregas vs Fechas de realización*
+De nada sirve que pongas en tu agenda la fecha que debes entregar y el día de la entrega te sorprendas de que no hiciste nada, porque los días, semanas, meses antes no apartaste para realizar esa tarea.
+***Metas a largo plazo***
+- Tiene una fecha lejana
+- Son planes más complejos
+- Están compuestas por tareas a corto plazo
+
+Todas las metas grandes a largo plazo tienen una fecha de entrega, pero también tienen pequeñas actividades con fechas de realización.
+Cuando tenemos metas a largo plazo debemos tener en cuenta que hay otras actividades adicionales que la conforman. Debemos planear la ejecución de la meta y conocer sus actividades y el tiempo que tomara cada una de ellas. Una buena forma de hacerlo es mediante líneas regresivas.
+
+***Back To The Future***
+Una herramienta para manejar las fechas de realización y entrega es utilizar las Líneas Regresivas, que nos ayuda a planear una ruta de actividades cuanto tengo un objetivo a futuro.
+Con los objetivos a largo plazo con una fecha de entrega, las líneas regresivas nos ayudan a identificar cuáles son los pasos y tareas anteriores, sabes cuánto se tardan y agendarlo desde la fecha de entrega a la fecha de realización de la primera actividad.
+
+***Fecha de entrega: tiempo para terminar una actividad
+Fecha de realización: tiempo para iniciar una actividad***
+### Clase 12 *¿Cuántas horas tiene una semana?*
+Comenzamos la semana sin tener en cuenta la cantidad de cosas que debemos alcanzar y la disponibilidad de tiempo que tenemos.
+Lo importante no es qué tipo de herramienta utilizas, lo importante es que tu sepas como decidir y como organizarte, y que tengas una metodología clara de cómo vas a manejarte.
+Tu planeación debe tener un panorama completo de lunes a domingo, teniendo en cuenta tiempos muertos y de desplazamiento.
+
+Algunos tipos de actividades que identificamos que podemos tener son:
+- Citas con fechas
+- Tiempo libre, hobbies
+- Seguimiento a procesos
+- Fechas de entrega
+- Recordatorios
+- Actividades específicas
+- Horas de salidas (recorrido o transporte)
+### Clase 13 *Técnicas de control del tiempo*
+Uno de los temas principales a la hora de organizar tu tiempo y ejecutar los compromisos propuestos, es tener una buena metodología que te permita enfocarte y medir los tiempos que dedicas a las tareas y actividades priorizadas. Para esto, quiero mostrarte dos de las metodologías más conocidas en términos de enfoque y concentración que te invito a probar y a comentar con cual te sientes mas cómodo(a).
+
+***POMODORO***
+Esta metodología te pide que te enfoques en 25 minutos de trabajo y 5 minutos de descanso. En estos espacios de trabajo debes comprometerte completamente con la tarea propuesta y en los 5 minutos de descanso debes elegir algo sencillo que te haga descansar la mente y te evite la fatiga.
+
+***FLOWTIME***
+La técnica Flowtime, está basada en la técnica Pomodoro, pero se enfoca en no perder esos momentos de alta concentración que en algunas oportunidades nos encuentran justo al acabar los 25 minutos propuestos, y nos permite alargar por 15 o 25 minutos más, antes de tomar un descanso. Esto permite que al acabar una sección de tiempo te preguntas si puedes seguir por un espacio adicional de tiempo y así no perder ese pico de concentración y productividad.
+Para estas técnicas hay diferentes instrumentos de seguimiento en internet o aplicaciones que te pueden ayudar, pero no es necesario para comenzar. ¡Solo basta con que tengas un cronómetro y mucho compromiso con tus metas y objetivos!
+### Clase 14 *Herramientas Análogas*
+Tenemos diferentes herramientas análogas que podemos utilizar para gestionar nuestro tiempo.
+***Cuadernos***
+- Lista de tareas
+- Anotaciones amplias
+- Revisar sobre lo ejecutado
+- Anotaciones para conservar
+- Se lleva a otros lugares
+
+***Agendas***
+- Vistas de un día
+- Año completo
+- Anotaciones amplias
+- Revisar sobre lo ejecutado
+- Buen alcance hacia el futuro
+- Se llevan a otros lugares
+- Económicas
+
+***Planeadores***
+- Semana completa
+- Anotaciones cortas
+- Usualmente se eliminan
+- Visión general de un periodo de tiempo
+- ¿Las llevas contigo?
+
+***Notas adhesivas***
+- Tareas específicas
+- Rápida acción
+- Visualmente a la mano
+- Bajo relación en el tiempo
+- Quedan en un solo lugar
+
+***Tableros***
+- Tareas específicas
+- Rápida acción
+- Visualmente a la mano
+- Bajo relación en el tiempo
+- Quedan en un solo lugar
+
+***Recordar
+Análoga: medio físico
+Una solución o herramienta debe ser portable.
+Toda tarea sin una fecha es una intensión.
+Las notas adhesivas son solo recordatorios. No deberíamos usarlas como guía o agenda***
+### Clase 15 *Herramientas Digitales*
+***Agendas Digitales***
+- Citas
+- Invitados
+- Notificaciones
+- Sincronización
+- Vistas varias
+- Anotaciones amplias y cortas
+- Revisar sobre lo ejecutado
+- Se llevan a otros lugares
+
+***Recordatorios***
+- Notificaciones
+- Horas específicas
+- Alarmas
+- Tares puntuales
+- Medicamentos
+- Cuanto tiempo antes de salir
+
+***Notas***
+- Búsqueda rápida
+- Sincronización
+- Lista de tareas
+- Anotaciones amplias
+- Revisar sobre lo ejecutado
+- Anotaciones para conservar
+- Se llevan a otros lugares
+
+***Método Kanban***
+- Trello
+- Asana
+
+Este método permite ver el estado de las tareas; en proceso, por hacer o terminadas.
+
+***Bloqueo***
+- AppBlock
+
+Bloquea tus aplicaciones por un periodo de tiempo
+
+***Concentración***
+- FocusList
+- Forest
+
+Te ayuda a gestionar el tiempo que utilizaras para una tarea
