@@ -10,11 +10,11 @@ Que aprenderás:
 La termina es un programa que recibe instrucciones de una forma medianamente cómoda, las traduce a un lenguaje que el computador comprende, las ejecuta y muestra los resultados. Utiliza un entorno 100% texto, por tanto, es muy eficiente y rápida, y a través de ella se puede automatizar tareas repetitivas.
 
 Se compone de:
-- **Prompt:** que es un conjunto de caracteres al principio de cada línea y muestra información propia del sistema en que se esté utilizando.
+- **Prompt:** es un conjunto de caracteres al principio de cada línea y muestra información propia del sistema en que se esté utilizando.
 - **Cursor:** es un 'underscore' que titila en la pantalla del terminal, y en conjunto con el prompt, indica que están a la espera de recibir órdenes.
 
 En la terminal se ingresan instrucciones, también conocidas como 'comandos', los cuales están compuestos por:
-- Nombre de un programa
+- Nombre del programa
 - Parámetros
 - Modificadores
 
@@ -23,8 +23,9 @@ La terminal también cuenta con otras utilidades como:
 - Combinación de teclas
 - Sustitución de comandos
 
-**Parámetro:** información adicional para la ejecución del programa.
-**Modificadores:** alteración de lo que el programa va hacer.
+***Diferencia entre:
+Parámetro: información adicional para la ejecución del programa.
+Modificadores: alteración de lo que el programa va hacer.***
 
 Algunos comandos son:
 - date: muestra la fecha
