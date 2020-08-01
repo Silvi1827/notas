@@ -115,13 +115,15 @@ Ahora sí, cualquier archivo que guardes en esa localización podrá ser accedid
 ¡Diviértete!
 
 ***OBSERVACIÓN: Esto no esta disponible para Windows 8 y 8.1***
-
-
 ## Modulo 2. Comprender las ventajas del uso de la terminal
 ### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
+
 **Organización de información**
+
 Nuestras computadoras están llenas de información (imágenes, videos, archivos, etc.) y el almacenamiento de esta información supone dos preguntas: ¿Cómo vamos a lograr que esta información esté presente? ¿Cómo vamos a organizar esa información?
+
 De cómo almacenamos la información se encarga la computadora y el sistema operativo.
+
 Como organizamos esa información es algo que nosotros debemos resolver. Y para eso contamos de dos maneras:
 - Archivo: todo lo que contiene información
 - Directorio: una forma de agrupar archivos y otros directorios.
@@ -130,20 +132,21 @@ Todos los archivos, directorios y subdirectorios forma parte del «Árbol de dir
 Identificación de archivos
 - Nombre
 - Ubicación
+
 En un sistema de archivos no puede existir dos archivos o directorios que tengan el mismo nombre completo, si puede pasar que dos archivos tengan el mismo nombre que otros mientras vivan en diferentes directorios.
 
 Comando para organizar archivos:
 - ls: permite ver los archivos de una carpeta
-	○ ls -a: muestra los archivos, incluso los ocultos
-	○ ls -l: muestra los archivos en una lista
-	○ ls -al: muestra todos los archivos (incluido los ocultos) en una lista
+	- ls -a: muestra los archivos, incluso los ocultos
+	- ls -l: muestra los archivos en una lista
+	- ls -al: muestra todos los archivos (incluido los ocultos) en una lista
 - pwd: muestra la ruta de carpetas en la que te encuentras actualmente
 - cd: permite navegar entre carpetas
-	○ cd ~: nos envía a la ruta del usuario
-	○ cd -: nos envía al último directorio visitado
-	○ cd /: nos envía a la ruta principal
-	○ cd carpeta/: navega entre carpetas
-	○ cd ..: nos devuelve una carpeta atrás
+	- cd ~: nos envía a la ruta del usuario
+	- cd -: nos envía al último directorio visitado
+	- cd /: nos envía a la ruta principal
+	- cd carpeta/: navega entre carpetas
+	- cd ..: nos devuelve una carpeta atrás
 
 Como organizar los archivos
 - mkdir nombre: nos permite crear carpetas
