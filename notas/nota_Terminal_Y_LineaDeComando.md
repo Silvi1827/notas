@@ -114,7 +114,7 @@ Ahora sí, cualquier archivo que guardes en esa localización podrá ser accedid
 
 ¡Diviértete!
 
-***OBSERVACIÓN: Esto no esta disponible para Windows 8 y 8.1***
+***OBSERVACION: Esto no esta disponible para Windows 8 y 8.1***
 ## Modulo 2. Comprender las ventajas del uso de la terminal
 ### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
 
@@ -152,5 +152,57 @@ Como organizar los archivos
 - mkdir nombre: nos permite crear carpetas
 - cp archivo.txt carpeta/: copia un archivo
 - rm: nos permite eliminar un archivo. CUIDADO, si realizas mal este comando puedes borrar tu disco duro
-	○ rmdir: nos permite borrar una carpeta
+	- rmdir: nos permite borrar una carpeta
 - mv: nos permite mover un archivo
+
+### Clase 4 ***Práctica:** Comandos para organizar el Sistema de Archivos*
+
+### Clase 5 *Manejo de archivos de texto y utilidades interactivas*
+**Tipos de archivos**
+- Texto
+- Binario
+
+**Archivos binarios**
+- Programas ejecutables
+- Archivos de datos
+
+**Archivos de texto**
+- Páginas web
+- Código fuente
+
+**Utilidades interactivas**
+
+Programas que procesan texto en tiempo real
+
+- vim
+- nano
+
+***Archivos binarios: son archivos que solo pueden ser entendibles por las computadoras
+Archivos de texto: son todos los archivos legibles por humanos***
+
+**vim**
+- Creas o editas un archivo texto con «vim archivo.txt»
+- Ingresar oprimiendo la tecla 'i' para insertar caracteres
+- Con la tecla esc sales del modo editor
+- Guardas los cambios del archivo con ':w'
+- Sales del editor con ':q'
+- Guardar y salir al mismo tiempo ':wq' o ':x'
+
+**nano**
+- Ingresas con nano archivo.txt
+- Desde un inicio estas en modo edición
+- En la parte inferior puedes encontrar ayudas
+
+
+
+
+
+### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
+
+### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
+
+### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
+
+### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
+
+### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
