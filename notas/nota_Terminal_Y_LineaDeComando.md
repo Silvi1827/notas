@@ -155,7 +155,7 @@ Como organizar los archivos
 	- rmdir: nos permite borrar una carpeta
 - mv: nos permite mover un archivo
 
-### Clase 4 ***Práctica:** Comandos para organizar el Sistema de Archivos*
+### Clase 4 *Práctica: Comandos para organizar el Sistema de Archivos*
 
 ### Clase 5 *Manejo de archivos de texto y utilidades interactivas*
 **Tipos de archivos**
@@ -188,21 +188,28 @@ Archivos de texto: son todos los archivos legibles por humanos***
 - Sales del editor con ':q'
 - Guardar y salir al mismo tiempo ':wq' o ':x'
 
+![src/terminal_17.png](src/terminal_17.png)
+
 **nano**
 - Ingresas con nano archivo.txt
 - Desde un inicio estas en modo edición
 - En la parte inferior puedes encontrar ayudas
 
+![src/terminal_18.png](src/terminal_18.png)
 
+### Clase 6 *Utilidades batch y batch avanzadas*
+**Utilidades batch sencillas**
+- cat: permite ver el contenido de un archivo (Ej. cat nombre_archivo.txt)
+- head: permite ver las primeras líneas (Ej. head nombre_archivo.txt)
+	- head -n num: muestra las num líneas indicadas (Ej. head n- 5 nombre_archivo.txt)
+- tail: muestra las últimas líneas (Ej. tail nombre_archivo.txt)
+	- tail -n num: muestra las num líneas (Ej. tail -n 3 nombre_archivo.txt)
 
+**Utilidades batch avanzadas**
+- grep: nos permite la búsqueda por epresiones regulares, nos muestra las líneas que coincidas con la expresión que utilizamos (Ej. grep Hanks dump1.sql [comando expesión_regular archivo])
+	- grep -i: busca sin tener en cuenta la minuscula o la mayuscula (Ej. grep -i hanks dump1.sql)
+	- También podemos buscar la expresión de una frase que termina con la misma palabra que estemos buscando (Ej. grep -i "hanks'),$")
+- sed: tratamiento de flujos de caracteres, podemos editar expresiones que están dentro del flujo de texto
+- awk: sirve para el tratamiento de texto delimitado o texto estructurados como archivos separados por ';'.
 
-
-### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
-
-### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
-
-### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
-
-### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
-
-### Clase 3 *¿Qué es y cómo funciona el sistema de archivos?*
+***Procesamientos por lotes o batch: programas que procesan texto y emiten el resultado***
