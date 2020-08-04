@@ -609,7 +609,31 @@ echo “Hola Mundo!” | mail -s “Testing” TU_EMAIL
 
 Revisa tu correo (no olvides revisar la bandeja de no deseados!) y ya podrás enviarle un saludo a todos tus conocidos sin pasar por Gmail, Outlook ni nada parecido.
 
-### Clase 19 *Proximo*
+### Clase 19 *Qué son y cómo se utilizas las variables de entorno*
+
+**Variables de entorno**
+
+Es una definición global a la que todos los procesos tienen acceso y específicamente el sistema operativo o, en este caso, la terminal tiene acceso a esa variable para tomar más información sobre lo que está pasando alrededor.
+
+***$PATH*** es la variable donde se almacenan todas las rutas donde el intérprete de comando (terminal) debe ir para buscar un comando.
+
+Con el comando echo puedes ver todas las rutas donde se pueden encontrar los comandos ejecutables:
+	- echo $PATH
+
+El símbolo $ muestra el contenido de la variable, si uno escribe:
+	- echo PATH
+
+Solo se obtiene la palabra PATH impresa en la pantalla.
+
+Asignación
+- Para toda la sesión
+	- export nombre_variable = valor
+		- *export name = Silvana*
+- Para un comando
+ 	- nombre_var = valor_comando
+	 	- *name = Jazmín*
+
+Una asignación global o para toda la sesión significa que todos los procesos tiene acceso a esa variable tanto para leerlas como para modificarlas. Mientras que una asignación particular o para un comando significa que puedes definir para una ejecución en particular
 
 ## Modulo 5. Automatizar tareas: el verdadero poder de la terminal
 ### Clase 20 *Proximo*
