@@ -234,31 +234,19 @@ Los datos entran a un proceso donde son transformados y posteriormente salen com
 Los distintos canales están conectados por defecto a nuestros periféricos, pero en ocasiones queremos los datos que están en un archivo existente sean procesados sin necesidad de volverlos a ingresar, para esto usamos un proceso llamado redirección, consiste en cambiar la entrada estándar por el modificador.
 La otra forma de redirección es la redirección de la salida, que en vez de que nos muestre la información en pantalla, la almacena en algún archivo.
 
-*mysql -h 127.0.0.1 -u root -p1234 < dump1.sql*
+**mysql -h 127.0.0.1 -u root -p1234 < dump1.sql** Redirección de entrada
 
-Redirección de entrada
+**ls > archivos.txt** Redirección de salida
 
-*ls > archivos.txt*
+**ls -l >> archivo.txt**
 
-Redirección de salida
+**Pipes:** la función de los pipes es conectar los distintos procesos hechos con los tipos de redireccionamiento para reducir el tiempo que toma hacerlo todo manualmente.
 
-*ls -l >> archivo.txt*
+**ls -l |more** Nos muestra el resultado del primer comando en distintas iteraciones
 
-**Pipes**
+**cat <archivo.txt> | wc** Permite contar cuantos caracteres, palabras o líneas existe en un archivo
 
-La función de los pipes es conectar los distintos procesos hechos con los tipos de redireccionamiento para reducir el tiempo que toma hacerlo todo manualmente.
-
-*ls -l |more*
-
-Nos muestra el resultado del primer comando en distintas iteraciones
-
-*cat <archivo.txt> | wc*
-
-Permite contar cuantos caracteres, palabras o líneas existe en un archivo
-
-*cat <archivo.txt> | wc -l*
-
-Cuenta la cantidad de líneas
+**cat <archivo.txt> | wc -l** Cuenta la cantidad de líneas
 
 ### Clase 9 *Práctica: Comunicación entre procesos*
 
@@ -268,13 +256,9 @@ Ejecución en primer plano: aquellos que, mientras un comando este en ejecución
 
 Ejecución en segundo plano: aquellas que, mientras un comando está ejecutándose, puedes seguir realizando otras acciones en la terminal
 
-*mysql -h 127.0.0.1 -u root -p1234 < dump1.sql &*
+**mysql -h 127.0.0.1 -u root -p1234 < dump1.sql &** 	El símbolo ampersand (&) pone en segundo plano desde el inicio la ejecución
 
-El símbolo ampersand (&) pone en segundo plano desde el inicio la ejecución
-
-*Ctrl + Z*
-
-Pone en segundo plano durante la ejecución
+**Ctrl + Z** 	Pone en segundo plano durante la ejecución
 
 El comando *fg* coloca nuevamente el proceso en un primer plano
 
@@ -308,16 +292,15 @@ Operaciones que pueden hacerse sobre un archivo:
 
 Con el comando *ls -l*, podemos ver desde la terminal al principio de cada fila una serie de caracteres como esta:
 
-#### drwxr-xr-x
+### drwxr-xr-x
 
 Cada uno de los caracteres y su ubicación tiene un significado:
 - **Caracteres**
-
-	**d/l**, la letra que está al principio especifica que el archivo es un directorio o un link
-	**r**, lectura (read)
-	**w**, escritura (write)
-	**x**, ejecución (execute)
-	**-**, indica que no se tiene permiso o que no es un directorio o un link
+	- **d/l**, la letra que está al principio especifica que el archivo es un directorio o un link
+	- **r**, lectura (read)
+	- **w**, escritura (write)
+	- **x**, ejecución (execute)
+	- **-**, indica que no se tiene permiso o que no es un directorio o un link
 
 - **Ubicación**
 	- Primera posición: los primeros tres caracteres después del identificado de directorio hacen referencia a los permisos del dueño
@@ -328,7 +311,7 @@ Para alterar los permisos de usuarios se utiliza alguno de los siguientes comand
 - chmod: modifica los permisos individualmente
 	- chmod o-w archivo.txt
 
-	*chmod [usuario] [agregar o quitar permiso][especificar permiso] [archivo]**
+	*chmod [usuario] [agregar o quitar permiso][especificar permiso] [archivo]*
 
 	Usuarios:
 
