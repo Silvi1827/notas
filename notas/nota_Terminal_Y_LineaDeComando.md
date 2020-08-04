@@ -264,8 +264,11 @@ Ejecución en primer plano: aquellos que, mientras un comando este en ejecución
 Ejecución en segundo plano: aquellas que, mientras un comando está ejecutándose, puedes seguir realizando otras acciones en la terminal
 
 *mysql -h 127.0.0.1 -u root -p1234 < dump1.sql &*
+
 El símbolo ampersand (&) pone en segundo plano desde el inicio la ejecución
+
 *Ctrl + Z*
+
 Pone en segundo plano durante la ejecución
 
 El comando *fg* coloca nuevamente el proceso en un primer plano
@@ -287,26 +290,28 @@ Una forma de detener un proceso que se está ejecutando es con Ctrl + C, sin emb
 Desde sus comienzos Unix fue diseñado como un sistema multiusuarios, lo que implica que ciertas cuestiones básicas de seguridad están intrínseca al sistema. Una de estas cuestiones es que los archivos pertenecientes a un usuario no pueden ser accedidos por otro usuario salvo que el primer usuario le de los permisos.
 
 Usuarios
-	- Dueño
-	- Grupo
-	- Otros
+- Dueño
+- Grupo
+- Otros
 
 Todos los archivos de Unix tiene un dueño asociado, quien es la persona que ha creado el archivo; un grupo de usuarios que pueden accederlo; y, luego esta, que se le permite hacer a cualquier usuario que no sean el dueño y/o perteneciente al grupo asociado al archivo.
 
 Operaciones que pueden hacerse sobre un archivo:
-	- Lectura
-	- Escritura
-	- Ejecución
+- Lectura
+- Escritura
+- Ejecución
 
-Con el comando ls -l, podemos ver desde la terminal al principio de cada fila una serie de caracteres como esta:
+Con el comando *ls -l*, podemos ver desde la terminal al principio de cada fila una serie de caracteres como esta:
+
 ####drwxr-xr-x
+
 Cada uno de los caracteres y su ubicación tiene un significado:
 - **Caracteres**
-	**d/l**, la letra que está al principio especifica que el archivo es un directorio o un link
-	**r**, lectura (read)
-	**w**, escritura (write)
-	**x**, ejecución (execute)
-	**-**, indica que no se tiene permiso o que no es un directorio o un link
+**d/l**, la letra que está al principio especifica que el archivo es un directorio o un link
+**r**, lectura (read)
+**w**, escritura (write)
+**x**, ejecución (execute)
+**-**, indica que no se tiene permiso o que no es un directorio o un link
 
 - **Ubicación**
 	- Primera posición: los primeros tres caracteres después del identificado de directorio hacen referencia a los permisos del dueño
@@ -314,18 +319,21 @@ Cada uno de los caracteres y su ubicación tiene un significado:
 	- Tercera posición: los últimos tres caracteres son los permisos para cualquier otro usuario
 
 Para alterar los permisos de usuarios se utiliza alguno de los siguientes comandos:
-	- chmod: modifica los permisos individualmente
-		- chmod o-w archivo.txt
-		*chmod [usuario] [agregar o quitar permiso][especificar permiso] [archivo]**
+- chmod: modifica los permisos individualmente
+	- chmod o-w archivo.txt
+	*chmod [usuario] [agregar o quitar permiso][especificar permiso] [archivo]**
 
-		Usuarios:
-		- **u**, dueño (user)
-		- **g**, grupos (group)
-		- **o**, otros (other)
-		- Si no ingresas ninguna de esas tres letras al principio, hará el cambio de agregar o quitar permisos en todo
-		Agregar o quitar permisos:
-		- **+**, agrega
-		- **-**, quita
+	Usuarios:
+
+	- **u**, dueño (user)
+	- **g**, grupos (group)
+	- **o**, otros (other)
+	- Si no ingresas ninguna de esas tres letras al principio, hará el cambio de agregar o quitar permisos en todo
+
+	Agregar o quitar permisos:
+
+	- **+**, agrega
+	- **-**, quita
 
 - chown: modifica quien es el usuario que es propietario del archivo
 	- chown [usuario] archivo.sql
@@ -335,6 +343,7 @@ Para alterar los permisos de usuarios se utiliza alguno de los siguientes comand
 	- sudo chgrp [usuario] archivo.txt
 
 ***sudo permite operar como usuario root (administrador de sistema)
+
 Usuario root, existe en todo sistema Unix y es quien puede leer, escribir  y ejecutar sobre cualquier archivo del sistema más otras operaciones exclusivas para él***
 
 Notación Binaria
@@ -345,7 +354,7 @@ Notación Binaria
 - 7, permisos para la lectura, escritura y ejecución
 
 ![src/terminal_20.png](src/terminal_20.png)
-- chmod:
+- **chmod:**
 	*chmod 760 archivo.php*
 
 ### Clase 12 *Práctica: Usuarios, Grupos y Permisos*
