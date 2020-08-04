@@ -23,9 +23,11 @@ La terminal también cuenta con otras utilidades como:
 - Combinación de teclas
 - Sustitución de comandos
 
-***Diferencia entre:
-Parámetro: información adicional para la ejecución del programa.
-Modificadores: alteración de lo que el programa va hacer.***
+***Diferencia entre:***
+
+***Parámetro: información adicional para la ejecución del programa.***
+
+***Modificadores: alteración de lo que el programa va hacer.***
 
 Algunos comandos son:
 - date: muestra la fecha
@@ -429,7 +431,7 @@ Este tipo de herramienta nos funciona si queremos enviar una gran cantidad de ar
 
 ### Clase 15 *Herramientas de búsqueda de archivos*
 
-Búsqueda de archivos
+**Búsqueda de archivos**
 
 Existen herramientas que nos sirven para buscar ciertos archivos que no sabemos dónde están o que queremos agrupar en algún otro lugar, para ayudarnos tenemos tres comandos:
 - **locate:** nos permite hacer una búsqueda en todo nuestro sistema de archivos simplemente poniendo el nombre del archivo que deseamos encontrar. La desventaja está en que tenemos una base de datos de nuestro computador que debemos actualizar periódicamente.
@@ -455,7 +457,74 @@ Existen herramientas que nos sirven para buscar ciertos archivos que no sabemos 
 		- c, dispositivos de caracteres
 		- b, dispositivos de bloque
 
-### Clase 16 *Proximo*
+### Clase 16 *Herramientas para interactuar a través de HTTP*
+
+**Interacción vía HTTP**
+
+A través de la consola podemos interactuar con servidores web ya que a fin de cuentas se trata de un intercambio de texto por medio de HTTP.
+
+**Diferencias entre curl y wget**
+- wget es una fantástica herramienta para descargar contenido y archivos. Puede descargar archivos, páginas web y directorios. Contiene rutinas inteligentes para recorrer enlaces en páginas web y descargar contenido de forma recursiva a través de todo un sitio web. Es insuperable como un administrador de descarga de línea de comandos.
+- curl satisface una necesidad totalmente diferente. Sí, puede recuperar archivos, pero no puede navegar recursivamente por un sitio web en busca de contenido para recuperar. Lo que realmente hace es permitirle interactuar con sistemas remotos haciendo solicitudes a esos sistemas y recuperando y mostrando sus respuestas a usted. Esas respuestas bien podrían ser el contenido de la página web y los archivos, pero también pueden contener datos proporcionados a través de un servicio web o API como resultado de la "pregunta" formulada por la solicitud curl.
+Y no se limita a los sitios web. admite más de 20 protocolos, incluidos HTTP, HTTPS, SCP, SFTP y FTP. Y posiblemente, debido a su manejo superior de las tuberías de Linux, se puede integrar más fácilmente con otros comandos y scripts.
+
+**Comandos HTTP**
+- **curl:**
+	- Algunos ordenadores que no cuentan con curl pueden instalarlo mediante el comando
+		- sudo apt-get install curl
+	- Recuperar una página web
+		- curl url
+	- Guardar datos en un archivo
+		- curl url > nombre.html
+	- Crear un archivo y guardar los datos
+		- curl -o nombre.html url
+	- Usar una barra de progreso para supervisar la descarga
+		- curl -x -o nombre.html url
+	- Reiniciar una descarga interrumpida
+		- curl --output nombre_archivo.iso url
+	- Recuperación de encabezados HTTP
+		- curl -I url
+	- Descargar varias url a la vez. Para eso debemos copiar las URL en un archivo TXT y utilizar el comando xargs
+		1) ![src/terminal_20.png](src/terminal_20.png)
+
+		2) xargs -n 1 curl -O < urls-to-download.txt
+
+	- Ver los archivos presentes en un servidor FTP
+		- curl -u usuario:contraseña ftp://test.rebex.net/
+	- Descargar archivo de un servidor FTP
+		- curl -u usuario:contraseña ftp://test.rebex.net/readme.txt
+
+- **wget:**
+	- Descargar un único archivo
+		- wget url.iso
+	- Continuar con una descarga incompleta
+		- wget -c url.iso
+	- Si deseas descargar un sitio web completo
+		- wget -m url
+	- Para cambiar los enlaces de cada página descargada para que apunte entre sí, no a la web
+		- wget -m url --convert-links
+	- Descargar cosas como hojas de estilo, por lo que las páginas se verán correctas sin conexión.
+		- wget -m url --page-requisites
+	- Detiene la descarga de sitios primarios. Así que si quieres descargar un sitio, no terminarás con la página principal.
+		- wget -m url --no-parent
+	- Si está navegando por un servidor FTP y encuentra una carpeta completa que desea descargar, simplemente ejecute:
+		- wget -r url
+	- Descargar una lista de archivos a la vez. Para eso creas un solo archivo TXT y luego apuntas ese documento
+		1) ![src/terminal_21.png](src/terminal_21.png)
+
+		2) wget -i download.txt
+
+**NOTA**
+
+***Antes de poder usar wget, debe instalarlo. Cómo hacerlo varía dependiendo de su computadora:
+
+- La mayoría (si no todas) distribuciones de Linux vienen con wget por defecto. Así que los usuarios de Linux no tienen que hacer nada!
+
+- Los sistemas macOS no vienen con wget, pero puede instalar herramientas de línea de comandos con Homebrew. Una vez que hayas configurado Homebrew, corre en la Terminal.brew install wget
+
+- Los usuarios de Windows no tienen fácil acceso a wget en el símbolo del sistema tradicional, aunque Cygwin proporciona wget y otras utilidades GNU, y el shell Bash de Ubunto de Windows 10 también viene con wget.***
+
+
 ### Clase 17 *Proximo*
 ### Clase 18 *Proximo*
 ### Clase 19 *Proximo*
