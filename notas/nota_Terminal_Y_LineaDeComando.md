@@ -235,9 +235,11 @@ Los distintos canales están conectados por defecto a nuestros periféricos, per
 La otra forma de redirección es la redirección de la salida, que en vez de que nos muestre la información en pantalla, la almacena en algún archivo.
 
 *mysql -h 127.0.0.1 -u root -p1234 < dump1.sql*
+
 Redirección de entrada
 
 *ls > archivos.txt*
+
 Redirección de salida
 
 *ls -l >> archivo.txt*
@@ -247,12 +249,15 @@ Redirección de salida
 La función de los pipes es conectar los distintos procesos hechos con los tipos de redireccionamiento para reducir el tiempo que toma hacerlo todo manualmente.
 
 *ls -l |more*
+
 Nos muestra el resultado del primer comando en distintas iteraciones
 
 *cat <archivo.txt> | wc*
+
 Permite contar cuantos caracteres, palabras o líneas existe en un archivo
 
 *cat <archivo.txt> | wc -l*
+
 Cuenta la cantidad de líneas
 
 ### Clase 9 *Práctica: Comunicación entre procesos*
@@ -303,15 +308,16 @@ Operaciones que pueden hacerse sobre un archivo:
 
 Con el comando *ls -l*, podemos ver desde la terminal al principio de cada fila una serie de caracteres como esta:
 
-####drwxr-xr-x
+#### drwxr-xr-x
 
 Cada uno de los caracteres y su ubicación tiene un significado:
 - **Caracteres**
-**d/l**, la letra que está al principio especifica que el archivo es un directorio o un link
-**r**, lectura (read)
-**w**, escritura (write)
-**x**, ejecución (execute)
-**-**, indica que no se tiene permiso o que no es un directorio o un link
+
+	**d/l**, la letra que está al principio especifica que el archivo es un directorio o un link
+	**r**, lectura (read)
+	**w**, escritura (write)
+	**x**, ejecución (execute)
+	**-**, indica que no se tiene permiso o que no es un directorio o un link
 
 - **Ubicación**
 	- Primera posición: los primeros tres caracteres después del identificado de directorio hacen referencia a los permisos del dueño
@@ -321,6 +327,7 @@ Cada uno de los caracteres y su ubicación tiene un significado:
 Para alterar los permisos de usuarios se utiliza alguno de los siguientes comandos:
 - chmod: modifica los permisos individualmente
 	- chmod o-w archivo.txt
+
 	*chmod [usuario] [agregar o quitar permiso][especificar permiso] [archivo]**
 
 	Usuarios:
@@ -342,9 +349,9 @@ Para alterar los permisos de usuarios se utiliza alguno de los siguientes comand
 	- chgrp [usuario] archivo.txt
 	- sudo chgrp [usuario] archivo.txt
 
-***sudo permite operar como usuario root (administrador de sistema)
+***sudo permite operar como usuario root (administrador de sistema)***
 
-Usuario root, existe en todo sistema Unix y es quien puede leer, escribir  y ejecutar sobre cualquier archivo del sistema más otras operaciones exclusivas para él***
+***Usuario root, existe en todo sistema Unix y es quien puede leer, escribir  y ejecutar sobre cualquier archivo del sistema más otras operaciones exclusivas para él***
 
 Notación Binaria
 
