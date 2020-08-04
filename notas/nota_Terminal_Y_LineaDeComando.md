@@ -653,12 +653,12 @@ Esto lo podemos usar para automatizar tareas muy repetitivas y que usamos a menu
 
 ![src/terminal_33.png](src/terminal_33.png)
 
-	- #!, dice cuál es el intérprete que podrá ejecutar todos los comandos
-	- mkdir, crea un directorio
-	-	tar czf, crea una copia comprimida
-	- `date +%F`, establece la fecha como parte del archivo
-	- mv, mover archivo
-	- rmdir, elimino directorio temporal
+- #!, dice cuál es el intérprete que podrá ejecutar todos los comandos
+- mkdir, crea un directorio
+- tar czf, crea una copia comprimida
+- `date +%F`, establece la fecha como parte del archivo
+- mv, mover archivo
+- rmdir, elimino directorio temporal
 
 ***Script es un conjunto de órdenes guardadas en un archivo de texto, generalmente muy ligero y, que es ejecutado por lotes o línea a línea, en tiempo real por un intérprete.***
 
@@ -670,15 +670,15 @@ Esto lo podemos usar para automatizar tareas muy repetitivas y que usamos a menu
 
 Tenemos la posibilidad de programar comandos que se ejecuten en un tiempo específico, sin la necesidad de nuestra intervención, mediante los comandos:
 
-**Diferencias**
+**DIFERENCIAS**
 
 at ejecuta tareas en una única ejecución y cron lo realiza varias veces
 
 ***Ejemplo:***
 
-Si quieres que todos los lunes o el primer día de cada mes se eliminen los logs si no ha ocurrido nada, debes usar cron.
+- Si quieres que todos los lunes o el primer día de cada mes se eliminen los logs si no ha ocurrido nada, debes usar cron.
 
-En cambio, si solo quieres ejecutar una tarea a las x horas cuando la oficina no tenga usuarios pero no deseas quedarte tan tarde en la oficina, debes usar un at. El comando at lo ejecutara una única vez y termina, no lo volverá a repetir cada x día o cada x hora.
+- En cambio, si solo quieres ejecutar una tarea a las x horas cuando la oficina no tenga usuarios pero no deseas quedarte tan tarde en la oficina, debes usar un at. El comando at lo ejecutara una única vez y termina, no lo volverá a repetir cada x día o cada x hora.
 
 **Comandos**
 
@@ -737,19 +737,19 @@ En cambio, si solo quieres ejecutar una tarea a las x horas cuando la oficina no
 		- dow, día de la semana (puede ser número e ir del 0 al 7, donde 0 y 7 son domingos. O pueden ser las primeras tres letras del día en inglés: mon, tue, wed, thu, fri, san, sun)
 		- user, define el usuario que va a ejecutar el comando
 		- command, se refiere al comando o a la ruta absoluta del script a ser ejecutad (/home/usuario/scripts/actualizar.sh)
-	- Si resulta molesto, crontab maneja cadenas especiales cuyo uso es muy sencillos
+		- Si resulta molesto, crontab maneja cadenas especiales cuyo uso es muy sencillos
 
 ![src/terminal_37.png](src/terminal_37.png)
 
-		- Cadenas:
-			- @reboot Ejecuta una vez, al inicio
-			- @yearly ejecuta sólo una vez al año: 0 0 1 1 *
-			- @annually igual que @yearly
-			- @monthly ejecuta una vez al mes, el día primero: 0 0 1 * *
-			- @weekly Semanal el primer minuto de la primer hora de la semana. 0 0 * * 0″.
-			- @daily diario, a las 12:00A.M. 0 0 * * *
-			- @midnight igual que @daily
-			- @hourly al primer minuto de cada hora: 0 * * * *
+	- Cadenas:
+		- @reboot Ejecuta una vez, al inicio
+		- @yearly ejecuta sólo una vez al año: 0 0 1 1 *
+		- @annually igual que @yearly
+		- @monthly ejecuta una vez al mes, el día primero: 0 0 1 * *
+		- @weekly Semanal el primer minuto de la primer hora de la semana. 0 0 * * 0″.
+		- @daily diario, a las 12:00A.M. 0 0 * * *
+		- @midnight igual que @daily
+		- @hourly al primer minuto de cada hora: 0 * * * *
 	- Administración de trabajos con cron
 		- crontab archivo
 	- Reemplazar el archivo existente crontab con un archivo definido por el usuario
@@ -764,13 +764,48 @@ En cambio, si solo quieres ejecutar una tarea a las x horas cuando la oficina no
 		- crontab -u usuario
 	- Prefijo para manejar el crontab de otro usuario
 		- $ sudo crontab -l -u root
-		$ sudo crontab -e usuario2
-		#crontab -d -u usuario
+			$ sudo crontab -e usuario2
+			#crontab -d -u usuario
 
 
 ***NOTA***
+
 ***Existe un complemento del cron llamado anacron que realiza tareas si alguna razón el equipo se encontraba apagado. No es un demonio sino unos scripts que se ejecutan al inicio del equipo y comprueba las tareas perdidas del cron.***
 
 ***Por ejemplo, hubo un apagón, al reiniciar el equipo el anacron ejecutara las tareas perdidas en ese lapso de tiempo.***
 
-### Clase 22 *Proximo*
+### Clase 22 *Cómo se ejecutan los comandos estudiados en Windows y MacOS*
+
+Además del terminal que utilizamos durante el curso (bash), existen muchos otros. Solamente en ambientes tipo Unix-like (Linux, BSD, etc…) puedes encontrarte con Korn-Shell y Zsh.
+
+Se trata de otros intérpretes que incorporan diferentes atajos, pero que esencialmente permiten realizar las mismas tareas, ya que en el fondo simplemente ejecutan los mismos comandos que están presentes en el sistema.
+
+Una terminal bastante diferente de la que vimos en el curso es la que viene de fábrica junto con Windows: el programa CMD.
+
+![src/terminal_38.png](src/terminal_38.png)
+
+Cuando ingreses en esa terminal verás algo así:
+
+![src/terminal_39.png](src/terminal_39.png)
+
+Esta terminal está basada en el viejo DOS, algunos comandos son iguales, otros son similares:
+
+![src/terminal_41.png](src/terminal_41.png)
+
+En esta consola puedes también crear scripts, claro que no serán basados en la sintaxis de bash, sino en la sintaxis batch.
+
+Otra consola interesante que trae Windows es PowerShell:
+
+![src/terminal_42.png](src/terminal_42.png)
+
+A la que puedes acceder mediante:
+
+![src/terminal_43.png](src/terminal_43.png)
+
+Una vez allí puedes utilizar todas las herramientas básicas de la terminal CMD, además de una serie de herramientas avanzadas que puedes encontrar con sólo escribir get-command y dar enter.
+
+Puedes ver más información sobre esta terminal [aqui](http://https://esgeeks.com/como-usar-windows-powershell-guia-basica/ "aqui")
+
+Los comandos básicos de MacOS son los mismos que viste en el curso, aunque podrían tener ligeras variaciones en cuanto a sus modificadores.
+
+Lo importante es que hayas aprendido una nueva forma de interactuar con tu computadora, mucho más eficiente y, quién te dice, cómoda.
