@@ -618,10 +618,12 @@ Es una definición global a la que todos los procesos tienen acceso y específic
 ***$PATH*** es la variable donde se almacenan todas las rutas donde el intérprete de comando (terminal) debe ir para buscar un comando.
 
 Con el comando echo puedes ver todas las rutas donde se pueden encontrar los comandos ejecutables:
-	- echo $PATH
+
+		- echo $PATH
 
 El símbolo $ muestra el contenido de la variable, si uno escribe:
-	- echo PATH
+
+		- echo PATH
 
 Solo se obtiene la palabra PATH impresa en la pantalla.
 
@@ -636,6 +638,139 @@ Asignación
 Una asignación global o para toda la sesión significa que todos los procesos tiene acceso a esa variable tanto para leerlas como para modificarlas. Mientras que una asignación particular o para un comando significa que puedes definir para una ejecución en particular
 
 ## Modulo 5. Automatizar tareas: el verdadero poder de la terminal
-### Clase 20 *Proximo*
-### Clase 21 *Proximo*
+### Clase 20 *Cómo y para qué escribir scripts en bash*
+
+**Scripting bash**
+
+El bash es un intérprete de comandos y, a su vez, un lenguaje de programación. Esto nos permite hacer ciertos scripts usando la sintaxis del bash. Estos scripts lo que harán será llamar a otros comandos, evaluar condiciones y ejecutarse en base a eso, lo que nos da la posibilidad de crear nuestros propios comandos.
+Esto lo podemos usar para automatizar tareas muy repetitivas y que usamos a menudo, poniendo todos los comandos utilizados en un mismo script.
+
+- Ingresamos o creamos un script con
+
+![src/terminal_32.png](src/terminal_32.png)
+
+- Ingresamos el script y los comandos que deseamos ejecutar
+
+![src/terminal_33.png](src/terminal_33.png)
+
+	- #!, dice cuál es el intérprete que podrá ejecutar todos los comandos
+	- mkdir, crea un directorio
+	-	tar czf, crea una copia comprimida
+	- `date +%F`, establece la fecha como parte del archivo
+	- mv, mover archivo
+	- rmdir, elimino directorio temporal
+
+***Script es un conjunto de órdenes guardadas en un archivo de texto, generalmente muy ligero y, que es ejecutado por lotes o línea a línea, en tiempo real por un intérprete.***
+
+***Los scripts son pequeños programas que no son compilados, es decir, por lo general necesitan de un programa lector o interprete que codifique la información del script y lo lleve a lenguaje de máquina, para que la información sea procesada y ejecutada por el ordenador.***
+
+### Clase 21 *Cómo y para que dejar tareas programadas*
+
+**Programación de tareas**
+
+Tenemos la posibilidad de programar comandos que se ejecuten en un tiempo específico, sin la necesidad de nuestra intervención, mediante los comandos:
+
+**Diferencias**
+
+at ejecuta tareas en una única ejecución y cron lo realiza varias veces
+
+***Ejemplo:***
+
+Si quieres que todos los lunes o el primer día de cada mes se eliminen los logs si no ha ocurrido nada, debes usar cron.
+
+En cambio, si solo quieres ejecutar una tarea a las x horas cuando la oficina no tenga usuarios pero no deseas quedarte tan tarde en la oficina, debes usar un at. El comando at lo ejecutara una única vez y termina, no lo volverá a repetir cada x día o cada x hora.
+
+**Comandos**
+
+- **at**
+	- Instalación de paquete en CentOS, Fedora y Red Hat
+		- yum -y install at
+		- service atd start
+	- Instalación en openSUSE y SUSE
+		- yast -i at
+		- rcatd start
+	- Uso
+		- at hora:minuto
+			- at 17:30
+		- at hora:minuto mes día
+			- at 18:30 Sep 27
+		- at hora:minuto mes día año
+			- at 18:30 Sep 27 2020
+		- at MM/DD/AAAA (mes, día, año)
+			- at 10:30 07152020
+			- at 10:30 07/15/2020
+			- at 10:30 07.15.2020
+		- at hora:minuto now + número_tiempo
+			- at 10:30 now + 15 days
+			- at 10:30 now + 6 weeks
+			- at 10:30 now + 1 years
+		- Ejecutar un comando hoy o mañana
+		 	- at 12:25 tomorrow (mañana)
+			- at 12:25 today (hoy)
+		- Para ejecutar un archivo especifico en lugar de la entrada estándar utilizas la opción -f
+			- at 10:30 today -f /home/usuario/bin/trabajo.sh
+			- at 10:30 today < /home/usuario/bin/trabajo.sh
+
+- **cron**
+	- Iniciar cron
+
+![src/terminal_34.png](src/terminal_34.png)
+
+	- Si el servicio no está configurado para arrancar desde un principio
+	 	- #> chkconfig
+
+	- Creamos un script llamado cron
+
+![src/terminal_35.png](src/terminal_35.png)
+
+	- Guardamos el script como actualizacion.sh y cambiamos los permisos de ejecución
+
+![src/terminal_36.png](src/terminal_36.png)
+
+	- Ejecutamos la edición del crontab con crontab -e. NOTA: algunas distribuciones (como ubuntu) deja elegir la opción del editor, los demás se quedan con vim
+
+![src/terminal_37.png](src/terminal_37.png)
+
+		- m, minuto (van de 0 a 59)
+		- h, hora (van del 0 a 23, siendo 0 las 12:00 de la medianoche)
+		- dom, día del mes
+		- dow, día de la semana (puede ser número e ir del 0 al 7, donde 0 y 7 son domingos. O pueden ser las primeras tres letras del día en inglés: mon, tue, wed, thu, fri, san, sun)
+		- user, define el usuario que va a ejecutar el comando
+		- command, se refiere al comando o a la ruta absoluta del script a ser ejecutad (/home/usuario/scripts/actualizar.sh)
+	- Si resulta molesto, crontab maneja cadenas especiales cuyo uso es muy sencillos
+
+![src/terminal_37.png](src/terminal_37.png)
+
+		- Cadenas:
+			- @reboot Ejecuta una vez, al inicio
+			- @yearly ejecuta sólo una vez al año: 0 0 1 1 *
+			- @annually igual que @yearly
+			- @monthly ejecuta una vez al mes, el día primero: 0 0 1 * *
+			- @weekly Semanal el primer minuto de la primer hora de la semana. 0 0 * * 0″.
+			- @daily diario, a las 12:00A.M. 0 0 * * *
+			- @midnight igual que @daily
+			- @hourly al primer minuto de cada hora: 0 * * * *
+	- Administración de trabajos con cron
+		- crontab archivo
+	- Reemplazar el archivo existente crontab con un archivo definido por el usuario
+		- crontab -e
+	- Editar el archivo, cada nueva línea será una nueva tarea
+		- crontab -l
+	- Lista todas las tareas de crontab
+		- crontab -d
+	- Borrar el crontab
+		- crontab -c dir
+	- Define el directorio de crontab del usuario
+		- crontab -u usuario
+	- Prefijo para manejar el crontab de otro usuario
+		- $ sudo crontab -l -u root
+		$ sudo crontab -e usuario2
+		#crontab -d -u usuario
+
+
+***NOTA***
+***Existe un complemento del cron llamado anacron que realiza tareas si alguna razón el equipo se encontraba apagado. No es un demonio sino unos scripts que se ejecutan al inicio del equipo y comprueba las tareas perdidas del cron.***
+
+***Por ejemplo, hubo un apagón, al reiniciar el equipo el anacron ejecutara las tareas perdidas en ese lapso de tiempo.***
+
 ### Clase 22 *Proximo*
