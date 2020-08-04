@@ -234,19 +234,19 @@ Los datos entran a un proceso donde son transformados y posteriormente salen com
 Los distintos canales están conectados por defecto a nuestros periféricos, pero en ocasiones queremos los datos que están en un archivo existente sean procesados sin necesidad de volverlos a ingresar, para esto usamos un proceso llamado redirección, consiste en cambiar la entrada estándar por el modificador.
 La otra forma de redirección es la redirección de la salida, que en vez de que nos muestre la información en pantalla, la almacena en algún archivo.
 
-**mysql -h 127.0.0.1 -u root -p1234 < dump1.sql** Redirección de entrada
+- **mysql -h 127.0.0.1 -u root -p1234 < dump1.sql** Redirección de entrada
 
-**ls > archivos.txt** Redirección de salida
+- **ls > archivos.txt** Redirección de salida
 
-**ls -l >> archivo.txt**
+- **ls -l >> archivo.txt**
 
-**Pipes:** la función de los pipes es conectar los distintos procesos hechos con los tipos de redireccionamiento para reducir el tiempo que toma hacerlo todo manualmente.
+**Pipes**
 
-**ls -l |more** Nos muestra el resultado del primer comando en distintas iteraciones
+La función de los pipes es conectar los distintos procesos hechos con los tipos de redireccionamiento para reducir el tiempo que toma hacerlo todo manualmente.
 
-**cat <archivo.txt> | wc** Permite contar cuantos caracteres, palabras o líneas existe en un archivo
-
-**cat <archivo.txt> | wc -l** Cuenta la cantidad de líneas
+- **ls -l |more** Nos muestra el resultado del primer comando en distintas iteraciones
+- **cat <archivo.txt> | wc** Permite contar cuantos caracteres, palabras o líneas existe en un archivo
+- **cat <archivo.txt> | wc -l** Cuenta la cantidad de líneas
 
 ### Clase 9 *Práctica: Comunicación entre procesos*
 
