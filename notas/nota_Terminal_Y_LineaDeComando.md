@@ -395,8 +395,66 @@ Existen otros tipos de administradores que tratan de ser un poco más genéricos
 - homebrew: es un sistema de gestión de paquetes en los sistemas operativos Mac OS de Apple y GNU/Linux
 
 ## Modulo 4. Conocer herramientas avanzadas
-### Clase 14 *Proximo*
-### Clase 15 *Proximo*
+### Clase 14 *Herramientas de compresión y combinación de archivos*
+
+**Compresión de archivos**
+
+Cada vez que queremos enviar un archivo por internet o cuando tenemos un archivo en nuestra computadora sin usar, las herramientas de compresión de archivos pueden ser de gran ayuda, ya que comprimen el archivo y a su disminuyen el tamaño
+
+- **Comprimir**
+	- gzip nombre_archivo.txt
+- **Descomprimir**
+	- gzip -d nombre_archivo.txt.gz
+- **Ver tamaño del archivo**
+	- ls archivo.txt -lh
+- **Verificar la extensión del archivo**
+	- ls archivo_nombre*
+
+**Combinación de archivos**
+
+Este tipo de herramienta nos funciona si queremos enviar una gran cantidad de archivos.
+
+- **Agrupa varios archivos en uno nuevo**
+	- tar cf nombre_crear.tar archivo_agrupar.txt archivo2_agrupar.txt
+- **Agrupa todos los archivos del directorio en uno solo**
+	- tar cf nombre_crear.tar nombre_directorio/*
+- **Ver el contenido del archivo**
+	- tar tf archivo.tar
+- **Sacar los archivos**
+	- tar xf archivo.tar
+- **Crear un archivo comprimido**
+	- tar czf archivo.tgz ./*
+- **Descomprimir el archivo**
+	- tar xzd archivo.tgz
+
+### Clase 15 *Herramientas de búsqueda de archivos*
+
+Búsqueda de archivos
+
+Existen herramientas que nos sirven para buscar ciertos archivos que no sabemos dónde están o que queremos agrupar en algún otro lugar, para ayudarnos tenemos tres comandos:
+- **locate:** nos permite hacer una búsqueda en todo nuestro sistema de archivos simplemente poniendo el nombre del archivo que deseamos encontrar. La desventaja está en que tenemos una base de datos de nuestro computador que debemos actualizar periódicamente.
+	- Buscar archivo:
+		- locate nombre_archivo.txt
+	- Actualizar la base de datos
+		- sudo updatedb
+- **whereis:** nos permite encontrar comandos
+	- whereis comando
+- **find:** busca dentro de un árbol de directorios que le identificamos utilizando una serie de criterios
+ 	- Buscar por usuario y permiso
+		- find directorio -user nombre_usuario -perm número_permiso
+	- Buscar por usuario
+		- find directorio -user nombre_usuario
+	- Buscar por un periodo de tiempo especifico
+		- find directorio -type f -mtime +tiempo
+	- Permite ejecutar una operación sobre los archivos encontrados
+		- find directorio -type bandera -mtime +tiempo -exec operación archivo
+	- Banderas
+		- f, archivo normal
+		- d, directorio
+		- l, enlace
+		- c, dispositivos de caracteres
+		- b, dispositivos de bloque
+
 ### Clase 16 *Proximo*
 ### Clase 17 *Proximo*
 ### Clase 18 *Proximo*
