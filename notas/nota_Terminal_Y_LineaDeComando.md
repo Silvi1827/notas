@@ -716,10 +716,10 @@ at ejecuta tareas en una única ejecución y cron lo realiza varias veces
 
 ![src/terminal_34.png](src/terminal_34.png)
 
-	- Si el servicio no está configurado para arrancar desde un principio
-	 	- #> chkconfig
+- Si el servicio no está configurado para arrancar desde un principio
+ 	- #> chkconfig
 
-	- Creamos un script llamado cron
+- Creamos un script llamado cron
 
 ![src/terminal_35.png](src/terminal_35.png)
 
