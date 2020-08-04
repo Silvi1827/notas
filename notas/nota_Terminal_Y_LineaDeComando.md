@@ -713,60 +713,56 @@ at ejecuta tareas en una única ejecución y cron lo realiza varias veces
 
 - **cron**
 	- Iniciar cron
+		- ![src/terminal_34.png](src/terminal_34.png)
 
-![src/terminal_34.png](src/terminal_34.png)
+	- Si el servicio no está configurado para arrancar desde un principio
+		- #> chkconfig
 
-- Si el servicio no está configurado para arrancar desde un principio
-	- #> chkconfig
+	- Creamos un script llamado cron
+		- ![src/terminal_35.png](src/terminal_35.png)
 
-- Creamos un script llamado cron
+	- Guardamos el script como actualizacion.sh y cambiamos los permisos de ejecución
+		- ![src/terminal_36.png](src/terminal_36.png)
 
-![src/terminal_35.png](src/terminal_35.png)
+	- Ejecutamos la edición del crontab con crontab -e. NOTA: algunas distribuciones (como ubuntu) deja elegir la opción del editor, los demás se quedan con vim
+		- ![src/terminal_37.png](src/terminal_37.png)
 
-- Guardamos el script como actualizacion.sh y cambiamos los permisos de ejecución
+			- m, minuto (van de 0 a 59)
+			- h, hora (van del 0 a 23, siendo 0 las 12:00 de la medianoche)
+			- dom, día del mes
+			- dow, día de la semana (puede ser número e ir del 0 al 7, donde 0 y 7 son domingos. O pueden ser las primeras tres letras del día en inglés: mon, tue, wed, thu, fri, san, sun)
+			- user, define el usuario que va a ejecutar el comando
+			- command, se refiere al comando o a la ruta absoluta del script a ser ejecutad (/home/usuario/scripts/actualizar.sh)
 
-![src/terminal_36.png](src/terminal_36.png)
+	- Si resulta molesto, crontab maneja cadenas especiales cuyo uso es muy sencillos
+		- ![src/terminal_37.png](src/terminal_37.png)
 
-- Ejecutamos la edición del crontab con crontab -e. NOTA: algunas distribuciones (como ubuntu) deja elegir la opción del editor, los demás se quedan con vim
+			- Cadenas:
+				- @reboot Ejecuta una vez, al inicio
+				- @yearly ejecuta sólo una vez al año: 0 0 1 1 *
+				- @annually igual que @yearly
+				- @monthly ejecuta una vez al mes, el día primero: 0 0 1 * *
+				- @weekly Semanal el primer minuto de la primer hora de la semana. 0 0 * * 0″.
+				- @daily diario, a las 12:00A.M. 0 0 * * *
+				- @midnight igual que @daily
+				- @hourly al primer minuto de cada hora: 0 * * * *
 
-![src/terminal_37.png](src/terminal_37.png)
-
-	- m, minuto (van de 0 a 59)
-	- h, hora (van del 0 a 23, siendo 0 las 12:00 de la medianoche)
-	- dom, día del mes
-	- dow, día de la semana (puede ser número e ir del 0 al 7, donde 0 y 7 son domingos. O pueden ser las primeras tres letras del día en inglés: mon, tue, wed, thu, fri, san, sun)
-	- user, define el usuario que va a ejecutar el comando
-	- command, se refiere al comando o a la ruta absoluta del script a ser ejecutad (/home/usuario/scripts/actualizar.sh)
-
-- Si resulta molesto, crontab maneja cadenas especiales cuyo uso es muy sencillos
-
-![src/terminal_37.png](src/terminal_37.png)
-
-- Cadenas:
-	- @reboot Ejecuta una vez, al inicio
-	- @yearly ejecuta sólo una vez al año: 0 0 1 1 *
-	- @annually igual que @yearly
-	- @monthly ejecuta una vez al mes, el día primero: 0 0 1 * *
-	- @weekly Semanal el primer minuto de la primer hora de la semana. 0 0 * * 0″.
-	- @daily diario, a las 12:00A.M. 0 0 * * *
-	- @midnight igual que @daily
-	- @hourly al primer minuto de cada hora: 0 * * * *
-- Administración de trabajos con cron
-	- crontab archivo
-- Reemplazar el archivo existente crontab con un archivo definido por el usuario
-	- crontab -e
-- Editar el archivo, cada nueva línea será una nueva tarea
-	- crontab -l
-- Lista todas las tareas de crontab
-	- crontab -d
-- Borrar el crontab
-	- crontab -c dir
-- Define el directorio de crontab del usuario
-	- crontab -u usuario
-- Prefijo para manejar el crontab de otro usuario
-	- $ sudo crontab -l -u root
-		$ sudo crontab -e usuario2
-		#crontab -d -u usuario
+	- Administración de trabajos con cron
+		- crontab archivo
+	- Reemplazar el archivo existente crontab con un archivo definido por el usuario
+		- crontab -e
+	- Editar el archivo, cada nueva línea será una nueva tarea
+		- crontab -l
+	- Lista todas las tareas de crontab
+		- crontab -d
+	- Borrar el crontab
+		- crontab -c dir
+	- Define el directorio de crontab del usuario
+		- crontab -u usuario
+	- Prefijo para manejar el crontab de otro usuario
+		- $ sudo crontab -l -u root
+		- $ sudo crontab -e usuario2
+		- #crontab -d -u usuario
 
 ***NOTA***
 
@@ -809,3 +805,5 @@ Puedes ver más información sobre esta terminal [aqui](http://https://esgeeks.c
 Los comandos básicos de MacOS son los mismos que viste en el curso, aunque podrían tener ligeras variaciones en cuanto a sus modificadores.
 
 Lo importante es que hayas aprendido una nueva forma de interactuar con tu computadora, mucho más eficiente y, quién te dice, cómoda.
+
+### Clase 23 *Repaso y próximos pasos*
