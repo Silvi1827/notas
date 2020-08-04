@@ -524,9 +524,91 @@ Y no se limita a los sitios web. admite más de 20 protocolos, incluidos HTTP, H
 
 ***- Los usuarios de Windows no tienen fácil acceso a wget en el símbolo del sistema tradicional, aunque Cygwin proporciona wget y otras utilidades GNU, y el shell Bash de Ubunto de Windows 10 también viene con wget.***
 
+### Clase 17 *Acceso seguro a otras computadoras*
 
-### Clase 17 *Proximo*
-### Clase 18 *Proximo*
+Ejecutar comandos de manera remota conlleva un riego. Cuando estamos enviando información de forma remota, dicha información puede ser interceptada por algún agente maliciosos (hacker), una solución popular para esto es utilizar conexiones seguras por lo que los datos se encriptaran haciendo que la información se modifique y quede ilegible para alguien que intente leerla.
+
+- Conectarnos a otra computadora mediante usuarios
+	- ssh nombre_usuario
+	- ssh dominio_host
+- Enviar un correo
+	- echo "mensaje" | mail -s "asunto del mail" dirección_correo
+
+**RECUERDA:** para que el comando mail funcione debes tener algunas configuraciones previas
+
+**NOTA**
+
+Una clave SSH es uno de los dos archivos utilizados en un método de autenticación conocido como autenticación de clave pública SSH. En este método de autenticación, un archivo (conocido como la clave privada) generalmente se mantiene en el lado del cliente y el otro archivo (conocido como la clave pública) se almacena en el lado del servidor.
+No hay dos pares de claves SSH iguales. Entonces, en teoría, puede usar un par para la autenticación. Así es como funciona
+
+### Clase 18 *Configuración de un servicio de mailing*
+
+Para poder enviar correos desde la terminal necesitamos contar con algunas utilidades en nuestra computadora.
+
+La primera de ellas es postfix, un servidor de correo que se encargará de las tareas de comunicación con los servidores de destino.
+
+En esta lectura asumiré que estás trabajando con alguna versión de Ubuntu, si no es así, los comandos podrían variar ligeramente.
+
+Abre una terminal y asegúrate de tener tu sistema de paquetes al día usando el comando sudo apt update.
+
+A continuación instala postfix utilizando el comando: sudo DEBIAN_PRIORITY=low apt install postfix.
+
+Te encontrarás con una pantalla como esta:
+
+![src/terminal_23.png](src/terminal_23.png)
+
+Selecciona “Sitio de Internet” y dale “Aceptar”.
+
+Te encontrarás con una pantalla como esta:
+
+![src/terminal_24.png](src/terminal_24.png)
+
+Dale aceptar y pasarás a una pantalla como esta:
+
+![src/terminal_25.png](src/terminal_25.png)
+
+Ingresa aquí tu dirección de correo electrónico.
+
+Dale aceptar y verás lo siguiente:
+
+![src/terminal_26.png](src/terminal_26.png)
+
+Dale aceptar y continúa:
+
+![src/terminal_27.png](src/terminal_27.png)
+
+Responde “No” y avanza a:
+
+![src/terminal_28.png](src/terminal_28.png)
+
+Dale aceptar. Sigue con:
+
+![src/terminal_29.png](src/terminal_29.png)
+
+Acepta y continúa:
+
+![src/terminal_30.png](src/terminal_30.png)
+
+Aceptar.
+
+![src/terminal_31.png](src/terminal_31.png)
+
+Selecciona “Todos” y da “Aceptar”.
+
+Con eso finalizará el asistente para la configuración de postfix y la instalación habrá finalizado.
+
+Instala las utilidades de correo con el comando:
+
+sudo apt install mailutils
+
+Y ahora sí, tienes todo lo que necesitas para enviar correos desde la terminal.
+
+Puedes probarlo usando el comando:
+
+echo “Hola Mundo!” | mail -s “Testing” TU_EMAIL
+
+Revisa tu correo (no olvides revisar la bandeja de no deseados!) y ya podrás enviarle un saludo a todos tus conocidos sin pasar por Gmail, Outlook ni nada parecido.
+
 ### Clase 19 *Proximo*
 
 ## Modulo 5. Automatizar tareas: el verdadero poder de la terminal
