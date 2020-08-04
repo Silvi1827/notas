@@ -485,9 +485,9 @@ Y no se limita a los sitios web. admite más de 20 protocolos, incluidos HTTP, H
 	- Recuperación de encabezados HTTP
 		- curl -I url
 	- Descargar varias url a la vez. Para eso debemos copiar las URL en un archivo TXT y utilizar el comando xargs
-		1) ![src/terminal_20.png](src/terminal_20.png)
+	1) ![src/terminal_21.png](src/terminal_21.png)
 
-		2) xargs -n 1 curl -O < urls-to-download.txt
+	2) xargs -n 1 curl -O < urls-to-download.txt
 
 	- Ver los archivos presentes en un servidor FTP
 		- curl -u usuario:contraseña ftp://test.rebex.net/
@@ -510,19 +510,19 @@ Y no se limita a los sitios web. admite más de 20 protocolos, incluidos HTTP, H
 	- Si está navegando por un servidor FTP y encuentra una carpeta completa que desea descargar, simplemente ejecute:
 		- wget -r url
 	- Descargar una lista de archivos a la vez. Para eso creas un solo archivo TXT y luego apuntas ese documento
-		1) ![src/terminal_21.png](src/terminal_21.png)
+	1) ![src/terminal_22.png](src/terminal_22.png)
 
-		2) wget -i download.txt
+	2) wget -i download.txt
 
 **NOTA**
 
-***Antes de poder usar wget, debe instalarlo. Cómo hacerlo varía dependiendo de su computadora:
+***Antes de poder usar wget, debe instalarlo. Cómo hacerlo varía dependiendo de su computadora:***
 
-- La mayoría (si no todas) distribuciones de Linux vienen con wget por defecto. Así que los usuarios de Linux no tienen que hacer nada!
+***- La mayoría (si no todas) distribuciones de Linux vienen con wget por defecto. Así que los usuarios de Linux no tienen que hacer nada!***
 
-- Los sistemas macOS no vienen con wget, pero puede instalar herramientas de línea de comandos con Homebrew. Una vez que hayas configurado Homebrew, corre en la Terminal.brew install wget
+***- Los sistemas macOS no vienen con wget, pero puede instalar herramientas de línea de comandos con Homebrew. Una vez que hayas configurado Homebrew, corre en la Terminal.brew install wget***
 
-- Los usuarios de Windows no tienen fácil acceso a wget en el símbolo del sistema tradicional, aunque Cygwin proporciona wget y otras utilidades GNU, y el shell Bash de Ubunto de Windows 10 también viene con wget.***
+***- Los usuarios de Windows no tienen fácil acceso a wget en el símbolo del sistema tradicional, aunque Cygwin proporciona wget y otras utilidades GNU, y el shell Bash de Ubunto de Windows 10 también viene con wget.***
 
 
 ### Clase 17 *Proximo*
