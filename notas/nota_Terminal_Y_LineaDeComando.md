@@ -619,11 +619,11 @@ Es una definición global a la que todos los procesos tienen acceso y específic
 
 Con el comando echo puedes ver todas las rutas donde se pueden encontrar los comandos ejecutables:
 
-		- echo $PATH
+	- echo $PATH
 
 El símbolo $ muestra el contenido de la variable, si uno escribe:
 
-		- echo PATH
+	- echo PATH
 
 Solo se obtiene la palabra PATH impresa en la pantalla.
 
@@ -716,10 +716,11 @@ at ejecuta tareas en una única ejecución y cron lo realiza varias veces
 
 ![src/terminal_34.png](src/terminal_34.png)
 
-- Si el servicio no está configurado para arrancar desde un principio
- 	- #> chkconfig
+	- Si el servicio no está configurado para arrancar desde un principio
 
-- Creamos un script llamado cron
+		- #> chkconfig
+
+	- Creamos un script llamado cron
 
 ![src/terminal_35.png](src/terminal_35.png)
 
