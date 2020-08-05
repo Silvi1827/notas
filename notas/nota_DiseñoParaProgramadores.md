@@ -166,24 +166,182 @@ Ejemplo de [wireframes](https://github.com/mssroboto/diseno-para-programadores/t
 
 Podemos hacerlo de mucha manera, como grabarle a una persona interactuando con los papeles.
 
+**Importancia del wireframes**
+
 Hacer wireframes no solo es muy importante para diseño, sino que también lo es para desarrollo, y es importante incluir al equipo de desarrollo en esta etapa porque comienzan a saber que tamaño tendrá la aplicación. También es importante negociar esta etapa con el cliente y así se va haciendo a la idea de que secciones tendrá su producto.
 
 ## Modulo 4. Aprender sobre Diseño de interfaz de usuario
 
 ### Clase 11 *Definición de diseño UI*
+
+El Diseño UI o diseño de interfaz de usuario es el diseño que se enfoca en crear la capa de estilos visuales y los estilos que van por encima de la estructura de contenido.
+
+**¿En qué se diferencia del diseño UX?**
+
+El diseño UX se enfoca en la investigación, prototipado y en la arquitectura de información.
+
+![src/diseño_4.png](src/diseño_4.png)
+
+- **Diseño UX:** crea la base sobre la que vamos a trabajar.
+- **Diseño UI:** crea el diseño visual.
+
+Cuando trabajamos con el diseño UX y el diseño UI de la mano podemos garantizar que nuestro será bonito, estéticamente agradable y funcional para todos nuestros usuarios.
+
 ### Clase 12 *Moodboard y línea gráfica*
+
+Moodboard es un documento o un tablero en el que empezamos a recopilar referencia visuales de estilos, colores y todo lo que nos parezca atractivo y llamativo que podamos añadirle a nuestra aplicación.
+
+No hay reglas con el Moodboard, puedes usar recortes o aplicaciones como [Pinterest](https://www.pinterest.es/..pdf "Pinterest").
+
+Si te gusta un color, una fuente, un estilo de fotografía o un estilo de ilustración, todo esto lo puedes guardar en tu Moodboard.
+
 ### Clase 13 *Teoría del color*
+
+Ya seleccionaste en tu Moodboard los colores y los estilos gráficos que te llaman la atención, pero como sabemos que esos colores son funcionales y te ayudaran a transmitir el concepto que deseas, para eso es necesario aplicar la teoría del color y para esto necesitamos saber sobre la psicología del color.
+
+**Psicología del color:** es un área de estudio que se dedica a investigar la forma en la que el cerebro percibe los colores y los asocia con diferentes colores.
+
+![src/diseño_4.5.png](src/diseño_4.5.png)
+
+Muchas marcas utilizan la psicología de los colores para posicionarse en el mercado.
+
+**Tips para seleccionar colores para web**
+
+- Utiliza color RGB y hexadecimales.
+- Crea un código de color consistente.
+- Menos es más. El exceso de color hace que los usuarios no se puedan enfocar en una acción a la vez.
+- Asegúrate de que tu elección de color sea accesible.
+- Define una paleta de color.
+
 ### Clase 14 *Paletas de color*
+
+Para construir una paleta de color hay que tener en claro los tipos de colores que existen.
+
+- **Color primario:** son los colores amarillo, rojo y azul.
+- **Color secundario:** son los colores resultantes de la mezcla de los colores primarios.
+- **Color terciario:** son los colores que se encuentran entre un color primario y un color secundario. Ellos resultan de la combinación de un color primario y uno secundario.
+
+Ya teniendo en claro estos conceptos podemos ver que tipos de paletas de colores queremos usar.
+
+**Tipos de paletas**
+
+- **Combinación monocromática:** consiste en tener un color y cambiarle los niveles de opacidad.
+
+![src/diseño_5.png](src/diseño_5.png)
+
+- **Combinación análoga:** consiste en combinar un color primario, uno terciario y uno secundario que estén seguidos en nuestro circulo cromático.
+
+![src/diseño_6.png](src/diseño_6.png)
+
+- **Combinación complementaria:** consiste en combinar un color primario y uno secundario, estos colores están opuestos en el circulo cromático y lo puedes encontrar en cualquier grafica de circulo cromático.
+
+![src/diseño_7.png](src/diseño_7.png)
+
+- **Combinación triádica:** consiste en crear un triángulo en la mitad del circulo cromático, a medida que lo vas girando notas que las puntas del triángulo apunta a un color.
+
+![src/diseño_8.png](src/diseño_8.png)
+
+- **Combinación tétrada:** consiste en crear un rectángulo en medio del circulo cromático para combinar cuatro colores, dos primarios y dos secundarios.
+
+![src/diseño_9.png](src/diseño_9.png)
+
+También existen páginas que te pueden ayudar a crear paletas de colores, como [Adobe Color](https://color.adobe.com/es/explore..pdf "Adobe Color").
+
 ### Clase 15 *Tipografía*
+
+Otros de los elementos esenciales en una página web o aplicación es la tipografía.
+
+**Tips para el uso eficiente de tipografías**
+
+- Mantén el número de fuentes al mínimo.
+- Trata de usar fuentes estándar.
+- Limita la cantidad de texto.
+- Elige tipografías que sean legibles en diferentes tamaños.
+- Mantén altos de línea espaciados.
+- Asegúrate de tener suficiente contraste.
+- Evita usar animaciones intermitentes.
+
+Algunos tipos de fuentes que podemos usar son:
+
+![src/diseño_10.png](src/diseño_10.png)
+
+![src/diseño_11.png](src/diseño_11.png)
+
+![src/diseño_12.png](src/diseño_12.png)
+
+Existen páginas que te pueden ayudar a la hora de elegir una tipografía, como [Google Fonts](https://fonts.google.com/..pdf "Google Fonts").
+
 ### Clase 16 *Layout y sistemas de grillas*
+
+Grilla es un sistema de columnas creado por nosotros de acuerdo a nuestras necesidades en donde se van ajustar nuestro elementos y componentes.
+
 ### Clase 17 *Sistemas de componentes UI*
+
+Otra metodología importante a aplicar en la construcción de una aplicación o página web es el de separar nuestra funcionalidades por componentes.
+
+Un sistema de componentes es un conjunto de componentes que vamos a utilizar para construir nuestra aplicación o nuestra página. Estos componentes funcionan como una librería.
+
 ### Clase 18 *Themes y customizaciones*
+
+Themes es una capa de color y estilo que se añade por encima de nuestra aplicación y nos permite tener distintas variaciones sin hacer cambios drásticos en nuestro código.
+
+Un ejemplo claro del Themes es el modo nocturno en las páginas o aplicaciones.
+
 ### Clase 19 *Imágenes para web*
+
+Ya tienes los elementos esenciales para tu aplicación, pero ahora vamos añadir los elementos decorativos y que nos ayuden a reforzar el mensaje que queremos transmitir. Uno de estos elementos son las imágenes para web.
+
+**¿Cómo podemos seleccionar imágenes adecuadas para la web?**
+
+Lo primero que tenemos que tener en claro son los formatos que podemos usar.
+
+**Formatos de imágenes para web**
+
+- **JPG:** indicado para fotografías o imágenes con degradados.
+- **PNG:** indicado para imágenes decorativas que requieran un fondo transparente.
+- **SVG:** indicado para iconos y animaciones de baja complejidad. Es vectorial y permite editar sus propiedades con CSS.
+- **GIF:** no recomendado para animaciones de larga duración debido a su peso.
+
+**Elegir imágenes para mi diseño**
+
+- Elige imágenes que aporten al contenido.
+- Utiliza imágenes en las que tu público objetivo se vea reflejado.
+- Elije imágenes consistentes con tu paleta de colores.
+- Cuidado con las licencias.
+
+**Rendimientos y accesibilidad**
+
+- Evita exportar imágenes con teto incrustado.
+- Exporta las imágenes al tamaño del contenedor final.
+- Considera el uso de estrategias como 'lazy loading'.
+- Asegúrate de añadir 'alt text' a las imágenes que tengan un fin comunicativo.
+
 ### Clase 20 *Gráficos en movimiento para web*
+
+Al igual que las imágenes, existen diferentes formatos para seleccionar o animar contenido en nuestra página web.
+
+**Formatos de gráficos en movimiento**
+
+- **CSS animado:** indicado para animaciones sencillas y transiciones. No es un formato de video como tal, sino que es una animación que puedes crear utilizando propiedades de CSS. Útil para animaciones cortas, decorativas o para animar iconos.
+
+- **SVG animado:** indicado para animaciones de elementos vectores. No es un formato de video, es un formato para hacer ilustraciones que es un formato para hacer ilustraciones que podemos animar con propiedades de CSS o de SVG. Lo interesante es que podamos añadirle etiquetas y opciones que podemos animarlos usando JS con Canvas.
+
+- **JS (Canvas, WebGL):** indicado para animaciones complejas como animaciones de datos o 3D. Útil para animar estadísticas, mapas y datos dinámicos.
+
+- **Videos:** indicados para filmaciones y animaciones de alta complejidad y corta duración. Usado en páginas dedicadas a subir videos, lo recomendado es mantenerlo cortos y concisos para que no aumente el peso de carga de la página.
+
+**¿Cómo elegir gráficos en movimiento?**
+
+Al igual que con las imágenes tenemos que tener en cuenta ciertos criterios para poder elegir videos que nos funcionen.
+
+- Elige animaciones que aporten al contenido.
+- Procura que no se reproduzca automáticamente y si lo hacen, que no tengan sonido.
+- Evita que tus animaciones tengan flashes.
+- Si tus animaciones aportan al contenido, añade subtítulos o transcripciones.
+- Evita que las animaciones bloqueen la lectura básica del contenido.
+
+Recuerda que las animaciones y video afectan al rendimiento de tu página.
+
 ### Clase 21 *Resultado final*
 
-## Modulo 5. Conclusiones
-### Clase 22 *Conclusiones del curso*
-
-## Modulo 6. Mentoría Expert
-### Clase 22 *Diseño para programadores*
+Fin del curso, [aquí](https://github.com/mssroboto/diseno-para-programadores/tree/master/4-app..pdf "aquí") podemos ver el resultado final del Steam Burger y su código.
