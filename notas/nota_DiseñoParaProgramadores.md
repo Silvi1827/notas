@@ -163,10 +163,10 @@ También hay wireframes hechos ya en cualquier programa de diseño, incluso en G
 Ejemplo de [wireframes](https://github.com/mssroboto/diseno-para-programadores/tree/master/3-wireframes..pdf "wireframes") para desktop y móvil.
 
 **¿Cómo podemos hacer pruebas de usuarios con wireframes?**
+
 Podemos hacerlo de mucha manera, como grabarle a una persona interactuando con los papeles.
 
-Hacer wireframes no solo es muy importante para diseño, sino que también lo es para desarrollo, y es importante incluir al equipo de desarrollo en esta etapa porque comienzan a saber que tamaño tendrá la aplicación.
-También es importante negociar esta etapa con el cliente y así se va haciendo a la idea de que secciones tendrá su producto.
+Hacer wireframes no solo es muy importante para diseño, sino que también lo es para desarrollo, y es importante incluir al equipo de desarrollo en esta etapa porque comienzan a saber que tamaño tendrá la aplicación. También es importante negociar esta etapa con el cliente y así se va haciendo a la idea de que secciones tendrá su producto.
 
 ## Modulo 4. Aprender sobre Diseño de interfaz de usuario
 
