@@ -105,6 +105,7 @@ Este primer prototipo de consolas fue lanzada en diversas ferias, posteriormente
 En 1973 se crea Atari, fue la primera empresa en tomarse en serio los videojuegos y pensar en ellos como un producto comercial. Se podría decir que Atari fue la empresa que creo la industria, una industria que hoy en día supera en ingresos a las productoras cinematográficas de Hollywood o a las discográficas.
 
 **¿Quién era Nolan Bushnell?**
+
 Nolan era un ingeniero estadounidense de 28 años que se inspiró en uno de los juegos más legendarios de Japón, el Go. Al igual que el ajedrez, cuando vas hacer jaque mate se le avisa al contrincante con la palabra 'Atari' a modo de cortesía.
 
 Nolan hizo la oferta de mil euros a otro ingeniero, Allan Alcorn, a quien convenció y dio falsa seguridad asegurando que tenían un contrato con la General Electric. En aquel momento, Estados Unidos estaba en plena guerra con Vietnam por lo cual los jóvenes estaban muy influenciados y tenían un sentimiento de rebeldía, esto impulso a Allan Alcron a dejar su trabajo y lanzarse a esta aventura, en este ambiento como primer producto lanzaron Pong.
