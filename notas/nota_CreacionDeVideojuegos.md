@@ -1,15 +1,14 @@
 # Curso de Creación de Videojuegos
 ## Modulo 1. Introducción a la Industria
-### Clase 1 *Mentoría Expert: Entre la realidad y lo virtual con Niantic*
-### Clase 2 *Bienvenidos al curso*
+### Clase 1 *Bienvenidos al curso*
 
 Su profesor será Alberto Pérez-Bermejo, cofundador de Video Game Army, quien, en conjunto con Platzi, creo una carrera donde conoceremos todo el flujo de trabajo desde la creación hasta la distribución de un videojuego.
 
-### Clase 3 *Historia personal*
+### Clase 2 *Historia personal*
 
 Alberto te cuenta su historia en la industria de los videojuegos.
 
-### Clase 4 *El principio*
+### Clase 3 *El principio*
 
 De la década de los 90' a la época actual, existe unos mil de diferencias.
 
@@ -27,7 +26,7 @@ A diferencia de los buscadores actuales, no tenían sistemas automáticos como b
 
 Era difícil formarse independientemente, encontrar información o tener tutoriales, y no existían carreras o plataformas que ayudaran a educar sobre las creaciones de videojuegos.
 
-### Clase 5 *Evolución a entornos gráficos*
+### Clase 4 *Evolución a entornos gráficos*
 
 A finales del 97' y principios del 98' salió a la venta un paquete integrado para desarrollar videojuegos llamado DIV Game Studio.
 
@@ -41,13 +40,13 @@ Probablemente se deja el sonido para el final, empiezan sin un game desingner, t
 
 Ilusionados, pensamos que con esto seremos capaces de sacar todo delante sin saber que el desarrollo de un videojuego es un trabajo muy largo y conlleva mucho tiempo. A medida que se avanza puede haber cambios en el equipo, en el desarrollo del juego o en el concepto de la idea ya sea porque quieren introducir nuevos elementos, jugaron otros videojuegos y desean unir diferentes piezas, y es en este momento que más hace falta la figura de un productor que vele para que el proyecto llegue a tiempo y calidad al jugador.
 
-### Clase 6 *¿Cuándo termina la creación de un videojuego?*
+### Clase 5 *¿Cuándo termina la creación de un videojuego?*
 
 Hoy en día no es solo hacer un videojuego y llevarlo al mercado, hay que saber las técnicas para que ese juego  tenga visibilidad y llegue con la máxima calidad al mercado con los contenido, la jugabilidad, la diversión y el mensaje que deseas hacerle llegar al jugador.
 
 Sin el seguimiento del juego, morirá y pasara desapercibido por el usuario. El trabajo no acaba cuando se termina un videojuego, hay una postproducción en la continuamente se debe vigilar las métricas y haciendo actualizaciones, y corrigiendo errores.
 
-### Clase 7 *La edad social*
+### Clase 6 *La edad social*
 
 Los videojuegos están muy presentes en nuestra vida, ya sea que camines por las calles o vas en autobús, siempre encuentra a alguien que este jugando desde su smartphone o, cada vez menos, una consola portátil. Esto que nos parece normal, años atrás era considerado ciencia ficción.
 
@@ -59,7 +58,7 @@ No es de extrañar, por tanto, que lo que antes se veía como una gran amenaza p
 
 Aunque aún se puedan encontrar casos de ataques contra los videojuegos, todos ellos incluido los violentos es entendido como una forma de expresión o arte, ya no causa alarma ni es perseguido.
 
-### Clase 8 *Los inicios de la industria*
+### Clase 7 *Los inicios de la industria*
 
 Los historiadores dicen que conocer el pasado nos ayudaran a entender el presente y a poder prepararnos para nuestro futuro. En el caso de los videojuegos, conocer su historia nos dará una ventaja competitiva frente a los estudios de nuestros nivel, una ventaja que puede influir en nuestro éxito o fracaso en esta industria.
 
@@ -90,7 +89,7 @@ Partiendo de esta definición, los videojuegos más aceptados serían OXO de Ale
 
 Los videojuegos en sus inicios, como podemos deducir, estaban muy ligados al desarrollo tecnológico y estos a su vez estaban ligados al desarrollo armamentístico. El ejército estadounidense y, posteriormente, el británico y el ruso invertían mucho dinero en tener equipos potentes que pudiesen predecir con inteligencia artificial el movimiento de misiles. Esto marco muchos a esos primeros ingenieros que desarrollaron estos videojuegos primitivos
 
-### Clase 9 *El videojuego como negocio*
+### Clase 8 *El videojuego como negocio*
 
 En 1961 se lanza Spacewar que, aunque es considerado el primer videojuegos de disparo, nunca llegaría a comercializarse. Fue desarrollada por una asociación de estudiantes liderada por Steve Russell dentro del MIT.
 
@@ -126,7 +125,7 @@ Para no centrarnos únicamente en el mercado de las consolas y en su evolución,
 
 Nuevamente los ingenieros del MIT fueron los primeros en lanzar una aventura grafica de modo texto que tuvo como nombre 'Zork'. Su éxito se debía que fue de los primeros que se podía jugar en diferentes plataformas. La ventaja de Apple II era que no desentonaba con otro electrodoméstico de la familia, no era una maquina rara, se podría fácilmente quitarle la tapa trasera de plástico y extenderle hasta 48KB de memoria a través de sus ocho slots. Se cuenta que tuvo más de 180 clones conocidos.
 
-### Clase 10 *Los grandes de la industria*
+### Clase 9 *Los grandes de la industria*
 
 Con el lanzamiento en 1977 de la Atari 1600 se da por inaugurada la segunda generación de consolas, en 1979 se le une Intellivision de la juguetera MATTEL, en 1982 la Atari 5200, y en 1982 la ColecoVision de Colecho.
 
@@ -157,3 +156,31 @@ En 1983 el mercado estaba totalmente saturado de los clones de juegos exitosos, 
 En ese momento de saturación y duda llega E.T.
 
 ***Nota curiosa: En España, el juego de Pac-Man es coloquialmente conocido como Comecocos debido a que fue anunciada de esta manera en televisión su versión para Atari 2600, aunque el nombre oficial seguía siendo el mismo.***
+
+### Clase 10 *La crisis del 83*
+
+Continuamos con Atari en 1982 que iba ser precursor del 83'.
+
+Atari venia de haber hecho un gran año con juegos, como Space Invader y Pac-Man, que habían dejado muchos beneficios y estaba liderado la segunda generación de consolas. Por tanto, gozaba de 'muy buena salud' y estaba dejando videojuegos que serían franquicias en las posteriores generaciones, fue entonces que llego E.T, el juego basado en la película de Steven Spielberg del mismo nombre. Existe un documental llamado Atari: Game Over, donde cuentan como este videojuego tuvo un fracaso comercial que termino llevando a Atari sepultar millones de cartuchos en un vertedero de Nuevo México.
+
+La historia va más allá, se cuenta que Atari, al tener que lidiar con una propiedad intelectual tan complicada como lo era una película de Steve Spielberg que había tenido mucho éxito, tuvo meses de pelea con los abogados para ganar la licencia y poder desarrollar el videojuego. Esta pelea dejo muy poco tiempo para que Atari desarrollara el videojuego y les quedaron únicamente 6 semanas para que lo puedan lanzar en la campaña de navidad, así Atari decidió recurrir a uno de sus desarrolladores estrellas, Howard Scott Warshaw, que había desarrollado grandes videojuegos para la Atari 2600. Howard se encargó solo de crear completamente todo el juego, si bien esto llevo a que incumpliera todas las leyes de desarrollo de videojuegos, no llego a ser un gran Game Desing. Al principio comenzó como una idea maravilla de un cubo en el que se encontraba E.T, podía avanzar por todas las dimensiones e iba buscando piezas de su teléfono para poderlo juntar y regresar a casa, esto sería un juego con componentes narrativos, se hablaría con personajes de la película que irían dando pistas para poderlos juntar.
+
+El juego contaba con una mecánica complicada, tenía agujeros extraños que no permitían avanzar, el juego quedaba reseteado y era sabido que ese juego no tuvo una etapa de prueba antes de que llegue al usuario, y con las prisas se lanzó directamente al completarse.
+
+Al Alcron, otro de los ingenieros de Atari que fue quien creo Pong junto con Nolan Bushnell en la primera etapa, dice que cuando vio resultado final del videojuego se echó a llorar. Esto nos una pista de porque el juego de E.T es considerado el peor juego de la historia.
+
+Sin embargo, es injusto echarle toda la culpa a E.T sobre las pérdidas que había presentado Atari, que en ese año fueron por encima de los 250 mil euros y en el descenso de la saturación que se redujo un 90% con respecto al año pasado. Pero la realidad era que la industria empezaba a retroceder y este juego fue la punta.
+
+Atari fue comprada en 1976 por Warner, fue posteriormente vendida un año después de la crisis, en el 84', en dos partes. Una parte, la del hardware y ordenadores personales, fue vendida a su rival Commodore, un año después en 1985-1986 la parte de Atari Games fue vendida a la compañía de videojuegos Namco.
+
+Atari Games permaneció a manos de Namco durante un año, aunque posteriormente fue comprado por un grupo de trabajadores que la renombraron Midway. Como Midway, estuvo una década produciendo videojuegos hasta que paro la producción y la volvió a comprar Warner. Como Midway, estuvo una década produciendo videojuegos hasta que paro la producción y la volvió a comprar Warner
+
+La vida de la marca Atari fue muy activa, perdiendo valor en cada cambio y llego a pasar incluso por Hasbro en 1998, quien finalmente la entrego GT Interactive que fue renombrada como Infogrames y es la actual propietaria de la marca.
+
+Infogrames era una compañía francesa que tuvo bastante éxito con el lanzamiento de Alone in the Dark, un videojuego para PC, y posteriormente con las adaptaciones de los comics franceses como Asterix y Obelix o el mismo Tintín, y desarrollando videojuegos basados en series de animación de la propia casa de Warner. En los últimos años, Infogrames volvió a publicar videojuegos con la marca de Atari sobre todo en Estados Unidos.
+
+Hasta aquí llega la historia de Atari, quienes fueron pioneros y levantaron el mercado de donde no había nada, los primeros que vieron al videojuego como un producto, un negocio del que poder vivir y el hueco que dejo fue rápidamente cubierto por otras marcas de ordenadores personales y consolas.
+
+Entre 1983 y 1992 fue una época conocida como la Edad de oro del software español durante la cual España llegó a ser, detrás del Reino Unido, uno de los mayores productores europeos de software de entretenimiento para máquinas de 8 bits. Estaba especialmente centrado en el Sinclair ZX Spectrum, un ordenador de 8 bits bastante limitado con dos configuraciones de RAM (32 kB o 64 kB), una paleta de colores reducido que en realidad era 7 colores, con dos tonalidades de brillo y el negro.
+
+En la misma época (1982-1983) hacia entrada en escena Commodore 64 para rivalizar con el ZX Spectrum que tenía capacidades técnicas parecidas, contaba con una RAM de 64 kB y una paleta limitada a 16 colores, pero que no fue un impedimento para que se convirtiera en un auténtico éxito de ventas con más de 10 millones de unidades que para esa época era mucha.

@@ -8,8 +8,7 @@ En este curso vamos a hablar sobre cómo internet ha cambiado la forma en la que
 
 - Cómo funciona la comunicación en redes
 - Modelos de referencia OSI y TCP/IP
-
-Diseño de redes y configuración
+- Diseño de redes y configuración
 
 ## Modulo 2. Introducción a Redes de Telecomunicaciones
 ### Clase 2 *Qué es la red, Internet, LAN, WAN y Topologías de Red*
