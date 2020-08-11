@@ -275,6 +275,7 @@ Para la practica ingresamos a Packet Tracer y, lo primero que podemos ver, es un
 
 
 **Configuración del switch**
+
 Para configurarlo necesitamos dar doble click sobre el switch y nos abre otra ventana. Para configurarlo necesitamos dar doble click sobre el switch y nos abre otra ventana. Esta ventana nos muestra físicamente como se verá el switch, la cantidad de puertos con los que contamos y nos muestra los puertos de consola que nos permitirá acceder a través de cables.
 
 ![src/redes_16.png](src/redes_16.png)
@@ -324,6 +325,7 @@ También podemos ver como la interfaz vlan tiene una dirección ip y una máscar
 ![src/redes_26.png](src/redes_26.png)
 
 **Configuración de PC**
+
 Hacer la configuración de la PC es un poco más sencillo. Damos doble click y nos abre una ventana, similar a la switch, esta ventana nos mostrara como se verá físicamente nuestra PC.
 
 ![src/redes_27.png](src/redes_27.png)
@@ -333,6 +335,7 @@ Vamos a la pestaña 'Config', después a FastEthernet0 y en la parte IP Configur
 ![src/redes_28.png](src/redes_28.png)
 
 **Comprobar conexión**
+
 La comprobación de conectividad se hace mediante un ping y para eso debemos tener un cable que conecte nuestra PC con la switch.
 
 Elegimos un cable entre los iconos de la parte inferior y después elegimos que nuestra PC se conecte a través del FasEthernet0.
@@ -357,7 +360,7 @@ En la consola escribimos 'ping dirección_IP', en este caso la dirección IP del
 
 Y ya está, con esto fue comprobado que tu PC está conectada a una switch.
 
-
+## Modulo 4. Protocolos y comunicaciones de red
 ### Clase 10 *Suites de protocolos*
 
 Una suite de protocolos es un conjunto de protocolos que nos ayudan desde las diferentes capas y servicios de la red a garantizar que la información viaja de un lugar a otro, de forma segura y confiable, algunos de estos sirven para garantizar que la información es entregada o no como lo son TCP y UDP.
@@ -433,3 +436,60 @@ Son protocolos para transferencia de archivos.
 **HTTP/HTTPS**
 
 Este es tal vez el protocolo que todos sabemos que es familiar, porque es el que usamos todo el tiempo siempre que estamos consultando información en internet. El protocolo HTTP es el conjunto de reglas que definen la forma en que son enviados los mensajes para el intercambio de texto a través de la red.
+
+### Clase 11 *Aspectos básicos de comunicación*
+
+**Elementos básicos de comunicación**
+
+- **Origen o Emisor:** son personas o dispositivos electrónicos que necesitan enviar un mensaje a otras personas o dispositivos.
+- **Mensaje:** contenido que se desea transmitir.
+- **Canal o medio:** proporcionan la ruta por la que viaja el mensaje desde el origen hasta el destino.
+- **Destino o Receptor:** recibe el mensaje y lo interpreta.
+
+![src/redes_34.png](src/redes_34.png)
+
+Los protocolos son las reglas que rigen la comunicación. Necesitamos establecer protocolos que nos ayuden a ver que la información pasen por todas las capas que tiene los procesos de comunicación.
+
+**Característica de los protocolos de internet**
+
+- **Codificación del mensaje:** es el proceso de convertir información en otra forma aceptable, para su transmisión. La decodificación invierte este proceso para interpretar la información.
+- Formato y encapsulamiento del mensaje: los formatos de mensajes dependen del tipo de mensaje y del canal que se utiliza para entregar el mensaje. El proceso de colocar un formato de mensaje (la letra) dentro de otro formato de mensaje (el sobre) se denomina encapsulación. La desencapsulación ocurre cuando el destinatario invierte el proceso y la carta se retira del sobre.
+- **Tamaño del mensaje:** cuando las personas se comunican entre sí, los mensajes que envían generalmente se dividen en partes u oraciones más pequeñas. Estas oraciones tienen un tamaño limitado a lo que la persona receptora puede procesar al mismo tiempo, como se muestra en la imagen. También facilita que el receptor lea y comprenda.
+- **Sincronización:** imagina a dos personas hablando al mismo tiempo, luego se produce una "colisión de información", y es necesario que las dos retrocedan y comiencen de nuevo. Del mismo modo, cuando un dispositivo quiere transmitir en una LAN inalámbrica, es necesario que la tarjeta de interfaz de red WLAN (NIC) determine si el medio inalámbrico está disponible. Para impedir esa "colisión de información", esta la sincronización.
+- **Opciones de entrega**
+  - **Unicast / Unidifusión:** una persona quiere comunicar información a un solo individuo
+	- **Muticast / Multidifusión:** una persona puede necesitar enviar información a un grupo de personas al mismo tiempo.
+	- **Broadcasting / Difusión:** una persona envía información a todas las personas en la misma área.
+
+### Clase 12 *Modelos de referencia; modelo OSI, modelo TCP/IP*
+
+Los modelos de referencia nos ayudan a definir cuáles son los protocolos y los estándares que están en cada una de las capas por las que tiene que viajar un mensaje hasta ser llevado desde su emisor hasta su receptor a través de los medios.
+
+**Modelo TCP/IP**
+
+![src/redes_35.png](src/redes_35.png)
+
+**Modelo OSI**
+
+![src/redes_36.png](src/redes_35.png)
+
+	- Física: son los medios por los que se transportan las señales que llevan los mensajes. Son los cables que permiten transmitir los mensajes.
+	- Enlace de datos: son los equipos que hacen los direccionamientos. Son los dispositivos físicos que codifican y decodifican la información.
+	- Red: se encarga del direccionamiento lógico. Es la capa que se encarga del direccionamiento de IP.
+	- Transporte: conexión extremo a extremo y garantiza la fiabilidad de los datos. Son los protocolos que nos aseguran que el mensaje se envía y es recibido.
+	- Sesión: mantiene abierta la comunicación entre los dispositivos.
+	- Presentación: se refieren a la representación de los datos, tipos de archivos, etc.
+	- Aplicación: que acceden a información desde internet.
+
+### Clase 13 *Segmentación de los mensajes y Unidades de Datos de Protocolo PDU*
+Segmentación de los mensajes y unidades de datos de protocolo PDU
+
+La segmentación consiste en tomar un mensaje muy grande y dividirlo en pequeñas partes.
+
+Si envío mensajes a través de la red, que están segmentados, y somos los únicos que enviamos esos mensajes porque llegaran todos uno detrás del otro. Pero qué pasa si ese mismo medio lo usar una o varias personas más, van a ver muchos fragmentos de mensajes que se estarán enviado por el medio, para ensamblar nuevamente los mensajes tenemos la multiplexación.
+
+La multiplexación es el proceso que nos permite combinar dos canales por un mismo medio.
+
+Para que ese mensaje que viaja a través de las diferentes capas de red llegue completo y no se pierda ninguna información (porque va segmentación), lo que hacemos es agregar pequeñas capas que nos ayudan a identificarlos (PDU).
+
+PDU (Protocol Data Unit): unidad que nos permite identificar la información a medida que es transmitida a través de las capas.
