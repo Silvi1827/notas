@@ -184,3 +184,71 @@ Hasta aquí llega la historia de Atari, quienes fueron pioneros y levantaron el 
 Entre 1983 y 1992 fue una época conocida como la Edad de oro del software español durante la cual España llegó a ser, detrás del Reino Unido, uno de los mayores productores europeos de software de entretenimiento para máquinas de 8 bits. Estaba especialmente centrado en el Sinclair ZX Spectrum, un ordenador de 8 bits bastante limitado con dos configuraciones de RAM (32 kB o 64 kB), una paleta de colores reducido que en realidad era 7 colores, con dos tonalidades de brillo y el negro.
 
 En la misma época (1982-1983) hacia entrada en escena Commodore 64 para rivalizar con el ZX Spectrum que tenía capacidades técnicas parecidas, contaba con una RAM de 64 kB y una paleta limitada a 16 colores, pero que no fue un impedimento para que se convirtiera en un auténtico éxito de ventas con más de 10 millones de unidades que para esa época era mucha.
+
+### Clase 11 *Los primeros PC Gaming*
+
+En 1983 se quería introducir al mercado lanzando un computadora personal más potente, Apple LISA, que tomo el nombre de la hija no reconocida de Steve Jobs. Aunque Steve Jobs en la etapa final no participo en el lanzamiento, porque ya se había divido Apple en dos departamentos y él dirigía la parte de Macintosh.
+
+La computadora personal fue creada por el japones Kazuhiko Nishi, quien además mantenía una amistad con Bill Gates (fundador de Microsoft) y, que por esas conversaciones, termina agregando el lenguaje BASIC como lenguaje para agregar los videojuegos y aplicaciones en esta plataforma. En la MSX fueron creadas varias sagas míticas que perduraron en las generaciones posteriores.
+
+Por aquella época hablar de Konami era sinónimo para Hideo Kojima, quien fue importante para el desarrollo de los videojuegos de MSX. Hideo Kojima es un diseñador de videojuegos japones que lanzo su primer videojuego a los 23 años, Penguin Adventure, pero con lo que se hizo realmente popular fueron con las míticas sagas de Castlevenia y Metal Gear. Castlevenia por esos momentos se llamaba Vampire Killer.
+
+Hideo Kojima ha estado últimamente muy expuesto a los medios debido a su polémica salida de Konami, de la cual ha habido líneas y líneas de rumores sobre los motivos de su salida precipitada de la compañía, pero que tuvo tiempo de lanzar los últimos juegos de la saga apoyándose en un estudio de Madrid, MercurySteam, y en el E3 del 2016 dio un vistazo a su nuevo proyecto en solitario, Death Stranding.
+
+Volviendo a la evolución de los ordenadores personales el Amstrad CPC 464 era lanzado en 1984, subiendo la memoria RAM base a los 512 KB y la paleta de colores a 27, lo cual era casi el doble de lo que tenían ZX Spectrum o el anterior Commodore 64.
+
+Pero, 3 años más tardes, Commodore iba atacar con la Commodore Amiga 500 que rivalizo durante la época de los 16 bits, esa cuarta generación de consolas, porque ya alcanzaba una paleta de 32 colores llevaba desde los 512 KB de RAM iniciales hasta 8 MB, una resolución que iba desde los 320x200 pixeles hasta el doble, 640x400 pixeles, y contaba con el famoso microprocesador Motorola 68000, que se ha estado estudiando por décadas en las escuelas de videojuegos o en las universidades de informática.
+
+### Clase 12 *Los genios de la época*
+
+Armin Gessert y Manfred Trenz fueron dos alemanes que vivían en dos ciudades pequeñas de la frontera de Francia con Alemania que en 1987 lanzaron su primer videojuego, una especie de clon de Super Mario Bros llamado The Great Giana Sisters en el que la estética, los sonidos y la jugabilidad junto con los personajes y las mecánicas fue demasiado influenciado y basado en el juego de Miyamoto, tanto es así que la propia Nintendo les emitió una demanda, y tuvieron que retirarlo de las estanterías meses después,
+
+Armin Gessert por su parte continuo su carrera en la industria creando la compañía Spellbound y lanzando la saga Desperados. La primera versión, distribuida por Infogrames, y la segunda ya con el sello de Atari, que recordemos sigue siendo propiedad de Infogrames.
+
+El juego de The Great Giana Sisters, a pesar de ser retirado por parte de Nintendo, ya estaba en la memoria de los aficionados y le rindieron un homenaje en 2007 a la banda sonora en el concierto Play! A Video Game Symphony. Dos años después, en el 2009, Armin Gessert tuvo tiempo de lanzar un remake de Giana Sisters y poco meses después nos dejó debido a un ataque al corazón que sufrió con la temprana edad de 46 años. Detrás de esa triste noticia su legado perduro, extrabajadores de Spellbound fundaron posteriormente la compañía Black Forest Games y desarrollaron dos versiones de Giana Sisters del cual poseían las licencias, propiedad intelectual heredada de Spellbound, y fue lanzado en las plataformas de Android primero con una estética un poco más cartoon y posteriormente en Steam con una estética 3D, mucho más cuidada y mejores mecánicas, el juego es entre varios mundos y ya parece mucho más original.
+
+El otro 50% del The Great Giana Sisters original era Manfred Trenz, quien por entonces era ilustrador, y realmente estuvo desarrollando con un primitivo editor grafico llamado KoalaPainter todos los gráficos del juego hasta que posteriormente dio el salto a programador, realizo un videojuego llamado Katakis que era un clon del R-Type, el parecido jue suficiente para que el equipo de R-Type llamara a su puerta y, en lugar de denunciarlo, fue para contratarlo. Le encargaron que tradujera el código recreativo de R-Type a ensamblador para poder publicarlo en Commodore 64, esto se debía a que no encontraban programadores con la calidad de Trenz para desarrollarlo.
+
+Manfred Trenz se había convertido en un gran programador, respetado en la industria sobre todo por su trabajo con la saga Turrican que lo saco para diversas plataformas, pasando de Commodore 64, Amiga 500, Amstrad, en las primeras consolas de 8 bits posteriormente a la Super Nintendo de 16 bits y luego finalizo queriendo sacar unos remake de sus antiguos juegos, Kataki 3D y Turrican 3D, pero la compañía con la que trabajaba entonces se dice que le ponían presión con las fechas, no estaba demasiado a gusto, Trenz era alguien acostumbrado a trabajar solo y tomarse su tiempo en pulir detalles, por lo que acabo rechazando los dos proyectos.
+
+Cuando se habla de alguien que exprime las maquinas por las que pasa, que tiene gusto por la máxima calidad y que desarrolla sus propios motores siempre nos viene a la cabeza el estudio id Software, montada por unos jóvenes John Carmack y John Romero, fueron programador y diseñador de juegos respectivamente, primero de Wolfenstein 3D y posteriormente del mítico Doom.
+
+Wolfenstein 3D, creado en 1992, presentaba un motor propio revolucionario. Son considerado los creadores del género First-person Shooters (FPS) que ha llegado hoy a ser uno de los géneros más demandados de la industria.
+
+Seguido de Wolfenstein, un año después sacaron Doom que fue un poco la evolución del motor y la conservación del id Software como equipo de desarrollo. John Carmack gozo de mucha prensa y popularidad desde entonces hasta la actualidad, conocido y respetado como un programador de alto nivel, y que ha sido reclutado por Facebook para encargarse de la división de Oculus Rift, unas gafas de realidad virtual que adquirieron recientemente y en las que John Carmack desempeñara un papel como líder de la tecnología.
+
+La otra mitad, John Romero, también tuvo proyecto propios, un poco controvertidos por los retrasos continuos y la falta de calidad que tuvieron después de generar mucho hit.
+
+Como curiosidad, id Software tuvo un tercer fundador llamado Adrian Carmack, que no tiene ninguna relación con John Carmack, pero que fue diseñador gráfico durante 12 años pero termino siendo expulsado del equipo fundador, un poco por la espalda, dándole 10 millones de euros como indemnización.
+
+No podemos dejar el apartado de la industria de los PC Gaming sin hablar de LucasArts.
+
+LucasArts fue una compañía subsidiaria a Lucasfilms de George Lucas que nos dio a conocer auténticos magos de la creación de historias y aventuras graficas conversacional como Monkey Island, Indiana Jones and the Fate of Atlantis, Day of the Tentacle, Sam & Max, etc. De los empleados más conocidos, salen Tim Schafer y Ron Gilbert.
+
+Tim Schafer hizo escena nuevamente en el 2013 cuando participo en una plataforma de crowdfunded, Kickstarter, famoso por su éxito en donde solicitaba 400 mil para desarrollar una nueva aventura gráfica y consiguió recaudar casi 4 millones. Tanto fue así que el mismo se lo tomaba a broma y empezó a sacar unas series de imágenes en que mostraba como 'trabajaba duramente' con el dinero que había recaudado.
+
+Ron Gilbert también se lanzó en la aventura de Kickstarter con un remake de sus aventuras gráficas, esta vez con una estética más de corte clásico que se llamó Thimbleweed Park y que no tuvo tanto éxito como Tim Schafer, pero recaudo unos 600 mil dólares que sin duda le permitirá lanzarlo y hacer la post producción con cierta calidad.
+
+### Clase 13 *3ª Generación - Los 8 bits*
+
+Vamos a dejar de lado un poco la industria del ordenador personal y vamos a centrarnos en la industria de las consolas, en la 3ra y 4ta generación donde tienen el foco especialmente en Japón dejando un poco de lado Estados Unidos, estamos hablando de esa franja temporal de 10-13 años desde el 1983 al 1993 o 1996 cuando dimos por terminada la época de Atari y vimos el resurgir de otras compañías que querían quedarse con ese hueco; en el caso de los ordenadores personales ya hemos visto que hubo una guerra bastante emocionante, y no fue menos emocionantes en el caso de las consolas.
+
+En el 83' el protagonista del videojuego, Donkey Kong, que por aquel entonces era un carpintero que aparecía con un martillo y dabas salto vestido de rojo al que originalmente se llamaba Jumpman («hombre saltarín» en inglés) que acabo convirtiéndose en Mario y salió con su hermano, Luigi, en la consola de Atari 2600 justo antes de su declive. Desde ese momento, decir Mario Bros es decir Nintendo, paso a ser una imagen insignia de la marca y con la que se proyecta al mundo, y su creador, Shigeru Miyamoto, pasa a ser considerado del mayor creador de la historia desde Walt Disney.
+
+Miyamoto tiene una visión especial con respecto a otros autores que van buscando más la narrativa y acercarse más a lo que es una película interactiva, mientras que Miyamoto se centraba casi exclusivamente en las mecánicas de las que quería que tuviesen una jugabilidad muy detallada, muy original y divertidas, y a partir de que tuviera las mecánicas del juego claro pasaba a crear las historias subyacentes con ese universo que creo tanto para su videojuego Mario como para Zelda o Pikmin.
+
+En la segunda versión de Super Mario Bros, Super Mario Bros 2, fue lanzado en Japón, pero el Nintendo América no les pareció muy convincente. El videojuego era Super Mario Bros, que se había visto antes, con una nueva serie de niveles que eran de una dificultad endiablada, posteriormente ese videojuego en Estados Unidos se llamó Super Mario Bros The Lost Levels, pero no llego a salir en Estados Unidos como Super Mario Bros 2. Para crear un Super Mario Bros 2 en poco tiempo se recurrió a otro videojuego de Nintendo, Doki Doki Panic, que trataba sobre una familia árabe que se metían en un cuento de hadas e intentaban buscar a los dos hijos pequeños. No era de extrañar entonces que vimos esas mecánicas que no tenían tanto parecido que habíamos visto en otros juegos de la saga de Miyamoto. A pesar de todo, muchos personajes que se crearon para este videojuego haciendo un rediseño de Sprite sobre el videojuego original, sí que fueron incorporados a la historia y a los mundos de Miyamoto años después.
+
+Recientemente, Mario Bros ha vuelto a ser noticia en Japón con la presentación de los Juegos Olímpicos 2020 en la que se ha visto al primer ministro, Shinzo Abe, vestido como el protagonista Mario y subido en una de las clásicas tuberías verdes para presentar el evento.
+
+Pero comencemos a echar un vistazo a las consolas que nos dio esta tercera generación de 8 bits.
+
+Tenemos a Nintendo Famicom en el 1983, fue llamada así en Japón y posteriormente, en 1985, renombrada como Nintendo Entertainment System (abreviado NES) en Europa y Estados Unidos. En 1986 tenemos a Atari que lanzo la Atari 2600 Jr., en el mismo año Sega lanzo el Master System y posteriormente, siguiendo en el mismo año, volvimos a ver Master System II y Atari 7600.
+
+De la Nintendo de 8 bits podemos ver a Super Mario Bros, Metroid, Megaman (que al final fue siendo una saga), Kirby, Castlevenia y Contra que también fue llamado Probotector. Algunos de los creadores de esa época como el de la saga Megaman, Keiji Inafune, ha vuelto a salir en nuestro días también con una campaña de Kickstarter exitosa en la que recaudo casi 4 millones de dólares para desarrollar lo que él llamaba el resurgimiento de Megaman.
+
+Sega Master System nos dejó con viejas glorias conocidas que han pasado a la historia y hoy seguimos viendo siguientes partes de esas sagas. Tenemos a Alex Kidd, Wonder Boy, Sonic (la verdadera imagen insignia de Sega), también hay que destacar al Mickey Castle of Illusion que tenía una animación muy cuidada y el OutRun que revoluciono el género de los juegos de conducción. No podemos olvidarnos del lanzamiento en el 85' para el Master System, por parte de Yu Suzuki, de Space Harrier.
+
+Atari también se metió en el mundo de las portátiles, en el 89' lanzo una consola bastante buena con gráficos a color y juegos como Paperboy, Pac-Land, Lemmings, Toki, Shinobi, pero nada pudo hacer ante el tirón mediático que tuvo la consola portátil de Nintendo, Game Boy, que se lanzó en el mismo año con el juego Tetris.
+
+Tetris es un juego creado por Alexey Pajitnov, un desarrollador ruso que había basado su Game Design en el juego de mesa Pentaminós, y que posteriormente consiguió hacerse con los derechos de la licencia y, hasta el día de hoy, Tetris ostenta el puesto del juego mayor vendido en la historia si sumamos el conjunto de plataformas.

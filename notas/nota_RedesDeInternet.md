@@ -482,7 +482,6 @@ Los modelos de referencia nos ayudan a definir cuáles son los protocolos y los 
 - Aplicación: que acceden a información desde internet.
 
 ### Clase 13 *Segmentación de los mensajes y Unidades de Datos de Protocolo PDU*
-Segmentación de los mensajes y unidades de datos de protocolo PDU
 
 La segmentación consiste en tomar un mensaje muy grande y dividirlo en pequeñas partes.
 
