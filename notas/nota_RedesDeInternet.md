@@ -458,8 +458,8 @@ Los protocolos son las reglas que rigen la comunicación. Necesitamos establecer
 - **Sincronización:** imagina a dos personas hablando al mismo tiempo, luego se produce una "colisión de información", y es necesario que las dos retrocedan y comiencen de nuevo. Del mismo modo, cuando un dispositivo quiere transmitir en una LAN inalámbrica, es necesario que la tarjeta de interfaz de red WLAN (NIC) determine si el medio inalámbrico está disponible. Para impedir esa "colisión de información", esta la sincronización.
 - **Opciones de entrega**
   - **Unicast / Unidifusión:** una persona quiere comunicar información a un solo individuo
-	- **Muticast / Multidifusión:** una persona puede necesitar enviar información a un grupo de personas al mismo tiempo.
-	- **Broadcasting / Difusión:** una persona envía información a todas las personas en la misma área.
+  - **Muticast / Multidifusión:** una persona puede necesitar enviar información a un grupo de personas al mismo tiempo.
+  - **Broadcasting / Difusión:** una persona envía información a todas las personas en la misma área.
 
 ### Clase 12 *Modelos de referencia; modelo OSI, modelo TCP/IP*
 
