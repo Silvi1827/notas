@@ -492,3 +492,194 @@ La multiplexación es el proceso que nos permite combinar dos canales por un mis
 Para que ese mensaje que viaja a través de las diferentes capas de red llegue completo y no se pierda ninguna información (porque va segmentación), lo que hacemos es agregar pequeñas capas que nos ayudan a identificarlos (PDU).
 
 **PDU (Protocol Data Unit):** unidad que nos permite identificar la información a medida que es transmitida a través de las capas.
+
+### Clase 14 *Practica: Wireshark para ver el tráfico de red*
+
+En esta clase vamos hacer una práctica en la que vamos a ver cuál es el formato que tiene un paquete cuando está viajando por la red, entonces vamos a poder identificar las diferentes capas del modelo TCP/IP y para esto vamos usar el programa Wireshark.
+
+Wireshark es un capturador de paquetes que es muy usado en todo el entorno relacionado con las redes porque nos permite hacer tareas de análisis de datos y resolución de problemas.
+
+**Práctica**
+
+Ingresamos al sitio web de [Wireshark](https://www.wireshark.org/ "Wireshark") y damos click en Download.
+
+![src/redes_37.png](src/redes_37.png)
+
+Luego seleccionas el instalador según su sistema operativo.
+
+Wireshark está disponible para todos los sistemas operativos; Linux, Windows y Mac OS.
+
+![src/redes_38.png](src/redes_38.png)
+
+Una vez listo la descarga, abrimos el programa y la instalación es estándar siguiendo los pasos.
+
+Ya instalado, abrimos el programa y lo primero que nos muestra es una pantalla con las diferentes interfaces que tiene el computador para conectarse a internet.
+
+![src/redes_39.png](src/redes_39.png)
+
+En este caso tenemos interfaz Ethernet, Conexión de red Bluetooth, Wi-Fi y Conexión de área local.
+
+Seleccionaremos la red por la que deseamos capturar. Como el computador esta está conectado únicamente por el Wi-Fi, es esa la red que seleccionamos.
+
+![src/redes_40.png](src/redes_40.png)
+
+La ventana cambia mostrando las capturas de todo lo que viaja por la red. Vemos que viaja mucha información y lo que el Wireshark hace es mostrar paquete a paquete lo que se envía.
+
+- No. (Orden de datos)
+- Time (Tiempo de paquetes)
+- Source (IP del dispositivo de origen)
+- Destination (IP del dispositivo final)
+- Protocol (Protocolo usado)
+- Length (Longitud del paquete)
+- Info (Información adicional)
+
+![src/redes_41.png](src/redes_41.png)
+
+Como en la práctica vamos analizar un paquete que se envía por ping, en la parte superior en 'Apply a display filter' escribimos el filtro que queremos. En este caso ingresamos 'icmp'.
+
+![src/redes_42.png](src/redes_42.png)
+
+Esto hace que solo nos muestre los paquetes que son enviados únicamente por ese protocolo. También podemos seleccionar cada uno de los paquetes y en la parte inferior nos muestra los PDU de cada una de las capas.
+
+![src/redes_43.png](src/redes_43.png)
+
+Wireshark captura toda la información que fue enviada por la red en ese paquete.
+
+Por ejemplo, en la trama de Ethernet nos muestra la dirección mac de origen y la dirección mac de destino, el protocolo por el que fue enviado ese paquete y nos muestra las direcciones.
+
+![src/redes_44.png](src/redes_44.png)
+
+Wireshark además captura el paquete y nos puede mostrar cual fueron los datos que se enviaron.
+
+Si damos doble click sobre el paquete, nos abre otra ventana en la que nos muestra cosa por cosa como está conformada esa trama que se envió.
+
+![src/redes_45.png](src/redes_44.png)
+
+Existen programas que pueden abrir un paquete, que viajo a través de un medio, toda la información de los datos. Por esos es importante que pasemos por todo un proceso de seguridad, para proteger toda nuestra información que viaja a través de los medios.
+
+## Modulo 5. Capa Física y medios de Red
+### Clase 15 *El switch y el AP*
+
+Recordemos que la capa Física y de medios de red es la que se encarga de hacer conexión entre dispositivos usando interfaces y direcciones físicas.
+
+En esta capa contamos con varios dispositivos y vamos a ver cuáles son y sus diferencias.
+
+**El Switch**
+
+Es el dispositivo que nos permite realizar conexiones físicas entre hosts, el switch se encarga de filtrar y direccionar los paquetes a través de la red de área local LAN.
+
+El switch permite la conexión entre dispositivos a través del medio cableado.
+
+Existe otros dispositivo que nos permite hacer la conexión de manera casi igual, es el Hub, incluso pueden verse iguales, pero yo te recomiendo no usar este dispositivo.
+
+Mientras el switch toma los paquetes que llegan y analiza las direcciones físicas de los hosts conectados para reenviar el paquete únicamente a su destinatario el hub envía el mensaje por todos los canales, sin tener en cuenta el direccionamiento.
+
+**El Access Point AP**
+
+Otro dispositivo de la capa física es el Access Point, este dispositivo es el encargado de realizar el enlace entre las redes cableadas y las redes inalámbricas. Nos permite crear redes LAN haciendo uso de las ondas de radio.
+
+### Clase 16 *Capa Física: Elementos, funciones, transferencia de datos, ancho de banda, rendimiento*
+
+Para que haya una comunicación en red, necesariamente debe existir un medio. La capa física es quien se encarga de controlar ese medio por el que es transmitida la información, y el medio del que hablamos puede ser cable o pueden ser ondas de radio.
+
+La capa física recibe las secuencias de 1 y 0, los bits, que llegan de la capa de enlace de datos. Esa trama la analiza, las convierte en ondas eléctricas o en ondas de radio que son enviadas físicamente a través de los medios, para esto contamos con algunos dispositivos.
+
+- Switch: es un dispositivo que recibe la señal y físicamente la envía por cable. El switch es un dispositivo de capa 2 que distribuye por cable.
+- Access Point: es un dispositivo que nos permite enviar la señal por ondas electromagnéticas. Es un dispositivo de capa 2 que nos sirve para hacer redes LAN.
+- Router: es un dispositivo para áreas más amplias (WAN) que envía señales por ondas.
+
+**Dispositivos y medios**
+Un elemento necesario y que todos dispositivos que se conecte o tenga acceso a internet necesita tener es una interfaz de acceso a internet que es una NIC (Network Interface Card), es una tarjeta de red que tiene nuestro computador. Hay NIC que nos permite conectarnos por cables y hay las que nos permite hacer conexión inalámbrica.
+
+El funcionamiento de la NIC es que se conecta a la tarjeta madre de nuestro computador, de nuestro teléfono o de cualquier dispositivo que tenga acceso a internet, y le proporciona los puertos y todas la parte física (circuito y los algoritmos de esos circuitos) que le permita conectarse con los medios.
+
+En general, el proceso que debe pasar un dato desde su origen hasta que llegue a su destino es así:
+
+- Los datos son generados en las capas superiores de aplicación y de sesión.
+- Pasan a una capa de transporte en la que es segmentado. Aquí se agregan información como los puertos.
+- Luego pasa a la capa de red en donde la información es empaquetada, se agregan unas cabeceras en las que nos van a indicar las direcciones lógicas (IP) desde donde va el mensaje hasta donde va a llegar.
+- Finalmente pasa por la capa de enlace de datos en donde es organizado, convertido en frames, que ya contiene direcciones físicas e información que nos ayuda a hacer la gestión de errores, controlar los errores, el tamaño del mensaje y cosas así.
+- De la capa de enlace de datos, la trama de bits pasa a la capa física. Esta capa toma los bits y los codifica de forma que define el tipo de señal a ser enviada, construye las señales y los envía a través del medio.
+- Al otro lado, en el nodo receptor llega esa señal (impulsos eléctricos, luz u ondas electromagnéticas) y es de nuevo recibida por la capa física. La capa física transforma esas señales en 1 y 0, y vuelve a subir nuevamente hasta ser desencapsulada hasta que el receptor pueda ver cómo fue enviada.
+
+**Funciones de la capa física**
+
+1. Controlar los componentes físicos
+2. Codificar / decodificar los datos
+3. Señalización
+
+**Medios por las que son enviadas las señales**
+
+- Cable de cobre: viaja por impulsos eléctricos. Tenemos que tener cuidado cuando hagamos nuestras instalaciones pues podemos sobrecargar el equipo si lleva electricidad, en general no lo notamos porque no sentimos nada cuando lo tocamos.
+- Cable de fibra óptica: viaja por impulsos de luz. Emite 1 y 0 en forma de luz, la ventaja de este cable es que tiene una interferencia mínima, casi nula, porque la señal viaja rápido.
+- Inalámbrico: viaja por ondas electromagnéticas.
+
+**Organizaciones que regulan los estándares de la capa física**
+
+- La Organización Internacional para la Estandarización (ISO): define estándares en todo tipo de temas, sobre todo en el tema de redes. Definió el modelo OSI.
+- El Instituto de Ingenieros Eléctricos y Electrónicos (IEEE): define algunos estándares y protocolos para la comunicación de las interfaces físicas.
+- El Instituto Nacional Estadounidense de Estándares (ANSI): es una organización sin fines de lucro que supervisa el desarrollo de estándares para productos, servicios, procesos y sistemas en los Estados Unidos.
+- La Unión Internacional de Telecomunicaciones (ITU): el organismo especializado en telecomunicaciones de la Organización de las Naciones Unidas (ONU), encargado de regular las telecomunicaciones a nivel internacional entre las distintas administraciones y empresas operadoras.
+- La Asociación de Industrias Electrónicas/Asociación de la Industria de las Telecomunicaciones (EIA/TIA): regula el tema del cableado.
+- Autoridades de las telecomunicaciones nacionales, como la Comisión Federal de Comunicaciones (FCC) en EE.UU.
+
+**Medidas de rendimiento de los medios**
+- Ancho de banda: capacidad máxima que tiene un medio para transportar datos.
+- Rendimiento: es la taza de datos que fueron transmitidos. Varía mucho o depende mucho por el medio que transporta las señales.
+- Capacidad de transferencia útil: capacidad de datos útiles que pueden ser enviados por la red
+
+### Clase 17 *El cable de par trenzado*
+
+En la clase anterior viste algunos de los elementos de la capa física y en esta lectura profundizaremos aún más en uno que es fundamental: el cable de par trenzado.
+
+Este es el medio por el cual se transmite información entre dos dispositivos físicos de una red. Fue inventado en 1881 por Alexander Graham Bell y contiene dos conductores eléctricos que están fabricados normalmente de cobre.
+
+Está diseñado para evitar la interferencia externa de señales y la diafonía de otros cables a su alrededor. Al ser un dispositivo físico este se ve limitado en sus propiedades de transmisión por la distancia. El rango en el cual se ve afectada la transmisión de información es de 100 metros. 
+
+![src/redes_46.png](src/redes_46.png)
+
+**Categorías del cable de par trenzado**
+
+Existen diferentes categorías de cables de par trenzado. Estas categorías están divididas principalmente en las velocidades de transferencia que pueden realizar, su ancho de banda y el blindaje que posee alrededor el cable para asegurar una mejor comunicación. Puedes ver más información en la siguiente tabla:
+
+![src/redes_47.png](src/redes_47.png)
+
+Las categorías que se usan normalmente para crear cables de red ethernet son de la categoría 5 a la categoría 6 por su costo y manipulación. Los cables de categorías superiores se usan en otro tipo de infraestructuras, además de que su costo es mucho más elevado.
+
+Para conectar dos dispositivos físicos en la red es necesario que al final de estos cables se inserte un conector RJ-45. Este conector cubrirá los 4 pares trenzados de cables asignando un pin a cada filamento, en total 8 pines numerados de la siguiente forma:
+
+![src/redes_48.png](src/redes_48.png)
+
+**Crear la conexión de pines en un conector RJ-45**
+
+Existen diferentes estándares que se pueden seguir para configurar el orden de los cables dentro de un conector RJ-45, los más comunes son el estándar T568A y T568B, el estándar más común de usar es el T568A. La única diferencia entre estos dos estándares es la posición de los cables verdes y naranjas cómo se ve a continuación:
+
+![src/redes_49.png](src/redes_49.png)
+
+Una vez tienes configurados los pines dentro de tu conector, lo siguiente es sellar los cables con los pines a través de una herramienta especial llamada pinza ponchadora.
+
+![src/redes_50.png](src/redes_50.png)
+
+Pero esto no es todo para que nuestro cable de red funcione, para ello debemos saber si los dispositivos son del mismo tipo, por ejemplo de un PC a otro PC. Si estos son diferentes (de un PC a un router) se usa una configuración diferente en cada extremo. Dependiendo del caso usaremos un cable directo o un cable cruzado.
+
+**Cable directo**
+
+Este cable se utiliza cuando queremos conectar un dispositivo de la red a un dispositivo de enrutamiento, como puede ser el caso de nuestra computadora al router de nuestra casa. Como puedes notar ambos dispositivos son diferentes.
+
+La configuración de pines debe ser la misma en ambos extremos del cable, por lo que su dirección no cambia, ya sea que uses el estándar T568A o el T568B. En la siguiente imagen puedes ver un ejemplo más claro:
+
+![src/redes_51.png](src/redes_51.png)
+
+**Cable cruzado**
+
+Este cable se utiliza cuando queremos conectar dos dispositivos similares, como dos computadoras, dos routers o dos hubs. Se llama cruzado pues la dirección cambia de un extremo a otro.
+
+La configuración de pines debe ser diferente en ambos extremos del cable y es aquí donde vemos la utilidad de que existan dos estándares diferentes. En un extremo usaremos el estándar T568A y en el otro el T568B. En la siguiente imagen puedes ver un ejemplo más claro:
+
+![src/redes_52.png](src/redes_52.png)
+
+Con esto ya eres capaz de hacer un cable de red conociendo sus limitaciones y capacidades. Elige el cable que más le convenga al diseño de tu red y en la siguiente clase veremos cómo construirlo de manera física.
+
+### Clase 18 *Práctica: Ponchado de cables de red*
+### Clase 19 **
+### Clase 20 **
