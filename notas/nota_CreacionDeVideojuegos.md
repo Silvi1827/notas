@@ -292,3 +292,23 @@ De Sega saltamos a Nintendo en donde vemos que en la 5ta y 6ta generación nos t
 Para finalizar introducimos a un nuevo combatiente, Sony llega en 1996 con su PlayStation, después en 2000-2004 con la PlayStation 2 con la PlayStation Portable (PSP) en diciembre del 2004. No podemos empezar a hablar de juegos que no sea Final Fantasy VII y en 1998 fue año para otro juego de Kojima, el Metal Gear Solid. De otros juegos destacados tenemos a Resident Evil, Silent Hill, Tomb Raider II, Tekken, MediEvil  y Gran Turismo. Pasando al PlayStation 2 podemos destacar la saga de Devil May Cry, Okami, Kingdom Hearts, Shadow of the Colossus, Grand Theft Auto III y San Andreas, Deus Ex, y God of War.
 
 Finalmente cerramos esta generación con el creativo Fumito Ueda que creo Ico y Shadow of the Colossus, y del que se tiene esperanzas para la nueva aventura de The Last Guardian.
+
+### Clase 16 *EEUU vs Japón*
+
+En cuanto a videojuegos existen marcadas diferencias entre Japón y Estados Unidos.
+
+Estados Unidos siempre se ha tendido un poco más hacia el aspecto realista, con videojuegos que cuenten algo un poco más cercano. Mientras que Japón están un poco más acostumbrados a la fantasía, tal vez por esa influencia de anime y manga que los ha hecho tan conocido.
+
+También, el hecho de que en Estados Unidos o en Japón pueda salir antes un videojuego viene, un poco por nuestra diversidad de idiomas y culturas en las que muchas veces hay que hacer pequeñas actualizaciones, pero a veces es más grande que otras. En el caso de Europa se debe al código PEGI (Pan European Game Information) que clasifican el contenido de los videojuegos y otro tipo de software de entretenimiento; violencia, lenguaje obsceno, drogas. Esta serie de códigos han hecho que algunos videojuegos como Mortal Kombat hayan salido con sangre verde en Alemania. Las diferencias también se veían en las portadas de los cartuchos que eran diferentes para el mercado estadounidense o para el mercado asiático.
+
+Para entender un poco más las diferencias intrínsecas al mercado. Cuando queremos enfocarnos en un mercado es importante tener en cuenta cuales son las particularidades de cada uno, por ejemplo el mercado asiático es muy atractivo pero los desarrolladores dicen que es muy difícil entrar en él. En el caso de Estados Unidos, lidera en la rama de informática con empresas como Apple, Cisco, IBM, Microsoft, Oracle, Intel, etc. Justo lo contrario en el mercado de la electrónica ya sea la electrónica doméstica, pantalla, televisores, todo básicamente pertenece al mercado asiático lideradas por Samsung, Hitachi, Panasonic, Toshiba, Huawei, Canon, etc.
+
+### Clase 17 *La era social*
+### Clase 18 *Industria indie y realidad virtual*
+### Clase 19 *Proyecto*
+
+Crear un videojuego no es fácil y requiere el trabajo conjunto de varias disciplinas, por esto en Platzi no hemos querido traerte solo un curso de videojuegos, hemos creado una carrera completa, donde aprenderás todo el proceso de construcción, creación y distribución.
+
+![src/cracionVideojuego_1.png](src/cracionVideojuego_1.png)
+
+Como  parte de la carrera estaremos construyendo un videojuego llamado "The Day Of The Danza", en este primer curso nos centraremos en entender la historia que se contará, los diferentes enfoques que podríamos tener y crear la música correcta.

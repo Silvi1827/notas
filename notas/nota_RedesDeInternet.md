@@ -584,11 +584,12 @@ Para que haya una comunicación en red, necesariamente debe existir un medio. La
 
 La capa física recibe las secuencias de 1 y 0, los bits, que llegan de la capa de enlace de datos. Esa trama la analiza, las convierte en ondas eléctricas o en ondas de radio que son enviadas físicamente a través de los medios, para esto contamos con algunos dispositivos.
 
-- Switch: es un dispositivo que recibe la señal y físicamente la envía por cable. El switch es un dispositivo de capa 2 que distribuye por cable.
-- Access Point: es un dispositivo que nos permite enviar la señal por ondas electromagnéticas. Es un dispositivo de capa 2 que nos sirve para hacer redes LAN.
-- Router: es un dispositivo para áreas más amplias (WAN) que envía señales por ondas.
+- **Switch:** es un dispositivo que recibe la señal y físicamente la envía por cable. El switch es un dispositivo de capa 2 que distribuye por cable.
+- **Access Point:** es un dispositivo que nos permite enviar la señal por ondas electromagnéticas. Es un dispositivo de capa 2 que nos sirve para hacer redes LAN.
+- **Router:** es un dispositivo para áreas más amplias (WAN) que envía señales por ondas.
 
 **Dispositivos y medios**
+
 Un elemento necesario y que todos dispositivos que se conecte o tenga acceso a internet necesita tener es una interfaz de acceso a internet que es una NIC (Network Interface Card), es una tarjeta de red que tiene nuestro computador. Hay NIC que nos permite conectarnos por cables y hay las que nos permite hacer conexión inalámbrica.
 
 El funcionamiento de la NIC es que se conecta a la tarjeta madre de nuestro computador, de nuestro teléfono o de cualquier dispositivo que tenga acceso a internet, y le proporciona los puertos y todas la parte física (circuito y los algoritmos de esos circuitos) que le permita conectarse con los medios.
@@ -610,23 +611,23 @@ En general, el proceso que debe pasar un dato desde su origen hasta que llegue a
 
 **Medios por las que son enviadas las señales**
 
-- Cable de cobre: viaja por impulsos eléctricos. Tenemos que tener cuidado cuando hagamos nuestras instalaciones pues podemos sobrecargar el equipo si lleva electricidad, en general no lo notamos porque no sentimos nada cuando lo tocamos.
-- Cable de fibra óptica: viaja por impulsos de luz. Emite 1 y 0 en forma de luz, la ventaja de este cable es que tiene una interferencia mínima, casi nula, porque la señal viaja rápido.
-- Inalámbrico: viaja por ondas electromagnéticas.
+- **Cable de cobre:** viaja por impulsos eléctricos. Tenemos que tener cuidado cuando hagamos nuestras instalaciones pues podemos sobrecargar el equipo si lleva electricidad, en general no lo notamos porque no sentimos nada cuando lo tocamos.
+- **Cable de fibra óptica:** viaja por impulsos de luz. Emite 1 y 0 en forma de luz, la ventaja de este cable es que tiene una interferencia mínima, casi nula, porque la señal viaja rápido.
+- **Inalámbrico:** viaja por ondas electromagnéticas.
 
 **Organizaciones que regulan los estándares de la capa física**
 
-- La Organización Internacional para la Estandarización (ISO): define estándares en todo tipo de temas, sobre todo en el tema de redes. Definió el modelo OSI.
-- El Instituto de Ingenieros Eléctricos y Electrónicos (IEEE): define algunos estándares y protocolos para la comunicación de las interfaces físicas.
-- El Instituto Nacional Estadounidense de Estándares (ANSI): es una organización sin fines de lucro que supervisa el desarrollo de estándares para productos, servicios, procesos y sistemas en los Estados Unidos.
-- La Unión Internacional de Telecomunicaciones (ITU): el organismo especializado en telecomunicaciones de la Organización de las Naciones Unidas (ONU), encargado de regular las telecomunicaciones a nivel internacional entre las distintas administraciones y empresas operadoras.
-- La Asociación de Industrias Electrónicas/Asociación de la Industria de las Telecomunicaciones (EIA/TIA): regula el tema del cableado.
+- **La Organización Internacional para la Estandarización (ISO):** define estándares en todo tipo de temas, sobre todo en el tema de redes. Definió el modelo OSI.
+- **El Instituto de Ingenieros Eléctricos y Electrónicos (IEEE):** define algunos estándares y protocolos para la comunicación de las interfaces físicas.
+- **El Instituto Nacional Estadounidense de Estándares (ANSI):** es una organización sin fines de lucro que supervisa el desarrollo de estándares para productos, servicios, procesos y sistemas en los Estados Unidos.
+- **La Unión Internacional de Telecomunicaciones (ITU):** el organismo especializado en telecomunicaciones de la Organización de las Naciones Unidas (ONU), encargado de regular las telecomunicaciones a nivel internacional entre las distintas administraciones y empresas operadoras.
+- **La Asociación de Industrias Electrónicas/Asociación de la Industria de las Telecomunicaciones (EIA/TIA):** regula el tema del cableado.
 - Autoridades de las telecomunicaciones nacionales, como la Comisión Federal de Comunicaciones (FCC) en EE.UU.
 
 **Medidas de rendimiento de los medios**
-- Ancho de banda: capacidad máxima que tiene un medio para transportar datos.
-- Rendimiento: es la taza de datos que fueron transmitidos. Varía mucho o depende mucho por el medio que transporta las señales.
-- Capacidad de transferencia útil: capacidad de datos útiles que pueden ser enviados por la red
+- **Ancho de banda:** capacidad máxima que tiene un medio para transportar datos.
+- **Rendimiento:** es la taza de datos que fueron transmitidos. Varía mucho o depende mucho por el medio que transporta las señales.
+- **Capacidad de transferencia útil:** capacidad de datos útiles que pueden ser enviados por la red
 
 ### Clase 17 *El cable de par trenzado*
 
@@ -681,5 +682,54 @@ La configuración de pines debe ser diferente en ambos extremos del cable y es a
 Con esto ya eres capaz de hacer un cable de red conociendo sus limitaciones y capacidades. Elige el cable que más le convenga al diseño de tu red y en la siguiente clase veremos cómo construirlo de manera física.
 
 ### Clase 18 *Práctica: Ponchado de cables de red*
-### Clase 19 **
-### Clase 20 **
+### Clase 19 *Capa de enlace de datos: Elementos, funciones*
+
+La capa de enlace de datos, en el modelo TCP/IP está formado por una sola casa, pero el modelo OSI son dos. Esto tiene sentido, porque esta capa es la que se encarga de hacer la comunicación entre la capa física y la capa de red. Entonces, la capa de enlace de datos es la capa que se encarga de comunicar la parte física con la parte lógica.
+
+Para que esto pueda funcionar contamos con dos capas intermedias (subcapas).
+
+- **MAC:** es la capa de acceso al medio físico. Esto es una dirección que identifica únicamente a cada una de las tarjetas de red que tienen nuestros dispositivos.
+- **LLC:** es la capa de comunicación con la capa de red. Esta capa es la que nos permite pasar los datos de forma lógica, transformar la información de forma que la capa de red pueda recibirla y pueda seguir escalando en las siguientes capas del modelo.
+
+**Funciones de la capa de enlace de datos**
+
+- **Gestión del canal:** la capa va a contar con protocolos que le permiten a la señal decir si va en un solo, es dúplex (dos canales) o full dúplex.
+- **Segmentación de la trama:** verifica que la trama del mensaje no sea muy larga o muy corta.
+- **Control de errores:** proporciona detección y corrección de errores en el envío de tramas, y provee el control de la capa física
+- **Control de flujo:** es necesario para no saturar al receptor de uno a más emisores.
+- **Recuperación de fallos:** procedimiento para detectar situaciones y recuperar al nivel de situaciones anómalas como la ausencia de respuesta, recepción de tramas inválidas, etc. Las situaciones más típicas son la pérdida de tramas, aparición de tramas duplicadas y llegada de tramas fuera de secuencia.
+
+### Clase 20 *Trama de enlace de datos y direcciones mac*
+
+![src/redes_53.png](src/redes_53.png)
+
+Entonces, la capa de enlace de datos es la que conecta la parte física con la parte lógica, para esto vamos a trabajar con el protocolo ethernet cuya función es conectar las dos capas.
+
+El PDU de la capa de enlace de datos se llama trama o frame, y está conformada por tres partes principales.
+
+- **Encabezado:** contiene información de control, como direccionamiento, y está ubicado al comienzo de la PDU.
+- **Datos:** el paquete desde la capa de red.
+- **Tráiler:** contiene información de control agregada al final de la PDU
+
+**Dirección MAC**
+
+Es una dirección única que tiene la tarjeta de red. Cada dispositivo tiene una única dirección porque se asigna cuando se manufactura esa tarjeta de red. Todos los dispositivos tienen dirección MAC, incluso existen dispositivos con más de una dirección MAC, porque tienen más de una tarjeta de acceso a internet.
+
+La dirección MAC está compuesta por 6 bytes (48 bits) y están escritas en notación hexadecimal (12 dígitos). Hay diferentes formatos en los que se pueden mostrar, el uso de separadores como guiones o dos puntos entre dos bytes facilita la lectura.
+
+Contiene los siguientes componentes:
+
+- Destino (las direcciones MAC del ordenador de destino)
+- Dirección de origen (la dirección MAC del remitente)
+- Información de control para el control de flujo de datos
+- Datos de usuario (el paquete de datos que se va a transmitir más tarde en la capa correspondiente)
+- Sumas de control que garantizan la integridad de los datos
+
+Sintaxis de la dirección MAC
+
+- Bit 1: destinatario.
+- Bit 2: oficina de emisión.
+- Bits 3 - 24: identificación del fabricante.
+- Bits 25 - 48: identificación del adaptador de red.
+
+![src/redes_54.png](src/redes_54.png)
