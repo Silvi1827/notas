@@ -309,6 +309,6 @@ Para entender un poco más las diferencias intrínsecas al mercado. Cuando quere
 
 Crear un videojuego no es fácil y requiere el trabajo conjunto de varias disciplinas, por esto en Platzi no hemos querido traerte solo un curso de videojuegos, hemos creado una carrera completa, donde aprenderás todo el proceso de construcción, creación y distribución.
 
-![src/cracionVideojuego_1.png](src/cracionVideojuego_1.png)
+![src/creacionVideojuego_1.png](src/cracionVideojuego_1.png)
 
 Como  parte de la carrera estaremos construyendo un videojuego llamado "The Day Of The Danza", en este primer curso nos centraremos en entender la historia que se contará, los diferentes enfoques que podríamos tener y crear la música correcta.
