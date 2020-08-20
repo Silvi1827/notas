@@ -924,17 +924,22 @@ Lo que haremos es tomar el número binario ( ejemplo, 11000000) y poner cada nú
 Vamos número por número:
 
 128 x 1 = 128
+
 64 x 1 = 64
+
 32 x 0 = 0
+
 16 x 0 = 0
+
 8 x 0 = 0
+
 4 x 0 = 0
+
 2 x 0 = 0
+
 1 x 0 = 0
 
-Los números obtenidos sumamos:
-
-128 + 64 + 0 = 192
+Los números obtenidos sumamos: 128 + 64 + 0 = 192
 
 El equivalente del número binario 11000000 en decimal es 192
 
@@ -951,7 +956,9 @@ Buscamos en la escala y el número más aproximado a 27, sin que sea mayor, es 1
 Repetimos hasta que no tengamos más por usar.
 
 11 - 8 = 3
+
 3 - 2 = 1
+
 1 - 1 = 0
 
 Los números sobrantes las completamos con cero. Esto nos muestra que el equivalente del número decimal 27 en binario es 00011011
