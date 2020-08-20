@@ -733,3 +733,233 @@ Sintaxis de la dirección MAC
 - Bits 25 - 48: identificación del adaptador de red.
 
 ![src/redes_54.png](src/redes_54.png)
+
+### Clase 21 *Procesamiento de tramas*
+
+Ya sabemos que cada dispositivo conectado a la red, ya sea un celular o un computador o sean equipos de red (switch, router, etc.), tienen una dirección MAC vinculada a la tarjeta de internet y que es única. Entonces, vamos a ver como viaja una trama desde un dispositivo de origen hasta su llegada en el dispositivo de destino.
+
+![src/redes_55.png](src/redes_55.png)
+
+Lo primero que pasa, cuando uno prende el dispositivo, es que la dirección MAC se copia a la memoria RAM. Y luego, supongamos que deseamos enviar un mensaje del dispositivo origen (H1) al dispositivo destino (H3), lo que pasa es que asignamos una dirección de origen en la trama y le asignamos hacia donde deseamos ir. Entonces, se va a enviar el mensaje a través de los medios y se va ir, empezando a llegar y preguntar a todos los dispositivos conectados a la red hasta encontrar su destino.
+
+La NIC del H3 detecta que esta es su dirección MAC, la que tiene almacenada en la RAM, la compara, verifica que tienen la misma dirección y recibe el mensaje, pasando por todo el proceso de des encapsulamiento.
+
+El envío de estos datos a través de los medios, usando las direcciones MAC, y haciendo la combinación de las direcciones físicas con las direcciones lógicas (usa el protocolo ARP) se puede hacer de diferentes maneras.
+
+- **Unicast:** significa que solo se le envía a un host.
+- **Multicast:** hacemos envío a todo un grupo.
+- **Broadcast:** envíos que se realiza a todos los que estén conectados a la red.
+
+### Clase 22 *Protocolo de resolución de direcciones ARP*
+
+Ya vimos que con una combinación entre dirección MAC y dirección IP tenemos diferentes formas de enviar paquetes por nuestra red, para esto contamos con el Protocolo de Resolución de Direcciones o ARP, este protocolo básicamente tiene dos funciones; la primera es que resuelve las direcciones MAC y direcciones IP, la segunda es mantener actualizada la tabla de cachet ARP.
+
+¿Cómo mantiene actualizada la tabla ARP?
+
+![src/redes_56.png](src/redes_56.png)
+
+Básicamente lo que hace es hacer una solicitud de envía un paquete a todos los dispositivos conectados a la red, va 'preguntando' a cada host si tiene guardado su dirección  física, en caso de no hacer el host manda un paquete con la dirección física para ser guardada.
+
+## Modulo 6. Capa de Red
+### Clase 23 *Capa de Red*
+
+Hasta aquí hemos visto como los datos viajan a través de los medios y como pasan por una capa de enlace que se encarga determinar las relaciones entre las direcciones lógicas y físicas de nuestros dispositivos. Ahora empecemos hablar de las direcciones lógicas, la capa de red.
+
+La capa de red es la que se encarga de enrutar los datos a través de diferentes redes.
+
+Los que vamos a ver en este módulo es un análisis de cuál es el proceso por el cual tiene que pasar un paquete para ser enviado desde un emisor hasta un receptor, que información es la que se agrega en el PDU de la capa de red, vamos hablar de un protocolo que permite esta comunicación (protocolo IP) y, finalmente ya entiendo cómo funciona este protocolo IP y como se construyen las IP, vamos a ver como se hace la segmentación de redes en subredes. También vamos hablar de un equipo muy importante para que todo este proceso de transmisión de datos entre diferentes redes se lleve a cabo, el router.
+
+El router es el equipo de la capa de red que toma las señales y hace todo el procesamiento; desencapsula la trama, la abre, revisa las direcciones de destino y origen, y la vuelve a enrutar. Vuelve a encapsular la trama y la envía hacia el siguiente punto.
+
+**Funciones de la capa de red?**
+
+- Hacer el direccionamiento de los paquetes: se refiere a asignar las direcciones lógicas del paquete. Lo primero que pasa cuando un segmento de la capa de transporte llega a la capa de red es que se le asigna la dirección IP de origen y la dirección IP de destino.
+- Encapsulamiento de los paquetes: pasa durante el proceso de que el router recibe una trama, la abre para saber sus direcciones lógicas y luego determina el siguiente salto, ya hecho ese enrutamiento lo vuelve a encapsular y envía la trama.
+- Enrutamiento: función de buscar un camino entre todos los posibles en una red de paquetes cuyas topologías poseen una gran conectividad.
+- Desencapsulamiento de los paquetes
+
+**PDU de la capa de red**
+
+![src/redes_57.png](src/redes_57.png)
+
+Tenemos datos generados desde la capa de aplicaciones, pasaron por la capa de transporte en la que se definió como iba a ser enviado ese paquete y llega a la capa de red donde se le asignan tres campos importantes:
+
+1. Dirección de origen - ¿Quién envía este mensaje?
+2. Dirección de destino - ¿Hacia dónde quieres enviar?
+3. TTL
+
+***ACLARACIÓN: Cada uno de los PDU tienen muchos más campos. Campos que nos ayudan a verificar la trama de los errores, identifica el medio por el que envía la señal, etc.***
+
+**¿Qué es el TTL?**
+
+TTL o Time To Live es un campo que nos indica la cantidad de saltos por los que debe pasar un mensaje hasta que nos diga que no llego a ningún lado. Generalmente está definido por un numero de 64, pero uno puede definir la cantidad de saltos que va a dar ese mensaje.
+
+Por ejemplo, enviamos un mensaje que llega al router y desde ahí va dando saltos, pasando de dispositivo en dispositivo hasta que llegue a su destino, si este mensaje salto más que el número de TTL significa que no va a llegar y para evitar que los mensajes se queden dando vueltas en la red infinita. Cada salto reduce el número de Time To Live y cuando llegue a cero, el mensaje es descartado por el siguiente equipo.
+
+### Clase 24 *Procesamiento de tramas*
+
+El procesamiento de tramas trata sobre como un mensaje es enviado entre diferentes dispositivos.
+
+La trama es el último PDU que es enviado por los medios. Es el PDU de la capa de enlace de datos, la cual se encarga de hacer la conexión de la parte lógica con la parte física. Entonces, la trama es un PDU que depende del medio. Este PDU va a cambiar, agregando o quitando datos, de acuerdo al  medio por el que va a ser enviado.
+
+La trama llega con toda la información de la capa de aplicación, pasa por la capa de transporte donde se identifica como será enviado y luego, en la capa de red, se asignan las direcciones IP. De ahí, pasa por un proceso en el que la capa de enlace de datos identifica por cual medio lo envía y a partir de eso asigna direcciones MAC e información relacionada con ese medio, de ahí sale y se convierte en bits o el tipo de señal que vaya a ser enviado, el receptor hace el proceso inverso de transformar de nuevo las señales hasta que se vuelva a tener nuevamente los datos en el formato que la aplicación lo necesite.
+
+Para que esa trama viaje de una red a otra debe pasar por diferentes router en el mundo, para que salga de nuestra red local o nuestra red metropolitana, va a tener que saltar por diferentes router en el mundo, por eso es importante definir el campo TTL en el PDU de la capa de red, para que el mensaje no se quede dando vueltas en la red eternamente.
+
+![src/redes_58.png](src/redes_58.png)
+
+La trama va cambiando a medida que viaja y pasa por diferentes dispositivos, por diferentes medios, pero el paquete se mantiene igual, no cambia. Lo que hace es que, una vez el router identifica que el dispositivo está en la red local, envía a través de la capa de enlace de datos al dispositivo indicado.
+
+Para que haya comunicación de capa 2 hay dos datos que son muy necesarios; IP y máscara de red. Y para que haya comunicación en capa 3 debemos contar con tres datos; la dirección IP, la máscara de red y el Gateway.
+
+**Default Gateway o Puerta de Enlace Predeterminada**
+
+Es la ruta predeterminada o ruta por defecto que se le asigna a un equipo y tiene como función enviar cualquier paquete del que no conozca por cuál interfaz enviarlo y no esté definido en las rutas del equipo.
+
+El comando usado para trazar la ruta es traceroute o tracert, y se usa de la siguiente forma: ***tracert dominio o IP (tracert www.google.com)***
+
+El comando Tracert se ejecuta en la consola de símbolo de sistema en los sistemas operativos Windows. Gracias a este comando, podremos seguir la pista a los paquetes que vienen desde un host. Cuando ejecutamos el comando «Tracert» obtenemos una estadística de la latencia de red de esos paquetes, lo que es una estimación de la distancia (en saltos) a la que están los extremos de la comunicación.
+
+Aunque Windows lo denomina «tracert», en sistemas operativos basados en UNIX, el nombre de esta herramienta que viene por defecto se denomina «traceroute». La herramienta traceroute es exactamente la misma que el tracert, pero se denomina de otra forma, aunque internamente puede hacer uso de diferentes protocolos, ya que en algunos sistemas operativos se hace uso del protocolo ICMP Echo Request/reply, y en otros de hace uso de mensajes UDP directamente para comprobar cuántos saltos hay de un equipo a otro.
+
+**Tabla de enrutamiento**
+
+![src/redes_59.png](src/redes_59.png)
+
+Una tabla de enrutamiento, también conocida como tabla de encaminamiento, es un documento electrónico que almacena las rutas a los diferentes nodos en una red informática. Los nodos pueden ser cualquier tipo de dispositivo electrónico conectado a la red. La tabla de enrutamiento generalmente se almacena en un router o en una red en forma de una base de datos o archivo. Cuando los datos deben ser enviados desde un nodo a otro de la red, se hace referencia a la tabla de enrutamiento con el fin de encontrar la mejor ruta para la transferencia de datos.
+
+La tabla de enrutamiento de un router almacena información sobre lo siguiente:
+
+- Rutas conectadas directamente: estas rutas provienen de las interfaces del router activas. Los routers agregan una ruta conectada directamente cuando se configura una interfaz con una dirección IP y se activa. Cada una de las interfaces del router se conecta a un segmento de red diferente. En la tabla de enrutamiento, los routers mantienen información acerca de los segmentos de red a los que están conectados.
+- Rutas remotas: estas rutas provienen de las redes remotas conectadas a otros routers. El administrador de red puede configurar las rutas a estas redes de forma manual en el router local, o estas se pueden configurar de forma dinámica habilitando al router local para que intercambie información de enrutamiento con otros routers mediante protocolos de enrutamiento dinámico.
+
+Componentes de una tabla de enrutamiento
+
+- Red de destino: esto corresponde a la red de destino donde deberá ir el paquete de datos.
+- Máscara de subred: es la que se utiliza para definir la máscara de subred de la red a la que debemos ir.
+- Siguiente salto: es la dirección de IP de la interfaz de red por donde viajará el paquete de datos, para seguir con su camino hasta el final.
+- Interfaz de salida: es la interfaz de red por donde deben salir los paquetes, para posteriormente llegar finalmente al destino.
+- Métricas: tienen varias aplicaciones. Una de ellas consiste en indicar el número mínimo de saltos hasta la red de destino, o simplemente el «coste» para llegar hasta la red de destino, y sirve para dar prioridad.
+
+### Clase 25 *Protocolo IP Asignación de direcciones IP, máscara de bits*
+
+Ahora que ya sabemos cómo son enviados los mensajes a través de diferentes medios y a través de diferentes dispositivos que nos permiten conectarnos entre diferentes redes vamos hablar del protocolo IP.
+
+El protocolo IP es el protocolo que básicamente nos permite hacer el direccionamiento y enrutamiento de los mensajes a través de la red. El protocolo IP, a través de diferentes algoritmos, se encarga de trazar la ruta más eficiente para que los mensajes lleguen de un destino a otro.
+
+- Enrutamiento: consiste en encontrar un camino que conecte una red con otra.
+- Direccionamiento: se refiere a la forma en que se asignan las direcciones IP a los diferentes dispositivos.
+
+**Dirección IP**
+
+Es un conjunto de números que identifica, de manera lógica y jerárquica, a una interfaz en la red de un dispositivo que utilice el protocolo que corresponde al nivel de red del modelo TCP/IP. La dirección IP no debe confundirse con la dirección MAC, que es un identificador de 48 bits expresado en código hexadecimal, para identificar de forma única la tarjeta de red y no depende del protocolo de conexión utilizado en la red.
+
+La dirección IP puede cambiar a menudo debido a cambios en la red, o porque el dispositivo encargado dentro de la red de asignar las direcciones IP, decida asignar otra IP (por ejemplo, con el protocolo DHCP). A esta forma de asignación de dirección IP se le denomina también dirección IP dinámica (normalmente abreviado como IP dinámica). ​Los sitios de Internet que por su naturaleza necesitan estar permanentemente conectados, generalmente tienen la necesidad de una dirección IP fija (comúnmente, IP fija o IP estática). Esta no cambia con el tiempo. Los servidores de correo, DNS, FTP públicos y servidores de páginas web necesariamente deben contar con una dirección IP fija o estática, ya que de esta forma se permite su localización en la red.
+
+Los dispositivos se conectan entre sí mediante sus respectivas direcciones IP. Sin embargo, para las personas es más fácil recordar un nombre de dominio que los números de la dirección IP. Los servidores de nombres de dominio DNS, "traducen" el nombre de dominio en una dirección IP. Si la dirección IP dinámica cambia, es suficiente actualizar la información en el servidor DNS. El resto de las personas seguirán accediendo al dispositivo por el nombre de dominio.
+
+Hasta ahora, la mayor cantidad de direcciones IP que se encuentra asignadas están bajo el protocolo IPv4, que se expresan mediante un número binario de 32 bits permitiendo un espacio de direcciones de hasta 4.294.967.296 (2^32) direcciones posibles. Las direcciones IP se pueden expresar como números de notación decimal: se dividen los 32 bits de la dirección en cuatro octetos.
+
+Las direcciones pueden ser separadas en diferentes clases y esta separación nos permite identificar más fácilmente cual es la máscara de subred.
+
+- Clase A
+
+  - El primer octeto identifica la red.
+	- Tres últimos octetos (24 bits) pueden ser asignados a los hosts.
+	- Cantidad máxima de hosts es 2^24 - 2
+	- 16.777.214 hosts
+
+- Clase B
+
+	- Dos primeros octetos para identificar la red.
+	- Dos octetos finales (16 bits) para que sean asignados a los hosts.
+	- Cantidad máxima de hosts por cada red es 2^16 - 2.
+	- 65.534 hosts.
+
+- Clase C
+	- Tres primeros octetos para identificar la red.
+	- Octeto final (8 bits) para que sea asignado a los hosts.
+	- Cantidad máxima de hosts por cada red es 2^8 - 2.
+	- 254 hosts.
+
+**Máscara de subred**
+
+Es una combinación de bits que sirve para delimitar el ámbito de una red de ordenadores.​ Su función es indicar a los dispositivos qué parte de la dirección IP es el número de la red, incluyendo la subred, y qué parte es la correspondiente al host.
+
+**Direcciones de uso especial**
+
+El Grupo de Trabajo de Ingeniería de Internet (IETF) y la Autoridad de Números Asignados de Internet (IANA) han restringido el uso general de varias direcciones IP reservadas para fines especiales. En particular, estas direcciones se utilizan para el tráfico de multidifusión y para proporcionar espacio de direccionamiento para usos no restringidos en redes privadas.
+
+- Direcciones privadas: las direcciones de paquetes en estos rangos no son enrutables en la Internet pública; son ignorados por todos los enrutadores públicos. Por lo tanto, los hosts privados no pueden comunicarse directamente con las redes públicas y requieren la traducción de direcciones de red en una puerta de enlace de enrutamiento para este propósito.
+
+![src/redes_60.png](src/redes_60.png)
+
+- Direcciones de loopback: es una dirección especial que los hosts utilizan para dirigir el tráfico hacia ellos mismos. La dirección de loopback crea un método de acceso directo para las aplicaciones y servicios TCP/IP que se ejecutan en el mismo dispositivo para comunicarse entre sí.
+
+![src/redes_61.png](src/redes_61.png)
+
+- Direcciones de Link Local: es una dirección IP creada únicamente para comunicaciones dentro de una subred local. Los routers no enrutan paquetes con direcciones de enlace local.
+
+![src/redes_62.png](src/redes_62.png)
+
+- Test: son direcciones que se reservan para fines de enseñanza y aprendizaje, y se utilizan en ejemplos de documentos y de redes.
+
+![src/redes_63.png](src/redes_63.png)
+
+### Clase 26 *Práctica conversión de binario a decimal, decimal a binario*
+
+Una de las actividades que vamos a estar realizando con mucha frecuencia cuando estemos trabajando en subnetting es convertir de números decimales a números binarios.
+
+Para la conversión debemos recordar que cada bit tiene ocho posiciones y cada posición nos da la posibilidad de tener 0 o 1.
+
+![src/redes_64.png](src/redes_64.png)
+
+**Conversión de binario a decimal**
+
+Lo que haremos es tomar el número binario ( ejemplo, 11000000) y poner cada número bajo nuestra escala. Se multiplican el número de la escala con el número binario y al final se suma.
+
+![src/redes_65.png](src/redes_65.png)
+
+Vamos número por número:
+
+128 x 1 = 128
+64 x 1 = 64
+32 x 0 = 0
+16 x 0 = 0
+8 x 0 = 0
+4 x 0 = 0
+2 x 0 = 0
+1 x 0 = 0
+
+Los números obtenidos sumamos:
+
+128 + 64 + 0 = 192
+
+El equivalente del número binario 11000000 en decimal es 192
+
+**Conversión de decimal a binario**
+
+La conversión es similar, tomamos el número (ejemplo, 27), buscamos el número más aproximado en la escala y ponemos un 1, restamos el número de la escala con el número que tenemos y repetimos los pasos hasta que el número sea 0.
+
+![src/redes_66.png](src/redes_66.png)
+
+Buscamos en la escala y el número más aproximado a 27, sin que sea mayor, es 16:
+
+27 - 16 = 11
+
+Repetimos hasta que no tengamos más por usar.
+
+11 - 8 = 3
+3 - 2 = 1
+1 - 1 = 0
+
+Los números sobrantes las completamos con cero. Esto nos muestra que el equivalente del número decimal 27 en binario es 00011011
+
+### Clase 27 *IPs Públicas y Privadas*
+
+En las redes de área local se asignan direcciones a los dispositivos que permiten la conexión entre ellos. Las direcciones privadas son aquellas que no se pueden enrutar a través de Internet.
+
+Las direcciones IP públicas son aquellas que permiten la conexión a Internet.
+Todos los dispositivos que están atrás de un mismo router tienen diferentes direcciones IP privadas únicas en ese segmento de red y una dirección pública que permite la conexión entre diferentes redes alrededor del mundo, esta dirección ip pública es la dirección del router.
+
+El segmento de direcciones privadas se encuentra entre **10.0.0.0/8** a **10.255.255.255** que usualmente se asigna para redes con conexión inalámbrica ya que el rango es muy amplio y **192.168.0.0/16** a **192.168.255.255** que usualmente se asigna para redes conectadas por medio cableado, es importante resaltar que esto no implica ningún tipo de obligación o reserva de rangos, tú puedes asignar direcciones IP basándote en tus reglas de negocio.
