@@ -865,22 +865,23 @@ Las direcciones pueden ser separadas en diferentes clases y esta separación nos
 - Clase A
 
   - El primer octeto identifica la red.
-	- Tres últimos octetos (24 bits) pueden ser asignados a los hosts.
-	- Cantidad máxima de hosts es 2^24 - 2
-	- 16.777.214 hosts
+  - Tres últimos octetos (24 bits) pueden ser asignados a los hosts.
+  - Cantidad máxima de hosts es 2^24 - 2
+  - 16.777.214 hosts
 
 - Clase B
 
 	- Dos primeros octetos para identificar la red.
-	- Dos octetos finales (16 bits) para que sean asignados a los hosts.
-	- Cantidad máxima de hosts por cada red es 2^16 - 2.
-	- 65.534 hosts.
+  - Dos octetos finales (16 bits) para que sean asignados a los hosts.
+  - Cantidad máxima de hosts por cada red es 2^16 - 2.
+  - 65.534 hosts.
 
 - Clase C
-	- Tres primeros octetos para identificar la red.
-	- Octeto final (8 bits) para que sea asignado a los hosts.
-	- Cantidad máxima de hosts por cada red es 2^8 - 2.
-	- 254 hosts.
+
+  - Tres primeros octetos para identificar la red.
+  - Octeto final (8 bits) para que sea asignado a los hosts.
+  - Cantidad máxima de hosts por cada red es 2^8 - 2.
+  - 254 hosts.
 
 **Máscara de subred**
 
