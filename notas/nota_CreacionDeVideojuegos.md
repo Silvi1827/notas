@@ -328,7 +328,9 @@ Luis Díaz, fundador Alpixel nos enseñara sobre ser un game design.
 Aquel que domina el lenguaje de los videojuegos, cuando tiene claro aquello que se quiere recrear, da directrices sobre cómo se llevara el proyecto.
 
 ¿Dónde y cómo se colocan? - Diseño de nivel
+
 ¿Cómo funcionan? - Diseño de mecánicas
+
 ¿Cómo se relacionan con el trasfondo? - Diseño Narrativo
 
 **Herramientas y habilidades de un game designer**
