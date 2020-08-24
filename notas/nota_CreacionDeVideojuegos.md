@@ -312,3 +312,238 @@ Crear un videojuego no es fácil y requiere el trabajo conjunto de varias discip
 ![src/creacionVideojuego_1.png](src/creacionVideojuego_1.png)
 
 Como  parte de la carrera estaremos construyendo un videojuego llamado "The Day Of The Danza", en este primer curso nos centraremos en entender la historia que se contará, los diferentes enfoques que podríamos tener y crear la música correcta.
+
+## Modulo 2. Game Design
+### Clase 20 *Presentación*
+
+Luis Díaz, fundador Alpixel nos enseñara sobre ser un game design.
+
+**¿Qué NO es un game designer?**
+
+- Quién piensa en la idea de un videojuego
+- La dirección creativa del juego
+ 
+**¿Qué es un game designer?**
+
+Aquel que domina el lenguaje de los videojuegos, cuando tiene claro aquello que se quiere recrear, da directrices sobre cómo se llevara el proyecto.
+ 
+¿Dónde y cómo se colocan? - Diseño de nivel
+¿Cómo funcionan? - Diseño de mecánicas
+¿Cómo se relacionan con el trasfondo? - Diseño Narrativo
+ 
+**Herramientas y habilidades de un game designer**
+
+- Cualquier pedazo de información sobre cualquier tema es una buena herramienta para un diseñador.
+- La comunicación, la habilidad de transmitir ideas es crucial.
+- Pensamiento lógico, permite crear una comunicación más fluida con el programador.
+- Referencias, habrá otros que hayan resuelto problemas que podrías encontrar.
+- Empatía, los juegos van a ser disfrutados por personas externas, debemos poder colocarnos en su posición.
+- Pero siempre recuerda, no existen reglas de oro.
+
+### Clase 21 *El nacimiento del concepto*
+
+Algo que va totalmente ligado al concepto del origen son los prototipos; algo poco pulido, no muy profundo y al que fue dedicado poco tiempo de desarrollo, pero que muestra el espíritu de lo que queremos conseguir.
+
+**¿Por qué es importante crear prototipos?**
+
+La creación de un videojuego es una inversión muy alta, lógicamente siempre existen riesgos, pero una forma en que podemos asegurarnos un poco de no hacer una locura es con un prototipo. La mayoría de los prototipos se pueden hacer en días o semanas, como mucho un mes, y es algo muy útil para reducir el riesgo en la medida posible.
+
+La cosa está en que hacer prototipos no es tan fácil como parece, como muchas otras cosas. La clave más importante de un prototipo es que responda una pregunta, siempre tiene un objetivo, no hacemos un prototipo por gusto, nosotros buscamos con los prototipos despejar nuestras dudas; ¿Trasmite lo que quiero? ¿Es coherente? ¿Es viable? ¿Es divertido? ¿Resulta confuso?.
+
+Muchas veces asociamos el prototipo únicamente al principio del desarrollo, pero la verdad es que durante toda la producción de un videojuego se deberían hacer prototipos. Es muy común que a mitad del desarrollo existan modificaciones, el diseño es evolutivo y no siempre podemos prever todo de entrada, igual deseamos cambiar alguna interacción o mecánica, por eso es bueno hacer prototipos que nos ahorren tiempo en el futuro.
+
+Es importante tanto las preguntas que respondas como las técnicas que aplicamos para crear un prototipo, pero también es importante el sentido común. No siempre hay que robarle tiempo al programador para probar una idea, también se pueden usar ideas simples como lápiz y papel o programas para ver si la idea funcionara o no.
+
+**Un videojuego NO es una película**
+
+Algo que se debe tener muy en cuenta, pero por lo general es olvidado. El videojuego no es una consumición pasiva, el usuario no se sienta delante y ve como pasa todo. El usuario interactúa con el juego, se expresa dentro y lo hace suyo. Durante la construcción el juego es completamente de los desarrolladores, pero tan pronto como es lanzado y otra persona lo obtiene pasa a ser mitad del desarrollador mitad del jugador, son ambos que están creando la experiencia. De tal modo que casi puede mantener una conversación con nosotros, el diseñador o el equipo de desarrollo lanza cuestiones, propone retos, crean un poblado pero también recibe el input del jugador y evoluciona en consecuencia, entonces, cuando hablamos de expresión de jugador lo ideal es que exista un interacción entre ambos.
+
+**Expresión del jugador**
+
+Un concepto usado para que el jugador plasme su personalidad, sus ideas e intereses dentro de un juego.
+
+La expresión del jugador no es necesariamente compleja, cosas como desplazarse por la pantalla y saltar como en Super Mario son medios por los que un jugador se expresa dejando que elija como la velocidad con la que se desplaza o el momento en que da el salto. En otros juegos, como Minecraft, son más fáciles de ver la expresión del jugador, pues pueden cambiar el mundo a su gusto.
+
+Hoy en día vivimos en el amanecer de los juegos narrativos que son muy lineales, basados en una historia dada y donde ver la expresión del jugador no es tan natural dado que no permiten demasiada libertad para alterar el argumento, pero incluso así en estos juegos sigue habiendo lugar para la expresión del jugador. Un ejemplo es Kentucky Router Zero, un juego independiente que tiene una historia sentada, los jugadores no son los grandes héroes que deciden el destino del mundo y en este caso la herramienta de interacción con el mundo son los diálogos, diálogos cerrados no diálogos en los que podemos escribir cualquier cosa, se nos presenta una a cinco o seis opciones y elegimos lo que queremos que nuestro personaje diga. Es así de simple, por muy tonto que suene, las opciones que elijas no altera nada, ni tu interacción con los personajes o el desenlace dentro del juego, no va a cambiar ninguna línea más dentro de la narrativa del juego, pero ese eres tú y así es como te sientes. Es una técnica muy simple que hace que el jugador sienta que está diciendo lo que quiere, no es necesario que sea el más poderoso ni que cambie todo el argumento para que sienta que su decisión tenga peso.
+
+Muchos juegos modernos, sobre todo RPG, plantean un problema y le presentan al jugador un sinfín de soluciones. Es por eso que videojuegos modernos como Deux Ex hacen mucho énfasis en la publicidad (puedes completar una misión en modo sigilo, puedes ser un héroe de acción), el jugador tiene la libertad de ser el protagonista y expresarlas dentro del mundo del juego mediante diferentes formas; mecánicas, movimientos, disparos, e incluso las más sencillas como elegir un diálogo deja un espacio a que el jugador diga ***'este soy yo, parte de la experiencia es mía y esto es lo que quiero decir o pensar'***.
+
+**Espacio de elección**
+
+Un concepto que puede parecer un poco más diferente y complejo que la expresión del jugador, básicamente el espacio de elección es el conjunto de acciones que el jugador puede realizar dentro del juego. Dependiendo del género, el espacio de elección suele cambiar mucho, pero el concepto es el mismo.
+
+En juegos de point & click como Monkey Island donde solo teníamos una serie de verbos, acciones como agarrar, abrir, hablar, mirar, y una serie de objetos en el inventario, nuestra interacción se basaba en elegir una acción y aplicarla a un objeto o un objeto a otro objeto. En un juego con mayor libertad, como un shooter, el espacio de elección se suele abrir bastante.
+
+Este concepto es abordado porque habitualmente en un principio, cuando estamos empezando a hacer juegos, creamos un con espacios de elección muy reducidos. Un programa recomendado es PuzzleGraph, un software gratuito muy sencillo en el que básicamente donde nosotros vamos dibujando un puzzle con las herramientas que nos dan, no es necesario programar nada, y a un lado nos va sacando el grafo de elección, lo que podemos hacer, es una forma muy visual en la que podemos representar este concepto que, por lo menos entrada, no es demasiado intuitivo.
+
+Cuando se comienza a trabajar en juegos en general se piensa en un concepto meramente narrativo, por eso es muy fácil que mientras estamos construyendo nuestros conceptos nos imaginamos juegos con espacio de elección muy pequeñas. Entonces conviene revisar el concepto, jugar con el software para empezar a darnos cuentas que tipo de interacción provocan un tipo de respuestas al usuario.
+
+La gestión del concepto, la prueba del prototipo, el espacio de elección y la experiencia del jugador son importantes en las primeras etapas del proyecto. Pero existen otros puntos también importantes como la comunicación, algo que siempre se repite y se debe recordar es que desde el primer momento debe haber una comunicación abierta con el equipo, el videojuego es un trabajo que se realiza entre todos. Comunicarnos con los demás miembros del equipo siempre es enriquecedora y nos va ayudar a encontrar problemas antes de que ocurra.
+
+También es importante saber que cuando trabajamos en videojuegos, trabajamos con unas limitaciones en recursos, no podemos dejar volar la imaginación, siempre trabajamos teniendo en cuenta nuestras limitaciones. Por ejemplo, si solo tenemos un programador, hacemos que el peso del proyecto recaiga en otras zonas.
+
+Otra razón por la que es muy importante involucrar a otros miembros del equipo desde los primeros pasos es porque sus referencias se unen a las nuestras, pongamos el caso de Bound, un juego que está muy basado en los movimientos de ballet, el diseñador no tenía que ser un experto en ballet ni conocer todo, igual no sabía nada, lo lógico que hicieron primero es involucrar a gente del ballet para ver cómo iba a ser el proceso de animación, temas que pueden ser usadas a niveles de mecánica o a nivel narrativo, e involucrar a este tipo de gente un poco más externa siempre nos ayuda
+
+### Clase 22 *El core de un juego*
+
+Una vez que ya hemos sentado nuestro concepto a un nivel básico, es hora de darle más detalle.
+
+**Mecánica**
+
+Un concepto básico con los que trabajan los diseñadores en el día a día son las mecánicas de juego, las distintas normas que le dan sentido a lo que estamos haciendo.
+
+En juegos como Pac-Man la mecánica son en las bolas de color repartidas que nos dan puntos o mecánicas enemigas de los fantasmas que si nos toca nos quita la vida, las estrellas que nos hacen invencibles y nos permite comernos a los enemigos. La mecánica es un poco las enumeraciones de reglas que son tan importante como para ser incluido en el manual. También debemos recordar que el diseño es evolutivo, va cambiando durante el desarrollo, y aparecen nuevas mecánicas, nuevas cosas, pero siempre es importante centrar las bases. Se supone que la mecánica sea la espina dorsal, es importante definir cuál será la mecánica core, las más centrales y que tengan más impacto para desarrollar el concepto que nos interesa.
+
+En esta primera fase es fundamental que todo apunte a la misma dirección, a que nos referimos con esto, pues si creamos un juego arcade frenético no conviene que la música sea tranquila. Un ejemplo que cumple perfectamente con todo es Journey, un juego indie exitoso y aclamado por las críticas, tanto su música como su guion, diseño y arte apunta a la misma dirección. Incoherencias como un juego violento y sangriento con música infantil o un juego móvil de arte muy detallado que te dan ganas de quedarte mirando, esas cosas que no pegan las unas con las otras y provoca que la ilusión se rompa, para evitarlo es bueno que el equipo tenga claro desde el principio los sentimientos que uno quiere plasmar ya sea en la música, el guion, el game design, el arte, etc., trata de que todo vaya acorde.
+
+**Referencias**
+
+Es una de las herramientas más importantes para un game design. En ocasiones se dice que es mejor buscar en aquello que es bastante malo porque muchas veces se puede aprender lo mismo de gente que lo hizo bien como de quienes lo hicieron mal, algunas veces cuando un proyecto es muy malo resulta más sencillo ver las fallas y analizar los errores que cometieron. Si a estos fallos le damos la vuelta, será una herramienta más que incorporaremos a nuestro cinturón. Eso no quiere decir que debamos tomar piezas y trozos interesantes de varios juegos y juntarlos para crear un extraño monstruo.
+
+Tomemos como ejemplo GTA V, una de las sagas de videojuegos más conocidas, cuenta con un espacio abierto y cientos de personajes que dan vueltas por las calles, el problema recae en que uno no puede interactuar con ellos, podemos pegarle y esté te devolverá el golpe, pero no son como otros personajes que están vinculados a historias y con quienes puedes hablar, tienen un trasfondo y son interesantes. Los personajes de la calles no tienen nombre ni apellido y a nadie le importa, esto provoca una ruptura para el jugador porque el juego le está diciendo cuales son los interesantes y cuáles no, y el jugador no entiende, para él esa persona que va caminando es tan interesante como cualquiera.
+
+**Dudas**
+
+Parece antinatural, pero es normal que cuando se empieza a plantear un concepto aparezcan muchas dudas. Sea cual sea el género, sea cual sea el juego, en muchos sistemas e interacciones entre mecánicas aparecerán cosas que no hemos previsto, entonces, es muy normal que cuando estamos definiendo el concepto surjan pequeños vacíos a rellenar. Un sistema bastante popular para analizar el game design de un videojuego, aunque este bastante en desuso, es el MDA.
+
+![src/creacionVideojuego_2.png](src/creacionVideojuego_2.png)
+
+El MDA básicamente trata de romper un concepto en tres partes; mecánica - normas más simples, dinámicas - sistemas que interactúan unas con otras y la estética - sentimientos que se desea provocar al jugador. Es un modelo no muy actual pero aun así se sigue utilizando y sigue siendo útil para ilustrar un poco el desglose cuando estamos empezando a crear un juego.
+
+Apliquemos esto a DOOM (2016), los desarrolladores tenían claro un concepto que para ellos era divertido y todo el juego gira entorno a esa diversión. Pensaron en un juego que trataba de ir corriendo directo al enemigo, sin cubrirse, solamente agarrar un arma de corto alcance y disparar, pegarle, puro frenetismo, una vez clara el concepto comenzaron a romperlo, lo que hicieron fue; cuando vemos un enemigo brillar, es posible acercarse y ejecutar una muerte espectacular que da más punto, si complicamos el juego y lo volvemos más difícil quitando vidas, hacemos que con esas muertas las recuperemos. No es algo azaroso, aquí encontraron algo al que querían llegar, una determinada estética que querían inspirar al jugador y construyeron unas mecánicas que se convirtieron en un sistema acorde.
+
+Algo similar paso con Bloodborne, los creadores querían evitar los últimos combate cuales eran muy lentos. En los últimos combates, los jugadores llevaban escudos y se protegían a cada rato creando un sistema de combate muy lento, y los desarrolladores querían cambiar eso, para hacerlo, por un lado quitaron los escudos y por el otro hicieron que si realizabas ataques muy rápidos recuperabas vida, similar a lo sucedido con DOOM. El objetivo de los desarrolladores estaba en crear un sistema de combate más agresivo por parte del jugador y para lograrlo rompieron el sistema que luego los llevo a las mecánicas.
+
+Básicamente es un poco decidir un objetivo dado que quiero plasmar, una forma en que quiero que el jugador entienda el juego, que quiero que haga y luego veo como eso lo desgloso en pequeños objetivos en pequeñas normas de los juegos para que se mantenga. Esto es un poco tenemos claro el objetivo y lo desglosamos en mecánicas que podamos producir, es como si tuviéramos una meta que parece muy difícil, más alejada de toda la historia, y agarramos esa meta que parece un poco lejana, inalcanzable, y lo rompemos en mecánicas más sencillas y más fáciles de entender.
+
+**Todo debe encajar**
+
+Es algo que debemos recordar y a lo que volvemos siempre. El desarrollo de juegos es algo muy disciplinar, de alta complejidad intervienen diseñadores programadores, músicos, artistas, etc., y si todo no se compenetra bien al final parece que estamos jugando algo incoherente que no termina de cuajar.
+
+Tomemos como ejemplo Bioshock conocida, entre otras cosas a nivel de desarrolladores, por un conflicto bastante grave que se crea entre mecánicas y narrativas. El diseñador narrativo crea un dilema ético, en un punto de la historia nos encontramos con unas niñas pequeñas y debemos decidirnos entre salvarlas o matarlas, es una decisión muy importante y con mucho significado. El dilema existe a un nivel narrativo, luego cuando los diseñadores de mecánicas llegaron a esa parte no sabían cómo continuar, debían crear un juego que sea igual de justo para ambas decisiones; si el jugador decide matarlas se vuelve más poderoso, pero si decide hacer lo correcto las niñas se salvan. Para solucionarlo decidieron dar recompensas en ambas decisiones, entonces, a nivel narrativo lo que te están diciendo es que la decisión importa bastante, pero a nivel de mecánicas lo que están transmitiendo es en realidad no importa mucho lo que hagas, el juego te dará una recompensa tomes una decisión u otra. Son dos partes del juego que no cuadran, cada uno te está diciendo una cosa y se crea esa ruptura de golpe se rompe esa ilusión de la narrativa y del juego.
+
+Un ejemplo contrario es Proteus, un juego indie es bastante coherente, básicamente trata de que cada vez que juegas se genera una isla de forma aleatoria y no hay un gran objetivo a cumplir, es un juego que va de explorar y perseguir cualquier detalle que te llame la atención. Un juego más orientado a una experiencia zen de meditación, y todo en el juego, por simple que sea, va acorde a ello, se basa en crear un mundo interesante, lleno de movimiento, la música te lleva te invita a explorar pero también a pararte todo es bastante bonito y no hay nada que te lleve al estrés o a querer correr, todo en armonía puede que el sentimiento sea más simple pero al final no importa la complejidad de tu tarea, importa si la estas cumpliendo o no.
+
+En muchos juegos de aventuras clásicos existía la movilidad pausada de elegir objetos, elegir acciones y al mismo tiempo nos planteaban situaciones narrativas. Por ejemplo, nos están apuntando con un arma, pero la pausa en el juego te indicaba que podías calmarte y pensar en tu siguiente movimiento, y eso también provoca un poco de ruptura. Por un lado, la narración está inspirando frenetismo dando una situación de vida o muerte en la que deberías pensar rápido y darte prisa, por el otro lado, las mecánicas nos están dando tiempo para pararnos y  ver que hago, incluso nos permite fallar. Esto da la impresión de que cada parte del juego, cada componente nos está inspirando algo totalmente distinto, la coherencia se rompe y esto, cuando estamos jugando, normalmente son estos los pequeños detalles que de golpe nuestra cabeza hace clic, salimos del estado de flow, ya no estamos metidos en el juego y nos preguntamos porque hace esto.
+
+Otro ejemplo bastante coherente es Braid, uno de los juegos indie que inicio el boom del desarrollo independiente y es un juego de plataforma y puzzle que tiene su parte de narrativa añadida, y lo que es interesante es que la mayor parte de los juegos de este estilo no meten narrativa porque normalmente es algo que se desprecia, mientras que Braid le mete una narrativa que afecta a las mecánicas. Es algo curioso que hasta en plataformas donde la narrativa pasa a un segundo plano, hasta en ese caso se compenetran bastante bien trabajan en la inmediación quieren expresar lo mismo
+
+### Clase 23 *Comunicación*
+
+**Pitch**
+
+El pitch es algo más de comunicación, marketing, relaciones públicas pero vinculado al diseño en sí por dos razones:
+
+1. Como hemos dicho anteriormente, en equipos pequeños, el diseñador se encarga de estas funciones.
+2. Su vinculación al diseño ayuda bastante.
+
+Es básicamente es una explicación del concepto y del porque debería interesarnos, normalmente es breve, directo al grano y no se anda por las ramas. Se aplica el 'menos es más', es mejor tener una explicación corta y directa que hablar una hora sobre la idea del juego. Relevante al diseño porque nos orienta, impide que el equipo se haga un lio y mantengan verdaderamente claro lo que están haciendo, algo que normal que ocurre es perder la perspectiva cuando se pasa tantas horas trabajando aunque deberíamos ser capaces de decir o explicar con facilidad que estamos haciendo.
+
+¿Qué estás haciendo?, cuando nos hagan esa pregunta tendríamos que dar una explicación sin entrar en tantos detalles como en la manera que se juega, pero apuntando a una dirección. Aunque parezca tonto es importante, recordemos que todas las piezas (programación, arte, diseño, música, etc.) tienen que ir a la misma dirección, y un pitch o resumen del concepto es una buena forma de asegurarnos de que todos estamos en el mismo camino.
+
+Aunque parezca tonto que alguien pueda equivocarse sobre el concepto y pensamos que nadie cometería ese tipo de error, en realidad es algo que se comete con bastante frecuencia, por eso es esencial que nos aseguremos que todos estemos en lo mismo. Es tan sencillo como aislar a cada miembro del equipo y preguntar que está haciendo, cómo describiría el juego de la forma más breve posible y comprobar que todos tengan una solución bastante similar, o si no estaremos trabajando en direcciones distintas y no llegaremos a ningún punto.
+
+**Elevator Pitch**
+
+El concepto supone que subes a un ascensor donde solo esta otra persona y de golpe notas que es "la persona", esa que necesitar para que invierta o sea parte de tu equipo, y tienes lo que dura el viaje para engancharlo. En resumen, Elevator Pitch es el resumen muy breve que normalmente es diferentes e invita a las preguntas, cambia según la persona; si hablo con alguien que sepa de videojuegos utilizo los términos para agilizar la conversación, lo contrario sería si hablara con alguien menos acostumbrado a los videojuegos y no tan acostumbrado a términos tan concretos.
+
+Un buen sitio para ensayar sería un evento donde tengamos mucha gente, igualmente también podrían ser amigos y familiares, cada vez que hablamos con alguien lanzamos un pitch y lógicamente cuando hablamos del proyecto se debe notar nuestra pasión, no podemos repetir como robots hay que contagiar un poco de ese granito de ilusión que tengamos.
+
+Antes de terminar la sección del pitch debemos recordar que es muy interesante para un diseñador hacer este ejercicio de comunicación y tener presentes que debemos concretar el concepto, saber lo que estamos haciendo nos ayuda a orientarnos y a dejar de lados los detalles secundarios, algo que debemos cuidar si formamos parte de un equipo con pocos recursos.
+
+**Game Design Document o Documento de diseño (GDD)**
+
+Es como la "biblia", es muy recomendado para cualquiera que empieza con el diseño de videojuegos hacer un documento. El documento de diseño es lo más importante de todo, lo que define el proyecto. Si uno es miembro de un equipo con 100 o más miembros no se va correteando un lado para otro, lo que se hace es escribir un documento y se lo pasa a los demás.
+
+Normalmente cuando no sabemos nada vamos a buscar en Google como hacer un documento y encontramos esta de lo que debería tener un documento de diseño:
+
+![src/creacionVideojuego_3.png](src/creacionVideojuego_3.png)
+
+Vemos que pide historia, personajes, personalidades, el mundo, etc. Y muchas veces eso no ayuda en juegos como puzzles o demás, así que volvemos a lo mismo de siempre: sentido común.
+
+Cada cosa que hacemos tiene una función, no busquemos fórmulas mágicas que funcionen en todos los casos, el diseño de videojuego es demasiado amplio como sentar metodologías o estructuras de trabajo que funcionen siempre. Tenemos que pensar en el proyecto que estamos trabajando, el equipo y las necesidades, un documento de diseño cumple la función de ser guía de lo que vamos hacer, y en función de las necesidades del juego y del equipo puede cobrar muchas formas. En un juego con bastante carga narrativa tendremos muchos pesos en la descripción de personajes, background y demás, y menor peso en mecánicas, sin embargo, en un proyecto más reducido o que no tiene tanta carga narrativa seguramente queramos hacer algo de una página que una de 100 o 200 páginas.
+
+Si un documento de diseño tiene únicamente una página y una persona del equipo le da un vistazo y al momento sabe lo que tiene que hacer y en lo que está trabajando, ese documento cumple su función y es un éxito. No es necesario muchas páginas, es un documento destinado a transmitir información de la forma más fácil posible, puedes agregar dibujos o gráficos o meter pequeños chistes en forma de indicaciones para hacer la lectura más amena. También puedes adjuntar un prototipo porque piensas que se transmite todo mejor jugando 5 segundos que leyendo 5 párrafos, aquí lo que se intenta hacer es comunicar la intención, las mecánicas y el sentido del juego al resto del equipo la forma que le demos a eso dependerá de muchas variables, nunca conviene tener una llave y luego hacer la cerradura acorde, si tenemos un problema debemos transmitir esto de la forma más óptima para todo.
+
+**Constante cambio**
+
+El diseño no es estático, a menos que hagas un clon o algo que este muy fijado que no haya espacio para prueba y error, por mucha experiencia que se tenga siempre que se empieza a trabajar en pantalla se verá algo muy distinto a lo que se tiene originalmente, durante el desarrollo van a surgir ideas o de golpe algunas cosas dejan de tener sentido, hagas lo que hagas en el documento se va a estar cambiando constantemente. No es algo que hagas el primer día y es olvidado, al contrario, el documento de diseño es algo con lo que se tendrá que ir trabajando y siempre haciendo actualizado para que el resto de las personas del equipo puedan acceder a ella.
+
+Un diseñador está en el día a día trabajando con el resto. Por ejemplo, el diseño niveles, estos no se generan de forma azarosa ni los programadores lo meten, es algo que el diseñador crea y tampoco es que se pueda hacer un boceto y termina, normalmente se diseña, se juega y se analiza para hacer ver si hacemos cambios o no, es algo que requiere muchas pruebas. Todo este contenido, niveles o narrativas también todo lo hace un diseñador y es un trabajo constante, si estas escribiendo un diálogo debes ver cómo es percibida desde el punto de vista del jugador (recordamos la necesidad de ser empáticos, ponernos en el punto de vista de alguien que ve esto por primera vez), si notas que algo es confuso o que un personaje da idea errónea debes dar marchar atrás y refinarlo, todo eso no es algo que se hace en el día.
+
+Hay veces que no se está creando contenido, pero si balanceando números y estadísticas, si tenemos un grupo  de testeo de 10 personas probando el videojuego debemos analizar las opiniones y realizar cambios, o en juegos de rol modificar zonas o elevar el nivel de dificultad tras la caída del jefe, son algunos de los roles que cumple el diseñador en el día a día.
+
+Para el trabajo de un diseñador lo más importante es que se entienda el lenguaje de los videojuegos y se creen cosas con coherencia, que se comunique con el resto del equipo y que sepa transmitir bien sus ideas, y recuerden que la mejor arma de un diseñador a parte de la comunicación es la experiencia, nunca intenten hacer de golpe el videojuego soñado, ese juego enorme que se les ocurre, debemos empezar por juegos pequeños y ampliar el cinturón de herramientas todo lo posible, y poco a poco ir trabajando en juegos más complejos.
+
+### Clase 24 *Game Design*
+
+**¿Quién es un game designer?**
+
+Debido a la complejidad y amplio del trabajo de game design definir esta posición, resulta complicado, pero vamos a ver realmente cual es su rol dentro de un equipo.
+
+**¿Qué NO es un game designer?**
+
+- Quién piensa en la idea de un videojuego
+- La dirección creativa del juego
+
+**¿Qué es un game designer?**
+
+Es aquel quien domina el lenguaje de los videojuegos, cuando tiene claro aquello que se quiere recrear, da directrices sobre como se llevará el proyecto.
+
+Liz England game designer en Ubisoft ha escrito un post aclarando su rol como game designer con lo que ha llamado “el problema de la puerta”
+
+De esta manera definir:
+
+¿Dónde y cómo se colocan? - Diseño de nivel
+¿Cómo funcionan? - Diseño de mecánicas
+¿Cómo se relacionan con el trasfondo? - Diseño Narrativo
+
+**Habilidades y herramientas**
+
+La pieza clave para el trabajo de un game designer es cualquier pedazo de información sobre cualquier tema, debido a ser un trabajo creativo cada pieza de información se vuelve valiosa.
+
+- **La comunicación**, la habilidad de transmitir ideas es crucial.
+- **Pensamiento lógico**, permite crear una comunicación más fluida con el programador
+- **Referencias**, habrá otros que hayan resuelto problemas que podrías encontrar
+- **Empatía**, los juegos van a ser disfrutados por personas externas, debemos poder colocarnos en su posición
+
+**Prototipos**
+
+El origen de la idea está ligada a los prototipos, estos muestran el espíritu de lo que queremos conseguir, es importante porque la inversión de un proyecto es alta, pero con un prototipo podemos probar nuestra idea.
+
+La clave de los prototipos, es que estos siempre tienen un objetivo y deben suceder durante todo el proceso de creación del videojuego.
+
+Es importante las técnicas que usamos para estos prototipos pero es importante el sentido común.
+
+**Conceptos**
+
+**Espacio de elección**, el conjunto de acciones que el jugador puede realizar dentro del juego.
+
+**Las mecánicas de juego**, son las normas que dan sentido a lo que estamos haciendo, es importante sentar las bases, definiendo las mecánicas core o centrales.
+
+ **Modelo MDA**, intenta definir el diseño en tres partes
+
+- Mecánicas, normas más simples
+
+- Dinámicas, las mecánicas relacionándose unas con otras.
+
+- Estética, los sentimientos que se provocan en el jugador
+
+
+**Comunicación**
+
+ Pitch, una descripción breve y concisa, nos orienta sobre el objetivo del juego
+
+Elevator pitch, tienes lo que dura un viaje de ascensor para enganchar a alguien hablándole del juego. se caracteriza por ser breve, diferente, invita a preguntar, cambia según la persona, transmite.
+
+GDD, es el documento que define el proyecto, guía de lo que vamos a hacer, en función de las necesidades del juego y el equipo.
+
+**Recuerda:**
+
+- Es importante mantener la coherencia entre los diferentes elementos del juego.
+
+- En muchos equipos pequeños los diseñadores se encargan de estas funciones.
+
+- Todo debe apuntar a la misma dirección, es importante que todo el equipo tenga claro el sentimiento que se quiere plasmar, en el proceso van a surgir dudas, cuando definamos ciertas interacciones, están deben ser resueltas.
+
+- Deberíamos ser capaces de explicar con facilidad de que estamos haciendo.

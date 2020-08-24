@@ -939,7 +939,7 @@ Vamos número por número:
 
 1 x 0 = 0
 
-Los números obtenidos sumamos: 128 + 64 + 0 = 192
+Sumamos los números obtenidos: 128 + 64 + 0 = 192
 
 El equivalente del número binario 11000000 en decimal es 192
 
