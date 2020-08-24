@@ -66,7 +66,7 @@ Los videojuego son una industria muy joven, nos encontramos que quienes vienen a
 
 Inicio de los videojuegos.
 - 1947, dispositivos de entretenimiento de tubos de rayos catódicos
-- 1950-1951, programa de ajedrez
+- 1950, 1951, programa de ajedrez
 - 1951, NIM
 - 1952, OXO / Ceros y Cruces (tres en rayas, gato, Tatetí, Triqui, juego del gato)
 - 1958, Tennis for Two (Tenis para Dos)
@@ -326,11 +326,11 @@ Luis Díaz, fundador Alpixel nos enseñara sobre ser un game design.
 **¿Qué es un game designer?**
 
 Aquel que domina el lenguaje de los videojuegos, cuando tiene claro aquello que se quiere recrear, da directrices sobre cómo se llevara el proyecto.
- 
+
 ¿Dónde y cómo se colocan? - Diseño de nivel
 ¿Cómo funcionan? - Diseño de mecánicas
 ¿Cómo se relacionan con el trasfondo? - Diseño Narrativo
- 
+
 **Herramientas y habilidades de un game designer**
 
 - Cualquier pedazo de información sobre cualquier tema es una buena herramienta para un diseñador.
