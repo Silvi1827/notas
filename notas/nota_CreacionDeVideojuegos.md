@@ -304,12 +304,89 @@ También, el hecho de que en Estados Unidos o en Japón pueda salir antes un vid
 Para entender un poco más las diferencias intrínsecas al mercado. Cuando queremos enfocarnos en un mercado es importante tener en cuenta cuales son las particularidades de cada uno, por ejemplo el mercado asiático es muy atractivo pero los desarrolladores dicen que es muy difícil entrar en él. En el caso de Estados Unidos, lidera en la rama de informática con empresas como Apple, Cisco, IBM, Microsoft, Oracle, Intel, etc. Justo lo contrario en el mercado de la electrónica ya sea la electrónica doméstica, pantalla, televisores, todo básicamente pertenece al mercado asiático lideradas por Samsung, Hitachi, Panasonic, Toshiba, Huawei, Canon, etc.
 
 ### Clase 17 *La era social*
+
+En la actualidad, estos son los actores que están cambiando la industria:
+
+![src/creacionVideojuego_1.png](src/creacionVideojuego_1.png)
+
+Con la creación de comunidades que permiten la comunicación entre jugadores y compartir cosas, las transmisiones en vivo y los fabricantes de tecnología que han hecho mucho porque esa evolución de los videojuegos estén presentes en nuestros días. Si imagináramos una vida sin estas tecnologías y servicios, y aunque varias cosas cambiarían, la verdad es que este mundo existe y es World of Warcraft de Blizzard, un videojuego de rol multijugador lanzado en el 2004.
+
+WoW tuvo un crecimiento rapidísimo llegando hasta los 13 o 15 millones de usuarios con cuentas de pago activo, y habilito el fenómeno 'Auction House' en el que muchos trabajaban evolucionando personajes, iban en turnos y dormían en literas de casa pequeñas en las que nadie paraba de jugar con ordenadores calientes, ganando personajes de niveles altos que luego vendían en el mercado negro a jugadores con mayor poder adquisitivo que no querían pasar por todo el 'trabajo duro' y preferían comprar un jugador ya formado para poder acceder a la segunda etapa del juego donde se reúne el jugador con sus amigos e iban en un grupo de 20 o 30 amigos organizados a destruir con una estrategia común a un monstruo final. El caso es que, aunque vemos un descenso en sus millones de usuarios, como Blizzard mismo decía: ***alguien nos sustituirá, esperemos que seamos nosotros***.
+
+Y llego League of Legends, o simplemente LoL, un videojuego del género multijugador de arena de batalla en línea y deporte electrónico desarrollado por Riot Games lanzado en el 2009. LoL cuenta con mecánicas de captura la bandera, defender la torre y una zona estratégica. En octubre del 2012 contaba con 70 millones de jugadores registrados, y​ para marzo del 2013 se registró 5 millones de jugadores conectados al mismo tiempo en todo el mundo.
+
+Actualmente cuenta con multitud de ligas y torneos, algunos organizados por Riot Games, otros por terceros con respaldo oficial, y otros independientes. Los torneos cuentan con equipos y sus propias estrellas mediáticas, algunos siendo narrados por profesionales como si fuera MMA o un deporte de masas.
+
+Estos torneos son transmitidos en streaming en línea por medios como Twitch y YouTube. Esta son algunas de sus cifras:
+
+![src/creacionVideojuego_2.png](src/creacionVideojuego_2.png)
+
+**Steam**
+
+Es una plataforma de distribución de videojuegos desarrollada por Valve y lanzada en septiembre del 2003, aunque no fue hasta el 2007 que se creó SteamCommunity.
+
+En enero de 2016, Steam contaba con más de 7300 juegos disponibles, de los cuales más de 2700 son compatibles con OS X y más de 1700 con Linux. Además contaba con cerca de 142 millones de cuentas de usuario activas.​ El 27 de noviembre de 2017 batió el récord de jugadores simultáneos, con 17 millones de jugadores simultáneos.
+
+**Comunidad**
+
+Hoy en día es tan importante cuidar de la comunidad como tener una buena campaña de medios. Sin medios estas muerto, pero si probablemente cuentas con una mala comunidad y una buena campaña de medios, tu juego seguirá viéndose mediocre y eso se verá reflejado y de igual forma morirás.
+
+Debes cumplir con lo mínimo de calidad, y es verdad que siempre se ha dicho que una buena creatividad o un buen arte gráfico sirve para una primera impresión, para ese amor a primera vista que engancha al usuario y lo insta a probar, pero si existen fallos de programáticos, ese usuario no volverá. Los puntos negativos vienen precisamente por la programación que decimos que no se ve, pero efectivamente a nivel negativo si se ve y finalmente el game design, esa historia que envuelve todo y es lo que hace que el juego tenga un fin y un atractivo, es lo que hace que el jugador se quede. Entonces, sino cumples ese ciclo de calidad completo eso se verá reflejado en los comentarios de la comunidad, la gente es muy sincera de cara a criticar lo que no le gusta y lo que sí ellos lo van a poner.
+
+**Metacritic**
+
+Es un sitio que recopila reseñas, pero también es una herramienta básica en el día a día para descubrir videojuegos y ver cual merece la pena su compra o no.
+
+**Redes sociales**
+
+Otro factor que ha cambiado para siempre la industria. La popularidad de Facebook y posteriormente las plataformas como iOS o Android que han posibilitado que esa conjunción haga que estés permanentemente conectado e interconectado con otros jugadores, y han posibilitado la aparición de nuevos consumidores y también nuevas empresas para dar servicios a estos nuevos consumidores. Por eso tenemos una lista de empresas:
+
+![src/creacionVideojuego_3.png](src/creacionVideojuego_3.png)
+
+Se debe destacar también la socialpoint que ya cuenta con 250 empleados y 100 millones de dólares de facturación anual. Es una empresa que tiene ya más de 40 millones de dólares en inversión, incluso con capital de riesgo.
+
+También podemos guiarnos por las cifras que dicen los medios especializados como AppData, que recolecta cuantos millones de usuarios a día tiene cada aplicación.
+
+![src/creacionVideojuego_4.png](src/creacionVideojuego_4.png)
+
+Si nos basáramos en las cifras de SensorTower nos encontramos que el trono de los videojuegos masivos-sociales que pertenecía anteriormente a King con Candy Crush y Soda Saga, y posteriormente a Supercell con Clash of Clans y Clash Royale es actualmente ocupado por Pokémon Go que ha llegado a doblarlo con 200 millones de benefició en el primer mes.
+
+![src/creacionVideojuego_5.png](src/creacionVideojuego_5.png)
+
 ### Clase 18 *Industria indie y realidad virtual*
+
+Dejando de lado los juegos sociales masivos en los que uno cree que es muy fácil entrar porque ven que son juegos bastantes sencillos y pueden desarrollarse por equipos muy pequeños, pero luego la realidad es que, para entrar en ese top 10 o 30 que verdaderamente ganan dinero, es muy difícil competir con las inversiones astronómicas de marketing que hacen estas mismas marcas para que nadie pueda entrar a arrebatarle su puesto. La realidad es que los jugadores se adicionan a uno o tres juegos, no pueden estar jugando 24 horas o todos sus tiempos libres a muchos juegos, llevan en tu cabeza un top de 2 o 4 juegos en los que van a ir gastando dinero mes tras mes, y las marcas esto lo saben entonces tumban todas las demás hacen unas inversiones muy grandes, y es casi imposible para una empresa pequeña lograr acceder a este mercado. Como alternativa, tenemos los juegos indie que son creados por individuos o grupos pequeños, sin apoyo financiero de distribuidores.
+
+Unos que han conseguido grandes éxitos y son referentes en la revolución indie son:
+
+- Mattis Delerud
+- Jordi de Paco con Gods Will Be Watching, perteneciente al género de aventura gráfica
+- Johannes Vourinen con Badland, un videojuego móvil
+- Kevin Cerdà con Nihilumbra, un videojuego de plataformas estándar
+
+Pero si hablamos de indie también hablamos de Rami Ismail, un desarrollador de videojuegos cuyos trabajos incluyen Ridiculous Fishing y Nuclear Throne, y, a través de Vlambeer, lideró el desarrollo de presskit() y distribute(), herramientas en línea gratuitas para desarrolladores independientes para preparar y distribuir kits de prensa y materiales de marketing, copias listas para demostraciones de juegos y otros materiales a los miembros de la prensa. Continuamos con tres indies famosos a escala mundial, como son:
+
+- Jonathan Blow con Braid
+- Phill Fiz con Fez
+- Edmund McMillen con Super Meat Boy
+
+Sin salirnos del mundo indie tenemos a Markus Persson, fundador de la compañía Mojang y creador del videojuego Minecaft, que posteriormente fue vendido a Microsoft por muchísimo dinero 2.500 millones de dólares. Los propios compañeros de Markus recibieron 200 mil dólares cada uno como bono o compensación por mantenerse en la empresa 6 meses posterior a su venta.
+
+Siguiendo con Microsoft, hemos visto que han utilizado Minecraft uniéndola a los Hololens, unos lentes de realidad aumentada que es un hibrido con el que puedes directamente escanear la habitación en la que estas para determinar los planos y posteriormente colocar modelos en 3D que se solapen o no dentro de esa estructura ficticia que se ha creado a partir de la realidad, es lo que se llama una realidad aumentada hibrida. Esto precisamente nos lleva a ver ampliaciones de hardware, no tanto en Xbox One S pero sí en la Xbox X (inicialmente conocida como Project Scorpio) que cuenta con 6 teraflops de rendimiento gráfico, resolución de 4K y veremos mayor potencial para mover ese tipo de modelos 3D y estos escenarios.
+
+En el otro extremo tenemos a Sega que desplazo totalmente a Microsoft en el lado del hardware, ocupando directamente ese lugar, y ahora Sega se dedica a hacer lanzamientos de reconvenciones tanto para iOS como para Android, este mercado de plataformas móviles que al final facturan más que las consolas portátiles ha abierto las puertas para que se reactualice estas antiguas compañías y puedan tener visibilidad en otros sitios. También lanzara Sonic Mania como motivo por el 25º aniversario celebrado por Sega. No creemos que se metan en la realidad virtual porque ya tuvieron sus inicios con Sega Lock-On, que simplemente eran unas pistolas de infrarrojos en la que tapabas directamente el infrarrojo y no te podían disparar, muy caras aunque en realidad eran solo un juguete. También lanzo Sega Activator, otro sistemas de infrarrojos en el que según la posición de lo que te estuviesen capturando hacías una serie de movimientos u otros, era una especie de octógono que se colocaba en el suelo.
+
+Llegamos a Nintendo que salto esta generación con una serie de noticias tristes como fue el fallecimiento de Hiroshi Yamauchi en 2013, el tercer CEO de Nintendo y uno de los que fue verdaderamente el impulsor para que esa empresa familiar dejara las barajas y se dedicaran a los videojuegos, y del cuatro CEO, Satoru Iwata, en 2015 quien impulso mucho el lanzamiento de la Wii, sin salirnos de Nintendo en marzo del 2016 tuvimos otra noticia trágica con la muerte de Eric Medalle, el principal diseñador gráfico de Pokémon. Pero la vida sigue y Nintendo lanzo la Wii que fue una auténtica revolución y un éxito de ventas con 101 millones de consola, posteriormente lanzo la Wii U con 15 millones de consolas. En la realidad virtual, Nintendo también tuvo un papel en el pasado con el lanzamiento del extraño Power Glove en 1989 y Virtual Boy en 1995 que no tenía color, pero sí una estética muy extraña pero resultó ser un auténtico fracaso. El presidente de Nintendo América, Reggie Fils-Aimé, que dijo ***'la realidad virtual aún no es mainstream'***, y ellos no van a entrar en un mercado que no está maduro. Para terminar nos encontramos en el 2017 con un lanzamiento del Nintendo Switch, conocida durante el desarrollo por su nombre código «NX», y es una consola hibrida que se puede utilizar como consola de sobremesa y conectar al televisor, y alternativamente puede ser extraída de la base y utilizar de forma similar a una tableta.
+
+Para dar concluida esta parte tenemos como última compañía a Sony con su PlayStation 3 que fue lanzada en marzo del 2007 y cuenta 90 millones de consolas vendidas, posteriormente vuelve a tener un éxito con la PlayStation 4 en el 2013 con 45 millones de consolas y en el 2016 con la PlayStation 4 Pro con vista a unirlo a la PlayStation VR, conocido por su nombre clave Morpheus, el cual será la apuesta de Sony en el mundo virtual.
+
+También tenemos a Nvidia y AMD en una carrera por los teraflops no solo en las consolas, también en el mercado del PC doméstico, nos quedamos con que esas tecnologías y nuevas graficas son necesarias precisamente para esta realidad virtual. Tenemos Oculus Rift, compañía que ha sido comprada por Facebook que lanzo un kickstarter de éxito con 1.100 millones de recaudación que ya tuvo 3 interacciones. Su primer competidor va a ser HTC VIVE de Valve, finalmente tenemos a NeuroDigital con Glove One que levanto 160.000 en kickstarter, para terminar nos encontramos con The Void, una plataforma orientada a esos desarrolles de realidad virtual que es más como un parque temático en la que se puede programáticamente modificar su estructura y cargarle textura que se verán a través de los cascos de realidad virtual para tener una realidad hibrida en la que yo toque algo y realmente sienta que eso exista ahí, pero este viendo en mi pantalla algo mucho más bonito, más creativo y con historias más creíbles.
+
 ### Clase 19 *Proyecto*
 
 Crear un videojuego no es fácil y requiere el trabajo conjunto de varias disciplinas, por esto en Platzi no hemos querido traerte solo un curso de videojuegos, hemos creado una carrera completa, donde aprenderás todo el proceso de construcción, creación y distribución.
 
-![src/creacionVideojuego_1.png](src/creacionVideojuego_1.png)
+![src/creacionVideojuego_6.png](src/creacionVideojuego_6.png)
 
 Como  parte de la carrera estaremos construyendo un videojuego llamado "The Day Of The Danza", en este primer curso nos centraremos en entender la historia que se contará, los diferentes enfoques que podríamos tener y crear la música correcta.
 
@@ -408,7 +485,7 @@ Tomemos como ejemplo GTA V, una de las sagas de videojuegos más conocidas, cuen
 
 Parece antinatural, pero es normal que cuando se empieza a plantear un concepto aparezcan muchas dudas. Sea cual sea el género, sea cual sea el juego, en muchos sistemas e interacciones entre mecánicas aparecerán cosas que no hemos previsto, entonces, es muy normal que cuando estamos definiendo el concepto surjan pequeños vacíos a rellenar. Un sistema bastante popular para analizar el game design de un videojuego, aunque este bastante en desuso, es el MDA.
 
-![src/creacionVideojuego_2.png](src/creacionVideojuego_2.png)
+![src/creacionVideojuego_7.png](src/creacionVideojuego_7.png)
 
 El MDA básicamente trata de romper un concepto en tres partes; mecánica - normas más simples, dinámicas - sistemas que interactúan unas con otras y la estética - sentimientos que se desea provocar al jugador. Es un modelo no muy actual pero aun así se sigue utilizando y sigue siendo útil para ilustrar un poco el desglose cuando estamos empezando a crear un juego.
 
@@ -459,7 +536,7 @@ Es como la "biblia", es muy recomendado para cualquiera que empieza con el dise�
 
 Normalmente cuando no sabemos nada vamos a buscar en Google como hacer un documento y encontramos esta de lo que debería tener un documento de diseño:
 
-![src/creacionVideojuego_3.png](src/creacionVideojuego_3.png)
+![src/creacionVideojuego_8.png](src/creacionVideojuego_8.png)
 
 Vemos que pide historia, personajes, personalidades, el mundo, etc. Y muchas veces eso no ayuda en juegos como puzzles o demás, así que volvemos a lo mismo de siempre: sentido común.
 
