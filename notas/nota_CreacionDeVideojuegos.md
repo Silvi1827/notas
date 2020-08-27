@@ -626,3 +626,136 @@ GDD, es el documento que define el proyecto, guía de lo que vamos a hacer, en f
 - Todo debe apuntar a la misma dirección, es importante que todo el equipo tenga claro el sentimiento que se quiere plasmar, en el proceso van a surgir dudas, cuando definamos ciertas interacciones, están deben ser resueltas.
 
 - Deberíamos ser capaces de explicar con facilidad de que estamos haciendo.
+
+### Clase 25 *Presentación*
+
+Nuestro profesor será Antonio Serón, guionista, y nos mostrara como crear historias increíbles para los videojuegos.
+
+Él nos hablara de los tres actos, la estructura más tradicional para contar historias.
+
+Hay un déficit de historias bien desarrolladas y esto debe a que los guionistas de videojuegos no están acostumbrados a un modo literario y cinematográfico, es decir, hacen mal uso de la estructura de los tres actos y al final queda una historia irregular.
+
+**¿Qué es exactamente una historia?**
+
+Un conjunto de elementos relacionados que forman un evento mayor, o sea, un todo que puede dividirse en fragmentos pequeños.
+
+### Clase 26 *Los 3 actos: El método más tradicional de contar una historia*
+
+**¿Qué es el método de los 3 actos?**
+
+Es una teoría que asegura que todas las historias tienen un comienzo, un nudo y un desenlace. O sea, cualquier historia se puede dividir en tres partes.
+
+La idea es contar una historia en la que todo esté relacionado de un modo orgánico, en la que se cree un conjunto ordenado.
+
+Lo tenemos tan interiorizado que con el tiempo se ha convertido en el modo usual de contar historias, está prácticamente en cualquier formato. Existe en casi todo lo que tiene una intención comunicativa (teatro, novelas, cuentos, videojuegos, comic, etc.) e incluso cosas como redacción, articulo o contrato cuenta con este formato. Se usa por todo aquel que cuenta una historia, si nos remontamos muchos los neandertales lo utilizaban para contar sus cacerías, los egipcios para narrar el viaje de sus muertos y nosotros lo usamos para contar como un fontanero rescata a una princesa.
+
+**¿Por qué los 3 actos son útiles para un videojuego?**
+
+Es útil para casi todo.
+
+Los videojuegos tienen historias desde sus comienzos, pero hasta hace poco no ha habido una reflexión sobre el mejor modo de narrar, en la última década el nivel ha subido mucho pero sigue habiendo esa carencia de buenas historias bien desarrolladas.
+
+Conocer la estructura es muy sencillo, pero dominarla y mezclarla con la jugabilidad es lo difícil. Aprender la estructura garantiza un primer paso firme en el guion de nuestro juego, el resto depende de nuestro talento.
+
+**¿De dónde salen los 3 actos?**
+
+Si tuviéramos que empezar de un lado, seria con Aristóteles.
+
+Aristóteles fue un filósofo griego del siglo IV a.C., discípulo de Platón y maestro de Alejandro Magno. Sus historias han tenido mucha influencia en el desarrollo de la cultura occidental, ha ampliado muchos campos de conocimientos como pueden ser; la lógica, la ética, la ciencia, la política, la física, la astronomía, etc., y entre ellos está la narratología. Mientras daba clases en Atenas, Aristóteles exhibió una obra llamada «La Poética», en este libro plantea una reflexión estética y una descripción de la tragedia, a través de esta descripción surge el análisis de los 3 actos. Evidentemente, los 3 actos ya se utilizaban antes de Aristóteles, pero este es el primer estudio pormenorizado que se conservar del tema, aquí Aristóteles desarrolla la teoría básica del modelo: el principio, el medio y el fin. La historia necesita un primer acto con un protagonista que inicie un conflicto, un segundo acto en el que él conflicto se desarrolle y un tercer acto cierre el conflicto. Es sencillo y complejo a la vez, aunque el análisis se centra en la tragedia griega, en realidad el modelo sirve para todos los géneros y formatos.
+
+La teoría se ha vuelto mucho más sofisticada, pero la base no ha cambiado ni un poco.
+
+### Clase 27 *¿Qué es el StoryTelling? Las 20/22 reglas de Pixar*
+
+**¿Cómo funcionan los 3 actos en la actualidad?**
+
+En realidad casi no han cambiado, como prueba esta Pixar.
+
+Pixar es un estudio cinematográfico de animación por computadora y, hace unos años, una dibujante de storyboard llamada Emma Coast colgó en Twitter las 22 reglas del Storytelling que el estudio sigue para crear sus películas. La número 4 está dedicada a la estructura, sus guiones siguen paso a paso la tragedia de Aristóteles.
+
+![src/creacionVideojuego_9.png](src/creacionVideojuego_9.png)
+
+Esta estructura se divide en tres actos:
+
+1. «Había una vez»: es el primer acto con el que empezamos. Se nos presenta la situación inicial y los personajes de la historia.
+2. «Todos los días»: nos muestra la normalidad del personaje, su vida en un presente en donde nada fuera lo común ocurre para él. Es decir, el personaje contextualizado en su presente, en un día estándar.
+3. «Un día»: es el primer paso importante. Un día algo anormal le ocurre al personaje, algo hace que se le presente un problema y se crea un conflicto, el protagonista entonces debe romper su normalidad y hacer frente al problema. Este paso con que inicia su viaje es con el que comienza el segundo acto.
+4. «Por eso»: consiste en que debido al problema, el personaje da una serie de pasos para resolver su conflicto. Este paso cubre todo el segundo acto y se pueden alargar todo lo que sea necesario, continua hasta donde nuestra historia lo necesite.
+5. «Hasta que finalmente»: es el último paso. Este paso es el tercer acto y es donde el personaje cierra el conflicto.
+
+Todos los pasos forman la historia principal.
+
+### Clase 28 *Primer acto: protagonista*
+
+El primer acto es expositivo lo que significa que está destinado a transmitir información, todo lo que debe contarse para entender la historia se debe contar aquí. Hay muchos tipos de historias y cada uno deberá presentar cosas distintas, pero hay una serie de elementos comunes que existen en todas que son; el protagonista, el detonante, el antagonista y el primer punto de giro (este último siendo polémico porque esta entre el final del primer acto y el comienzo del segundo).
+
+**Protagonista**
+
+Todas las historias necesitan algo que los lleve adelante, ese es el papel del protagonista. Puede ser cualquier cosa, una persona, un objeto, un monstruo e incluso figuras geométricas, no importa mientras transporte al jugador a través de la historia. Si la historia es una carretera, entonces el protagonista es el vehículo que la recorre.
+
+En un principio un personaje secundario también puede impulsar la historia, pero no suele ocurrir por mucho tiempo ya que el protagonismo recae sobre quien más tiempo lleva delante de la historia. Esto nos lleva a una regla de oro:
+
+- **Debe desear algo:** los personajes realizan acciones por un motivo, nadie persigue algo que no le interesa o le trae sin cuidado. Si queremos que el personaje actúe con lógica entonces debe tener un motivo por el que avance, puede ser algo tan extraordinario como vencer a un villano o algo tan común como lo es trabajar para mantener a tu familia. Su deseo puede ser incluso secreto, pero siempre debe de existir.
+- **Debe perseguir su objetivo activamente:** en los juegos y en la vida cualquier objetivo que tengamos está condicionado por una motivación básica y personal, para los personajes es igual. Pensemos en nuestra propia vida, los momentos de mayor desmotivación suelen venir cuando no tenemos objetivos, cuando no tenemos una dirección clara, la motivación nos trae objetivos y los objetivos nos hacen avanzar nos dan un propósito. Los pasivos no persiguen sus objetivos por lo que sus historias están detenidas, como en un limbo a la espera de empezar. Las historias de protagonistas novelista son maravillosas en literatura, pero prohibitivas en videojuegos debido a que el propio medio necesita acciones activa para hacer avanzar al jugador. Para que la historia avance, el vehículo que es el protagonista debe seguir adelante.
+
+**Tipos de protagonistas**
+
+- **Individual:** es un personaje único con un objetivo, también es el modelo más clásico. Un ejemplo sería Link de The Legend of Zelda, es el representante más habitual del héroe, en todas las sagas su objetivo es el mismo, aunque con ligeras variaciones, proteger Hyrule con el poder la trifuerza. La motivación de Link es la justicia y, como héroe que es, persigue su objetivo activamente.
+- **Plural:** en este modelo dos personajes comparten un objetivo. Muchos juegos comparten protagonismo plural buscando explorar diferentes puntos de vistas o distintos sistemas de control, es algo muy habitual. En esta categoría hasta los personajes antagónicos también pueden ser protagonistas plurales.
+
+Como ejemplo tenemos a Brother que cuenta la historia de dos hermanos que entrar en un bosque peligroso para buscar un remedio para la enfermedad de su padre. Brother tiene un sistema de juegos bastante ingenioso, el jugador controla a los dos personajes a la vez y con eso se acentúa la pluralidad de los mismo, sus diferencias y sobre todo sus dependencias, un hermano necesita al otro para avanzar, eso está integrado en la historia de modo muy claro, cuando llegamos al final descubrimos que en realidad la historia trata de la maduración del hermano pequeño y la propia idea no solo afecta el guion sino que también al control que cambia con esta relación. De este modo consigue transmitir el conflicto del personaje al control físicamente.
+
+Por otro lado, en Starcraft II tenemos a los Terran, Protoss y Zerg que representan las tres caras del conflicto, y esa diferencia no está solo en el argumento, también está en los personajes, la atmosfera, los diálogos y en sus historias independientes. Cada uno quiere una cosa; los Zerg quieren dominar el universo, los Terran quieren sobrevivir a la guerra y los Protoss buscan un ideal simbólico. Sin embargo, cada uno representa una parte del argumento y solo tenemos la visión general a conocer los tres puntos de vista, a pesar de sus diferencias, los tres protagonistas están unidos por un objetivo común y es ganar la guerra.
+
+- **Múltiple:** es el modelo que tiene a personajes independientes con distintos objetivos, se parece al anterior pero tiene esa diferencia importante. En este caso los protagonistas no tienen ninguna vinculación y lo que persiguen no tienen por qué estar relacionado se suele usar para dar protagonismo a un lugar o a una situación particular, a algo que va más allá de los personajes. Forbidden Siren tiene diez personajes jugables con distintas motivaciones y objetivos que a la vez están unidos a un pueblo fantasma a través de tres días cada personaje transmite una parte del conjunto, pero en la mayoría de los casos con historias independientes.
+
+- **Abierto:** este personaje es exclusivo de los videojuegos y de algunos experimentos literarios como los de "elige tu propia aventura". El personaje es una carcasa vacía en la que el jugador puede proyectarse y moldea a su gusto, la trama siempre es exterior al personaje para que cualquier construcción pueda entrar bien en ella, a veces el jugador puede moldear también la historia en base a sus decisiones. Este modelo es el que tiene más potencial en cuanto a posibilidades, pero a la vez también es el más difícil básicamente debido a lo mismo cuanto más libertad le das al jugador más difícil es escribir la historia. Es el modelo con el que se está experimentado más actualmente.
+
+### Clase 29 *Primer acto: el detonante*
+
+El siguiente elemento del primer acto es el detonante, como la propia palabra lo indica es muy sencillo de explicar, es el evento que inicia los acontecimientos que van a construir la historia, es decir, lo que conduce al protagonista al problema que va a enfrentarse. El detonante saca al personaje de su rutina y lo introduce a terreno desconocido, aunque las historias suelen empezar en mundo ordenados, el que se trastoca no tiene por qué ser siempre así, el statu quo inicial es el que siempre se rompe por más anormal que sea. Tomemos como ejemplo a Super Mario Bros, el statu quo de Mario es vivir en el Reino Champiñón en el que nada ocurre hasta que Bowser rapta a la princesa. Bowser ha roto el statu quo.
+
+Cuanto más salga el personaje de su rutina más impactante será el arranque, pero lo más importante del detonante es que es el momento donde el personaje adquiere motivación y objetivo. Se puede considerar que antes de esto, el personaje vivía en un estado de inacción e inmovilidad, antes de que el personaje adquiera motivación y objetivo no había historia solo normalidad. Cuanto se presenta objetivo y motivación, el personaje adquiere motivo de ser y arranca la historia.
+
+**Tipos de detonante**
+
+- **Según su naturaleza:** se refiere a su naturaleza casual o causal.
+
+  - **Detonante casual:** responde a la aparición de eventos inesperados e incontrolables. Un ejemplo seria Resident Evil 2, Claire Redfield va a visitar a su hermano en Raccoon City y de pronto se ve atrapada en una ciudad infestada de zombie.
+  - **Detonante causal:** es consecuencia de una serie de eventos que el protagonista activa. Generalmente, el protagonista inicial un hecho que desencadena otros más peligrosos que no podría haber previsto. El ejemplo perfecto es Monkey Island, el protagonista aparece y su primera frase es «Mi nombre es Guybrush Threepwood, y quiero ser un pirata», la decisión de Guybrush es la causa de que toda la historia arranque y él de un modo activo va a introducirse al peligro. Si Guybrush hubiera decidido no ser un pirata, nada hubiera pasado y tendríamos historia.
+
+- **Según su valor:** se refiere a su asociación a un estado emocional (positivo o negativo). Es más común ver un detonante negativo, porque los detonantes suelen empezar siendo un problema para el protagonista, pero no todos son así.
+
+  - **Detonante positivo:** basado en valores positivo, se suele considerar que conlleva felicidad o beneficio. Como ejemplo tenemos a Pokémon, el personaje inicia el viaje con un cambio vital que es positivo; al alcanzar cierta edad el protagonista consigue su primer pokémon y recorre el mundo creciendo como entrenador. Aquí el detonante es sinónimo de maduración y libertad, el conflicto no llegara hasta más tarde.
+  - **Detonante negativo:** basado en valores positivo, se suele considerar que lo positivo conlleva infelicidad o perdida. Ni no Kuni tiene el ejemplo perfecto, Oliver es un niño que vive una vida apacible con su madre hasta que está muere repentinamente. La pérdida es uno de los detonantes negativos más clásicos y posiciona al personaje ante un problema que tiene una solución difícil o imposible.
+
+Hay que tener en cuenta que el papel del detonante no es solo comenzar una historia, sino suscitar interés. Un detonante aparentemente resoluble en principio es más proclive a generar interés que otros más suaves o mundanos, en este sentido la muerte se podría considerar el detonante negativo estándar. Un detonante negativo de impacto es el lugar más seguro para empezar una historia.
+
+**Elementos**
+
+- **Objetivo:** se refiere a la meta inmediata del protagonista, el mismo puede cambiar al fin y al cabo un objetivo no responde más que a otro objetivo mayor. En la vida real, nuestros objetivos también cambian sin parar. Recordar, el objetivo es lo que el personaje quiere en el presente y puede cambiar con el tiempo mientras su objetivo principal, el mayor que los engloba a todos, no cambie.
+- **Motivación:** es la raíz del objetivo, es lo que nos hace levantar por la mañana, enfrentar retos y llegar al día siguiente. Son sentimientos universales que nos unen. Dos individuos pueden tener objetivos totalmente distintos, movidos por la misma motivación.
+
+**Importancia de la motivación**
+
+Cuando un personaje tiene una motivación potente se genera empatía. Esto es muy importante y a menudo ignorado en los videojuegos, la empatía consiste en la capacidad de reflejo que tengamos con la emoción del personaje, cada emoción de un personaje tiene una reacción en la persona que lo observa. La empatía consiste en entender la emoción de la otra persona y sentirla como propia. Gracias a la empatía, las motivaciones universales pueden ser historias universales.
+
+**Ejemplos de motivación**
+
+- **Venganza:** es una de las motivaciones más clásicas, básicamente existen desde que los videojuegos existen, porque le daban al jugador una buena excusa para matar a todo lo que se pusiera por delante sin tener ningún tipo de debate moral. Un ejemplo sería la vida de Max Payne, un policía de New York, que es destrozada cuando su esposa y su hija son asesinadas por tres yonkis que son adictos a una nueva droga de diseño llamada Valkyr, tiempo después Max descubre lo que se esconde detrás de este crimen y se dispone a tomar venganza propia. La venganza es una de las pocas emociones oscuras que dejan un desquicio moral interesante, también es muy efectiva porque todos entendemos el ojo por ojo, de nuevo, sentimos empatía.
+- **Justicia:** otra motivación clásica. En este caso tenemos a Phoenix Wright que es un buen representante, ya que lleva el concepto a algo más literal moviéndolo directamente a una sala de juicios. Phoenix es un abogado defensor integro que lucha por su cliente solo  por el afán de hacer lo correcto, el guion enlaza muy inteligentemente la trama principal con una reflexión ligera sobre el relativismo de la justicia cuando esta encadenada a un entramado burocrático.
+- **Amor:** probablemente la motivación más universal de la historia. Con algunas excepciones, los videojuegos en realidad la han utilizado poco y no ha empezado a usarse de modo activo hasta hace pocos años, no obstante, el amor se vuelve mucho más interesante cuando genera conflictos morales. En Pandora's Tower, Aeron y Helena son una pareja que viven este conflicto. Un día, Helena recibe una marca que la va convirtiendo progresivamente en un monstruo, solo hay un modo de evitarlo y es dándole de comer carne de 12 bestias legendarias que custodian 12 torres, Aeron desde ese momento matara por amor, generando una interesante relación entre los dos.
+- **Sed de aventuras:** era una motivación muy habitual en los juegos RPG clásicos y poco a poco fue entrando en desuso, hoy en día está ocupada sobre todo por la narrativa emergente en los juegos de exploración y de supervivencia, aunque casi nunca tiene vinculación argumental. La sed de aventuras retrotrae a algo tan básico como la curiosidad y el afán de conocimiento. Grandia tiene uno de los mejores ejemplos; Justin es un chico cuya gran ambición es ser aventurero, el argumento le lleva muy lejos, mucho más de lo que podía esperar, y se centra en el proceso de maduración que conlleva el viaje.
+- **Supervivencia:** aunque está motivación siempre ha estado presente, se ha revalorizado con la creación y el asentamiento de los juegos de terror, la práctica totalidad de los mismos se basa en esta emoción primaria. Incluso un juego con un argumento tan limitado como Slender: The eight pages, que no tiene ni siquiera un protagonista, puede igual genera esa motivación que nos engancha a todos.
+
+**Motivaciones y objetivos cambiantes**
+
+Los juegos que utilizan más argumentos tienen una narrativa más compleja y al final lo disimulan más, pero está sigue la motivación base. La supervivencia es de las motivaciones más primarias, por lo que la empatía que provocan siempre es directa y clara, todos huimos o luchamos contra situaciones de tensión, lo mismo hacen los personajes. Pero si algo hace madurar una historia es el cambio, cuando una motivación y un objetivo evolucionan a la vez consiguen acercarse a la complejidad de la realidad, por supuesto este proceso no es fácil, pero cuando se consigue la historia de ser algo anecdótico, un fondo para el juego, a convertirse en algo verdaderamente valioso.
+
+Tomemos como ejemplo The Last of Us, su protagonista Joel empieza la historia perdiendo a su hija y teniendo que adaptarse a un entorno salvaje en el que un virus ha acabado con todo en la tierra, su única motivación es la supervivencia y para ello hace lo que sea necesario: se esconde, roba, mata y pierde todo lo que le definía como ser humano. En este momento de la historia, Joel es poco más que una bestia sin objetivo, pero entonces, aparece Ellie. Joel es contratado para custodiar a la niña hasta el capitolio de Boston debido a que ella puede tener en su interior la clave para fabricar la vacuna contra el virus. En principio es un trabajo más para Joel, pero poco a poco se va encariñando de ella, ya que sin duda le recuerda a su hija, sus sentimientos empiezan a volver y Ellie comienza a hacérsele indispensable, Joel acaba entendiendo que, en ese mundo de locos, recuperar su humanidad depende de preservar la vida y la inocencia de Ellie. A lo largo del viaje Joel experimenta un potente cambio de motivación, pero entonces llega al final de la historia, en el que Joel entiende que para conseguir la vacuna los médicos deben matar a Ellie, entonces Joel elimina a los cirujanos y a todo aquel que se le ponga por delante para poder escapar con la niña. La motivación de Joel cambia en un último estado muy interesante por el dilema moral que provoca, Joel actúa tanto por amor como por egoísmo; ama tanto a Ellie que está dispuesto a sacrificar el bien de todos por el de ella, pero a la vez Joel antepone su felicidad al futuro de toda la humanidad, y eso consigue convertir el acto más humano en el más deshumanizado. La ambivalencia del esto es lo que consigue que la historia tenga un enorme interés. El viaje habría sido imposible sin una motivación y un objetivo cambiante.
+
+Pero si hablamos de objetivos y motivaciones cambiantes, lo que mejor lo representa es Final Fantasy VII. Cloud, el protagonista, cambia de estado emocional cinco veces, consiguiendo una integración perfecta con la trama.
+
+La historia comienza con un Cloud niño cuya gran ambición es ser tan famoso como Sephiroth, el mejor miembro de SOLDADO, su motivación es la gloria, la fama y el reconocimiento, con el tiempo entendemos que Cloud fue un niño ignorado y solitario, por lo que está motivación pasa de ser frívola a generar una gran empatía. Persiguiendo su sueño, Cloud abandona su pueblo y a su amiga de la infancia, Tifa. Años después, Tifa y Cloud vuelven a encontrarse, aparentemente Cloud ha conseguido su sueño, pero una tragedia del pasado ha hecho que abandone el ejército, y Cloud se ha convertido en un mercenario materialista, orgulloso y muy distante que rehúye del contacto emocional con los demás, Tifa incluida. La soledad se ha convertido en la motivación de Cloud, cuyo objetivo es hacer su trabajo y no involucrarse con nada, pero la trama avanza y a Cloud le ocurren dos cosas; conoce a Aeris, la florista de la que acaba enamorándose, y la trama trae de vuelta a Sephiroth, antiguo héroe de Cloud y antiguo compañero del ejército. Cloud se ve inmerso en un conflicto ya que, según sus palabras, tiene una cuenta pendiente con Sephiroth, descubrimos entonces el acontecimiento trágico responsable de su cambio de conducta anterior; hace años Sephiroth y Cloud acudieron a una misión en Nibelheim, el pueblo infancia de Cloud, allí Sephiroth descubre que es descendiente de los Cetra, una antigua raza de sabios que fueron sacrificados en una catástrofe de la que culpa a los humanos, así que enloquecido, Sephiroth quema todo el pueblo y mata a todos los conocidos de Cloud, excepto a Tifa. Más adelante la ira de Cloud se incrementa cuando lo peor que le puede ocurrir le ocurre, Sephiroth mata a Aeris, la venganza es todo lo que le queda a Cloud que además empieza a dudar sobre sus propios pasados y sus recuerdos. Pero más adelante, Cloud acaba cayendo en una trampa de Sephiroth y lo ayuda a invocar un meteorito que va a destruir la tierra, además, para colmo de males, Cloud queda en un estado vegetativo debido a una sobreexposición de Mako, la energía del planeta. Poco después con ayuda de Tifa, Cloud logra reconstruir sus recuerdos reales en su cabeza descubre que fue sujeto de experimentos de Shinra y que debido a ellos olvido casi todo su pasado, sus recuerdos auténticos revelan que Cloud tiene un enorme trauma que nunca ha superado, nunca consiguió entrar en SOLDADO y nunca se atrevió a admitirlo, todo lo que Cloud creía real eran las vivencias de un soldado de élite en el que él proyecto su propia vida, sí que estuvo en la misión de Nibelheim, pero como soldado de escolta. El descubrimiento hace que la motivación de Cloud cambie a la aceptación de sí mismo y de sus fracasos, sale del estado catatónico fortalecido y más sabio. De esta forma, Cloud llega al final de la historia convertido en una persona totalmente distinta, se convierte en un líder que valora la vida y se enfrenta a Sephiroth superando la venganza. Cloud ha pasado de ser individualista y materialista a un héroe cuya principal motivación es la camaradería, una persona que ha pasado de evitar sus traumas a superarlos y luchar por un bien mayor, alguien que ha llegado a conocerse y valorar a los que lo rodearon, incluso al propio planeta.
+
+### Clase 30 **
