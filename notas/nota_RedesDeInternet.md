@@ -971,3 +971,168 @@ Las direcciones IP públicas son aquellas que permiten la conexión a Internet.
 Todos los dispositivos que están atrás de un mismo router tienen diferentes direcciones IP privadas únicas en ese segmento de red y una dirección pública que permite la conexión entre diferentes redes alrededor del mundo, esta dirección ip pública es la dirección del router.
 
 El segmento de direcciones privadas se encuentra entre **10.0.0.0/8** a **10.255.255.255** que usualmente se asigna para redes con conexión inalámbrica ya que el rango es muy amplio y **192.168.0.0/16** a **192.168.255.255** que usualmente se asigna para redes conectadas por medio cableado, es importante resaltar que esto no implica ningún tipo de obligación o reserva de rangos, tú puedes asignar direcciones IP basándote en tus reglas de negocio.
+
+### Clase 28 *Direccionamiento IP*
+
+Recordemos que una dirección IP es un número binario de 32 dígitos (4 bytes), un segmento está asignado a la red y otro segmento asignado a los hosts.
+
+![src/redes_67.png](src/redes_67.png)
+
+Es el segmento de los hosts lo que determina la cantidad de dispositivos van a poder estarse conectando a la red.
+
+**Clases de Redes**
+
+- Clase A - 16.777.216 hosts
+
+  ![src/redes_68.png](src/redes_68.png)
+
+  Tres segmentos de bytes (2^24) dedicados a los hosts y solamente un segmento dedicado a la red. Esta clase de redes son muy grandes y son las que grandes compañías internacionales utilizan.
+
+- Clase B - 64.534 hosts
+
+  ![src/redes_69.png](src/redes_69.png)
+
+  Dos segmentos de bytes (2^16) dedicados a los hosts y dos segmentos dedicados a la red. Son redes de tamaños medios, como los de una campus grande de universidad.
+
+- Clase C - 256 hosts
+
+  ![src/redes_70.png](src/redes_70.png)
+
+  Un único segmento de (2^8) dedicado a los hosts y tres segmentos dedicados a la red. Redes comúnmente usadas por negocios de pequeños a medianos tamaños.
+
+También hay otras dos clases de redes, D y E, que son redes que nos usamos y no podemos asignar. Las redes clase D se usan para difusiones multicast y las redes de clase E son direcciones que se usan para propósitos experimentales.
+
+Las clases A, B y C componen el rango de las direcciones que hacen internet.
+
+**¿Cómo está diseñado internet?**
+
+La internet está compuesta por direcciones públicas y privadas.
+
+- **Direcciones públicas:** es el identificador de nuestra red desde el exterior, es decir, la de nuestro router de casa, que es el que es visible desde fuera.
+- **Direcciones privadas:** es la que identifica a cada uno de los dispositivos conectados a nuestra red, por lo tanto, cada una de las direcciones IP que el router asigna a nuestro ordenador, móvil, tablet o cualquier otro dispositivo que se esté conectado a él.
+
+Por lo tanto, todos los dispositivos conectados a un mismo router tienen distintas direcciones IP privadas, pero la misma IP pública, ya que es la del router, que actúa como puerta de enlace.
+
+Cada uno de estos dos grandes grupos de redes están definidos claramente cuál es el rango en el RFC 1918 y, a partir de la dirección IP, es posible identificar rápidamente su clase.
+
+![src/redes_71.png](src/redes_71.png)
+
+**¿Cómo se asignan las direcciones públicas?**
+
+En general la organización más grande a nivel mundial que determinan como se segmentan esos rangos de direcciones públicas que se entregan es la IANA.
+
+La IANA (Internet Assigned Numbers Authority) desempeña un papel esencial en la gestión de Internet, ya que es responsable de asignar nombres y sistemas de números únicos que se usan de acuerdo con los estándares técnicos –protocolo de red– de Internet y constituyen la base del direccionamiento de páginas web. La IANA define los segmentos de red que son entregados a la RIR (Regional Internet Registry), la cual es una organización sin fines de lucro que se encarga de asignar el espacio de direcciones de Protocolo de Internet (IP) y de los números de sistemas autónomos dentro de una región geográfica. Es decir, la RIR entrega los segmentos de red al Internet Service Provider (ISP) y esté a su vez es la que nos entrega una dirección IP pública.
+
+**Máscara de Red**
+
+Es una combinación de bits, conformada por 1 y 0, sirve para delimitar el ámbito de una red de computadoras. Su función es indicar a los dispositivos qué parte de la dirección IP es el número de la red, incluyendo la subred, y qué parte es la correspondiente al host. La cantidad de bits '1' indican que parte de la dirección de red es asignada a la red y la cantidad de bits '0' indica la parte asignada a los host.
+
+**Datos para la asignación de direcciones IP**
+
+- **Dirección de Red:** es la primera dirección, o la dirección absoluta de toda la red, que identifica toda nuestra red. Esta dirección tiene un 0 para cada bit de host en la porción de host de la dirección.
+- **Dirección de Broadcast:** es una dirección especial para cada red que permite la comunicación a todos los host en esa red. Para enviar datos a todos los hosts de una red, un host puede enviar un solo paquete dirigido a la dirección de broadcast de la red.  Ésta es la dirección en la cual los bits de la porción de host son todos 1.
+- **Rango asignable:** como se describe anteriormente, cada dispositivo final requiere una dirección única para enviar un paquete a dicho host. En las direcciones IPv4, se asignan los valores entre la dirección de red y la dirección de broadcast a los dispositivos en dicha red.
+ 
+Entonces, a partir de esto tenemos que vamos a contar con una dirección de red, una dirección de broadcast y vamos a tener la primera dirección que podamos asignar a nuestro segmento de red y la última dirección que podemos asignar a nuestro segmento de red.
+
+**Subredes**
+
+Subnetting, o subredes, hace referencia a la subdivisión de una red en varias subredes. El subneteo permite a los administradores de red, por ejemplo, dividir una red empresarial en varias subredes sin hacerlo público en Internet. Esto se traduce en que el router que establece la conexión entre la red e Internet se especifica como dirección única, aunque puede que haya varios hosts ocultos. Así, el número de hosts que están a disposición del administrador aumenta considerablemente.
+
+Con la aparición de IPv6, que abarca 128 bits y reemplazará a la versión IPv4 en los próximos años, las direcciones IP ausentes ya no tendrán un papel principal para la creación de subredes.
+
+### Clase 29 *Funciones, elementos protocolos, tareas*
+
+La capa de transporte es el encargado de la transferencia libre de errores de los datos entre el emisor y el receptor, aunque no estén directamente conectados, así como de mantener el flujo de la red. Es la base de toda la jerarquía de protocolo. Sin la capa transporte, el concepto total de los protocolos en capas tendría poco sentido.
+
+**Elementos de la capa de transporte**
+
+- Direccionamiento
+- Establecimiento de una conexión
+- Liberación de una conexión
+- Control de flujo y almacenamiento en buffer
+- Multiplexión
+- Recuperación de caídas
+
+**Tareas de la capa de transporte**
+
+- Seguimiento de la comunicación individual entre aplicaciones en los hosts origen y destino
+- Segmentación de datos y gestión de cada porción
+- Reensamble de segmentos en flujos de datos de aplicación
+- Identificación de las diferentes aplicaciones.
+
+**Protocolos de transporte**
+
+- **UDP:** no orientado a la conexión. Este protocolo proporciona una forma para que las aplicaciones envíen datagramas IP encapsulados sin tener una conexión.
+- **TCP:** orientado a la conexión. Diseñado específicamente para proporcionar un flujo de bytes confiable de extremo a extremo a través de una interred no confiable.
+
+### Clase 30 *TCP y UDP*
+
+La capa de transporte maneja los dos protocolos que nos permiten determinar la manera en que los mensajes sean enviados a través de las otras capas de la red.
+
+**TCP (Protocolo de Control de Transmisión)**
+
+El protocolo TCP posibilita la administración de datos que vienen del nivel más bajo del modelo, o van hacia él (es decir, el protocolo IP). Cuando se proporcionan los datos al protocolo IP, los agrupa en datagramas IP, fijando el campo del protocolo en 6 (para que sepa con anticipación que el protocolo es TCP). TCP es un protocolo orientado a conexión, es decir, que permite que dos máquinas que están comunicadas controlen el estado de la transmisión.
+
+Como el protocolo TCP se combina casi en todos los casos con el protocolo de Internet (IP) y esta conexión forma la base de la gran mayoría de redes locales y servicios de red, es común hablar del conjunto de protocolos TCP/IP, aunque en realidad se haga referencia a la familia de protocolos de Internet.
+
+![src/redes_72.png](src/redes_72.png)
+
+**¿Cómo funciona?**
+
+El protocolo TCP permite la transmisión de información en ambas direcciones. Por lo tanto, los sistemas informáticos que se comunican mediante TCP pueden enviar y recibir datos de forma simultánea, como si se tratase de una llamada telefónica. En este contexto, las unidades de transmisión básicas de las que echa mano el protocolo son segmentos (paquetes) que, aparte de los datos de uso, también pueden contener información de control y están limitados a un tamaño de 1500 bytes. El establecimiento y la interrupción de las conexiones, que se pueden catalogar como conexiones de terminal a terminal, así como la transmisión de datos en sí, la realiza el software TCP en la pila de protocolos de red del sistema operativo correspondiente.
+
+El software TCP se activa mediante distintas aplicaciones de red, como los navegadores de red o los servidores, a través de interfaces específicas. Cada conexión se debe identificar siempre claramente mediante dos puntos terminales definidos (cliente y servidor). En este contexto, qué lado desempeña el papel de cliente y cuál el de servidor es indiferente. Lo que importa es que el software TCP cuente con una pareja ordenada de dirección IP y puerto (también denominada '2-tupla' o 'socket') en cada punto terminal.
+
+![src/redes_73.png](src/redes_73.png)
+
+**Establecimiento de la conexión TCP en detalle**
+
+Para que el establecimiento de una conexión TCP válida sea posible, ambos puntos terminales deben contar con una dirección IP unívoca (IPv4 o IPv6) y deben haber declarado y habilitado el puerto deseado para la transmisión de datos. Mientras que la dirección IP funciona como característica de identificación, el puerto sirve para que el sistema operativo pueda asignar las conexiones a las aplicaciones de servidor y de cliente.
+
+La secuencia específica para establecer una conexión con el protocolo TCP es la siguiente:
+
+1. En el primer paso, el cliente que desea establecer la conexión envía al servidor un paquete SYN o segmento SYN con un número de secuencia individual y aleatorio. Este número garantiza la transmisión completa en el orden correcto (sin duplicados).
+2. Si el servidor ha recibido el segmento, confirma el establecimiento de la conexión mediante el envío de un paquete SYN-ACK, incluido el número de secuencia del cliente después de sumarle 1. De forma adicional, transmite un número de secuencia propio al cliente.
+3. Para finalizar, el cliente confirma la recepción del segmento SYN-ACK mediante el envío de un paquete ACK propio, que en este caso cuenta con el número de secuencia del servidor después de sumarle 1. En este punto también puede transmitir ya los primeros datos al servidor.
+
+***Observación: Si el puerto del servidor está cerrado o si bloquea el acceso, en lugar del paquete de confirmación, el cliente recibe un paquete TCP-RST.***
+
+**Interrumpir una conexión TCP de forma controlada**
+
+Ambos interlocutores de la comunicación pueden interrumpir una conexión TCP establecida e incluso se permite la interrupción unilateral. Este último caso también se denomina como conexión semicerrada, en la que la contraparte todavía puede transmitir datos cuando un participante ya ha interrumpido la conexión.
+
+Las diferentes estaciones del establecimiento de conexión mutua (por no complicar la explicación, iniciado, en este caso, también por el cliente) se pueden resumir de la siguiente manera:
+
+1. El cliente envía un segmento FIN al servidor para comunicarle que ya no desea enviar más datos. Al igual que en el establecimiento de conexión, también envía un número de secuencia propio.
+2. El servidor confirma la recepción del paquete mediante un segmento ACK que incluye el número de secuencia después de sumarle 1.
+3. Si el servidor, a su vez, ha finalizado con la transmisión de datos, envía también un paquete FIN al que vuelve a añadir su número de secuencia.
+4. Ahora le toca al cliente enviar un paquete ACK con el número de secuencia recibido tras sumarle 1 y así el servidor dará la conexión TCP por interrumpida oficialmente.
+
+Fin de una conexión TCP en cuatro pasos.
+
+No obstante, para la parte que envía el último segmento ACK (en nuestro caso, el cliente), la conexión no se interrumpe inmediatamente. Como no existe forma de garantizar que el último paquete enviado ha llegado a su destino, el correspondiente interlocutor de comunicación permanece en un modo de espera (también estado “Time-Wait”) hasta que hayan transcurrido los tiempos de ejecución máximos del segmento ACK y de un posible nuevo segmento FIN.
+
+**UDP (Protocolo de datagramas de usuario)**
+
+El protocolo UDP es un protocolo que permite la transmisión sin conexión de datagramas en redes basadas en IP. Para obtener los servicios deseados en los hosts de destino, se basa en los puertos que están listados como uno de los campos principales en la cabecera UDP. Como muchos otros protocolos de red, UDP pertenece a la familia de protocolos de Internet, por lo que debe clasificarse en el nivel de transporte y, en consecuencia, se encuentra en una capa intermedia entre la capa de red y la capa de aplicación.
+
+El protocolo UDP es una alternativa directa al protocolo más utilizado, el TCP, aunque ambos se diferencian sobre todo en un punto: mientras que la transmisión en el protocolo TCP tiene lugar una vez se ha producido el enlace obligatorio de 3 vías (con acuse de recibo mutuo entre el emisor y el receptor, incluida la sesión de comunicación), el protocolo UDP no utiliza este procedimiento con el fin de mantener el tiempo de transmisión lo más bajo posible.
+
+Mediante el protocolo de datagramas de usuario, una aplicación puede enviar información muy rápidamente, ya que no es necesario establecer una conexión con el receptor ni esperar una respuesta. Sin embargo, no hay garantía de que los paquetes vayan a llegar completos y respetando el orden en el que fueron enviados. Además, este protocolo no ofrece ninguna protección frente a la alteración o acceso por parte de terceros. Sin embargo, el UDP puede añadir opcionalmente una suma de verificación (que es obligatoria en IPv6) que permite detectar los paquetes defectuosos.
+
+![src/redes_74.png](src/redes_74.png)
+
+**Característica del protocolo UDP**
+
+Para comprender a fondo cómo funciona la transmisión de datagramas en este protocolo, resulta útil analizar detenidamente cuáles son las propiedades del protocolo de datagramas de usuario.
+
+1. **El protocolo UDP funciona sin conexión:** el protocolo UDP se caracteriza porque permite el envío de datagramas a través de la red sin que se haya establecido previamente una conexión entre el emisor y el receptor. Los datagramas respectivos se envían a la dirección IP preferida de la secuencia especificando el puerto de destino, sin que sea necesario que el ordenador asociado al mismo tenga que dar una respuesta. No obstante, cuando los paquetes tienen que ser devueltos al emisor, existe la posibilidad de incluir en la cabecera UDP información sobre el puerto de origen.
+2. **UDP utiliza puertos:** al igual que el TCP, el protocolo UDP utiliza puertos para permitir que los datagramas se transfieran a los protocolos correctos, es decir, a las aplicaciones elegidas del sistema de destino. Los puertos quedan definidos mediante un número conforme a un rango de valores válidos, estando reservado el rango de 0 a 1023 para los servicios fijos.
+3. **El protocolo UDP permite una comunicación rápida y sin retardos:** el protocolo de transporte es el adecuado para una transmisión de datos rápida debido a que no hay que llevar a cabo una configuración de la conexión. Esto resulta también del hecho de que la pérdida de un paquete individual afecta exclusivamente a la calidad de la transmisión. En el caso de conexiones TCP, en cambio, se intenta reenviar de nuevo los paquetes perdidos de forma automática, lo que provoca que todo el proceso de transmisión se detenga.
+4. **El protocolo UDP no ofrece ninguna garantía de seguridad e integridad de los datos:** la ausencia de acuse de recibo mutuo entre el emisor y el receptor garantiza que la velocidad de transmisión en el protocolo UDP sea excelente; no obstante, el protocolo no puede garantizar la seguridad ni la integridad de los datagramas. Tampoco puede garantizar el orden de los paquetes enviados. Por ello, los servicios que utilizan UDP deben aplicar sus propias medidas de corrección y protección.
+
+En resumen, la característica más importante del protocolo de datagramas de usuario es que permite enviar datagramas sin que se haya establecido previamente una conexión. Esto se traduce en la ventaja de poder transmitir con gran velocidad, aunque conlleva que la información transmitida sea fácilmente alterada, la pérdida de paquetes no sea corregida y la clasificación de los paquetes sea parcialmente arbitraria. Por esta razón, las aplicaciones UDP deben estar capacitadas para trabajar correctamente con datagramas perdidos o no clasificados y aplicar sus propios mecanismos de corrección y seguridad.
+
+## Modulo 8. Sesiones en vivo y conclusiones del curso
+### Clase 31 *Sesiones en vivo del curso*
