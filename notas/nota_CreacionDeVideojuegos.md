@@ -81,7 +81,7 @@ Una de las definiciones con la que nos solemos quedar es que 'videojuego' consta
 
 La definición con la que podríamos empezar a trabajar seria:
 
-    ***Aplicación interactiva orientada al entretenimiento que, a través de interfaces o controles, permite simular experiencias en la pantalla de un televisor, computadora u otro dispositivo electrónico.***
+  ***Aplicación interactiva orientada al entretenimiento que, a través de interfaces o controles, permite simular experiencias en la pantalla de un televisor, computadora u otro dispositivo electrónico.***
 
 Como veremos más adelante, en la parte de videojuego serio, no es necesario que entretenga. Hoy en día se pueden hacer videojuegos educativos, videojuegos personales o videojuegos históricos que quieran transmitir una serie de emociones más avanzadas, y no por ello se dejan de considerar videojuegos.
 
