@@ -771,7 +771,7 @@ Los que vamos a ver en este módulo es un análisis de cuál es el proceso por e
 
 El router es el equipo de la capa de red que toma las señales y hace todo el procesamiento; desencapsula la trama, la abre, revisa las direcciones de destino y origen, y la vuelve a enrutar. Vuelve a encapsular la trama y la envía hacia el siguiente punto.
 
-**Funciones de la capa de red?**
+**Funciones de la capa de red**
 
 - Hacer el direccionamiento de los paquetes: se refiere a asignar las direcciones lógicas del paquete. Lo primero que pasa cuando un segmento de la capa de transporte llega a la capa de red es que se le asigna la dirección IP de origen y la dirección IP de destino.
 - Encapsulamiento de los paquetes: pasa durante el proceso de que el router recibe una trama, la abre para saber sus direcciones lógicas y luego determina el siguiente salto, ya hecho ese enrutamiento lo vuelve a encapsular y envía la trama.

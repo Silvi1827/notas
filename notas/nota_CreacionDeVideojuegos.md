@@ -81,7 +81,7 @@ Una de las definiciones con la que nos solemos quedar es que 'videojuego' consta
 
 La definición con la que podríamos empezar a trabajar seria:
 
-***Aplicación interactiva orientada al entretenimiento que, a través de interfaces o controles, permite simular experiencias en la pantalla de un televisor, computadora u otro dispositivo electrónico.***
+    ***Aplicación interactiva orientada al entretenimiento que, a través de interfaces o controles, permite simular experiencias en la pantalla de un televisor, computadora u otro dispositivo electrónico.***
 
 Como veremos más adelante, en la parte de videojuego serio, no es necesario que entretenga. Hoy en día se pueden hacer videojuegos educativos, videojuegos personales o videojuegos históricos que quieran transmitir una serie de emociones más avanzadas, y no por ello se dejan de considerar videojuegos.
 
@@ -704,9 +704,9 @@ En un principio un personaje secundario también puede impulsar la historia, per
 - **Individual:** es un personaje único con un objetivo, también es el modelo más clásico. Un ejemplo sería Link de The Legend of Zelda, es el representante más habitual del héroe, en todas las sagas su objetivo es el mismo, aunque con ligeras variaciones, proteger Hyrule con el poder la trifuerza. La motivación de Link es la justicia y, como héroe que es, persigue su objetivo activamente.
 - **Plural:** en este modelo dos personajes comparten un objetivo. Muchos juegos comparten protagonismo plural buscando explorar diferentes puntos de vistas o distintos sistemas de control, es algo muy habitual. En esta categoría hasta los personajes antagónicos también pueden ser protagonistas plurales.
 
-Como ejemplo tenemos a Brother que cuenta la historia de dos hermanos que entrar en un bosque peligroso para buscar un remedio para la enfermedad de su padre. Brother tiene un sistema de juegos bastante ingenioso, el jugador controla a los dos personajes a la vez y con eso se acentúa la pluralidad de los mismo, sus diferencias y sobre todo sus dependencias, un hermano necesita al otro para avanzar, eso está integrado en la historia de modo muy claro, cuando llegamos al final descubrimos que en realidad la historia trata de la maduración del hermano pequeño y la propia idea no solo afecta el guion sino que también al control que cambia con esta relación. De este modo consigue transmitir el conflicto del personaje al control físicamente.
+  Como ejemplo tenemos a Brother que cuenta la historia de dos hermanos que entrar en un bosque peligroso para buscar un remedio para la enfermedad de su padre. Brother tiene un sistema de juegos bastante ingenioso, el jugador controla a los dos personajes a la vez y con eso se acentúa la pluralidad de los mismo, sus diferencias y sobre todo sus dependencias, un hermano necesita al otro para avanzar, eso está integrado en la historia de modo muy claro, cuando llegamos al final descubrimos que en realidad la historia trata de la maduración del hermano pequeño y la propia idea no solo afecta el guion sino que también al control que cambia con esta relación. De este modo consigue transmitir el conflicto del personaje al control físicamente.
 
-Por otro lado, en Starcraft II tenemos a los Terran, Protoss y Zerg que representan las tres caras del conflicto, y esa diferencia no está solo en el argumento, también está en los personajes, la atmosfera, los diálogos y en sus historias independientes. Cada uno quiere una cosa; los Zerg quieren dominar el universo, los Terran quieren sobrevivir a la guerra y los Protoss buscan un ideal simbólico. Sin embargo, cada uno representa una parte del argumento y solo tenemos la visión general a conocer los tres puntos de vista, a pesar de sus diferencias, los tres protagonistas están unidos por un objetivo común y es ganar la guerra.
+  Por otro lado, en Starcraft II tenemos a los Terran, Protoss y Zerg que representan las tres caras del conflicto, y esa diferencia no está solo en el argumento, también está en los personajes, la atmosfera, los diálogos y en sus historias independientes. Cada uno quiere una cosa; los Zerg quieren dominar el universo, los Terran quieren sobrevivir a la guerra y los Protoss buscan un ideal simbólico. Sin embargo, cada uno representa una parte del argumento y solo tenemos la visión general a conocer los tres puntos de vista, a pesar de sus diferencias, los tres protagonistas están unidos por un objetivo común y es ganar la guerra.
 
 - **Múltiple:** es el modelo que tiene a personajes independientes con distintos objetivos, se parece al anterior pero tiene esa diferencia importante. En este caso los protagonistas no tienen ninguna vinculación y lo que persiguen no tienen por qué estar relacionado se suele usar para dar protagonismo a un lugar o a una situación particular, a algo que va más allá de los personajes. Forbidden Siren tiene diez personajes jugables con distintas motivaciones y objetivos que a la vez están unidos a un pueblo fantasma a través de tres días cada personaje transmite una parte del conjunto, pero en la mayoría de los casos con historias independientes.
 
@@ -792,3 +792,90 @@ Repasemos Final Fantasy VII para poner el ejemplo. El juego explora el pasado mi
 Otra variante interesante seria cuando se utiliza al antagonismo externo como metáfora social o personal, es decir, cuando el antagonismo externo representa a otro antagonismo cercano, ambos coexisten a la vez y representan lo interno de un modo externo. En Papo y yo tenemos un ejemplo hermoso en lo conceptual, un niño debe cruzar una serie de laberintos acompañando a un monstruo que es a la vez una representación de su padre alcohólico, cada interacción que el niño tiene con el monstruo se carga de significado extra además el final es absolutamente triste adquiere una connotación que es tanto externa como familiar e íntima.
 
 Pero si un juego mezcla bien antagonismo es, sin duda, Silent Hill 2. La historia comienza con James Sunderland, un viudo que recibe la carta de su esposa muerte invitándole a venir a Silent Hill y encontrarse con ella. El antagonismo externo esta personificado sobre todo en Pyramid Head, un monstruo que persigue a James todo el tiempo. Mientras James huye, el pueblo se va llenando cada vez más de una imaginaria angustiosa y sexual llena de sufrimiento, cuando el argumento se cierra descubrimos que el propio James mato a su mujer al ser incapaz de soportar el monstruo en que su cáncer la estaba convirtiendo. Es decir, James estaba inmerso en un viaje de tortura y auto redención que se personifica en Pyramid Head y en los monstruos del pueblo al final todo el conjunto forma una pesadilla que está llena de simbolismo y subtexto muy rico
+
+### Clase 31 *Primer punto de giro*
+
+El primer punto de giro es un giro como otro cualquiera, por ejemplo como el detonante, la diferencia es que este es definitivo. A diferencia del detonante, donde el protagonista reacciona con el mínimo esfuerzo necesario, en el primer punto de giro es el primer momento donde el protagonista se hace consciente de que las cosas no van a salir como esperaba. En ese momento el conflicto se recrudece y el peligro aumenta, esto obliga al protagonista a esforzarse más y aumenta el interés del jugador.
+
+El primer punto de giro coincide con el final del primer acto y el comienzo del segundo. A partir de aquí, con el protagonista completamente metido en el problema, comienza el segundo acto. Este es el primer punto en el que no hay marcha atrás, con el protagonista completamente metido en el problema.
+
+Por ejemplo, en Grim Fandango, Manny Calavera es un vendedor de paquetes de viajes que un día decide robarle a sus compañeros (detonante), sin embargo, el sistema informático obliga a Manny a vender un paquetes de viaje muy barato a una clienta que no lo merecía. Manny es descubierto por su jefe y despedido, este hecho lo lleva a descubrir la gran corrupción que hay detrás de la compañía, y a contraer una deuda de honor con la clienta. Este es el punto en el que Manny ya no puede dar marcha atrás, no lo queda lugar al que volver, su única solución es continuar el viaje.
+
+El método más tradicional es que sea el antagonista quien genere el primer punto de giro.
+
+Como ejemplo está Zelda: Ocarina of Time; el árbol Deku envía a Link al castillo para que hable con Zelda (detonante), allí la princesa le manda recoger tres piedras espirituales para poder acceder al templo del tiempo antes que Ganondorf. Cuando Link vuelve con las piedras, encuentra a Zelda huyendo de Ganondorf. Zelda le arroja la Ocarina del Tiempo, y Link accede al Templo del Tiempo y todo resulta ser una trampa de Ganondorf que se apodera de la trifuerza. Tiempo después, Link despierta siete años más tarde en una Hyrule destruida, Ganondorf genera el acontecimiento a partir del cual Link ya no puede volver atrás.
+
+### Clase 32 *Segundo acto: conflicto*
+
+La función del segundo acto es el desarrollo de la historia, o sea, seguir aumentado los problemas a los que se enfrenta el protagonista. Todo lo que se haya plantado en el primer acto, tiene que progresar en el segundo.
+
+El segundo acto consta de tres elementos; conflicto, complicación progresiva, y segundo punto de giro y crisis.
+
+**Conflicto**
+
+Es un problema a resolver por el protagonista y eso, en el fondo, son todas las historias: problemas. La vida de los personajes consiste en enfrentarse a los conflictos.
+
+El conflicto está muy unido al antagonista, ya que siempre es él quien lo provoca, aunque se planta en el primer acto, es en el segundo cuando se desarrolla. La literatura y el cine siempre han conocido la importancia del conflicto, pero los videojuegos han comenzado a conocerla hace poco. A menudo, la calidad de todo el guion puede medirse por como desarrolla el conflicto, hasta ese punto es importante. Hay que recordar que el protagonista es el vehículo que mueve la historia y, una vez resulto su problema principal, se acabó la historia, el conflicto es su primera y última razón para vivir.
+
+**Tipos de conflicto**
+
+- **Interno:** es el que responde a las emociones, es decir, los conflicto que proceden de nuestros sentimientos. Psychonauts tiene uno de los conflictos internos más comunes; el sentimiento de inferioridad hacia una figura paterna.
+- **Social:** es el que proviene de nuestro circulo interno, o sea, de las personas con las que nos relacionamos. En Danganronpa un grupo de alumnos de elite recibe la invitación para acudir a la prestigiosa Hope's Peak Academy, de pronto la academia se aísla del exterior y se les informa que solo podrán abandonarla matando a sus compañeros y superando un juicio posterior.
+- **Externo:** engloba todos los problemas que provengan fuera del círculo de protagonista, es el tipo de conflicto más clásico y casi siempre implica peligro físico. Xenoblade Chronicles X tiene uno de los mayores conflictos a nivel de escala; nos invaden los extraterrestres y la humanidad ha sido obligada a huir de la tierra, el conflicto es tan externo que el problema ni siquiera viene de nuestro planeta.
+
+**Los conflictos pueden mezclarse**
+
+A menudo, los personajes que se enfrentan a varios conflictos resultan más redondos a representar la complejidad de la realidad.
+
+En Catherine, Vincent Brooks tiene 32 años y vive atrapado entre su compromiso con su novia y su deseo de vivir sin responsabilidades. Ambos deseos son representados por dos mujeres muy distintas. Vincent casi tiene un complejo de Peter Pan, es incapaz de decidir entre una vida ordenada y responsable o una libre y despreocupada, un conflicto muy poco explotado en los videojuegos. Catherine sitúa el conflicto interno en un primer plano y le da tanta importancia que incluso le plantea al jugador preguntas personales que influyen en el desarrollo de la historia. Así mismo, en paralelo, se desarrolla un conflicto social; Vincent debe elegir entre una de las dos chicas, su inmadurez genera un montón de situaciones comprometidas que están llenas de tensión y de humor negro, este conflicto explora el típico triángulo amoroso desde una perspectiva muy particular, de esta forma la inmadurez se convierte en el eslabón que une ambos conflictos. Y por último está el conflicto externo; Vincent es atraído a un mundo de pesadillas en el que debe escalar un laberinto junto a un montón de ovejas, perder en este mundo significa la muerte en el mundo real. En principio podría ser la clásica historia bisagra que enmarca a los dos conflictos, pero Catherine da un paso más y al final consigue enlazar los tres; Vincent acaba descubriendo que una de las dos chicas es un súcubo enviado por un demonio que busca pecadores, la personalidad inmadura de Vincent lo hacia un perfecto candidato, de ese modo el conflicto externo resulta ser consecuencia del conflicto interno y los tres conflictos resultan ser uno solo que funcionan en tres direcciones distintas.
+
+**Sin historia puede haber conflicto**
+
+Hay que añadir que un juego no necesita historia para tener un conflicto, esto es un punto habitual de discusión. La narrativa emergente de juegos, como Los Sims, permite la aparición de múltiples conflictos libres, esto permite contar historias abiertas a la improvisación y al desarrollo aleatorio.
+
+Todos los juegos tienen una problemática a la que enfrentarse, eso es algo universal, pero no es vital un argumento cerrado. La propia gravedad de Tetris es un conflicto, hasta ese punto es importante para las historias.
+
+### Clase 33 *Segundo acto: complicación progresiva*
+
+La complicación progresiva es el conjunto de problemas a los que se enfrenta el protagonista. Cubre todo el segundo acto y se consigue diseminando el conflicto en eventos separados, de este modo el protagonista pasara por varios segmentos de dificultad creciente mientas se acerca a su objetivo, una descripción muy sencilla seria; Mario llega al final de la fortaleza, pero la princesa está en otro castillo.
+
+PERO es la palabra clave de la complicación progresiva. El protagonista siempre debe estar cerca de su objetivo, pero algo ocurre que lo aleja del mismo y dificulta la progresión.
+
+Las complicaciones conducen a nuevos acontecimientos narrativos y más puntos de giro, las opciones son ilimitadas y dependen de cada historia; revelación, traición, engaño, muerte, cambio de roles, cualquier giro que pille por sorpresa al jugador y gire a la historia en otra dirección. El orden de los eventos debe provocar una sensación de in crescendo, o sea, una sensación de que el peligro aumenta sin parar. Un buen modo de visualizarlo es imaginar una línea ascendente con picos.
+
+![src/creacionVideojuego_10.png](src/creacionVideojuego_10.png)
+
+Esta línea simboliza el interés del jugadores durante toda la historia. La línea debe subir alternando entre tensión y  relajación, nunca repitiendo.
+
+Los puntos verdes representan los acontecimientos narrativos (una historia es un conjunto de acontecimientos relacionados que forman un evento mayor), lo ideal sería que cada acontecimiento crezca en intensidad hasta llegar a su cumbre, ese momento es el punto rojo, el punto de giro (momento en donde la historia gira en otra dirección). En resumen, una historia no es más que acontecimientos narrativos que culminan en una cubre de interés y de repente gira en otra dirección, tras los puntos rojos hay unas ligeras pendientes que suelen ser momentos tranquilos en donde el personaje se introduce en el próximo acontecimiento narrativo.
+
+**¿Por qué no hacer una línea ascendente?**
+
+Tal vez parezca extraño hacer descender el interés y no hacer una línea que siempre ascienda, pero la respuesta a eso es la 'Ley de la Recompensa Decreciente'.
+
+La ley de la recompensa decreciente es clásica de la naturaleza humana y asegura que mientras más experimentamos algo, menos efecto produce. Esto se debe a que nos acostumbramos a cualquier hecho y nuestra capacidad de sorpresa se ve muy reducida. Las bajadas proporcionan una distancia justa entre un evento y el siguiente, de modo que ninguna se pise y el jugador pueda prepararse para el siguiente evento, no obstante, debe ser una bajada breve, una bajada larga sacaría al jugador demasiado y entonces no retendría el interés.
+
+**Complicaciones y jugabilidad**
+
+Una de las mejores características de los videojuegos que nos permiten unir la jugabilidad a la complicación argumental. Esto es algo muy característico de este género y no se puede conseguir en ningún otro, los que lo han conseguido han creado una complejidad emocional que solo es posible en los videojuegos.
+
+Final Fantasy VII es el ejemplo más mediático. Con la muerte de Aeris, todo el tiempo que el jugador ha dedicado al personaje era literalmente desperdiciado, este es uno de los puntos de giro más famosos de la industria y no solo por su valor argumental, muchos jugadores sintieron una enorme sensación de vacío y de perdida, una inversión de tiempo y esfuerzo que nada les devolvería, se toparon con una metáfora dolorosa y literal de la muerte. Con esta arriesgada decisión, Final Fantasy VII dio un paso gigante en la narrativa de los videojuegos.
+
+Eternal Darkness también consiguió implementar la complicación progresiva con mucho ingenio. La historia trata de una serie de individuos que a lo largo de la historia son unidos por el tomo de la oscuridad, un libro con el poder de invocar a tres dioses oscuros. Los personajes pueden ir enloqueciendo a medida que avanza la historia y son consumidos por el mal, esta complicación se implementa en el juego a través de sustos que cruzan la cuarta pared, es decir, sustos que van estrictamente dirigidos al jugador, uno de ellos incluso simula borrar las partidas guardadas dando a cualquier un verdadero susto de muerte, de esta forma Eternal Darkness construye momentos que solo son posibles en la narrativa del videojuego.
+
+**Trama Secundaria**
+
+Están dentro del segundo acto y todas las reglas que hemos visto también se aplican a ella, la única diferencia es que la historias son más pequeñas y van paralelo a la principal, aunque no suelen utilizarse en juegos pequeños pueden ser muy útiles.
+
+El principal papel de las tramas secundarias es complementar la historia principal con otras historias, suelen ser datos valiosos para el conjunto pero no vitales. Por ejemplo, las historias de los personajes secundarios o el trasfondo del mundo, de hecho, a veces una historia tiene tanta información que no es posible transmitirla toda.
+
+Por otra parte, las tramas secundarias también pueden actuar como fuerza antagonista, es decir, como un modo de justificar la historia. Elementos que serían simples antagonismos que se complementan con antagonismos principales, suelen ser historias muy pequeñas y desvinculadas del argumento en el que hay un jefe al que enfrentarse.
+
+**Tipos de tramas secundarias**
+
+- **Externas:** son las que narran sucesos que provengan del mundo del juego, cualquier historia desvinculada del argumento aunque estén unidas por el mundo y personajes, hay que recordar que el juego en resumen solo cuenta una historia y que esa es la historia principal. Cualquiera que no haga avanzar el argumento es una trama secundaria.
+  En The Witcher 3, Geralt de Rivia debe buscar a su aprendiz Ciri mientras se enfrenta a la cacería salvaje. Fuera de ese argumento, el guion plantea infinitas tramas secundarias unidas para el trasfondo de la historia y las condiciones de ese mundo, estas historias desarrollan elementos no prioritarios para el argumento y crean un trasfondo complejo y profundo, de esta forma se desarrolla personajes secundarios, se habla del pasado y la personalidad del protagonista, y se transmiten caracteres a cientos de NPCs que pueblan el mundo. El conjunto consigue que el mundo sea una representación en miniatura de nuestro mundo, de modo que Geralt sea solo una pieza de una sociedad que está viva e interconectada.
+  Las tramas secundarias externas también pueden tener un desarrollo indirecto, esto significa que no tienen que ser vividas por el protagonista ni suceder en el presente. Los videojuegos llevan años utilizando el formato literario para narrar acontecimientos del argumento, sobre todo del pasado, esto puede hacerse bajo muchos formatos pero al final la idea es la misma: narrar historias que complementan la trama principal.
+	Project Zero y sus secuelas utilizan el mismo planteamiento; una serie de personajes investigan misteriosos mitos del folclore japones mientras se enfrentan a fantasmas con una cámara que retrata espíritus. El argumento solo narra hechos del presente, es decir, las peripecias del personaje intentando terminar el rito, pero hay un enorme fondo detrás que incluye historias de otros personajes de varias líneas de tiempo temporales, todo se narra de manera indirecta, a partir de documentos, archivos de voz y visiones aisladas, este modo de narrar evidencia mucho la separación entre la historia principal y la secundaria, pero permite contar mucho con medios muy limitados y no saturar al jugador con muchos eventos directos.
+- **Internas:** son las que narran sucesos que provengan del interior del personaje, por supuesto secundarios, transmiten la idea de que los personajes que rodean al protagonista no son herramientas sino que son seres vivos con una motivación, que tienen una vida real con objetivos que cumplir y un fondo que justifica sus personalidades.
+	En Silent Hill 2, James se cruza un par de ocasiones con Eddie Dombrowski, un hombre extremadamente inseguro que odia su apariencia física y ha sufrido abusos toda la vida. Eddie llega a Silent Hill después de dispararle a uno de sus abusones y de matar a un perro, poco a poco Eddie va cediendo a sus conflictos internos de asco, culpa y violencia, al final de la historia Eddie pasa de ser una víctima de la sociedad a un sociópata y se convierte en una amenaza. El desarrollo tiene peso por sí mismo y está unido temáticamente al argumento, Eddie es víctima de la culpa, como James, su historia aporta trasfondo al mundo y complementa de manera indirecta la historia principal.
