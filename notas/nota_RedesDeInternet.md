@@ -1142,7 +1142,7 @@ En esta práctica estaremos trabajando para construir una red pequeña formada p
 
 **Direcciones**
 
-![src/redes_74.png](src/redes_74.png)
+![src/redes_75.png](src/redes_75.png)
 
 **Forma de la red**
 
