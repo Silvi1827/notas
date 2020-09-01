@@ -1136,3 +1136,38 @@ En resumen, la característica más importante del protocolo de datagramas de us
 
 ## Modulo 8. Sesiones en vivo y conclusiones del curso
 ### Clase 31 *Sesiones en vivo del curso*
+### Clase 32 *Practica final con Packet Tracer, asignación de direccionamiento y configuración de equipos de red*
+
+En esta práctica estaremos trabajando para construir una red pequeña formada por; un router, dos switch, un servidor y tres hots.
+
+**Direcciones**
+
+![src/redes_74.png](src/redes_74.png)
+
+**Forma de la red**
+
+![src/redes_76.png](src/redes_76.png)
+
+### Clase 33 *Capa de Aplicación*
+
+La Capa de Aplicación es la que nos permite como usuarios acceder a los diferentes servicios que requerimos a través de la red. Esta capa nos da un acceso muy fácil y cómodo para que como usuarios podamos acceder y desarrollar nuestras actividades con tranquilidad a través de la red.
+
+Algunos de los protocolos que se definen en la capa de aplicación son:
+
+**DNS Domain Name System:** Se usa para la configuración de los nombres de red, como ya hemos visto los dispositivos tienen dos principales formas de ser identificados en la red la dirección MAC y la dirección IP ya sea v4 o v6, como seres humanos es difícil recordar tantos números, es más fácil recordar nombres con palabras, esto es lo que hace este protocolo, asignar nombres en texto a las direcciones de los dispositivos en la red.
+
+**HTTP y HTTPS:** Protocolos de transferencia de hipertexto. Es el protocolo que transforma los mensajes de forma que puedan ser enviados y recibidos en sitios web.
+
+**SMTP y Protocolos de transferencia por correo:** Se usan para el envío de mensajes y archivos adjuntos a través de correo electrónico.
+
+**DHCP:** Protocolo de configuración dinámica de host. Se usa para asignar IPs, máscara de subred, dirección de gateway y DNS dinámicamente a los dispositivos que se conectan a la red.
+
+**FTP:** Protocolo de transferencia de archivos. Se utiliza para el envío de archivos entre dispositivos en la red.
+
+**Funciones de la capa de Aplicación**
+
+1. Codificación y conversión de los mensajes que serán enviados
+2. Compresión de los datos
+3. Encriptación de los mensajes que serán enviados de forma segura
+
+### Clase 34 *Conclusiones del curso*
