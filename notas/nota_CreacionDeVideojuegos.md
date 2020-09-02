@@ -917,24 +917,29 @@ La resolución es el último paso en nuestro viaje, es el momento en que todos l
 
 El final además puede llevar otro elemento que Aristóteles analizo en su Poética, la Anagnórisis o revelación que se refiere al descubrimiento de un dato relevador que altera al personaje de la trama de un modo absoluto, el famoso giro final. Bien usado, redondea la historia e incluso puede darle una nueva lectura enriquecedora, mal usado estropea la historia por completo.
 
-Un ejemplo de mal uso la tenemos en Heavy Rain, su conclusión tiene tantos agujeros que evidencia los defectos de toda la historia, cuando se descubre quien es el asesino, es efectivamente una sorpresa pero lo es porque el guion ha tenido que romper su lógica interna y su coherencia buscando provocar un impacto.
+Un ejemplo de mal uso la tenemos en Heavy Rain, su conclusión tiene tantos agujeros que evidencia los defectos de toda la historia, cuando se descubre quien es el asesino, es efectivamente una sorpresa, pero lo es porque el guion ha tenido que romper su lógica interna y su coherencia buscando provocar un impacto.
 
 Un ejemplo de buena anagnórisis la tenemos en Silent Hill II, su final no solo relanza la historia bajo otra perspectiva valiosa sino que es el centro de su discurso y tiene carga emocional.
 
 **Tipos de resolución**
 
 - **Cerrados:** son los más clásicos, en ellos la historia concluye con todos los cabos atados.
+
   Por ejemplo, en Final Fantasy X termina con el viaje de Tidus y el descubrimiento de que realmente era el viaje de Yuna, quien ha pasado por un proceso de maduración. El juego concluye con Yuna aceptando la marcha de Tidus y responsabilizándose de su posición de líder.
 - **Ambiguos:** son aquellos que resultan crípticos, dejan cabos sueltos o están abiertos a interpretación. Estos finales tienen un gran potencial en interpretaciones metafóricas, siempre y cuando haya ideas poderosas detrás.
+
   Limbo tiene uno de los finales abiertos más comentados de los últimos años. Un niño llega en una barca a un entorno decadente y mortuorio, realiza un viaje y acaba cruzando una barrera luminosa, así llega al último escenario que tiene enormes reminiscencias con el comienzo del viaje, allí una niña al pie del árbol con una cabaña parece fijarse de algo en el suelo. Repentinamente, la niña siente la presencia del niño y entonces el juego termina abruptamente. Si el final funciona o no es totalmente subjetivo, la idea que subyace detrás es tiene un simbolismo muy sugerente, pero estos finales siempre son un viaje interno que llega o no llega.
 
 **Características de la resolución**
 
 - **Imprevisible:** es el que se adelanta a cualquier expectativa que el jugador pudiera tener. Estos finales suelen ser muy polémicos, porque condicionan la historia a un único momento que encorseta todo el desarrollo, sin embargo, cuando funcionan garantizan una emoción visceral en el jugador.
+
   El final de Monkey Island 2 aún rige en la polémica. Tras el enfrentamiento final de Guybrush contra LeChuck, resulta que todo lo vivido durante dos juegos eran las fantasías de un niño en un parque de atracciones. Un giro que rompe la lógica interna y la coherencia, y sorprendentemente funciona por su carácter bromista y autoconsciente, incluso consigue revestir toda la historia en un tono tierno y evocador, por supuesto después se deja la puerta abierta a que todo sea por una maldición de LeChuck, pero la ambigüedad ya estaba plantada. Su importancia se vio además aumentada por la hipotética continuación que Ron Gilbert escribió, pero no pudo realizar.
 - **Irremediable:** es el que empuja tanto la situación que no puede acabar de otro modo, es decir, la historia termina en la dirección más lógica y con el máximo grado de conflicto que se le presupone.
+
 	Mafia es la mejor representación de esto. Tommy Angelo es un mafioso que rememora su vida cuando decide entregar a su jefe a la policía, décadas después, la historia de Tommy recibe el final más lógico y máximo que habría de esperar: dos mafiosos lo ejecutan por soplón. Lo atractivo de estos finales es que no importa que el jugador se adelante a lo que ocurra, porque lo imprevisible está en como ocurre, ahí es donde lo lógico y lo máximo acompañan a la sorpresa.
 - **Sorprendente:** son finales raros, pero muy valiosos, consisten en finales que han cerrado todos sus conflictos y aun así entregan algo inesperado que hacen crecer la importancia de todo. El efecto es el de la sorpresa final, pero sin formar parte indivisible de la historia.
+
   Un gran ejemplo está en Panzer Dragoon Saga. Edge es un muchacho que lucha contra un imperio que quiere hacerse con el control de una torre milenaria. El chico viaja sobre un dragón que se supone es el visitante divino destinado a salvar la humanidad, pero el final revela una última sorpresa: el visitante divino no es el dragón ni tampoco es Edge, es el propio jugador, el mismo que ha estado guiando a Edge por todo el juego y ha salvado a la humanidad. Esta sorpresa mete una capa de metaficción a la historia y posiciona al juego un paso más allá de lo que podíamos esperar, sin embargo, el argumento funcionaria igual sin el mismo
 
 **Finales con los 3 elementos**
