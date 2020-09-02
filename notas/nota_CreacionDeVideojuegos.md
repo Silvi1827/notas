@@ -951,3 +951,142 @@ Wander, un héroe enigmático, se adentra en una tierra prohibida y acaba con un
 Pero, entonces ocurre lo inevitable, Mono despierta y evidencia que la misión de Wander, a pesar de todo, ha sido un éxito. Mono se encuentra sola en esa basta tierra con la única compañía de Agro, el caballo de Wander. Por su lado, Wander enfrenta el destino trágico que él mismo se ha ido forjando a lo largo de la historia. El final alcanza las conclusiones lógicas y máximas a las que apuntaba el desarrollo del argumento.
 
 Finalmente da una sorpresa más, Mono encuentra un bebé con cuernos donde Wander ha sido absorbido por el hechizo. Todo parece indicar que es Wander resucitado y maldito, Mono lo acuna maternalmente dando a entender que acabaran juntos en la tierra prohibida para siempre. Un final sorprendente queda lo que se esperaba, pero de un modo retorcido y nada complaciente, el guion además da un paso más complejo con las preguntas que genera y no contesta; ¿Cuál es la historia de Wander y Mono? ¿Wander es un villano? ¿Todo el proceso de una maldición cíclica es incluso una precuela de Ico? El guion no contestara estas preguntas porque ahí está su poesía, en el misterio
+
+### Clase 37 *Tercer acto: epílogo*
+
+Llegamos al epílogo, la última parte de nuestro viaje.
+
+El epílogo es el último detalle de la resolución y su función es hacer de coda, es decir, es muy breve y cierra cualquier detalle que la resolución haya pasado por alto. Se suele utilizar cuando se quiere separar la emoción de la historia principal de un detalle pequeño y aislado.
+
+En Ico, tras la derrota de la Bruja y el agridulce final, el guion nos regala el único momento dulce para el protagonista y Yorda; ambos comiendo una sandía en una orilla. Es un momento enigmático que da al jugador una última sensación de optimismo.
+
+La otra función del epílogo es abrir un nuevo capítulo tras haber cerrado la historia completa, se utiliza básicamente como pieza de unión para la siguiente historia.
+
+En Metal Gear Solid tenemos uno de los primeros epílogos de los videojuegos y un modelo de como generar expectativa dramática. El juego termina con la enigmática frase: ***Adiós, Señor Presidente.***
+
+### Clase 38 *Lecciones aprendidas del StoryTelling*
+
+Intenta interiorizar esto pero intenta tomarlos como principios, no como leyes.
+
+Siempre habla desde dentro, transmitiendo verdad en tus historias.
+
+### Clase 39 *Cierre*
+### Clase 40 *Método de los tres actos*
+
+**Método de los 3 actos**
+
+Este método sostiene que toda historia se divide en un comienzo, un nudo y un desenlace. En casi todo lo que tiene una intención comunicativa podríamos encontrar estas partes.
+
+Aristóteles en su obra "la poética", sentó las bases teóricas de los 3 actos y hoy lo conocemos cómo narratología.
+
+**¿Por qué es útil para un videojuego?**
+
+Existe una carencia de buenas historias en lo videojuegos, debido a que conocer la estructura es sencillo, pero unirla con jugabilidad es la parte compleja.
+
+**¿Cómo funcionan los 3 actos en la actualidad?**
+
+Las 22 reglas del storytelling que sigue Pixar para crear sus historias, la regla 4 se refiere a la estructura, en ella se sigue la estructura que plantea Aristóteles.
+
+**Primer acto:**
+
+- **Había una vez**, nos presenta la situación inicial
+- **Todos los días**, la normalidad del personaje, nada fuera de lo común ocurre
+- **Un día, algo anormal sucede al personaje**, problema que genera un conflicto
+
+**Segundo acto:**
+
+- **Por eso**, debido al problema el personaje da una serie de pasos para resolver el conflicto.
+
+**Tercer acto:**
+
+- **Hasta que finalmente**, cierra el conflicto.
+
+**Actos**
+
+**Primer acto**
+
+El acto donde se nos introduce la historia, los personajes y sucede el giro donde el protagonista conoce el problema.
+
+Existen elementos comunes en todas las historias:
+
+**Protagonista:** el vehículo que avanza la historia, este debe desear algo y perseguir su objetivo.
+
+**Tipos de protagonista:**
+
+- Individual, un personaje con un objetivo.
+- Plural, varios personajes con un objetivo común.
+- Múltiple, personajes independientes con distintos objetivos.
+- Abierto, el protagonista eres tú.
+
+**Antagonista:** puede ser cualquier cosa que dificulte el avance del protagonista, debe estar a la altura del protagonista.
+
+**Tipos de antagonista:**
+
+- Interno: proviene desde dentro del personaje
+- Social: proviene desde las personas que lo rodean
+- Externo: proviene desde el mundo exterior del protagonista
+
+**Detonante:** el evento que inicia los acontecimientos que va a conducir la historia, saca al personaje de la rutina adquiriendo motivación y objetivo.
+
+**Tipos de detonante:**
+
+- Según su naturaleza:
+
+  - Casual: responde a la aparición de eventos inesperados
+  - Causal: es consecuencia de una serie de eventos que el personaje activa.
+
+- Según su valor:
+
+  - Positivo: conlleva felicidad y beneficio
+  - Negativo: conlleva infelicidad y pérdida
+
+**Elementos del detonante:**
+
+- Objetivo, es lo que el personaje quiere en el momento, pero busca uno global.
+- Motivación, cuando se tiene una potente provoca empatía, alguna de las motivaciones más frecuentes son: venganza, justicia, amor, sed de aventuras, supervivencia.
+
+**Primer punto de giro:** es un giro definitivo, el momento cuando el protagonista se hace consciente que las cosas no van a salir como esperaba, esto coincide con el final del primer acto.
+
+Lo habitual es que el antagonista genere el primer giro.
+
+**El segundo acto**
+
+Desarrolló la historia, aumentando los problemas que enfrenta el protagonista
+
+**Conflicto:** un problema a resolver por el personaje.
+
+**Tipos de conflicto**
+
+- Interno, conflictos que proceden de nuestro interior
+- Social, proviene de nuestro círculo interno como amigos, familia, amantes, etc.
+- Externo, engloba todos los problemas fuera del círculo del protagonista
+
+**Complicación progresiva:** pasos hacia una dificultad creciente, el protagonista debe estar cerca del objetivo pero algo debe suceder que lo aleje de el.
+
+El orden de los eventos debe ir creciendo la dificultad.
+
+**Tramas secundarias:** complementan la historia principal con otras historias, son datos valiosos para el conjunto, existen dos tipos de tramas secundarias.
+
+- Externas, narran sucesos que provienen del mundo del juego, no tienen que ser vividas por el protagonista o en el presente.
+- Internas, narran sucesos que provienen del interior del personaje.
+
+**Segundo punto de giro y crisis:** el conflicto ha alcanzado su máximo punto de dificultad, debería ser el momento más emocionante.
+
+La crisis no es obligatoria, esta marca el momento más bajo del personaje.
+
+**Tercer acto**
+
+Debe cerrar todo lo que se haya planteado, un tercer acto ideal contiene una mezcla de explicación y emoción
+
+**Elementos:**
+
+- Clímax, última batalla, el momento más emocionante de la historia siendo una mezcla de espectáculo y verdad
+- Resolución: es el último paso de nuestro viaje, debe ser emocionalmente concluyente, existen tipos y características de resoluciones
+
+**Características**
+
+- Imprevisible, en contra de lo esperable.
+- Irremediable, no puede acabar de otro modo debido a la situación.
+- Sorprendente, la sorpresa final.
+
+**Epílogo:** Es el último detalle, es breve y cuenta los detalles no contados en la resolución o da pie a continuación.
