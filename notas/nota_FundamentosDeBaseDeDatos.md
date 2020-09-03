@@ -47,17 +47,17 @@ La primera fue la base de datos basadas en archivos, que no es lo mismo a la bas
 - **Regla 3:** *Regla del tratamiento sistemático de valores nulos.* El sistema de gestión de base de datos debe permitir que haya campos nulos. Debe tener una representación de la "información que falta y de la información inaplicable" que sea sistemática y distinta de todos los valores regulares.
 - **Regla 4:** *Catálogo dinámico en línea basado en el modelo relacional.* El sistema debe soportar un catálogo en línea, el catálogo relacional, que da acceso a la estructura de la base de datos y que debe ser accesible a los usuarios autorizados.
 - **Regla 5:** *Regla comprensiva del sublenguaje de los datos.* El sistema debe soportar por lo menos un lenguaje relacional que:
-  1. Tenga una sintaxis lineal.
-  2. Puede ser utilizado de manera interactiva.
-  3. Tenga soporte de operaciones de definición de datos, operaciones de manipulación de datos (actualización así como la recuperación), de control de la seguridad e integridad y operaciones de administración de transacciones.
+1. Tenga una sintaxis lineal.
+2. Puede ser utilizado de manera interactiva.
+3. Tenga soporte de operaciones de definición de datos, operaciones de manipulación de datos (actualización así como la recuperación), de control de la seguridad e integridad y operaciones de administración de transacciones.
 - **Regla 6:** *Regla de actualización de vistas.* Todas las vistas que son teóricamente actualizables deben poder ser actualizadas por el sistema.
 - **Regla 7:** *Alto nivel de inserción, actualización y borrado.* El sistema debe permitir la manipulación de alto nivel en los datos, es decir, sobre conjuntos de tuplas. Esto significa que los datos no solo se pueden recuperar de una base de datos relacional a partir de filas múltiples y/o de tablas múltiples, sino que también pueden realizarse inserciones, actualización y borrados sobre varias tuplas y/o tablas al mismo tiempo y no solo sobre registros individuales.
 - **Regla 8:** *Independencia física de los datos.* Los programas de aplicación y actividades del terminal permanecen inalterados a nivel lógico aunque realicen cambios en las representaciones de almacenamiento o métodos de acceso.
 - **Regla 9:** *Independencia lógicas de los datos.* Los programas de aplicación y actividades del terminal permanecen inalterados a nivel lógico aunque se realicen cambios a las tablas base que preserven la información. La independencia de datos lógica es más difícil de lograr que la independencia física de datos.
 - **Regla 10:** *Independencia de la integridad.* Las restricciones de integridad se deben especificar por separado de los programas de aplicación y almacenarse en la base de datos. Debe ser posible cambiar esas restricciones sin afectar innecesariamente a las aplicaciones existentes.
 - **Regla 11:** *Independencia de la distribución.* La distribución de porciones de base de datos en distintas localizaciones debe ser invisible a los usuarios de la base de datos. Los usos existentes deben continuar funcionando con éxito:
-  1. Cuando una versión distribuida del SGBD se carga por primera vez
-  2. Cuando los datos existentes se redistribuyen en el sistema.
+1. Cuando una versión distribuida del SGBD se carga por primera vez
+2. Cuando los datos existentes se redistribuyen en el sistema.
 - **Regla 12:** *La regla de la no subversión.* Si el sistema proporciona una interfaz de bajo nivel de registro, aparte de una interfaz relacional, esa interfaz de bajo nivel no debe permitir su utilización para subvertir el sistema. Por ejemplo para sortear las reglas de seguridad relacional o las restricciones de integridad. Esto es debido a que a algunos sistemas no relacionales previamente existentes se les añadió una interfaz relacional pero, al mantener la interfaz nativa, seguía existiendo la posibilidad de trabajar no relacionalmente.
 
 **Álgebra relacional**
@@ -101,9 +101,11 @@ Es un campo o una combinación de campos que identifica de forma única a cada f
 - **Naturales:** son inherentes al objeto como el número de serie
 - **Artificiales:** no es inherente al objeto y se asigna de manera arbitraria.
 
-**Entidades débiles**
+**Entidades Fuetes vs Entidades Débiles**
 
-Una entidad fuerte es aquella que no necesita de otra entidad débil para existir. Una entidad débil es aquella que sí que necesita de otra para existir. Por ejemplo, en una librería lo que realmente vende a los clientes no son libro, sino los ejemplares de ese libro que tiene la librería adquiridas. Las entidades débiles se representan mediante un doble rectángulo; es decir, un rectángulo con doble línea.
+Una entidad fuerte es aquella que no necesita de otra entidad débil para existir. Una entidad débil es aquella que sí que necesita de otra para existir.
+
+Por ejemplo, en una librería lo que realmente vende a los clientes no son libro, sino los ejemplares de ese libro que tiene la librería adquiridas. Las entidades débiles se representan mediante un doble rectángulo; es decir, un rectángulo con doble línea.
 
 ![src/fundamentoBD_4.png](src/fundamentoBD_4.png)
 
@@ -120,3 +122,103 @@ Existen dos tipos de dependencias en las entidades débiles:
   La entidad débil no puede ser identificada sin la entidad fuerte relacionada.
 
   ![src/fundamentoBD_6.png](src/fundamentoBD_6.png)
+
+### Clase 5 *Entidades de Platzi Blog*
+
+Empezamos nuestro proyecto, el cual será un manejador de Blogpost.
+
+**¿Por qué un manejador de Blogpost?**
+
+En primer lugar porque la mayoría de nosotros estamos familiarizados con todos los conceptos y con el funcionamiento de un sistema de blogs. Y en segundo lugar, porque este sistema también nos provee de una serie de retos interesantes que vamos a tener que resolver en el curso y que seguramente te vas a encontrar en tu proyecto también, de esta manera vamos a ir poco a poco librando estos obstáculos y llegando a un resultado final coherente para que tú lo puedas hacer de igual manera con tu proyecto.
+
+**Primer paso**
+
+Debemos identificar las entidades.
+
+- Posts
+- Usuarios
+- Comentarios
+- Categorías
+
+**Segundo paso**
+
+Debemos pensar en los atributos. De hecho es inseparable pensar en los atributos y las entidades debido a que cuando se piensa en un objeto generalmente se nos viene a la cabeza lo que lo hace diferente o lo que lo hace un objeto.
+
+- Posts:
+  - Id
+	- Título
+	- Fecha de publicación
+	- Contenido
+	- Estatus
+	- Etiquetas
+
+- Usuarios
+	- Id
+	- Login
+	- Password
+	- Nickname
+	- Email
+
+- Comentarios
+	- Id
+	- Cuerpo del comentario
+
+- Categorías
+	- Id
+	- Nombre de la categoría
+
+### Clase 6 *Relaciones*
+
+Las relaciones es la manera en que empezamos a ligar las diferentes entidades u objetos. Se representan mediante rombos y, por convención, se definen a través de verbos.
+
+![src/fundamentoBD_7.png](src/fundamentoBD_7.png)
+
+**Cardinalidad**
+
+La cardinalidad es una restricción en una relación que especifica el número de instancias de entidad que una entidad específica puede estar relacionada a través de la relación
+
+**Tipos de cardinalidad**
+
+- **Cardinalidad: 1 a 1**
+
+  En una relación de uno a uno, un registro de una tabla se asocia a uno y solo un registro de otra tabla. Por ejemplo, una persona solo puede tener un dato de contacto y un dato de contacto solo puede pertenecerle a una persona.
+
+  ![src/fundamentoBD_8.png](src/fundamentoBD_8.png)
+
+- **Cardinalidad: 0 a 1**
+
+  Es una relación un opcional a uno, un registro de una tabla puede estar asociado a un solo registro de otra tabla. Por ejemplo, una sesión actual tiene un usuario pero un usuario no necesariamente puede estar en una sesión.
+
+  ![src/fundamentoBD_9.png](src/fundamentoBD_9.png)
+
+- **Cardinalidad: 1 a N**
+
+  En una relación de uno a muchos, un registro de una tabla se puede asociar a uno o varios registros de otra tabla. Por ejemplo, una persona puede tener varios automóviles pero el automóvil solo le pertenece a una sola persona.
+
+  ![src/fundamentoBD_10.png](src/fundamentoBD_10.png)
+
+- **Cardinalidad: 0 a N**
+
+  Es una relación un opcional a muchos, varios registros de una tabla puede estar asociado a uno o varios registros de otra tabla. Por ejemplo, una paciente pertenece a una habitación pero una habitación puede estar vacía o tener varios pacientes.
+
+  ![src/fundamentoBD_11.png](src/fundamentoBD_11.png)
+
+- **Cardinalidad: N a N**
+
+  Esta relación la estaremos viendo en la siguiente clase.
+
+### Clase 7 *Múltiples muchos*
+
+Una relación de muchos a muchos se produce cuando varios registros de una tabla se asocian a varios registros de otra tabla. Por ejemplo, existe una relación de muchos a muchos entre los alumnos y las clases: los alumnos pueden pertenecer a varias clases y las clases pueden pertenecer a varios alumnos.
+
+Por lo general, los sistemas de bases de datos relacionales no permiten implementar una relación directa de muchos a muchos entre dos tablas. Tenga en cuenta el ejemplo de seguimiento de facturas. Si había muchas facturas con el mismo número de factura y uno de sus clientes preguntó acerca de ese número de factura, no sabría a qué número se refería. Este es el motivo por el que se debe asignar un valor exclusivo a cada factura.
+
+Para evitar este problema, puede dividir la relación de muchos a muchos en dos relaciones de uno a muchos mediante el uso de una tercera tabla denominada tabla de unión. Cada registro de una tabla de unión incluye un campo de coincidencia que contiene el valor de las claves principales de las dos tablas que se unen. En la tabla de unión, estos campos de coincidencia son claves externas. Estos campos de clave externa se rellenan con datos, ya que los registros de la tabla de unión se crean desde cualquiera de las tablas que se unen.
+
+Siguiendo con el ejemplo de alumnos y clases, se incluye una tabla Alumnos, que contiene un registro para cada estudiante, y una tabla Clases, que contiene un registro para cada clase. Una tabla de unión, Matrículas, crea una relación de uno a muchos, una entre cada una de las dos tablas.
+![src/fundamentoBD_12.png](src/fundamentoBD_12.png)
+
+### Clase 8 *Diagrama ER*
+
+Un diagrama entidad-relación es una herramienta para el modelado de datos que permite representar las entidades relevantes de un sistema de información así como sus interrelaciones y propiedades. Este modelo representa a la realidad a través de un esquema gráfico que ilustra cómo las entidades se relacionan entre sí dentro de un sistema. Son un reflejo de la estructura gramatical y emplean entidades como sustantivos y relaciones como verbos.
+![src/fundamentoBD_13.png](src/fundamentoBD_13.png)
