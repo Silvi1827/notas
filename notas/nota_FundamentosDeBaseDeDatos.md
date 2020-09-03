@@ -241,10 +241,10 @@ El diagrama físico representa como se construirá el modelo en la base de datos
   - **TEXT:** almacena cualquier clase de datos de texto. Las columnas TEXT suelen almacenar memorándums, capítulos de manuales, documentos comerciales, archivos de origen de programas y otros tipos de información de texto.
 - **Número**
   - **INT o INTERGER:** almacena números enteros grandes. Un entero grande es un entero binario con una precisión de 31 bits. El rango oscila entre -2147483648 y +2147483647.
-	- **BIGINT:** enteros muy grandes. Un entero muy grande es un entero binario con una precisión de 63 bits. El rango de los enteros muy grandes oscila entre -9223372036854775808 y +9223372036854775807.
-	- **SMALLINT:** enteros pequeños. Un entero pequeño es un entero binario con una precisión de 15 bits. El rango oscila entre -32768 y +32767.
-	- **DECIMAL(n, s):** permite almacenar números decimales empaquetados con una coma decimal implícita. La posición de la coma decimal la determinan la precisión y la escala del número. La escala, que es el número de dígitos en la parte de la fracción del número, no puede ser negativa ni mayor que la precisión. La precisión máxima es de 31 dígitos.
-	- **NUMERIC(n, s):** sinónimo de decimal.
+  - **BIGINT:** enteros muy grandes. Un entero muy grande es un entero binario con una precisión de 63 bits. El rango de los enteros muy grandes oscila entre -9223372036854775808 y +9223372036854775807.
+  - **SMALLINT:** enteros pequeños. Un entero pequeño es un entero binario con una precisión de 15 bits. El rango oscila entre -32768 y +32767.
+  - **DECIMAL(n, s):** permite almacenar números decimales empaquetados con una coma decimal implícita. La posición de la coma decimal la determinan la precisión y la escala del número. La escala, que es el número de dígitos en la parte de la fracción del número, no puede ser negativa ni mayor que la precisión. La precisión máxima es de 31 dígitos.
+  - **NUMERIC(n, s):** sinónimo de decimal.
 - **Fecha/hora**
 	- **DATE:** almacena fechas, un valor de tres partes que representa un año, mes y día.
 	- **TIME:** almacena horas, un valor de tres partes que representa las horas, minutos y segundos.
@@ -255,15 +255,53 @@ El diagrama físico representa como se construirá el modelo en la base de datos
 
 **Constraints (Restricciones)**
 
-	- **NOT NULL:** Se asegura que la columna no tenga valores nulos
-	- **UNIQUE:** Se asegura que cada valor en la columna no se repita
-	- **PRIMARY KEY:** Es una combinación de NOT NULL y UNIQUE
-	- **FOREIGN KEY:** Identifica de manera única una tupla en otra tabla
-	- **CHECK:** Se asegura que el valor en la columna cumpla una condición dada
-	- **DEFAULT:** Coloca un valor por defecto cuando no hay un valor especificado
-	- **INDEX:** Se crea por columna para permitir búsquedas más rápidas
+- **NOT NULL:** Se asegura que la columna no tenga valores nulos.
+- **UNIQUE:** Se asegura que cada valor en la columna no se repita.
+- **PRIMARY KEY:** Es una combinación de NOT NULL y UNIQUE.
+- **FOREIGN KEY:** Identifica de manera única una tupla en otra tabla.
+- **CHECK:** Se asegura que el valor en la columna cumpla una condición dada.
+- **DEFAULT:** Coloca un valor por defecto cuando no hay un valor especificado.
+- **INDEX:** Se crea por columna para permitir búsquedas más rápidas.
 
+### Clase 10 *Diagrama Físico: normalización*
 
-### Clase 10 **
+El proceso de normalización de una base de datos relacional consiste en aplicar una serie de reglas para evitar a futuro realizar queries, o consultas innecesariamente complejas. En otras palabras están enfocadas en eliminar redundancias e inconsistencias de dependencia en el diseño de las tablas.
+
+Las bases de datos se normalizan para:
+
+- Evitar la redundancia de datos
+- Proteger la integridad de los datos
+- Evitar problemas de actualización de los datos en las tablas
+
+Para poder decir que nuestra base de datos está normalizada deben respetarse 4 niveles de normalización.
+
+Suponiendo que tenemos esta tabla que deseamos normalizar:
+
+![src/fundamentoBD_15.png](src/fundamentoBD_15.png)
+
+**Primera Forma Norma (1FN)**
+
+Atributos atómicos, es decir, sin campos repetidos.
+
+![src/fundamentoBD_16.png](src/fundamentoBD_16.png)
+
+**Segunda forma normal (2FN)**
+
+Cumple 1FN y cada campo de la tabla debe depender de una clave única.
+
+![src/fundamentoBD_17.png](src/fundamentoBD_17.png)
+
+**Tercera forma normal (3FN)**
+
+Cumple con 1FN y 2FN, y los campos que NO son claves NO deben tener dependencias.
+
+![src/fundamentoBD_18.png](src/fundamentoBD_18.png)
+
+**Cuarta forma normal (4FN)**
+
+Cumple 1FN, 2FN, 3FN, y los campos multivaluados se identifican por una clave única.
+
+![src/fundamentoBD_19.png](src/fundamentoBD_19.png)
+
 ### Clase 11 **
 ### Clase 12 **
