@@ -199,7 +199,7 @@ La cardinalidad es una restricción en una relación que especifica el número d
 
 - **Cardinalidad: 0 a N**
 
-  Es una relación un opcional a muchos, varios registros de una tabla puede estar asociado a uno o varios registros de otra tabla. Por ejemplo, una paciente pertenece a una habitación pero una habitación puede estar vacía o tener varios pacientes.
+  Es una relación un opcional a muchos, varios registros de una tabla puede estar asociado a uno o varios registros de otra tabla. Por ejemplo, un paciente pertenece a una habitación pero una habitación puede estar vacía o tener varios pacientes.
 
   ![src/fundamentoBD_11.png](src/fundamentoBD_11.png)
 
@@ -216,9 +216,11 @@ Por lo general, los sistemas de bases de datos relacionales no permiten implemen
 Para evitar este problema, puede dividir la relación de muchos a muchos en dos relaciones de uno a muchos mediante el uso de una tercera tabla denominada tabla de unión. Cada registro de una tabla de unión incluye un campo de coincidencia que contiene el valor de las claves principales de las dos tablas que se unen. En la tabla de unión, estos campos de coincidencia son claves externas. Estos campos de clave externa se rellenan con datos, ya que los registros de la tabla de unión se crean desde cualquiera de las tablas que se unen.
 
 Siguiendo con el ejemplo de alumnos y clases, se incluye una tabla Alumnos, que contiene un registro para cada estudiante, y una tabla Clases, que contiene un registro para cada clase. Una tabla de unión, Matrículas, crea una relación de uno a muchos, una entre cada una de las dos tablas.
+
 ![src/fundamentoBD_12.png](src/fundamentoBD_12.png)
 
 ### Clase 8 *Diagrama ER*
 
 Un diagrama entidad-relación es una herramienta para el modelado de datos que permite representar las entidades relevantes de un sistema de información así como sus interrelaciones y propiedades. Este modelo representa a la realidad a través de un esquema gráfico que ilustra cómo las entidades se relacionan entre sí dentro de un sistema. Son un reflejo de la estructura gramatical y emplean entidades como sustantivos y relaciones como verbos.
+
 ![src/fundamentoBD_13.png](src/fundamentoBD_13.png)
