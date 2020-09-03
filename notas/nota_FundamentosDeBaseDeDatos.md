@@ -224,3 +224,46 @@ Siguiendo con el ejemplo de alumnos y clases, se incluye una tabla Alumnos, que 
 Un diagrama entidad-relación es una herramienta para el modelado de datos que permite representar las entidades relevantes de un sistema de información así como sus interrelaciones y propiedades. Este modelo representa a la realidad a través de un esquema gráfico que ilustra cómo las entidades se relacionan entre sí dentro de un sistema. Son un reflejo de la estructura gramatical y emplean entidades como sustantivos y relaciones como verbos.
 
 ![src/fundamentoBD_13.png](src/fundamentoBD_13.png)
+
+### Clase 9 *Diagrama Físico: tipos de datos y constraints*
+
+Antes de llevar todo a la práctica debemos convertir nuestro diagrama a uno físico.
+
+El diagrama físico representa como se construirá el modelo en la base de datos. Un modelo de base de datos física muestra todas las estructuras de tabla, incluidos el nombre de columna, el tipo de datos de columna, las restricciones de columna, la clave principal, la clave externa y las relaciones entre las tablas.
+
+![src/fundamentoBD_14.png](src/fundamentoBD_14.png)
+
+**Tipos de datos**
+
+- **Texto**
+  - **CHAR(n):** almacena datos de carácter en un campo de longitud fija. Los datos pueden ser una serie de letras, números y otros caracteres de un solo byte o varios bytes que pueden ser utilizados por el juego de códigos del entorno local de la base de datos.
+  - **VARCHAR(n):** almacena series de caracteres de hasta 255 bytes en un campo de longitud variable. Los datos pueden consistir en letras, números y símbolos. CHARACTER VARYING se maneja exactamente igual que el tipo de datos VARCHAR.
+  - **TEXT:** almacena cualquier clase de datos de texto. Las columnas TEXT suelen almacenar memorándums, capítulos de manuales, documentos comerciales, archivos de origen de programas y otros tipos de información de texto.
+- **Número**
+  - **INT o INTERGER:** almacena números enteros grandes. Un entero grande es un entero binario con una precisión de 31 bits. El rango oscila entre -2147483648 y +2147483647.
+	- **BIGINT:** enteros muy grandes. Un entero muy grande es un entero binario con una precisión de 63 bits. El rango de los enteros muy grandes oscila entre -9223372036854775808 y +9223372036854775807.
+	- **SMALLINT:** enteros pequeños. Un entero pequeño es un entero binario con una precisión de 15 bits. El rango oscila entre -32768 y +32767.
+	- **DECIMAL(n, s):** permite almacenar números decimales empaquetados con una coma decimal implícita. La posición de la coma decimal la determinan la precisión y la escala del número. La escala, que es el número de dígitos en la parte de la fracción del número, no puede ser negativa ni mayor que la precisión. La precisión máxima es de 31 dígitos.
+	- **NUMERIC(n, s):** sinónimo de decimal.
+- **Fecha/hora**
+	- **DATE:** almacena fechas, un valor de tres partes que representa un año, mes y día.
+	- **TIME:** almacena horas, un valor de tres partes que representa las horas, minutos y segundos.
+	- **DATETIME:** almacena una fecha del calendario combinada con las horas del día.
+	- **TIMESTAMP:** una indicación de fecha y hora es un valor de siete partes que representa una fecha y hora mediante año, mes, día, hora, minuto, segundo y microsegundo.
+- **Lógicos**
+	- **BOOLEAN:** un campo puede almacenar true, false y null. El tipo de dato booleano no es SQL estándar.
+
+**Constraints (Restricciones)**
+
+	- **NOT NULL:** Se asegura que la columna no tenga valores nulos
+	- **UNIQUE:** Se asegura que cada valor en la columna no se repita
+	- **PRIMARY KEY:** Es una combinación de NOT NULL y UNIQUE
+	- **FOREIGN KEY:** Identifica de manera única una tupla en otra tabla
+	- **CHECK:** Se asegura que el valor en la columna cumpla una condición dada
+	- **DEFAULT:** Coloca un valor por defecto cuando no hay un valor especificado
+	- **INDEX:** Se crea por columna para permitir búsquedas más rápidas
+
+
+### Clase 10 **
+### Clase 11 **
+### Clase 12 **
