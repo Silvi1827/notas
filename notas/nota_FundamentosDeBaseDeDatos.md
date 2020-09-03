@@ -146,11 +146,11 @@ Debemos pensar en los atributos. De hecho es inseparable pensar en los atributos
 
 - Posts:
   - Id
-	- Título
-	- Fecha de publicación
-	- Contenido
-	- Estatus
-	- Etiquetas
+  - Título
+  - Fecha de publicación
+  - Contenido
+  - Estatus
+  - Etiquetas
 
 - Usuarios
 	- Id
