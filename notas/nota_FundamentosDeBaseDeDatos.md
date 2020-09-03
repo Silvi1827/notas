@@ -303,5 +303,26 @@ Cumple 1FN, 2FN, 3FN, y los campos multivaluados se identifican por una clave ú
 
 ![src/fundamentoBD_19.png](src/fundamentoBD_19.png)
 
-### Clase 11 **
+### Clase 11 *Diagrama Físico: normalizando Platziblog*
+
+Ya que aprendimos a normalizar es hora de que lo apliquemos en nuestro proyecto de Platziblog.
+
+**Diagrama Lógico**
+
+![src/fundamentoBD_20.png](src/fundamentoBD_20.png)
+
+**Diagrama Físico**
+
+1. Generamos los campos de las diferentes entidades e identificamos las claves primarias y secundarias
+
+  ![src/fundamentoBD_21.png](src/fundamentoBD_21.png)
+
+2. Relacionamos las entidades
+
+  ![src/fundamentoBD_22.png](src/fundamentoBD_22.png)
+
+3. Si tenemos una relación muchos a muchos, como posts con etiquetas, debemos romper la relación y poner una tabla intermedia con las claves de unión entre ambas entidades.
+
+  ![src/fundamentoBD_23.png](src/fundamentoBD_23.png)
+
 ### Clase 12 **
