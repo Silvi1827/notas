@@ -971,6 +971,9 @@ Intenta interiorizar esto pero intenta tomarlos como principios, no como leyes.
 Siempre habla desde dentro, transmitiendo verdad en tus historias.
 
 ### Clase 39 *Cierre*
+
+Aquí termina el modulo de Narrativa.
+
 ### Clase 40 *Método de los tres actos*
 
 **Método de los 3 actos**
@@ -1201,7 +1204,80 @@ Te retamos a repensar "The day of the danza" para ser un juego serio.
  
 Recuerda compartirnos tu propuesta en los comentarios del video.
 
-### Clase 46 **
-### Clase 47 **
-### Clase 48 **
-### Clase 49 **
+### Clase 46 *Tipos de gamificación de videojuegos*
+
+La Gamificación es una técnica de aprendizaje que traslada la mecánica de los juegos al ámbito educativo-profesional con el fin de conseguir mejores resultados, ya sea para absorber mejor algunos conocimientos, mejorar alguna habilidad, o bien recompensar acciones concretas, entre otros muchos objetivos.
+
+Este tipo de aprendizaje gana terreno en las metodologías de formación debido a su carácter lúdico, que facilita la interiorización de conocimientos de una forma más divertida, generando una experiencia positiva en el usuario.
+
+El modelo de juego realmente funciona porque consigue motivar a los alumnos, desarrollando un mayor compromiso de las personas, e incentivando el ánimo de superación. Se utilizan una serie de técnicas mecánicas y dinámicas extrapoladas de los juegos.
+
+**Tipos de jugadores**
+
+- **Triunfador:** Se centra en el jugador cuya finalidad es la consecución de logros y retos.
+- **Social:** Tipo de jugador al que le encanta interactuar y socializarse con el resto de compañeros.
+- **Explorador:** Alumno que tiene una clara tendencia a descubrir aquello desconocido.
+- **Competidor:** Su finalidad primera y última es demostrar su superioridad frente a los demás.
+
+**Categorías o tipos de Gamificación**
+
+Werbach & Hunter proponen tres tipos de gamificación:
+
+- **Interna:** Para mejorar la motivación dentro de una organización.
+- **Externa:** Cuando se busca involucrar a los clientes mejorando las relaciones entre éstos y la empresa.
+- **Cambio de comportamiento:** Busca generar nuevos hábitos en la población, desde conseguir que escojan opciones más sanas a rediseñar la clase y conseguir que se aprenda más mientras se disfruta.
+
+### Clase 47 *Reglas y retos para gestionar el flujo de actividad y la dificultad*
+
+**Reglas**
+
+No hay que confundir con los juegos serios los cuales son juegos en toda regla desarrollados para alcanzar los mismos objetivos. Hay que entender las diferencias entre juego y jugar pues el primero implica un sistema explícito de reglas que guían a los usuarios hacia metas discretas y resultados, es por lo tanto algo cerrado con una estructura. El juego se encuentra dentro de un círculo separado del mundo real, el objetivo de la gamificación es intentar meter al sujeto dentro de ese círculo, involucrándole. Por otro lado jugar es libertad pero dentro unos límites (círculo), se basa en el hecho de disfrutar de la propia acción, de divertirse.
+
+- **Reglas estructurales:** fijar los límites de escenario.
+- **Reglas de flujo de acción:** que sucede cuando un usuario hace.
+
+***RECUERDA: Deben ser reglas muy claras que no choquen entre sí.***
+
+**Retos**
+
+Sacando a los usuarios de un ambiente de confort para introducirlos en la mecánica del juego. Deben ser claros y precisos,
+normalmente se construyen bajo un sistema basado en puntos y están enfocados en la motivación de los usuarios de finalizar tareas más complicadas.
+
+Ojo con no frustrar a los participantes.
+
+### Clase 48 *Refuerzos y castigos para la motivación intrínseca y extrínseca al usuario*
+
+Los refuerzos y castigos son muy importantes, tanto en los videojuegos como en la gamificación, porque es el feedback más básico que tenemos con el usuario. Por cada interacción que el usuario tenga recibe un feedback en forma de castigo o refuerzo. No debemos entender el castigo como algo negativo.
+
+**Castigo**
+
+Busca reducir o eliminar conductas. Te castigo por algo que estás haciendo mal.
+
+- **Castigo positivo:** le doy algo malo a la persona que no le gusta.
+- **Castigo negativo:** le quito algo bueno que le gusta.
+
+**Refuerzo**
+
+Busca reforzar una conducta, es decir, lo haremos cuando queramos promocionar o mantener conductas que ya existen.
+
+- **Refuerzo positivo:** te doy algo a la persona que le guste como premio.
+- **Refuerzo negativo:** le quito algo que no le gusta como premio también.
+
+**Principales formas de reforzar y castigar**
+
+- Puntos / Moneda Virtual
+- Objetos / Insignias
+- Vidas / Exclusiones
+- Marcadores / Rankings
+
+### Clase 49 *Potencialidad de la gamificación*
+
+Una de las cosas que suele ocurrir cuando se desarrolla un videojuego, ya sea individual o colectivo, es que se pierda la motivación y por eso existen tantos videojuegos que se han quedado inacabados.
+
+**RETO**
+
+Ingresar en la aplicación [Chore Wars](http://www.chorewars.com/ "Chore Wars"), totalmente abierta y gratuita, para crear nuestra propia estructura de gamificación, para tratar de acabar y continuar nuestro proyecto.
+
+### Clase 50 *Cierre*
+
+Aquí terina el modulo de Videojuego Ampliado.
