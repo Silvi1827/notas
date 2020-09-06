@@ -1201,8 +1201,6 @@ Todo esto ha mostrado que es muy factible el uso de los videojuegos, por eso es 
 ### Clase 45 *¿Cómo repensar un videojuego de entretenimiento para que sea serio?*
 
 Te retamos a repensar "The day of the danza" para ser un juego serio.
- 
-Recuerda compartirnos tu propuesta en los comentarios del video.
 
 ### Clase 46 *Tipos de gamificación de videojuegos*
 
@@ -1280,4 +1278,4 @@ Ingresar en la aplicación [Chore Wars](http://www.chorewars.com/ "Chore Wars"),
 
 ### Clase 50 *Cierre*
 
-Aquí terina el modulo de Videojuego Ampliado.
+Aquí termina el modulo de Videojuego Ampliado.
