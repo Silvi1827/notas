@@ -1090,3 +1090,118 @@ Debe cerrar todo lo que se haya planteado, un tercer acto ideal contiene una mez
 - Sorprendente, la sorpresa final.
 
 **Epílogo:** Es el último detalle, es breve y cuenta los detalles no contados en la resolución o da pie a continuación.
+
+## Modulo 4. Videojuego Ampliado
+### Clase 41 *Historia social del videojuego*
+
+El profesor que nos guiara por esté modulo será Carlos Gonzáles.
+
+**¿Por qué se llama videojuego ampliado?**
+
+El videojuego ha llegado en un punto en que ya se ha separado de la idea de solo ser ocio.
+
+**Historia Social**
+
+El videojuego fue el primer instrumento tecnológico que fue democratizado de forma amplia. Ya no era solo un objeto informático y tecnológico en el cual hacía falta una inversión muy fuerte, sino que fue el primer objeto informático que fue plenamente del usuario, sin necesidad de invertir ya que el usuario iba y jugaba en el arcade. Se convirtió en una herramienta digital muy barata, porque solo necesitabas echar monedas.
+
+El siguiente paso, para hacerlo más atractivo y menos agresivo hacia la población, era dar la idea de que era un juguete. Esto ayudo, porque entro bajo el radar de todo lo que tenía que ver con todos los productos tecnológicos, del que siempre hubo una cierta reticencia, por lo que impacto de forma directa con la cultura adolescente y sobre todo la cultura infantil. Los juegos eran muy coloridos y de esa forma se empezó a crear, lo que es en el fondo y realmente, la cultura digital como tal y sobre todo las primeras generaciones digitales, que no es cuando existía internet sino cuando se empezaron a jugar los videojuegos.
+
+Esto llevo a que, con el aumento de la edad de los jugadores, se pedían otro tipo de videojuegos; juegos más maduros, complejos y con temáticas más de esa época. Por lo tanto también empezó los problemas por si los videojuegos eran buenos o malos por el tema principal de la violencia, el caso más es Mortal Kombat. Con Mortal Kombat hubo lugares que llegaron a prohibir el uso de ese videojuego para menores y prohibir la entrada de menores a salones recreativos, eso llevo a manifestaciones por parte de los adolescentes ya que consideraban que los videojuegos eran su espacio y, por tanto, las máquinas recreativas y todo lo que tenía que ver con ellos era el espacio en el que se podían desarrollar y el ser independientes del mundo adulto. Aquí es cuando se inicia la brecha digital, cuando el mundo adulto no entiende el videojuego y el videojuego es solo del mundo adolescente y de los jóvenes.
+
+El paso siguiente fue cuando esa brecha digital empieza a cerrarse, llega más o menos el año 2000 cuando se da cuenta la población general que los videojuegos van más allá, también empiezan a ver grandes datos de la industria de los videojuegos y empieza a verse como podría ser una salida laboral importante. El videojuego además se empieza a alejar del mercado adolescente y ahora va a por otros sectores; las mujeres solían jugar, pero llegaba normalmente a la edad de 12 a 14 años que lo dejaban mientras que los hombres ya empezaban a ser jugadores adultos. El jugador adulto era muy interesante, sobre todo porque tenía la capacidad económica. Entonces se empezaron a crear una serie de productos, siendo el ejemplo de más claro Los Sims. Los Sims es un videojuego creado para las mujeres, creado como una especie de casa de muñecas, pero se consiguió que el jugador en vez de interesarse en el concepto de casa de muñecas se interesaban en el concepto de diseño de casa de muñecas. El jugador lo convirtió en una actividad seria en el cual lo que hacía era diseñar casas y mansiones, de ahí viene que todas las siguientes ampliaciones de este juego son de objetos de textura, no tienen tanto que ver con el simulador sino más con la capacidad de diseño.
+
+Con la llegada de las mujeres al ámbito de los videojuegos, sobre todo a las mujeres adultas, también se llega al siguiente paso que es cuando se empieza a cerrar lentamente la brecha digital se crean una serie de dispositivos que son para que puedan acceder todo el mundo, sobre todo la tercera edad. ¿Por qué es importante la tercera edad? Porque es un mercado muy grande y cada vez mayor, además de que tiene dinero y además de que normalmente no piratea porque no entra dentro de sus patrones, y son los grandes compradores de los adolescentes y niños por tanto era importante romper la reticencia que tenían de los videojuegos para poderlos integrar.
+
+Y, cuando ya teníamos a toda la sociedad más o menos conforme y utilizando los videojuegos de forma normal llego lo que tenía que ver con el reconocimiento institucional. Las instituciones se dieron cuenta de que era una industria gigantesca, además era una posible salida laboral en un sector estratégico y tenía la población a favor, por lo tanto empezó a haber una serie de movimientos que aceptaban al videojuego como un objeto cultural y que está protegido.
+
+### Clase 42 *Tipos de videojuego serios*
+
+Un videojuego serio tiene las mismas características antes vista en cualquier otro videojuego, sin embargo, es principalmente diseñado para un propósito distinto a la pura diversión. Normalmente el adjetivo "serio" pretender referirse a productos utilizados por industria como la de defensa, educación, exploración científica, sanidad, religión, política, etc.
+
+**Edutainment**
+
+El edutainment, o entretenimiento educativo, se refiere a todo aquel contenido educativo combinado con elementos lúdicos para entretener.
+
+Lejos de ser un descubrimiento del siglo XXI, el término edutainment se utiliza desde hace mucho tiempo. Concretamente, su nacimiento se remonta al año 1948, cuando la compañía Walt Disney lo utilizó para describir su producción True Life Adventures, una serie de documentales que tenían componentes lúdicos para que los niños aprendieran a la vez que se divertían. Desde su nacimiento hasta la actualidad, son muchos los actores y entidades que han utilizado y aplicado esta metodología de aprendizaje. Incluso los gobiernos la han adoptado como una forma para concienciar a la población sobre temas como la seguridad vial o el consumo de alcohol.
+
+La finalidad del edutainment es que el alumno se sienta motivado durante el proceso de aprendizaje, ofreciéndole elementos entretenidos pero educativos con los que divertirse a la vez que aprende. Esta metodología de aprendizaje muestra que cualquier conocimiento, por complicado que sea, puede ser divertido si se ofrece de una forma entretenida. Con el edutainment, cualquier tema puede ser entendible para el alumno, ya que se le ofrece en un lenguaje y en un código con el que se siente cómodo y motivado, como es el del juego.
+
+Está demostrado que aprender mediante el juego facilita el proceso de aprendizaje y ayuda a asimilar mejor los conceptos. Los principales beneficios que aporta el edutainment son los siguientes:
+
+- Motiva al alumno.
+- Agiliza los procesos de aprendizaje.
+- Mejora la retención de la información.
+- Desarrolla la capacidad crítica y reflexiva.
+- Incentiva el aprendizaje colectivo.
+- Personaliza el aprendizaje.
+- Incentiva a seguir aprendiendo.
+
+**Training game**
+
+Pretende entrenar al jugador en una serie de hábitos, tanto en conductas como en conceptos, pero sobre todo que sean muy prácticos. Una de las principales ventajas del videojuego respecto a cualquier otra forma de educación es que es procesual, es decir, cuando juegas lo que haces es aprender y enseñar una serie de procesos, por eso entrenar procesos complejos se puede hacer de una forma muy buena a través de los videojuegos.
+
+**Newsgame**
+
+Los newsgames forman parte de un nuevo género de videojuegos que propone un periodismo de corte interactivo. Aunque responden a un concepto teórico débil, se han realizado diferentes aproximaciones a este fenómeno. Por un lado, se ha definido como un nuevo experimento que propone utilizar plataformas lúdicas para la práctica del periodismo. En concreto, este género pretende mostrar aspectos más específicos de la información periodística del día a día y crear una conciencia sobre el tema a los receptores del contenido. Suponen así un nuevo diseño, tanto de videojuego como de periodismo, que ofrece la oportunidad de ver las noticias desde el punto de vista del entretenimiento, de la Web 2.0 y de las nuevas tecnologías. Por ello, también se deben entender los newsgames como un intento de mostrar un punto de vista: el punto de vista informativo.
+
+Este género de juego se basa, por lo general, en conceptos, problemas e historias reales. Los juegos también se muestran como una representación híbrida de la investigación original, ofreciendo a los jugadores una experiencia de ficción basada en las fuentes de la vida real. Pueden ser considerados como videojuegos equivalentes a la caricaturización de la política. Miquel Sicart​ los describe como los juegos que "utilizan el medio con la intención de participar en el debate público".
+
+El diseñador de juegos uruguayo Gonzalo Frasca,​ uno de los pioneros en el trabajo y la investigación con newsgames, asocia este género de videojuegos a los dibujos animados y tales caricaturas políticas, buscando transmitir una opinión y hacer que los jugadores analicen un hecho determinado, noticias o eventos, desde una visión dada por la mecánica y los objetivos del juego. Este proceso es llamado por Ian Bogost como retórica procesal.
+
+**Advergaming**
+
+El advergaming es una disciplina publicitaria que consiste en la utilización del juego como base central de la publicidad de una marca o empresa. Es decir, se trata de que los consumidores jueguen mientras adquieren conocimiento de marca de una organización. Por tanto, para una empresa es sumamente interesante porque representa una forma no intrusiva de publicidad que fomenta la empatía y el engagement.
+
+El término «advergame» fue acuñado por Anthony Giallourakis en enero de 2000 y luego mencionado en la columna «Jargon Watch» de la revista Wired en 2001. El advergaming surgió a principios de los años 80, incrementando su desarrollo como consecuencia del crecimiento de la industria de los videojuegos. En sus comienzos, lo más habitual era crear videojuegos como estrategia para promocionar una película.
+
+Hay determinados aspectos de los videojuegos que se deben tener en cuenta en el advergaming, ya que influyen en el modo de inserción de la publicidad y determinarán cómo, dónde, cuándo y en qué forma aparecerá el mensaje publicitario en el juego:
+
+- **Interactividad:** Se trata de un elemento imprescindible, que permite tener un contacto entre el usuario y el producto. El usuario no sólo verá la marca, sino que podrá interactuar con el producto de forma directa o indirecta.
+- **Conectividad:** La experiencia del jugador es muy distinta si se trata de un juego online. Un juego que ha llegado a su desarrollo final, tendrá implementada una publicidad que no se puede cambiar, y será menos eficaz que la publicidad que se puede emplear en un juego en línea, que siempre puede ir actualizándose.
+- **Perspectiva del jugador:** Este es un punto importante, puesto que la visualización de la publicidad en un formato u otro, varía si el jugador está jugando en 1ª persona (como un FPS) o en 3ª persona (como un juego de Rol).
+- **Libertad en movimiento:** La publicidad puede ser mucho más interesante si se trata de un juego con mundo abierto como GTA V o si es un juego lineal, donde el jugador sólo puede acceder a ciertas áreas del mapa en el juego o con limitadas acciones en la jugabilidad. Además, hay empresas que aprovechan los llamados "Easter eggs" (contenido oculto), para introducir publicidad.
+- **Género:** Además de la clasificación por edades, los juegos también se clasifican por temática.
+
+### Clase 43 *Niveles de objetivos en los videojuegos serios*
+
+El nivel del objetivo es muy importante dentro de los videojuegos serios, sobre todo porque mientras los videojuegos normales o 'lúdicos' el objetivo es la diversión y que el desarrollador gane dinero, en el videojuego serio hay un objetivo más profundo y oculto que debe ser definido muy bien.
+
+Lo primero a tener en cuenta es porque lo vamos hacer, para que lo vamos hacer y como lo vamos hacer. En el caso de los videojuegos serios lo mejor, a la hora de definir, es encontrar algo que sea un problema o una oportunidad, cuando lo encontramos a partir de ahí podemos construir nuestro juego, no es buscar mecánicas o estéticas sino buscar algo que podamos corregir (problema) o explotar (oportunidad). Una vez encontrado ese tema, objeto o idea, pasamos al objetivo. El objetivo es aquello que queremos conseguir y eso siempre se puede contestar como si o no.
+
+Lo último son las metas, es decir, para llegar a ese objetivo que pasos o fases debemos seguir para conseguir llegar hasta ahí. Las metas son importantes porque son los retos y esto va a ser lo que defina la mecánica del juego nunca debemos olvidar cual es nuestro objetivo, uno de los principales problemas del game design es que te quedas en la parte estética, en la parte mecánica o dinámica y se te olvida para que lo estás haciendo, mientras que en los videojuegos serios nunca se te puede olvidar porque entonces tu cliente y tu objetivo desaparece.
+
+**Niveles de objetivo**
+
+- Objetivo del Cliente
+- Objetivo del Desarrollador
+- Objetivo del Videojuego
+- Objetivo del Usuario
+
+### Clase 44 *Efectos psicosociales del videojuego de entretenimiento y serio*
+
+**¿Por qué es importante el videojuego?**
+
+Es importante entender que cuando juegas, siendo una situación interactivo, eres tú quien modifica lo que pasa en la pantalla y al mismo tiempo te modifica a ti mismo. Por eso con los videojuegos podemos enseñar, lanzar noticias, dar campañas de marketing o entregar a la gente a través del videojuego.
+
+**¿Por qué usamos el videojuego para cosas serias?**
+
+Los videojuegos activan partes muy importantes del cerebro.
+
+Se ha descubierto los videojuegos mejoran el estado, sobre todo emocional, de las personas con Alzheimer y Parkinson ya que los hace sentir importantes y válidos. Los videojuegos están creados para que la gente se sienta bien, es algo que se debe tener siempre muy en cuenta.
+
+Otro efecto psicosocial es que los cirujanos que juegan a los videojuegos cometen un tercio menos de errores. El cirujano mejora su coordinación oculomotora tanto que lo lleva a ser mejor profesional.
+
+Más ejemplo es la aplicación de videojuegos para mejorar la hiperactividad, para mejorar la depresión, para unidades de quemados están utilizando videojuegos que los llevan a mundos virtuales que son de hielo y eso les baja el dolor, también se ha usado para que los niños con cáncer entiendan como es su enfermedad, y todo esto los lleva a una mejora significativa en su estado porque los hace sentir bien. En otros ámbitos, a nivel de entrenamiento se usan para el ejército, pero también para entrenar a la gente en riesgos laborales demostrando mejoras en habilidades para bomberos y otros.
+
+Todo esto ha mostrado que es muy factible el uso de los videojuegos, por eso es algo que tener en cuenta porque si el videojuego puede mejorar la vida de las personas, es un plus que nadie nos puede quitar.
+
+### Clase 45 *¿Cómo repensar un videojuego de entretenimiento para que sea serio?*
+
+Te retamos a repensar "The day of the danza" para ser un juego serio.
+ 
+Recuerda compartirnos tu propuesta en los comentarios del video.
+
+### Clase 46 **
+### Clase 47 **
+### Clase 48 **
+### Clase 49 **
