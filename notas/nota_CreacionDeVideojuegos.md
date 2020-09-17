@@ -1324,7 +1324,7 @@ Puntos indispensables:
 
 Uno de los elementos de inspiración es la paleta de colores. En este sentido, existe múltiples referencias que relacionan sonidos directamente con colores o, de una manera más general e interesante, colores con emociones que es lo que nosotros asociaremos con nuestras piezas o recursos.
 
-![src/creacionVideojuego_10.png](src/creacionVideojuego_10.png)
+![src/creacionVideojuego_11.png](src/creacionVideojuego_11.png)
 
 **Organización**
 
@@ -1349,7 +1349,7 @@ Son las herramientas puramente musicales con la que daremos vida a la banda sono
 - **Técnica formal:** Es la estructura que le damos a la banda sonora a gran escala y a pequeña escala, como dosificamos los elementos y lo insertamos dentro de un esqueleto que es la forma.
 - **Otras técnicas:** Son la elección del ritmo a usar, la textura que queremos, dinámicas suaves o fuerte, la articulación o si emplearemos texto, etc.
 
-### Clase 53 *De la composición al audio *
+### Clase 53 *De la composición al audio*
 
 Hoy nos centraremos en uno de los pasos más importantes dentro del proceso de composición de la banda sonora para videojuegos, es justo el proceso en el que transformamos todo lo que hemos compuestos, todas nuestras ideas estéticas, todas las decisiones tímbricas, formales o armónicas en un archivo de audio que es el que finalmente va a ir a parar al programador. En este sentido, atenderemos al proceso de grabación, posibles arreglos y las ediciones.
 
@@ -1397,8 +1397,45 @@ Es importante destacar que a menudo tendremos que realizar un audio de versión 
 
 La producción propia, cuando nos requiera o no cuente con una gran inversión, es perfecto para cuando tengamos que cumplir con plazos más rápidos. En cuanto a los plazos más largos, productos más elaborados y algo de mayor inversión se recomienda una producción profesional.
 
-### Clase 54 **
-### Clase 55 **
+### Clase 54 *Escogiendo música para mi juego*
+
+Nos detenemos en un punto muy importante para los game design que es el momento de escoger la música para sus juegos. Algunas características de los principales recursos que suelen emplearse son:
+
+- **Música Original:** Son músicas encargadas a un compositor completamente realizadas desde cero o en combinación en algún momento de algunos recursos que ya existen.
+- **Música Emuladora:** Básicamente consiste en músicas que copian a otras músicas bajo petición del diseñador del juego.
+- **Música Preexistente:** Es la posibilidad de obtener, mediante diversos medios, alguna música que ya este compuesta y que pensamos que pueda funcionar tal y como está para el juego.
+
+Los pros y contras de una u otra son a tener en cuenta por parte del director de proyecto.
+
+**Música Original**
+
+La opción de música original o banda sonora creada desde cero a menudo parece la más atractiva, pero no siempre la más adecuada.
+
+Nos permite controlar el producto desde cero, por ellos permite al compositor crear un producto complejo, con toda la riqueza y calidad que se desea. Permite una flexibilidad absoluta, la música está hecha a medida para el juego y todo lo que suceda en él, también para la escucha, concierto, lo que se desea realizar con ella. El inconveniente principal es que requiere un plazo de tiempo más extenso, debemos tener en cuenta que todos los procedimientos anteriormente hablado (toma de decisión, estética, contratar músicos, grabación, etc.) conlleva plazos que no pueden ser saltado y pueden atrasar la obtención de la banda sonora.
+
+Un plus indiscutible de la realización de una banda sonora original es el gancho que tiene el trabajar con músicos reales, siempre que se pueda, o con librerías, y el gancho de la original. Es a originalidad es lo que constituye el valor añadido más importante y un valor de rentabilidad, podemos explotar esa música y enganchar al jugador a través de esa música, y podemos extender el juego más allá de la partida a lo que es la escucha ya sea en un contexto con más gente, en soledad, etc., en definitiva enriquecer y ampliar la experiencia del juego. Otro hándicap que tiene como contraparte es que requiere una mayor inversión, tendremos que pagarle no solo al compositor sino también a los músicos, grabación, librerías, etc. Una ventaja enorme es la implementación que podemos realizar a demanda.
+
+**Música Emuladora**
+
+Consiste básicamente en tomar loops preexistentes, aunque se pueden realizar composiciones originales encima de estos loops o imitar música que ya existe. La complejidad de este tipo de música es limitada, no se puede tocar a detalle si se está trabajando con elementos ya hechos o imitados, por tanto la flexibilidad también es limitada por tanto.
+
+La ventaja sobre todo está en la rapidez que nos ofrece los loops, librerías, preset, todo estos tipos de recursos siempre van a generar un audio mucho antes. La originalidad por supuesto está limitado, los loops que utilizamos no fueron hechos por nosotros y si usamos librerías no es exclusivo para nuestra banda sonora, y eso el oyente lo percibe, aunque piense que no lo nota, especialmente lo escucha fuera del juego. Otra ventaja indiscutible es que requiere una menor inversión, podemos utilizar banco de sonidos, y la implementación puede estar de cierto modo limitada, si estamos loops que duran cuatro segundos la implementación va a estar limitada a que ese loop no se corte antes.
+
+**Música Preexistente**
+
+Si bien es cierto que tendrá poca o ninguna flexibilidad, pero tiene un valor enorme que es el referencial. A través de una música preexistente, si utilizamos un tema que ha estado de moda o una canción sacado por un cantante famoso, estamos tirando de una serie de información que está metida en el colectivo cultural y que puede ser enormemente poderosa para añadir emociones, recuerdos e incluso preparar acciones futuras dentro del juego por lo cual no debemos desestimarlo en absoluto. Además el valor comercial es muy interesante cuando empleamos esta música preexistente usamos instrumentistas o grupos que en ese momentos estén en primera plana, la originalidad es bastante relativa y la inversión depende a veces puede resultar más caro pagar los derechos de una música existente que pagarle a un compositor para que nos realice una banda sonora a medida. Sin embargo, existen juego que han preferido la utilización de música preexistente sobre por el valor comercial.
+
+### Clase 55 *Los efectos de sonido*
+
+Una vez dejado atrás todo lo relacionado con la composición de la banda sonora, nos centraremos en los sound FX. Es quizás uno de los apartados menos tomado en cuenta a priori, pero cuya calidad es indispensable para que el juego realmente funcione.
+
+En los videojuegos trabajamos con distintos tipos de sound FX y su importancia es variable, tendremos efectos directamente relacionados con los movimientos del jugador sea del tipo que sea; movimientos propios si son en primera persona o simplemente movimientos que el jugador asocia como propios. Tenemos también sound effects de ambiente; lluvia, coche de caballos, ruidos callejeros, etc. Y podremos tener también otro sound effects que parecen estar en un espacio intermedio que no existen que vienen del propio juego en sí y que el jugador asume con naturalidad durante la partida.
+
+**Tipo e importancia**
+
+- **Creación de efectos:** Siempre es recomendable que lo realice un sound design, una persona que se preocupe específicamente de ello y contaremos con efectos que puedan ser acústicos (grabados directamente de la fuente), electroacústicos (sound effects generados a partir de un sonido real, pero posteriormente fue tratado digitalmente) y electrónicos (directamente creado desde cero digitalmente y diseñado por el compositor). Procuraremos que los sound FX estén adecuados temporalmente (que vayan con el movimiento o el ambiente que se desea recrear), espacialmente (colocar los sonidos acorde al espacio donde se encuentra) y estéticamente (los sonidos deben adecuarse al ambiente que deseamos generar).
+- **Banco de sonidos:** La realización del sound FX puede verse suplida con la utilización de bancos de sonido, podemos usar sonidos preexistentes de Creative Commons, Royalty Free. Algunos bancos de sonidos interesante con Freesound, Elongsound, Designingsound, Sound Ideas, Hollywood Edge, algunos de ellos son muy extenso, podemos encontrar prácticamente de todo y todo grabado en una muy buena calidad.
+
 ### Clase 56 **
 ### Clase 57 **
 ### Clase 58 **
