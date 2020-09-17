@@ -1279,3 +1279,80 @@ Ingresar en la aplicación [Chore Wars](http://www.chorewars.com/ "Chore Wars"),
 ### Clase 50 *Cierre*
 
 Aquí termina el modulo de Videojuego Ampliado.
+
+## Modulo 5. Audio en Videojuegos
+### Clase 51 *Consideraciones previas y características de las bandas sonoras para videojuegos*
+
+Isabel Royán, compositora y sound design, te guiará a través del módulo de música en el videojuego.
+
+- **Fin lúdico:** Desde sus inicios, la música para videojuegos persigue un fin lúdico. Aunque los juegos para los que compongamos no siempre estén orientados al entretenimiento (Serious Games o eSports) generalmente será lúdica, fragmentada en partes para no dotar de un peso excesivo en los videojuegos.
+- **Composición no lineal:** Es una característica muy peculiar ya que, a diferencia de una pieza de música clásica o de película, la música de los debe adaptarse a las emociones del jugador y se ven afectadas por las acciones del jugador lo cual requerirá una manera de organizar las piezas a menudo por capas que entran y salen del juego, esto enriquece el labor del compositor y al mismo tiempo la complica en cierta medida.
+- **Duraciones:** Generalmente la banda sonora para videojuegos están fragmentadas en piezas muy breves y sencillas, pero también las bandas sonoras a menudo cuando las escuchamos son bastante extensas cuando se realizan únicamente para oírlas. En este caso, se hacen versiones específicas para juegos, en ese tema el compositor debe pensar un poco en el trabajo de las duraciones. El efecto bucle es uno de los más llamativos y característicos de la música para juegos, precisamente por la necesidad de la adaptabilidad.
+- **Descriptibilidad:** La música debe colaborar en todo momento a reforzar lo que estemos describiendo a través del arte o a través de otros efectos sonoros. Un elemento narrativo habla de por sí cuando así lo requiera y describe entorno, aporta mucha información sobre todo lo que está sucediendo y debemos explotar al máximo esa característica.
+- **Función de ambientación:** Tomada prestada de la música para cine, se utiliza para simplemente evitar el silencio mientras estamos jugando. Es lo que se denomina música incidental generalmente es una música que no es muy enrevesada, no muy espesa y pretende molestar lo menos posible al jugador.
+- **Función de ubicación espacial:** Nos ubica en un país concreto, si por ejemplo escucháramos música de tintes árabes o tintes orientales o música en un idioma determinado.
+- **Función de ubicación cronológica:** Similar a la anterior, nos ubica en una etapa concreta, si escucháramos por ejemplo instrumentos renacentistas o si escuchamos instrumentos que tengamos asociados a una etapa futurista.
+- **Función de ubicación social:** Nos ubica en un ambiente social, ya sea en un contexto criminal, aburguesado, etc.
+- **Función narrativa:** Nos permite, a través de diversos recursos, ubicarnos dentro de la historia en general, la música va hacernos una llamada de atención cuando haya un momento importante, va a recordarnos momentos importantes dentro de la historia y en definitiva a orientar al jugador.
+- **Función emocional:** Es la que más se apela, pero no siempre debe ser la que más usemos. Si bien la música puede movernos desde la tristeza hasta la alegra, de la indiferencia a la tranquilidad a través de técnicas compositivas, no es la única.
+- **Función referencial:** Rescatar cualquier cosa, pertenezca al juego o no, también pueden hacer referencia a elementos externos al juego.
+- **Refuerzo de la interactividad:** Si está el jugador participando en ese momento de manera activa en el juego la banda sonora debe, de alguna manera, recogerlo o no eso ya depende de nuestra elección.
+
+La música siempre va apostar un valor añadido, siempre va a enriquecer artísticamente el producto que supone el videojuego. Existen tantas variantes de música como tipos de videojuegos que nos aventuremos a abarcar, tenemos música para juegos de aventura, lucha, música específica para juegos musicales y, en general, siempre que el juego tenga un género concreto y sea un tipo concreto la música tendera a reforzarlo. Como características relacionadas con las bandas sonoras, sobre todo en los últimos tiempos, la figura entre compositor y programador ya se encuentra separada lo que ha conllevado a una evolución enorme en la calidad de la banda sonora.
+
+Hay que recalcar también que el principal referente siempre va a ser la música de cine, los compositores de videojuego siempre utilizan técnicas empleadas en el cine, han venido desde muchos años de esa fuente y eso sigue presente. Si bien puede absorber todo los géneros que deseemos (clásica, electrónica, ligera, cartoon) también ha podido crear un género propio a partir de precisamente la música que se realizaba de los videojuegos; el sonido de los 16 bits.
+
+La función emocional de la música puede ser bien neutro, no provocar ninguna emoción al jugador, puede ser empática, puede ir acompañando a la emoción que estamos viendo en pantalla, pero también se puede usar el recurso de la música anempática. En el caso de la música anempática, utilizaremos una banda sonora totalmente contrario a la emoción que estamos viendo en pantalla de manera que el resultado sea reforzar lo que estamos viendo en pantalla. Un ejemplo es la música Mad World de Gears of War; contrario al mundo de caos apocalíptico de la pantalla, la música es tranquila (anempática) pero al mismo tiempo la letra hace referencia a lo que nos muestra (empática).
+
+### Clase 52 *Crear un banda sonora: pasos del proceso y técnicas*
+
+Pasos en la creación de una banda sonora para videojuegos así como las técnicas compositivas que se emplean para ello.
+
+**Inspiración**
+En primer lugar, el compositor debe buscar una serie de puntos de inspiración que comienzan a gestar la banda sonora.
+
+Puntos indispensables:
+
+- La temática del juego y el objetivo final son fundamentales para que podamos programar una banda sonora adecuada asociada a lo que el game design desea. A menudo es un punto que no suele variar, se decide al comienzo y que no suele moverse en el tiempo puesto que movería todos los demás aspectos del juego, es un buen pilar de partida y a partir de ahí normalmente se obtiene el resto de decisiones.
+- El flujo y la mecánica del juego. A menudo, aunque en la guía general del juego se entrega bastante perfilado suele cambiar a lo largo del desarrollo, pero una idea inicial nos permitirá realizar una planificación aproximada.
+- Buscar inspiración, si es que hay, en la historia. La ubicación, si existe una trama, subtramas, puntos de giros, clímax, posibles desenlaces, anticlímax o final inesperado, esos puntos sin indispensables a la hora de planificar una banda sonora puesto que influirá directamente en cómo vamos a utilizar los materiales, como vamos a dosificar todo el arsenal de recursos que disponemos, entre otros aspectos.
+- Tenemos en cuenta los personajes. El perfil que tengan externamente, como estarán caracterizados físicamente, y por supuesto su perfil interno, es un aspecto que no solamente se detalla en las guías generales para el departamento artístico sino también para el músico.
+- También tenemos en cuenta elementos del decorado, colores y materiales que vayan apareciendo en distintos niveles o en todo el videojuego, materiales recurrentes y la convivencia de la ambientación con el sonido (ambiente, efectos, diálogos).
+
+**Colores**
+
+Uno de los elementos de inspiración es la paleta de colores. En este sentido, existe múltiples referencias que relacionan sonidos directamente con colores o, de una manera más general e interesante, colores con emociones que es lo que nosotros asociaremos con nuestras piezas o recursos.
+
+![src/creacionVideojuego_10.png](src/creacionVideojuego_10.png)
+
+**Organización**
+
+Llega después de la inspiración y es fundamental para el compositor dentro del trabajo tanto de banda sonora como de sound effects e implementación, cualquiera de los aspectos que tengan que ver con el audio.
+
+Pasos propuestos:
+
+- Búsqueda de materiales musicales básicos. Es la etapa de toma de decisiones estéticas; que estilo de música vamos a realizar, que materiales nos interesan e incluso que instrumentos emplearemos.
+- Esquema formales y duraciones. Este es un aspecto delicado porque a menudo no está cerrado hasta que el juego está en una fase bastante avanzada, pero nos dará una idea de con que dimensiones de música vamos a trabajar, con que cantidades y, en este sentido, dosificar los recursos.
+- Inserción de eventos musicales. Vemos si va haber interactividad, si no la va a ver, si vamos a utilizar mayor o menor número de efectos sonoros, etc.
+- Composición, secuenciación y grabación. Es donde realizamos el trabajo musical en sí y en donde podemos, en cierta medida, desvincularnos del juego si todos los puntos anteriores están bien fijados.
+- Tanto la fase de mezcla como la inclusión de SFX y los diálogos es quizás el punto más delicado de una banda sonora para videojuegos, porque es donde todo el esfuerzo anterior se vuelve en un formato de audio que es, a fin de cuentas, lo que va a llegar al equipo para el que trabajamos y al jugador.
+- Implementación del audio en el juego. Esta implementación puede llevarse a cabo en fases bastante finales si son aspectos que no van a moverse o bien no cerrarla hasta que prácticamente esté terminada el videojuego.
+
+**Técnicas Compositivas**
+
+Son las herramientas puramente musicales con la que daremos vida a la banda sonora. Existen cuatro esenciales, además de otras de suma importancia.
+
+- **Técnica motívica:** Consiste en emplear fragmentos que pueden ser melódicos o electrónicos, pero que tienen una identidad propia. Estos fragmentos o ideas musicales van ayudarnos a dar coherencia a toda la banda sonora a través de la repetición, de la reiteración, también de sus variaciones. También, gracias a que utilizamos uno u otro material, daremos variedad.
+- **Técnica armónica:** Hace referencia a que sucede en la música verticalmente, es decir, cuanta tensión se acumula y cómo podemos manejar esa tensión con elementos musicales. Es un recurso de primer orden y se atiende a como se distribuye a lo largo del juego o el nivel en que se trabaja.
+- **Técnica tímbrica:** Referencia a los instrumentos o "colores" con que vamos a trabajar; si queremos un piano solo, una orquesta completa o una sección de metales, sí simplemente son unidades de tipo atmosfera.
+- **Técnica formal:** Es la estructura que le damos a la banda sonora a gran escala y a pequeña escala, como dosificamos los elementos y lo insertamos dentro de un esqueleto que es la forma.
+- **Otras técnicas:** Son la elección del ritmo a usar, la textura que queremos, dinámicas suaves o fuerte, la articulación o si emplearemos texto, etc.
+
+### Clase 53 **
+### Clase 54 **
+### Clase 55 **
+### Clase 56 **
+### Clase 57 **
+### Clase 58 **
+### Clase 59 **
+### Clase 60 **

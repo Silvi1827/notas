@@ -101,7 +101,7 @@ Algunos contenidos más comunes son:
 - Canal de distribución
 - Cronograma
 
-El ejemplo de un brief para un restaurant de comida rapida es: [Steam Burger](http://https://github.com/mssroboto/diseno-para-programadores/blob/master/1-brief/Brief..pdf "steam burger")
+El ejemplo de un brief para un restaurant de comida rapida es: [Steam Burger](http://https://github.com/mssroboto/diseno-para-programadores/blob/master/1-brief/Brief "steam burger")
 
 ## Modulo 3. Aprender sobre Diseño Experiencia de usuario
 ### Clase 8 *Definición de diseño UX*
@@ -160,7 +160,7 @@ Los wireframes hechos a mano y en papel se le conoce comowireframes de baja cali
 
 También hay wireframes hechos ya en cualquier programa de diseño, incluso en Google Docs, PowerPoint o Paint, estos son llamados wireframes de alta calidad.
 
-Ejemplo de [wireframes](https://github.com/mssroboto/diseno-para-programadores/tree/master/3-wireframes..pdf "wireframes") para desktop y móvil.
+Ejemplo de [wireframes](https://github.com/mssroboto/diseno-para-programadores/tree/master/3-wireframes "wireframes") para desktop y móvil.
 
 **¿Cómo podemos hacer pruebas de usuarios con wireframes?**
 
@@ -245,7 +245,7 @@ Ya teniendo en claro estos conceptos podemos ver que tipos de paletas de colores
 
 ![src/diseño_9.png](src/diseño_9.png)
 
-También existen páginas que te pueden ayudar a crear paletas de colores, como [Adobe Color](https://color.adobe.com/es/explore..pdf "Adobe Color").
+También existen páginas que te pueden ayudar a crear paletas de colores, como [Adobe Color](https://color.adobe.com/es/explore "Adobe Color").
 
 ### Clase 15 *Tipografía*
 
@@ -269,7 +269,7 @@ Algunos tipos de fuentes que podemos usar son:
 
 ![src/diseño_12.png](src/diseño_12.png)
 
-Existen páginas que te pueden ayudar a la hora de elegir una tipografía, como [Google Fonts](https://fonts.google.com/..pdf "Google Fonts").
+Existen páginas que te pueden ayudar a la hora de elegir una tipografía, como [Google Fonts](https://fonts.google.com/ "Google Fonts").
 
 ### Clase 16 *Layout y sistemas de grillas*
 
@@ -344,4 +344,4 @@ Recuerda que las animaciones y video afectan al rendimiento de tu página.
 
 ### Clase 21 *Resultado final*
 
-Fin del curso, [aquí](https://github.com/mssroboto/diseno-para-programadores/tree/master/4-app..pdf "aquí") podemos ver el resultado final del Steam Burger y su código.
+Fin del curso, [aquí](https://github.com/mssroboto/diseno-para-programadores/tree/master/4-app "aquí") podemos ver el resultado final del Steam Burger y su código.
