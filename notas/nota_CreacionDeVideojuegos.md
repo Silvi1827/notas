@@ -1361,9 +1361,9 @@ Home Studio
 
 Es la opción más utilizada. Existen varias ventajas de realizar la grabación en el estudio del propio compositor, como:
 
-- **Independencia:** Puede trabajar con sus propias herramientas, en su espacio habitual
-- **Inmediatez:** Al no tener que programar con un estudio externo las horas de grabación
-- **Costo y calidad:** Si bien el costo es mucho menor, tenemos el hándicap de la calidad. Siempre, por muy preparado que este el Home Studio, no disponen con la inversión que realizan los estudios profesionales y, en general, la calidad de la grabación siempre será un poco menor.
+- Independencia: Puede trabajar con sus propias herramientas, en su espacio habitual
+- Inmediatez: Al no tener que programar con un estudio externo las horas de grabación
+- Costo y calidad: Si bien el costo es mucho menor, tenemos el hándicap de la calidad. Siempre, por muy preparado que este el Home Studio, no disponen con la inversión que realizan los estudios profesionales y, en general, la calidad de la grabación siempre será un poco menor.
 
 Grabación de conjuntos, orquesta, coros
 
