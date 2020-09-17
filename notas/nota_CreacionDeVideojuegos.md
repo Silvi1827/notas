@@ -1472,5 +1472,24 @@ Aspectos que no debe perder de vista el compositor:
 ### Clase 58 *Cierre*
 Aquí termina el modulo de Audio en Videojuegos.
 
-### Clase 59 **
-### Clase 60 **
+### Clase 59 *Bonus: El papel del compositor en el equipo*
+
+Parecía prescindible incluir dentro del módulo dedicado al audio un apartado que refleje el papel del compositor dentro del equipo que realiza el videojuego al completo, sobre todo para mejorar las relaciones y conseguir sacar el máximo provecho al profesional que tenemos trabajando con nosotros.
+
+**Principales aportaciones**
+
+El compositor o el encargado del aspecto de audio sirve como nexo artístico entre los programadores, los artistas de animación 2D/3D y el game design. ¿De qué manera? Gracias a la música vamos a tener una coherencia estética; una estética que ha planteado el diseñador del videojuego, que ha recreado el artista 2D/3D y que se intenta reflejar en aspectos programables, pero sin la música no termina de estar cerrada realmente. También a través de la coherencia narrativa, la música va a reflejar los puntos que el diseñador del juego allá querido destacar y que el arte no siempre puede resaltar, ni tampoco las mecánicas a veces el apoyo musical es indispensable en este aspecto. Y colabora además a través de la coherencia emocional, todos los objetivos marcados por el diseñador, la huella que desea dejar en el jugador, difícilmente puede conseguirse solamente a través de mecánicas y el arte, el elemento auditivo es una buena vía de entrada en el subconsciente del jugador que debe aprovecharse.
+
+Es importante destacar que el compositor a veces dentro del equipo va a ser un punto de inspiración para el resto de áreas y no al revés, a veces a partir de una banda sonora surgen escenarios, mecánicas o ideas nuevas para el desarrollo del juego. Se puede explotar también el punto de vista rítmico/cinematográfico, el compositor cuando ve la imagen del juego está viendo un ritmo y a veces puede incluso fallos de montaje de ese juego, secuencias que quizás deberían durar un poco más, niveles que podrían durar un poco menos, es un punto de vista estético que puede explotarse bastante por parte del equipo.
+
+Sin duda está además la aportación del músico como herramienta tras media, podemos realizar conciertos a partir de la banda sonora del videojuego, podemos emplear la banda sonora para el teaser del juego, podemos publicitar el juego mediante listas de reproducciones, tonos para teléfonos que al final prologan la sensación del juego más allá de la partida y consigue ondear mucho más en el jugador de lo que puede hacer simplemente la experiencia del juego, y sobre todo refuerza la permanencia a lo largo del tiempo.
+
+**¿Cómo sacar el máximo partido al encargado musical?**
+
+Se recomienda principalmente que el objetivo del juego y las mecánicas estén definidas con la mayor claridad posible y con la mayor permanecían posible. Definir lo antes posible una estética general clara; que época está ubicado, que mobiliario va a ver, cuáles son los espacios, personajes y colores. También se debe definir los perfiles narrativos, los personajes deben tener un perfil claro ya que la modificaciones de los personajes afectan mucho a la banda sonora y la carga emocional que tienen.
+
+El compositor debe tener bien en claro cuáles son los puntos de agarre, los puntos importantes, los puntos en los que la historia puede girar o si el juego no tiene ningún giro, como la música debe colaborar para mantener el interés. También definir un clímax o punto culminante si es que lo hay.
+
+Especificar qué tipos de demos se desean para el juego, hay diseñadores de videojuego a los que simplemente tocan un tema de piano y describir más o menos como van a ir, otros piden demos de calidad mediana y otros quieren audio de calidad por lo que hay que anticiparle que retrasa un poco el trabajo para realizar una demo de mayor calidad.
+
+También, en la medida que el director de proyecto lo crea conveniente, pedir referencias musicales. Hay juegos que solicitan al compositor libertad creativa absoluta e incluso no se desea que oiga nada o que se parezca a nada, y otros al que el diseñador dice que desea que se parezca, a una banda sonora de película concreta o incluso a otras bandas sonoras de otros videojuegos.
