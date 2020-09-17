@@ -1469,6 +1469,8 @@ Aspectos que no debe perder de vista el compositor:
 - Prestar atención al volumen. El programador no puede hacerse cargo de la aplicación y equilibro de volumen general a lo largo de todo el juego.
 - No descuidar la panoramización, la ubicación en el espacio.
 
-### Clase 58 **
+### Clase 58 *Cierre*
+Aquí termina el modulo de Audio en Videojuegos.
+
 ### Clase 59 **
 ### Clase 60 **
