@@ -1448,7 +1448,27 @@ Además del doblaje, el videojuego nos permite la opción de crear idiomas propi
 
 Es importante tener en cuenta que debe estar equilibrado toda las voces que introducimos en el videojuego deben estar en perfecta convivencia con la banda sonora y los efectos. Tendremos como máxima que siempre que exista voz o dialogo debe ir por encima de todo lo que este sonando, da igual lo buena que sea la música o lo importante que sea el sonido de un objeto, la voz siempre ira por encima de cualquier otro elemento sonoro ya sea música o efecto de sonido. La rentabilidad del doblaje también es un valor a tener en cuenta si nuestro doblador es una voz conocida o una cara conocida, es algo con el que el producto o el game design puede contar.
 
-### Clase 57 **
+### Clase 57 *La implementación de la música en el juego*
+
+La implementación del audio en el videojuego es quizás uno de los aspectos más apasionantes a la hora de realizar una banda sonora para este tipo de medio audiovisual.
+
+Lo primero que se plantea tanto el diseñador del juego como el compositor es la manera en que puede introducirse el audio o con que recurso cuenta, generalmente el audio se suele introducir lado a lado con el programador, el compositor trabaja con él y le va indicando donde quiere los archivos de audio y como lo quiere, obviamente esta manera de trabajar resulta bastante larga y a veces ineficaz porque el programador puede no colocar correctamente nuestros archivos, después de tantos procesos y tanto trabajo puede no colocarlo exactamente como nosotros queremos dentro del juego. También porque el programador no tiene por qué tener conocimientos de audio y puede no tocar bien algún parámetro que le indiquemos de modo que es la manera de trabajar menos recomendable a priori o por lo menos no utilizarla de manera exclusiva.
+
+Lo ideal es que el compositor tenga independencia, existen diversos software gracias a los cuales el compositor ya puede implementar el audio dentro del juego sin necesidad de contar con el programador y que exportaran directamente una carpeta de código que se facilita al programador donde ya el compositor ha colocado en detalle el paneo del sonido, donde lo quiere, con que volumen, cuando quiere que entre y cuando quiere que desaparezca, etc.
+
+Existe también una tercera opción que no excluye las dos anteriores que es la figura del programador de audio. Esta figura es frecuente en proyectos de mayor envergadura y consiste en una persona, generalmente un músico con conocimientos de programación, que se dedica exclusivamente a implementar el audio en el videojuego, igualmente esta persona deberá estar en contacto tanto con el compositor como con el programador.
+
+A menudo el audio se implementa en el juego mediante motores no específicos como Unreal o Blender que si bien cuenta con algunos recursos o pueden tocar algunos parámetros, al no ser motores de audio específicamente el programador finalmente limitada su capacidad de acción hasta cierto punto o extralimitada si se le está pidiendo que ocurra con el audio que el compositor debe supervisar por eso siempre es recomendable emplear la siguiente opción: herramientas específicas de software para juegos no lineales. Estas herramientas específicas de software son empleadas por el propio compositor y exportan una carpeta de código que el programador simplemente debe incluir dentro del código principal del juego. Algunas herramientas principales son: WWise, FMOD, OpenAI, MST.
+
+Aunque la implementación puede parecer que complica el videojuego, en realidad tiene varias ventajas como el enorme ahorro de memoria, a partir de un pequeño archivo de audio podemos generar una multitud de eventos auditivos, estas herramientas no solo nos ahorrar en memoria y tiempo sino que también consigue que podamos estar disfrutando simultáneamente de sonido lineales en combinación de sonidos no lineales, y nos permite realizar modificaciones en tiempo real. No obstante, y por si el compositor quiera trabajar aún en más detalles, cuenta con la herramienta MAX que es un lenguaje que permite a los no programadores diseñar desde cero herramientas de audio
+
+Aspectos que no debe perder de vista el compositor:
+
+- Siempre que se vaya a realizar la entrada del audio en el videojuego estén adecuadamente preparado todos los archivos en alta calidad y con el formato que se nos solicita y que el motor pueda utilizar.
+- Prestar especial atención a la sincronía. En la implementación la sincronía es fundamental, sino todo el trabajo que se ha hecho anteriormente se va haber muy deslucido.
+- Prestar atención al volumen. El programador no puede hacerse cargo de la aplicación y equilibro de volumen general a lo largo de todo el juego.
+- No descuidar la panoramización, la ubicación en el espacio.
+
 ### Clase 58 **
 ### Clase 59 **
 ### Clase 60 **
