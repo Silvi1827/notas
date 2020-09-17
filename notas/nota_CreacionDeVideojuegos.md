@@ -1309,6 +1309,7 @@ La función emocional de la música puede ser bien neutro, no provocar ninguna e
 Pasos en la creación de una banda sonora para videojuegos así como las técnicas compositivas que se emplean para ello.
 
 **Inspiración**
+
 En primer lugar, el compositor debe buscar una serie de puntos de inspiración que comienzan a gestar la banda sonora.
 
 Puntos indispensables:
@@ -1348,7 +1349,54 @@ Son las herramientas puramente musicales con la que daremos vida a la banda sono
 - **Técnica formal:** Es la estructura que le damos a la banda sonora a gran escala y a pequeña escala, como dosificamos los elementos y lo insertamos dentro de un esqueleto que es la forma.
 - **Otras técnicas:** Son la elección del ritmo a usar, la textura que queremos, dinámicas suaves o fuerte, la articulación o si emplearemos texto, etc.
 
-### Clase 53 **
+### Clase 53 *De la composición al audio *
+
+Hoy nos centraremos en uno de los pasos más importantes dentro del proceso de composición de la banda sonora para videojuegos, es justo el proceso en el que transformamos todo lo que hemos compuestos, todas nuestras ideas estéticas, todas las decisiones tímbricas, formales o armónicas en un archivo de audio que es el que finalmente va a ir a parar al programador. En este sentido, atenderemos al proceso de grabación, posibles arreglos y las ediciones.
+
+**Grabación**
+
+No siempre es necesario pues que muchas de las bandas sonoras se realizan exclusivamente a través de librerías virtuales o controladora y no es un instrumentista o voz real. Sin embargo, siempre que se realicen bandas sonoras que requieran el factor humano vamos a contar con este importante paso, en este sentido la opción de Home Studio o Grabación en conjunto.
+
+Home Studio
+
+Es la opción más utilizada. Existen varias ventajas de realizar la grabación en el estudio del propio compositor, como:
+
+- **Independencia:** Puede trabajar con sus propias herramientas, en su espacio habitual
+- **Inmediatez:** Al no tener que programar con un estudio externo las horas de grabación
+- **Costo y calidad:** Si bien el costo es mucho menor, tenemos el hándicap de la calidad. Siempre, por muy preparado que este el Home Studio, no disponen con la inversión que realizan los estudios profesionales y, en general, la calidad de la grabación siempre será un poco menor.
+
+Grabación de conjuntos, orquesta, coros
+
+En este caso la organización será fundamental, no solamente de los ensayos que realizaremos con los músicos, los conjuntos, etc., sino de la propia sesión de grabación en sí. En este sentido, facilitaremos al técnico de sonido con antelación la base que vamos a emplear, referencias para el coro, claquetas que se usan de referencia, etc. En la sesiones de grabación podremos también realizar la grabación, no solo de música, sino también de los efectos de sonido como respiraciones, llaves, pasos, etc.
+
+El principal hándicap que contamos no es solo la organización sino que conlleva unos plazos mayores por lo cual nuestra composición debe estar terminada antes que si la realizamos la grabación en un Home Studio, el costo es mayor pero por supuesto la calidad es indiscutiblemente superior.
+
+**Audio Final**
+
+Está formado por varios ingredientes que a menudo el resto del equipo implicado en el videojuego no suele tener en cuenta, pero que el compositor debe articular de manera inteligente sobre todo de cara a los plazos a cumplir.
+
+**Secuenciación**
+
+Se realiza únicamente de ser necesario. Consiste en utilizar bien una controladora, escritura musical, y en definitiva un lenguaje MIDI que posteriormente llama a una serie de librerías que si contienen un audio real y que nos van a proporcionar un audio final que no ha sido grabado con instrumentistas reales.
+
+- **Software:** Tenemos Lofic, Kontakt, entre otros.
+- **Librerías:** Contamos con una enorme variedad y calidad. Existen librerías que graban al detalle, pero tienen el inconveniente de la aparatosidad, si no manejamos con solvencia estas librerías serán un problema por tener tanta diversificación y tanta posibilidades.
+- **Efectos:** También es donde lo incluimos si queremos que una voz lleve reverberación, si queremos ubicar los instrumentos a la izquierda o la derecha al frente, la comprensión, etc.
+
+**Mezcla**
+
+Es el siguiente paso. La mezcla consiste en tomar todos los elementos que tenemos grabaciones de instrumentos reales, instrumentos virtuales, etc., y mezclarlo en un audio único.
+
+- **Equilibrio:** Es fundamental que exista un equilibrio entre los elementos. Debemos tener en cuenta que este audio final debe estar equilibrado tanto con los efectos de sonido como los diálogos, si es que se incluyen. En este punto se recomienda que la mezcla no la haga el compositor, sino que siempre cuente con otro par de oídos, también en la grabación es bueno pero en la mezcla es totalmente indispensable nuestro oído como compositor está totalmente viciado después de haber compuesto una pieza musical de una banda sonora entonces siempre es recomendable que para el audio final contemos con otro musico y con el técnico de sonido que balance los elementos con lo que estamos trabajando.
+
+**Versión para juegos / Versión para escucha**
+
+Es importante destacar que a menudo tendremos que realizar un audio de versión para el juego, probablemente este audio este compuesto por capas este articulado con fragmentos más breves, y una versión para escucha que se nos pide como producto independiente a lo que es el juego y que el usuario pueda descargar y escuchar en casa, no va a contar con los cortes o eventos que cuenta el game play, pero puede simplemente incluir una versión de estos u otros recursos en cualquier caso es un trabajo doble que a menudo no se ve.
+
+**Producción Propia vs Producción Profesional**
+
+La producción propia, cuando nos requiera o no cuente con una gran inversión, es perfecto para cuando tengamos que cumplir con plazos más rápidos. En cuanto a los plazos más largos, productos más elaborados y algo de mayor inversión se recomienda una producción profesional.
+
 ### Clase 54 **
 ### Clase 55 **
 ### Clase 56 **
