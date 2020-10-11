@@ -489,6 +489,81 @@ Y nos sale una ventana que nos dice que toda la instalación (tanto servidor com
 ![src/fundamentoBD_45.png](src/fundamentoBD_45.png)
 
 ### Clase 15 *Instalación local de un RDBMS (Mac)*
+
+**Instalación de un RDBMS en Mac OS**
+
+Vamos a la página para descargar el servidor de comunidad de MySQL: https://dev.mysql.com/downloads/mysql/5.7.html
+
+![src/fundamentoBD_46.png](src/fundamentoBD_46.png)
+
+Al igual que la instalación de Windows, nos pide que seamos parte de la comunidad. Damos click en 'no gracias, solo quiero la descarga':
+
+![src/fundamentoBD_47.png](src/fundamentoBD_47.png)
+
+Una vez que termino de descargarse, nos dirigimos a nuestra carpeta de descarga y damos doble click al archivo DMG para iniciar la instalación. Click al archivo pkg y nos abre la pantalla de bienvenida en donde nos da las gracias por escogerlo y nos explica un poco lo que vamos a instalar, damos click al botón continuar:
+
+![src/fundamentoBD_48.png](src/fundamentoBD_48.png)
+
+Se nos presenta la licencia. Es una licencia GNU o GPL que es precisamente para código abierto, damos click en continuar:
+
+![src/fundamentoBD_49.png](src/fundamentoBD_49.png)
+
+Nos salta una ventana en donde nos pregunta si estamos aceptando la licencia, damos click en acepto:
+
+![src/fundamentoBD_50.png](src/fundamentoBD_50.png)
+
+Esta ventana nos indica el espacio que va ocupar y si deseamos cambiar la ubicación de la instalación, en este caso no hacemos nada, y damos continuar:
+
+![src/fundamentoBD_51.png](src/fundamentoBD_51.png)
+
+Nos sale una ventana que nos pide la clave de acceso al administrador, si seguiste los pasos del tutorial correctamente no deberías tener ninguna aprensión, este es normalmente el proceso y es un software legítimo. Una vez ingresada la clave del administrador, damos click en instalar software:
+
+![src/fundamentoBD_52.png](src/fundamentoBD_52.png)
+
+Se empieza a hacer la instalación como tal:
+
+![src/fundamentoBD_53.png](src/fundamentoBD_53.png)
+
+Nuevamente nos pide permiso del sistema, algo de esperarse pues utilizara el disco duro y algunos otros recursos, así que damos click en ok:
+
+![src/fundamentoBD_54.png](src/fundamentoBD_54.png)
+
+La instalación finaliza con una ventana que nos muestra la contraseña y usuario root, también nos indica que podemos cambiar la contraseña después. Puedes copiar la contraseña para que después puedas acceder a la base de datos, y damos click en ok:
+
+![src/fundamentoBD_55.png](src/fundamentoBD_55.png)
+
+Con esto terminamos de instalar el servidor de MySQL y termina el instalador. Damos click en cerrar:
+
+![src/fundamentoBD_56.png](src/fundamentoBD_56.png)
+
+Una última ventana nos pregunta si deseamos conservar el archivo de instalación o directamente lo envias al basurero, das click al que desees realizar:
+
+![src/fundamentoBD_57.png](src/fundamentoBD_57.png)
+
+**MySQL Workbench**
+
+Como parte de la instalación, ya tenemos el servidor pero necesitamos algo que se conecte a él y nos permita administrar la base de datos de una forma más visual. Para esto, la misma gente de MySQL que son Oracle nos presenta la herramienta Workbench (en Windows viene todo junto, pero en Mac es diferente) así que bajamos esta herramienta por separado.
+
+Vemos una página muy similar a la anterior, elegimos el sistema operativo y damos click en descargar: https://dev.mysql.com/downloads/workbench/
+
+![src/fundamentoBD_58.png](src/fundamentoBD_58.png)
+
+Nos presenta la misma página para registrarnos o iniciar sesión, damos click en 'no gracias, solo quiero la descarga'. Nuevamente nos vamos a la carpeta y damos doble click al instalador, y nos muestra esta ventana de avance que instala todos los componentes del Workbench:
+
+![src/fundamentoBD_59.png](src/fundamentoBD_59.png)
+
+Una vez finalizada nos sale una pantalla en donde lo unico que debemos hacer es dar click al icono del MySQL Workbench y arrastar hasta la carpeta:
+
+![src/fundamentoBD_60.png](src/fundamentoBD_60.png)
+
+Una vez arrastrado nos sale una pantalla que nos muestra el progreso de copiar la aplicación:
+
+![src/fundamentoBD_61.png](src/fundamentoBD_61.png)
+
+Una vez finalizada, cerramos todo y ya está. Tenemos instalado MySQL en Mac.
+
+**Nota: Es importante guardar la información que te da al instalar el servidor (usuario y contraseña) porque lo ocupamos más adelante cuando deseamos configurar Workbench para conectarse a nuestro servidor de base de datos.**
+
 ### Clase 16 *Instalación local de un RDBMS (Ubuntu)*
 ### Clase 17 *Clientes gráficos*
 ### Clase 18 *Servicios administrados*
