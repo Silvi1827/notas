@@ -607,7 +607,9 @@ A continuación deberá aparecer una ventana con el prompt de mysql donde ya pue
 ![src/fundamentoBD_70.png](src/fundamentoBD_70.png)
 
 ***Nota***
+
 ***- Recuerda estar seguro que las dependencias para el paquete se cumplen para instalar.***
+
 ***- Muchas veces las distribuciones ya cuentan con paquetes en su repositorio, en ese caso también puedes ejecutar el comando: sudo apt-get install mysql-server***
 
 ### Clase 17 *Clientes gráficos*
