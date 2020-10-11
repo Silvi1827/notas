@@ -611,6 +611,35 @@ A continuación deberá aparecer una ventana con el prompt de mysql donde ya pue
 - Muchas veces las distribuciones ya cuentan con paquetes en su repositorio, en ese caso también puedes ejecutar el comando: sudo apt-get install mysql-server***
 
 ### Clase 17 *Clientes gráficos*
+
+Como parte de las herramientas que nos da MySQL como desarrolladores tenemos algunas herramientas bastante interesantes, como MySQL Workbench.
+
+**¿Qué es MySQL Workbench?**
+
+Básicamente es un tipo de herramienta llamada «cliente gráfico», el cual es una forma muy gráfica de representar y de ver cómo funciona nuestra base de datos internamente. Y es que la forma de abstraer los datos de base de datos y que nosotros lo podamos entender de una manera más simple.
+
+Este tipo de herramienta nos permite visualizar y modificar los datos, y jugar un poco con la configuración de la base de datos de una forma bastante más amigable.
+
+Existen varias opciones para clientes gráficos y hay algunas, dependiendo del manejador de base de datos que utilices, hay diversas más famosas.
+
+**MySQL Workbench**
+
+Abrimos el programa y nos sale esta pantalla de bienvenida, entre las conexiones tenemos una por default (Local instance MySQL80):
+
+![src/fundamentoBD_71.png](src/fundamentoBD_71.png)
+
+Si queremos agregar una nueva conexión a la base de datos con la configuración que tienes, simplemente das click en el botón de más y nos sale una ventana que nos pide los datos para la conexión:
+
+![src/fundamentoBD_72.png](src/fundamentoBD_72.png)
+
+Damos doble click sobre la instancia local para usar el editor visual, antes de poder usarlo nos sale una pantalla que pide la contraseña configurada anteriormente durante la instalación:
+
+![src/fundamentoBD_73.png](src/fundamentoBD_73.png)
+
+Editor visual
+
+![src/fundamentoBD_74.png](src/fundamentoBD_74.png)
+
 ### Clase 18 *Servicios administrados*
 
 Hoy en día muchas empresas ya no tienen instalados en sus servidores los RDBMS sino que los contratan a otras personas. Estos servicios administrados cloud te permiten concentrarte en la base de datos y no en su administración y actualización.
