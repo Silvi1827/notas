@@ -606,9 +606,9 @@ A continuación deberá aparecer una ventana con el prompt de mysql donde ya pue
 
 ![src/fundamentoBD_70.png](src/fundamentoBD_70.png)
 
-***Nota
-- Recuerda estar seguro que las dependencias para el paquete se cumplen para instalar.
-- Muchas veces las distribuciones ya cuentan con paquetes en su repositorio, en ese caso también puedes ejecutar el comando: sudo apt-get install mysql-server***
+***Nota***
+***- Recuerda estar seguro que las dependencias para el paquete se cumplen para instalar.***
+***- Muchas veces las distribuciones ya cuentan con paquetes en su repositorio, en ese caso también puedes ejecutar el comando: sudo apt-get install mysql-server***
 
 ### Clase 17 *Clientes gráficos*
 
@@ -645,3 +645,86 @@ Editor visual
 Hoy en día muchas empresas ya no tienen instalados en sus servidores los RDBMS sino que los contratan a otras personas. Estos servicios administrados cloud te permiten concentrarte en la base de datos y no en su administración y actualización.
 
 Los servicios vienen en una variedad de sabores, algunos muy famosos como AWS de Amazon, Google Cloud Platform de Google o Azure de Microsoft.
+
+## Modulo 4. SQL hasta en la sopa
+### Clase 19 *Historia de SQL*
+
+SQL (Structured Query Language o Lenguaje de Consultas Estructurada) es un lenguaje de programación diseñado para almacenar, manipular y recuperar datos almacenados en bases de datos relacionales.
+
+La primera encarnación de SQL apareció en 1974, cuando un grupo de IBM desarrolló el primer prototipo de una base de datos relacional. Se trataba de hacer consultar a los datos, pero no existía una forma realmente estandarizada de hacerlo, entonces, SQL aparece con el objetivo hacer un solo lenguaje de consulta sin importar que manejador de base datos es utilizada, trata de unificarlo todo y se vuelve un gran estándar.
+
+Fue Relational Software (luego se convirtió en Oracle) quien lanzó la primera base de datos relacional comercial.
+
+Existen estándares para SQL. Sin embargo, el SQL que puede utilizarse en cada uno de las principales RDBMS actuales viene en distintas formas. Esto se debe a dos razones:
+
+1. El estándar SQL es bastante complejo, y no es práctico implementar el estándar completo
+2. Cada proveedor de base de datos necesita una forma de diferenciar su producto de otros.
+
+La función para unificar todo se debe a que antes se trataba de consultar archivos de texto y cada compañía tenía su RDBMS, pero no sabía comunicarse entre ellos y el tratar de programarlo llegaba a ser tedioso y desgastante, entonces, se crea el SQL como una manera de manejar mejor esa situación.
+
+Su nombre Structured Query Language se debe a que está estructurado y eso es una de las características más importantes de SQL es su estructura clara y fija.
+
+**NoSQL**
+
+Ahora existen algo llamado NoSQL y mucha gente cree que se refiere a no utilizar SQL, pero no es así.
+
+NoSQL (No only SQL o No solo SQL) está diseñada específicamente para modelos de datos específicos y tienen esquemas flexibles para crear aplicaciones modernas. Las bases de datos NoSQL son ampliamente reconocidas porque son fáciles de desarrollar, por su funcionalidad y el rendimiento a escala.
+
+Algunas de las base de datos NoSQL más reconocidas son:
+
+- MongoDB
+- Cassandra
+- Neo4j
+- BigQuery
+
+### Clase 20 *DDL create*
+
+SQL tiene dos grandes sub lenguajes, el que veremos ahora será:
+
+DDL (Data Definition Language o Lenguaje de Definición de Datos) es un lenguaje proporcionado por el sistema de gestión de base de datos que permite a los programadores de la misma llevar a cabo las tareas de definición de las estructuras que almacenarán los datos así como de los procedimientos o funciones que permitan consultarlos.
+
+Un DDL es un lenguaje de programación para definir una estructura de datos. El término DDL fue introducido por primera vez en relación con el modelo de base de datos CODASYL, donde el esquema de la base de datos ha sido escrito en un lenguaje de descripción de datos que describe los registros, los campos, y "conjuntos" que conforman el usuario modelo de datos. Más tarde fue usado para referirse a un subconjunto de SQL, pero ahora se utiliza en un sentido genérico para referirse a cualquier lenguaje formal para describir datos o estructuras de información, como los esquemas XML.
+
+A diferencia de muchos lenguajes de descripción de datos, SQL utiliza una acción de versos imperativo cuyo efecto es modificar el esquema de la base de datos, añadiendo, cambiando o eliminando las declaraciones se pueden mezclar libremente con otras sentencias SQL, por lo que el DDL no es realmente una lengua independiente. La declaración más común es CREATE TABLE. El lenguaje de consulta SQL, el más difundido entre los gestores de bases de datos, admite las siguientes sentencias de definición: CREATE, DROP y ALTER, cada una de las cuales se puede aplicar a las tablas, vistas, procedimientos almacenados y triggers de la base de datos.
+
+**CREATE**
+
+Sirve para crear una nueva base de datos, tabla, vista, índice, etc.
+
+![src/fundamentoBD_75.png](src/fundamentoBD_75.png)
+
+Un comando CREATE común es la de CREATE TABLE (Crear Tabla)
+
+![src/fundamentoBD_76.png](src/fundamentoBD_76.png)
+
+### Clase 21 *CREATE VIEW y DDL ALTER*
+
+**CREATE VIEW**
+
+Un vista es una consulta que se presenta como una tabla (virtual) a partir de un conjunto de tablas en una base de datos relacional.
+
+Las vistas tienen la misma estructura que una tabla: filas y columnas. La única diferencia es que sólo se almacena de ellas la definición, no los datos. Los datos que se recuperan mediante una consulta a una vista se presentarán igual que los de una tabla. De hecho, si no se sabe que se está trabajando con una vista, nada hace suponer que es así. Al igual que sucede con una tabla, se pueden insertar, actualizar, borrar y seleccionar datos en una vista. Aunque siempre es posible seleccionar datos de una vista, en algunas condiciones existen restricciones para realizar el resto de las operaciones sobre vistas.
+
+![src/fundamentoBD_77.png](src/fundamentoBD_77.png)
+
+**ALTER**
+
+La sentencia ALTER TABLE es usada para agregar, borrar o modificar columnas en una tabla existente.
+
+![src/fundamentoBD_78.png](src/fundamentoBD_78.png)
+
+### Clase 22 *DDL drop*
+
+**DROP**
+
+Sirve para borrar en forma sencilla distintos objetos dentro de la base de datos como por ejemplo base de datos, tablas, índices.
+
+Para eliminar una tabla de una base de datos tenemos la sentencia DROP TABLE. Con ella quitamos una o varias definiciones de tabla y todos los datos, índices, desencadenadores, restricciones y especificaciones de permisos que tengan esas tablas. Las vistas o procedimientos almacenados que hagan referencia a la tabla quitada se deben quitar explícitamente con DROP VIEW o DROP PROCEDURE.
+
+![src/fundamentoBD_79.png](src/fundamentoBD_79.png)
+
+### Clase 23 *DML*
+### Clase 24 *¿Qué tan standard es SQL?*
+### Clase 25 *Creando Platziblog: tablas independientes*
+### Clase 26 *Creando Platziblog: tablas dependientes*
+### Clase 27 *Creando Platziblog: tablas transitivas*
