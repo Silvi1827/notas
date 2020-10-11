@@ -410,6 +410,84 @@ RDBMS (Relational Database Management System o Sistema Gestor de Bases de Datos 
 Hay diferentes tipos de manejadores de base de datos relaciones como Oracle, MySQL o PostgreSQL. Todos son muy parecidas, porque internamente manejan el mismo lenguaje, pero cada una tiene un estilo diferente.
 
 ### Clase 14 *Instalación local de un RDBMS (Windows)*
+
+Hay dos maneras de acceder a manejadores de bases de datos:
+- Instalar en máquina local un administrador de bases relacional (recomendada si comienzas a experimentar y hacer ejercicios).
+- Tener ambientes de desarrollo especiales o servicios cloud (usada en empresas).
+
+En este curso usaremos MySQL porque tiene un impacto histórico siendo muy utilizado y además es software libre y gratuito. La versión 5.6.43 es compatible con la mayoría de aplicaciones y frameworks.
+- Root es el usuario principal que tendrá todos los permisos y por lo tanto en ambientes de producción hay que tener mucho cuidado al configurarlo.
+
+**Instalación**
+
+Primero vamos a la página de descargas: https://dev.mysql.com/downloads/windows/installer/5.6.html
+
+![src/fundamentoBD_30.png](src/fundamentoBD_30.png)
+
+Es un instalador que tiene varias herramientas que nos ayudaran a hacer más visual las operaciones con la base de datos, como los conectores.
+
+Tenemos un panel en la que podemos seleccionar la versión de la base de datos (nosotros elegimos la 5.6), otro panel en donde elegimos el sistema operativo (Microsoft Windows) y tenemos dos opciones de instaladores: uno es el instalador de versión web y otro el instalador completo. El instalador web nos baja un instalador muy pequeño y cada que queramos instalar algo va nuevamente a la web para instalarlo, y el instalador completo trae todo para ahorrarnos la parte tediosa de descargar e instalar.
+
+Damos click a Download y nos envía a otra página. Pequeño tic: MySQL busca que te registres, no te cobra nada pero sirve para pertenecer a la comunidad por lo que primero que te resaltan son los botones de Login y Sign Up, pero hasta abajo esta un pequeño link de 'no gracias, solo quiero la descarga', damos click y nos descarga.
+
+![src/fundamentoBD_31.png](src/fundamentoBD_31.png)
+
+Vamos a la carpeta donde está el instalador descargado, damos doble click o click derecho y ejecutar como administrador para que comience la instalación. El programa nos va a pedir algunos permisos, probablemente porque va hacer cambios al sistema operativo y va a usar recursos de sistema entonces nos pide acceso a permisos especiales:
+
+![src/fundamentoBD_32.png](src/fundamentoBD_32.png)
+
+Decimos si y se instala los componentes:
+
+![src/fundamentoBD_33.png](src/fundamentoBD_33.png)
+
+Para continuar nos pide nuevamente permisos, aceptamos, y luego nos abre la ventana del instalador. La primera ventana, como es costumbre, es la licencia bajo el cual se distribuye el programa. Damos click en Aceptar y después Next para continuar:
+
+![src/fundamentoBD_34.png](src/fundamentoBD_34.png)
+
+Ahora se nos presenta diferentes tipos de instalación. El primero es una instalación para desarrolladores, el segundo solamente para servidor, el tercero solamente para clientes, el cuarto es completa y el quinto es para hacer nosotros mismos la configuración. Es el último el cual aceptamos porque dentro del paquete existe muchos componentes que no vamos a utilizar, seleccionamos y damos click en Next:
+
+![src/fundamentoBD_35.png](src/fundamentoBD_35.png)
+
+Posteriormente nos apareces las opciones de lo que podemos instalar, tenemos el servidor de MySQL, aplicaciones, conectores que nos ayudara cuando desarrollemos una aplicación para que el lenguaje se comunique con la base de datos, ejemplos y documentación. Lo que instalaremos serán MySQL Server y MySQL Workbrench, seleccionamos y damos click a Next:
+
+![src/fundamentoBD_36.png](src/fundamentoBD_36.png)
+
+Nos muestra una ventana que nos dice que los dos componentes están listos para la instalación, algunas veces pueden pedir dependencias adicionales sobre todo del framework de Windows para Visual Studio no pasa siempre, pero llega a pedir. En este momento nos indica que está listo para instalar, así que damos click en Ejecutar:
+
+![src/fundamentoBD_37.png](src/fundamentoBD_37.png)
+
+Ya terminado de instalar ambos programas, damos click al botón Next y nos sale una ventaja que notifica que el servidor ya está listo para configurar. Nuevamente damos click en Next:
+
+![src/fundamentoBD_38.png](src/fundamentoBD_38.png)
+
+Y nos sale una ventana que nos da la configuración inicial del servidor, esto es una configuración bastante sencilla y lo único que nos pide es saber el tipo de configuración que deseamos (desarrollo, servidor o solamente dedicada a la base de datos). Elegimos una computadora para desarrollo que nos permite hacer experimentos sin ninguna consecuencia, nos indica el puerto en donde será instalado, damos click a Next con las opciones default tenemos suficiente:
+
+![src/fundamentoBD_39.png](src/fundamentoBD_39.png)
+
+La siguiente ventana nos pide la cuenta o roles. Damos click a la contraseña de Root (root es nuestro usuario principal y tiene todos los permisos, es por el que tenemos que tener más cuidado. En un ambiente de prueba no es nada, pero si en un ambiente de producción porque si alguien hackea este usuario va a tener accesos a todos los datos), ponemos una contraseña -no te olvides porque lo usaran en todo momento-, damos click en Next:
+
+![src/fundamentoBD_40.png](src/fundamentoBD_40.png)
+
+En la siguiente ventana nos pregunta si queremos configurarlo como servicio para que corra en segundo plano dentro de Windows y si deseamos que inicie cada vez que iniciemos la computadora. Elige como lo deseas:
+
+![src/fundamentoBD_41.png](src/fundamentoBD_41.png)
+
+En la proxima ventana tenemos un check list, una lista que nos corre una vez que demos ejecutar para ver los pasos del instalador:
+
+![src/fundamentoBD_42.png](src/fundamentoBD_42.png)
+
+Una vez finalizada, si existio algun error podemos ir a Log y ver lo que debemos corregir. En este caso todo salio bien y damos en Finish:
+
+![src/fundamentoBD_43.png](src/fundamentoBD_43.png)
+
+Con la configuración completa volvemos a esta ventana. Damos click en Next:
+
+![src/fundamentoBD_44.png](src/fundamentoBD_44.png)
+
+Y nos sale una ventana que nos dice que toda la instalación (tanto servidor como cliente visual) ya está completa. Con esto la instalación finaliza:
+
+![src/fundamentoBD_45.png](src/fundamentoBD_45.png)
+
 ### Clase 15 *Instalación local de un RDBMS (Mac)*
 ### Clase 16 *Instalación local de un RDBMS (Ubuntu)*
 ### Clase 17 *Clientes gráficos*
