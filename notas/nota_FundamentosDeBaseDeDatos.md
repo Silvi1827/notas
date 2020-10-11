@@ -401,3 +401,20 @@ Aplicado al ejemplo anterior la tabla materia se independiza y se relaciona con 
 De esta manera, aunque parezca que la información se multiplicó, en realidad la descompusimos o normalizamos de manera que a un sistema le sea fácil de reconocer y mantener la consistencia de los datos.
 
 Algunos autores precisan una 5FN que hace referencia a que después de realizar esta normalización a través de uniones (JOIN) permita regresar a la data original de la cual partió.
+
+## Modulo 3. RDBMS (MySQL) o cómo hacer lo anterior de manera práctica
+### Clase 13 *RDB ¿Qué?*
+
+RDBMS (Relational Database Management System o Sistema Gestor de Bases de Datos Relacionales) se trata de software capaz de producir, manipular y gestionar bases de datos de tipo relacional. Es un software que se antepone a los datos de una base de datos, de modo que cualquier acceso a los datos pasa por una petición al RDBMS que éste gestiona a fin de realizar la operación más conveniente sobre esa petición. Los sistemas de base de datos relacionales son aquellos que almacenan y administran de manera lógica los datos en forma de tablas.
+
+Hay diferentes tipos de manejadores de base de datos relaciones como Oracle, MySQL o PostgreSQL. Todos son muy parecidas, porque internamente manejan el mismo lenguaje, pero cada una tiene un estilo diferente.
+
+### Clase 14 *Instalación local de un RDBMS (Windows)*
+### Clase 15 *Instalación local de un RDBMS (Mac)*
+### Clase 16 *Instalación local de un RDBMS (Ubuntu)*
+### Clase 17 *Clientes gráficos*
+### Clase 18 *Servicios administrados*
+
+Hoy en día muchas empresas ya no tienen instalados en sus servidores los RDBMS sino que los contratan a otras personas. Estos servicios administrados cloud te permiten concentrarte en la base de datos y no en su administración y actualización.
+
+Los servicios vienen en una variedad de sabores, algunos muy famosos como AWS de Amazon, Google Cloud Platform de Google o Azure de Microsoft.
