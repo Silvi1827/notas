@@ -565,6 +565,51 @@ Una vez finalizada, cerramos todo y ya está. Tenemos instalado MySQL en Mac.
 **Nota: Es importante guardar la información que te da al instalar el servidor (usuario y contraseña) porque lo ocupamos más adelante cuando deseamos configurar Workbench para conectarse a nuestro servidor de base de datos.**
 
 ### Clase 16 *Instalación local de un RDBMS (Ubuntu)*
+
+Visita la dirección de descarga de la versión de comunidad de MySql: https://dev.mysql.com/downloads/mysql/5.7.html#downloads
+
+Dirígete a la sección de selección de descargas y selecciona tu distribución de Linux. En nuestro caso Ubuntu y selecciona posteriormente la versión que estás utilizando actualmente, en nuestro caso 18.04 de 64 bits.
+
+![src/fundamentoBD_62.png](src/fundamentoBD_62.png)
+
+Más abajo encontrarás las diferentes opciones de descarga existen diversos paquetes dependiendo tus necesidades. En el caso del ejemplo usaremos la versión deb bundle. Da click en el botón Download seleccionado.
+
+![src/fundamentoBD_63.png](src/fundamentoBD_63.png)
+
+En la siguiente pantalla nos piden que nos registremos o iniciemos sesión, pero ya que solo queremos la descarga daremos click en el link que se encuentre en la parte de abajo.
+
+![src/fundamentoBD_64.png](src/fundamentoBD_64.png)
+
+Espera a que la descarga concluya.
+
+Al terminar abre el archivo .tar con el desempaquetador de tu preferencia.
+
+![src/fundamentoBD_65.png](src/fundamentoBD_65.png)
+
+Extrae el contenido en la carpeta de tu preferencia.
+
+![src/fundamentoBD_66.png](src/fundamentoBD_66.png)
+
+Selecciona el archivo de servidor de comunidad y ábrelo con tu manejador de paquetes instalado.
+
+![src/fundamentoBD_67.png](src/fundamentoBD_67.png)
+
+![src/fundamentoBD_68.png](src/fundamentoBD_68.png)
+
+Da click en instalar.
+
+Finalmente puedes ir a la consola o terminal de Ubuntu y escribir el siguiente comando: ***sudo mysql***
+
+![src/fundamentoBD_69.png](src/fundamentoBD_69.png)
+
+A continuación deberá aparecer una ventana con el prompt de mysql donde ya puedes comenzar a ejecutar los comandos de las lecciones.
+
+![src/fundamentoBD_70.png](src/fundamentoBD_70.png)
+
+***Nota
+- Recuerda estar seguro que las dependencias para el paquete se cumplen para instalar.
+- Muchas veces las distribuciones ya cuentan con paquetes en su repositorio, en ese caso también puedes ejecutar el comando: sudo apt-get install mysql-server***
+
 ### Clase 17 *Clientes gráficos*
 ### Clase 18 *Servicios administrados*
 
