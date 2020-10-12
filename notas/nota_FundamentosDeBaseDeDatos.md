@@ -963,7 +963,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > FROM usuarios
   >
-  	> LEFT JOIN posts ON usuarios.id = posts.usuario_id;
+  >  LEFT JOIN posts ON usuarios.id = posts.usuario_id;
 
 2. **LEFT JOIN (con condición)**
 
@@ -973,7 +973,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > FROM usuarios
   >
-  	> LEFT JOIN posts ON usuarios.id = posts.usuario_id
+  > LEFT JOIN posts ON usuarios.id = posts.usuario_id
   >
   > WHERE posts.usuario_id IS NULL;
 
@@ -985,7 +985,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > FROM usuarios
   >
-  	> RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+  > RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
 
 4. **RIGHT JOIN (con condición)**
 
@@ -995,7 +995,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > FROM usuarios
   >
-  	> RIGHT JOIN posts ON usuarios.id = posts.usuario_id
+  > RIGHT JOIN posts ON usuarios.id = posts.usuario_id
   >
   > WHERE posts.usuario_id IS NULL;
 
@@ -1007,7 +1007,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
 	> FROM usuarios
   >
-  	> INNER JOIN posts ON usuarios.id = posts.usuario_id;
+  > INNER JOIN posts ON usuarios.id = posts.usuario_id;
 
 6. **OTHER JOIN**
 
@@ -1017,7 +1017,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > FROM usuarios
   >
-  	> FULL OTER JOIN posts ON usuarios.id = posts.usuario_id;
+  > FULL OTER JOIN posts ON usuarios.id = posts.usuario_id;
 
 	La segunda es la otra forma estándar que si funciona en todos los manejadores de base de datos.
 
@@ -1025,7 +1025,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > FROM usuarios
   >
-  	> LEFT JOIN posts ON usuarios.id = posts.usuario_id
+  > LEFT JOIN posts ON usuarios.id = posts.usuario_id
   >
   > UNION
   >
@@ -1033,7 +1033,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > FROM usuarios
   >
-  	> RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+  > RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
 
 7. **OTHER JOIN (con condición)**
 
@@ -1043,7 +1043,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > FROM usuarios
   >
-  	> LEFT JOIN posts ON usuarios.id = posts.usuario_id
+  > LEFT JOIN posts ON usuarios.id = posts.usuario_id
   >
   > WHERE posts.usuario_id IS NULL
   >
@@ -1053,7 +1053,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > FROM usuarios
   >
-  	> RIGHT JOIN posts ON usuarios.id = posts.usuario_id
+  > RIGHT JOIN posts ON usuarios.id = posts.usuario_id
   >
   > WHERE posts.usuario_id IS NULL;
 
@@ -1214,9 +1214,395 @@ Trae todos los posts cuyo mes de fecha de publicación sea igual a Abril (04)
 
 
 ### Clase 34 *Utilizando la sentencia WHERE nulo y no nulo*
+
+Ya sabemos que WHERE es utilizados para filtrar los row o tuplas, pero nos ha faltado ver dos tipos de datos muy particulares y es que no son exactamente un tipo de dato, aunque pueden ser considerado de ese modo, y esos son: nulo y no nulo.
+
+El valor nulo en una tabla generalmente es el valor por defecto. Es el valor que se guarda en un campo cuando no tiene una especificación y por defecto la base de datos lo guarda como nulo. Muchos de los campos dentro de nuestra definición de base de datos le pusimos un constraint que se llama not null que quiere decir no nulo, no se desea que se quede vacío y por tanto es obligatorio.
+
+**¿Cómo consultar a través de WHERE cuando tenemos un valor nulo?**
+
+Hasta ahora hemos visto operados de consulta (igual, menor que, mayor que), LIKE o BETWEEN, pero para consultar los valor de tipo nulo no usamos esto porque no es mayor o menor a nada, es un vacío, una forma diferente de tratar la información. Entonces el valor nulo o no nulo va a funcionar de una manera un poco diferente y por eso lo debemos consultar de una manera muy particular.
+
+**Ejemplo**
+
+Vemos los posts que no tengan ningún usuario asociado
+
+> SELECT *
+>
+> FROM posts
+>
+> WHERE usuario_id IS NULL;
+
+Vemos los posts que no pertenezcan a ninguna categoría
+
+> SELECT *
+>
+> FROM posts
+>
+> WHERE categoria_id IS NULL;
+
+Trae los posts que SI tengan usuarios asociados
+> SELECT *
+>
+> FROM posts
+>
+> WHERE usuario_id IS NOT NULL;
+
+Traemos los posts que tengan usuarios asociados y con estatus activos
+
+> SELECT *
+>
+> FROM posts
+>
+> WHERE usuario_id IS NOT NULL
+>
+> AND estatus = 'activo';
+
+Traemos los posts que tengan usuarios asociados, estatus activos y cuyo id sea menor a 50
+
+> SELECT *
+>
+> FROM posts
+>
+> WHERE usuario_id IS NOT NULL
+>
+> AND estatus = 'activo'
+>
+> AND id < 50;
+
+Traemos los posts que tengan usuarios asociados, estatus activos, cuyo id sea menor a 50 y pertenezcan a la categoría 2
+
+> SELECT *
+>
+> FROM posts
+>
+> WHERE usuario_id IS NOT NULL
+>
+> AND estatus = 'activo'
+>
+> AND id < 50
+>
+> AND categoria_id = 2;
+
+Traemos los posts que tengan usuarios asociados, estatus activos, cuyo id sea menor a 50, pertenezcan a la categoría 2 y haya sido publicado en el año 2025
+
+> SELECT *
+>
+> FROM posts
+>
+> WHERE usuario_id IS NOT NULL
+>
+> AND estatus = 'activo'
+>
+> AND id < 50
+>
+> AND categoria_id = 2
+>
+> AND YEAR(fecha_publicacion) = '2025';
+
 ### Clase 35 *GROUP BY*
+
+GROUP BY tiene que ver con agrupación y es la que indica a la base de datos que criterios debe tener en cuenta para agrupar.
+
+**Ejemplo**
+
+Vemos los estatus que tenemos y la cantidad de posts que pertenecen a ese estatus
+
+> SELECT estatus, COUNT(*) AS post_quantity
+>
+> FROM posts
+>
+> GROUP BY estatus;
+
+Agrupamos los post por el año de publicación y contamos la cantidad de post hecho en ese tiempo
+
+> SELECT YEAR(fecha_publicacion) AS post_year, COUNT(*) AS post_quantity
+>
+> FROM posts
+>
+> GROUP BY post_year;
+
+Agrupamos los post por el mes de publicación, sin importar el año, y contamos la cantidad de post hecho en ese tiempo
+
+> SELECT MONTHNAME(fecha_publicacion) AS post_month, COUNT(*) AS post_quantity
+>
+> FROM posts
+>
+> GROUP BY post_month;
+
+Agrupamos los post por el estatus y después por el mes de publicación, sin importar el año, además contamos la cantidad de post hecho en ese tiempo y con ese estatus
+
+> SELECT estatus, MONTHNAME(fecha_publicacion) AS post_month, COUNT(*) AS post_quantity
+>
+> FROM posts
+>
+> GROUP BY estatus, post_month;
+
 ### Clase 36 *ORDER BY y HAVING*
+
+ORDER BY tiene que ver con el ordenamiento de los datos, justamente ORDER BY quiere decir 'ordena por', y se encarga de decirle a la base de datos que ordene los datos por los criterios que quieres usar.
+
+**Ejemplo**
+
+Ordena los datos por manera ascendente según la fecha de publicación
+
+> SELECT *
+>
+> FROM posts
+>
+> ORDER BY fecha_publicacion;
+
+Si quieres ser explícito de que ordenas de forma ascendente puedes hacer de la siguiente manera
+
+> SELECT *
+>
+> FROM posts
+>
+> ORDER BY fecha_publicacion ASC;
+
+El orden inverso, es decir, de manera descendente
+
+> SELECT *
+>
+> FROM posts
+>
+> ORDER BY fecha_publicacion DESC;
+
+Orden los datos ascendentemente por el titulo (alfabéticamente)
+
+> SELECT *
+>
+> FROM posts
+>
+> ORDER BY titulo ASC;
+
+Orden los datos descendentemente por el titulo (alfabéticamente)
+
+> SELECT *
+>
+> FROM posts
+>
+> ORDER BY titulo DESC;
+
+Orden los datos por el id de usuario ascendentemente
+
+> SELECT *
+>
+> FROM posts
+>
+> ORDER BY usuario_id ASC;
+
+Orden los datos por el id de usuario descendentemente
+
+> SELECT *
+>
+> FROM posts
+>
+> ORDER BY usuario_id DESC;
+
+Orden los datos por la fecha de publicación ascendentemente y filtra los primeros cinco
+
+> SELECT *
+>
+> FROM posts
+>
+> ORDER BY fecha_publicacion ASC
+>
+> LIMIT 5;
+
+**HAVING**
+
+Una sentencia no muy utilizada, pero que es sumamente útil para casos muy particulares. HAVING tiene una similitud muy grande con WHERE, sin embargo, el uso de ellos depende del orden. Cuando se quiere seleccionar tuplas agrupadas únicamente se puede hacer con HAVING.
+
+**Ejemplo**
+
+Seleccionamos la fecha de publicación según el mes y el estatus, y contamos todo, agrupamos por mes y estatus, ordenamos por el mes y filtramos para ver los que tengan más de un post publicado
+
+> SELECT MONTHNAME(fecha_publicacion) AS post_month, estatus, COUNT(*) AS post_quantity
+>
+> FROM posts
+>
+> GROUP BY estatus, post_month
+>
+> HAVING post_quantity > 1
+>
+> ORDER BY post_month;
+
 ### Clase 37 *El interminable agujero de conejo (Nested queries)*
+
+Los nested queries significan que dentro de un query podemos hacer otro query. Esto sirve para hacer join de tablas, estando una en memoria. También teniendo un query como condicional del otro.
+
+Este proceso puede ser tan profundo como quieras, teniendo infinitos queries anidados. Se le conoce como un producto cartesiano ya que se multiplican todos los registros de una tabla con todos los del nuevo query. Esto provoca que el query sea difícil de procesar por lo pesado que puede resultar.
+
+**¿Cuándo ocupar los nested queries?**
+
+Generalmente se utiliza cuando se tiene un problema que no se puede solucionar simplemente consultando tu tabla, por si necesitas hacer agregación u otro tipo de operación que viene de otra tabla o de tu misma tabla.
+
+**¿Cuándo NO ocupar los nested queries?**
+
+Es bueno saber cuándo utilizarlo, pero es mejor saber cuándo NO utilizarlo. Debido a que es pesado y resulta difícil de usar, se debe evitar que el uso de lo nested queries en base de datos que van a estar creciendo constantemente.
+
+**Ejemplo 1**
+
+> SELECT new_table_projection.date, COUNT(*) AS posts_count
+>
+FROM (
+>
+	SELECT DATE(MIN(fecha_publicacion)) AS date, YEAR(fecha_publicacion) AS post_year
+>
+	FR> OM posts
+>
+	GROUP BY post_year
+>
+) AS new_table_projection
+>
+GROUP BY new_table_projection.date
+>
+ORDER BY new_table_projection.date;
+
+**Ejemplo 2**
+
+> SELECT *
+>
+FROM posts
+>
+WHERE fecha_publicacion = (
+>
+	SELECT MAX(fecha_publicacion)
+>
+	FROM posts
+>
+);
+
 ### Clase 38 *¿Cómo convertir una pregunta en un query SQL?*
+
+Ahora tienes todo lo necesario para trabajar y operar con las bases de datos relacional en el día a día; ya entiendes los conceptos, entiendes el valor de hacer un buen query, ya tienes todas las herramientas para armar ese query y en esta clase aprenderás a transformar una pregunta en un query, esto no siempre es una transformación directa y muchas de las sutilezas que involucra, porque es casi un arte, la vas adquirieron conforme te preguntes nuevas cosas o tu empresa requiera nuevas cosas.
+
+El equivalente de pregunta a query:
+
+- SELECT: Lo que quieres mostrar en cuando a que datos. Que información nos conviene presentar al usuario.
+- FROM: De dónde voy a tomar los datos. ¿La saco de una tabla? ¿Necesito dos tablas? ¿Tres tablas? ¿A través de que campos voy hacer los join?
+- WHERE: Los filtros de los datos que quieres mostrar. Ya tengo mi información, pero no la quiero toda así que vamos sacar, discriminar que no me sirve y solo vamos a dejar los datos relevantes.
+- GROUP BY: Los rubros por los que me interesa agrupar la información. ¿Por qué grupos me interesa seleccionar la información?
+- ORDER BY: El orden en que quiero presentar mi información. ¿Lo ordeno por fecha? ¿Deseo saber cuál se escribió primero? ¿Quiero el top 10? ¿Sácame los 5 mejores?
+- HAVING: Los filtros que quiero que mis datos agrupados tengas. Usado cuando ya has filtrado todos los datos y deseamos sacar un documento que tenga más sentido.
+
 ### Clase 39 *Preguntándole a la base de datos*
+
+Veremos cómo transformamos algunas dudas o preguntas que pueden surgir del proyecto PlatziBlog en queries.
+
+**¿Cuántas etiquetas tiene un blogpost?**
+
+Para resolverlo debemos plantearnos primero que deseamos sacar con el SELECT (el título del posts y la cantidad de etiquetas), con FROM vemos que tablas necesitamos para sacar la información (unión entre la tabla posts y la tabla etiqueta mediante la tabla transitiva posts_etiquetas) y finalmente vemos la forma en que deseamos agrupar (agrupamos por el id, porque deseamos saber la cantidad de etiquetas tiene un posts).
+
+> SELECT posts.titulo, COUNT(*) num_etiqueta
+>
+FROM posts
+>
+	INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
+>
+	INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+>
+GROUP BY posts.id;
+
+Si deseamos ir un paso más allá, también podemos filtrar y ver cuáles son los posts que tiene más etiquetas.
+
+> SELECT posts.titulo, COUNT(*) num_etiqueta
+>
+FROM posts
+>
+	INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
+>
+	INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+>
+GROUP BY posts.id
+>
+ORDER BY num_etiquetas DESC;
+
+**¿Cuáles son las etiquetas que pertenecen al posts?**
+
+Para responder a esta pregunta es necesario usar GROUP_CONCAT que toma el resultado del query y lo pone como campo separado por comas.
+
+> SELECT posts.titulo, GROUP_CONCAT(nombre_etiqueta)
+>
+FROM posts
+>
+	INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
+>
+	INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+>
+GROUP BY posts.id;
+
+**¿Cuáles son las etiquetas que no tengan posts relacionados?**
+
+> SELECT *
+>
+FROM etiquetas
+>
+	LEFT JOIN posts_etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+>
+WHERE posts_etiquetas.etiqueta_id IS NULL;
+
 ### Clase 40 *Consultando PlatziBlog*
+
+Consulta: Traer las categorías ordenados por las que tienen más posts hasta la menor
+
+> SELECT c.nombre_categoria, COUNT(*) AS cant_posts
+>
+FROM categorias AS c
+>
+	INNER JOIN posts AS p ON c.id = p.categoria_id
+>
+GROUP BY c.id
+>
+ORDER BY cant_posts DESC;
+
+¿Cuál es la categoría con más posts?
+
+> SELECT c.nombre_categoria, COUNT(*) AS cant_posts
+>
+FROM categorias AS c
+>
+	INNER JOIN posts AS p ON c.id = p.categoria_id
+>
+GROUP BY c.id
+>
+ORDER BY cant_posts DESC
+>
+LIMIT 1;
+
+¿Cuáles son las cantidad de posts creado por usuario?
+
+> SELECT u.nickname, COUNT(*) AS cant_posts
+>
+FROM usuarios AS u
+>
+	INNER JOIN posts AS p ON u.id = p.usuario_id
+>
+GROUP BY u.id
+>
+ORDER BY cant_posts DESC;
+
+Saber cuáles son las categorías que los usuarios escriben
+
+> SELECT u.nickname, COUNT(*) AS cant_posts, GROUP_CONCAT(nombre_categoria)
+>
+FROM usuarios AS u
+>
+	INNER JOIN posts AS p ON u.id = p.usuario_id
+>
+	INNER JOIN categorias AS c ON c.id = p.categoria_id
+>
+GROUP BY u.id
+>
+ORDER BY cant_posts DESC;
+
+Sacamos los usuarios que no escriben ningún posts
+
+> SELECT *
+>
+FROM usuarios
+>
+	LEFT JOIN posts ON usuarios.id = posts.usuario_id
+>
+WHERE posts.usuario_id IS NULL;
