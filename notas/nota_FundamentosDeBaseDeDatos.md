@@ -726,7 +726,112 @@ Para eliminar una tabla de una base de datos tenemos la sentencia DROP TABLE. Co
 ![src/fundamentoBD_79.png](src/fundamentoBD_79.png)
 
 ### Clase 23 *DML*
+
+DML (Data Manipulation Language o Lenguaje de Manipulación de Datos) es un lenguaje proporcionado por los sistemas gestores de bases de datos que permite a los usuarios de la misma llevar a cabo las tareas de consulta o modificación de los datos contenidos en las bases de datos.
+
+El lenguaje de manipulación de datos más popular hoy en día es SQL, usado para recuperar y manipular datos en una base de datos relacional. Otros ejemplos de DML son los usados por bases de datos IMS/DL1, CODASYL u otras.
+
+**Sentencias**
+
+- INSERT
+
+	La estructura básica para la sentencia insert utilizando el estándar de SQL es la siguiente:
+
+  ![src/fundamentoBD_80.png](src/fundamentoBD_80.png)
+
+	Tomando como ejemplo si se tuviera una tabla llamada 'people' con los campos de tipo cadena de caracteres (last_name, first_name, address, city), donde se inserta los valores que se encuentran en después de la palabra values, los valores se insertan en el orden correspondiente a como se hizo la llamada de los campos, los valores van separados por comas, las comillas dobles indican que se está insertando datos de tipo cadena de caracteres.
+
+- UPDATE
+
+	Para modificar uno o varios datos de uno o varios registros utilizamos "update" (actualizar).
+
+	Por ejemplo, en nuestra tabla people, queremos cambiar los valores del campo last_name por el valor 'Chávez' y del campo city por 'Mérida', utilizamos la condición "where" para que afecte solamente a ese registro:
+
+  ![src/fundamentoBD_81.png](src/fundamentoBD_81.png)
+
+	Utilizamos "update" junto al nombre de la tabla y "set" junto con el campo a modificar y su nuevo valor.
+
+	Otro ejemplo sería:
+
+  ![src/fundamentoBD_82.png](src/fundamentoBD_82.png)
+
+	Esto nos dice que de nuestra tabla people todos los valores del campo first_name serán cambiados a 'Juan', con la condición "where" señalamos a que afecte únicamente a aquellos de la ciudad de Mérida.
+
+	Para que el cambio afecte a todos son registros sin discriminar usamos:
+
+  ![src/fundamentoBD_83.png](src/fundamentoBD_83.png)
+
+- DELETE
+
+	Para eliminar los registros de una tabla usamos el comando "delete":
+
+  ![src/fundamentoBD_84.png](src/fundamentoBD_84.png)
+
+	La ejecución del comando indicado en la línea anterior borra TODOS los registros de la tabla.
+
+	Si queremos eliminar uno o varios registros debemos indicar cuál o cuáles, para ello utilizamos el comando "delete" junto con la cláusula "where" con la cual establecemos la condición que deben cumplir los registros a borrar. Por ejemplo, queremos eliminar aquel registro cuyo id sea 1:
+
+  ![src/fundamentoBD_85.png](src/fundamentoBD_85.png)
+
+	Si solicitamos el borrado de un registro que no existe, es decir, ningún registro cumple con la condición especificada, no se borrarán registros, pues no encontró registros con ese dato.
+
+- SELECT
+
+	La sintaxis básica de select es la siguiente utilizando el estándar de SQL:
+
+  ![src/fundamentoBD_86.png](src/fundamentoBD_86.png)
+
+	Donde en SELECT ponemos primero las columnas que deseamos consultar y en FROM ponemos el nombre de la tabla que contiene el campo mencionado.
+
+	Si deseamos traer TODOS los registros de una tabla usamos:
+
+  ***SELECT * FROM people;***
+
+
 ### Clase 24 *¿Qué tan standard es SQL?*
+
+La utilidad más grande de SQL fue unificar la forma en la que pensamos y hacemos preguntas a un repositorio de datos. Ahora que nacen nuevas bases de datos igualmente siguen tomando elementos de SQL.
+
 ### Clase 25 *Creando Platziblog: tablas independientes*
+
+![src/fundamentoBD_87.png](src/fundamentoBD_87.png)
+
+1. Creamos la base de datos platziblog
+2. Creamos las tablas sin llave foránea:
+  - Categoría
+  - Etiquetas
+  - Usuarios
+
+**Recomendaciones:**
+
+- Una buena práctica es comenzar creando las entidades que no tienen una llave foránea.
+- Generalmente en los nombres de bases de datos se evita usar eñes o acentos para evitar problemas en los manejadores de las bases de datos.
+
+
 ### Clase 26 *Creando Platziblog: tablas dependientes*
+
+![src/fundamentoBD_87.png](src/fundamentoBD_87.png)
+
+Ya que creamos nuevas tablas independientes es hora de crear el resto de base de datos, pero debemos tener cuidado en el orden en que son creadas.
+
+1. Creamos la tabla posts
+2. La unimos a las tablas categorías y usuarios.
+
+**Nota:**
+- El comando "cascade" sirve para que cada que se haga un update en la tabla principal, se refleje también en la tabla en la que estamos creando la relación.
+
+
 ### Clase 27 *Creando Platziblog: tablas transitivas*
+
+![src/fundamentoBD_87.png](src/fundamentoBD_87.png)
+
+1. Creamos la tabla comentarios.
+2. Unimos la tabla comentarios con usuario.
+3. Creamos la tabla transitiva posts_etiquetas.
+4. Unimos la tabla posts_etiquetas con las tablas posts y etiquetas.
+5. Hacemos el Reverse Engineer.
+
+**Nota:**
+
+- Las tablas transitivas sirven como puente para unir dos tablas. No tienen contenido semántico.
+- Reverse Engineer nos reproduce el esquema del cual nos basamos para crear nuestras tablas. Es útil cuando llegas a un nuevo trabajo y quieres entender cuál fue la mentalidad que tuvieron al momento de crear las bases de datos.
