@@ -783,9 +783,7 @@ El lenguaje de manipulación de datos más popular hoy en día es SQL, usado pa
 
 	Donde en SELECT ponemos primero las columnas que deseamos consultar y en FROM ponemos el nombre de la tabla que contiene el campo mencionado.
 
-	Si deseamos traer TODOS los registros de una tabla usamos:
-
-  ***SELECT * FROM people;***
+	Si deseamos traer TODOS los registros de una tabla usamos: ***SELECT * FROM people;***
 
 
 ### Clase 24 *¿Qué tan standard es SQL?*
@@ -835,3 +833,197 @@ Ya que creamos nuevas tablas independientes es hora de crear el resto de base de
 
 - Las tablas transitivas sirven como puente para unir dos tablas. No tienen contenido semántico.
 - Reverse Engineer nos reproduce el esquema del cual nos basamos para crear nuestras tablas. Es útil cuando llegas a un nuevo trabajo y quieres entender cuál fue la mentalidad que tuvieron al momento de crear las bases de datos.
+
+## Modulo 5. Consultas a una base de datos
+### Clase 28 *¿Por qué las consultas son tan importantes?*
+
+Las consultas o queries a una base de datos son una parte fundamental ya que esto podría salvar un negocio o empresa.
+
+Alrededor de las consultas a las bases de datos se han creado varias especialidades como ETL o transformación de datos, business intelligence e incluso machine learning.
+
+### Clase 29 *Estructura básica de un Query*
+
+Los queries son la forma en la que estructuramos las preguntas que le vamos hacer a la base de datos. Nos ayuda a transformar una pregunta o duda en sintaxis para sea entendida por la base de datos.
+
+La estructura de un querie puede ser tan simple como quieran y tan compleja como se pueda, hay muchas formas de hacer queries pero vamos a empezar por la estructura más básica y poco a poco subiremos la escala, viendo todas las opciones que tenemos para hacer preguntas cada vez más complejas.
+
+**Estructura Básica**
+
+El query tiene básicamente 2 partes, la sentencia SELECT y la sentencia FROM, en la mayoría de las veces también puedes encontrar una tercera sentencia, WHERE.
+
+![src/fundamentoBD_88.png](src/fundamentoBD_88.png)
+
+- SELECT: Campos que deseamos obtener.
+- FROM: Tabla de donde se extraerá los datos.
+- WHERE: Condición que debe cumplir los registros de la tabla seleccionada.
+- GROUP BY: Agrupa los campos que tienen el mismo valor.
+- ORDER BY: Especifica la orden en que se desea recuperar los datos.
+- HAVIGN: Condición que debe cumplir un grupo de registros.
+
+**Ejemplos**
+
+Selecciona todos los campos de la tabla posts:
+
+> SELECT *
+FROM posts;
+
+Selecciona todos los campos de la tabla posts, pero únicamente si fueron publicados después del 2024:
+
+> SELECT *
+FROM posts
+WHERE fecha_publicacion > '2024';
+
+Selecciona todos los campos de la tabla posts, pero únicamente si fueron publicados antes del 2024:
+
+> SELECT *
+FROM posts
+WHERE fecha_publicacion < '2024';
+
+
+**NOTA:** El asterisco (*) funciona para seleccionar todos los campos de una tabla.
+
+### Clase 30 *SELECT*
+
+La primera parte de la estructura que necesitamos tener para generar preguntas a una base de datos es la sentencia SELECT.
+
+SELECT se utiliza para recuperar información de la base de datos, y puede proyectar las columnas seleccionadas, es decir, realizar un filtro sobre la tabla o tablas originales y recuperar solamente datos de las columnas filtradas. También puede seleccionar, es decir, filtrar los registros según varios criterios, o realizar uniones, que recopilan datos de diferentes tablas a través de una relación entre ellas.
+
+**Ejemplo**
+
+Trae todos los campos de la tabla posts:
+
+> SELECT *
+FROM posts;
+
+Trae los campos seleccionados (título, fecha de publicación y estatus) de la tabla posts:
+
+> SELECT titulo, fecha_publicacion, estatus
+FROM posts;
+
+Para renombrar la cabecera de una columna usamos AS:
+
+> SELECT titulo AS encabezado, fecha_publicacion AS publicado_en, estatus AS estado
+FROM posts;
+
+Si deseamos saber el número de filas, es decir, la cantidad de registros que tiene una tabla usamos COUNT:
+
+> SELECT COUNT (*)
+FROM posts;
+
+También puede ser renombrado por la función AS:
+
+> SELECT COUNT (*) AS numero_posts
+FROM posts;
+
+### Clase 31 *FROM*
+
+La segunda parte de la estructura que necesitamos tener para generar preguntas a una base de datos es la sentencia FROM.
+
+**¿Por qué es importante?**
+
+Es una de las sentencias más interesantes y poderosas a la hora de hacer un query, y esto tiene que ver con que FROM indica de donde debemos que traer los datos.
+
+Hasta ahora hemos seleccionado todos los campos de una tabla X, pero la parte interesante viene cuando deseamos unir tablas. En normalización vimos como la información de nuestra base de datos fueron distribuidos en diferentes tablas, pero a la hora de presentar un informe o traer datos que sea valiosa nosotros requerimos volver a juntar nuevamente esa información, como compañero de FROM tenemos a la sentencia JOIN que quiere decir justamente unir o juntar tablas.
+
+**Diagramas de Venn**
+
+Son círculos que se tocan en algún punto para ver dónde está la intersección de conjuntos. Ayudan mucho para poder formular la sentencia JOIN de la manera adecuada dependiendo del query que se quiere hacer.
+
+**Ejemplo:** Supongamos que deseamos extraer ciertos datos de la tabla A y la tabla B, para eso usamos JOIN
+
+![src/fundamentoBD_89.png](src/fundamentoBD_89.png)
+
+- LEFT JOIN: Si deseamos saber los datos de la tabla A, sin importar que estén o no en la tabla B.
+- LEFT JOIN (con condición): Deseamos saber los datos que están únicamente en la tabla A (excluimos a la tabla B).
+- RIGHT JOIN: Si deseamos saber los datos de la tabla B, sin importar que estén o no en la tabla A.
+- RIGHT JOIN (con condición): Deseamos saber los datos que están únicamente en la tabla B (excluimos a la tabla A).
+
+![src/fundamentoBD_90.png](src/fundamentoBD_90.png)
+
+- INNER JOIN: Si deseamos saber únicamente los datos que estén en ambas tablas.
+- OUTER JOIN: Si deseamos traer los datos de ambas tablas, sin excepciones.
+- OUTER JOIN (con condición): Si deseamos traer los datos que estén en la tabla A o en la tabla B, pero que no compartan relación la una con la otra.
+
+### Clase 32 *Utilizando la sentencia FROM*
+1. **LEFT JOIN**
+
+	Trae todos los usuarios sin importar que tengan o no posts asociados, y después vemos los posts asociados a ese usuario.
+
+	> SELECT *
+	FROM usuarios
+		LEFT JOIN posts ON usuarios.id = posts.usuario_id;
+
+2. **LEFT JOIN (con condición)**
+
+	Trae todos los usuarios que NO tengan posts asociados.
+
+  > SELECT *
+	FROM usuarios
+		LEFT JOIN posts ON usuarios.id = posts.usuario_id
+	WHERE posts.usuario_id IS NULL;
+
+3. **RIGHT JOIN**
+
+	Trae todos los posts sin importar que tengan o no usuarios asociados, y después vemos los usuarios asociados a ese posts.
+
+  > SELECT *
+	FROM usuarios
+		RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+
+4. **RIGHT JOIN (con condición)**
+
+  Trae los posts que no están relacionados a un usuario.
+
+  > SELECT *
+	FROM usuarios
+		RIGHT JOIN posts ON usuarios.id = posts.usuario_id
+	WHERE posts.usuario_id IS NULL;
+
+5. **INNER JOIN**
+
+  Trae los que tienen dependencia de ambos lados, o sea que deja de lados los usuarios que no tengan posts asociados o los posts que quedaron huérfanos.
+
+  > SELECT *
+	FROM usuarios
+		INNER JOIN posts ON usuarios.id = posts.usuario_id;
+
+6. **OTHER JOIN**
+
+  Usada para traer el total de la unión de ambas tablas, tanto con los usuarios sin posts y con los posts sin usuarios. Pero existe un dato interesante y es que tiene dos formas, la primera no está incorporada por todos los manejadores de base de datos y es:
+
+  > SELECT *
+	FROM usuarios
+		FULL OTER JOIN posts ON usuarios.id = posts.usuario_id;
+
+	La segunda es la otra forma estándar que si funciona en todos los manejadores de base de datos.
+
+	> SELECT *
+	FROM usuarios
+		LEFT JOIN posts ON usuarios.id = posts.usuario_id
+	UNION
+	SELECT *
+	FROM usuarios
+		RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+
+7. **OTHER JOIN (con condición)**
+
+  Trae todos los usuarios sin posts asociados y los posts huérfanos que no tienen usuarios relacionados.
+
+  > SELECT *
+	FROM usuarios
+		LEFT JOIN posts ON usuarios.id = posts.usuario_id
+	WHERE posts.usuario_id IS NULL
+	UNION
+	SELECT *
+	FROM usuarios
+		RIGHT JOIN posts ON usuarios.id = posts.usuario_id
+	WHERE posts.usuario_id IS NULL;
+
+### Clase 33 *WHERE*
+### Clase 34 *Utilizando la sentencia WHERE nulo y no nulo*
+### Clase 35 *GROUP BY*
+### Clase 36 *ORDER BY y HAVING*
+### Clase 37 *El interminable agujero de conejo (Nested queries)*
+### Clase 38 *¿Cómo convertir una pregunta en un query SQL?*
+### Clase 39 *Preguntándole a la base de datos*
+### Clase 40 *Consultando PlatziBlog*
