@@ -2086,15 +2086,15 @@ Un proceso de ETL suele comprender 3 fases.  Cada vez es más habitual extraer 
 
   **Fase 2: Transformación**
 
-		La fase de transformación de ETL es donde se produce la operación más crítica. El resultado más destacado de la transformación pasa por aplicar las normas necesarias del negocio a los datos para cumplir con los requisitos de notificación.  La transformación modifica los datos en bruto para que presenten los formatos de notificación correctos.  Si los datos no se limpian, resulta más complicado aplicar las normas comerciales de notificación.
+  La fase de transformación de ETL es donde se produce la operación más crítica. El resultado más destacado de la transformación pasa por aplicar las normas necesarias del negocio a los datos para cumplir con los requisitos de notificación.  La transformación modifica los datos en bruto para que presenten los formatos de notificación correctos.  Si los datos no se limpian, resulta más complicado aplicar las normas comerciales de notificación.
 
-		La transformación se efectúa mediante una serie de normas y reglamentos que se esbozan. Estas fases de transformación reducen lo que hasta ahora era un montaña de material sin utilidad posible a un producto de datos que puede presentar en la última fase del ETL: la fase de carga.
+	La transformación se efectúa mediante una serie de normas y reglamentos que se esbozan. Estas fases de transformación reducen lo que hasta ahora era un montaña de material sin utilidad posible a un producto de datos que puede presentar en la última fase del ETL: la fase de carga.
 
   **Fase 3: Carga**
 
-		La última fase de un proceso de ETL típico es la carga de esos datos extraídos y transformados a su nuevo destino. Existen dos vías habituales de cargar los datos a un almacén de datos: la carga completa y la carga incremental.
+  La última fase de un proceso de ETL típico es la carga de esos datos extraídos y transformados a su nuevo destino. Existen dos vías habituales de cargar los datos a un almacén de datos: la carga completa y la carga incremental.
 
-		La ejecución de un ciclo aislado de ETL o de una serie de ellos programada puede realizarse ejecutando una tarea desde una línea de comando o una interfaz GUI. Sin embargo, debemos estar atentos a varios frentes. Gestionar las excepciones, por ejemplo, puede resultar un proceso muy farragoso.  Muchas veces las extracciones de datos pueden fallar cuando hay incidencias en uno o varios sistemas. La existencia de datos erróneos en un sistema puede afectar a datos que estén siendo extraídos de otro, por lo que el seguimiento y la gestión de errores son actividades fundamentales.
+	La ejecución de un ciclo aislado de ETL o de una serie de ellos programada puede realizarse ejecutando una tarea desde una línea de comando o una interfaz GUI. Sin embargo, debemos estar atentos a varios frentes. Gestionar las excepciones, por ejemplo, puede resultar un proceso muy farragoso.  Muchas veces las extracciones de datos pueden fallar cuando hay incidencias en uno o varios sistemas. La existencia de datos erróneos en un sistema puede afectar a datos que estén siendo extraídos de otro, por lo que el seguimiento y la gestión de errores son actividades fundamentales.
 
 **¿Para qué se utiliza un proceso de ETL?**
 
@@ -2132,7 +2132,7 @@ Algunos de los procesos empresariales en los que puede contribuir son:
 - Gestión de proyectos: A partir de la información obtenida a través de una serie de datos relativos al project management, una persona experta en dicha área puede generar un conocimiento que permita gestionar proyectos de forma más eficaz y eficiente.
 - Creación de presupuestos: A la hora de comenzar un proyecto, la elaboración de presupuestos puede beneficiarse de la Business Intelligence siempre y cuando exista una persona experta en el tema.
 - Asignación de recursos: Si una persona experta dispone de información acerca de los recursos disponibles para un proyecto, podrá crear un conocimiento que permita asignarlos de la forma más eficaz posible.
- 
+
 **Herramientas y soluciones de Business Intelligence**
 
 En cuanto a las herramientas y metodologías de Business Intelligence, tienen algunas características comunes:
@@ -2181,6 +2181,7 @@ A pesar de que se trata de una categoría muy amplia -podría discutirse por eje
 3. Herramientas de reporting: Una vez recopilada y tratada toda esa información preexistente o nueva, ayudan a las empresas a visualizarla de manera gráfica e intuitiva. También sirven para integrarla en cuadros de mando que midan si se cumplen o no determinados KPIs, o pueden incluso generar todo tipo de informes de reporting.
 
 **Cómo se interpretan los datos extraídos mediante el Business Intelligence**
+
 La información puede presentarse de diversas formas gracias a los softwares de visualización de datos que incluye el sistema de Business Intelligence. Así pues, es fácil crear comparaciones de resultados, gráficos de barras, reportes, estadísticas, métricas o infografías de modo que lo volcado por el sistema sea fácil de entender.
 
 Mediante los indicadores analizados se puede mejorar el rendimiento de una empresa. Así, modificar lo que no está funcionando bien para optimizar los esfuerzos y alcanzar mejores resultados.
