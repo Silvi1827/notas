@@ -2088,13 +2088,13 @@ Un proceso de ETL suele comprender 3 fases.  Cada vez es más habitual extraer 
 
   La fase de transformación de ETL es donde se produce la operación más crítica. El resultado más destacado de la transformación pasa por aplicar las normas necesarias del negocio a los datos para cumplir con los requisitos de notificación.  La transformación modifica los datos en bruto para que presenten los formatos de notificación correctos.  Si los datos no se limpian, resulta más complicado aplicar las normas comerciales de notificación.
 
-	La transformación se efectúa mediante una serie de normas y reglamentos que se esbozan. Estas fases de transformación reducen lo que hasta ahora era un montaña de material sin utilidad posible a un producto de datos que puede presentar en la última fase del ETL: la fase de carga.
+  La transformación se efectúa mediante una serie de normas y reglamentos que se esbozan. Estas fases de transformación reducen lo que hasta ahora era un montaña de material sin utilidad posible a un producto de datos que puede presentar en la última fase del ETL: la fase de carga.
 
   **Fase 3: Carga**
 
   La última fase de un proceso de ETL típico es la carga de esos datos extraídos y transformados a su nuevo destino. Existen dos vías habituales de cargar los datos a un almacén de datos: la carga completa y la carga incremental.
 
-	La ejecución de un ciclo aislado de ETL o de una serie de ellos programada puede realizarse ejecutando una tarea desde una línea de comando o una interfaz GUI. Sin embargo, debemos estar atentos a varios frentes. Gestionar las excepciones, por ejemplo, puede resultar un proceso muy farragoso.  Muchas veces las extracciones de datos pueden fallar cuando hay incidencias en uno o varios sistemas. La existencia de datos erróneos en un sistema puede afectar a datos que estén siendo extraídos de otro, por lo que el seguimiento y la gestión de errores son actividades fundamentales.
+  La ejecución de un ciclo aislado de ETL o de una serie de ellos programada puede realizarse ejecutando una tarea desde una línea de comando o una interfaz GUI. Sin embargo, debemos estar atentos a varios frentes. Gestionar las excepciones, por ejemplo, puede resultar un proceso muy farragoso.  Muchas veces las extracciones de datos pueden fallar cuando hay incidencias en uno o varios sistemas. La existencia de datos erróneos en un sistema puede afectar a datos que estén siendo extraídos de otro, por lo que el seguimiento y la gestión de errores son actividades fundamentales.
 
 **¿Para qué se utiliza un proceso de ETL?**
 
