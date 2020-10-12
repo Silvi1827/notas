@@ -1,7 +1,6 @@
 # Fundamentos de Base de Datos
 ## Modulo 1. Bienvenida conceptos básicos y contexto histórico de las Bases de Datos
-### Clase 1 *Expert Session: resuelve tus dudas sobre las bases de datos*
-### Clase 2 *Bienvenida conceptos básicos y contexto histórico de las Bases de Datos*
+### Clase 1 *Bienvenida conceptos básicos y contexto histórico de las Bases de Datos*
 
 Tu profesor será Israel Vázquez, senior web developer en San Francisco, seminarista de bases de datos y entusiasta data engineering.
 
@@ -31,7 +30,7 @@ Las bases de datos entran cuando hacemos la transición a medios digitales y, ah
 - **Administrado:** son servicios que ofrecen las nubes modernas, tú la utilizas pero no debes instalarla u ocuparte del mantenimiento o actualizaciones.
 
 ## Modulo 2. Introducción a las bases de datos relacionales
-### Clase 3 *Historia de las RDB*
+### Clase 2 *Historia de las RDB*
 
 Las bases de datos surgen de la necesidad de conservar la información más allá de lo que existe en la memoria RAM.
 
@@ -66,7 +65,7 @@ Es un conjunto de operaciones que describen paso a paso cómo computar una respu
 
 Describe el aspecto de la manipulación de datos. Estas operaciones se usan como una representación intermedia de una consulta a una base de datos y, debido a sus propiedades algebraicas, sirven para obtener una versión más optimizada y eficiente de dicha consulta.
 
-### Clase 4 *Entidades y atributos*
+### Clase 3 *Entidades y atributos*
 
 Principales elementos que vamos a manejar en el día a día a la hora de construir base de datos:
 
@@ -123,7 +122,7 @@ Existen dos tipos de dependencias en las entidades débiles:
 
   ![src/fundamentoBD_6.png](src/fundamentoBD_6.png)
 
-### Clase 5 *Entidades de Platzi Blog*
+### Clase 4 *Entidades de Platzi Blog*
 
 Empezamos nuestro proyecto, el cual será un manejador de Blogpost.
 
@@ -167,7 +166,7 @@ Debemos pensar en los atributos. De hecho es inseparable pensar en los atributos
 	- Id
 	- Nombre de la categoría
 
-### Clase 6 *Relaciones*
+### Clase 5 *Relaciones*
 
 Las relaciones es la manera en que empezamos a ligar las diferentes entidades u objetos. Se representan mediante rombos y, por convención, se definen a través de verbos.
 
@@ -207,7 +206,7 @@ La cardinalidad es una restricción en una relación que especifica el número d
 
   Esta relación la estaremos viendo en la siguiente clase.
 
-### Clase 7 *Múltiples muchos*
+### Clase 6 *Múltiples muchos*
 
 Una relación de muchos a muchos se produce cuando varios registros de una tabla se asocian a varios registros de otra tabla. Por ejemplo, existe una relación de muchos a muchos entre los alumnos y las clases: los alumnos pueden pertenecer a varias clases y las clases pueden pertenecer a varios alumnos.
 
@@ -219,13 +218,13 @@ Siguiendo con el ejemplo de alumnos y clases, se incluye una tabla Alumnos, que 
 
 ![src/fundamentoBD_12.png](src/fundamentoBD_12.png)
 
-### Clase 8 *Diagrama ER*
+### Clase 7 *Diagrama ER*
 
 Un diagrama entidad-relación es una herramienta para el modelado de datos que permite representar las entidades relevantes de un sistema de información así como sus interrelaciones y propiedades. Este modelo representa a la realidad a través de un esquema gráfico que ilustra cómo las entidades se relacionan entre sí dentro de un sistema. Son un reflejo de la estructura gramatical y emplean entidades como sustantivos y relaciones como verbos.
 
 ![src/fundamentoBD_13.png](src/fundamentoBD_13.png)
 
-### Clase 9 *Diagrama Físico: tipos de datos y constraints*
+### Clase 8 *Diagrama Físico: tipos de datos y constraints*
 
 Antes de llevar todo a la práctica debemos convertir nuestro diagrama a uno físico.
 
@@ -263,7 +262,7 @@ El diagrama físico representa como se construirá el modelo en la base de datos
 - **DEFAULT:** Coloca un valor por defecto cuando no hay un valor especificado.
 - **INDEX:** Se crea por columna para permitir búsquedas más rápidas.
 
-### Clase 10 *Diagrama Físico: normalización*
+### Clase 9 *Diagrama Físico: normalización*
 
 El proceso de normalización de una base de datos relacional consiste en aplicar una serie de reglas para evitar a futuro realizar queries, o consultas innecesariamente complejas. En otras palabras están enfocadas en eliminar redundancias e inconsistencias de dependencia en el diseño de las tablas.
 
@@ -303,7 +302,7 @@ Cumple 1FN, 2FN, 3FN, y los campos multivaluados se identifican por una clave ú
 
 ![src/fundamentoBD_19.png](src/fundamentoBD_19.png)
 
-### Clase 11 *Diagrama Físico: normalizando Platziblog*
+### Clase 10 *Diagrama Físico: normalizando Platziblog*
 
 Ya que aprendimos a normalizar es hora de que lo apliquemos en nuestro proyecto de Platziblog.
 
@@ -325,7 +324,7 @@ Ya que aprendimos a normalizar es hora de que lo apliquemos en nuestro proyecto 
 
   ![src/fundamentoBD_23.png](src/fundamentoBD_23.png)
 
-### Clase 12 *Formas normales en DB relacionales*
+### Clase 11 *Formas normales en DB relacionales*
 
 La normalización en las bases de datos relacionales es uno de esos temas que, por un lado es sumamente importante y por el otro suena algo esotérico. Vamos a tratar de entender las formas normales (FN) de una manera simple para que puedas aplicarlas en tus proyectos profesionales.
 
@@ -403,13 +402,13 @@ De esta manera, aunque parezca que la información se multiplicó, en realidad l
 Algunos autores precisan una 5FN que hace referencia a que después de realizar esta normalización a través de uniones (JOIN) permita regresar a la data original de la cual partió.
 
 ## Modulo 3. RDBMS (MySQL) o cómo hacer lo anterior de manera práctica
-### Clase 13 *RDB ¿Qué?*
+### Clase 12 *RDB ¿Qué?*
 
 RDBMS (Relational Database Management System o Sistema Gestor de Bases de Datos Relacionales) se trata de software capaz de producir, manipular y gestionar bases de datos de tipo relacional. Es un software que se antepone a los datos de una base de datos, de modo que cualquier acceso a los datos pasa por una petición al RDBMS que éste gestiona a fin de realizar la operación más conveniente sobre esa petición. Los sistemas de base de datos relacionales son aquellos que almacenan y administran de manera lógica los datos en forma de tablas.
 
 Hay diferentes tipos de manejadores de base de datos relaciones como Oracle, MySQL o PostgreSQL. Todos son muy parecidas, porque internamente manejan el mismo lenguaje, pero cada una tiene un estilo diferente.
 
-### Clase 14 *Instalación local de un RDBMS (Windows)*
+### Clase 13 *Instalación local de un RDBMS (Windows)*
 
 Hay dos maneras de acceder a manejadores de bases de datos:
 - Instalar en máquina local un administrador de bases relacional (recomendada si comienzas a experimentar y hacer ejercicios).
@@ -488,7 +487,7 @@ Y nos sale una ventana que nos dice que toda la instalación (tanto servidor com
 
 ![src/fundamentoBD_45.png](src/fundamentoBD_45.png)
 
-### Clase 15 *Instalación local de un RDBMS (Mac)*
+### Clase 14 *Instalación local de un RDBMS (Mac)*
 
 **Instalación de un RDBMS en Mac OS**
 
@@ -564,7 +563,7 @@ Una vez finalizada, cerramos todo y ya está. Tenemos instalado MySQL en Mac.
 
 **Nota: Es importante guardar la información que te da al instalar el servidor (usuario y contraseña) porque lo ocupamos más adelante cuando deseamos configurar Workbench para conectarse a nuestro servidor de base de datos.**
 
-### Clase 16 *Instalación local de un RDBMS (Ubuntu)*
+### Clase 15 *Instalación local de un RDBMS (Ubuntu)*
 
 Visita la dirección de descarga de la versión de comunidad de MySql: https://dev.mysql.com/downloads/mysql/5.7.html#downloads
 
@@ -612,7 +611,7 @@ A continuación deberá aparecer una ventana con el prompt de mysql donde ya pue
 
 ***- Muchas veces las distribuciones ya cuentan con paquetes en su repositorio, en ese caso también puedes ejecutar el comando: sudo apt-get install mysql-server***
 
-### Clase 17 *Clientes gráficos*
+### Clase 16 *Clientes gráficos*
 
 Como parte de las herramientas que nos da MySQL como desarrolladores tenemos algunas herramientas bastante interesantes, como MySQL Workbench.
 
@@ -642,14 +641,14 @@ Editor visual
 
 ![src/fundamentoBD_74.png](src/fundamentoBD_74.png)
 
-### Clase 18 *Servicios administrados*
+### Clase 17 *Servicios administrados*
 
 Hoy en día muchas empresas ya no tienen instalados en sus servidores los RDBMS sino que los contratan a otras personas. Estos servicios administrados cloud te permiten concentrarte en la base de datos y no en su administración y actualización.
 
 Los servicios vienen en una variedad de sabores, algunos muy famosos como AWS de Amazon, Google Cloud Platform de Google o Azure de Microsoft.
 
 ## Modulo 4. SQL hasta en la sopa
-### Clase 19 *Historia de SQL*
+### Clase 18 *Historia de SQL*
 
 SQL (Structured Query Language o Lenguaje de Consultas Estructurada) es un lenguaje de programación diseñado para almacenar, manipular y recuperar datos almacenados en bases de datos relacionales.
 
@@ -679,7 +678,7 @@ Algunas de las base de datos NoSQL más reconocidas son:
 - Neo4j
 - BigQuery
 
-### Clase 20 *DDL create*
+### Clase 19 *DDL create*
 
 SQL tiene dos grandes sub lenguajes, el que veremos ahora será:
 
@@ -699,7 +698,7 @@ Un comando CREATE común es la de CREATE TABLE (Crear Tabla)
 
 ![src/fundamentoBD_76.png](src/fundamentoBD_76.png)
 
-### Clase 21 *CREATE VIEW y DDL ALTER*
+### Clase 20 *CREATE VIEW y DDL ALTER*
 
 **CREATE VIEW**
 
@@ -715,7 +714,7 @@ La sentencia ALTER TABLE es usada para agregar, borrar o modificar columnas en u
 
 ![src/fundamentoBD_78.png](src/fundamentoBD_78.png)
 
-### Clase 22 *DDL drop*
+### Clase 21 *DDL drop*
 
 **DROP**
 
@@ -725,7 +724,7 @@ Para eliminar una tabla de una base de datos tenemos la sentencia DROP TABLE. Co
 
 ![src/fundamentoBD_79.png](src/fundamentoBD_79.png)
 
-### Clase 23 *DML*
+### Clase 22 *DML*
 
 DML (Data Manipulation Language o Lenguaje de Manipulación de Datos) es un lenguaje proporcionado por los sistemas gestores de bases de datos que permite a los usuarios de la misma llevar a cabo las tareas de consulta o modificación de los datos contenidos en las bases de datos.
 
@@ -786,11 +785,11 @@ El lenguaje de manipulación de datos más popular hoy en día es SQL, usado pa
 	Si deseamos traer TODOS los registros de una tabla usamos: ***SELECT * FROM people;***
 
 
-### Clase 24 *¿Qué tan standard es SQL?*
+### Clase 23 *¿Qué tan standard es SQL?*
 
 La utilidad más grande de SQL fue unificar la forma en la que pensamos y hacemos preguntas a un repositorio de datos. Ahora que nacen nuevas bases de datos igualmente siguen tomando elementos de SQL.
 
-### Clase 25 *Creando Platziblog: tablas independientes*
+### Clase 24 *Creando Platziblog: tablas independientes*
 
 ![src/fundamentoBD_87.png](src/fundamentoBD_87.png)
 
@@ -806,7 +805,7 @@ La utilidad más grande de SQL fue unificar la forma en la que pensamos y hacemo
 - Generalmente en los nombres de bases de datos se evita usar eñes o acentos para evitar problemas en los manejadores de las bases de datos.
 
 
-### Clase 26 *Creando Platziblog: tablas dependientes*
+### Clase 25 *Creando Platziblog: tablas dependientes*
 
 ![src/fundamentoBD_87.png](src/fundamentoBD_87.png)
 
@@ -819,7 +818,7 @@ Ya que creamos nuevas tablas independientes es hora de crear el resto de base de
 - El comando "cascade" sirve para que cada que se haga un update en la tabla principal, se refleje también en la tabla en la que estamos creando la relación.
 
 
-### Clase 27 *Creando Platziblog: tablas transitivas*
+### Clase 26 *Creando Platziblog: tablas transitivas*
 
 ![src/fundamentoBD_87.png](src/fundamentoBD_87.png)
 
@@ -835,13 +834,13 @@ Ya que creamos nuevas tablas independientes es hora de crear el resto de base de
 - Reverse Engineer nos reproduce el esquema del cual nos basamos para crear nuestras tablas. Es útil cuando llegas a un nuevo trabajo y quieres entender cuál fue la mentalidad que tuvieron al momento de crear las bases de datos.
 
 ## Modulo 5. Consultas a una base de datos
-### Clase 28 *¿Por qué las consultas son tan importantes?*
+### Clase 27 *¿Por qué las consultas son tan importantes?*
 
 Las consultas o queries a una base de datos son una parte fundamental ya que esto podría salvar un negocio o empresa.
 
 Alrededor de las consultas a las bases de datos se han creado varias especialidades como ETL o transformación de datos, business intelligence e incluso machine learning.
 
-### Clase 29 *Estructura básica de un Query*
+### Clase 28 *Estructura básica de un Query*
 
 Los queries son la forma en la que estructuramos las preguntas que le vamos hacer a la base de datos. Nos ayuda a transformar una pregunta o duda en sintaxis para sea entendida por la base de datos.
 
@@ -887,7 +886,7 @@ Selecciona todos los campos de la tabla posts, pero únicamente si fueron public
 
 **NOTA:** El asterisco (*) funciona para seleccionar todos los campos de una tabla.
 
-### Clase 30 *SELECT*
+### Clase 29 *SELECT*
 
 La primera parte de la estructura que necesitamos tener para generar preguntas a una base de datos es la sentencia SELECT.
 
@@ -925,7 +924,7 @@ También puede ser renombrado por la función AS:
 >
 > FROM posts;
 
-### Clase 31 *FROM*
+### Clase 30 *FROM*
 
 La segunda parte de la estructura que necesitamos tener para generar preguntas a una base de datos es la sentencia FROM.
 
@@ -954,7 +953,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
 - OUTER JOIN: Si deseamos traer los datos de ambas tablas, sin excepciones.
 - OUTER JOIN (con condición): Si deseamos traer los datos que estén en la tabla A o en la tabla B, pero que no compartan relación la una con la otra.
 
-### Clase 32 *Utilizando la sentencia FROM*
+### Clase 31 *Utilizando la sentencia FROM*
 1. **LEFT JOIN**
 
 	Trae todos los usuarios sin importar que tengan o no posts asociados, y después vemos los posts asociados a ese usuario.
@@ -1057,7 +1056,7 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
   >
   > WHERE posts.usuario_id IS NULL;
 
-### Clase 33 *WHERE*
+### Clase 32 *WHERE*
 
 WHERE es la sentencia que nos ayuda a filtrar tuplas o registros, permite filtrar los datos que queremos mostrar dependiendo de las características que elegimos. Empezaremos a filtrar los datos que nos interesa, no en sentido de que campo mostramos pero si de acuerdo a criterios como una fecha o cantidad.
 
@@ -1213,7 +1212,7 @@ Trae todos los posts cuyo mes de fecha de publicación sea igual a Abril (04)
 - La propiedad BETWEEN nos sirve para arrojar registros que estén en el medio de dos.
 
 
-### Clase 34 *Utilizando la sentencia WHERE nulo y no nulo*
+### Clase 33 *Utilizando la sentencia WHERE nulo y no nulo*
 
 Ya sabemos que WHERE es utilizados para filtrar los row o tuplas, pero nos ha faltado ver dos tipos de datos muy particulares y es que no son exactamente un tipo de dato, aunque pueden ser considerado de ese modo, y esos son: nulo y no nulo.
 
@@ -1300,7 +1299,7 @@ Traemos los posts que tengan usuarios asociados, estatus activos, cuyo id sea me
 >
 > AND YEAR(fecha_publicacion) = '2025';
 
-### Clase 35 *GROUP BY*
+### Clase 34 *GROUP BY*
 
 GROUP BY tiene que ver con agrupación y es la que indica a la base de datos que criterios debe tener en cuenta para agrupar.
 
@@ -1338,7 +1337,7 @@ Agrupamos los post por el estatus y después por el mes de publicación, sin imp
 >
 > GROUP BY estatus, post_month;
 
-### Clase 36 *ORDER BY y HAVING*
+### Clase 35 *ORDER BY y HAVING*
 
 ORDER BY tiene que ver con el ordenamiento de los datos, justamente ORDER BY quiere decir 'ordena por', y se encarga de decirle a la base de datos que ordene los datos por los criterios que quieres usar.
 
@@ -1428,7 +1427,7 @@ Seleccionamos la fecha de publicación según el mes y el estatus, y contamos to
 >
 > ORDER BY post_month;
 
-### Clase 37 *El interminable agujero de conejo (Nested queries)*
+### Clase 36 *El interminable agujero de conejo (Nested queries)*
 
 Los nested queries significan que dentro de un query podemos hacer otro query. Esto sirve para hacer join de tablas, estando una en memoria. También teniendo un query como condicional del otro.
 
@@ -1474,7 +1473,7 @@ Es bueno saber cuándo utilizarlo, pero es mejor saber cuándo NO utilizarlo. De
 >
 > );
 
-### Clase 38 *¿Cómo convertir una pregunta en un query SQL?*
+### Clase 37 *¿Cómo convertir una pregunta en un query SQL?*
 
 Ahora tienes todo lo necesario para trabajar y operar con las bases de datos relacional en el día a día; ya entiendes los conceptos, entiendes el valor de hacer un buen query, ya tienes todas las herramientas para armar ese query y en esta clase aprenderás a transformar una pregunta en un query, esto no siempre es una transformación directa y muchas de las sutilezas que involucra, porque es casi un arte, la vas adquirieron conforme te preguntes nuevas cosas o tu empresa requiera nuevas cosas.
 
@@ -1487,7 +1486,7 @@ El equivalente de pregunta a query:
 - ORDER BY: El orden en que quiero presentar mi información. ¿Lo ordeno por fecha? ¿Deseo saber cuál se escribió primero? ¿Quiero el top 10? ¿Sácame los 5 mejores?
 - HAVING: Los filtros que quiero que mis datos agrupados tengas. Usado cuando ya has filtrado todos los datos y deseamos sacar un documento que tenga más sentido.
 
-### Clase 39 *Preguntándole a la base de datos*
+### Clase 38 *Preguntándole a la base de datos*
 
 Veremos cómo transformamos algunas dudas o preguntas que pueden surgir del proyecto PlatziBlog en queries.
 
@@ -1543,7 +1542,7 @@ Para responder a esta pregunta es necesario usar GROUP_CONCAT que toma el result
 >
 > WHERE posts_etiquetas.etiqueta_id IS NULL;
 
-### Clase 40 *Consultando PlatziBlog*
+### Clase 39 *Consultando PlatziBlog*
 
 Consulta: Traer las categorías ordenados por las que tienen más posts hasta la menor
 
@@ -1608,7 +1607,7 @@ Sacamos los usuarios que no escriben ningún posts
 > WHERE posts.usuario_id IS NULL;
 
 ## Modulo 6. Introducción a la bases de datos NO relacionales
-### Clase 41 *¿Qué son y cuáles son los tipos de bases de datos no relacionales?*
+### Clase 40 *¿Qué son y cuáles son los tipos de bases de datos no relacionales?*
 
 Como hemos dicho antes, las bases de datos relacionales marcaron un antes y un después en la industria de la tecnología y en la historia de cómo manejamos los datos, ahora las bases de datos no relacionales es muy curioso porque no es un solo tipo de base de datos, veremos en que se dividen y como son muy diferentes unas de otras, pero es muy interesante saber que todas estas bases de datos, por muy diferentes que sean, se engloban en una categoría solamente distinta a las relacionales.
 
@@ -1645,7 +1644,7 @@ Como hemos dicho antes, las bases de datos relacionales marcaron un antes y un d
 
   Ejemplo Elasticsearch, BigQuery.
 
-### Clase 42 *Servicios administrados y jerarquía de datos*
+### Clase 41 *Servicios administrados y jerarquía de datos*
 
 En esta clase vamos a explorar más a detalle y en profundidad lo que tiene que ver con las base de datos no relacionales, especialmente estas que están basadas en documentos, y una de las grandes competidores que es Firestore que es un servidor administrado.
 
@@ -1660,7 +1659,7 @@ Recordemos que con un servicio administrado, tú como operador de datos no neces
 3. Documento: Es la unidad de almacenamiento es el documento. Un documento es un registro liviano que contiene campos con valores asignados. Cada documento se identifica con un nombre.
 
 ## Modulo 7. Manejo de modelos de datos en bases de datos no relacionales
-### Clase 43 *Top level collection con Firebase*
+### Clase 42 *Top level collection con Firebase*
 
 Una de las grandes ventajas que ofrece la base de datos no relacionales es justamente que el modelo de datos es un poco más cercano al mundo real, el modelo de la base de datos relacional era más intrincado y complejo.
 
@@ -1718,7 +1717,7 @@ Al guardar el documento se crear la colección 'people', podemos ver la ID que f
 
 ***NOTA: Aunque parezca un mundo diferente con colecciones y documentos, en el fondo sigue siendo el mismo concepto que hemos estado viendo a lo largo del curso, aunque cambiamos nuestras entidades por colecciones y las tuplas por documentos pero en el fondo sigue siendo igual.***
 
-### Clase 44 *Creando y borrando documentos en Firestore*
+### Clase 43 *Creando y borrando documentos en Firestore*
 
 Anteriormente vimos que en SQL teníamos tipos de datos para texto como char, varchar, tipos de datos numéricos como integer o numeric, teníamos tipos de datos boolean, algunos tipos de datos para fechas como time. Entonces, hoy vamos a ver cómo vamos a guardar ese mismo tipo de datos, esa misma información en Firestore.
 
@@ -1782,7 +1781,7 @@ Si deseas eliminar una colección completa, solo es necesario repetir los pasos:
 
 ![src/fundamentoBD_110.png](src/fundamentoBD_110.png)
 
-### Clase 45 *Colecciones vs subcolecciones*
+### Clase 44 *Colecciones vs subcolecciones*
 
 Las colecciones tienen la particular de que existen de manera intrínseca a la base de datos, existen en el primer nivel. Hay un segundo tipo de colecciones llamado subcolecciones, en cambio no viven en el inicio de la base de datos.
 
@@ -1832,7 +1831,7 @@ Esto queda a conciencia del desarrollador y por eso es bueno desarrollar un buen
 
 La regla que se ocupa generalmente es que si se ocupa los elementos de la colección de manera independiente, vale tenerla como una entidad separa y tenerla como una Top Level Collection, si en cambio solo tenemos colecciones como las que solo la vamos a usar dentro de la noticia entonces es cuando vale la pena guardarla como una subcolección.
 
-### Clase 46 *Recreando Platziblog*
+### Clase 45 *Recreando Platziblog*
 
 Ya tenemos todos los elementos que ocupa Firestore para hacer su estructura de datos; jerarquía, base de datos, colecciones, documentos y subcolecciones. Ahora el reto que nos vamos a enfrentar es convertir o traer los datos de Platziblog.
 
@@ -1841,7 +1840,7 @@ Ya tenemos todos los elementos que ocupa Firestore para hacer su estructura de d
 1. Ver el diagrama físico con las entidades.
 2. Debemos definir y analizar para ver cual entidad se convertirá en una Top Level Collection y cual es una subcolección. Tomemos como ejemplo la entidad usuario, puede ser tanto una Top Level Collection como una subcolección, depende de la planeación y como se desea consultar. Si es importante consultar una lista de usuarios a cada rato, entonces se convertirá en una Top Level Collection; en cambio, no tenemos ese problema y no necesitamos hacer una lista de usuarios entonces si vale la pena convertirlo en una subcolección.
 
-### Clase 47 *Construyendo Platziblog en Firestore*
+### Clase 46 *Construyendo Platziblog en Firestore*
 
 Ya tenemos definidas y revisamos las entidades de nuestro diagrama físico, ahora vamos a pasar directamente a la consola de Firebase que nos permitirá crear los mismos datos pero esta vez basados en documentos.
 
@@ -1851,11 +1850,11 @@ Ya tenemos definidas y revisamos las entidades de nuestro diagrama físico, ahor
 
   ![src/fundamentoBD_118.png](src/fundamentoBD_118.png)
 
-	Con su primer documento:
+  Con su primer documento:
 
   ![src/fundamentoBD_119.png](src/fundamentoBD_119.png)
 
-	Añadimos dos documentos más en la colección categoría: Ciencia y Espectáculos.
+  Añadimos dos documentos más en la colección categoría: Ciencia y Espectáculos.
 
   - Usuario:
 
@@ -1903,7 +1902,7 @@ Ya tenemos definidas y revisamos las entidades de nuestro diagrama físico, ahor
 
   ![src/fundamentoBD_129.png](src/fundamentoBD_129.png)
 
-### Clase 48 *Proyecto final: transformando tu proyecto en una db no relacional*
+### Clase 47 *Proyecto final: transformando tu proyecto en una db no relacional*
 
 Dentro de las bases de datos relacionales tenemos diferentes niveles de datos. En primer lugar tenemos las Bases de Datos o Esquemas como repositorios donde vivirán los datos que nos interesa guardar. Dentro del esquema existen las Tablas que provienen del concepto de entidades; y a su vez dentro de las tablas tenemos las tuplas o renglones.
 
@@ -1936,3 +1935,364 @@ En el caso de Platziblog por ejemplo si tienes una vista de un blog post individ
 Esta regla se refiere a que la excepción a la regla 1 es cuando tenemos un caso en que la “entidad” que tiene necesidad de vivir y modificarse constantemente de manera independiente a las otras colecciones. Por ejemplo en Platziblog podemos en el ejemplo anterior hacer una excepción a autores porque nos conviene tenerlas como top level collection en el sentido que se añadan, borren, cambien o listen los usuarios sin depender del blog post.
 
 Experimenta aplicando estas dos reglas a un proyecto que ya conozcas en una base de datos relacional y trata de convertirla en un proyecto de Firestore y comentanos los retos a los que te enfrentaste.
+
+## Modulo 8. Bases de datos en la vida real
+### Clase 48 *Bases de datos en la vida real*
+
+En el mundo real no existe una base de datos que sea unitalla (one size fits all) aunque por mucho tiempo esa base de datos fue justamente las relacionales.
+
+Las bases de datos relacionales de inicio nos ayudaban a tratar de solucionar todo; guardar datos, extraer datos, hacer joins, queries y tratar de hacer sentido toda la información, guardar el repositorio de datos por mucho tiempo, tener el esquema de los datos de nuestra aplicación, tener el archivo histórico, sacar reportes, todo eso trataba de hacerlo las bases de datos relacionales y lo hizo bien por un tiempo, tanto que Facebook tardo muchos años en separarse (justamente utilizaba MySQL) porque realmente servían para su propósito.
+
+**¿Cuándo se rompe este paradigma?**
+
+Se rompe en el momento en que las aplicaciones que utilizamos se masifican y esto da origen a lo que se conoce como Big Data.
+
+Las bases de datos relaciones, aunque podían hacer de todo, cuando les metías una cantidad de datos del orden de millones o billones empezaban a tener muchos problemas; problemas de consistencia al traer la unión de una tabla con otra, hacer reportes se volvía algo que podía tomar horas y al final fallar, empezaban a tener problemas procesando los datos. De esto surge que ahora tenemos diversos tipos de base de datos dependiendo de la necesidad que quieras atacar.
+
+Si trabajamos con datos históricos que no vas a estar consultando en todo momento, con gran cantidad de datos y deseas hacer queries complejos puedes usar BigQuery optimizado para datawherehouse. En cambio, si deseamos trabajar en datos actuales de manera simple podemos utilizar MongoDB o Firestore. También es posible hacer uso de dos bases de datos para un mismo proyecto, como por ejemplo: guardar datos con MongoDB, convertirlos y pasarlo a BigQuery para hacer un análisis de ellos.
+
+### Clase 49 *Big Data*
+
+Big Data es un concepto que nace de la necesidad de manejar grandes cantidades datos. Ya hemos oído que el reto que empezó a cerrarle las puertas a las bases de datos relacionales fue el manejo de volúmenes muy grandes de datos. Dicho de otro modo, el big data está formado por conjuntos de datos de mayor tamaño y más complejos, especialmente procedentes de nuevas fuentes de datos. Estos conjuntos de datos son tan voluminosos que el software de procesamiento de datos convencional sencillamente no puede gestionarlos. Sin embargo, estos volúmenes masivos de datos pueden utilizarse para abordar problemas empresariales que antes no hubiera sido posible solucionar.
+
+**Historia de Big Data**
+
+Si bien el concepto "big data" en sí mismo es relativamente nuevo, los orígenes de los grandes conjuntos de datos se remontan a las décadas de 1960 y 1970, cuando el mundo de los datos acababa de empezar con los primeros centros de datos y el desarrollo de las bases de datos relacionales.
+
+Alrededor de 2005, la gente empezó a darse cuenta de la cantidad de datos que generaban los usuarios a través de Facebook, YouTube y otros servicios online. Ese mismo año, se desarrollaría Hadoop, un marco de código abierto creado específicamente para almacenar y analizar grandes conjuntos de datos. En esta época, también empezaría a adquirir popularidad NoSQL.
+
+El desarrollo de marcos de código abierto tales como Hadoop (y, más recientemente, Spark) sería esencial para el crecimiento del big data, pues estos hacían que el big data resultase más fácil de usar y más barato de almacenar. En los años transcurridos desde entonces, el volumen de big data se ha disparado. Los usuarios continúan generando enormes cantidades de datos, pero ahora los humanos no son los únicos que lo hacen.
+
+Con la llegada del Internet de las cosas (IoT), hay un mayor número de objetos y dispositivos conectados a Internet que generan datos sobre patrones de uso de los clientes y el rendimiento de los productos. El surgimiento del aprendizaje automático ha producido aún más datos.
+
+Aunque el big data ha llegado lejos, su utilidad no ha hecho más que empezar. El Cloud Computing ha ampliado aún más las posibilidades del big data. La nube ofrece una escalabilidad realmente elástica, donde los desarrolladores pueden simplemente agilizar clústeres ad hoc para probar un subconjunto de datos.
+
+**Concepto erróneo**
+
+Hoy en día a Big Data se le confunde en muchos lugares con lo que es Business Intelligence, esto se debe a que mucha gente confunde la idea de la analítica y en la que te entregan datos digeridos de volumen de datos grandes resumidos en estadística o analítica.
+
+**Las tres V**
+
+- Volumen: La cantidad de datos importa. Con big data, tendrá que procesar grandes volúmenes de datos no estructurados de baja densidad. Puede tratarse de datos de valor desconocido, como feeds de datos de Twitter, flujos de clics de una página web o aplicación para móviles, o equipo con sensores. Para algunas organizaciones, esto puede suponer decenas de terabytes de datos. Para otras, incluso cientos de petabytes.
+- Velocidad: La velocidad es el ritmo al que se reciben los datos y (posiblemente) al que se aplica alguna acción. La mayor velocidad de los datos normalmente se transmite directamente a la memoria, en vez de escribirse en un disco. Algunos productos inteligentes habilitados para Internet funcionan en tiempo real o prácticamente en tiempo real y requieren una evaluación y actuación en tiempo real.
+- Variedad: La variedad hace referencia a los diversos tipos de datos disponibles. Los tipos de datos convencionales eran estructurados y podían organizarse claramente en una base de datos relacional. Con el auge del big data, los datos se presentan en nuevos tipos de datos no estructurados. Los tipos de datos no estructurados y semiestructurados, como el texto, audio o vídeo, requieren un preprocesamiento adicional para poder obtener significado y habilitar los metadatos.
+
+**Cassandra**
+
+Esta base de datos nace de la necesidad de Facebook de guardar mucha más información y sacar mucha más información por segundo. Sin embargo, también tiene algunas desventajas; las llaves están predefinidas, no hay manera de hacer ciertos joins, no podemos sacar todos los datos de una sola vez con una sola clave y otra serie de desventajas que no la hacen tan flexible, pero para el caso particular de meter y sacar datos de una manera rápida es una gran solución.
+
+### Clase 50 *Data warehouse*
+
+Un data warehouse es un almacén electrónico donde generalmente una empresa u organización mantiene una gran cantidad de información. Los datos de un data warehouse deben almacenarse de forma segura, fiable, fácil de recuperar y fácil de administrar.
+
+El concepto de data warehouse se originó en 1988 con el trabajo de los investigadores de IBM, Barry Devlin y Paul Murphy aunque el término data warehouse fue acuñado por William H. Inmon, el cual es conocido como el padre de Data Warehousing. Inmon describió un data warehouse como una colección de datos orientada a un tema específico, integrado, variante en el tiempo y no volátil, que soporta el proceso de toma de decisiones.
+
+**¿Qué es un Data Warehouse?**
+
+Un data warehouse es un repositorio unificado para todos los datos que recogen los diversos sistemas de una empresa. El repositorio puede ser físico o lógico y hace hincapié en la captura de datos de diversas fuentes sobre todo para fines analíticos y de acceso.
+
+Normalmente, un data warehouse se aloja en un servidor corporativo o cada vez más, en la nube. Los datos de diferentes aplicaciones de procesamiento de transacciones Online (OLTP) y otras fuentes se extraen selectivamente para su uso por aplicaciones analíticas y de consultas por usuarios.
+
+Data Warehouse es una arquitectura de almacenamiento de datos que permite a los ejecutivos de negocios organizar, comprender y utilizar sus datos para tomar decisiones estratégicas. Un data warehouse es una arquitectura conocida ya en muchas empresas modernas.
+
+**Pasado y presente del Data Warehouse**
+
+Históricamente, los data warehouses se habían formado utilizando datos repetitivos estructurados que eran filtrados antes de entrar en el data warehouse. Sin embargo, en los últimos años, el data warehouse ha evolucionado debido a información contextual que ahora se puede adjuntar a los datos no estructurados y que también puede ser almacenada.
+
+Aquellos primeros datos relacionales estructurados no podían ser mezclados y emparejados para temas analíticos con datos textuales no estructurados. Pero con el advenimiento de la contextualización, estos tipos de análisis ahora sí pueden hacerse de forma naturales y fácil.
+
+En el data warehouse, datos no repetitivos, como los comentarios en una encuesta, correos electrónicos y conversaciones, se tratan de forma diferente a las ocurrencias repetitivas de datos, como el flujo de clics, mediciones o el procesamiento máquina o analógico. Los datos no repetitivos son datos basados en textos que fueron generados por la palabra escrita o hablada, leída y reformateada y, lo que es más importante, ahora puede ser contextualizada. Con el fin de extraer cualquier sentido de los datos no repetitivos para su uso en el data warehouse, deben tener el contexto de los datos establecidos.
+
+En muchos casos, el contexto de los datos no repetitivos es más importante que los datos en sí. En cualquier caso, los datos no repetitivos no pueden utilizarse para la toma de decisiones hasta que se haya establecido el contexto.
+
+**Características del Data Warehouse**
+
+Bill Inmon fue uno de los pioneros en tratar el tema relativo al «Almacén de datos«, traducción literal de este término, y destacó las siguientes características del Data Warehouse:
+
+- Orientación a temas: Solo los datos necesarios para el proceso de generación del conocimiento del negocio se integran desde el entorno operacional. Los datos se organizan por temas, con el fin de facilitar su acceso y entendimiento por parte de los usuarios.
+- Variante en el tiempo: Los datos muestran el estado de la actividad del negocio en ese mismo momento. Por otra parte, la información almacenada en el Data Warehouse se utiliza para  realizar análisis de tendencias, debido a la posibilidad de realizar comparaciones entre los datos en él almacenados.
+- No volátil: La información no se puede modificar ni eliminar una vez almacenado el dato. Sólo podrá ser usada como lectura o consulta en un futuro.
+- Integrado: Los datos almacenados en el data warehouse deben estar formados por una estructura consistente. Esta información puede estructurarse en distintos niveles de detalles para adaptarse de mejor manera a las distintas necesidades de los usuarios.
+- Metadatos: El data warehouse cuenta con metadatos, es decir, datos sobre datos. Los metadatos permiten simplificar y automatizar la obtención de la información de una manera precisa, ayudando a localizar los datos que nos interesan. El empleo de metadatos es análogo al empleo de índices. 
+
+**¿Por qué es interesante hacer consultas sobre un data warehouse?**
+
+Un data warehouse es el dato histórico o dato muerto de algo que no estamos utilizando actualmente pero que ha estado en nuestra aplicación desde hace mucho tiempo. Con estos datos podemos tener un mayor conocimiento del negocio, tomar mejores decisiones y ser más efectivos.
+
+Por ejemplo, si deseamos saber la estadística de nuestro negocio durante las vacaciones de verano, los datos actuales no podrán ayudarnos. Debemos recurrir a nuestros datos antiguos para tener una mejor perspectiva del negocio durante ese periodo de tiempo y tomar decisiones en base a lo extraído.
+
+**BigTable**
+
+Es un sistema de gestión de base de datos creado por Google.
+
+BigTable almacena la información en tablas multidimensionales cuyas celdas están, en su mayoría, sin utilizar. Además, estas celdas disponen de versiones temporales de sus valores, con lo que se puede hacer un seguimiento de los valores que han tomado históricamente. Para poder manejar la información, las tablas se dividen por columnas, y son almacenadas como 'tabletas' de unos 200 Mbytes cada una. Cada máquina almacena 100 tabletas, mediante el sistema 'Google File System'. La disposición permite un sistema de balanceo de carga (si una tableta está recibiendo un montón de peticiones, la máquina puede desprenderse del resto de las tabletas o trasladar la tableta en cuestión a otra máquina) y una rápida recomposición del sistema si una máquina 'se cae'.
+
+**Data Warehouse vs Big Data vs BI: cuales son las diferencias**
+
+En este apartado compararemos brevemente los conceptos Data Warehouse (DW), Big Data y Business Intelligence (BI). Los tres conceptos están interconectados y la perspectiva es que, cada vez más, la mayoría de empresas utilicen el análisis generado por este tipo de tecnologías para tener una visión más analítica de su negocio y así poder tomar las mejores decisiones para crecer.
+
+Se trata de tres conceptos completamente diferentes que tienen en común una nueva manera de lidiar con los datos, siempre teniendo en cuenta la existencia de una gran volumen de información en varios formatos que contribuyen, de forma estructurada o no estructurada, a la toma de decisiones estratégicas. El objetivo final de cualquiera de estas tecnologías es ofrecer una ventaja competitiva a las empresas, pero la forma en que se utiliza es la que marcará la diferencia.
+
+- Big Data: Llamamos big data a un gran volumen de datos con una variedad, complejidad y velocidad de crecimiento enorme y que además tienen la característica de no ser estructurados. Eso significa que no son relacionales, estando además fuera del entorno corporativo. Es un tipo de tecnología que te permite analizar los datos en tiempo real y puede provenir de diferentes fuentes y formas, tales como mensajería instantánea, redes sociales, registros de grabaciones, imágenes, mensajes de correo electrónico, etc.
+- Data Warehouse: Por otro lado, un data warehouse almacena datos consolidados de diversas fuentes o sistemas de la empresa. Se trata de datos estructurados, que tiene como objetivo principal ser precisos y de alta calidad para de esta forma poder dar soporte a la toma de decisiones de la empresa. Se trata de conseguir tener todos los datos juntos para después poder dividirlos para hacer un análisis de determinados sectores o estrategias.
+- Business Intelligence: Un Business Intelligence (BI) es una especie de “cuello de botella” de los datos recogidos del data warehouse, que llegan de forma exacta y útil para ayudar a la toma de decisiones. Business Intelligence transforma los datos en información útil para analizar no sólo los negocios, sino también las principales estrategias corporativas.
+
+Los tres conceptos están interconectados y la perspectiva es que, cada vez más, la mayoría de empresas utilicen el análisis generado por este tipo de tecnologías para una visión más analítica de su negocio y así poder tomar las mejores decisiones para crecer.
+
+### Clase 51 *Data mining*
+
+El data mining (minería de datos), es el conjunto de técnicas y tecnologías que permiten explorar grandes bases de datos, de manera automática o semiautomática, con el objetivo de encontrar patrones repetitivos, tendencias o reglas que expliquen el comportamiento de los datos en un determinado contexto.
+
+La minería de datos surgió con la intención o el objetivo de ayudar a comprender una enorme cantidad de datos, y que estos, pudieran ser utilizados para extraer conclusiones para contribuir en la mejora y crecimiento de las empresas, sobre todo, por lo que hace a las ventas o fidelización de clientes.
+
+Su principal finalidad es explorar, mediante la utilización de distintas técnicas y tecnologías, bases de datos enormes de manera automática con el objetivo de encontrar patrones repetitivos, tendencias o reglas que expliquen el comportamiento de los datos que se han ido recopilando con el tiempo. Estos patrones pueden encontrarse utilizando estadísticas o algoritmos de búsqueda próximos a la Inteligencia Artificial y a las redes neuronales.
+
+Por tanto, los datos son el medio o la base para llegar a conclusiones y transformar estos datos en información relevante, para que las empresas puedan abarcar mejoras y soluciones que les ayuden a conseguir sus objetivos.
+
+Las personas que se dedican al análisis de datos a través de este sistema son conocidos como mineros o exploradores de datos, estos intentan descubrir patrones en medio de enormes cantidades de datos. Su intención es la de aportar información valiosa a las empresas para así, ayudarlas en la toma de decisiones futuras. Pero debemos tener claro que la elección del mejor algoritmo para una tarea analítica específica es un gran desafío, ya que podemos encontrar muchos patrones distintos, y además, dependerá de los problemas a resolver. Estos pueden ser la clasificación, regresión, segmentación, asociación y análisis de secuencias.
+
+Los mineros o exploradores de datos a la hora de llevar a cabo un análisis de Data Mining, deberán realizar cuatro pasos distintos:
+
+1. **Determinación de los objetivos:** El cliente determina qué objetivos quiere conseguir gracias al uso del Data Mining.
+2. **Procesamiento de los datos:** Selección, limpieza, enriquecimiento, reducción y transformación de la base de datos.
+3. **Determinación del modelo:** Primero se debe hacer un análisis estadístico de los datos y después visualización gráfica de los mismos.
+4. **Análisis de los resultados:** En este paso se deberán verificar si los resultados obtenidos son coherentes.
+
+**Carga de trabajo en las fases de un proyecto de datamining**
+
+En resumen, el datamining se presenta como una tecnología emergente, con varias ventajas: por un lado, resulta un buen punto de encuentro entre los investigadores y las personas de negocios; por otro, ahorra grandes cantidades de dinero a una empresa y abre nuevas oportunidades de negocios. Además, no hay duda de que trabajar con esta tecnología implica cuidar un sinnúmero de detalles debido a que el producto final involucra "toma de decisiones".
+
+En el artículo Data Mining: Torturando a los datos hasta que confiesen, Luis Carlos Molina proporciona una visión muy clarificadora sobre la minería de datos, incluyendo interesantes ejemplos de aplicaciones de la misma.
+
+### Clase 52 *ETL*
+
+ETL  es un tipo de integración de datos que hace referencia a los tres pasos (extraer, transformar, cargar) que se utilizan para mezclar datos de múltiples fuentes. Se utiliza a menudo para construir un almacén de datos. Durante este proceso, los datos se toman (extraen) de un sistema de origen, se convierten (transforman) en un formato que se puede almacenar y se almacenan (cargan) en un data warehouse u otro sistema. Extraer, cargar, transformar (ELT) es un enfoque alterno pero relacionado diseñado para canalizar el procesamiento a la base de datos para mejorar el desempeño.
+
+**Historia de ETL**
+
+ETL cobró popularidad en la década de 1970 cuando las organizaciones comenzaron a utilizar múltiples repositorios de datos, o bases de datos, para almacenar diferentes tipos de información de negocios. La necesidad de integrar datos que se diseminaran por estas bases de datos creció con rapidez. ETL se convirtió en el método estándar para extraer datos de diferentes fuentes y transformarlos antes de cargarlos en una fuente pretendida o destino.
+
+A fines de la década de 1980 y principios de la década de 1990, los data warehouses aparecieron en escena. Siendo un tipo de base de datos diferente, los data warehouses proveían acceso integrado a datos de múltiples sistemas – computadoras mainframe, minicomputadoras, computadoras personales y hojas de cálculo. Pero diferentes departamentos a menudo elegían diferentes herramientas ETL para utilizarlas con almacenes de datos distintos. Junto con fusiones y adquisiciones, muchas organizaciones terminaban con diferentes soluciones ETL que no estaban integradas.
+
+Con el tiempo, el número de formatos, fuentes y sistemas de datos ha aumentado enormemente. Extraer, transformar, cargar (ETL) es ahora sólo uno de varios métodos que utilizan las organizaciones para recopilar, importar y procesar datos. ETL y ELT son ambos partes importantes de una estrategia de integración de datos más amplia de una organización.
+
+**Cómo funcionan los procesos de ETL y ELT**
+
+Un proceso de ETL suele comprender 3 fases.  Cada vez es más habitual extraer datos de sus ubicaciones originales y luego cargarlos en un almacén de datos diana o transformarlos después de cargarlos.  Este proceso recibe el nombre de ELT, en lugar de ETL.
+
+  **Fase 1: Extracción**
+
+  El objetivo de un proceso ETL es producir datos limpios y accesibles que puedan utilizarse para analíticas u operaciones comerciales. Los datos en bruto deben extraerse de una variedad de fuentes. Los datos extraídos en ocasiones se transfieren a otro destino como por ejemplo un data lake o un almacén de datos.
+
+  **Fase 2: Transformación**
+
+		La fase de transformación de ETL es donde se produce la operación más crítica. El resultado más destacado de la transformación pasa por aplicar las normas necesarias del negocio a los datos para cumplir con los requisitos de notificación.  La transformación modifica los datos en bruto para que presenten los formatos de notificación correctos.  Si los datos no se limpian, resulta más complicado aplicar las normas comerciales de notificación.
+
+		La transformación se efectúa mediante una serie de normas y reglamentos que se esbozan. Estas fases de transformación reducen lo que hasta ahora era un montaña de material sin utilidad posible a un producto de datos que puede presentar en la última fase del ETL: la fase de carga.
+
+  **Fase 3: Carga**
+
+		La última fase de un proceso de ETL típico es la carga de esos datos extraídos y transformados a su nuevo destino. Existen dos vías habituales de cargar los datos a un almacén de datos: la carga completa y la carga incremental.
+
+		La ejecución de un ciclo aislado de ETL o de una serie de ellos programada puede realizarse ejecutando una tarea desde una línea de comando o una interfaz GUI. Sin embargo, debemos estar atentos a varios frentes. Gestionar las excepciones, por ejemplo, puede resultar un proceso muy farragoso.  Muchas veces las extracciones de datos pueden fallar cuando hay incidencias en uno o varios sistemas. La existencia de datos erróneos en un sistema puede afectar a datos que estén siendo extraídos de otro, por lo que el seguimiento y la gestión de errores son actividades fundamentales.
+
+**¿Para qué se utiliza un proceso de ETL?**
+
+En prácticamente cualquier operación empresarial los datos desempeñan un papel importante; para que tengan valor, deben trasladarse y prepararse para su uso, y para ello se necesitan procesos de ETL. Enumeramos algunos casos de aplicación de ETL:
+
+- Migración de datos de una aplicación a otra
+- Replicación de datos para copias de seguridad o análisis de redundancia
+- Procesos operativos, como la migración de datos desde un CRM a un ODS (almacén de datos operativos) para potenciar o enriquecer los datos y luego devolverlos al CRM
+- Depositar los datos en un almacén de datos para ingerir, clasificar y transformarlos en business intelligence
+- Migración de aplicaciones de infraestructuras locales a cloud, cloud híbrida o multicloud
+- Sincronización de sistemas clave
+
+**Por qué es importante ETL**
+
+Las empresas han confiado en el proceso ETL por muchos años para obtener una vista consolidada de los datos que dé lugar a mejores decisiones de negocios. Hoy día, este método de integración de datos de múltiples sistemas y fuentes sigue siendo un componente central de la caja de herramientas de integración de datos de una organización.
+
+ETL se utiliza para mover y transformar datos de diferentes fuentes y cargarlos en diferentes destinos, como Hadoop.
+
+Cuando se utiliza con un almacén de datos empresarial (datos en reposo), ETL provee profundo contenido histórico para la empresa. Proporcionando una vista consolidada, ETL facilita a los usuarios de negocios analizar y generar reportes sobre datos relevantes para sus iniciativas.
+
+ETL puede mejorar la productividad de los profesionales de los datos porque codifica y reutiliza procesos que mueven datos sin requerir habilidades técnicas para escribir código o scripts.
+
+ETL ha evolucionado para satisfacer requisitos de integración emergentes para cosas como los datos transmitidos por streaming. Las organizaciones necesitan ETL y ELT para conjuntar datos, mantener la precisión y proporcionar el recurso de auditoría que suele requerirse en los almacenes, reportes y análisis de datos. 
+
+### Clase 53 *Business intelligence*
+
+Business Intelligence es una parte muy importante de las carreras de datos ya que es el punto final del manejo de estos. El concepto se refiere a la utilización de datos en una empresa para facilitar la toma de decisiones dentro de la misma. Es un conjunto de estrategias y herramientas enfocadas al análisis de datos de una empresa mediante el análisis de datos existentes. En plena era digital, tomar decisiones bien informadas es uno de los principales factores de diferenciación de las empresas.
+
+Business Intelligence son herramientas, aplicaciones y metodologías que permiten a las organizaciones recopilar datos de sus sistemas internos (por ejemplo, sus bases de datos, una web o redes sociales) y fuentes externas (por ejemplo, la tarjeta de descuentos de un supermercado), y ponerlos disponibles para la toma de decisiones. Esos datos se preparan para el análisis y se crean informes específicos de los mismos. De ese modo se ponen los resultados a disposición de los responsables de la toma de decisiones corporativas para lograr los objetivos de la empresa.
+
+**¿Para qué sirve Business Intelligence?**
+
+Algunos de los procesos empresariales en los que puede contribuir son:
+
+- Gestión de proyectos: A partir de la información obtenida a través de una serie de datos relativos al project management, una persona experta en dicha área puede generar un conocimiento que permita gestionar proyectos de forma más eficaz y eficiente.
+- Creación de presupuestos: A la hora de comenzar un proyecto, la elaboración de presupuestos puede beneficiarse de la Business Intelligence siempre y cuando exista una persona experta en el tema.
+- Asignación de recursos: Si una persona experta dispone de información acerca de los recursos disponibles para un proyecto, podrá crear un conocimiento que permita asignarlos de la forma más eficaz posible.
+ 
+**Herramientas y soluciones de Business Intelligence**
+
+En cuanto a las herramientas y metodologías de Business Intelligence, tienen algunas características comunes:
+
+- Accesibilidad a la información: Sin información, sin datos, no hay nada que estudiar. Estas herramientas y técnicas garantizan el acceso a los datos por parte de los usuarios.
+- Apoyo en toma de decisiones: Acceso a herramientas de análisis que permitan a los usuarios seleccionar y manipular aquellos datos que les interesen.
+- Orientación al usuario final: Se busca independencia entre los conocimientos técnicos de los usuarios y su capacidad para utilizar estas herramientas.
+
+**El origen de las herramientas de Business Intelligence**
+
+Según el artículo en inglés History of Business Intelligence, la primera mención al término Business Intelligence se encuentra en una enciclopedia publicada en EEUU en 1865. titulada Cyclopaedia of Commercial and Business Anecdotes.
+
+Pero no será hasta el siglo XX, con el avance de la tecnología y, en concreto, con el desarrollo de los almacenes informáticos de datos, cuando podemos empezar a hablar del concepto de inteligencia de negocio tal y como lo entendemos ahora.
+
+Algunas fechas de los inicios de las empresas de Business Intelligence:
+
+- 1956: IBM inventa las unidades de disco duro, que llegaron a particulares y empresas de la mano de los PCs.
+- 1958: el investigador de IBM Peter Luhn, utiliza el concepto Business Intelligence.
+
+Sus investigaciones fueron cruciales para entender el potencial del análisis de datos para mejorar las decisiones de negocio. Se le considera el padre del término inteligencia de negocio.
+
+- Década de 1970: SAP y otras empresas desarrollan aplicaciones de negocio que facilitaban la introducción de datos en bases de datos.
+- Década de 1980: las bases de datos evolucionan y permiten almacenar datos de diversas fuentes en una única base de datos.
+
+Es en la década de 1990 cuando se empiezan a desarrollar y comercializar más herramientas de inteligencia de negocios, debido a que algunas empresas pioneras empezaron a darse cuenta del potencial de este tipo de soluciones y empiezan a utilizarlas. El problema de las primeras herramientas de BI era que eran poco intuitivas y difíciles de usar. Además, para generar informes y acceder a la información, un usuario sin conocimiento específico debía recurrir a los servicios del departamento de IT.
+
+A finales de los 90 y principios del año 2000 fue cuando realmente se empezó a entender el potencial del uso de los softwares de Business Intelligence. El mercado empezó a florecer y proliferaron los fabricantes y proveedores de este tipo de herramientas. Y además, estas soluciones empezaron a mejorar, haciéndose cada vez más usables para cualquier profesional, de forma que sin tener conocimientos informáticos se podía acceder, recopilar y analizar la información sin tener que recurrir al departamento de IT. El reto que surgió en ese momento fue el de combinar soluciones de Business Intelligence rápidas y fáciles de utilizar por usuarios no técnicos, y que al mismo tiempo fuesen capaces de proporcionar información segura y confiable.
+
+Ha sido en los últimos años cuando tanto el desarrollo como el uso de este tipo de herramientas ha crecido de forma exponencial en las empresas. Teniendo en cuenta que las fuentes de datos se han multiplicado (Internet y redes sociales, dispositivos IoT, información de dispositivos móviles, y un largo etc.) también ha aumentado la complejidad para extraer conocimiento relevante de toda esa información. Por eso las herramientas de Business Intelligence también se han ido haciendo más sofisticadas y son hoy en día muy potentes, capaces de analizar y procesar infinidad de datos, de infinidad de fuentes y de ayudar a las empresas a extraer conclusiones para mejorar sus cifras de negocio.
+
+**Ventajas de las herramientas de Business Intelligence**
+
+Las cuatro grandes ventajas que ofrece el uso de herramientas de inteligencia de mercado son:
+
+1. La capacidad de analizar de forma combinada información interna y externa procedente de distintas fuentes y sistemas.
+2. Una mayor profundidad de análisis y una capacidad ampliada de reporting.
+3. La posibilidad de remontar ese análisis atrás en el tiempo en base a series históricas.
+4. La capacidad de realizar proyecciones y pronósticos de futuro en base a toda esa información.
+
+**Tipos de herramientas de Business Intelligence**
+
+A pesar de que se trata de una categoría muy amplia -podría discutirse por ejemplo si los servicios de monitorización de medios se consideran una herramienta de BI- podemos distribuir las soluciones de inteligencia de negocio en tres categorías:
+
+1. Herramientas para la gestión de datos (data management tools): Permiten desde la depuración y estandarización de datos de procedencia diversa hasta su extracción, transformación y traslado a un determinado sistema.
+2. Las aplicaciones para descubrir nuevos datos (data discovery applications): Permiten recopilar y evaluar nueva información (data mining o minería de datos), y aplicar sobre esa información nueva o sobre la ya disponible técnicas de análisis predictivo para realizar proyecciones de futuro.
+3. Herramientas de reporting: Una vez recopilada y tratada toda esa información preexistente o nueva, ayudan a las empresas a visualizarla de manera gráfica e intuitiva. También sirven para integrarla en cuadros de mando que midan si se cumplen o no determinados KPIs, o pueden incluso generar todo tipo de informes de reporting.
+
+**Cómo se interpretan los datos extraídos mediante el Business Intelligence**
+La información puede presentarse de diversas formas gracias a los softwares de visualización de datos que incluye el sistema de Business Intelligence. Así pues, es fácil crear comparaciones de resultados, gráficos de barras, reportes, estadísticas, métricas o infografías de modo que lo volcado por el sistema sea fácil de entender.
+
+Mediante los indicadores analizados se puede mejorar el rendimiento de una empresa. Así, modificar lo que no está funcionando bien para optimizar los esfuerzos y alcanzar mejores resultados.
+
+### Clase 54 *Machine Learning*
+
+A la hora de describir qué es Machine Learning es inevitable la relación con el concepto de la Inteligencia Artificial. Machine Learning o Aprendizaje Automático hace referencia a la capacidad de una máquina o software para aprender mediante la adaptación de ciertos algoritmos de su programación respecto a cierta entrada de datos en su sistema.
+
+**¿Qué es Machine Learning?**
+
+Consiste en una disciplina de las ciencias informáticas, relacionada con el desarrollo de la Inteligencia Artificial, y que sirve, como ya se ha dicho, para crear sistemas que pueden aprender por sí solos. Es una tecnología que permite hacer automáticas una serie de operaciones con el fin de reducir la necesidad de que intervengan los seres humanos. Esto puede suponer una gran ventaja a la hora de controlar una ingente cantidad de información de un modo mucho más efectivo. Como estas acciones se realizan de manera autónoma por el sistema, se dice que el aprendizaje es automático, sin intervención humana
+
+Lo que se denomina aprendizaje consiste en la capacidad del sistema para identificar una gran serie de patrones complejos determinados por una gran cantidad de parámetros. Es decir, la máquina no aprende por sí misma, sino un algoritmo de su programación, que se modifica con la constante entrada de datos en la interfaz, y que puede, de ese modo, predecir escenarios futuros o tomar acciones de manera automática según ciertas condiciones. Como estas acciones se realizan de manera autónoma por el sistema, se dice que el aprendizaje es automático, sin intervención humana.
+
+**¿Cómo funciona el Machine Learning?**
+
+En la informática clásica, el único modo de conseguir que un sistema informático hiciera algo era escribiendo un algoritmo que definiera el contexto y detalles de cada acción.
+
+En cambio, los algoritmos que se usan en el desarrollo del Machine Learning realizan buena parte de estas acciones por su cuenta. Obtienen sus propios cálculos según los datos que se recopilan en el sistema, y cuantos más datos obtienen, mejores y más precisas serán las acciones resultantes.
+
+Las computadoras se programan a sí mismas, hasta cierto punto, usando dichos algoritmos. Estos funcionan como ingenieros que pueden diseñar nuevas respuestas informáticas, como respuesta a la información que se les suministra a través de su interfaz u otros medios. Todo nuevo dato se convierte en un nuevo algoritmo, y a más datos, mayor complejidad y efectividad de cálculo puede proporcionar el sistema informático. El mínimo que se recomienda es de 6 entradas de datos reales para cada respuesta nueva diseñada
+
+La clave de la capacidad de un sistema de Aprendizaje Automático se encuentra en la construcción y adaptación de los árboles de decisiones en base a los datos previamente conocidos por el sistema. Pero también influye la aplicación de fórmulas heurísticas en los nodos que forman el árbol, para el que se elabora un sistema de inferencias.
+
+El sistema de Machine Learning necesita contar con un volumen de datos de relevancia para poder suministrar respuestas realmente válidas. El mínimo que se recomienda es de 6 entradas de datos reales para cada respuesta nueva diseñada, y esto debe repetirse para cada variable que conforman el sistema de trabajo del sistema.
+
+**Tipos de machine learning**
+
+Un sistema informático de Aprendizaje Automático se sirve de experiencias y evidencias en forma de datos, con los que comprender por sí mismo patrones o comportamientos. De este modo, puede elaborar predicciones de escenarios o iniciar operaciones que son la solución para una tarea específica.
+
+A partir de un gran número de ejemplos de una situación, puede elaborarse un modelo que puede deducir y generalizar un comportamiento ya observado, y a partir de él realizar predicciones para casos totalmente nuevos. Como ejemplo, se puede considerar la predicción del valor de unas acciones en el futuro según el comportamiento de las mismas en periodos previos.
+
+Existen tres tipos principales de Aprendizaje Automático:
+
+1. Aprendizaje supervisado: Este tipo de aprendizaje se basa en lo que se conoce como información de entrenamiento. Se entrena al sistema proporcionándole cierta cantidad de datos definiéndolos al detalle con etiquetas. Otro método de desarrollo del Aprendizaje Automático consiste en predecir un valor continuo, utilizando parámetros distintos que, combinados en la introducción de nuevos datos, permite predecir un resultado determinado. Este método se conoce como regresión.
+2. Aprendizaje no supervisado: En este tipo de aprendizaje no se usan valores verdaderos o etiquetas. Estos sistemas tienen como finalidad la comprensión y abstracción de patrones de información de manera directa. Este es un modelo de problema que se conoce como clustering. Es un método de entrenamiento más parecido al modo en que los humanos procesan la información.
+3. Aprendizaje por refuerzo: En la técnica de aprendizaje mediante refuerzo, los sistemas aprenden a partir de la experiencia. Es una técnica basada en la prueba y error, y en el uso de funciones de premio que optimizan el comportamiento del sistema. Es una de las maneras más interesantes de aprendizaje para sistemas de Inteligencia Artificial, pues no requiere de la introducción de gran cantidad de información.
+
+**Ámbitos de aplicación del Machine Learning**
+
+Muchas actividades actualmente ya se están aprovechando del Machine Learning. Sectores como el de las compras online, el online advertising o los filtros anti-spam llevan tiempo sacando partido a estas tecnologías.
+
+El campo de aplicación práctica depende de la imaginación y de los datos que estén disponibles en la empresa. Estos son algunos ejemplos más:
+
+- Detectar fraude en transacciones.
+- Predecir de fallos en equipos tecnológicos.
+- Prever qué empleados serán más rentables el año que viene (el sector de los Recursos Humanos está apostando seriamente por el Machine Learning).
+- Seleccionar clientes potenciales basándose en comportamientos en las redes sociales, interacciones en la web…
+- Predecir el tráfico urbano.
+- Saber cuál es el mejor momento para publicar tuits, actualizaciones de Facebook o enviar las newsletter.
+- Hacer prediagnósticos médicos basados en síntomas del paciente.
+- Cambiar el comportamiento de una app móvil para adaptarse a las costumbres y necesidades de cada usuario.
+- Detectar intrusiones en una red de comunicaciones de datos.
+- Decidir cuál es la mejor hora para llamar a un cliente.
+
+**¿Por qué es importante?**
+
+El uso de algoritmos marcará la competitividad y la profesionalidad durante los próximos años.
+
+La tecnología del aprendizaje automático está sirviendo para recopilar y modelar el conocimiento, con el fin de proporcionar información más específica y elaborar mejores herramientas de trabajo para las personas. El uso de algoritmos marcará la competitividad y la profesionalidad durante los próximos años.
+
+Por ello, no son pocas las empresas que utilizan el machine learning en sus servicios y productos, aprovechando los beneficios que puede reportar su aplicación, tanto para los procesos de sus organizaciones como para mejorar la experiencia de trabajo y entretenimiento de sus clientes.
+
+### Clase 55 *Data Science*
+
+Desde hace ya unos años, no dejamos de escuchar alusiones a data science, big data, machine learning, inteligencia artificial… Y la verdad es que, entre tanto palabro, no es difícil perderse en este océano de términos, especialmente cuando hay un desconocimiento generalizado que hace que se usen indistintamente.
+
+**¿Qué es Data Science?**
+
+Data science, como su nombre indica, es la ciencia que estudia los datos. Se encarga de extraer información de grandes cantidades de datos. Data Science combina la estadística, las matemáticas y la informática para interpretar datos. El objetivo es tomar decisiones.
+
+Estos datos se obtienen a través de diferentes canales. Los teléfonos móviles, las redes sociales, los e-commerce o las encuestas son solo algunas de las fuentes utilizadas. Nuestros gustos, rutinas o movimientos generan datos de gran valor para las empresas que quieren conocer a sus clientes al detalle. Sin embargo, la interpretación de los datos no estructurados no aporta valor a las compañías. De ahí surge la necesidad de contar con científicos de datos en sus equipos. Gracias al Data Science las empresas pueden anticiparse a la hora de tomar decisiones.
+
+**¿De dónde proviene el término Data Science?**
+
+El término 'Data Science' ha estado presente durante las últimas tres décadas. Pero no fue hasta la década de los 70 cuando el término se comenzó a usar para definir los métodos de procesamiento de datos. Finalmente, 2001 fue el año en el que la ciencia de datos se introdujo como una disciplina independiente.
+
+**Conceptos clave en Data Science**
+
+Existen una serie de conceptos básicos que forman de la ciencia de los datos y que a continuación te explicamos brevemente en qué consisten.
+
+- Data Mining: Se define como un proceso utilizado para recolección y almacenamiento de datos útiles. Para ello es necesario analizar patrones de datos en grandes lotes usando uno o más softwares. Gracias a este proceso, las empresas pueden obtener más información sobre sus clientes y desarrollar estrategias más efectivas. Esto les ayuda a tomar mejores decisiones basadas en información. Para segmentar los datos y evaluarlos, el Data Mining utiliza algoritmos matemáticos.
+- Deep Learning: El objetivo del Deep Learning es resolver problemas a través de redes neuronales que imitan el comportamiento del cerebro. Estas redes de neuronas artificiales se estructuran en capas. En la primera capa es donde se capta la información. Estos datos pasan a la siguiente capa, encargada de realizar cálculos. Y por último, la información recopilada se proyecta en la última de las capas. Algunas de las aplicaciones más usadas en Deep Learning son el procesamiento de textos y el reconocimiento de imagen, objetos o voz.
+- Machine Learning: En primer lugar es necesario recalcar que Machine Learning no es sinónimo de inteligencia artificial. Sino que se trata de un concepto enmarcado dentro de ella. Fundamentalmente, Machine Learning se encarga de educar a la tecnología para que corrija errores por si sola. Se basa en la predicción y clasificación de datos para obtener información útil aplicable a diferentes áreas.
+- Inteligencia artificial (IA): Se basa en algoritmos utilizados para la creación de máquinas que imitan el comportamiento humano. Hoy en día, la inteligencia emocional se aplica en el reconocimiento facial o en la creación de chatbots, entre otros.
+
+**Principales beneficios del Data Science**
+
+El principal beneficio del Data Science en una organización es la facilidad para tomar decisiones. Las organizaciones con Data Scientists pueden incluir evidencia cuantificable basada en datos en sus decisiones comerciales. Estas decisiones basadas en datos pueden, en última instancia, llevar a una mayor rentabilidad y una mejor eficiencia operativa, rendimiento comercial y flujos de trabajo. En las organizaciones orientadas al cliente, el Data Science ayuda a identificar y refinar las audiencias objetivo.
+
+Por otra parte, el Data Science también puede ayudar al reclutamiento. El procesamiento interno de aplicaciones y las pruebas de aptitud basadas en datos y los juegos pueden ayudar al equipo de recursos humanos de una organización a realizar selecciones más rápidas y precisas durante el proceso de contratación.
+
+Los beneficios específicos del Data Science varían según el objetivo de la empresa y la industria. Los departamentos de ventas y marketing, por ejemplo, pueden extraer datos de clientes para mejorar las tasas de conversión o crear campañas de marketing uno a uno. Las instituciones bancarias están extrayendo datos para mejorar la detección de fraudes. Las empresas de envío utilizan el Data Science para encontrar las mejores rutas, horarios y mejores modos de transporte.
+
+Sin embargo, el Data Science todavía es un campo emergente dentro de la empresa. La identificación y el análisis de grandes cantidades de datos no estructurados pueden resultar demasiado complejos, costosos y lentos para las empresas.
+
+**¿Cómo se llama a los profesionales que trabajan en estas disciplinas?**
+
+Normalmente es el data engineer o ingeniero de datos el que se encarga de configurar y diseñar las bases de datos de forma óptima para el tipo de consultas que se le van a hacer. De hecho, el ingeniero de datos está detrás de toda la parte informática de un proyecto de data science; desde la recogida y almacenamiento de datos, programación del código que maneja los datos, hasta realizar las visualizaciones pertinentes.
+
+Un perfil parecido, y que se suele confundir con el ingeniero de datos, es el científico de datos. Más conocido como data scientist, la profesión más sexy del momento.
+
+Tanto un ingeniero de datos como un científico de datos tienen que tener conocimientos de informática y estadística y no es raro que de vez en cuando uno haga el trabajo del otro. Un data scientist tiene un perfil más matemático y menos informático que el data engineer y su trabajo es diseñar los algoritmos a utilizar. También, suele tener más conocimiento sobre de qué manera presentar los datos al público para que sean útiles y fácilmente interpretables.
+
+Para que se entienda mejor: se podría decir que un data scientist y un data engineer son comparables a un médico y un enfermero: el data scientist sería el médico y el data engineer el enfermero. O, si se prefiere, se pueden comparar con un arquitecto y un ingeniero de edificación, donde el data scientist sería el arquitecto y el ingeniero de datos, el ingeniero de edificación.
+
+### Clase 56 *¿Por qué aprender bases de datos hoy?*
+
+¡Has concluido el curso! Ahora tienes potentes herramientas y posibilidades para ingresar en este apasionante campo.
+
+Llevaste diagramas a bases de datos, exploraste un poco el mundo de las bases de datos no relacionales, hicimos un proyecto en firestore y transformamos Platzi blog de una base de datos relacional en una base de datos de documentos.
+
+Dentro de las posibilidades que tienes hoy en día puedes hacer: Machine learning, ETL, Data Warehouse, Data mining, entre otros.
+
+Recuerda practicar mucho con el proyecto. Te invito a que tomes el examen y verifiques tus conocimientos. ¡Exitos!
