@@ -865,12 +865,15 @@ El query tiene básicamente 2 partes, la sentencia SELECT y la sentencia FROM, e
 Selecciona todos los campos de la tabla posts:
 
 > SELECT *
+
 > FROM posts;
 
 Selecciona todos los campos de la tabla posts, pero únicamente si fueron publicados después del 2024:
 
 > SELECT *
+
 > FROM posts
+
 > WHERE fecha_publicacion > '2024';
 
 Selecciona todos los campos de la tabla posts, pero únicamente si fueron publicados antes del 2024:
