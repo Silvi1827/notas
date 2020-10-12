@@ -1606,3 +1606,55 @@ Sacamos los usuarios que no escriben ningún posts
 > LEFT JOIN posts ON usuarios.id = posts.usuario_id
 >
 > WHERE posts.usuario_id IS NULL;
+
+## Modulo 6. Introducción a la bases de datos NO relacionales
+### Clase 41 *¿Qué son y cuáles son los tipos de bases de datos no relacionales?*
+
+Como hemos dicho antes, las bases de datos relacionales marcaron un antes y un después en la industria de la tecnología y en la historia de cómo manejamos los datos, ahora las bases de datos no relacionales es muy curioso porque no es un solo tipo de base de datos, veremos en que se dividen y como son muy diferentes unas de otras, pero es muy interesante saber que todas estas bases de datos, por muy diferentes que sean, se engloban en una categoría solamente distinta a las relacionales.
+
+**Tipos de base de datos no relacionales**
+
+- **Clave-valor**
+
+	Están hechas para almacenar datos de manera rápida y extraerlo si tienes la clave para ello. La idea general es que tu guardas una gran cantidad de información ligada un único campo identificador. La particularidad que tiene es que podemos extraer estos datos de manera rápida si conocemos ese identificados, pero si deseamos hacer consultas más complejas puede que nos resulte difícil porque no podemos entrar a estos valores sin tener su clave. Se basan en algoritmos de hash o hashmap que quiere decir diccionario de datos en los cuales, justamente, tienes una clave o un índice por el cual encontrarlo y tienes una serie de valores o información a los que vas a acceder a través de esa clave.
+
+	Ejemplos: DynamoDB (que maneja Amazon), Cassandra (base de datos creada por Facebook).
+
+- **Basadas en documentos**
+
+	Documento se le llama a un objeto del tipo JSON, estos objetos son sumamente estándar en la industria, también son guardadas como clave-valor pero tienen una estructura un poco más definida que las bases de datos clave-valor. Estas bases de datos probablemente son las más utilizadas fuera del estándar SQL.
+
+  Ejemplos: MongoDB (más conocido dentro de la industria), Firestore (es una opción que se ofrece en la nube y es administrado).
+
+- **Basadas en grafos**
+
+	Son justamente nodos o entidades que tienen múltiples relaciones, que tienen relaciones muy complejas, y que generalmente están relacionados todos entre todos. Los grafos nos ayudan a mapear estas relaciones complejas y se utilizan mucho en el mundo de la inteligencia artificial.
+
+  Ejemplos: neo4j, Titan.
+
+- **En memoria**
+
+  Su ventaja radica en que son sumamente rápidas, cuando haces una consulta y quieres que la respuesta llegue en cuestión mínima de tiempo puedes usar una base de datos que vive en memoria, la desventaja está en que tienen cierto límite y deben estar guardando algunos datos en disco y además son volátiles. Si manejas un servidor o instancia en cloud y tienes una base de datos en memoria, si ese servidor se reinicia probablemente tengas que volver a indexar o traer del disco duro a la memoria todos esos datos para que estén nuevamente disponible, también es un gran trabajo mantener en sincronía lo que tienes guardado en un almacenamiento con más durabilidad contra la memoria principal.
+
+  Ejemplo: Memcached, Redis.
+
+- **Optimizadas para búsquedas**
+
+  Este tipo de base de datos nos ayuda a realizar queries muy complejos en cuestiones muy rápidas de tiempo. Sirve como
+  grandes repositorios de datos, muchas veces históricos, a los que puedes preguntar cuestiones muy complejas de negocio que nos ayudan tendencias históricas y otro tipo de datos. Son muy utilizadas en cuestiones de Business Intelligence y actualmente también son usadas en cuestiones de Machine Learning.
+
+  Ejemplo Elasticsearch, BigQuery.
+
+### Clase 42 *Servicios administrados y jerarquía de datos*
+
+En esta clase vamos a explorar más a detalle y en profundidad lo que tiene que ver con las base de datos no relacionales, especialmente estas que están basadas en documentos, y una de las grandes competidores que es Firestore que es un servidor administrado.
+
+Recordemos que con un servicio administrado, tú como operador de datos no necesitas preocuparte por mantenimiento, seguridad, cuestiones de redes, seguridad, distribución de datos, nada de esto sino que delegas todas estas funciones a un operador de cloud como Amazon, Google Cloud Platform o Azure. Firestore en particular es una base de datos que utiliza Google y se usa mucho para crear aplicaciones tanto web como móvil (Android y iOS).
+
+**Jerarquía de datos en Firestore**
+
+![src/fundamentoBD_91.png](src/fundamentoBD_91.png)
+
+1. Base de datos: Va a contener toda la información que deseamos guardar.
+2. Colección: Simplemente son contenedores de documentos.
+3. Documento: Es la unidad de almacenamiento es el documento. Un documento es un registro liviano que contiene campos con valores asignados. Cada documento se identifica con un nombre.
