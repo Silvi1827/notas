@@ -2296,3 +2296,22 @@ Llevaste diagramas a bases de datos, exploraste un poco el mundo de las bases de
 Dentro de las posibilidades que tienes hoy en día puedes hacer: Machine learning, ETL, Data Warehouse, Data mining, entre otros.
 
 Recuerda practicar mucho con el proyecto. Te invito a que tomes el examen y verifiques tus conocimientos. ¡Exitos!
+
+## Bonus
+### Clase 57 *Bases de datos relacionales vs no relacionales*
+Bases de datos relacionales vs no relacionales
+Las bases de datos relacionales han estado con nosotros por un largo tiempo (en términos de TI) y han sido usados por los más grandes como Google, Facebook, Amazon, entre otros y aún ahora lo puedes encontrar en grandes empresas como bancos, aseguradoras y empresas de largo o nivel que tienen todavía un uso extensivo de las bases de datos relacionales.
+
+**¿Qué pasa con las no relacionales?**
+
+Las bases de datos relacionales surgen en el punto de quiebre, esto fue cuando las grandes empresas tenían la necesidad de guardar grandes cantidades de datos en periodos de tiempo, esto es lo que se conoce como Big Data.
+
+Desde hace años, sin embargo, se han ido desarrollando el mundo de las bases de datos no relacionales. Al principio existían un par de aproximaciones diferentes a las bases de datos, pero actualmente contamos con una numerosa cantidad de diferentes tipos de base de datos no relaciones entre ellas están las que se basan en documentos, las que se basan en grafo y cada una tiene aplicaciones diferentes.
+
+Entonces, dependiendo del problema ahora tenemos una solución diferente. Antes teníamos bases de datos relacionales que se ocupaban de resolver todos los problemas, pero ahora tenemos bases de datos no relacionales que cada una ataca un problema diferente.
+
+Las bases de datos no relacionales no son necesariamente mejores que las bases de datos relaciones, pero cuando tienes un caso de uso muy específico pueden ser infinitamente más rápida o más confiables que las bases de datos originales. Y es en este cambio de paradigma, en la forma que conceptualizamos las bases de datos, que surge un renacimiento en la disciplina de datos y ahora existen muchas disciplinas como ETL, Business Intelligence, Machine Learning.
+
+**Conclusión**
+
+Es importante hoy más que nunca tener buenos profesionales con excelentes cimientos en base de datos. Entonces, lo que no debemos olvidar es que existe muchas posibilidades y diferentes soluciones de base de datos; tenemos las bases de datos relacionales que, aunque lleven tiempo en el mercado, si queremos una base de datos que resuelva todos los problemas en uno solo y la exigencia de datos no es de millones por segundo puede resolver la mayoría de los problemas, en cambio, si tenemos un problema particular o el volumen de datos manejado es de gran cantidad tenemos diferentes soluciones en el ámbito de las bases de datos nos relacionales.
