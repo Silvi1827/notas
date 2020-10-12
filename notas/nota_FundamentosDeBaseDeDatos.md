@@ -864,9 +864,9 @@ El query tiene básicamente 2 partes, la sentencia SELECT y la sentencia FROM, e
 
 Selecciona todos los campos de la tabla posts:
 
-***SELECT *
+***SELECT * ***
 
-FROM posts;***
+***FROM posts;***
 
 Selecciona todos los campos de la tabla posts, pero únicamente si fueron publicados después del 2024:
 
