@@ -864,20 +864,25 @@ El query tiene básicamente 2 partes, la sentencia SELECT y la sentencia FROM, e
 
 Selecciona todos los campos de la tabla posts:
 
-> SELECT *
-FROM posts;
+***SELECT *
+
+FROM posts;***
 
 Selecciona todos los campos de la tabla posts, pero únicamente si fueron publicados después del 2024:
 
-> SELECT *
+***SELECT *
+
 FROM posts
-WHERE fecha_publicacion > '2024';
+
+WHERE fecha_publicacion > '2024';***
 
 Selecciona todos los campos de la tabla posts, pero únicamente si fueron publicados antes del 2024:
 
-> SELECT *
+***SELECT *
+
 FROM posts
-WHERE fecha_publicacion < '2024';
+
+WHERE fecha_publicacion < '2024';***
 
 
 **NOTA:** El asterisco (*) funciona para seleccionar todos los campos de una tabla.
@@ -892,28 +897,33 @@ SELECT se utiliza para recuperar información de la base de datos, y puede proy
 
 Trae todos los campos de la tabla posts:
 
-> SELECT *
-FROM posts;
+***SELECT *
+
+FROM posts;***
 
 Trae los campos seleccionados (título, fecha de publicación y estatus) de la tabla posts:
 
-> SELECT titulo, fecha_publicacion, estatus
-FROM posts;
+***SELECT titulo, fecha_publicacion, estatus
+
+FROM posts;***
 
 Para renombrar la cabecera de una columna usamos AS:
 
-> SELECT titulo AS encabezado, fecha_publicacion AS publicado_en, estatus AS estado
-FROM posts;
+***SELECT titulo AS encabezado, fecha_publicacion AS publicado_en, estatus AS estado
+
+FROM posts;***
 
 Si deseamos saber el número de filas, es decir, la cantidad de registros que tiene una tabla usamos COUNT:
 
-> SELECT COUNT (*)
-FROM posts;
+***SELECT COUNT (*)
+
+FROM posts;***
 
 También puede ser renombrado por la función AS:
 
-> SELECT COUNT (*) AS numero_posts
-FROM posts;
+***SELECT COUNT (*) AS numero_posts
+
+FROM posts;***
 
 ### Clase 31 *FROM*
 
@@ -949,77 +959,260 @@ Son círculos que se tocan en algún punto para ver dónde está la intersecció
 
 	Trae todos los usuarios sin importar que tengan o no posts asociados, y después vemos los posts asociados a ese usuario.
 
-	> SELECT *
-	FROM usuarios
-		LEFT JOIN posts ON usuarios.id = posts.usuario_id;
+	***SELECT *
+
+  FROM usuarios
+
+  	LEFT JOIN posts ON usuarios.id = posts.usuario_id;***
 
 2. **LEFT JOIN (con condición)**
 
 	Trae todos los usuarios que NO tengan posts asociados.
 
-  > SELECT *
-	FROM usuarios
-		LEFT JOIN posts ON usuarios.id = posts.usuario_id
-	WHERE posts.usuario_id IS NULL;
+  ***SELECT *
+
+  FROM usuarios
+
+  	LEFT JOIN posts ON usuarios.id = posts.usuario_id
+
+  WHERE posts.usuario_id IS NULL;***
 
 3. **RIGHT JOIN**
 
 	Trae todos los posts sin importar que tengan o no usuarios asociados, y después vemos los usuarios asociados a ese posts.
 
-  > SELECT *
-	FROM usuarios
-		RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+  ***SELECT *
+
+  FROM usuarios
+
+  	RIGHT JOIN posts ON usuarios.id = posts.usuario_id;***
 
 4. **RIGHT JOIN (con condición)**
 
   Trae los posts que no están relacionados a un usuario.
 
-  > SELECT *
-	FROM usuarios
-		RIGHT JOIN posts ON usuarios.id = posts.usuario_id
-	WHERE posts.usuario_id IS NULL;
+  ***SELECT *
+
+  FROM usuarios
+
+  	RIGHT JOIN posts ON usuarios.id = posts.usuario_id
+
+  WHERE posts.usuario_id IS NULL;***
 
 5. **INNER JOIN**
 
   Trae los que tienen dependencia de ambos lados, o sea que deja de lados los usuarios que no tengan posts asociados o los posts que quedaron huérfanos.
 
-  > SELECT *
+  ***SELECT *
+
 	FROM usuarios
-		INNER JOIN posts ON usuarios.id = posts.usuario_id;
+
+  	INNER JOIN posts ON usuarios.id = posts.usuario_id;***
 
 6. **OTHER JOIN**
 
   Usada para traer el total de la unión de ambas tablas, tanto con los usuarios sin posts y con los posts sin usuarios. Pero existe un dato interesante y es que tiene dos formas, la primera no está incorporada por todos los manejadores de base de datos y es:
 
-  > SELECT *
-	FROM usuarios
-		FULL OTER JOIN posts ON usuarios.id = posts.usuario_id;
+  ***SELECT *
+
+  FROM usuarios
+
+  	FULL OTER JOIN posts ON usuarios.id = posts.usuario_id;***
 
 	La segunda es la otra forma estándar que si funciona en todos los manejadores de base de datos.
 
-	> SELECT *
-	FROM usuarios
-		LEFT JOIN posts ON usuarios.id = posts.usuario_id
-	UNION
-	SELECT *
-	FROM usuarios
-		RIGHT JOIN posts ON usuarios.id = posts.usuario_id;
+	***SELECT *
+
+  FROM usuarios
+
+  	LEFT JOIN posts ON usuarios.id = posts.usuario_id
+
+  UNION
+
+  SELECT *
+
+  FROM usuarios
+
+  	RIGHT JOIN posts ON usuarios.id = posts.usuario_id;***
 
 7. **OTHER JOIN (con condición)**
 
   Trae todos los usuarios sin posts asociados y los posts huérfanos que no tienen usuarios relacionados.
 
-  > SELECT *
-	FROM usuarios
-		LEFT JOIN posts ON usuarios.id = posts.usuario_id
-	WHERE posts.usuario_id IS NULL
-	UNION
-	SELECT *
-	FROM usuarios
-		RIGHT JOIN posts ON usuarios.id = posts.usuario_id
-	WHERE posts.usuario_id IS NULL;
+  ***SELECT *
+
+  FROM usuarios
+
+  	LEFT JOIN posts ON usuarios.id = posts.usuario_id
+
+  WHERE posts.usuario_id IS NULL
+
+  UNION
+
+  SELECT *
+
+  FROM usuarios
+
+  	RIGHT JOIN posts ON usuarios.id = posts.usuario_id
+
+  WHERE posts.usuario_id IS NULL;***
 
 ### Clase 33 *WHERE*
+
+WHERE es la sentencia que nos ayuda a filtrar tuplas o registros, permite filtrar los datos que queremos mostrar dependiendo de las características que elegimos. Empezaremos a filtrar los datos que nos interesa, no en sentido de que campo mostramos pero si de acuerdo a criterios como una fecha o cantidad.
+
+**Ejemplo**
+
+Trae todos los posts cuyo id sea menor a 50 (sin incluirlo)
+
+***SELECT *
+
+FROM posts
+
+WHERE id < 50;***
+
+Trae todos los posts cuyo id sea menor o igual a 50
+
+***SELECT *
+
+FROM posts
+
+WHERE id <= 50;***
+
+Trae todos los posts cuyo id sea mayor o igual a 50
+
+***SELECT *
+
+FROM posts
+
+WHERE id >= 50;***
+
+Trae todos los posts cuyo id sea mayor a 50 (sin incluirlo)
+
+***SELECT *
+
+FROM posts
+
+WHERE id > 50;***
+
+Trae todos los posts cuyo estatus sea igual a activo. OBS.: Esto solo funciona con campos que tengan datos precisos, como estatus que solo tiene activo o inactivo
+
+***SELECT *
+
+FROM posts
+
+WHERE estatus = 'activo';***
+
+Trae todos los posts cuyo estatus sea inactivo
+
+***SELECT *
+
+FROM posts
+
+WHERE estatus = 'activo';***
+
+Trae todos los posts cuyo estatus NO sea igual a activo
+
+***SELECT *
+
+FROM posts
+
+WHERE estatus != 'activo';***
+
+Trae todos los posts cuyo id NO sea igual a 50
+
+***SELECT *
+
+FROM posts
+
+WHERE id != 50;***
+
+Trae todos los posts que contenga la palabra escándalo
+
+***SELECT *
+
+FROM posts
+
+WHERE titulo LIKE '%escandalo%';***
+
+Trae todos los posts que empiezan con la palabra escándalo
+
+***SELECT *
+
+FROM posts
+
+WHERE titulo LIKE 'escandalo%';***
+
+Trae todos los posts que terminan con la palabra escándalo
+
+***SELECT *
+
+FROM posts
+
+WHERE titulo LIKE '%escandalo';***
+
+Trae todos los posts que terminan con la palabra roja
+
+***SELECT *
+
+FROM posts
+
+WHERE titulo LIKE '%roja';***
+
+Trae todos los posts cuya fecha de publicación sea después a 2025-01-01
+
+***SELECT *
+
+FROM posts
+
+WHERE fecha_publicacion > '2025-01-01';***
+
+Trae todos los posts cuya fecha de publicación sea antes a 2025-01-01
+
+***SELECT *
+
+FROM posts
+
+WHERE fecha_publicacion < '2025-01-01';***
+
+Trae todos los posts cuya fecha de publicación estén entre el rango de 2023-01-01 y 2025-12-31
+
+***SELECT *
+
+FROM posts
+
+WHERE fecha_publicacion BETWEEN '2023-01-01' AND '2025-12-31';***
+
+Trae todos los posts cuyo id esté entre el rango de 50 y 60
+
+***SELECT *
+
+FROM posts
+
+WHERE id BETWEEN '50' AND '60';***
+
+Trae todos los posts cuyo año de fecha de publicación se encuentra entre el 2023 y 2024
+
+***SELECT *
+
+FROM posts
+
+WHERE YEAR(fecha_publicacion) BETWEEN '2023' AND '2024';***
+
+Trae todos los posts cuyo mes de fecha de publicación sea igual a Abril (04)
+
+***SELECT *
+
+FROM posts
+
+WHERE MONTH(fecha_publicacion) = '04';***
+
+**NOTA**
+
+- La propiedad LIKE nos ayuda a traer registros de los cuales conocemos sólo una parte de la información.
+- La propiedad BETWEEN nos sirve para arrojar registros que estén en el medio de dos.
+
+
 ### Clase 34 *Utilizando la sentencia WHERE nulo y no nulo*
 ### Clase 35 *GROUP BY*
 ### Clase 36 *ORDER BY y HAVING*
