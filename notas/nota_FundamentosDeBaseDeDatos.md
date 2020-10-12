@@ -1658,3 +1658,281 @@ Recordemos que con un servicio administrado, tú como operador de datos no neces
 1. Base de datos: Va a contener toda la información que deseamos guardar.
 2. Colección: Simplemente son contenedores de documentos.
 3. Documento: Es la unidad de almacenamiento es el documento. Un documento es un registro liviano que contiene campos con valores asignados. Cada documento se identifica con un nombre.
+
+## Modulo 7. Manejo de modelos de datos en bases de datos no relacionales
+### Clase 43 *Top level collection con Firebase*
+
+Una de las grandes ventajas que ofrece la base de datos no relacionales es justamente que el modelo de datos es un poco más cercano al mundo real, el modelo de la base de datos relacional era más intrincado y complejo.
+
+Vamos a ver como transportar problemas o formas de datos de la vida real en documentos y colecciones, y vamos a empezar con el primer objeto de las bases de datos basadas en documentos:
+
+- Top Level Collection (Colección de nivel más alto): Son las colecciones que vamos a tener de inmediato en nuestro proyecto.
+
+**Firebase**
+
+Es un servicio que tiene múltiples opciones y está pensado principalmente para aplicaciones móviles y web. A diferencia de otros servicios administrados no pide datos de pago, pero por defecto nos restringe ciertas cosas.
+
+**Crear una base de datos en Firebase**
+
+Ingresamos en la página (https://firebase.google.com/) y damos click en 'Añadir proyecto':
+
+![src/fundamentoBD_92.png](src/fundamentoBD_92.png)
+
+Nos saldrá una ventana que llenaremos con la información necesaria. Primero nos pide el nombre del proyecto, en este caso Platziblog, abajo no sale automáticamente un ID para Google (ese ID es único, si alguien tuviera el mismo ID nos saldría error ya que es a nivel mundial y se comparte la información), en ubicación nos muestra donde se almacenan los datos y en que instancia o zona se van a guardar los datos:
+
+![src/fundamentoBD_93.png](src/fundamentoBD_93.png)
+
+Más abajo tenemos las configuraciones predeterminadas (la puedes dejar así o sacarla y después nos dará una serie de opciones que le queramos dar o quitar), y por ultimo tenemos los términos y condiciones. Finalmente le damos click a 'Crear proyecto':
+
+![src/fundamentoBD_94.png](src/fundamentoBD_94.png)
+
+Esperamos unos momentos a que nos cree el proyecto, damos click en 'Continuar ' y después nos sale el pantalla del proyecto en Firebase. A un lado podemos ver varias opciones como autenticación, guardar archivos, hostear aplicaciones web, nosotros elegimos la opción para crear una base de datos:
+
+![src/fundamentoBD_95.png](src/fundamentoBD_95.png)
+
+En database nos presenta los detalles de una forma amigable y entretenida. Ahí damos click en 'Crear base de datos':
+
+![src/fundamentoBD_96.png](src/fundamentoBD_96.png)
+
+Antes de crear una base de datos, se nos presenta dos opciones: una es crear la base de datos con cierta protección y otra es crear una base de datos en modo de prueba. Por el momento elegimos el modo de bloqueo y le damos click en 'Habilitar':
+
+![src/fundamentoBD_97.png](src/fundamentoBD_97.png)
+
+Se nos presenta el panel inicial que utilizaremos en los proyectos de Firebase. Si queremos iniciar una nueva colección (Top Level Collection) solo damos click en 'Añadir colección', si nos fijamos ya nombro platziblog a nuestra base de datos:
+
+![src/fundamentoBD_98.png](src/fundamentoBD_98.png)
+
+Vemos que nuestra colección está almacenada en la ruta principal, eso es lo que define una Top Level Collection son las colecciones que tenemos a nivel de la ruta principal. Y para crear una colección debemos darle una ID de inicio, en este caso creamos la colección 'people', y damos click en 'Siguiente':
+
+![src/fundamentoBD_99.png](src/fundamentoBD_99.png)
+
+**RECUERDA: Las colecciones son muy similares a las entidades.**
+
+Una colección no puede existir hasta que no creas un documento, entonces creamos un documento 'last_name' del tipo string con valor default vacío. Podemos ingresar una ID al documento o dejarlo así y automáticamente Google nos asigna uno, damos click en 'Guardar':
+
+![src/fundamentoBD_100.png](src/fundamentoBD_100.png)
+
+Al guardar el documento se crear la colección 'people', podemos ver la ID que fue asignado automáticamente y la data del documento que es 'last_name':
+
+![src/fundamentoBD_101.png](src/fundamentoBD_101.png)
+
+***NOTA: Aunque parezca un mundo diferente con colecciones y documentos, en el fondo sigue siendo el mismo concepto que hemos estado viendo a lo largo del curso, aunque cambiamos nuestras entidades por colecciones y las tuplas por documentos pero en el fondo sigue siendo igual.***
+
+### Clase 44 *Creando y borrando documentos en Firestore*
+
+Anteriormente vimos que en SQL teníamos tipos de datos para texto como char, varchar, tipos de datos numéricos como integer o numeric, teníamos tipos de datos boolean, algunos tipos de datos para fechas como time. Entonces, hoy vamos a ver cómo vamos a guardar ese mismo tipo de datos, esa misma información en Firestore.
+
+**Documentos en Firestore**
+
+Tenemos el documento ya hecho anteriormente para prueba. Vimos que tenemos la base de datos 'platziblog', una colección 'people' que almacena al documento con su ID único y el conjunto de campos.
+
+Para agregar un nuevo documento a nuestra colección damos click en 'Añadir documento':
+
+![src/fundamentoBD_102.png](src/fundamentoBD_102.png)
+
+Nos sale esta ventana ya visto anteriormente:
+
+![src/fundamentoBD_103.png](src/fundamentoBD_103.png)
+
+Tenemos el ID (la práctica común es dejar que Google nos asigne uno de forma automática), luego tenemos el nombre del campo, el tipo de datos y después un valor que podemos poner por defecto.
+
+**Tipos de datos**
+
+- String: Es el que aparece por defecto. Aquí los datos de tipo texto no se dividen en char, varchar o text.
+- Number: Es un dato de tipo numérico (enteros o flotantes).
+- Boolean: Son los valores true o false.
+- Map: Permite agregar un documento dentro de otro, se ordenan por clave y se comparan con pares clave-valor.
+- Array: Permite agregar un conjunto de datos sin tener en cuenta el orden.
+- Null: Son las que indica que no se ha definido ningún valor.
+- Timestamp: Es para los datos de fecha y hora, tiene una precisión máxima de microsegundos.
+- Geopoint: Es para los datos de localización geográfica (coordenadas latitud-longitud).
+- Reference: Referencia un documento, permite relacionar dos documentos sin importar su colección.
+
+**Ejemplo**
+
+Creamos un documento nuevo con todos los datos:
+
+![src/fundamentoBD_104.png](src/fundamentoBD_104.png)
+
+Al dar guardar ya podemos ver una colección 'people' con dos documentos:
+
+![src/fundamentoBD_105.png](src/fundamentoBD_105.png)
+
+Si queremos borrar o modificar un campo, a un lado podemos ver el lápiz (modificar) o el basurero (borrar):
+
+![src/fundamentoBD_106.png](src/fundamentoBD_106.png)
+
+Nos salta un mensaje, damos click en 'Eliminar' y se borrar definitivamente:
+
+![src/fundamentoBD_107.png](src/fundamentoBD_107.png)
+
+Si quieres borrar un documento, damos click a los tres puntos en la esquina derecha y nos da dos opciones; Eliminar campos de documento (eliminar uno por uno) o Eliminar documento (elimina completamente):
+
+![src/fundamentoBD_108.png](src/fundamentoBD_108.png)
+
+Si elegimos la opción de 'Eliminar documento', nos salta un aviso y solo debemos dar click en 'Eliminar':
+
+![src/fundamentoBD_109.png](src/fundamentoBD_109.png)
+
+Si deseas eliminar una colección completa, solo es necesario repetir los pasos:
+
+- Nos vamos en la esquina superior y presionamos los tres puntos.
+- Damos click en 'Eliminar colección'.
+- Nos salta un aviso en el que ponemos el ID de la colección (en este caso es people) y damos click en 'Eliminar'.
+
+![src/fundamentoBD_110.png](src/fundamentoBD_110.png)
+
+### Clase 45 *Colecciones vs subcolecciones*
+
+Las colecciones tienen la particular de que existen de manera intrínseca a la base de datos, existen en el primer nivel. Hay un segundo tipo de colecciones llamado subcolecciones, en cambio no viven en el inicio de la base de datos.
+
+**Diferencias entre bases de datos relaciones y bases de datos basadas en documentos**
+
+Las bases de datos relacionales de inicio nos pedían que pensáramos bien la estructura, normalizar y definir desde un inicio que se guarda en cada tabla, y la estructura resultaba más complicada al modificar conforme pasa el tiempo.
+
+Las bases de datos basadas en documentos son mucho más flexibles al respecto, nosotros podemos poner un blogpost con una noticia que tenga fecha de recuperación. Sin embargo, también se puede crear otros que no las tengan. La base de datos no nos dice no es inconsistente o que no está normalizada, nos permite perfectamente crear.
+
+**Ejemplo**
+
+Vamos nuevamente a nuestro panel de Firestore y añadiremos una nueva colección 'posts' con los campos de título, contenido y fecha de publicación:
+
+![src/fundamentoBD_111.png](src/fundamentoBD_111.png)
+
+Ahora con nuestra colección creada, podemos ver las subcolecciones.
+
+Tenemos una opción que no hemos visto todavía y es la de 'Añadir colección' que se encuentra dentro del documento (es decir esta intrínseca al documento). No se debe confundir con el 'Añadir colección' del nivel principal:
+
+![src/fundamentoBD_112.png](src/fundamentoBD_112.png)
+
+El proceso para crear una subcolección es la misma. Nos sale una ventana para ingresar el ID:
+
+![src/fundamentoBD_113.png](src/fundamentoBD_113.png)
+
+Recordemos que etiquetas era un atributo multivaluado, así que debemos repetir el proceso dos veces:
+
+![src/fundamentoBD_114.png](src/fundamentoBD_114.png)
+
+Segundo documento de la subcolección:
+
+![src/fundamentoBD_115.png](src/fundamentoBD_115.png)
+
+Ahora tenemos una colección 'posts' con un documento y ese mismo documento tiene otra colección llamada 'etiqueta':
+
+![src/fundamentoBD_116.png](src/fundamentoBD_116.png)
+
+Y esa subcolección es una serie de etiquetas:
+
+![src/fundamentoBD_117.png](src/fundamentoBD_117.png)
+
+De esta manera tenemos una colección que no está relacionada con la base de datos, sino que solamente está relacionado con el blogpost.
+
+**¿Qué diferencia hay y en qué casos se utiliza?**
+
+Esto queda a conciencia del desarrollador y por eso es bueno desarrollar un buen criterio al igual que las buenas prácticas de SQL, nada es obligatorio pero las buenas prácticas nos ayudaran.
+
+La regla que se ocupa generalmente es que si se ocupa los elementos de la colección de manera independiente, vale tenerla como una entidad separa y tenerla como una Top Level Collection, si en cambio solo tenemos colecciones como las que solo la vamos a usar dentro de la noticia entonces es cuando vale la pena guardarla como una subcolección.
+
+### Clase 46 *Recreando Platziblog*
+
+Ya tenemos todos los elementos que ocupa Firestore para hacer su estructura de datos; jerarquía, base de datos, colecciones, documentos y subcolecciones. Ahora el reto que nos vamos a enfrentar es convertir o traer los datos de Platziblog.
+
+**Platziblog en Firestore**
+
+1. Ver el diagrama físico con las entidades.
+2. Debemos definir y analizar para ver cual entidad se convertirá en una Top Level Collection y cual es una subcolección. Tomemos como ejemplo la entidad usuario, puede ser tanto una Top Level Collection como una subcolección, depende de la planeación y como se desea consultar. Si es importante consultar una lista de usuarios a cada rato, entonces se convertirá en una Top Level Collection; en cambio, no tenemos ese problema y no necesitamos hacer una lista de usuarios entonces si vale la pena convertirlo en una subcolección.
+
+### Clase 47 *Construyendo Platziblog en Firestore*
+
+Ya tenemos definidas y revisamos las entidades de nuestro diagrama físico, ahora vamos a pasar directamente a la consola de Firebase que nos permitirá crear los mismos datos pero esta vez basados en documentos.
+
+1. Creamos nuestras Top Level Collection
+
+  - Categoría:
+
+  ![src/fundamentoBD_118.png](src/fundamentoBD_118.png)
+
+	Con su primer documento:
+
+  ![src/fundamentoBD_119.png](src/fundamentoBD_119.png)
+
+	Añadimos dos documentos más en la colección categoría: Ciencia y Espectáculos.
+
+  - Usuario:
+
+  ![src/fundamentoBD_120.png](src/fundamentoBD_120.png)
+
+  Con su primer documento
+
+  ![src/fundamentoBD_121.png](src/fundamentoBD_121.png)
+
+  - Posts:
+
+  ![src/fundamentoBD_122.png](src/fundamentoBD_122.png)
+
+  Con su primer documento
+
+  ![src/fundamentoBD_123.png](src/fundamentoBD_123.png)
+
+2. Ahora relacionamos nuestras Top Level Collection
+
+  - Para ver las referencias es necesario ir a uno de los documentos y copiar los datos que se encuentra en la parte superior
+
+  ![src/fundamentoBD_124.png](src/fundamentoBD_124.png)
+
+  - Para relacionar posts con usuarios vayamos al documento de posts y agregamos un nuevo campo de tipo reference llamado 'autor' con el vínculo anteriormente copiado
+
+  ![src/fundamentoBD_125.png](src/fundamentoBD_125.png)
+
+  Con esto ya podemos consultar el posts y saber quién fue el autor
+
+  - También relacionamos las categorías con el posts siguiendo los mismos pasos:
+
+  ![src/fundamentoBD_126.png](src/fundamentoBD_126.png)
+
+3. Ahora creamos nuestras subcolecciones:
+
+  Creamos la subcolección 'etiqueta' dentro de uno de los documentos:
+
+  ![src/fundamentoBD_127.png](src/fundamentoBD_127.png)
+
+  Y añadimos los documentos:
+
+  ![src/fundamentoBD_128.png](src/fundamentoBD_128.png)
+
+  Con esto ya tenemos la misma información de Platziblog, simplemente en otro formato
+
+  ![src/fundamentoBD_129.png](src/fundamentoBD_129.png)
+
+### Clase 48 *Proyecto final: transformando tu proyecto en una db no relacional*
+
+Dentro de las bases de datos relacionales tenemos diferentes niveles de datos. En primer lugar tenemos las Bases de Datos o Esquemas como repositorios donde vivirán los datos que nos interesa guardar. Dentro del esquema existen las Tablas que provienen del concepto de entidades; y a su vez dentro de las tablas tenemos las tuplas o renglones.
+
+Cuando trabajamos con bases de datos basadas en documentos como Firestore, aún existe la figura de la base de datos, sin embargo cambiaremos las tablas en favor de las colecciones y las tuplas en lugar de los documentos.
+
+**Recuerda:**
+
+Tabla -> Colección
+
+Tupla -> Documento
+
+Dentro de las Colecciones existen 2 grandes tipos. Las Top level collection o colecciones de nivel superior y las subcollections o subcolecciones. Estas últimas viven únicamente dentro de un documento padre.
+
+**¿Cómo saber cuál escoger?**
+
+Para determinar si tu colección debe ser top level o subcolección no hay una regla escrita en piedra y más bien tiene que ver con el caso de uso en particular y con la experiencia que hayas ganado como desarrollador.
+
+Lo cierto es que no hay una sola forma de estructurar nuestra DB basada en documentos, y por tanto no existe una respuesta correcta, sin embargo a continuación te ofrezco un par de reglas guía que puedes utilizar para transformar tu proyecto que ya trabajaste en bases de datos relacionales en un proyecto no relacional.
+
+**Regla 1. Piensa en la vista de tu aplicación**
+
+La primera pista que te puedo dar es que pienses en un inicio en la manera en que los datos serán extraídos. En el caso de una aplicación, la mejor forma de pensarlo es en términos de las vistas que vas a mostrar a un momento determinado en la aplicación.
+
+Es decir, al armar la estructura en la base de datos que sea un espejo o que al menos contenga todos los datos necesarios para llenar las necesidades que tiene nuestra parte visual en la aplicación.
+
+En el caso de Platziblog por ejemplo si tienes una vista de un blog post individual, generalmente conviene mostrar además de los datos inherentes al post como el contenido, datos adicionales como las etiquetas que tiene o por ejemplo el autor (o autores si es colaborativo), en este caso tal vez convenga guardar estas dos “entidades” (autores y etiquetas) como subcolecciones de cada documento blog post.
+
+**Regla 2. La colección tiene vida propia**
+
+Esta regla se refiere a que la excepción a la regla 1 es cuando tenemos un caso en que la “entidad” que tiene necesidad de vivir y modificarse constantemente de manera independiente a las otras colecciones. Por ejemplo en Platziblog podemos en el ejemplo anterior hacer una excepción a autores porque nos conviene tenerlas como top level collection en el sentido que se añadan, borren, cambien o listen los usuarios sin depender del blog post.
+
+Experimenta aplicando estas dos reglas a un proyecto que ya conozcas en una base de datos relacional y trata de convertirla en un proyecto de Firestore y comentanos los retos a los que te enfrentaste.
