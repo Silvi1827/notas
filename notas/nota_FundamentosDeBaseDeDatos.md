@@ -1446,33 +1446,33 @@ Es bueno saber cuándo utilizarlo, pero es mejor saber cuándo NO utilizarlo. De
 
 > SELECT new_table_projection.date, COUNT(*) AS posts_count
 >
-FROM (
+> FROM (
 >
-	SELECT DATE(MIN(fecha_publicacion)) AS date, YEAR(fecha_publicacion) AS post_year
+> SELECT DATE(MIN(fecha_publicacion)) AS date, YEAR(fecha_publicacion) AS post_year
 >
-	FR> OM posts
+> FROM posts
 >
-	GROUP BY post_year
+> GROUP BY post_year
 >
-) AS new_table_projection
+> ) AS new_table_projection
 >
-GROUP BY new_table_projection.date
+> GROUP BY new_table_projection.date
 >
-ORDER BY new_table_projection.date;
+> ORDER BY new_table_projection.date;
 
 **Ejemplo 2**
 
 > SELECT *
 >
-FROM posts
+> FROM posts
 >
-WHERE fecha_publicacion = (
+> WHERE fecha_publicacion = (
 >
-	SELECT MAX(fecha_publicacion)
+> SELECT MAX(fecha_publicacion)
 >
-	FROM posts
+> FROM posts
 >
-);
+> );
 
 ### Clase 38 *¿Cómo convertir una pregunta en un query SQL?*
 
@@ -1497,27 +1497,27 @@ Para resolverlo debemos plantearnos primero que deseamos sacar con el SELECT (el
 
 > SELECT posts.titulo, COUNT(*) num_etiqueta
 >
-FROM posts
+> FROM posts
 >
-	INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
+> INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
 >
-	INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+> INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
 >
-GROUP BY posts.id;
+> GROUP BY posts.id;
 
 Si deseamos ir un paso más allá, también podemos filtrar y ver cuáles son los posts que tiene más etiquetas.
 
 > SELECT posts.titulo, COUNT(*) num_etiqueta
 >
-FROM posts
+> FROM posts
 >
-	INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
+> INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
 >
-	INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+> INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
 >
-GROUP BY posts.id
+> GROUP BY posts.id
 >
-ORDER BY num_etiquetas DESC;
+> ORDER BY num_etiquetas DESC;
 
 **¿Cuáles son las etiquetas que pertenecen al posts?**
 
@@ -1525,23 +1525,23 @@ Para responder a esta pregunta es necesario usar GROUP_CONCAT que toma el result
 
 > SELECT posts.titulo, GROUP_CONCAT(nombre_etiqueta)
 >
-FROM posts
+> FROM posts
 >
-	INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
+> INNER JOIN posts_etiquetas ON posts.id = posts_etiquetas.post_id
 >
-	INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+> INNER JOIN etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
 >
-GROUP BY posts.id;
+> GROUP BY posts.id;
 
 **¿Cuáles son las etiquetas que no tengan posts relacionados?**
 
 > SELECT *
 >
-FROM etiquetas
+> FROM etiquetas
 >
-	LEFT JOIN posts_etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
+> LEFT JOIN posts_etiquetas ON etiquetas.id = posts_etiquetas.etiqueta_id
 >
-WHERE posts_etiquetas.etiqueta_id IS NULL;
+> WHERE posts_etiquetas.etiqueta_id IS NULL;
 
 ### Clase 40 *Consultando PlatziBlog*
 
@@ -1549,60 +1549,60 @@ Consulta: Traer las categorías ordenados por las que tienen más posts hasta la
 
 > SELECT c.nombre_categoria, COUNT(*) AS cant_posts
 >
-FROM categorias AS c
+> FROM categorias AS c
 >
-	INNER JOIN posts AS p ON c.id = p.categoria_id
+> INNER JOIN posts AS p ON c.id = p.categoria_id
 >
-GROUP BY c.id
+> GROUP BY c.id
 >
-ORDER BY cant_posts DESC;
+> ORDER BY cant_posts DESC;
 
 ¿Cuál es la categoría con más posts?
 
 > SELECT c.nombre_categoria, COUNT(*) AS cant_posts
 >
-FROM categorias AS c
+> FROM categorias AS c
 >
-	INNER JOIN posts AS p ON c.id = p.categoria_id
+> INNER JOIN posts AS p ON c.id = p.categoria_id
 >
-GROUP BY c.id
+> GROUP BY c.id
 >
-ORDER BY cant_posts DESC
+> ORDER BY cant_posts DESC
 >
-LIMIT 1;
+> LIMIT 1;
 
 ¿Cuáles son las cantidad de posts creado por usuario?
 
 > SELECT u.nickname, COUNT(*) AS cant_posts
 >
-FROM usuarios AS u
+> FROM usuarios AS u
 >
-	INNER JOIN posts AS p ON u.id = p.usuario_id
+> INNER JOIN posts AS p ON u.id = p.usuario_id
 >
-GROUP BY u.id
+> GROUP BY u.id
 >
-ORDER BY cant_posts DESC;
+> ORDER BY cant_posts DESC;
 
 Saber cuáles son las categorías que los usuarios escriben
 
 > SELECT u.nickname, COUNT(*) AS cant_posts, GROUP_CONCAT(nombre_categoria)
 >
-FROM usuarios AS u
+> FROM usuarios AS u
 >
-	INNER JOIN posts AS p ON u.id = p.usuario_id
+> INNER JOIN posts AS p ON u.id = p.usuario_id
 >
-	INNER JOIN categorias AS c ON c.id = p.categoria_id
+> INNER JOIN categorias AS c ON c.id = p.categoria_id
 >
-GROUP BY u.id
+> GROUP BY u.id
 >
-ORDER BY cant_posts DESC;
+> ORDER BY cant_posts DESC;
 
 Sacamos los usuarios que no escriben ningún posts
 
 > SELECT *
 >
-FROM usuarios
+> FROM usuarios
 >
-	LEFT JOIN posts ON usuarios.id = posts.usuario_id
+> LEFT JOIN posts ON usuarios.id = posts.usuario_id
 >
-WHERE posts.usuario_id IS NULL;
+> WHERE posts.usuario_id IS NULL;
