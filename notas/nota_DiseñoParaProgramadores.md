@@ -344,4 +344,6 @@ Recuerda que las animaciones y video afectan al rendimiento de tu página.
 
 ### Clase 21 *Resultado final*
 
-Fin del curso, [aquí](https://github.com/mssroboto/diseno-para-programadores/tree/master/4-app "aquí") podemos ver el resultado final del Steam Burger y su código.
+Fin del curso.
+
+Este es el  resultado final del [Steam Burger](https://github.com/mssroboto/diseno-para-programadores/tree/master/4-app "Steam Burger") y su código.
