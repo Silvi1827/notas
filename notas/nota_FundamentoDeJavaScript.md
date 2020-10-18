@@ -437,14 +437,80 @@ La mayoría de las veces, un valor primitivo se representa directamente en el ni
 - **Number:** Es un primitivo de tipo numérico que no tiene específico para los números enteros y de coma flotante.
 - **Bigint:** Es un primitivo numérico en JavaScript que puede representar números enteros con precisión arbitraria. Puede almacenar y operar de forma segura en números enteros grandes incluso más allá del límite seguro de enteros para Number.
 - **Boolean:** Representa una entidad lógica y puede tener dos valores: true y false. 
-- **Undefined: Es una variable a la que no se le ha asignado valor, o no se ha declarado en absoluto (no se declara, no existe).
+- **Undefined:** Es una variable a la que no se le ha asignado valor, o no se ha declarado en absoluto (no se declara, no existe).
 - **Symbol:** Es un valor primitivo único e inmutable y se puede utilizar como clave de una propiedad de objeto (ve más abajo). En algunos lenguajes de programación, los símbolos se denominan "átomos".
 - **Null:** Es un literal de Javascript que representa intencionalmente un valor nulo o "vacío".
 
 ## Modulo 3. Estructuras de Control y Funciones
 ### Clase 12 *Condicionales*
+Los condicionales nos permiten decidir el flujo de nuestro código. Mediante un condicional decidiremos si se ejecuta una parte de nuestro código cuando se cumpla o no cierta condición.
+
+En el ejemplo tenemos a Sacha con una serie de profesiones con valor de verdadero o falso:
+
+![src/fundamentosJavascript_63.png](src/fundamentosJavascript_63.png)
+
+Con las condicionales podemos hacer que nos imprima 'Sacha es: ' y el nombre de la profesión si es verdadera (true):
+
+![src/fundamentosJavascript_64.png](src/fundamentosJavascript_64.png)
+
+La condicional if también tiene otra parte que suele acompañarlo, else:
+
+![src/fundamentosJavascript_65.png](src/fundamentosJavascript_65.png)
+
+**Condicional if… else**
+
+Ejecuta una sentencia si una condición especificada es evaluada como verdadera (en el ejemplo evalúa si la profesión es verdadera). Si la condición es evaluada como falsa, otra sentencia puede ser ejecutada.
+
+***RETO: Crea una función que contenga una condicional e imprima 'Sacha es mayor de edad' o 'Sacha es menor de edad' teniendo en cuenta su edad.***
+
 ### Clase 13 *Funciones que retornan valores*
+Tomemos como ejemplo nuestro reto anterior de mayor o menor de edad y agreguemos otra persona:
+
+![src/fundamentosJavascript_66.png](src/fundamentosJavascript_66.png)
+
+Para hacer más legible este programa podemos desglosar las funciones en funciones más pequeñas que retornen un valor:
+
+![src/fundamentosJavascript_67.png](src/fundamentosJavascript_67.png)
+
+Debemos tener en cuenta que, para incluir el 18 en el rango de edad, se utiliza el símbolo >= (mayor o igual que) y no el símbolo > (mayor que).
+
+**Magic Number:** Son números dispersos en los bloques de código que crean dos grandes problemas, la poca semántica (información sobre su uso) y la posibilidad de que ese número se propague N filas, lo que significa N cambios en diferentes lugares.
+
+Para evitar estos problemas convertirnos nuestro 18 en una variable:
+
+![src/fundamentosJavascript_68.png](src/fundamentosJavascript_68.png)
+
+Pero nosotros deseamos que no se cambie, que no deseamos que su valor cambie a través de la reasignación así que lo convertirnos en una constante (const), por buena práctica se utiliza mayúscula para escribir el nombre separado por guiones bajos (_):
+
+![src/fundamentosJavascript_69.png](src/fundamentosJavascript_69.png)
+
 ### Clase 14 *Arrow functions*
+Arrow Functions (Función Flecha) es una alternativa compacta a una expresión de función tradicional, pero es limitada y no se puede utilizar en todas las situaciones.
+
+Una de las formas de definir una función sin nombre es asignándola una la variable:
+
+![src/fundamentosJavascript_70.png](src/fundamentosJavascript_70.png)
+
+Cuando se declara una función con variable es recomendado hacerlo con un const para que no sea redeclarado.
+
+Con el Arrow Function se elimina la palabra 'function' del código y colocamos una flecha entre el argumento y el corchete de apertura:
+
+![src/fundamentosJavascript_71.png](src/fundamentosJavascript_71.png)
+
+Si el argumento es solamente uno, podemos quitar los paréntesis, suprimir los corchetes y eliminar la palabra 'return' ya que queda implícito:
+
+![src/fundamentosJavascript_72.png](src/fundamentosJavascript_72.png)
+
+Si desglosamos el objeto para acceder al atributo que deseamos debemos volver a poner nuevamente los paréntesis:
+
+![src/fundamentosJavascript_73.png](src/fundamentosJavascript_73.png)
+
+Otro ejemplo seria si quisiéramos hacer una función que permita o niegue un acceso según la edad, para eso  llamamos a la función MAYOR_EDAD y ponemos un símbolo de exclamación (!) que negara la condición que siga:
+
+![src/fundamentosJavascript_74.png](src/fundamentosJavascript_74.png)
+
+***RETO: Escribir la función imprimirEdad con Arrow Functions y completar la función permitirAcceso para que nos imprima si tenemos un acceso denegado  o permitido.***
+
 ### Clase 15 *Estructuras repetitivas: for*
 ### Clase 16 *Estructuras repetitivas: while*
 ### Clase 17 *Estructuras repetitivas: do-while*
