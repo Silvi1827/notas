@@ -592,27 +592,27 @@ La declaración switch evalúa una expresión, comparando el valor de esa ex
 
   ***Sentencia ejecutada cuando el resultado de expresión coincide con el valor_1***
 
-    ***break;***
+  ***break;***
 
   ***case valor_2:***
 
   ***Sentencia ejecutada cuando el resultado de expresión coincide con el valor_2***
 
-    ***break;***
+  ***break;***
 
   ***...***
 
   ***case valor_N:***
 
- ***Sentencia ejecutada cuando el resultado de expresión coincide con el valor_N***
+  ***Sentencia ejecutada cuando el resultado de expresión coincide con el valor_N***
 
-    ***break;***
+  ***break;***
 
   ***default:***
 
   ***Sentencia ejecutada cuando ninguno de los valores coincide con el valor de la expresión***
 
-    ***break;***
+  ***break;***
 
 ***}***
 
@@ -624,6 +624,108 @@ En el ejemplo tenemos un prompt que solicita un signo zodiacal para imprimir el 
 
 ## Modulo 4. Arrays
 ### Clase 19 *Introducción a arrays*
+Los arrays son estructuras que nos permiten organizar elementos dentro de una colección. Estos elementos pueden ser números, strings, booleanos, objetos, etc.
+
+Por ejemplo tenemos un grupo de personas con nombre, apellido y altura:
+
+![src/fundamentosJavascript_81.png](src/fundamentosJavascript_81.png)
+
+Si quisiéramos, podemos guardar a estas personas en una misma colección:
+
+![src/fundamentosJavascript_82.png](src/fundamentosJavascript_82.png)
+
+Si consultamos en la consola nos aparece de la siguiente forma:
+
+![src/fundamentosJavascript_83.png](src/fundamentosJavascript_83.png)
+
+El número nos dice que es una colección de X elementos, en este caso 6, y entre llaves nos marca cada objeto.
+
+Si queremos acceder al primer elemento escribimos, nombre_array[número]:
+
+![src/fundamentosJavascript_84.png](src/fundamentosJavascript_84.png)
+
+Si lo que queremos es acceder a los atributos de los objetos son de dos formas, ***nombre_array[número].atributo*** o ***nombre_array[número]['atributo']***, los dos completamente equivalentes:
+
+![src/fundamentosJavascript_85.png](src/fundamentosJavascript_85.png)
+
+También podemos recorrer el array e ir imprimiendo la altura de cada uno de la siguiente forma:
+
+![src/fundamentosJavascript_86.png](src/fundamentosJavascript_86.png)
+
+- **length:** Representa la longitud del array.
+- **i:** Es el índice del array.
+
 ### Clase 20 *Filtrar un array*
+En esta clase aprenderemos como filtrar los arrays y para hacerlo utilizaremos el método filter() que nos permite filtrar solo los elementos que deseamos (según ciertos criterios) y devolverlos en un nuevo array.
+
+En este ejemplo seguiremos usando nuestra colección persona de la clase anterior y filtraremos a las personas cuya altura sea mayor de 1.80mts:
+
+![src/fundamentosJavascript_86.png](src/fundamentosJavascript_87.png)
+
+Tenemos:
+
+- El array 'personas'.
+- Una variable que guarda nuestra filtración de las personas altas (altura mayor a 1.80).
+- La función ES_ALTA que recibe como parámetro a 'persona' y retorna a aquellas que cumplan la condición de altura mayor 1.80.
+
+Cuando buscas en la red códigos con filtros puede que te encuentres con esto que es prácticamente:
+
+![src/fundamentosJavascript_86.png](src/fundamentosJavascript_88.png)
+
+También, si deseas hacer más prolijo tu código puedes escribirlo de la siguiente forma:
+
+![src/fundamentosJavascript_86.png](src/fundamentosJavascript_89.png)
+
+***RECUERDA: Si no hay elementos que pasen la prueba, filter() devuelve un array vacío.***
+
+***RETO: Escribe el filtrado de personas bajas.***
+
 ### Clase 21 *Transformar un array*
+El método map() crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
+
+Siguiendo con nuestra colección personas, pasaremos la altura de metros a centímetros, pero si lo escribimos de esta forma:
+
+![src/fundamentosJavascript_90.png](src/fundamentosJavascript_90.png)
+
+Estaremos modificando nuestro array personas:
+
+![src/fundamentosJavascript_91.png](src/fundamentosJavascript_91.png)
+
+Para evitar eso debemos crear un nuevo objeto de la siguiente manera:
+
+![src/fundamentosJavascript_92.png](src/fundamentosJavascript_92.png)
+
+De esta forma no tocamos las alturas de nuestros objetos:
+
+![src/fundamentosJavascript_93.png](src/fundamentosJavascript_93.png)
+
+También, si queremos hacer más prolijo nuestro código, podemos modificar la nomenclatura de nuestro Arrow Functions. Dado que simplemente devuelve un objeto debemos poner paréntesis seguido de llaves y lo que deseamos retornar:
+
+![src/fundamentosJavascript_94.png](src/fundamentosJavascript_94.png)
+
 ### Clase 22 *Reducir un array a un valor*
+El método reduce() nos permite reducir, mediante una función que se aplica a cada uno de los elemento del array, todos los elementos de dicho array, a un valor único.
+
+En nuestra colección 'personas' ponemos la cantidad de libros que tiene cada uno:
+
+![src/fundamentosJavascript_95.png](src/fundamentosJavascript_95.png)
+
+Si nosotros queremos contar la cantidad total de libros podemos hacer lo siguiente:
+
+![src/fundamentosJavascript_96.png](src/fundamentosJavascript_96.png)
+
+Es totalmente valido y funciona, pero también podemos hacerlo lo mismo con un código más prolijo de la siguiente forma:
+
+![src/fundamentosJavascript_97.png](src/fundamentosJavascript_97.png)
+
+Tenemos:
+
+- Un array 'personas'.
+- La función 'REDUCER' que recibe como dos parámetros y las suma.
+- La variable 'totalLibro' que guarda la totalidad de la cantidad de libros.
+
+El reduce() tiene dos argumentos; la función y el valor inicial del acumulador. Mientras que la función REDUCER recibe el acumulador y cada uno de los elementos (persona), y retorna la suma de la suma del acumulador y la cantidad de libros de cada persona.
+
+Este código también podemos recudirlo un poco más y escribirlo así:
+
+![src/fundamentosJavascript_98.png](src/fundamentosJavascript_98.png)
