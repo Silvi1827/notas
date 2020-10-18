@@ -537,7 +537,7 @@ While crea un bucle que ejecuta una sentencia especificada mientras cierta condi
 
 ***while (condición) {***
 
-	***sentencia***
+  ***sentencia***
 
 ***}***
 
@@ -573,7 +573,7 @@ La sentencia do-while (hacer mientras) crea un bucle que ejecuta una sentencia e
 
 ***do {***
 
-	***sentencia***
+  ***sentencia***
 
 ***} while (condición)***
 
@@ -613,7 +613,7 @@ La declaración switch evalúa una expresión, comparando el valor de esa ex
   ***Sentencia ejecutada cuando ninguno de los valores coincide con el valor de la expresión***
 
     ***break;***
-    
+
 ***}***
 
 También vimos **prompt** que muestra un diálogo con mensaje opcional que solicita al usuario que introduzca un texto.
