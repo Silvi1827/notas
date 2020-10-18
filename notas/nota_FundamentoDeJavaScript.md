@@ -232,11 +232,220 @@ El operador división se produce el cociente de la operación donde el operando 
 ![src/fundamentosJavascript_28.png](src/fundamentosJavascript_28.png)
 
 ### Clase 6 *Funciones*
+
+Las funciones son fracciones de código reutilizable. En términos generales, una función es un "subprograma" que puede ser llamado por código externo (o interno en caso de recursión) a la función. Al igual que el programa en sí mismo, una función se compone de una secuencia de declaraciones, que conforman el llamado cuerpo de la función. Se pueden pasar valores a una función, y la función puede devolver un valor.
+
+**FUNCTION**
+
+La función está compuesta por:
+
+![src/fundamentosJavascript_29.png](src/fundamentosJavascript_29.png)
+
+- **function:** Palabra reservada que crea un nuevo objeto function.
+- **imprimirEdad:** Es el nombre la función.
+- **():** El nombre de un argumento que se pasará a la función. Una función puede tener hasta 255 argumentos.
+- **{ instrucciones }:** Las instrucciones que forman el cuerpo de la función.
+
+**Sin parámetro vs Con parámetro**
+
+![src/fundamentosJavascript_30.png](src/fundamentosJavascript_30.png)
+
+Si bien ambos códigos son aceptados y pueden ser ejecutados, es a la hora de reutilizar el código cuando se puede notar la diferencia entre ambos. Por ejemplo, deseamos que el nombre ahora sea 'Vicky' y la edad 24, si ponemos otro imprimirEdad('Vicky', 24) debajo de cada uno veremos que el primer código nos seguirá imprimiendo con el nombre Sacha y la edad 28, pero el segundo SI cambiara tanto el nombre como la edad.
+
+**Reutilizar código**
+
+![src/fundamentosJavascript_31.png](src/fundamentosJavascript_31.png)
+
+Como se ha dicho, Function nos permite reutilizar el código enviado diferentes valores mediante los parámetros.
+
+**Débilmente tipado**
+
+![src/fundamentosJavascript_32.png](src/fundamentosJavascript_32.png)
+
+Recordemos que JavaScript es un lenguaje débilmente tipado, es decir, que sin importar si los parámetros que le pasemos a la función estén invertidos o incluso incompletos él intentara ejecutar el código.
+
+![src/fundamentosJavascript_33.png](src/fundamentosJavascript_33.png)
+
+**¿Qué son las palabras reservadas?**
+
+Son palabras que no pueden ser utilizadas como variables, funciones, métodos o identificadores de objetos. Nosotros NO podemos escribir algo como ***var var = 15*** o ***var function = 'Sacha'***.
+
 ### Clase 7 *El alcance de las funciones*
+Una variable que no está definida dentro del cuerpo de una función es una variable global:
+
+![src/fundamentosJavascript_34.png](src/fundamentosJavascript_34.png)
+
+Por el contrario, una variable definida dentro de una función es una variable local:
+
+![src/fundamentosJavascript_35.png](src/fundamentosJavascript_35.png)
+
+Para que la ejecución de una función no modifique una variable global usamos parámetros en lugar de pasar directamente la variable.
+
+También es posible utilizar el mismo nombre para una variable global y para el parámetro de una función con un alcance local:
+
+![src/fundamentosJavascript_36.png](src/fundamentosJavascript_36.png)
+
+**window**
+
+El objeto window representa la ventana que contiene un documento DOM.
+
+Tomemos en cuenta el primer ejemplo:
+
+![src/fundamentosJavascript_37.png](src/fundamentosJavascript_37.png)
+
+Si escribimos nombre en la consola nos aparece 'Sacha' sin mayúscula, pero al escribir window.nombre nos imprime 'SACHA':
+
+![src/fundamentosJavascript_38.png](src/fundamentosJavascript_38.png)
+
 ### Clase 8 *Objetos*
+Un objeto es una colección de propiedades, y una propiedad es una asociación entre un nombre (o clave) y un valor. El valor de una propiedad puede ser una función, en cuyo caso la propiedad es conocida como un método. Además de los objetos que están predefinidos en el navegador, puedes definir tus propios objetos.
+
+Por ejemplo, si deseamos tener un nombre con el valor 'Sacha' y otro con el valor 'Dario', esto:
+
+![src/fundamentosJavascript_39.png](src/fundamentosJavascript_39.png)
+
+No podemos ponerlo de esta forma, porque estaríamos pisando la variable.
+
+Una opción sería:
+
+![src/fundamentosJavascript_40.png](src/fundamentosJavascript_40.png)
+
+Pero si deseáramos más nombre entonces estaríamos creando nuevas variables como ***nombrePepito***, ***nombreVicky*** y llamando nuevamente a la función.
+
+Un objeto siendo un entidad independiente con propiedades y tipos, está construida de esta forma:
+
+![src/fundamentosJavascript_41.png](src/fundamentosJavascript_41.png)
+
+- **var:** Declara la variable.
+- **sacha, dario:** Los nombres del objeto.
+- **{ clave: valor }:** Los objetos son delimitados por llaves, compuesto por una clave y un valor que se separan entre sí por dos puntos.
+
+Un objeto puede tener todos los atributos que sean necesarios. En el ejemplo creamos un objeto 'sacha' y otro objeto 'dario', ambos con nombres, apellidos y edad. También, escribir el nombre de un objeto separado por un punto del nombre de un atributo, nos permite acceder al valor de dicho atributo para ese objeto.
+
+![src/fundamentosJavascript_42.png](src/fundamentosJavascript_42.png)
+
+También podemos ingresar directamente dentro del console.log sin la necesidad de la variable nombre:
+
+![src/fundamentosJavascript_43.png](src/fundamentosJavascript_43.png)
+
+Las últimas versiones de JavaScript nos permiten desglosar el objeto para acceder únicamente al atributo que nos interesa. Esto se consigue encerrando el nombre del atributo entre llaves { }:
+
+![src/fundamentosJavascript_44.png](src/fundamentosJavascript_44.png)
+
+Podemos llamar a la función sin hacer referencia a una variable, creando un nuevo objeto dentro:
+
+![src/fundamentosJavascript_45.png](src/fundamentosJavascript_45.png)
+
+Debemos tener cuidado cuando hacemos esto porque si enviamos una función sin enviar nada o creamos un nuevo objeto sin nombre nos puede salir error, porque JavaScript intentara acceder al atributo nombre de algo que no se lo estamos pasando:
+
+![src/fundamentosJavascript_46.png](src/fundamentosJavascript_46.png)
+
 ### Clase 9 *Desestructurar objetos*
+La desestructuración de objetos es una expresión de JavaScript que permite desempacar valores de arreglos o propiedades de objetos en distintas variables, es decir, para no duplicar las variables introducir el nombre de la variable como parámetro de la segunda variable.
+
+![src/fundamentosJavascript_47.png](src/fundamentosJavascript_47.png)
+
+**RETO: Crear una función que imprima el nombre y la edad de la siguiente forma; Hola, me llamo nombre y tengo edad años**
+
 ### Clase 10 *Parámetros como referencia o como valor*
+JavaScript se comporta de manera distinta cuando le pasamos un objeto como parámetro. Cuando los objetos se pasan como una referencia:
+
+![src/fundamentosJavascript_48.png](src/fundamentosJavascript_48.png)
+
+Estos se modifican fuera de la función:
+
+![src/fundamentosJavascript_49.png](src/fundamentosJavascript_49.png)
+
+Si por ejemplo hacemos esto:
+
+![src/fundamentosJavascript_50.png](src/fundamentosJavascript_50.png)
+
+El valor no cambia:
+
+![src/fundamentosJavascript_51.png](src/fundamentosJavascript_51.png)
+
+Para solucionar esto se puede crear un objeto diferente. Esto lo podemos hacer colocando tres puntos antes del nombre:
+
+![src/fundamentosJavascript_52.png](src/fundamentosJavascript_52.png)
+
+Creamos otra variable, sachaMasViejo, y ahora tenemos tanto la edad original (28) como la nueva edad (29):
+
+![src/fundamentosJavascript_53.png](src/fundamentosJavascript_53.png)
+
 ### Clase 11 *Comparaciones en JavaScript*
+Existen varias maneras de comparar variables u objetos dentro de JavaScript. En el primer ejemplo le asignamos a 'x' un valor numérico y a 'y' un string:
+
+![src/fundamentosJavascript_54.png](src/fundamentosJavascript_54.png)
+
+JavaScript tiene comparaciones estrictas y abstractas.
+
+Una comparación estricta (por ejemplo, ===) solo es verdadera si los operandos son del mismo tipo y los contenidos coinciden. La comparación abstracta más comúnmente utilizada (por ejemplo, ==) convierte los operandos al mismo tipo antes de hacer la comparación.
+
+![src/fundamentosJavascript_55.png](src/fundamentosJavascript_55.png)
+
+En el ejemplo podemos ver como '==' nos da true o verdadero pues ambos son cuatro, mientras que '===' nos imprime false o falso debido a que los dos son de distintos tipos.
+
+***RECUERDA: Se recomienda que cada vez que deseamos hacer una comparación hacer uso de '===', esto para evitar que JavaScript compare dos variables que son distintos tipos.***
+
+**Comparando objetos**
+
+Tenemos dos objetos, ambos tienen un atributo nombre con el mismo valor:
+
+![src/fundamentosJavascript_56.png](src/fundamentosJavascript_56.png)
+
+Pero al realizar la comparación:
+
+![src/fundamentosJavascript_57.png](src/fundamentosJavascript_57.png)
+
+Nos resulta falso en ambos casos, esto se debe a que, a pesar de que tanto 'sacha' como 'otraPersona' son del tipo Objeto, ambos referencian a diferentes objetos.
+
+**¿Cómo hacer que dos objetos sean iguales?**
+
+Tenga en cuenta que un objeto se convierte en una primitiva si, y solo si, su comparando es una primitiva. Si ambos operandos son objetos, se comparan como objetos, y la prueba de igualdad es verdadera solo si ambos refieren el mismo objeto.
+
+![src/fundamentosJavascript_58.png](src/fundamentosJavascript_58.png)
+
+Si realizamos la comparación:
+
+![src/fundamentosJavascript_59.png](src/fundamentosJavascript_59.png)
+
+Si desglosamos el objeto en otro:
+
+![src/fundamentosJavascript_60.png](src/fundamentosJavascript_60.png)
+
+Nos dará falso, porque al desestructurar el objeto estamos creando un nuevo objeto.
+
+Si regresamos al ejemplo de objetos iguales, le cambiamos el nombre al objeto otraPersona y realizamos la comparación:
+
+![src/fundamentosJavascript_61.png](src/fundamentosJavascript_61.png)
+
+Nos dará true (verdadero) porque ambos referencia al mismo objeto sin importar que el valor del atributo nombre sea diferentes.
+
+Lo mismo sucede con el objeto 'sacha' y el objeto 'otraPersona' cuyo atributo nombre contenga el mismo valor, al realizar la comparación:
+
+![src/fundamentosJavascript_62.png](src/fundamentosJavascript_62.png)
+
+Seguirá imprimiendo false (falso) porque ambos referencian a objetos distintos.
+
+**Datos primitivos**
+
+En JavaScript, un primitive (valor primitivo, tipo de dato primitivo) son datos que no son un objeto y no tienen métodos. Hay 6 tipos de datos primitivos: string, number, bigint, boolean, undefined y symbol. También hay null, que aparentemente es primitivo, pero de hecho es un caso especial para cada Object.
+
+La mayoría de las veces, un valor primitivo se representa directamente en el nivel más bajo de la implementación del lenguaje. Todos los primitivos son inmutables, es decir, no se pueden modificar. Es importante no confundir un primitivo en sí mismo con un valor primitivo asignado a una variable. Se puede reasignar un nuevo valor a la variable, pero el valor existente no se puede cambiar de la misma forma en que se pueden modificar los objetos, los arreglos y las funciones.
+
+- **String:** Se utiliza para representar datos textuales. Es un conjunto de "elementos" de valores enteros sin signo de 16 bits. Cada elemento ocupa una posición en la cadena. El primer elemento está en el índice 0, el siguiente en el índice 1, y así sucesivamente. La longitud de una cadena es el número de elementos que contiene.
+- **Number:** Es un primitivo de tipo numérico que no tiene específico para los números enteros y de coma flotante.
+- **Bigint:** Es un primitivo numérico en JavaScript que puede representar números enteros con precisión arbitraria. Puede almacenar y operar de forma segura en números enteros grandes incluso más allá del límite seguro de enteros para Number.
+- **Boolean:** Representa una entidad lógica y puede tener dos valores: true y false. 
+- **Undefined: Es una variable a la que no se le ha asignado valor, o no se ha declarado en absoluto (no se declara, no existe).
+- **Symbol:** Es un valor primitivo único e inmutable y se puede utilizar como clave de una propiedad de objeto (ve más abajo). En algunos lenguajes de programación, los símbolos se denominan "átomos".
+- **Null:** Es un literal de Javascript que representa intencionalmente un valor nulo o "vacío".
 
 ## Modulo 3. Estructuras de Control y Funciones
-### Clase 12 **
+### Clase 12 *Condicionales*
+### Clase 13 *Funciones que retornan valores*
+### Clase 14 *Arrow functions*
+### Clase 15 *Estructuras repetitivas: for*
+### Clase 16 *Estructuras repetitivas: while*
+### Clase 17 *Estructuras repetitivas: do-while*
+### Clase 18 *Condicional múltiple: switch*
