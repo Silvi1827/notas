@@ -516,9 +516,10 @@ El bucle for se utiliza para repetir una o más instrucciones un determinado nú
 
 **Sintaxis:**
 
-***for ([expresión-inicial]; [condición]; [expresión-final])
-{
+***for ([expresión-inicial]; [condición]; [expresión-final]) {
+
 	sentencia
+
 }***
 
 En el ejemplo tenemos a una persona (Sacha) que baja o sube de peso durante un año (365 días):
@@ -534,8 +535,10 @@ While crea un bucle que ejecuta una sentencia especificada mientras cierta condi
 
 **Sintaxis:**
 
-***while (condición){
+***while (condición) {
+
 	sentencia
+
 }***
 
 En el ejemplo tenemos nuestra persona (Sacha) que debe adelgazar 3kg y vamos contando los días hasta que esa condición se cumpla:
@@ -569,7 +572,9 @@ La sentencia do-while (hacer mientras) crea un bucle que ejecuta una sentencia e
 **Sintaxis:**
 
 ***do {
+
 	sentencia
+
 } while (condición)***
 
 En el ejemplo tenemos un contador que suma la cantidad de veces que fuimos a ver si llovía:
@@ -582,19 +587,33 @@ La declaración switch evalúa una expresión, comparando el valor de esa ex
 **Sintaxis:**
 
 ***switch (expresión) {
+
   case valor_1:
+
   Sentencia ejecutada cuando el resultado de expresión coincide con el valor_1
+
     break;
+
   case valor_2:
+
   Sentencia ejecutada cuando el resultado de expresión coincide con el valor_2
+
     break;
+
   ...
+
   case valor_N:
+
  Sentencia ejecutada cuando el resultado de expresión coincide con el valor_N
+
     break;
+
   default:
+
   Sentencia ejecutada cuando ninguno de los valores coincide con el valor de la expresión
+
     break;
+
 }***
 
 También vimos **prompt** que muestra un diálogo con mensaje opcional que solicita al usuario que introduzca un texto.
