@@ -124,9 +124,7 @@ Un índice es un entero entre 0 y 1 menos que la longitud de la cadena. Si no s
 
 Sacha está compuesto de la siguiente forma:
 
-|S|a|c|h|a|
-| ------------ | ------------ | ------------ | ------------ |
-|0|1|2|3|4|
+![src/fundamentosJavascript_TablaNombre.png](src/fundamentosJavascript_TablaNombre.png)
 
 Por tanto:
 
