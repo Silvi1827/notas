@@ -512,6 +512,99 @@ Otro ejemplo seria si quisiéramos hacer una función que permita o niegue un ac
 ***RETO: Escribir la función imprimirEdad con Arrow Functions y completar la función permitirAcceso para que nos imprima si tenemos un acceso denegado  o permitido.***
 
 ### Clase 15 *Estructuras repetitivas: for*
+El bucle for se utiliza para repetir una o más instrucciones un determinado número de veces. Consiste en tres expresiones opcionales, encerradas en paréntesis y separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.
+
+**Sintaxis:**
+
+***for ([expresión-inicial]; [condición]; [expresión-final])
+{
+	sentencia
+}***
+
+En el ejemplo tenemos a una persona (Sacha) que baja o sube de peso durante un año (365 días):
+
+![src/fundamentosJavascript_75.png](src/fundamentosJavascript_75.png)
+
+**Math.random()**
+
+Una función que retorna un punto flotante, un número pseudoaleatorio dentro del rango [0, 1). Esto quiere decir, desde el 0 (incluido) hasta el 1 pero sin incluirlo (excluido), el cual se puede escalar hasta el rango deseado. La implementación selecciona la semilla inicial hasta el algoritmo que genera el número aleatorio; este no puede ser elegido o cambiado por el usuario.
+
 ### Clase 16 *Estructuras repetitivas: while*
+While crea un bucle que ejecuta una sentencia especificada mientras cierta condición se evalúe como verdadera. Dicha condición es evaluada antes de ejecutar la sentencia
+
+**Sintaxis:**
+
+***while (condición){
+	sentencia
+}***
+
+En el ejemplo tenemos nuestra persona (Sacha) que debe adelgazar 3kg y vamos contando los días hasta que esa condición se cumpla:
+
+![src/fundamentosJavascript_76.png](src/fundamentosJavascript_76.png)
+
+En ocasiones nuestro código puede fallar por errores de sintaxis o errores lógicos. En caso de que quieras verificar tu código, debes utilizar un debugger, el código se detiene cada vez que lee esta palabra.
+
+**Incrementar**
+
+El operador Incremento ( ++ ) incrementa su operando en uno.
+
+- Si se utiliza como un postfix, entonces devuelve el valor antes de incrementar.
+- Si se usa como un prefijo, entonces devuelve el valor después de incrementar.
+
+**POSTFIX**
+
+![src/fundamentosJavascript_77.png](src/fundamentosJavascript_77.png)
+
+En este caso, a se incrementa después de configurar b . Entonces, b será 5, y c será 6.
+
+**PREFIX**
+
+![src/fundamentosJavascript_78.png](src/fundamentosJavascript_78.png)
+
+En este caso, a se incrementa antes de configurar b . Entonces, b será 6, y c será 6.
+
 ### Clase 17 *Estructuras repetitivas: do-while*
+La sentencia do-while (hacer mientras) crea un bucle que ejecuta una sentencia especificada, hasta que la condición de comprobación se evalúa como falsa. La condición se evalúa después de ejecutar la sentencia, dando como resultado que la sentencia especificada se ejecute al menos una vez.
+
+**Sintaxis:**
+
+***do {
+	sentencia
+} while (condición)***
+
+En el ejemplo tenemos un contador que suma la cantidad de veces que fuimos a ver si llovía:
+
+![src/fundamentosJavascript_79.png](src/fundamentosJavascript_79.png)
+
 ### Clase 18 *Condicional múltiple: switch*
+La declaración switch evalúa una expresión, comparando el valor de esa expresión con una instancia case, y ejecuta declaraciones asociadas a ese case, así como las declaraciones en los case que siguen.
+
+**Sintaxis:**
+
+***switch (expresión) {
+  case valor_1:
+  Sentencia ejecutada cuando el resultado de expresión coincide con el valor_1
+    break;
+  case valor_2:
+  Sentencia ejecutada cuando el resultado de expresión coincide con el valor_2
+    break;
+  ...
+  case valor_N:
+ Sentencia ejecutada cuando el resultado de expresión coincide con el valor_N
+    break;
+  default:
+  Sentencia ejecutada cuando ninguno de los valores coincide con el valor de la expresión
+    break;
+}***
+
+También vimos **prompt** que muestra un diálogo con mensaje opcional que solicita al usuario que introduzca un texto.
+
+En el ejemplo tenemos un prompt que solicita un signo zodiacal para imprimir el horóscopo del día:
+
+![src/fundamentosJavascript_80.png](src/fundamentosJavascript_80.png)
+
+## Modulo 4. Arrays
+### Clase 19 *Introducción a arrays*
+### Clase 20 *Filtrar un array*
+### Clase 21 *Transformar un array*
+### Clase 22 *Reducir un array a un valor*
