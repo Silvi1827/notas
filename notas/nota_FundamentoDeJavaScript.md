@@ -1164,15 +1164,18 @@ Async-await es la manera más simple y clara de realizar tareas asíncronas.
 - Async: La declaración de función async define una función asíncrona, la cual devuelve un objeto Async Function. Un objeto Async Function, que representa una función asíncrona que ejecuta el código contenido dentro de la función.
 
   - Cuando se llama a una función async, esta devuelve un elemento Promise. Cuando la función async devuelve un valor, Promise se resolverá con el valor devuelto. Si la función async genera una excepción o algún valor, Promise se rechazará con el valor generado.
-	- Una función async puede contener una expresión await, la cual pausa la ejecución de la función asíncrona y espera la resolución de la Promise pasada y, a continuación, reanuda la ejecución de la función async y devuelve el valor resuelto.
-	- La finalidad de las funciones async/await es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de Promises. Del mismo modo que las Promises son semejantes a las devoluciones de llamadas estructuradas, async/await se asemejan a una combinación de generadores y promesas.
+
+  - Una función async puede contener una expresión await, la cual pausa la ejecución de la función asíncrona y espera la resolución de la Promise pasada y, a continuación, reanuda la ejecución de la función async y devuelve el valor resuelto.
+
+  - La finalidad de las funciones async/await es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de Promises. Del mismo modo que las Promises son semejantes a las devoluciones de llamadas estructuradas, async/await se asemejan a una combinación de generadores y promesas.
 
 - Await: El operador await es usado para esperar a una Promesa. Sólo puede ser usado dentro de una función async function.
 
 	- La expresión await provoca que la ejecución de una función async sea pausada hasta que una Promise sea terminada o rechazada, y regresa a la ejecución de la función async después del término. Al regreso de la ejecución, el valor de la expresión await es la regresada por una promesa terminada.
-
+  
     - Si la Promise es rechazada, el valor de la expresión await tendrá el valor de rechazo.
-		- Si el valor de la expresión seguida del operador await  no es una promesa, será convertido a una resolved Promise.
+
+    - Si el valor de la expresión seguida del operador await  no es una promesa, será convertido a una resolved Promise.
 
 **Sintaxis de Async**
 
