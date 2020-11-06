@@ -1640,7 +1640,7 @@ Un caso aún más especial de los punto y coma o más bien del Enter es cuando t
 
 > function calcularDoble(numero) {
 >
-	> return { original: numero, doble: numero * 2 }
+>   return { original: numero, doble: numero * 2 }
 >
 > }
 
@@ -1648,13 +1648,13 @@ Escrito de esa forma está completamente bien y funcionara el código, pero si p
 
 > function calcularDoble(numero) {
 >
-	> return
+>   return
 >
-	> {
+>   {
 >
-		> original: numero, doble: numero * 2
-
-	> }
+>     original: numero, doble: numero * 2
+>
+>   }
 >
 > }
 
