@@ -1488,19 +1488,179 @@ La memorización es una técnica de programación que nos permite ahorrar cómpu
 
 Usemos como ejemplos los factoriales:
 
-	***!6 = 6 * 5 * 4 * 3 * 2 * 1 = 720***
+	!6 = 6 * 5 * 4 * 3 * 2 * 1 = 720
 
-	***!12= 12 * 11 * 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 479001600***
+	!12= 12 * 11 * 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 479001600
 
 Podemos observar que cuando calculamos el factorial de 12 también estamos calculando el factorial de 6, entonces todo eso sería lo mismo que poner:
 
-	***!12= 12 * 11 * 10 * 9 * 8 * 7 * !6 = 479001600***
+	!12= 12 * 11 * 10 * 9 * 8 * 7 * !6 = 479001600
 
 Lo que veremos en esta clase es como podemos guardarnos resultados para que luego cuando realicemos otras cuentas no tengamos que repetir el proceso.
 
 ![src/fundamentosJavascript_156.png](src/fundamentosJavascript_156.png)
 
 ### Clase 51 *Entiende los closures de JavaScript*
+
+Un closure, básicamente, es una función que recuerda el estado de las variables al momento de ser invocada, y conserva este estado a través de reiteradas ejecuciones. Un aspecto fundamental de los closures es que son funciones que retornan otras funciones.
+
+Tomemos como ejemplo esto:
+
+![src/fundamentosJavascript_157.png](src/fundamentosJavascript_157.png)
+
+Tenemos una función crearSaludo() que recibe como argumento finalDeFrase y retorna otra nueva función sin nombre. Esta nueva función recibe como argumento nombre y devuelve un saludo.
+
+En esencia, crearSaludo es una fábrica de función: crea funciones que pueden enviar un salido específico. En el ejemplo utilizamos nuestra fábrica de función para crear tres nuevas funciones: una que al final de la frase agregue 'che kape', otra que agregue 'wey' y el último que agregue 'parce'.
+
+saludoParaguayo, saludoMexicano y saludoColombiano son closures. Comparten la misma definición de cuerpo de función, pero almacenan diferentes entornos. En el entorno saludoParaguayo, finalDeFrase es 'che kape'. En lo que respecta a saludoMexicano, finalDeFrase es 'wey', y en saludoColombiano, finalDeFrase es 'parce'.
+
+En cada saludo (saludoParaguayo, saludoMexicano, saludoColombiano) enviamos el mismo nombre que es 'Sacha'.
+
+Esto también podemos hacerlo enviando diferentes nombres y recibiendo diferentes saludos:
+
+![src/fundamentosJavascript_158.png](src/fundamentosJavascript_158.png)
+
 ### Clase 52 *Estructuras de datos inmutables*
+
+Las estructuras de datos inmutables forman parte de los principios de la Programación Funcional y nos permiten evitar tener efectos colaterales en los datos. En otras palabras, que hayan modificaciones en las variables sin nuestro consentimiento, produciendo comportamientos inesperados en el programa.
+
+**¿Que nos hace inmutables?**
+
+Un valor inmutable es un valor que no se puede cambiar luego de ser definido, se puede modificar pero debe ser en un objeto diferente.
+
+**Datos Inmutables**
+
+Su planteamiento básico es muy sencillo: un dato u objeto, una vez creado, no puede ser cambiado, manteniendo su estado original en todo momento. Si por algún motivo se tuviera que cambiar el dato, entonces se obtendría una copia con los datos modificados, pero nunca se cambian los valores originales.
+
+Lo contrario a la inmutabilidad es la mutabilidad, es decir, la capacidad para cambiar el valor o el estado de los elementos de un lenguaje de programación. Cuando cambiamos el valor de una propiedad, o la referencia de una variable, estamos haciendo uso la mutabilidad, es decir, de la capacidad de cambiar.
+
+**Inmutabilidad en JavaScript**
+
+Aunque JavaScript es extremadamente flexible y tiene una gran capacidad de mutación, tenemos un ejemplo bastante sencillo de inmutabilidad, que facilita mucho la comprensión de este concepto.
+
+Tenemos un objeto sacha con nombre, apellido y edad, y creamos una variable constante cumple que suma la edad del objeto sacha:
+
+![src/fundamentosJavascript_159.png](src/fundamentosJavascript_159.png)
+
+Podemos ver que cada vez que llamamos a cumple, la edad de sacha se ve modificada. Para impedir eso, debemos hacerlo un dato inmutable:
+
+![src/fundamentosJavascript_160.png](src/fundamentosJavascript_160.png)
+
+En este caso tenemos una constante cumpleInmutable que crea un nuevo objeto con la nueva edad de sacha, si lo deseamos podemos también podemos guardarlo en una nueva variable de la siguiente forma: const sacha29 = cumpleInmutable(sacha), teniendo así un nuevo objeto sacha con la edad modificada a 29.
+
 ### Clase 53 *Cambiando de contexto al llamar a una función*
+
+Cuando hablamos de contexto en JavaScript nos estamos refiriendo a quien es el objeto this cuando se ejecuta un código. Como vimos en el curso, es uno de los errores más comunes de 'no se puede ejecutar este método es undefine', no está definido, y eso es porque generalmente el this no es quien esperamos que sea
+
+En esta clase estaremos aprendiendo tres métodos para cambiar el contexto de una función.
+
+Tenemos una variable llamada sacha con nombre y apellido, y una función saludar() con un console.log:
+
+![src/fundamentosJavascript_161.png](src/fundamentosJavascript_161.png)
+
+Si vemos en el navegador, al llamar la función saludar() nos saldrá 'undefine' y es algo de esperarse porque cuando se ejecuta la función el this hace referencia a window.
+
+El primer método para cambiar el this de esa función es con bind():
+
+![src/fundamentosJavascript_162.png](src/fundamentosJavascript_162.png)
+
+Para eso definimos otra función que la vamos a guardar en una variable llamada saludarASacha(), de esta manera bind() lo que hace es devolvernos una nueva función atando el parámetro enviado al this de la función.
+
+También podemos hacer uso de setTimeout(), recordemos que recibe una función y un dilay. Lo que queremos es que ejecute la función de saludarASacha(), pero podemos escribir simplemente saludar.bind(sacha) y lo ejecutara perfectamente, además vemos que la función bind() no modifica la función original ya que si llamamos a la función saludar() nos seguirá dando 'undefine':
+
+![src/fundamentosJavascript_163.png](src/fundamentosJavascript_163.png)
+
+Otra cosa que podemos hacer es poner un parámetro saludo y, si queremos, también podemos poner un valor por defecto. ¿Qué pasa si queremos modificar el valor por defecto? Lo que debemos hacer es indicar el valor deseado teniendo así un nuevo saludo:
+
+![src/fundamentosJavascript_164.png](src/fundamentosJavascript_164.png)
+
+Tanto el segundo como el tercer método, a diferencia de bind(), ejecutan la función en ese mismo momento.
+
+Por ejemplo probemos la primera que es call():
+
+![src/fundamentosJavascript_165.png](src/fundamentosJavascript_165.png)
+
+Lo que hacemos es escribir saludar.call() y la ejecuta al instante, en cambio sí escribimos saludar.bind() podemos que no hace nada. Vemos también que los parámetros en call() son separados por comas.
+
+El tercer método es apply() y funciona de manera similar a call():
+
+![src/fundamentosJavascript_166.png](src/fundamentosJavascript_166.png)
+
+El primer parámetro es quien va a ser this y el segundo parámetro es donde cambia con respecto al call() ya que es un array, ya que el array contiene los parámetros de la función, es decir, primer elemento es el primer parámetro.
+
 ### Clase 54 *¿Cuándo hace falta poner el punto y coma al final de la línea?*
+
+El punto y coma que dolor de cabeza en JavaScript ¿Hace falta ponerlo? ¿No hace falta ponerlo? Hay quienes dicen que sí, hay quienes dicen que no y hay quienes prefieren ponerlo. La verdad es que usar punto y coma en JavaScript es opcional, excepto en algunos casos, por ejemplo si quisiéramos separar dos sentencias: declaramos una variable, asignamos un valor, hacemos cuentas, llamar una función, etc. En estos casos son completamente opcionales.
+
+**Ejemplo de caso opcional**
+
+> alert('Hola, mi nombre es Sacha')
+>
+> var numero = 27
+
+Nosotros tenemos un alert() y poder debajo declaramos una variable, no es necesario poner un punto y coma porque el código seguirá funcionando. También hay casos en los que son extremadamente innecesarios, como ponerlo al final de la declaración de una función:
+
+> function saludar() {
+>
+  > console.log('Hola, mi nombre es Sacha')
+>
+> };
+
+O al final de un for:
+
+> for(var i = 0; i < 18; i++) {
+>
+  > console.log(i)
+>
+> };
+
+**Casos en los que son necesarios**
+
+Hay algunos casos donde son necesarios, como cuando usamos varias instrucciones en una misma línea o cuando empezamos la próxima línea con un array:
+
+> console.log('Hola, mi nombre es Sacha');
+>
+> [1, 2, 3].forEach(n => console.log(n * 2)
+
+En ocasiones puedes que te encuentres con que el punto y coma esta por delante del array, y es algo completamente aceptable:
+
+> console.log('Hola, mi nombre es Sacha')
+>
+> ;[1, 2, 3].forEach(n => console.log(n * 2)
+
+Otra ocasión sería cuando comenzamos la próxima con un template string:
+
+> const nombre = 'Sasha'
+>
+> console.log('Hola, mi nombre es Sacha');
+>
+> `${nombre} es un desarrollador`
+
+Un caso aún más especial de los punto y coma o más bien del Enter es cuando tenemos una función que retorna un objeto:
+
+> function calcularDoble(numero) {
+>
+	> return { original: numero, doble: numero * 2 }
+>
+> }
+
+Escrito de esa forma está completamente bien y funcionara el código, pero si ponemos el objeto debajo del return:
+
+> function calcularDoble(numero) {
+>
+	> return
+>
+	> {
+>
+		> original: numero, doble: numero * 2
+
+	> }
+>
+> }
+
+Nos saldrá un error, y esto se debe a que si JavaScript encuentra un Enter después de un return es como si encontrara un punto y coma que provoca un error, si deseamos retornar algo NO podemos poner nuestro objeto debajo del return sino que debe continuar en la misma línea.
+
+**NOTA:**
+
+- El método forEach() ejecuta la función indicada una vez por cada elemento del array.
+- Los template string nos permiten interpolar valores dentro de un string.
