@@ -640,7 +640,7 @@ Si consultamos en la consola nos aparece de la siguiente forma:
 
 El número nos dice que es una colección de X elementos, en este caso 6, y entre llaves nos marca cada objeto.
 
-Si queremos acceder al primer elemento escribimos, nombre_array[número]:
+Si queremos acceder al primer elemento escribimos, ***nombre_array[número]***:
 
 ![src/fundamentosJavascript_84.png](src/fundamentosJavascript_84.png)
 
@@ -729,3 +729,128 @@ El reduce() tiene dos argumentos; la función y el valor inicial del acumulador.
 Este código también podemos recudirlo un poco más y escribirlo así:
 
 ![src/fundamentosJavascript_98.png](src/fundamentosJavascript_98.png)
+
+## Modulo 5. Programación Orientada a Objetos en JavaScript
+### Clase 23 *Cómo funcionan las clases en JavaScript*
+
+Cuando se empieza a programar en un lenguaje como JavaScript (es decir, permisivo hasta no poder más) dar los primeros pasos puede resultar realmente complicado. El enfoque que da JavaScript a las clases es ligeramente distinto a lo que cabe esperar, ya que en este lenguaje todo son objetos, y cuando digo todo quiero decir que los números son objetos, las funciones también son objetos y las "clases" que crearán objetos también son objetos.
+
+**Crear clases en JavaScript**
+
+![src/fundamentosJavascript_99.png](src/fundamentosJavascript_99.png)
+
+Tenemos:
+
+- Clase: Es un lenguaje basado en prototipos que no contiene ninguna declaración de clase, como se encuentra, por ejemplo, en C + + o Java. Esto es a veces confuso para los programadores acostumbrados a los lenguajes con una declaración de clase. En su lugar, JavaScript utiliza funciones como clases. Definir una clase es tan fácil como definir una función. En el ejemplo tenemos una clase 'Persona.
+- Constructor: Se usa para establecer las propiedades del objeto o para llamar a los métodos para preparar el objeto para su uso. En el ejemplo tenemos un console.log que nos muestra el mensaje de 'Me ejecutaron'.
+- Objeto: Es la instancia de la clase. Para crear un objeto obj utilizamos la declaración new obj, asignando el resultado (que es de tipo obj) a una variable para tener acceso más tarde. En el ejemplo tenemos una instancia 'sacha'.
+
+**Propiedad (atributo del objeto)**
+
+Las propiedades son variables contenidas en la clase, cada instancia del objeto tiene dichas propiedades. Las propiedades deben establecerse a la propiedad prototipo de la clase (función), para que la herencia funcione correctamente.
+
+Para trabajar con propiedades dentro de la clase se utiliza la palabra reservada this, que se refiere al objeto actual. El acceso (lectura o escritura) a una propiedad desde fuera de la clase se hace con la sintaxis: Nombre_de_la_instancia.Propiedad. Es la misma sintaxis utilizada por C++, Java y algunos lenguajes más. (Desde dentro de la clase la sintaxis es this.Propiedad que se utiliza para obtener o establecer el valor de la propiedad).
+
+En el siguiente ejemplo definimos las propiedades nombre y apellido de la clase Persona y la definimos en la creación de la instancia.
+
+![src/fundamentosJavascript_100.png](src/fundamentosJavascript_100.png)
+
+**Métodos**
+
+Los métodos siguen la misma lógica que las propiedades, la diferencia es que son funciones y se definen como funciones. Llamar a un método es similar a acceder a una propiedad, pero se agrega () al final del nombre del método, posiblemente con argumentos.
+
+En el siguiente ejemplo se define y utiliza el método saludar() para la clase Persona.
+
+![src/fundamentosJavascript_101.png](src/fundamentosJavascript_101.png)
+
+***RETO: Agrega el atributo altura y la función soyAlto.***
+
+### Clase 24 *Modificando un prototipo*
+
+Tenemos nuestro reto de la clase anterior:
+
+![src/fundamentosJavascript_102.png](src/fundamentosJavascript_102.png)
+
+**¿Qué pasa si ponemos el método después de la instancia?**
+
+![src/fundamentosJavascript_103.png](src/fundamentosJavascript_103.png)
+
+Tendremos un error de 'is not function', es decir, se ha intentado llamar a un elemento o valor como si fuera una función, pero no lo era. El código esperaba que hubiera una función implementada, pero no la ha encontrado.
+
+Por eso es muy importante donde colocamos las funciones que van a tener el prototipo.
+
+**¿Qué pasa si las funciones las convertimos en Arrow Function?**
+
+![src/fundamentosJavascript_104.png](src/fundamentosJavascript_104.png)
+
+Nos da todo falso (false). ¿Por qué? Lo veremos en la siguiente clase.
+
+### Clase 25 *El contexto de las funciones: quién es this*
+
+En la clase anterior nos quedamos con este ejemplo de Arrow Function con error:
+
+![src/fundamentosJavascript_105.png](src/fundamentosJavascript_105.png)
+
+**"this" y funciones flecha**
+
+Una de las razones por las que se introdujeron las funciones flecha fue para eliminar complejidades del ámbito (this) y hacer que la ejecución de funciones sea mucho más intuitiva.
+
+Para resumir, this se refiere a la instancia. Las instancias se crean cuando se invoca la palabra clave new. De lo contrario, this se establecerá —de forma predeterminada— en el ámbito o alcance de window.
+
+En las funciones tradicionales de manera predeterminada this está en el ámbito de window. Mientras que las funciones flecha no predeterminan this al ámbito o alcance de window.
+
+La función flecha no tiene su propio this. Se utiliza el valor this del ámbito léxico adjunto; las funciones flecha siguen las reglas normales de búsqueda de variables. Entonces, mientras busca this que no está presente en el ámbito actual, una función flecha termina encontrando el this de su ámbito adjunto.
+
+**Funciones flecha utilizadas como métodos**
+
+Como se indicó anteriormente, las expresiones de función flecha son más adecuadas para funciones que no son métodos.
+
+***RECUERDA: Dentro de la Arrow Function, this está haciendo referencia al espacio global, a windows.***
+
+### Clase 26 *La verdad oculta sobre las clases en JavaScript*
+
+Los objetos en JavaScript son "contenedores" dinámicos de propiedades (referidas como sus propiedades particulares).  Los objetos en JavaScript poseen un enlace a un objeto prototipo. Cuando intentamos acceder a una propiedad de un objeto, la propiedad no sólo se busca en el propio objeto sino también en el prototipo del objeto, en el prototipo del prototipo, y así sucesivamente hasta que se encuentre una propiedad que coincida con el nombre o se alcance el final de la cadena de prototipos.
+
+**Heredando 'métodos'**
+
+JavaScript no tiene "métodos" en la forma que los lenguajes basados en clases los define. En JavaScript, cualquier función puede añadirse a un objeto como una propiedad. Una función heredada se comporta como cualquier otra propiedad, viéndose afectada por el solapamiento de propiedades como se muestra anteriormente (siendo, en este caso, una especie de redefinición de métodos).
+
+Cuando una función heredada se ejecuta, el valor de this apunta al objeto que hereda, no al prototipo en el que la función es una propiedad.
+
+**Usando prototipos en JavaScript**
+
+Veamos lo que sucede detrás de escena detalladamente.
+
+En JavaScript, como se mencionó anteriormente, las funciones pueden tener propiedades. Todas las funciones tienen una propiedad especial llamada prototype.
+
+Tenemos una nueva clase 'Desarrollador' que hereda de nuestra clase 'Persona':
+
+![src/fundamentosJavascript_106.png](src/fundamentosJavascript_106.png)
+
+Si creamos una instancia de Persona y otra de Desarrollado, y llamamos al método saludar():
+
+![src/fundamentosJavascript_107.png](src/fundamentosJavascript_107.png)
+
+Nos da respuesta diferentes aunque el nombre del método sea similar, eso es porque el saludar() de la clase Desarrollador pisa sobre el método saludar() de la clase Persona.
+
+Si en la consola usamos el método prototype podemos ver un objeto que nos dice que métodos entiende y que atributos tiene, y cuál es el constructor:
+
+![src/fundamentosJavascript_108.png](src/fundamentosJavascript_108.png)
+
+Tenemos un atributo _proto_ que apunta al prototipo que 'tiene' el objeto, en el caso de Persona apunta a Object mientras que Desarrollador apunta a Persona y dentro tiene otro _proto_ que finalmente apunta a Object.
+
+### Clase 27 *Clases en JavaScript*
+
+A partir del 2015 el lenguaje de JavaScript se ha ido actualizando, es por eso que vamos a encontrar distintas versiones con los nombres ECMAScript 2015, ECMAScript 2016, ECMAScript 2017, ECMAScript 2018 y ECMAScript 2019.
+
+**¿Qué es ECMAScript?**
+
+ECMAScript específicamente es el estándar que a partir del año 2015 a la actualidad se encarga de regir como debe ser interpretado y funcionar el lenguaje JavaScript, siendo este (JS – JavaScript) interpretado y procesado por multitud de plataformas, entre las que se encuentran los navegadores web, NodeJS u otros ambientes como el desarrollo de aplicaciones para los distintos sistemas operativos que actualmente existen en el mercado. Los responsables de dichos navegadores y JavaScript deben encargarse de interpretar el lenguaje tal como lo fija ECMAScript.
+
+Esta nueva actualización lo que trae es una facilidad para lograr lo mismo que estábamos haciendo acá, pero de una manera mucho más sencilla. Lo que no tenemos que olvidarnos es que siguen siendo todos prototipos.
+
+![src/fundamentosJavascript_109.png](src/fundamentosJavascript_109.png)
+
+- Class: Recordemos que las clases son de hecho 'funciones especiales', y al igual que se pueden definir expresiones de función y declaraciones de función, la sintaxis de clase tiene dos componentes: expresiones de clase y declaraciones de clase.
+- Constructor: Es un método especial para crear e inicializar un objeto creado con una clase. Solo puede haber un método especial con el nombre 'constructor' en una clase. Si esta contiene más de una ocurrencia del método constructor, se arrojará un error. Un constructor puede usar la palabra reservada super para llamar al constructor de una superclase
+- Extends: Es una palabra clave usada en la declaración o expresión de clases, para crear una clase hija de otra.
