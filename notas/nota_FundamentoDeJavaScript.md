@@ -1046,10 +1046,177 @@ Creamos una función que llamada obtenerPersonajes() al que pasaremos el número
 
 En el ejemplo llamamos al personaje con los id 1, 2 y 3. Pero llamarlo en ese orden no significa que precisamente vengan en ese mismo orden, con esto podemos ver el asincronismo de JavaScript en su máximo esplendor, básicamente no sabemos en qué orden nos van a llegar las respuestas.
 
-
 ### Clase 34 *Manejando el Orden y el Asincronismo en JavaScript*
+
+Una manera de asegurar que se respete la secuencia en que hemos realizado múltiples tareas es utilizando callbacks, con lo que se ejecutará luego, en cada llamada. Lo importante es que el llamado al callback se haga a través de una función anónima. Sin embargo, al hacerlo de esta manera generamos una situación poco deseada llamada CallbackHell.
+
+![src/fundamentosJavascript_128.png](src/fundamentosJavascript_128.png)
+
+**¿Qué es Callback Hell?**
+
+El Callback Hell o Pirámide de Doom es un anti-patrón visto en el código de programadores que son nuevos. En grandes proyectos es muy común la necesidad de validar, buscar, procesar y almacenar información de forma asíncrona y si no estamos acostumbrados a trabajar con código asíncrono corremos el riesgo de tropezar con el Callback Hell sin siquiera notarlo.
+
+Los Callback Hell consiste en múltiples callbacks anidados que provocan que el código se vuelva difícil de leer y 'debuggear'; ésta es la principal razón por la cual se debe evitar. Es entendible que un aprendiz padawan caiga en el Callback Hell mientras lidia con lógica asíncrona.
+
+**¿Por qué no ponemos function?**
+
+![src/fundamentosJavascript_129.png](src/fundamentosJavascript_129.png)
+
+En el ejemplo ponemos el parámetro separados con comas, pero al hacerlo inmediatamente se estarán invocando, incluso antes del obtenerPersonajes(1), y al refrescar el navegador veremos que siempre se llamara el id 2.
+
 ### Clase 35 *Manejo de errores con callbacks*
+
+En esta clase solucionaremos el problema de quedarnos sin conexión, u otro error similar, en medio de una sucesión de callbacks utilizamos el método fail().
+
+![src/fundamentosJavascript_130.png](src/fundamentosJavascript_130.png)
+
+Para este ejemplo iremos al navegador, ingresamos en Red (Network) dando click en 'deshabilitar la memoria caché' y recargamos la página con CTRL + SHIFT + R (este tipo de carga ignora el caché de la página almacenado en el navegador y carga todos los recursos directamente desde el servidor de la web otra vez), tan pronto como cargue damos en click en 'Sin Conexión' o 'Offliner' para que corte la recarga:
+
+![src/fundamentosJavascript_131.png](src/fundamentosJavascript_131.png)
+
+Tras hacer eso podemos ver como el método fail() actúa lanzando un mensaje:
+
+![src/fundamentosJavascript_132.png](src/fundamentosJavascript_132.png)
+
+Como no se pudo obtener el personaje del id 2, los demás tampoco han podido cargarse.
+
 ### Clase 36 *Promesas*
+
+El objeto Promise (Promesa) es usado para computaciones asíncronas. Una promesa representa un valor que puede estar disponible ahora, en el futuro, o nunca
+
+Una Promesa es un proxy para un valor no necesariamente conocido en el momento que es creada la promesa. Permite asociar manejadores que actuarán asincrónicamente sobre un eventual valor en caso de éxito, o la razón de falla en caso de una falla. Esto permite que métodos asíncronos devuelvan valores como si fueran síncronos: en vez de inmediatamente retornar el valor final, el método asíncrono devuelve una promesa de suministrar el valor en algún momento en el futuro.
+
+Una Promesa se encuentra en uno de los siguientes estados:
+
+- Pendiente (pending): estado inicial, no cumplida o rechazada.
+- Cumplida (fulfilled): significa que la operación se completó satisfactoriamente.
+- Rechazada (rejected): significa que la operación falló.
+
+Una promesa pendiente puede ser cumplida con un valor, o rechazada con una razón (error). Cuando cualquiera de estas dos opciones sucede, los métodos asociados, encolados por el método then de la promesa, son llamados. (Si la promesa ya ha sido cumplida o rechazada en el momento que es anexado su correspondiente manejador, el manejador será llamado, de tal manera que no exista una condición de carrera entre la operación asíncrona siendo completada y los manejadores siendo anexados).
+
+Como los métodos then() y catch() retornan promesas, éstas pueden ser encadenadas.
+
+![src/fundamentosJavascript_133.png](src/fundamentosJavascript_133.png)
+
+- El método then() retorna una Promesa. Recibe dos argumentos: funciones callback  para los casos de éxito y fallo de Promise.
+- El método catch() puede ser muy útil para el manejo de errores en tu código con promesas.
+
+***No confundir con:***
+
+  ***Varios lenguajes tienen mecanismos para evaluar perezosamente y postergar una computación, a los que también les llaman "promesas" (ejemplo, Scheme). Las promesas en JavaScript representan procesos que ya están sucediendo, y pueden ser encadenados con funciones callback. Si lo que se busca es evaluar perezosamente una expresión, se debe considerar el Arrow Function sin argumentos: f = () => expresión para crear la expresión evaluada perezosamente, y f () para evaluar.***
+
+***Nota:***
+
+  ***Una promesa se dice que está determinada si se ha cumplido o si se ha rechazado, pero no está pendiente. Con promesas también se usa el término resuelta — esto significa que la promesa está determinada, o que se encuentra bloqueada dentro de una cadena de promesas.***
+
+Tenemos el siguiente ejemplo para ver cómo funciona la promesa:
+
+![src/fundamentosJavascript_134.png](src/fundamentosJavascript_134.png)
+
+**Sintaxis:**
+
+***new Promise( /* ejecutor */ function(resolver, rechazar) { ... } );***
+
+Una función con los argumentos resolver y rechazar. La función ejecutor es ejecutada inmediatamente por la implementación de la Promesa, pasándole las funciones resolver y rechazar (el ejecutor es llamado incluso antes de que el constructor de la Promesa devuelva el objeto creado). Las funciones resolver y rechazar, al ser llamadas, resuelven o rechazan la promesa, respectivamente. Normalmente el ejecutor inicia un trabajo asíncrono, y luego, una vez que es completado, llama a la función resolver para resolver la promesa o la rechaza si ha ocurrido un error.
+
+Si un error es lanzado en la función ejecutor, la promesa es rechazada y el valor de retorno del ejecutor es rechazado.
+
 ### Clase 37 *Promesas Encadenadas*
+
+Una necesidad común es el ejecutar dos o más operaciones asíncronas seguidas, donde cada operación posterior se inicia cuando la operación previa tiene éxito, con el resultado del paso previo. Logramos esto creando una cadena de objetos promises.
+
+A diferencia de los callbacks en el Callback Hell, que terminan estando anidados unos dentro de otros, cuando se usan Promesas la ejecución de las llamadas no se hacen de manera anidada sino de manera encadenada, al mismo nivel una debajo de la otra, lo que hace que el código sea mucho más legible y mantenible.
+
+Tenemos el siguiente ejemplo de Promesas Encadenadas:
+
+![src/fundamentosJavascript_135.png](src/fundamentosJavascript_135.png)
+
+**¿Cómo funciona?**
+
+Muy sencillo. El método then() recibe como primer argumento una Promesa para el personaje 1, esta función devuelve otro valor para la Promesa del personaje 2. Si a este primer then() le concatenamos otro then(), la función que pasemos como argumento a este último then() recibirá lo que devolvimos en el primero, pudiendo repetir el proceso tantas veces como quieran.
+
+Toda esta concatenación es posible gracias a que promise.then devuelve una Promise , de modo que podemos adjuntarle otro nuevo then().
+
 ### Clase 38 *Múltiples promesas en paralelo*
+
+Para hacer el llamado a múltiples promesas usaremos el método estático Promise.all() que acepta una promesa de promesas y devuelve una nueva promesa, que se resuelve cuando todas las promesas en la iterable se han resuelto, o se rechazan si al menos una de las promesas en la iterable se ha rechazado.
+
+Promise.all  se cumple cuando todas las promesas del iterable  (por ejemplo, una array) dado se han cumplido, o es rechazada si alguna promesa no se cumple.
+
+Si alguna de las promesas pasadas en el argumento iterable falla, la promesa all() es rechazada inmediatamente con el valor de la promesa que fue rechazada, descartando todas las demás promesas hayan sido o no cumplidas. Si se pasa un array vacío a all(), la promesa se cumple inmediatamente.
+
+Ejemplo de múltiples promesas en paralelo:
+
+![src/fundamentosJavascript_136.png](src/fundamentosJavascript_136.png)
+
+**Sintaxis**
+
+***Promise.all(iterable);***
+
+**¿Qué sucede?**
+
+Nos apoyamos en un array de ids con el que luego construimos otro arreglo de Promesas, que pasaremos como parámetro a Promise.all, es decir, al arreglo de promesas con las promesas podemos encadenar llamadas en paralelo, algo que no es posible usando callbacks.
+
 ### Clase 39 *Async-await: lo último en asincronismo*
+
+Async-await es la manera más simple y clara de realizar tareas asíncronas.
+
+- Async: La declaración de función async define una función asíncrona, la cual devuelve un objeto Async Function. Un objeto Async Function, que representa una función asíncrona que ejecuta el código contenido dentro de la función.
+
+  - Cuando se llama a una función async, esta devuelve un elemento Promise. Cuando la función async devuelve un valor, Promise se resolverá con el valor devuelto. Si la función async genera una excepción o algún valor, Promise se rechazará con el valor generado.
+	- Una función async puede contener una expresión await, la cual pausa la ejecución de la función asíncrona y espera la resolución de la Promise pasada y, a continuación, reanuda la ejecución de la función async y devuelve el valor resuelto.
+	- La finalidad de las funciones async/await es simplificar el comportamiento del uso síncrono de promesas y realizar algún comportamiento específico en un grupo de Promises. Del mismo modo que las Promises son semejantes a las devoluciones de llamadas estructuradas, async/await se asemejan a una combinación de generadores y promesas.
+
+- Await: El operador await es usado para esperar a una Promesa. Sólo puede ser usado dentro de una función async function.
+
+	- La expresión await provoca que la ejecución de una función async sea pausada hasta que una Promise sea terminada o rechazada, y regresa a la ejecución de la función async después del término. Al regreso de la ejecución, el valor de la expresión await es la regresada por una promesa terminada.
+
+    - Si la Promise es rechazada, el valor de la expresión await tendrá el valor de rechazo.
+		- Si el valor de la expresión seguida del operador await  no es una promesa, será convertido a una resolved Promise.
+
+**Sintaxis de Async**
+
+***async function name( [param [, param [, ... param ] ] ] ) {***
+
+   ***statements***
+
+***}***
+
+Donde:
+
+- name es el nombre de la función.
+- param el nombre de un argumento que se debe pasar a la función.
+- statements son las declaraciones que conforman el cuerpo de la función.
+
+**Sintaxis de Await**
+
+***[rv] = await expression;***
+
+Donde:
+
+- expression es una Promesa o cualquier otro valor por el cual haya que esperar.
+- rv regresa el valor terminado de la promesa o solamente un valor si no es una Promesa.
+
+En nuestro ejemplo de Async-Await, para que funcione exactamente igual, encerramos el llamado a Promises.all() dentro de un bloque try … catch.
+
+![src/fundamentosJavascript_137.png](src/fundamentosJavascript_137.png)
+
+***NOTA:***
+
+***La declaración try...catch señala un bloque de instrucciones a intentar (try), y especifica una respuesta si se produce una excepción (catch).***
+
+***Consiste en un bloque try que contiene una o más sentencias. Las llaves {} se deben utilizar siempre, incluso para una bloques de una sola sentencia. Al menos un bloque catch o un bloque finally debe estar presente. Esto nos da tres formas posibles para la sentencia try:***
+
+  ***try...catch***
+
+  ***try...finally***
+
+  ***try...catch...finally***
+
+***Un bloque catch contiene sentencias que especifican que hacer si una excepción es lanzada en el bloque try. Si cualquier sentencia dentro del bloque try (o en una función llamada desde dentro del bloque try) lanza una excepción, el control cambia inmediatamente al bloque catch . Si no se lanza ninguna excepción en el bloque try, el bloque catch se omite.***
+
+***La bloque finally se ejecuta después del bloque try y el/los bloque(s) catch hayan finalizado su ejecución. Éste bloque siempre se ejecuta, independientemente de si una excepción fue lanzada o capturada.***
+
+***Puede anidar una o más sentencias try. Si una sentencia try interna no tiene una bloque catch, se ejecuta el bloque catch de la sentencia try que la encierra.***
+
+***Usted también puede usar la declaración try para manejar excepciones de JavaScript.***
