@@ -854,3 +854,202 @@ Esta nueva actualización lo que trae es una facilidad para lograr lo mismo que 
 - Class: Recordemos que las clases son de hecho 'funciones especiales', y al igual que se pueden definir expresiones de función y declaraciones de función, la sintaxis de clase tiene dos componentes: expresiones de clase y declaraciones de clase.
 - Constructor: Es un método especial para crear e inicializar un objeto creado con una clase. Solo puede haber un método especial con el nombre 'constructor' en una clase. Si esta contiene más de una ocurrencia del método constructor, se arrojará un error. Un constructor puede usar la palabra reservada super para llamar al constructor de una superclase
 - Extends: Es una palabra clave usada en la declaración o expresión de clases, para crear una clase hija de otra.
+
+## Modulo 6. Asincronismo
+### Clase 28 *Funciones como parámetros*
+
+JavaScript nos permite crear una función que se pasa a otra función como un argumento, que luego se invoca dentro de la función externa para completar algún tipo de rutina o acción.
+
+En nuestro ejemplo tendremos una función responder Saludo() que nos hará algún tipo de acción dependiendo de si la instancia es de la clase Persona o la clase Desarrollador:
+
+![src/fundamentosJavascript_110.png](src/fundamentosJavascript_110.png)
+
+Tiene tres argumentos:
+
+- Nombre
+- Apellido
+- esDev: Este estará dentro de un if, si la condición se cumple (es decir, es de la clase Desarrollador) se imprimirá la sentencia, sino solamente nos imprimirá el 'Buen día'.
+
+Creamos nuestras instancias y al momento de llamar al método saludar() es cuando pasamos nuestra función responderSaludo():
+
+![src/fundamentosJavascript_111.png](src/fundamentosJavascript_111.png)
+
+Dentro de la clase Persona, en el método saludar() podemos el argumento que recibirá, en este casi 'fn', con una condición; si fn es verdadero, es decir, se nos fue enviado la función entonces llamaremos a la función fn que es la función responderSaludo() y enviaremos dos argumentos que son nombre y apellido:
+
+![src/fundamentosJavascript_112.png](src/fundamentosJavascript_112.png)
+
+Lo mismo sucede en la clase Desarrollador:
+
+![src/fundamentosJavascript_113.png](src/fundamentosJavascript_113.png)
+
+**¿Qué diferencias hay entre Persona y Desarrollador?**
+
+Vemos que en la clase Persona no enviamos un tercer argumento, mientras que en la clase Desarrollador enviamos true, pues tiene una explicación.
+
+Hay valores llamados Boolean que no debemos confundir con los Boolean primitivos (true y false).
+
+Si es necesario, un valor pasado como parámetro se convierte en un valor booleano. Si el valor se omite o es 0, -0, null, false, NaN, undefined, o la cadena vacía (""), el objeto tiene un valor inicial de false. Todos los demás valores, incluido cualquier objeto, un arreglo vacío ([]), llaves vacías ({}) o la cadena "false", crean un objeto con un valor inicial de true.
+
+***RECUERDA: Cualquier objeto cuyo valor no sea undefined, o null, incluido un objeto Boolean cuyo valor es false, se evalúa como true cuando se pasa a una declaración condicional.***
+
+En el ejemplo en la clase Persona no enviamos un valor por parámetros por lo que directamente es false y la condición no se cumplirá, mientras que en la clase Desarrollador si enviamos un valor true para que la condición se cumpla.
+
+**Diferentes respuestas**
+
+![src/fundamentosJavascript_114.png](src/fundamentosJavascript_114.png)
+
+En el ejemplo Sacha no envió ningún valor mientras que Erika y Arthur sí, esto dio como resultado tres diferentes respuestas.
+
+Como Sacha, de la clase Persona, no cumplió la condición de recibir la función solo imprime el 'Hola, me llamo …', en cambio a Erika (que es de la misma clase Persona) quien envió la función y pudo cumplir la condición. Finalmente, Arthur es de una clase diferente (Desarrollador) que cumple ambas condiciones, es decir, envió la función responderSaludo() y en esDev tiene true.
+
+**NOTA:**
+
+Una mejor manera de escribir en las funciones sin necesidad de usar this, es la siguiente:
+
+![src/fundamentosJavascript_115.png](src/fundamentosJavascript_115.png)
+
+Ambas son completamente equivalentes.
+
+### Clase 29 *Cómo funciona el asincronismo en JavaScript*
+
+Resulta que JavaScript es un lenguaje de programación asíncrono. Lo que quiere decir esto es que al ejecutar código JavaScript el hilo de ejecución continuará a pesar de encontrarse en situaciones en las que no obtenga un resultado inmediatamente. Por ejemplo, cuando hacemos el pedido de información a un servidor, la respuesta posiblemente demore un poco. Sin embargo, el hilo de ejecución de JavaScript continuará con las demás tareas que hay en el código.
+
+Un ejemplo práctico de esto sería una aplicación web que necesita llenar una tabla de datos, así que el código hará un pedido al servidor de los datos que necesita llenar. Pero el hilo de ejecución no se detiene así que ejecutará el código que pinta la tabla en el navegador. Esto se convierte en un problema ya que los datos del servidor llegan después de que la tabla se haya pintado en pantalla, una tabla sin todos obviamente. Así que trabajar con código asíncrono puede tener muchas ventajas pero en casos como este presenta un gran problema.
+
+Pues bien, para solucionar esto algunas funciones de JavaScript tienen como parámetro algo que se conoce como callback. Un callback es simplemente una función que se pasa como parámetro a otra función.
+
+Para tener un cierto control en el código asíncrono de JavaScript existen las promesas. Las promesas llegan a JavaScript en la versión 6 de ECMAScript. Una promesa es el objeto que representa un valor que estará disponible ahora, en el futuro o quizá nunca.
+
+### Clase 30 *Cómo funciona el tiempo en JavaScript*
+
+En principio, cualquier tarea que se haya delegado al navegador a través de un callback, deberá esperar hasta que todas las instrucciones del programa principal se hayan ejecutado. Por esta razón el tiempo de espera definido en funciones como setTimeout, no garantizan que el callback se ejecute en ese tiempo exactamente, sino en cualquier momento a partir de allí, sólo cuando la cola de tareas se haya vaciado.
+
+El método setTimeout() se establece un temporizador que ejecuta una función o una porción de código después de que transcurre un tiempo establecido.
+
+**Sintaxis:**
+
+***setTimeout(función_a_ejecutar, tiempo_en_milisegundos)***
+
+En el ejemplo imprimiremos a tres letras (a, b y c):
+
+![src/fundamentosJavascript_116.png](src/fundamentosJavascript_116.png)
+
+Al ejecutar podemos ver que nos aparece en pantalla en el siguiente orden; a, c y b. Esto se debe a que setTimeout() pone en 'espera' o en 'cola' el código a ejecutar dentro de la función.
+
+También podemos escribir las funciones como un Arrow Function y seguirá ejecutando el código de la misma manera:
+
+![src/fundamentosJavascript_117.png](src/fundamentosJavascript_117.png)
+
+**¿En qué orden aparecen las letras si escribimos 0 milisegundos?**
+
+![src/fundamentosJavascript_118.png](src/fundamentosJavascript_118.png)
+
+- Primera opción: A, B, C
+- Segunda opción: A, C, B
+
+Pues la segunda opción es la correcta. Incluso si el tiempo es de cero milisegundos, como se ha dicho, setTimeout() deja en espera el código y ejecuta todos los códigos principales primero, cuando el código principal termina es cuando empieza a ver los códigos en espera para que sean ejecutados.
+
+Esto es más entendible con el siguiente código:
+
+![src/fundamentosJavascript_119.png](src/fundamentosJavascript_119.png)
+
+Tenemos un for que no ejecuta nada y un setTimeout() que nos imprimirá una letra 'd' en 2 segundos.
+
+Cuando ejecutamos el código el tiempo que tarde puede ser un poco variante, en general se mantiene entre 2 a 4 segundos, y ya después de que el for termine JavaScript ejecuta nuestro setTimeout().
+
+### Clase 31 *¿Qué pasó con swapi.co?*
+
+**SWAPI.co ha desaparecido**
+
+Desafortunadamente, swapi.co ya no se mantiene y el servicio está actualmente inactivo. El autor del proyecto, Paul Hallett, quien creó y le dio mantenimiento ha desactivado desde hace tiempo esta API que muchos utilizamos en nuestros proyectos de JavaScript para aprender a integrar un backend a un frontend.
+
+**SWAPI.dev, una nueva solución**
+
+Juriy Bura, junto a otros desarrolladores, han publicado una versión idéntica a la API utilizada por Swapi.io, la cual está disponible desde el dominio swapi.dev. Por lo tanto, de ahora en adelante, para continuar el curso sin problemas solo debes reemplazar swapi.io, la URL obliterada (la que ya no funciona), por la nueva versión que sí está disponible: swapi.dev.
+Este proyecto es mantenido por la comunidad y gracias a la filosofía del código libre es posible tener una nueva versión de la API para nuestros proyectos.
+
+**Crea tu propia API de Star Wars**
+
+**¿Quieres tener tu propia versión de SWAPI?**
+
+El código fuente del proyecto está disponible en GitHub, lo que te permite crear tu propia versión con solo realizar un Fork y subirlo a un servidor o consumirla en tu localhost.
+
+Este es el repositorio del proyecto original: https://github.com/phalt/swapi.
+
+¡Compártenos en los comentarios en link a tu repositorio fork de la API de Star Wars y qué cambios hiciste o planeas hacer en tu versión de este proyecto!
+
+### Clase 32 *Callbacks*
+
+En esta clase vamos aprender que son los callbacks, como utilizarlos y vamos a poner en práctica todo lo aprendido sobre asincronismo en JavaScript. Para eso vamos hacer varias cosas; vamos a utilizar una librería externa llamada JQuery para realizar request y obtener datos de una API externa, esa API externa será de Star Wars llamada Star Wars API o SWAPI que nos va a permitir acceder a todos los datos que aparecen en las películas de Star Wars (personajes, planetas, películas en sí) todo a través del código que estaremos escribiendo en JavaScript.
+
+Para empezar lo que haremos es dirigirnos a la página de JQuery (https://jquery.com/) y daremos click en Download jQuery:
+
+![src/fundamentosJavascript_120.png](src/fundamentosJavascript_120.png)
+
+Y buscamos donde se utiliza con un CDN:
+
+![src/fundamentosJavascript_121.png](src/fundamentosJavascript_121.png)
+
+Básicamente nos dice que si damos click en el link vamos a poder encontrar la versión de jQuery desde un CDN.
+
+***CDN (Content Delivery Network o Red de Distribución de Contenido) es básicamente un conjunto de servidores ubicados en diferentes puntos de una red que contienen copias locales de ciertos contenidos (vídeos, imágenes, música, documentos, webs, etc.) que están almacenados en otros servidores generalmente alejados geográficamente, de forma que sea posible servir dichos contenidos de manera más eficiente.***
+
+***Esta mejora en la eficiencia se logra con un mejor balanceo de la carga a la que están sometidos tanto los servidores que alojan los contenidos como los enlaces que interconectan las distintas secciones de la red, eliminando posibles cuellos de botella y sirviendo los datos en función de la cercanía geográfica del usuario final.***
+
+Al acceder al CDN vemos que tenemos varias versiones de la librería, nosotros utilizaremos la versión 3, damos click en 'minified':
+
+![src/fundamentosJavascript_122.png](src/fundamentosJavascript_122.png)
+
+Nos abrirá una ventana de la que copiaremos el código de integración:
+
+![src/fundamentosJavascript_123.png](src/fundamentosJavascript_123.png)
+
+El código lo pegamos en nuestro archivo HTML, esto es muy importante, ANTES de llamar a nuestro archivo JavaScript:
+
+![src/fundamentosJavascript_124.png](src/fundamentosJavascript_124.png)
+
+Con esto ya tenemos jQuery a nuestra disposición.
+
+Nosotros estaremos realizando un request, es decir, solicitar una respuesta en este caso a la página de SWAPI (https://swapi.dev/):
+
+![src/fundamentosJavascript_125.png](src/fundamentosJavascript_125.png)
+
+***API (Application Programming Interface o Interfaz de Programación de Aplicaciones) es una «interfaz», es decir, es la forma en que dos aplicaciones o servicios se comunicar entre sí. Lo hacen exponiendo al resto de aplicaciones el conjunto de servicios disponibles en cada una y cómo se deben acceder.***
+
+***A la serie de estos servicios, se le denomina API. Por eso, las API sirven para que una aplicación pueda interactuar con otra.***
+
+En el archivo JavaScript escribimos el siguiente código:
+
+![src/fundamentosJavascript_126.png](src/fundamentosJavascript_126.png)
+
+Como lo que deseamos es acceder a los datos de SWAPI para hacer con ellos lo que queramos, tenemos que hacer el request:
+
+- API_URL: Es la url del SWAPI.
+- PEOPLE_URL: Es la url de personas (people), el id es el número de la consulta que deseamos realizar (por ejemplo, Luke Skywalker es 1 y Darth Vader es 4).
+- LUKE_URL: Es la url a la que queremos acceder (en este caso es la unión completa de API_URL y PEOPLE_URL).
+
+  - Con el método replace() cambiamos el ':id' por el número que deseamos.
+
+- OPTS: Indica al jQuery que el request se hará hacia otra página.
+- ON_PEOPLE_RESPONSE: Es el callback, una función que se pasa a otra función como un argumento. Esta función se invoca, después, dentro de la función externa para completar alguna acción.
+- $.get: Este método nos permite hacer el request y acepta varios parámetros.
+
+### Clase 33 *Haciendo múltiples requests*
+
+En esta clase accederemos a múltiples datos al mismo tiempo.
+
+Creamos una función que llamada obtenerPersonajes() al que pasaremos el número del personaje que deseamos:
+
+![src/fundamentosJavascript_127.png](src/fundamentosJavascript_127.png)
+
+***¿Qué pasa cuando llamamos a múltiples personajes?***
+
+En el ejemplo llamamos al personaje con los id 1, 2 y 3. Pero llamarlo en ese orden no significa que precisamente vengan en ese mismo orden, con esto podemos ver el asincronismo de JavaScript en su máximo esplendor, básicamente no sabemos en qué orden nos van a llegar las respuestas.
+
+
+### Clase 34 *Manejando el Orden y el Asincronismo en JavaScript*
+### Clase 35 *Manejo de errores con callbacks*
+### Clase 36 *Promesas*
+### Clase 37 *Promesas Encadenadas*
+### Clase 38 *Múltiples promesas en paralelo*
+### Clase 39 *Async-await: lo último en asincronismo*
