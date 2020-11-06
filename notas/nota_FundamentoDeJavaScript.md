@@ -1385,3 +1385,122 @@ Para mostrar de vuelta el botón de Empezar a Jugar luego de haber ganado o perd
 ### Clase 46 *Conclusiones del curso*
 
 Felicitaciones, ya tienes unas bases sólidas para continuar aprendiendo frameworks más avanzados basados en JavaScript.
+
+## Modulo 8. Complementos
+### Clase 47 *Diferencias entre var, let y const*
+
+**VAR**
+
+Es la manera más antigua de declarar variables. No es muy estricta en cuanto al alcance, ya que al declarar variables de esta forma, dichas variables podrán ser accedidas, e incluso modificadas, tanto dentro como fuera de los bloques internos en una función.
+
+Tenemos este ejemplo, nuestro variable están declaradas dentro de las condicionales y funcionan:
+
+![src/fundamentosJavascript_148.png](src/fundamentosJavascript_148.png)
+
+Es lo mismo que escribirlo de esta forma:
+
+![src/fundamentosJavascript_149.png](src/fundamentosJavascript_149.png)
+
+**LET**
+
+El alcance se reduce al bloque (las llaves) en el cual la variable fue declarada. Fuera de este bloque la variable no existe. Una vez declarada la variable con let, no se puede volver a declarar con en ninguna otra parte de la función.
+
+Retomando el ejemplo anterior, si nosotros declaramos las variables dentro de las condicionales nos saltara un error porque 'mensaje' no está declarada en un alcance fuera de esas llaves:
+
+![src/fundamentosJavascript_150.png](src/fundamentosJavascript_150.png)
+
+En cambio si la declaramos fuera, esta variable 'mensaje' funcionara perfectamente:
+
+![src/fundamentosJavascript_151.png](src/fundamentosJavascript_151.png)
+
+**CONST**
+
+Al igual que 'let', se define en el contexto o alcance de un bloque, a diferencia de let y var, las variables definidas como constantes (const), ya no podrán ser modificadas ni declaradas nuevamente, en ninguna otra parte de la función o el contexto en el que ya existen.
+
+Si nosotros tendremos una variable que no cambiara la declararemos como una constante. En este ejemplo podemos ver como nuestra MAYORIA_DE_EDAD es declarada y después se intenta reasignar con un nuevo valor, esto NO SE HACE nos saldrá error:
+
+![src/fundamentosJavascript_152.png](src/fundamentosJavascript_152.png)
+
+Como nuestra variable MAYORIA_DE_EDAD permanecerá igual durante todo el código, la creamos así:
+
+![src/fundamentosJavascript_153.png](src/fundamentosJavascript_153.png)
+
+***RECOMENDACIÓN***
+
+***Como podemos ver existen diferencias entre las formas que son declaradas las variables, lo mejor sería no utilizar var en cambio debemos hacer uso de: let si debemos reasignar y const si no tenemos que reasignar.
+¿Porque?***
+
+***De esta manera vamos a evitarlos bug. Probablemente existan bugs ocultos en nuestros programas que si nosotros definimos nuestras variables con let o const.***
+
+### Clase 48 *¿Hace cuántos días naciste?*
+
+En esta clase aprenderemos a trabajar con fechas, para eso utilizaremos variables de tipo Date con la que se pueden realizar operaciones de suma y resta similares a las que se realizan con números.
+
+**Sintaxis:**
+
+***new Date()***
+
+***new Date(milisegundos)***
+
+***new Date(cadenaFecha)***
+
+***new Date(año_num,mes_num,dia_num***
+  ***[,hor_num,min_num,seg_num,mils_num])***
+
+- Milisegundos: Valor entero que representa el número de milisegundos desde las 00:00:00 UTC del 1 de enero de 1970.
+- cadenaFecha: Valor de tipo cadena que representa una fecha. La cadena debería estar en un formato reconocido por el método Date.parse(), un ejemplo es Date.parse('Jul 27, 1998').
+- año_num, mes_num, dia_num: Valores enteros con las representaciones de las partes de una fecha. Como valor entero, el mes se representa de 0 a 11, con 0=enero and 11=diciembre.
+- hor_num, min_num, seg_num, mils_num: Valores enteros que representan las partes de una hora completa.
+
+**Ejemplo**
+
+Obtendremos el total de días desde nuestro nacimiento, pero como el resultado que se obtiene está en milisegundos debemos hacer algunas operaciones adicionales para llevarlos a días, meses o años según queramos.
+
+![src/fundamentosJavascript_154.png](src/fundamentosJavascript_154.png)
+
+También aplica para horas, minutos, segundos y milisegundos.
+
+### Clase 49 *Funciones recursivas*
+
+La recursión es el acto de una función llamándose a sí misma. Es utilizada para resolver problemas que contienen subproblemas más pequeños. Una función recursiva puede recibir 2 entradas: un caso base (finaliza la recursión) o un caso recursivo (continúa la recursión).
+
+En nuestro ejemplo, como en la escuela primaria, tendremos un número dividendo y un número divisor. Lo que vamos ir haciendo son restas:
+
+***13 /_4__***
+
+  ***13 - 4 = 9      |***
+
+  ***9 - 4 = 5       |***
+
+  ***5 - 4 = 1       |***
+
+  ***1 - 4 = -3***
+
+Con esto podemos decir que la división 13 / 4 es 3.
+
+Hacer lo mismo, pero en una función recursiva, se ve de la siguiente forma:
+
+![src/fundamentosJavascript_155.png](src/fundamentosJavascript_155.png)
+
+### Clase 50 *Memorización: ahorrando cómputo*
+
+La memorización es una técnica de programación que nos permite ahorrar cómputo o procesamiento en JavaScript, al ir almacenando el resultado invariable de una función para que no sea necesario volver a ejecutar todas las instrucciones de nuevo, cuando se vuelva a llamar con los mismos parámetros. Es similar a usar memoria cache.
+
+Usemos como ejemplos los factoriales:
+
+	***!6 = 6 * 5 * 4 * 3 * 2 * 1 = 720***
+
+	***!12= 12 * 11 * 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1 = 479001600***
+
+Podemos observar que cuando calculamos el factorial de 12 también estamos calculando el factorial de 6, entonces todo eso sería lo mismo que poner:
+
+	***!12= 12 * 11 * 10 * 9 * 8 * 7 * !6 = 479001600***
+
+Lo que veremos en esta clase es como podemos guardarnos resultados para que luego cuando realicemos otras cuentas no tengamos que repetir el proceso.
+
+![src/fundamentosJavascript_156.png](src/fundamentosJavascript_156.png)
+
+### Clase 51 *Entiende los closures de JavaScript*
+### Clase 52 *Estructuras de datos inmutables*
+### Clase 53 *Cambiando de contexto al llamar a una función*
+### Clase 54 *¿Cuándo hace falta poner el punto y coma al final de la línea?*
