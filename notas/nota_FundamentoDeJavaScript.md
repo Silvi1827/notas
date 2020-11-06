@@ -1172,7 +1172,7 @@ Async-await es la manera más simple y clara de realizar tareas asíncronas.
 - Await: El operador await es usado para esperar a una Promesa. Sólo puede ser usado dentro de una función async function.
 
 	- La expresión await provoca que la ejecución de una función async sea pausada hasta que una Promise sea terminada o rechazada, y regresa a la ejecución de la función async después del término. Al regreso de la ejecución, el valor de la expresión await es la regresada por una promesa terminada.
-  
+
     - Si la Promise es rechazada, el valor de la expresión await tendrá el valor de rechazo.
 
     - Si el valor de la expresión seguida del operador await  no es una promesa, será convertido a una resolved Promise.
@@ -1223,3 +1223,165 @@ En nuestro ejemplo de Async-Await, para que funcione exactamente igual, encerram
 ***Puede anidar una o más sentencias try. Si una sentencia try interna no tiene una bloque catch, se ejecuta el bloque catch de la sentencia try que la encierra.***
 
 ***Usted también puede usar la declaración try para manejar excepciones de JavaScript.***
+
+## Modulo 7. Juego de HTML
+### Clase 40 *Comenzando el juego*
+
+Crearemos el juego Simón (Simón dice), en el que se van iluminando una secuencia de botones que el jugador tendrá que ir repitiendo, si se equivoca volverá a comenzar. El juego tendrá 10 niveles de dificultad, que deberán ser superados para ganar.
+
+Para empezar tendremos tres archivos para que sea un código más prolijo:
+
+- HTML: Es un lenguaje abstracto que usan las aplicaciones para representar documentos (se les llama documentos a instancias completas, como lo son las páginas web) y que puede ser transmitido fácilmente por algún medio, como Internet. Los navegadores de Internet procesan e interpretan documentos descritos en HTML usando un analizador de HTML.
+- CSS: Es un lenguaje de hojas de estilos creado para controlar el aspecto o presentación de los documentos electrónicos definidos con HTML y XHTML
+- JAVASCRIPT: Es el lenguaje de programación encargado de dotar de mayor interactividad y dinamismo a las páginas web.
+
+En nuestro HTML escribiremos:
+
+![src/fundamentosJavascript_138.png](src/fundamentosJavascript_138.png)
+
+- Para enlazar una hoja de estilo externa (CSS) a un documento HTML utilizamos el elemento <LINK>.
+
+	- La etiqueta <LINK> se coloca en la cabecera HEAD del documento.
+
+- div: Sirve para crear secciones o agrupar contenidos
+- Los atributos globales data-* forman una clase de atributos llamados atributos de datos modificables que permite a la información propietaria ser intercambiada entre el HTML y su representación en el DOM que puede ser usada por scripts.
+
+	- Tenemos cuatros atributos globales llamados data-color.
+
+- button: Representa un elemento cliqueable de tipo botón que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar.
+
+En nuestra hoja de estilos tendremos lo siguiente:
+
+![src/fundamentosJavascript_139.png](src/fundamentosJavascript_139.png)
+
+Y finalmente tendremos nuestro JavaScript:
+
+![src/fundamentosJavascript_140.png](src/fundamentosJavascript_140.png)
+
+**¿Qué hicimos?**
+
+Nuestro botón tiene un evento onclick que llama a una función empezarJuego(), nosotros definimos la función y creamos una variable juego de la clase Juego().
+
+Primero creamos cinco variables constantes que usaremos para guardar el valor de nuestros botones, y para hacer eso utilizamos document.getElementById(id) que devuelve una referencia al elemento por su id.
+
+En nuestra clase Juego, dentro del constructor llamamos a la función inicializar().
+
+En la función inicializar(), con la propiedad classList y el método add añadimos la clase 'hide' (creada en nuestra hoja de estilo) para ocultar el botón btnEmpezar.
+
+### Clase 41 *Generando una secuencia de números*
+
+Generaremos la secuencia del juego usando un array con números aleatorios, que representarán el color del botón que se iluminará cada vez.
+
+![src/fundamentosJavascript_141.png](src/fundamentosJavascript_141.png)
+
+**¿Qué hicimos?**
+
+Dentro del constructor llamado a la función generarSecuencia(), en está crearemos un atributo secuencia que guardara un array para eso usamos la expresión new Array(número_elementos), con el método fill() cambiamos todos los elementos en un arreglo por un valor estático (en este caso cero) y con map() creamos un nuevo array con los valores entre 0 y 3.
+
+floor() es un método estático de Math usado para devolver el valor entero más grande que sea menor o igual que un número. En otras palabras, redondea un número hacia abajo y devuelve un valor entero.
+Math.random() retorna un punto flotante, un número pseudo-aleatorio dentro del rango [0, 1). Esto es, desde el 0 (Incluido) hasta el 1 pero sin incluirlo (excluido), el cual se puede escalar hasta el rango deseado. La implementación selecciona la semilla inicial hasta el algoritmo que genera el número aleatorio; este no puede ser elegido o cambiado por el usuario.
+
+En la operación dentro de map() multiplicamos el número al azar por cuatro y lo redondeamos con floor() para que siempre nos un número entre 0 y 3.
+
+En la función inicializar() declaramos el atributo nivel en 1 para iniciar y creamos un objeto llamado colores.
+
+**NOTA:**
+
+- Siempre que queremos generar un atributo, aunque no exista, ponemos this y se guarda internamente dentro de Juego().
+- JS tiene algo interesante que es, si queremos en un objeto poner el atributo celeste y asignarle el valor que teníamos en la variable, como por ejemplo celeste, nos ahorramos los dos puntos y el nombre de la variable. Si lleva el mismo nombre lo va hacer solo JS por nosotros.
+
+### Clase 42 *Iluminando la secuencia de colores*
+
+En esta clase iluminaremos los colores según la secuencia que se nos ha generado.
+
+![src/fundamentosJavascript_142.png](src/fundamentosJavascript_142.png)
+
+**¿Qué hicimos?**
+
+Tenemos diferente cantidad de secuencias según el nivel en que estamos, por eso creamos la función siguienteNivel() que llamara a la función iluminarSecuencia().
+
+En iluminarSecuencia() tendremos un for con una variable constante 'color' y un temporizador para la función iluminarColor().
+
+La variable constante 'color' guarda el valor de la función transformarNumeroAColor() con el que transformar el número al color asignado según la secuencia previamente creada. Por ejemplo, si recibimos la secuencia 1 0 2 0 3 2 nos transformara en 'violeta, celeste, naranja, celeste, verde, naranja'. El temporizador llamara a la función iluminarColor(), enviando el nombre del color, y hacemos el cálculo de 1000 microsegundos por 'i' para que se vaya iluminando según la secuencia.
+
+La función iluminarColor() recibe un color y, con el objeto colores que guarda el valor de todos los colores, utiliza la propiedad classList para añadir la clase 'light' que ilumina al color. También cuenta con un temporizador que llamara a la función apagarColor() en 350 milisegundos.
+
+La función apagarColor() también recibe un color y hace uso del objeto 'colores', excepto que usa la propiedad classList para remover la clase 'light' dando así la sensación de parpadeo.
+
+**NOTA**
+
+- CONST: Es una constante la cual NO cambiara su valor en ningún momento en el futuro.
+- VAR: Es una variable que SI puede cambiar su valor y su scope es local.
+- LET: Es una variable que también podrá cambiar su valor, pero solo vivirá(Funcionara) en el bloque donde fue declarada.
+
+### Clase 43 *Obteniendo el input del usuario*
+
+En esta clase obtendremos el input del usuario para saber si da click en el botón correcto o no:
+
+![src/fundamentosJavascript_143.png](src/fundamentosJavascript_143.png)
+
+**¿Qué hicimos?**
+
+En la función siguienteNivel() llamamos a una nueva función, agregarEventosClick(), en la cual se agregara un manejador de eventos para cada uno de los colores del juego usando addEventListener.
+
+addEventListener() es un método que nos sirve para registra un evento a un objeto en específico. El objeto especifico puede ser un simple elemento en un archivo, el mismo documento, una ventana o un XMLHttpRequest. Su sintaxis es addEventListener (event, listener), en donde: event es cualquier evento de JavaScript válido y listener es la función del controlador, es decir, una función que responde al evento que se produce.
+
+En este caso haremos uso del evento click y llamaremos a la función elegirColor(). Utilizando la propiedad target devuelta por el evento click podemos identificar cuál es el botón que ha sido presionado.
+
+Para que el valor de this que tiene elegirColor() no cambie, en la función inicializar() creamos el atributo elegirColor() y hacemos uso del método bind() para guardar el valor de this.
+
+### Clase 44 *Agregando la verificación del color elegido*
+
+La verificación del color elegido la haremos creando y removiendo los eventos del click al pasar el juego a cada nuevo nivel.
+
+![src/fundamentosJavascript_144.png](src/fundamentosJavascript_144.png)
+
+**¿Qué hicimos?**
+
+Cuando tocamos un botón podemos ver que dentro del objeto tenemos un target con un atributo dataset y dentro de ese mismo dataset contamos con un atributo 'data-color' que nos da el nombre del color del botón presionado, es precisamente esto lo que guardaremos.
+
+Iremos a elegirColor() y crearemos una variable constante llamada nombreColor que guardara el valor del 'data-color'. Después, vamos a transformar el nombre del color a número, para hacerlo creamos otra variable constante llamada numeroColor que guardara el valor de la función transformarColorANumero().
+
+Ahora, empezamos con la lógica del juego. Primero iluminamos el color del botón a ser presionado llamando al método iluminarColor() y pasando como parámetro el nombre del color, creamos un atributo subnivel que irá aumentando a medida que el usuario pase del nivel, hacemos la comparación del número del color con la secuencia pero en la posición del subnivel en que se encuentra (por ejemplo, si toco naranja y el primer número era tres, pasa de nivel). Si elige bien, incrementamos el subnivel.
+
+Después, lo que puede pasar es que el subnivel sea el mismo número que el nivel en el que se encuentra (subnivel comienza con cero mientras que nivel comienza en uno), por esto comparamos el subnivel con el nivel y, si esto sucede, el usuario pasa automáticamente de nivel. Para que el usuario que pasa de nivel no pueda elegir colores creamos el método eliminarEventosClick() que removerán momentáneamente el evento click del juego.
+
+Otra cosa que puede pasar es que el usuario llegue al último nivel, para eso preguntamos si el último nivel más uno es igual al nivel en que se encuentra actualmente, allí agregamos la lógica por si GANA el juego. Si no es el último nivel llamamos al método siguienteNivel().
+
+Por último, si el número del color no es igual al botón que debía presionar el usuario pondremos la lógica de PERDIO.
+
+***RECUERDA: Para no tener números mágicos guardamos el valor del último nivel en una variable, ese valor también lo usamos para medir el tamaño en el array de la secuencia.***
+
+Para mejorar nuestro código, al método siguienteNivel() la llamaremos después de 1500 milisegundos. ***Presta atención porque nosotros le decimos que función debe llamar, no estamos invocando la función.***
+
+También nos volvemos a encontrar con el problemas de que this no es quien debe ser, para que this siga siendo el juego debemos hacer uso del método blind() de esta manera this.siguienteNivel() continuara atado al Juego. Además le agregamos un temporizados en el constructor para llamar al siguienteNivel() después de ocultar el botón de 'Empezar Juego' y que generemos la secuencia.
+
+### Clase 45 *Agregando los estados finales del juego*
+
+Ya tenemos la lógica principal, pero ahora debemos agregarle ciertos detalles para finalizar y hacerlo un poco más bonito.
+
+HTML
+
+![src/fundamentosJavascript_145.png](src/fundamentosJavascript_145.png)
+
+CSS
+
+![src/fundamentosJavascript_146.png](src/fundamentosJavascript_146.png)
+
+JAVASCRIPT
+
+![src/fundamentosJavascript_147.png](src/fundamentosJavascript_147.png)
+
+**¿Qué hicimos?**
+
+Creamos las alertas de ganar o perder utilizando la librería de SweetAlert (https://sweetalert.js.org/) para hacerlos un poco más bonitos. Para eso vamos al sitio: https://cdnjs.com/libraries/sweetalert, y copiamos el archivo para poder utilizarlo desde un CDN, lo ponemos en un script antes de llamar al JS. Podemos cambiar la tipografía de nuestro código para hacerlo un poco más lindo.
+
+Creamos dos funciones para indicarle al usuario que gano o perdió, ambas funciones contaran con un swal que lanzara un aviso dependiendo del resultado del jugador. Lo que hace el swal es devolvernos una promesa, así que podemos hacer que, después que el usuario haga click para cerrar el swal, se ejecute la función inicializar() para comenzar nuevamente el juego. También, en la función perdioElJuego() llamaremos a la función eliminarEventosClick().
+
+Una vez más tendremos el problema de this para eso creamos un atributo this.inicializar y usamos el método bind() para solucionarlo.
+
+Para mostrar de vuelta el botón de Empezar a Jugar luego de haber ganado o perdido, creamos el método toggleBtnEmpezar() que se fijara en si tenemos o no la clase 'hide', para eso usamos contains que nos devuelve un valor boolean indicando que contiene o no un determinado elemento.
+
+### Clase 46 *Conclusiones del curso*
+
+Felicitaciones, ya tienes unas bases sólidas para continuar aprendiendo frameworks más avanzados basados en JavaScript.
