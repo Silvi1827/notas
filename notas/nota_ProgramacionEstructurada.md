@@ -571,7 +571,7 @@ Un array de tipo unidimensional es básicamente un vector de datos o lista. Dic
 
 Debemos tener en cuenta que la posición de los arreglos siempre empiezan en cero y terminan en n-1, es decir, imaginemos que tenemos el siguiente arreglo de caracteres:
 
-                ![src/programacionEstructurada_36.png](src/programacionEstructurada_36.png)
+![src/programacionEstructurada_36.png](src/programacionEstructurada_36.png)
 
 'L I N K' es un arreglo de tamaño cuatro (que acepta cuatro caracteres), pero vemos que la posición empieza en cero y va hasta el tres.
 
@@ -605,7 +605,7 @@ Un arreglo bidimensional es interpretado como un arreglo unidimensional con n n�
 
 Por ejemplo, digamos que tenemos un arreglo de 3 x 4 en donde:
 
-                ![src/programacionEstructurada_38.png](src/programacionEstructurada_38.png)
+![src/programacionEstructurada_38.png](src/programacionEstructurada_38.png)
 
 Siendo un arreglo bidimensional o matriz de 3 x 4 significa que 3 filas y 4 columnas (recordemos que las posiciones de los arreglos comienzan en cero).
 
