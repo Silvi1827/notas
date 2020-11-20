@@ -559,9 +559,280 @@ Inicializamos la variable de tipo carácter answer con el valor de 'S' y declara
 
 - Usando do while, imprime los primeros 100 números naturales
 
-### Clase 14 **
-### Clase 15 **
-### Clase 16 **
-### Clase 17 **
-### Clase 18 **
-### Clase 19 **
+### Clase 14 *Arreglos unidimensionales*
+
+Un arreglo o array es básicamente una estructura de datos almacenada como una sola variable. Hasta el momento habíamos visto variables y constantes, pero en este caso es una estructura algo más compleja, ya que se compone de varios elementos de un mismo tipo. Por ejemplo, podía ser una lista finita de números o de palabras que se almacenarían en celdas contiguas de memoria.
+
+Cada uno de esos elementos se distinguen por un índice o subíndice al que se puede apuntar con un puntero para acceder a dicha posición del array. Además, también se podría escribir código para acceder de forma aleatoria a estos elementos de los que se compone el arreglo.
+
+**Arreglo unidimensional**
+
+Un array de tipo unidimensional es básicamente un vector de datos o lista. Dicho de otro modo, es un conjunto de variables del mismo tipo y tamaño que ocupan posiciones consecutivas en una memoria. El tamaño de la memoria ocupada por el array es siempre fijo y no se puede variar.
+
+Debemos tener en cuenta que la posición de los arreglos siempre empiezan en cero y terminan en n-1, es decir, imaginemos que tenemos el siguiente arreglo de caracteres:
+
+                ![src/programacionEstructurada_36.png](src/programacionEstructurada_36.png)
+
+'L I N K' es un arreglo de tamaño cuatro (que acepta cuatro caracteres), pero vemos que la posición empieza en cero y va hasta el tres.
+
+En nuestro siguiente ejemplo:
+
+![src/programacionEstructurada_37.png](src/programacionEstructurada_37.png)
+
+Tenemos tres variables de diferentes tipos. La primera variable es tipo entero llamado integerList de tamaño tres, el segundo es una variable de tipo flotante llamada floatList de tamaño cinco y el tercero es una variable de tipo carácter llamada charList de tamaño cuatro.
+
+Asignamos los valores en las variables: integerList y charList son declaradas, y posteriormente ingresamos manualmente los valores. Mientras que floatList es inicializada.
+
+Vemos que el número dentro de los corchetes [] son el tamaño que tendrá el arreglo, mientras que, si inicializamos con valores, podemos los valores dentro de llaves {} y separados por coma.
+
+Finalmente imprimimos diferentes valores: Con integerList imprimimos el primer valor del arreglo, con floatList imprimimos el último valor del arreglo y charList imprime la totalidad de los valores que contiene el arreglo.
+
+**NOTA:**
+
+  Aparece un nuevo carácter no imprimible "\t" que nos da una tabulación de cuatro líneas.
+
+**RETO**
+
+- Ingresar valores a un arreglo con un tamaño de 5
+- Multiplicar todos sus valores
+- Imprimir sus resultados
+
+### Clase 15 *Arreglos bidimensionales*
+
+Los arreglos bidimensionales son también llamados tablas o matrices tienen varias filas y columnas. Tiene dos índices: el primero indica el número de fila y el segundo el número de columna en que se encuentra el elemento.
+
+Un arreglo bidimensional es interpretado como un arreglo unidimensional con n número de filas (f), donde cada componente es un arreglo unidimensional de n número de columnas (c). Un arreglo de dos dimensiones contiene, pues, n número de f x c (números de filas x números de columnas) componentes.
+
+Por ejemplo, digamos que tenemos un arreglo de 3 x 4 en donde:
+
+                ![src/programacionEstructurada_38.png](src/programacionEstructurada_38.png)
+
+Siendo un arreglo bidimensional o matriz de 3 x 4 significa que 3 filas y 4 columnas (recordemos que las posiciones de los arreglos comienzan en cero).
+
+En el siguiente ejemplo:
+
+![src/programacionEstructurada_39.png](src/programacionEstructurada_39.png)
+
+Declaramos una matriz de 4 x 4 de tipo entero y luego ingresamos manualmente los valores, finalmente imprimimos la matriz en pantalla.
+
+Vemos que para declarar una matriz tenemos dos corchetes: el primer corchete simboliza el número de filas y el segundo corchete el número de columnas que tendrá nuestra matriz.
+
+**RETO**
+
+Crear un arreglo de 3 filas por 4 columnas en donde:
+
+- Los elementos de la primera fila sumen un total de 4
+- Los elementos de la segunda fila sumen un total de 10
+- Los elementos de la tercera fila sumen un total de 26
+- Imprime las sumatorias de cada fila
+
+### Clase 16 *Arreglos e iteradores unidimensionales*
+
+Ya vimos los arreglos unidimensionales y ya hemos guardado los datos de forma manual, pero una forma más fácil de usar arreglos, en especial cuando son arreglos grandes, son los iteradores.
+
+**¿Por qué utilizar iteradores en arreglos unidimensionales?**
+
+- Para manipular todos los elementos de un arreglo podemos utilizar una estructura repetitiva. La más usual es el ciclo for
+- Cuando se desea imprimir el contenido del arreglo
+- Cuando se suman todos los elementos
+- También cuando se va a inicializar el arreglo.
+
+En el siguiente ejemplo:
+
+![src/programacionEstructurada_40.png](src/programacionEstructurada_40.png)
+
+Declaramos un arreglo de tipo entero con un tamaño de 11 y usamos el ciclo for para imprimir el arreglo. Los datos guardados dentro del arreglo es el valor de 'i' multiplicado por sí mismo, es decir, i x i.
+
+**RETO**
+
+- Escribir un programa que nos diga el número más grande de un arreglo. Utilizando arreglos e iteradores.
+
+### Clase 17 *Arreglos e iteradores bidimensionales*
+
+Para poder utilizar el iterador for junto con un arreglo bidimensional es necesario entender el concepto de un for anidado.
+
+**Bucle anidado**
+
+Es un bucle que se encuentra incluido en el bloque de sentencias de otro bloque. Los bucles pueden tener cualquier nivel de anidamiento (un bucle dentro de otro bucle dentro de un tercero, etc.). Al bucle que se encuentra dentro del otro se le puede denominar bucle interior o bucle interno. El otro bucle sería el bucle exterior o bucle externo.
+
+En los bucles anidados es importante utilizar variables de control distintas, para no obtener resultados inesperados.
+
+**Bucles anidados con variables independientes**
+
+Los bucles anidados con variables independientes son los bucles en los que ninguna de las variables de uno de los bucles interviene ni en la condición de continuación ni en la expresión de paso de los otros bucles.
+
+**Bucles anidados con variables dependientes**
+
+Los bucles anidados con variables dependientes son los bucles en los que la variable de uno de los bucles interviene en la condición de continuación o en la expresión de paso de los otros bucles.
+
+En nuestro ejemplo:
+
+![src/programacionEstructurada_41.png](src/programacionEstructurada_41.png)
+
+Declamaros una matriz de 4 x 5, es decir, tendrá 4 filas y 5 columnas, y usamos un bucle anidado con variables independientes. Nuestro primer bucle for representa las filas de la matriz y el segundo bucle for representa las columnas de la matriz.
+
+Su forma de recorrer es la siguiente: nuestro programa inicial al ingresa al primer for y después pasa al segundo for, continua dando vueltas al segundo for hasta completar y sale para dar la vuelta al primer for. Continua sucesivamente de la misma manera hasta terminar ambos bucles.
+
+**RETO**
+
+Crear un arreglo de 5 filas por 6 columnas donde:
+
+- Los primeros 5 elementos de cada fila tengan calificaciones aprobatorias de 6 y 10
+- El sexto elemento de cada fila debe ser 0
+- Calcula el promedio de los primeros 5 elementos de cada fila y asignarlo al sexto elemento
+- Imprime el promedio de cada fila de calificaciones
+
+### Clase 18 *Cadena de caracteres (string)*
+
+En C no existe un tipo predefinido para manipular cadenas de caracteres (string). Sin embargo, el estándar de C define algunas funciones de biblioteca para tratamiento de cadenas. Una cadena en C es un array de caracteres de una dimensión (vector de caracteres) con la particularidad que tienen una marca en el fin del mismo (el caracter '\0'), además el lenguaje nos permite escribirlas como texto dentro de comillas dobles si son simples no.
+
+Por ejemplo la cadena "Hola" en C se considera un array formado por los elementos 'H', 'o', 'l', 'a'.
+
+Para comprender mejor como funciona una cadena de caracteres en C debemos saber algunos conceptos que usaremos como:
+
+- gets: La función que lee una cadena de texto desde el teclado.
+- puts: La función que muestra una cadena de texto en pantalla y avanza de línea.
+- strlen: Se encarga de devolver la longitud de una cadena de texto
+
+En nuestro siguiente ejemplo:
+
+![src/programacionEstructurada_42.png](src/programacionEstructurada_42.png)
+
+Declaramos un arreglo 'name' de tipo carácter con un tamaño de 50 y una variable 'size' de tipo entero. Imprimimos en pantalla un mensaje para que el usuario sepa cuando ingresar la cadena de nombre con gets, después imprimimos la cadena ingresada con puts y guardamos el tamaño de la cadena en size para posteriormente imprimirla.
+
+**RETO**
+
+- Haz un programa que reciba una cadena de caracteres e imprima de regreso la misma cadena de forma invertida.
+
+### Clase 19 *Recapitulación: Control de Flujo*
+
+En esta lectura vamos a recapitular los conceptos de control de flujo que aprendimos en el curso.
+
+**If**
+
+Empezamos con condicionales o sentencias condicionales. Estas son instrucciones que evalúan resultados booleanos, esto quiere decir que evalúan una condición que va a tener como resultado algo verdadero o falso. Dependiendo del resultados nosotros podemos usar estas condiciones para controlar el flujo de nuestro programa y los resultados que nosotros queremos que tenga.
+
+La estructura para escribir una condición es la siguiente:
+
+![src/programacionEstructurada_43.png](src/programacionEstructurada_43.png)
+
+Dentro del paréntesis después de la instrucción if, escribimos la operación que va a ser la condición a revisar. Si esta se cumple entra al bloque de cumplimiento de la condición y podemos ejecutar instrucciones. Si no se cumple la condición, el programa continua y no entra al bloque de cumplimiento de la condición.
+
+**Operadores relacionales y lógicos**
+
+Al utilizar condiciones, para ayudarnos a evaluar las operaciones nosotros podemos utilizar operadores relacionales y operadores lógicos.
+
+Los operadores relacionales son:
+
+- (<) Menor que
+- (- <)= Menor o igual que
+- (>) Mayor que
+- (>)= Mayor o igual que
+- (==) Igual (Utilizado como comparación y NO como asignación)
+- (!=) Diferente/No igual que
+
+Los operadores lógicos son:
+
+- && Y/And
+
+Teniendo en cuenta más de una condición, el resultado será verdadero si ambas condiciones son verdaderas.
+- || O/Or
+
+Teniendo en cuenta más de una condición, el resultado será verdadero si alguna o ambas condiciones son verdaderas, solo una necesita cumplirse.
+
+- ! No/Not
+
+El resultado es inverso al operando.
+
+**Switch**
+
+Otra estructura de control de flujo que podemos utilizar es el switch. Esta es una estructura de control que nos permite agilizar el flujo es opciones múltiples.
+
+Su estructura es la siguiente:
+
+![src/programacionEstructurada_44.png](src/programacionEstructurada_44.png)
+
+En esta estructura se evalúa una expresión y se evalúa cada caso potencial de resultado con respecto a esa instrucción, o sea, si en la expresión se evalúa una variable de tipo int, en los casos se evalúan valores de tipo int. Si en la expresión se evalúan variables de tipo char, en los casos se evalúan valores de tipo char, por ejemplo:
+
+![src/programacionEstructurada_45.png](src/programacionEstructurada_45.png)
+
+**Loops**
+
+Un loop es una estructura iterativa que permite repetir un bloque de instrucciones. Esta repetición es controlada por una condición booleana.
+
+**Loops - While**
+
+El iterador While es una estructura de control donde el bloque de instrucciones se repetirá siempre que la condición se cumpla.
+
+La sintaxis es la siguiente:
+
+![src/programacionEstructurada_46.png](src/programacionEstructurada_46.png)
+
+Después de la instrucción while dentro de los paréntesis tenemos la condición, siempre que esta se cumpla el bloque al cumplimiento de la condición se repetirá. Dentro de los corchetes se encuentra el bloque al cumplimiento de la condición, este es una serie de instrucciones que queramos que se repita. Al dejar de cumplirse la condición o no cumplirse en lo absoluto, el flujo del programa seguirá después de los corchetes.
+
+**Loops - For**
+
+El iterador for es una estructura de control que nos permite repetir un bloque de instrucciones un número de veces especifico.
+
+La sintaxis de un for es la siguiente:
+
+![src/programacionEstructurada_47.png](src/programacionEstructurada_47.png)
+
+Después de la instrucción for, dentro de los paréntesis la estructura se divide en tres partes: inicialización, condición e incremento.
+
+En la primera sección inicializamos una variable que utilizaremos para medir la cantidad de veces que se repetirá el bloque. En la condición definimos el número de veces que se repetirá, esta es una condición y siempre que se cumpla seguirá repitiéndose el bloque, entonces utilizamos una variable de tipo int y revisamos en la condición siempre que ese número sea menor o mayor que alguna variable o número que hayamos definido con anticipación. Finalmente en el incremento, que también puede ser decremento, sucede después del bloque al cumplimiento de la condición y modificamos la variable para eventualmente incumplir la condición y salir del iterador.
+
+**Loops - Do While**
+
+Este iterador es similar al while, con la diferencia de que la condición se prueba al final de la misma, se evalúa al final.
+
+Su sintaxis es la siguiente:
+
+![src/programacionEstructurada_48.png](src/programacionEstructurada_48.png)
+
+De manera similar el while, tenemos una condición y siempre que esta se cumpla un bloque se repetirá. La diferencia se encuentra con la instrucción do, en la que se cumplirá ese bloque antes de checar la condición y se repetirá.
+
+**Arreglos**
+
+Un arreglo es una serie de elementos del mismo tipo de dato y almacenados de manera consecutiva. Estos pueden tener de una a varias dimensiones, pero durante el curso vimos arreglos unidimensionales y bidimensionales, una y dos dimensiones respectivamente.
+
+De la misma manera que una variable nosotros podemos declarar e inicializar un arreglo unidimensional, también llamados vectores, la sintaxis es la siguiente:
+
+![src/programacionEstructurada_49.png](src/programacionEstructurada_49.png)
+
+Para declarar un arreglo definimos al igual que una variable su tipo de dato y su nombre, seguido de esto dentro de corchetes cuadrados ingresamos el tamaño de nuestro arreglo. Con esto indicamos que va a ser un arreglo y su tamaño.
+
+![src/programacionEstructurada_50.png](src/programacionEstructurada_50.png)
+
+La estructura es similar a declarar una variable con la diferencia de que agregamos valores dentro del contenido del arreglo. Estos valores van dentro de corchetes separados por comas.
+
+Los arreglos bidimensionales también llamados matrices son arreglos de dos dimensiones. Estos tienen dos índices, el primero indica el número de fila y el segundo el número de columna en que se encuentra el elemento.
+
+La sintaxis para declarar e inicializar un arreglo bidimensional es la siguiente:
+
+![src/programacionEstructurada_51.png](src/programacionEstructurada_51.png)
+
+Para declarar dentro de la misma manera que unidimensional definimos el tipo de dato y nombre. Adicionalmente agregamos doble corchetes cuadrados, el primero para indicar el número de filas y el segundo para el número de columnas.
+
+![src/programacionEstructurada_52.png](src/programacionEstructurada_52.png)
+
+Para inicializar el arreglo, agregamos de igual manera entre corchetes los valores, separando cada fila en corchetes independientes, separados por comas. Y dentro de estos corchetes agregamos los valores también separados por comas.
+
+**Arreglos e iteradores**
+
+Una par de estructuras comúnmente utilizadas conjuntamente son los arreglos e iteradores. ¿Por qué utilizamos estas estructuras de manera conjunta?:
+
+- Para manipular todos los elementos de un arreglo podemos utilizar una estructura repetitiva. La más usual es el ciclo for.
+- Cuando desea imprimir el contenido del arreglo.
+- Cuando se suman todos los elementos.
+- También cuando se va a inicializar.
+
+Para poder utilizar el iterador for junto con un arreglo bidimensional es necesario entender el concepto de un for anidado. Esto es un for dentro de un for, la sintaxis es la siguiente:
+
+![src/programacionEstructurada_53.png](src/programacionEstructurada_53.png)
+
+En esta estructura al inicial el for, se recorre vuelta por vuelta ambos fors, iniciando por la primera vuelta del primer for y continuando con todas las vueltas del segundo for. Siguiendo con la siguiente vuelta del primer for y continuando con todas las vueltas del segundo for, y así sucesivamente.
+
+Esto es muy útil para recorrer arreglos bidimensionales.
+
+Espero que estas recapitulaciones te sean útiles para repasar conceptos y revisar estructuras, ¡nos vemos en la siguiente clase!
