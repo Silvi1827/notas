@@ -1074,9 +1074,9 @@ El estándar de C contiene varias funciones para la edición de ficheros, éstas
 - Hacer las diversas operaciones (lectura, escritura, etc).
 - Cerrar el archivo utilizando la función fclose.
 
-**El puntero (FILE *)**
+**El puntero**
 
-Todas las funciones de entrada/salida estándar usan este puntero para conseguir información sobre el fichero abierto. Este puntero no apunta al archivo sino a una estructura que contiene información sobre él. Esta estructura incluye entre otras cosas información sobre el nombre del archivo, la dirección de la zona de memoria donde se almacena el fichero, tamaño del buffer.
+Todas las funciones de entrada/salida estándar usan el puntero FILE * para conseguir información sobre el fichero abierto. Este puntero no apunta al archivo sino a una estructura que contiene información sobre él. Esta estructura incluye entre otras cosas información sobre el nombre del archivo, la dirección de la zona de memoria donde se almacena el fichero, tamaño del buffer.
 
 **FOPEN**
 
