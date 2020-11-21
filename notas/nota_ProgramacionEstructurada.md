@@ -1015,7 +1015,7 @@ Los valores reales se devolverán en orden inverso, es decir:
 3. !3 = 3 * !2 = 3 * 2 * 1 = 6
 4. !4 = 4 * !4 = 4 * 3 * 2 * 1= 24
 5. !5 = 5 * !5 = 5 * 4 * 3 * 2 * 1 = 120
- 
+
 El orden inverso de ejecución es una característica típica de todas las funciones recursivas. Si una función recursiva tiene variables locales, se creará un conjunto diferente de variables locales durante cada nueva llamada. Los nombres de las variables locales serán los mismos, como los hallamos declarado en la función. Sin embargo, las variables representarán un conjunto diferente de valores cada vez que se ejecute la función. Cada conjunto de valores se almacenará en la pila, así cuando el proceso recursivo se deshaga (cuando las llamadas a la función se saquen de la pila y sigan su ejecución) podremos disponer de ellas.
  
 En cada llamada de recursiva el compilador utiliza una nueva zona de la pila para almacenar las variables. Esto hace que la administración de la pila enlentezca la ejecución de la función y pueda dar problemas por agotamiento de la memoria de la pila. Por tanto, como toda función recursiva se puede calcular de forma iterativa, es aconsejable utilizar este último modo cuando sea fácil de encontrar.
@@ -1058,7 +1058,7 @@ Observemos nuestro siguiente ejemplo:
 Declaramos una estructura poniendo struct _nombreEstructura y en su interior los miembros. En nuestro ejemplo tenemos una estructura llamada PersonalData con tres miembros: dos arreglos de caracteres con tamaño 20 llamados nombre y apellido, y un entero llamado edad.
 
 En la función principal main, definimos una nueva estructura llamada person al cual asignaremos valores siguiendo. Para acceder a los datos colocamos el nombre de la variable de tipo estructura seguido de un punto y seguido del nombre del miembro de la estructura: person.nombre, person.apellido y person.edad. De la misma forma podemos imprimir los valores de esos mismos miembros.
- 
+
 **Manejo de Datos**
 
 Así como hemos revisado la salida y entrada por pantalla y teclado respectivamente, veremos ahora la entrada y/o salida de datos utilizando ficheros, lo cual será imprescindible para un gran número de aplicaciones que deseemos desarrollar.
@@ -1074,7 +1074,7 @@ El estándar de C contiene varias funciones para la edición de ficheros, éstas
 - Hacer las diversas operaciones (lectura, escritura, etc).
 - Cerrar el archivo utilizando la función fclose.
 
-**El puntero FILE ***
+**El puntero (FILE *)**
 
 Todas las funciones de entrada/salida estándar usan este puntero para conseguir información sobre el fichero abierto. Este puntero no apunta al archivo sino a una estructura que contiene información sobre él. Esta estructura incluye entre otras cosas información sobre el nombre del archivo, la dirección de la zona de memoria donde se almacena el fichero, tamaño del buffer.
 
@@ -1118,19 +1118,19 @@ Y creamos un fichero llama DatosPersonales con la combinación wb. Recordemos qu
 
 También tenemos:
 
-	- **Comprobación de fichero abierto**
+- **Comprobación de fichero abierto**
 
-    Un aspecto muy importante después de intentar abrir un fichero es comprobar si realmente está abierto. El sistema no es infalible y pueden producirse fallos: el fichero puede no existir, estar dañado o no tener permisos de lectura. Si intentamos realizar operaciones sobre un puntero tipo FILE cuando no se ha conseguido abrir el fichero puede haber problemas.
+  Un aspecto muy importante después de intentar abrir un fichero es comprobar si realmente está abierto. El sistema no es infalible y pueden producirse fallos: el fichero puede no existir, estar dañado o no tener permisos de lectura. Si intentamos realizar operaciones sobre un puntero tipo FILE cuando no se ha conseguido abrir el fichero puede haber problemas.
 
-    Si el fichero no se ha abierto, el puntero fichero (puntero a FILE) tendrá el valor NULL, si se ha abierto con éxito tendrá un valor distinto de NULL. Si fichero == NULL significa que no se ha podido abrir por alguna causa, lo más conveniente es salir del programa. Para salir utilizamos la función exit(), donde el argumento 1 indica al sistema operativo que se han producido errores. Esta función precisa del archivo de cabecera stdlib.h.
+  Si el fichero no se ha abierto, el puntero fichero (puntero a FILE) tendrá el valor NULL, si se ha abierto con éxito tendrá un valor distinto de NULL. Si fichero == NULL significa que no se ha podido abrir por alguna causa, lo más conveniente es salir del programa. Para salir utilizamos la función exit(), donde el argumento 1 indica al sistema operativo que se han producido errores. Esta función precisa del archivo de cabecera stdlib.h.
 
-	- **Escritura del fichero: fwrite**
+- **Escritura del fichero: fwrite**
 
-    Ésta función nos permite escribir en un fichero. Tiene cuatro parámetros en los cuales: el primero es el puntero a la variable que contiene los datos que vamos a escribir en el fichero, el segundo es el tamaño del tipo de dato a escribir, el tercero es el número de datos a escribir y el cuarto es el puntero al fichero sobre el que trabajaremos.
+  Ésta función nos permite escribir en un fichero. Tiene cuatro parámetros en los cuales: el primero es el puntero a la variable que contiene los datos que vamos a escribir en el fichero, el segundo es el tamaño del tipo de dato a escribir, el tercero es el número de datos a escribir y el cuarto es el puntero al fichero sobre el que trabajaremos.
 
-	- **Cierre del fichero: fclose**
+- **Cierre del fichero: fclose**
 
-    Una vez realizadas todas las operaciones deseadas sobre el fichero hay que cerrarlo. Es importante no olvidar este paso pues el fichero podría corromperse. Al cerrarlo se vacían los buffers y se guarda el fichero en disco. Un fichero se cierra mediante la función fclose.
+  Una vez realizadas todas las operaciones deseadas sobre el fichero hay que cerrarlo. Es importante no olvidar este paso pues el fichero podría corromperse. Al cerrarlo se vacían los buffers y se guarda el fichero en disco. Un fichero se cierra mediante la función fclose.
 
 ***NOTA: Para saber el tamaño de nuestro tipo de dato usamos la función sizeof que nos devuelve el tamaño en bytes que ocupa una variable o algún tipo de dato.***
 
