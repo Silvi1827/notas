@@ -971,3 +971,194 @@ Hasta ahora las únicas variables que habíamos creado eran variables locales, e
 Para crear variables que usemos entre diferentes funciones lo hacemos con la misma sintaxis que hasta ahora hemos hecho, pero lo haremos fuera de cualquier función y lo haremos en la primera sección de nuestro código en la parte superior. Al hacerlo aquí nosotros estamos creando variables globales que podemos utilizar en cualquier función y será compartida.
 
 Espero que esta última recapitulación te haya servido para reafirmar los conceptos que aprendimos, ¡nos vemos en la siguiente clase!
+
+## Modulo 5. Conceptos avanzados
+### Clase 23 *Recursividad*
+
+En matemáticas se da el nombre de recursión a la técnica consistente en definir una función en términos de sí misma. Puesto que en C una función puede llamar a otras funciones, se permite que una función también pueda llamarse a sí misma.
+
+Toda función definida recursivamente debe contener al menos una definición explícita para alguno de sus argumentos. De no ser así la función puede caer en un bucle infinito.
+
+**Recursividad**
+
+Se llama recursividad a un proceso mediante el que una función se llama a sí misma de forma repetida, hasta que se satisface alguna determinada condición. El proceso se utiliza para computaciones repetidas en las que cada acción se determina mediante un resultado anterior. Se pueden escribir de esta forma muchos problemas iterativos.
+
+Se deben satisfacer dos condiciones para que se pueda resolver un problema recursivamente:
+
+- Primera: El problema se debe escribir en forma recursiva.
+- Segunda: La sentencia del problema debe incluir una condición de fin.
+
+A continuación mostramos un ejemplo típico de recursividad, hallar el factorial de un número. En forma de traza con las sucesivas llamadas simuladas con ventanas.
+
+![src/programacionEstructurada_59.png](src/programacionEstructurada_59.png)
+
+En nuestra función principal main declaramos una variable result que guardara el valor de la función factorial, mientras enviamos como parámetro el valor de 5. Y, además, imprimimos el resultado final.
+
+En nuestra función recursiva factorial recibimos un número entero, imprimimos el aviso de entrada a la factorial y el valor actual del número en ese momento. Tenemos la condición de que si nuestro número es mayor a 1 la función se llama nuevamente, esta vez con un valor menor, sin embargo, si no se cumple la condición la recursividad termina.
+
+***NOTA: Al probar en el compilador de C este ejemplo, es posible que para valores de n que se les introduzcan mayores de 7 (sobrepasando su factorial el valor 32767, que es el Rango tope de los números enteros), nos comience a dar valores de salida incorrectos.***
+
+**¿Cómo funciona?**
+
+Cuando ejecutamos un programa recursivo, las llamadas recursivas no se ejecutan inmediatamente. Lo que se hace es colocarlas en una pila hasta que la condición de término se encuentra. Entonces se ejecutan las llamadas a la función en orden inverso a como se generaron, como si se fueran sacando de la pila, por tanto el orden sería algo así:
+
+1. !n = n * !(n - 1)
+2. !(n - 1) = (n - 1) * !(n - 2)
+3. !(n - 2) = (n - 2) * !(n - 3)
+4. !(n - 3) = (n - 3) * !(n - 4)
+5. !(n - 5) = (n - 4) * !(n - 5)
+
+Los valores reales se devolverán en orden inverso, es decir:
+
+1. !1 = 1
+2. !2 = 2 * !1 = 2 * 1 = 2
+3. !3 = 3 * !2 = 3 * 2 * 1 = 6
+4. !4 = 4 * !4 = 4 * 3 * 2 * 1= 24
+5. !5 = 5 * !5 = 5 * 4 * 3 * 2 * 1 = 120
+ 
+El orden inverso de ejecución es una característica típica de todas las funciones recursivas. Si una función recursiva tiene variables locales, se creará un conjunto diferente de variables locales durante cada nueva llamada. Los nombres de las variables locales serán los mismos, como los hallamos declarado en la función. Sin embargo, las variables representarán un conjunto diferente de valores cada vez que se ejecute la función. Cada conjunto de valores se almacenará en la pila, así cuando el proceso recursivo se deshaga (cuando las llamadas a la función se saquen de la pila y sigan su ejecución) podremos disponer de ellas.
+ 
+En cada llamada de recursiva el compilador utiliza una nueva zona de la pila para almacenar las variables. Esto hace que la administración de la pila enlentezca la ejecución de la función y pueda dar problemas por agotamiento de la memoria de la pila. Por tanto, como toda función recursiva se puede calcular de forma iterativa, es aconsejable utilizar este último modo cuando sea fácil de encontrar.
+
+### Clase 24 *Apuntadores*
+
+Un puntero es una variable que contiene la dirección de memoria de una variable dinámica donde se podrá almacenar un valor. Cuando se declara un puntero, de igual manera que con cualquier variable, su contenido es indefinido hasta que se le asigne un valor. Mientras esto no ocurra no se puede decir que exista una variable referenciada, en esta situación se dice que el puntero no está apuntado a una dirección válida. Un apuntador puede inicializarse en NULL que corresponde a una dirección 0 o nula. NULL es una constante simbólica definida en el archivo de cabeceras stddef.h el cual a su vez es incluido en el archivo de cabeceras stdio.h. Al inicializar un puntero en NULL se garantiza que el puntero no apunte a una dirección inválida pero con esto tampoco se define una variable referenciada.
+
+**Operadores de punteros**
+
+Básicamente existen dos operadores para manipular los punteros, estos son:
+
+- El operador de dirección (&) regresa la dirección de una variable.
+- El operador de indirección (*) toma la dirección de una variable y regresa el dato que contiene esa dirección.
+
+Teniendo en cuenta el siguiente ejemplo:
+
+![src/programacionEstructurada_60.png](src/programacionEstructurada_60.png)
+
+Contamos con dos variables: una variable flotante llamada 'value' y un apuntador llamado 'apVal'. Podemos ver que para declarar un apuntador es necesario el tipo de dato y poner un asterisco (*) antes del nombre que tendrá nuestro apuntador.
+
+Con el ampersand (&) hacemos que nuestro puntero apVal apunte a la variable value. Y con el asterisco (*) hacemos que ahora la variable value tenga el valor de 3.1416.
+
+Nosotros podemos imprimir tanto directa como indirectamente el valor de nuestra variable: directamente seria la forma normal en donde ponemos el nombre de la variable y la forma indirecta sería mediante el apuntador escribiendo *_nombreApuntador. También podemos imprimir la dirección en donde se encuentra nuestra variable al escribir &_nombreVariable o simplemente el nombre del puntero.
+
+### Clase 25 *Struct y manejo de archivos*
+
+**Estructura**
+
+Las estructuras, o struct, son colecciones de variables relacionadas bajo un nombre. Las estructuras pueden contener variables de muchos tipos diferentes de datos. Los datos que contiene una estructura pueden ser de tipo simple (caracteres, números enteros o de coma flotante etc.) o a su vez de tipo compuesto (vectores, estructuras, listas, etc.). Es diferente a los arreglos que contienen únicamente elementos de un mismo tipo de datos.
+
+Su utilización más habitual es para la programación de bases de datos, ya que están especialmente indicadas para el trabajo con registros o fichas.
+
+A cada uno de los datos o elementos almacenados dentro de una estructura se les denomina miembros de esa estructura y éstos pertenecerán a un tipo de dato determinado. 
+
+Observemos nuestro siguiente ejemplo:
+
+![src/programacionEstructurada_61.png](src/programacionEstructurada_61.png)
+
+Declaramos una estructura poniendo struct _nombreEstructura y en su interior los miembros. En nuestro ejemplo tenemos una estructura llamada PersonalData con tres miembros: dos arreglos de caracteres con tamaño 20 llamados nombre y apellido, y un entero llamado edad.
+
+En la función principal main, definimos una nueva estructura llamada person al cual asignaremos valores siguiendo. Para acceder a los datos colocamos el nombre de la variable de tipo estructura seguido de un punto y seguido del nombre del miembro de la estructura: person.nombre, person.apellido y person.edad. De la misma forma podemos imprimir los valores de esos mismos miembros.
+ 
+**Manejo de Datos**
+
+Así como hemos revisado la salida y entrada por pantalla y teclado respectivamente, veremos ahora la entrada y/o salida de datos utilizando ficheros, lo cual será imprescindible para un gran número de aplicaciones que deseemos desarrollar.
+
+**Ficheros**
+
+Los archivos o ficheros brindan una forma de guardar permanentemente los datos y resultados de nuestros programas. Es importante indicar que los ficheros no son únicamente los archivos que guardamos en el disco duro. En C todos los dispositivos del ordenador se tratan como ficheros: la impresora, el teclado, la pantalla, etc.
+
+El estándar de C contiene varias funciones para la edición de ficheros, éstas están definidas en la cabecera stdio.h y por lo general empiezan con la letra f, haciendo referencia a file. Adicionalmente se agrega un tipo FILE, el cual se usará como apuntador a la información del fichero. La secuencia que usaremos para realizar operaciones será la siguiente:
+
+- Crear un apuntador del tipo FILE *
+- Abrir el archivo utilizando la función fopen y asignándole el resultado de la llamada a nuestro apuntador.
+- Hacer las diversas operaciones (lectura, escritura, etc).
+- Cerrar el archivo utilizando la función fclose.
+
+**El puntero FILE ***
+
+Todas las funciones de entrada/salida estándar usan este puntero para conseguir información sobre el fichero abierto. Este puntero no apunta al archivo sino a una estructura que contiene información sobre él. Esta estructura incluye entre otras cosas información sobre el nombre del archivo, la dirección de la zona de memoria donde se almacena el fichero, tamaño del buffer.
+
+**FOPEN**
+
+Es el apuntador del fichero para lectura. Usado para abrir el fichero.
+
+Tenemos el siguiente ejemplo:
+
+![src/programacionEstructurada_62.png](src/programacionEstructurada_62.png)
+
+En el que declaramos una variable 'archivo' y vemos que al usar fopen se envia dos parametros: el primero es el nombre del archivo con la extensión que deseamos y el segundo es el modo.
+
+***NOTA: El nombre de fichero se puede indicar directamente (como en el ejemplo) o usando una variable y se puede abrir de diversas formas. Esto se especifica con el parámetro modo.***
+
+Modos
+
+- r: Abre un fichero existente para lectura.
+- w: Crea un fichero nuevo (o borra su contenido si existe) y lo abre para escritura.
+- a: Abre un fichero (si no existe lo crea) para escritura. El puntero se sitúa al final del archivo, de forma que se puedan añadir datos si borrar los existentes.
+
+Se pueden añadir una serie de modificadores siguiendo a los modos anteriores:
+
+- b: Abre el fichero en modo binario.
+- t: Abre el fichero en modo texto.
+- +: Abre el fichero para lectura y escritura.
+
+Ejemplos de combinaciones:
+
+- rb+: Abre el fichero en modo binario para lectura y escritura.
+- w+: Crea (o lo borra si existe) un fichero para lectura y escritura.
+- rt: Abre un archivo existente en modo texto para lectura.
+
+### Clase 26 *Escritura y lectura de archivos*
+
+**Escritura de archivos**
+
+![src/programacionEstructurada_63.png](src/programacionEstructurada_63.png)
+
+Y creamos un fichero llama DatosPersonales con la combinación wb. Recordemos que la w crea un nuevo archivo y lo abre para la escritura, mientras que la b abre el archivo en modo binario. En su interior escribimos el código para ingresar los datos de la estructura person por teclado y posteriormente imprimirlo que sería lo guardado dentro del archivo.
+
+También tenemos:
+
+	- **Comprobación de fichero abierto**
+
+    Un aspecto muy importante después de intentar abrir un fichero es comprobar si realmente está abierto. El sistema no es infalible y pueden producirse fallos: el fichero puede no existir, estar dañado o no tener permisos de lectura. Si intentamos realizar operaciones sobre un puntero tipo FILE cuando no se ha conseguido abrir el fichero puede haber problemas.
+
+    Si el fichero no se ha abierto, el puntero fichero (puntero a FILE) tendrá el valor NULL, si se ha abierto con éxito tendrá un valor distinto de NULL. Si fichero == NULL significa que no se ha podido abrir por alguna causa, lo más conveniente es salir del programa. Para salir utilizamos la función exit(), donde el argumento 1 indica al sistema operativo que se han producido errores. Esta función precisa del archivo de cabecera stdlib.h.
+
+	- **Escritura del fichero: fwrite**
+
+    Ésta función nos permite escribir en un fichero. Tiene cuatro parámetros en los cuales: el primero es el puntero a la variable que contiene los datos que vamos a escribir en el fichero, el segundo es el tamaño del tipo de dato a escribir, el tercero es el número de datos a escribir y el cuarto es el puntero al fichero sobre el que trabajaremos.
+
+	- **Cierre del fichero: fclose**
+
+    Una vez realizadas todas las operaciones deseadas sobre el fichero hay que cerrarlo. Es importante no olvidar este paso pues el fichero podría corromperse. Al cerrarlo se vacían los buffers y se guarda el fichero en disco. Un fichero se cierra mediante la función fclose.
+
+***NOTA: Para saber el tamaño de nuestro tipo de dato usamos la función sizeof que nos devuelve el tamaño en bytes que ocupa una variable o algún tipo de dato.***
+
+**Lectura de archivos**
+
+![src/programacionEstructurada_64.png](src/programacionEstructurada_64.png)
+
+Teniendo en cuenta este ejemplo. Para eso cambiamos nuestra combinación a rb en donde: r nos abrirá un archivo para su lectura y b lo abrirá en modo binario. Nosotros también usamos la función fread para extraer la información guardada dentro de nuestro fichero. Similar al fwrite, esta función también recibe cuatro parámetros:
+
+1. Dirección de la variable donde se almacenarán los datos leídos del fichero.
+2. Tamaño del tipo de dato a leer.
+3. El número de datos a leer.
+4. El puntero al fichero sobre el que trabajaremos.
+
+### Clase 27 *Manejo de librerías*
+
+Las librerías son un grupo de archivos que tienen una funcionalidad preconstruidas por terceros, y que puede ser usadas por cualquier ejecutable. Las librerías contienen en su interior variables y funciones, se conoce como librerías (o bibliotecas) a cierto tipo de archivos que podemos importar o incluir en nuestro programa. Estos archivos contienen las especificaciones de diferentes funcionalidades ya construidas y utilizables, como por ejemplo leer del teclado o mostrar algo por pantalla entre muchas otras más. al poder incluir estas librerías con definiciones de diferentes funcionalidades podremos ahorrarnos gran cantidad de cosas.
+
+Nosotros también somos capaces de crear nuestras propias librerías para hacer las operaciones que deseemos. Para hacerlo es necesario tener dos archivos: uno sería el lenguaje c donde estaría nuestro código y otro con la extensión .h que sería nuestra librería, además de que ambos archivos deben estar necesariamente en la misma carpeta.
+
+Haremos una librería básica de prueba que tendrá cuatro operaciones, para eso creamos un archivo llamado "operaciones.h" y ponemos en su interior las cuatro funciones:
+
+![src/programacionEstructurada_65.png](src/programacionEstructurada_65.png)
+
+Con esto ya está creada la librería. Ahora debemos crear nuestro código que llamara esa librería:
+
+![src/programacionEstructurada_66.png](src/programacionEstructurada_66.png)
+
+Como vemos, cuando incluimos a nuestra librería recién creada ponemos el nombre entre comillas dobles (" ") en vez del típico < >.
+
+El uso sigue siendo igual que usar una función cualquiera, inicializamos dos variables flotantes llamadas firstValue y secondValue con los valores de 10 y 15, respectivamente. Así como declaramos una variable flotante result que guardara el resultado de nuestra operación y una variable entera llamada option con el que pediremos al usuario que seleccione la operación que desee realizar y manejamos la condición con un switch para finalmente imprimir el resultado.
