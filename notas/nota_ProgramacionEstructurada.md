@@ -836,3 +836,138 @@ En esta estructura al inicial el for, se recorre vuelta por vuelta ambos fors, i
 Esto es muy útil para recorrer arreglos bidimensionales.
 
 Espero que estas recapitulaciones te sean útiles para repasar conceptos y revisar estructuras, ¡nos vemos en la siguiente clase!
+
+## Modulo 4. Funciones
+### Clase 20 *Funciones: Divide y vencerás*
+
+La experiencia ha mostrado que la mejor forma de desarrollar y mantener un programa grande es construirlo a partir de piezas menores o módulos, siendo cada uno de ellos más fácil de manipular que el programa original. Esta técnica se conoce como divide y vencerás.
+
+C fue diseñado para hacer funciones eficientes y fáciles de usar. Los programas C consisten generalmente de varias funciones pequeñas en vez de pocas grandes.
+
+**Funciones**
+
+Las funciones es un fragmento de código que realiza una tarea bien definida. Se invocan mediante una llamada de función, la llamada de función específica el nombre de la misma y proporciona información (en forma de argumentos) que la función llamada necesita a fin de llevar acabo su tarea. Por ejemplo, la función printf imprime por la salida estándar los argumentos que le pasamos.
+
+Las funciones permiten a un programador modularizar un programa. Todas las variables declaradas en las definiciones de función son variables locales (son conocidas solo en la función en la cual están definidas).
+
+La mayor parte de las funciones tienen una lista de parámetros. Los parámetros proporcionan la forma de comunicar información entre funciones. Los parámetros de función son también variables locales.
+
+Existen varios intereses que dan motivo a la "funcionalización" de un programa. El enfoque de divide y vencerás hace que el desarrollo del programa sea más manipulable. Otra motivación es la reutilización del software - el uso de funciones existentes como bloques constructivos para crear nuevos programas.
+
+Cada función debería limitarse a ejecutar una tarea sencilla y bien definida y el nombre de la función deberá expresar claramente dicha tarea.
+
+Si no se puede elegir un nombre conciso es probable que la función esté intentando ejecutar demasiadas tareas diversas.
+
+Se pueden utilizar para:
+
+- Encapsulamiento
+- Reusabilidad de código
+- Separar tareas
+- Cambios a futuro
+
+Consideremos el siguiente código como ejemplo:
+
+![src/programacionEstructurada_54.png](src/programacionEstructurada_54.png)
+
+En donde tenemos dos funciones: la función principal main que hemos usado desde los principios de todo este curso y sirve como punto de partida para la ejecución del programa, y la función Addiction que recibe dos parámetros.
+
+La función main tiene declarado tres variables enteras: dos variables (num1, num2) que reciben datos del usuario desde el teclado y la tercera variable (additionRes) se encarga de llamar a la función Addiction enviando los dos números enteros para posteriormente recibir el resultado de la suma. Al final, se imprime el resultado de la suma.
+
+La función Addiction tiene dos parametros de tipo entero por donde recibe los datos, además declara una variable que guarda la suma y posteriormente utiliza la sentencia return para regresar la variable resultado. Aunque también podemos obviar la variable resultado, retornando directamente la suma escribiendo return a + b;.
+
+**PRIMER RETO**
+
+Vamos a calcular la potencia de un número:
+
+- Ingresar un valor base
+- Ingresar un valor de exponente
+- Dentro de una función calcular el exponente del número base
+- Imprime el resultado
+
+**SEGUNDO RETO**
+
+- Hacer un programa que cambie de dólares a tu moneda y de tu moneda a dólares
+- Usa funciones
+
+### Clase 21 *Variables locales y globales*
+
+Las reglas de ámbito de un lenguaje son las reglas que controlan si un fragmento de código conoce o tiene acceso a otro fragmento de código o de datos.
+
+**Variable Local**
+
+Es aquella cuyo ámbito se restringe a la función que la ha declarado se dice entonces que la variable es local a esa función. Esto implica que esa variable sólo va a poder ser manipulada en dicha sección, y no se podrá hacer referencia fuera de dicha sección. Cualquier variable que se defina dentro de las llaves del cuerpo de una función se interpreta como una variable local a esa función.
+ 
+**Variable Global**
+
+Es aquella que se define fuera del cuerpo de cualquier función, normalmente al principio del programa, después de la definición de los archivos de biblioteca (#include), de la definición de constantes simbólicas y antes de cualquier función. El ámbito de una variable global son todas las funciones que componen el programa, cualquier función puede acceder a dichas variables para leer y escribir en ellas. Es decir, se puede hacer referencia a su dirección de memoria en cualquier parte del programa.
+
+ El uso de variables globales no es aconsejable a pesar de que aparentemente nos parezca muy útil, esto se debe a varias razones fundamentales:
+
+- Legibilidad menor
+- Nos condiciona en muchos casos que el programa sólo sirva para un conjunto de casos determinados.
+- El uso indiscriminado de variables globales produce efectos colaterales. Esto sucede cuando existe una alteración no deseada del contenido de una variable global dentro de una función, bien por invocación, bien por olvidar definir en la función una variable local o un parámetro formal con ese nombre. La corrección de dichos errores puede ser muy ardua.
+- Atenta contra uno de los principios de la programación, la modularidad. El bajo acoplamiento supone no compartir espacios de memoria con otras funciones, y potenciar el paso de información (llamadas) para que la función trate la información localmente.
+ 
+Las variables declaradas dentro de una función son automáticas por defecto, es decir, sólo existen mientras se ejecuta la función. Cuando se invoca la función se crean estas variables en la pila y se destruyen cuando la función termina. La única excepción la constituyen las variables locales declaradas como estáticas (static). En este caso, la variable mantiene su valor entre cada dos llamadas a la función aun cuando su visibilidad sigue siendo local a la función.
+ 
+Una función siempre es conocida por todo el programa, excepto cuando se declara como estática, en cuyo caso sólo la podrán utilizar las funciones del mismo módulo de compilación. 
+ 
+En C, todas las funciones están al mismo nivel de ámbito. Es decir, no se puede definir una función dentro de otra función. Esto es por lo que C no es técnicamente un lenguaje estructurado en bloques.
+ 
+También puede suceder que en un mismo ámbito aparezcan variables  locales y globales con el mismo nombre. Cuando sucede esta situación, siempre son las variables locales y argumentos formales los que tienen prioridad sobre las globales.
+
+Un ejemplo de variables locales y globales puede ser vista en nuestro siguiente ejemplo:
+
+![src/programacionEstructurada_55.png](src/programacionEstructurada_55.png)
+
+Nosotros declaramos al principio del programa una variable global llamada publicText mientras que en nuestra función principal main declaramos otra variable local llamada privateText, además de crear una función void que simplemente imprimirá nuestras variables al ser llamada al igual que en nuestro main.
+
+Al hacer correr nuestro programa podemos observar que al principio nos imprime las variables locales y globales de la función main perfectamente, sin embargo, al llamar a la función Check nos marcara un error ya que la variable privateText se encuentra declarada únicamente en la función main. Pero, si nosotros comentamos a la variable local en la función Check, nuestro programa correra perfectamente imprimiendo las dos variables en la función main y únicamente la variable global en la función Check.
+
+***NOTA: Aprendimos otra forma de declarar un arreglo de cadenas con un texto predeterminado. Además de imprimirlo en pantalla con %s.***
+
+**RETO**
+
+- Utilizando variables globales, ingresa el nombre de un alumno y su calificación
+- En una función evalúa si el alumno ha aprobado o no
+- La calificación mínima aprobatoria es 7
+- Imprimir desde la función si el alumno aprobó
+
+### Clase 22 *Recapitulación: Funciones*
+
+En esta lectura vamos a hablar un poco sobre funciones y cómo utilizarlas.
+
+Las funciones son bloques de código que realizan alguna operación o instrucciones. Estas al igual que en matemáticas pueden aceptar datos de entrada, a estos les llamamos parámetros o argumentos y datos de salida. La función ya creada que hemos estado utilizado hasta ahorita, es la función main(). La estructura sería similar a lo siguiente:
+
+![src/programacionEstructurada_56.png](src/programacionEstructurada_56.png)
+
+¿Con qué finalidad hacemos estas secciones de código?
+
+- Encapsulamiento
+- Reusabilidad
+- Separar Tareas
+- Cambios a futuro
+
+La sintaxis para escribir una función es la siguiente:
+
+![src/programacionEstructurada_57.png](src/programacionEstructurada_57.png)
+
+Primero se escribe el tipo de dato de la salida de datos, luego el nombre por el que se identificará la función y finalmente entre paréntesis los parámetros o entrada de datos.
+
+![src/programacionEstructurada_58.png](src/programacionEstructurada_58.png)
+
+Y entre paréntesis el bloque de instrucciones. No es necesario que una función tenga una entrada y salida de datos, puede tener una, otra, ambas o ninguna.
+
+Pero si tiene salida de datos, el dato final necesita ser descrito con el comando return y el dato que vamos a regresar, que tiene que ser el mismo tipo de dato el cual indicamos inicialmente al crear la función. De la misma manera para los parámetros necesitamos declarar las variables dentro de los paréntesis que vayamos a necesitar, cada una es separada por una coma.
+
+De no necesitar un dato de salida nuestra función puede ser de tipo void, esto quiere decir que no regresa ningún dato.
+
+**Variables globales y locales**
+
+Naturalmente al tener secciones de código, o sea funciones, creamos una necesidad de tener variables que puedan ser compartidas entre estas. Para esto creamos variables globales.
+
+Hasta ahora las únicas variables que habíamos creado eran variables locales, esto quiere decir que son creadas dentro de una función y solo pueden ser utilizadas en esta función.
+
+Para crear variables que usemos entre diferentes funciones lo hacemos con la misma sintaxis que hasta ahora hemos hecho, pero lo haremos fuera de cualquier función y lo haremos en la primera sección de nuestro código en la parte superior. Al hacerlo aquí nosotros estamos creando variables globales que podemos utilizar en cualquier función y será compartida.
+
+Espero que esta última recapitulación te haya servido para reafirmar los conceptos que aprendimos, ¡nos vemos en la siguiente clase!
