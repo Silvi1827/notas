@@ -305,10 +305,10 @@ En la parte superior se colocan los atributos o propiedades, y debajo las operac
 
 Estos son los niveles de visibilidad que puedes tener:
 
-private -
-public +
-protected #
-default ~
+- private -
+- public +
+- protected #
+- default ~
 
 Una forma de representar las relaciones que tendrá un elemento con otro es a través de las flechas en UML, y aquí tenemos varios tipos, estos son los más comunes:
 
