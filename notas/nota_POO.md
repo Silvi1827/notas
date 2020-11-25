@@ -11,7 +11,9 @@ Hoy en día forma parte del Education Team en Platzi, podemos encontrarla en otr
 **¿Porque es importante aprender Programación Orientada a Objetos?**
 - **Programar más rápido:** Tener un análisis previo de lo que estas realizando te ayudará a generar código mucho más veloz en comparación a otros. Siempre que te tomes un tiempo para analizar, para retomar, para pensar lo que estás haciendo antes de ir directamente al código te ayudara a que programes mucho más rápido.
 - **Dejar de ser Programador Jr.:** Analizar tus problemas y entender mejor la Programación Orientada a Objetos dejaras de ser un Programador Junior. Para la mayoría de los reclutadores estas son las preguntas más frecuente: ¿Qué es encapsulamiento?, ¿Qué es Abstracción?, ¿Qué es Herencia?, ¿Qué es Polimorfismo?
+  
     Estas son una de sus preguntas favoritas, con la Programación Orientada a Objetos dejaremos de ser Programadores Junior y pasaremos a ser Programadores Senior, dominaremos estos conceptos que seguramente nos harán en una entrevista de trabajo de programación.
+
 - **Dejar de copiar y pegar código:** Esto es el síndrome de todos los Programadores Jr. que comienzan construyendo sus aplicaciones, trayendo trozos de código de aquí y allá hasta que finalmente arman su aplicación y se sienten super orgullosos. Pero, ¿Qué pasa con esas aplicaciones? Se convierten en pequeños Frankenstein donde de repente no sabemos de dónde comienzan ni por donde terminan, o en donde está la parte que está fallando. La POO te ayudara a tomar el control del proyecto, tomar el control del código, y entonces generar código de calidad, proyectos profesionales y por supuestos que dejes de copiar y pegar.
 
 En resumen, al dejar de ser un Programador Jr. y poder analizar mucho mejor tus programas, poder programar mucho más rápido, dominar las entrevistas de trabajo podrás ser un Programador Sr y conseguir un mejor salario. Los reclutadores, los líderes técnicos, toda la gente de programación piden bases sólidas en POO, por eso las personas que llegan a dominar estos conceptos se llegan a considerar Programadores Sr. aquellos que saben aplicarlos para resolver problemas de la vida real.
@@ -27,14 +29,14 @@ En resumen, al dejar de ser un Programador Jr. y poder analizar mucho mejor tus 
 - **Plasmar**
   - Diagramas
 	
-    Posteriormente iremos a un diagrama a plasmar nuestro análisis. A generar algo gráfico.
+  Posteriormente iremos a un diagrama a plasmar nuestro análisis. A generar algo gráfico.
     
-    Lo recomendables es comenzar con un análisis técnico, un poco teórico, posteriormente por unos bocetos de papel y finalmente ir a los diagramas para generar un efecto gráfico. Algo que sea un poco más amigable
+  Lo recomendables es comenzar con un análisis técnico, un poco teórico, posteriormente por unos bocetos de papel y finalmente ir a los diagramas para generar un efecto gráfico. Algo que sea un poco más amigable
 
 - **Programar**
   - Lenguajes de Programación
 
-Aquí programaremos lo que acabamos de diagramar. En este curso no usaremos un solo lenguaje de programación, sino que aprenderemos varios, en cómo llevar nuestro análisis en varios lenguajes y tener una variabilidad.
+  Aquí programaremos lo que acabamos de diagramar. En este curso no usaremos un solo lenguaje de programación, sino que aprenderemos varios, en cómo llevar nuestro análisis en varios lenguajes y tener una variabilidad.
 
 ### Clase 2 *¿Qué resuelve la Programación Orientada a Objetos?*
 
@@ -60,11 +62,11 @@ Podemos decir que lo importante es ir de más a menos, en un principio el códig
 
 Un ejemplo del Código Espagueti:
 
-![src/POO_1.png][src/POO_1.png]
+![src/POO_1.png](src/POO_1.png)
 
 Los Callback Hell también podrían considerarse como Códigos Espaguetis:
 
-![src/POO_2.png][src/POO_2.png]
+![src/POO_2.png](src/POO_2.png)
 
 ### Clase 3 *Paradigma Orientado a Objetos*
 
@@ -160,5 +162,194 @@ A la hora de elegir en entorno de desarrollo o IDE (Integrated Development Envir
 En nuestro caso usaremos un entorno de desarrollo que soporta todos los lenguajes que estaremos viendo en esta clase que es el: Visual Studio Code.
 
 ### Clase 5 *Instalando Visual Studio Code*
+
+Pues que comience la aventura y digo aventura porque te darás cuenta de lo emocionante que será poder trabajar 4 lenguajes de programación en un solo entorno de desarrollo y sí, precisamente eso es lo que nos resuelve Visual Studio Code el cual será nuestro campeón en este curso.
+
+Visual Studio Code lo puedes encontrar en las tres versiones básicas de Sistema Operativo (Windows, Mac y Linux) y lo puedes descargar directo en este enlace: https://code.visualstudio.com/download. Es muy ligero y basta con un Siguiente, siguiente, siguiente para instalar.
+
+![src/POO_3.png](src/POO_3.png)
+
+Cuando la instalación haya finalizado verás algo como esto:
+
+![src/POO_4.png](src/POO_4.png)
+
+¡Súper! Todo salió bien. Ahora pasemos a configurarlo para cada lenguaje.
+
+Primero ubica la sección de Extensiones o en inglés Extensions, además de la barra de Search porque estaremos buscando la extensión para cada lenguaje.
+
+![src/POO_5.png](src/POO_5.png)
+
+**Java**
+
+En la barra de Search Extensions escribe: Java Extension Pack y da clic en el botón verde Install.
+
+![src/POO_6.png](src/POO_6.png)
+
+Ahora, para tener una mejor experiencia en Debugging, instala el Debugger for Java, el cual encuentras siguiendo el procedimiento anterior.
+
+![src/POO_7.png](src/POO_7.png)
+
+Listo, terminamos con Java. Aprende más en este [enlace](https://code.visualstudio.com/docs/languages/java "enlace").
+
+Ahora vamos por Python.
+
+**Python**
+
+Comencemos instalando Python en nuestra computadora. Dirígete al sitio python.org y dale clic en el botón de Descargar.
+
+![src/POO_8.png](src/POO_8.png)
+
+Ve de la mano con el asistente hasta finalizar la instalación:
+
+![src/POO_9.png](src/POO_9.png)
+
+Terminaremos la configuración de Python en Visual Studio Code más adelante. Aprende más [aquí](https://code.visualstudio.com/docs/python/python-tutorial "aquí").
+
+Mientras tanto sigamos con PHP.
+
+**PHP**
+
+Para configurar PHP buscaremos la extensión **PHP Server** y pulsamos Instalar
+
+![src/POO_10.png](src/POO_10.png)
+
+**JavaScript**
+
+En este caso no necesitamos instalar absolutamente nada, utilizaremos el editor con su configuración por defecto.
+
+Comencemos nuestro proyecto
+
+Ya está todo listo, ahora dejemos creado el proyecto.
+
+Para esto seleccionaremos la opción Add workspace folder
+
+![src/POO_11.png](src/POO_11.png)
+
+A continuación creamos una carpeta llamada CursoPOOUber y damos clic en Add para finalizar. Ahora generemos esta estructura de carpetas para manejar los documentos correspondientes al lenguaje de programación:
+
+![src/POO_12.png](src/POO_12.png)
+
+Ahora que tenemos listo nuestro sistema de archivos terminemos la configuración de Python en VSC, vamos al menú View -> Command Palette y escribimos python “Seleccionar intérprete”, tal como se muestra en la figura.
+
+![src/POO_13.png](src/POO_13.png)
+
+¡Ya terminamos, estamos listos!
+
 ### Clase 6 *Diagramas de Modelado*
+
+Es momento de comenzar a aprender que opciones tenemos para plasmar nuestros análisis, es decir, generar los gráficos que serán los intermediaros entre nuestra observación del problema y la diagramación.
+
+Algunos diagramas de modelado son: OMT y UML
+
+**OMT**
+
+Técnica de Modelado de Objetos (en inglés, Object Modeling Techniques) es un enfoque de modelado de objetos para el modelado y diseño de software. Fue desarrollado alrededor de 1991 como un método para desarrollar sistemas orientados a objetos y para soportar la programación orientada a objetos. OMT describe el modelo de objeto o la estructura estática del sistema.
+
+OMT fue desarrollado como un enfoque para el desarrollo de software. Los propósitos de modelar son:
+
+- Probar entidades físicas antes de construirlas (simulación).
+- Comunicación con los clientes.
+- Visualización (presentación alternativa de información.
+- Reducción de la complejidad.
+
+OMT ha propuesto tres tipos principales de modelos:
+
+- **Modelo de objetos:** El modelo de objetos representa los fenómenos estáticos y más estables en el dominio modelado. Los conceptos principales son clases y asociaciones con atributos y operaciones. La agregación y la generalización (con herencia múltiple) son relaciones predefinidas.
+- **Modelo dinámico:** El modelo dinámico representa una vista de estado / transición en el modelo. Los conceptos principales son estados, transiciones entre estados y eventos para desencadenar transiciones. Las acciones se pueden modelar como ocurriendo dentro de los estados. La generalización y la agregación (concurrencia) son relaciones predefinidas.
+- **Modelo funcional:** El modelo funcional maneja la perspectiva de proceso del modelo, que corresponde aproximadamente a los diagramas de flujo de datos. Los conceptos principales son proceso, almacén de datos, flujo de datos y actores.
+
+OMT es un predecesor del Lenguaje de Modelado Unificado (UML).
+
+Muchos elementos de modelado OMT son comunes a UML. Modelo funcional en OMT: En resumen, un modelo funcional en OMT define la función de todos los procesos internos en un modelo con la ayuda de "Diagramas de flujo de datos (DFD)". Detalla cómo se realizan los procesos de forma independiente.
+
+**UML**
+
+Este es el modelado al que debemos tener como un aliado porque nos permitirá tener de forma visual lo que está plasmado en el código, además cuando el proyecto pase a otras manos o a otro equipo de trabajo esto es lo primero que nos pedirán: el diagrama UML.
+
+Lenguaje de Modelado Unificado (en inglés, Unified Modeling Language) es un lenguaje de modelado de desarrollo de propósito general en el campo de la ingeniería de software que está destinado a proporcionar una forma estándar de visualizar el diseño de un sistema.
+
+El UML está compuesto por diversos elementos gráficos que se combinan para conformar diagramas. Debido a que el UML es un lenguaje, cuenta con reglas para combinar tales elementos.
+
+La finalidad de los diagramas es presentar diversas perspectivas de un sistema, a las cuales se les conoce como modelo. Recordemos que un modelo es una representación simplificada de la realidad; el modelo UML describe lo que supuestamente hará un sistema, pero no dice cómo implementar dicho sistema.
+
+A continuación se describirán los diagramas más comunes del UML y los conceptos que representan:
+
+- Diagrama de Clases
+- Diagrama de Objetos
+- Diagrama de Casos de Uso
+- Diagrama de Estados
+- Diagrama de Secuencias
+- Diagrama de Actividades
+- Diagrama de Colaboraciones
+- Diagrama de Componentes
+- Diagrama de Distribución
+- Otras características
+  - Paquetes
+  - Notas
+  - Estereotipos
+
+
 ### Clase 7 *UML*
+
+Como ya viste UML significa Unified Modeling Language el cual es un lenguaje estándar de modelado de sistemas orientados a objetos.
+
+![src/POO_14.png](src/POO_14.png)
+
+Esto significa que tendremos una manera gráfica de representar una situación, justo como hemos venido viendo. A continuación te voy a presentar los elementos que puedes utilizar para hacer estas representaciones.
+
+Las clases se representan así:
+
+![src/POO_15.png](src/POO_15.png)
+
+En la parte superior se colocan los atributos o propiedades, y debajo las operaciones de la clase. Notarás que el primer carácter con el que empiezan es un símbolo. Este denotará la visibilidad del atributo o método, esto es un término que tiene que ver con Encapsulamiento y veremos más adelante a detalle.
+
+Estos son los niveles de visibilidad que puedes tener:
+
+private -
+public +
+protected #
+default ~
+
+Una forma de representar las relaciones que tendrá un elemento con otro es a través de las flechas en UML, y aquí tenemos varios tipos, estos son los más comunes:
+
+**Asociación**
+
+![src/POO_16.png](src/POO_16.png)
+
+Como su nombre lo dice, notarás que cada vez que esté referenciada este tipo de flecha significará que ese elemento contiene al otro en su definición. La flecha apuntará hacia la dependencia.
+
+![src/POO_17.png](src/POO_17.png)
+
+Con esto vemos que la ClaseA está asociada y depende de la ClaseB.
+
+**Herencia**
+
+![src/POO_18.png](src/POO_18.png)
+
+Siempre que veamos este tipo de flecha se estará expresando la herencia.
+
+La dirección de la flecha irá desde el hijo hasta el padre.
+
+![src/POO_19.png](src/POO_19.png)
+
+Con esto vemos que la ClaseB hereda de la ClaseA
+
+**Agregación**
+
+![src/POO_20.png](src/POO_20.png)
+
+Este se parece a la asociación en que un elemento dependerá del otro, pero en este caso será: Un elemento dependerá de muchos otros. Aquí tomamos como referencia la multiplicidad del elemento. Lo que comúnmente conocerías en Bases de Datos como Relaciones uno a muchos.
+
+![src/POO_21.png](src/POO_21.png)
+
+Con esto decimos que la ClaseA contiene varios elementos de la ClaseB. Estos últimos son comúnmente representados con listas o colecciones de datos.
+
+**Composición**
+
+![src/POO_22.png](src/POO_22.png)
+
+Este es similar al anterior solo que su relación es totalmente compenetrada de tal modo que conceptualmente una de estas clases no podría vivir si no existiera la otra.
+
+![src/POO_23.png](src/POO_23.png)
+
+Con esto terminamos nuestro primer módulo. Vamos al siguiente para entender cómo podemos hacer un análisis y utilizar estos elementos para construir nuestro diagrama de clases de Uber.
