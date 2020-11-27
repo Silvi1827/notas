@@ -288,7 +288,6 @@ A continuación se describirán los diagramas más comunes del UML y los concept
   - Notas
   - Estereotipos
 
-
 ### Clase 7 *UML*
 
 Como ya viste UML significa Unified Modeling Language el cual es un lenguaje estándar de modelado de sistemas orientados a objetos.
@@ -353,3 +352,158 @@ Este es similar al anterior solo que su relación es totalmente compenetrada de 
 ![src/POO_23.png](src/POO_23.png)
 
 Con esto terminamos nuestro primer módulo. Vamos al siguiente para entender cómo podemos hacer un análisis y utilizar estos elementos para construir nuestro diagrama de clases de Uber.
+
+## Modulo 2. Orientación a Objetos
+### Clase 8 *Objetos*
+
+Sabemos que la programación Orientada a Objetos lo que hace es modelar los problemas para ayudarnos a plasmarlos en código. Esto es específicamente lo que debemos hacer: cuando tenemos un problema lo primero es identificar los objetos, y aquí viene la primera fase que es la parte de los análisis.
+
+Tenemos que identificar los objetos. Cuando nosotros tenemos un problema de software es muy natural, que si somos programadores, irnos directamente al código sin interesarnos de donde provienen los datos o su comportamiento. Lo que debemos hacer es observar nuestro problema, identificando los objetos involucrados.
+
+**¿Como identifico los objetos?**
+
+Los objetos son aquellos que tienen propiedades y comportamientos, también serán sustantivos. Estos pueden ser físicos o conceptuales, por ejemplo, un objeto User es físico mientras que un objeto Session es conceptual. Ambos tienen propiedades y comportamientos.
+
+Esa también es otra manera de identificarlos, analizando si poseen atributos y comportamientos.
+
+**Propiedades**
+
+Las propiedades, también llamado atributos, siempre serán sustantivos. Son las características que posee el objeto como el nombre, tamaño, forma, estado, etc.
+
+Cuando estés analizando un objeto es un error común poner el resultado en lugar del atributo. Por ejemplo, puedes poner o decir que el atributo es Verde cuando en realidad debe ser color o decir que el atributo es Anahí Salgado cuando en realidad es nombre.
+
+**Comportamientos**
+
+Son todas las operaciones que el objeto puede hacer, suelen ser verbos o sustantivos y verbo.
+
+Un objeto «User» puede hacer login() o logout, mientras que un objeto «Archivo» puede hacer makeReport().
+
+**EJEMPLO**
+
+![src/POO_24.png](src/POO_24.png)
+
+Para nuestro ejemplo tenemos al objeto «Perro» con propiedades y comportamientos. Sin embargo, para entenderlo mejor, debemos verlo en un contexto diferente, y esto es importante a la hora de plasmar un código; ver el contexto de nuestros objetos.
+
+Imaginemos lo siguiente: Tenemos un sistema de adopciones con un catálogo de perros disponibles a ser adoptados. El contexto cambiaria así como también lo haría como algunas propiedades o comportamiento.
+
+![src/POO_25.png](src/POO_25.png)
+
+Primero necesitaríamos un identificador único para diferenciar cada perro, porque pueden tener el mismo nombre o raza o color. Además de que nuestro comportamiento cambiaria, dentro del contexto de adopciones no nos importaría que el perro pueda ladrar, comer o correr, solo importaría si están disponibles para ser adoptados o no.
+
+### Clase 9 *Abstracción y Clases*
+
+En la clase anterior definimos un objeto «Perro» del cual conseguimos el identificador, nombre, color, raza y altura. Pero imaginemos que tenemos un objeto Perro al que ponemos de nombre Franky, es de color café, de la raza french poodle y su altura es de 14cm. ¿Qué pasaría si nosotros queremos más perros? Pues aquí es donde entraría el concepto de Clase.
+
+**Clase**
+
+Es el modelo sobre el cual se construirá nuestro objeto. Es decir, a partir de nuestro objeto Perro definimos la forma más general para poder obtener otros objetos con propiedades diferentes, tal vez crear otro objeto Perro al que ahora llamaremos Mike, de color negro, cuya raza sea distinta y su altura similar.
+
+Con las clases podremos generar más objetos, y eso es justamente lo que deseamos. Generamos un molde que nos permita obtener muchos más objetos. Para hacerlo analizamos nuestros objetos, traemos sus atributos y entonces generamos modelos llamada Clase.
+
+Tomemos como un ejemplo una estrella.
+
+![src/POO_26.png](src/POO_26.png)
+
+Nosotros obtenemos el molde de esa estrella y así podemos obtener más estrellas de distintos colores. A esto se le llama Abstracción.
+
+**Abstracción**
+
+Es cuando nosotros separamos los datos de un objeto para entonces generar un molde.
+
+### Clase 10 *Modularidad*
+
+La modularidad es un concepto que va muy relacionado con las clases y que también es uno de los principios de la Programación Orientada a Objetos, esto por supuesto va muy de la mano con el diseño modular.
+
+**Diseño Modular**
+
+El diseño modular viene de la arquitectura e incluso del diseño per se que significa subducir un sistema en partes más pequeñas llamadas módulos. Estos módulos pueden funcionar de manera independiente y podrán comunicarse con ellos (con todos o sólo con una parte) a través de unas entradas y salidas bien definidas.
+
+Tenemos como ejemplo este sofá:
+
+![src/POO_27.png](src/POO_27.png)
+
+Este sofá fue divido y diseñado completamente módulos, cada asiento o lugar es un módulo que se pensó para robustecerla a medida que se van añadiendo más asientos.
+
+![src/POO_28.png](src/POO_28.png)
+
+Cada módulo (asiento) vive por sí mismo, y puede ser movido y unificado para crear un sistema entero.
+
+***Modularidad***
+
+***Es a capacidad que tiene un sistema de ser estudiado, visto o entendido como la unión de varias partes que interactúan entre sí y que trabajan para alcanzar un objetivo común, realizando cada una de ellas una tarea necesaria para la consecución de dicho objetivo. Cada una de esas partes en que se encuentre dividido el sistema recibe el nombre de módulo.***
+
+***La modularidad es una opción importante para la escalabilidad y comprensión de programas, además de ahorrar trabajo y tiempo en el desarrollo.***
+
+Otro ejemplo de modularidad está en el diseño de este edificio:
+
+![src/POO_29.png](src/POO_29.png)
+
+Se puede ver como las construcciones actuales son radicalmente más rápido ya que anteriormente se tomaba muchos años poder terminar un edificio, pero ahora gracias al sistema de la modularidad es muy fácil hacer la construcción en muy corto tiempo. Esto se debe a que se genera cada elemento por separado y esto permite que se creen edificaciones en masa.
+
+**Programación Estructurada vs Programación Orientada a Objetos**
+
+![src/POO_30.png](src/POO_30.png)
+
+En la Programación Estructurada vimos código en un solo módulo, sabemos que la desventaja está en que los programas son muy grandes, con muchas líneas donde vamos encontrando errores, era difícil de leer y mantener, y si algo tronaba todo el programa caía destrozado.
+
+En cambio nuestro lema, que debemos entender y aplicar en la Programación Orientada a Objetos, será ***divide y vencerás***. La modularidad nos va ayudar a tener los elementos separados de tal forma que puedan vivir independientemente y cumplan el principio de la edificación, es decir, podamos generar sistemas en masa.
+
+Entonces, si algo sucede en uno de los módulos, el error solo afectara a ese módulo y por lo tanto toda el sistema no colapsará. Puedes decidir si quieres crear un programa en trozos de código y esto por supuesto tiene un grado de complejidad que a muchos le cuesta entender o analizar para llevarlo ahí. Pero, lo primero es quitarnos esa barrera de "No puedo" e intentarlo para empezar a trabajar ese fragmento de código.
+
+La modularidad de nuestro código nos va a permitir:
+
+- Reutilizar
+- Evitar colapsos
+- Hacer nuestro código más mantenible
+- Legibilidad
+- Resolución rápida de problemas
+
+No olvidemos el programar en pequeños trozos. En vez de imaginarnos un código grande, lo importante es imaginar y empezar a pensar que debemos programar en pequeños trozos.
+
+Esto precisamente es uno de los principios de una clase. La clase será precisamente lo que provoque la modularidad y nos va a permitir analizar nuestros problemas, modularizar para que nuestras clases que vivan por separados, separar el comportamiento del objeto de otro comportamiento. Tener una clase nos va permitir fomentar la modularidad, además de los otros beneficios.
+
+Uno de las buenas prácticas es que las clases deberán vivir en archivos separados, esto por supuesto para mantener la modularidad, y evitar que un código este encima de otro o que un código viva en el mismo archivo. La forma en que vamos a generar la modularidad es separar las clases en archivos diferentes, de esta forma mantenemos aislado el código una vez que tengamos nuestro análisis.
+
+### Clase 11 *Analizando Uber en Objetos*
+
+![src/POO_31.png](src/POO_31.png)
+
+Ahora que aprendimos de modularidad sabemos que para resolver un problema debemos dividirlo en pequeños subproblemas y eso lo que haremos ahora mismo. Analizaremos nuestro proyecto Uber en pequeños subproblemas.
+
+**Paso 1**
+
+Solicitar un Uber nace de nuestra necesidad de trasladarnos del punto A al punto B, y para eso necesitamos un celular.
+
+**Paso 2**
+
+Solicitamos el auto y asignamos a la aplicación de donde a donde queremos desplazarnos.
+
+**Paso 3**
+
+Nos aparece un catálogo de autos a elegir: X, Pool, Black y Van. Además, también se encuentra el Conductor puesto que, sin importar el tipo de Uber a elegir, siempre estará involucrado.
+
+**Paso 4**
+
+Una vez elegido el auto, nosotros tenemos que únicamente esperar mientras el auto se dirige hacia nuestra ubicación y finalmente nos llevara del punto A al punto B. Ya, una vez nos esté llevando, será visible un saldo a cobrar por el viaje realizado.
+
+Y ese es nuestro breve análisis de como funcionara nuestra aplicación Uber. Lo siguiente que aprendimos es que debemos analizar nuestros objetos y extraerlos.
+
+**Objetos**
+
+En el paso 1 tenemos a nuestro objeto **User (Usuario)** que estará solicitando el auto. Así como el objeto **Route (Ruta)** para trasladarnos.
+
+En el paso 3 tenemos un catálogo con diferentes tipos de autos y eso significa diferentes tipos de objetos: **UberX**, **UberPool**, **UberBlack** y **UberVan**. Además, también tenemos nuestro objeto **Driver (Conductor)**.
+
+Finalmente en el paso 4 podemos ver que cuando nuestro viaje fue realizado se nos cobrara un monto y eso significa que tendremos distintas formas de pagar ese viaje. Ya sea a través de un objeto **Card (Tarjeta)**, **PayPal** o **Cash**.
+
+También tenemos un último objeto que es del tipo conceptual y está presente durante todo nuestro análisis, ese es el objeto **Trip (Viaje)** que captura quien ejecuta el viaje, a donde quieres ir, que auto elegiste y que forma de pago realizaras.
+
+### Clase 12 *Reto 1: identificando objetos*
+
+Ya estás listo para resolver tu primer reto y poner en práctica todo lo que aprendiste para identificar objetos en un problema.
+
+Toma como referencia nuestro Sistema de Adopciones e identifica todos los objetos.
+
+![src/POO_32.png](src/POO_32.png)
+
+Compártenos tu análisis en la sección de discusiones.
