@@ -507,3 +507,239 @@ Toma como referencia nuestro Sistema de Adopciones e identifica todos los objeto
 ![src/POO_32.png](src/POO_32.png)
 
 Compártenos tu análisis en la sección de discusiones.
+
+## Modulo 3. Programación Orientada a Objetos. Análisis
+### Clase 13 *Clases en UML y su sintaxis en código*
+
+En esta clase veremos cómo podemos definir las clases para plasmarlas en un diagrama UML. Recordemos que nuestro proceso es: identificar el problema, identificar los objetos, definir las clases y finalmente plasmarlas en un diagrama.
+
+**Clases en UML**
+
+![src/POO_33.png](src/POO_33.png)
+
+En UML, una clase será representada como un rectángulo con tres zonas:
+
+- **Superior:** Es donde colocaremos el nombre de la clase
+- **Intermedio:** Aquí definiremos los atributos
+- **Inferior:** Es donde estarán los comportamientos, es decir, los que serán las funcionalidades.
+
+Con esto le daremos a nuestras clases en UML una identidad (nombre de la clase), estados (atributos o propiedades) y operaciones (comportamientos).
+
+Para nuestro ejemplo, imaginemos que tenemos una clase **Person** cuyo atributo o propiedad es **name** y su comportamiento sea **walk()**:
+
+![src/POO_34.png](src/POO_34.png)
+
+Ya, una vez identificado el objeto Person y puesto en un diagrama UML, nuestro siguiente paso es definirlo en código.
+
+**SINTAXIS EN CÓDIGO**
+
+Nosotros ya habíamos dicho que trabajaremos en cuatro lenguajes: Java, Python, JavaScript y PHP.
+
+![src/POO_35.png](src/POO_35.png)
+
+- **Java:** Para declarar una clase utilizamos la palabra reservada **class**, seguido del nombre de la clase y finalizamos con llaves.
+  
+  ![src/POO_36.png](src/POO_36.png)
+		
+- **Python:** Aquí usamos la palabra reservada **class**, seguido del nombre de la clase y finalizamos con dos puntos.
+  
+  ![src/POO_37.png](src/POO_37.png)
+		
+- **JavaScript:** Como sabemos este lenguaje se maneja de forma distinta y eso se debe a que todo es a través de prototipos. Sin embargo, utiliza la Programación Orientada a Objetos para analizar problemas y posteriormente poder plasmarlos en código de la mejor forma, por lo tanto al tenerlo en prototipos utilizaremos "funciones especiales" para definir las clases. Usaremos la palabra reservada **function** seguido del nombre de la clase con paréntesis y finalizaremos con llaves.
+
+  ![src/POO_38.png](src/POO_38.png)
+		
+- **PHP:** Para declarar una clase nueva es totalmente idéntico a como declaramos en Java.
+
+**DEFINIR ATRIBUTO Y COMPORTAMIENTO**
+
+![src/POO_39.png](src/POO_39.png)
+
+- **Java:** Para declarar un atributo es necesario poner el tipo de dato seguido del nombre, y para declarar un método ponemos el tipo seguido del nombre con dos paréntesis y finalizamos con llaves.
+- 
+	![src/POO_40.png](src/POO_40.png)
+
+- **Python:** Este lenguaje no es estricto en su tipado, por lo que para definir variables es simplemente necesario poner el nombre, en nuestro ejemplo ponemos comillas dobles para que Python infiera que es un string, y para declarar un método utilizamos la palabra reservada def. La forma que usa Python para agrupar declaraciones es mediante indentaciones, por lo que en el intérprete interactivo debes teclear un tabulador o espacio(s) para cada línea indentada.
+
+	![src/POO_41.png](src/POO_41.png)
+
+- **JavaScript:** Cuando se empieza a programar en un lenguaje como JavaScript, es decir, permisivo hasta no poder más, dar los primeros pasos puede resultar realmente complicado. Para declarar nuestras propiedades se utiliza la palabra reservada this y los métodos son declarados afuera usando la palabra reservada prototype seguido de la función.
+
+	![src/POO_42.png](src/POO_42.png)
+
+- **PHP:** Siendo también un lenguaje bastante flexible así que para declarar una variable usamos el símbolo $, sin importar el tipo de dato, y para declarar un método es lo mismo que una función.
+
+	![src/POO_43.png](src/POO_43.png)
+
+### Clase 14 *Modelando nuestros objetos Uber*
+
+Acabamos de aprender como plasmar objetos en diagramas de clase en UML, hagamos esto mismo en nuestro proyecto Uber. Analicemos los objetos y quitemos todos sus atributos.
+
+![src/POO_44.png](src/POO_44.png)
+
+- **User**
+  
+  - **Id:** El identificador. Es bastante útil cuando manejamos una base de datos.
+  - **Name**
+  - **Document:** Es el documento que dependiendo del país puede ser numérico o alfanumérico. En este caso puede ser la CI, la CURP o el RFC.
+  - **Email**
+  - **Password**
+
+- **Driver**
+  
+  - **Id**
+  - **Name**
+  - **Document**
+  - **Email**
+  - **Password**
+
+- **Route:** Como sabemos que se compone de un punto A y un punto B, sabemos que las ubicaciones tienen una latitud y una longitud.
+	
+	- **Id**
+	- **Start [2]:** Representa el punto A y será un arreglo que contenga tanto la latitud como la longitud.
+	- **End [2]:** Representa el punto B y será un arreglo que contenga tanto la latitud como la longitud.
+
+- **UberX**
+  
+	- **Id**
+	- **License:** Será la placa del vehículo
+	- **Driver:** El conductor designado del vehículo
+	- **Passengers:** La cantidad de pasajeros
+	- **Brand:** Marca del vehículo
+	- **Model:** Modelo de vehículo
+
+- **UberPool**
+  
+	- **Id**
+	- **License**
+	- **Driver**
+	- **Passengers**
+	- **Brand**
+	- **Model**
+
+- **UberBlack**
+	
+	- **Id**
+	- **License**
+	- **Driver**
+	- **Passengers**
+	- **typeCarAccepted [ ]:** Existe un catálogo de vehículos únicamente aceptados por Uber y se componen de la marca, modelo y año.
+	- **seatsMaterial [ ]:** Los Uber Black necesitan tener interior con materiales de piel o vinilo.
+
+- **UberVan**
+	
+	- **Id**
+	- **License**
+	- **Driver**
+	- **Passengers**
+	- **typeCarAccepted [ ]**
+	- **seatsMaterial [ ]**
+
+Si quieres saber más de los requerimientos de autos puedes ingresar en [Requisitos de autos](https://www.uber.com/mx/es/drive/mexico-city/vehicle-requirements/ "Requisitos de autos").
+
+Ahora analizaremos los últimos objetos que nos quedan:
+
+![src/POO_45.png](src/POO_45.png)
+
+- **Card**
+	
+	- **Id**
+	- **Number:** Es el número de la tarjeta.
+	- **CVV:** El número escondido por detrás.
+	- **Date:** Es la fecha de vencimiento.
+
+- **PayPal**
+	
+	- **Id**
+	- **Email:** El correo asociado a la cuenta.
+
+- **Cash**
+  
+	- **Id**
+	- Cash no necesitara nada más que el identificador del tipo de pago ya que en este caso no tenemos registro de este tipo.
+
+Con esto ya tenemos analizado todos nuestros objetos, pero hay algo de redundancia en el diagrama. En la siguiente clase veremos cómo podemos solucionarlo con la herencia.
+
+### Clase 15 *¿Qué es la herencia?*
+
+En la clase anterior notamos que nuestro ejemplo tenía atributos repetidos y no solo fue uno, sino que fueron varios. Muchas clases entre sí tenían atributos que estaban siendo redundantes entre ellas, pues esto estaba violando una de las leyes del código.
+
+«**Don't repeat yourself**» es una filosofía que promueve la reducción de la duplicación en la programación. Siempre nos inculcara que no tengamos líneas de códigos duplicadas y, en este caso, todavía no hemos hecho código estamos a un paso de hacerlo, pero si lo llevamos así como esta estaríamos violando esta filosofía. Por lo tanto, toda pieza de información no debería ser duplicada debido a que la duplicación incrementa la dificultad en los cambios y su evolución.
+
+Si nosotros dejamos esto así como esta, se nos va a dificultar que en el futuro podamos ejecutar cambios e incluso involucrar un objeto o un elemento más en el proyecto, hará que el código sea más difícil de leer y entender, y hace un mantenimiento se nos va a complicar bastante. Por lo tanto no debemos tener líneas duplicadas en la medida posible.
+
+**¿Qué debemos hacer?**
+
+Haremos uso de uno de los principios de la programación orientada a objetos, la reutilización de código. La herencia es una de las piezas claves a la hora de reutilizar líneas de código a más no poder.
+
+**Herencia**
+
+La herencia es un pilar importante dentro de la programación orientada a objetos y nos permitirá crear nuevas clases a partir de otras.
+
+Podemos definir la herencia como la capacidad de crear clases que adquieren de manera automática los miembros (atributos y métodos) de otras clases que ya existen, pudiendo al mismo tiempo añadir atributos y métodos propios.
+
+Lo que haremos es que, una vez detectemos elementos duplicados, ejecutaremos una abstracción de tal manera que podamos generar una clase que sea la más general y, entonces, esa clase general nos permitirá crear nuevas clases. Tendremos una jerarquía, una estructura de padre e hijo, y es que un padre puede tener tantos hijos como sea necesario. Es común encontrar que un padre solo tenga un único hijo, pero, como en nuestro ejemplo, un padre puede tener bastantes hijos a través de la abstracción.
+
+![src/POO_46.png](src/POO_46.png)
+
+- **Clase Padre:** También llamada Super Clase, será la clase cuyas características se heredan.
+- **Clase Hijas:** Llamada también Sub Clase. Son las clases que heredan de Clase Padre, puede agregar sus propios campos y métodos, además de los campos y métodos de la superclase.
+
+**EJEMPLO**
+
+Para ejercitarnos y poder identificar herencias tenemos el siguiente ejemplo:
+
+![src/POO_47.png](src/POO_47.png)
+
+En donde tenemos tres clases (Futbolista, Entrenador y Masajista), si analizamos estas clases podemos ver que comparten cuatro atributos y además tienen en común dos métodos.
+
+En programación orientada a objetos, cuando detectamos que hay elementos repetidos, esto nos indica que debemos hacer algo. Algo no está bien y que seguramente, si lo dejamos así, nos traerá problemas a futuro. Una vez detectada una relación de estos elementos, podemos generar una abstracción de eso y entonces crear una clase que tengan todos estos elementos en común.
+
+![src/POO_48.png](src/POO_48.png)
+
+En este caso creamos **SeleccionFutbol** que será la superclase y de ella se estarán heredando: **Futbolista**, **Entrenador** y **Masajista**. Cuando ellos heredan, esto significa que automáticamente todos los atributos y métodos que tenemos ahí serán heredados a las subclases y no tenemos que estarlo escribiendo en código, simplemente aplicando la herencia automáticamente van aparecer en cada clase.
+
+Esta es una forma de analizar herencia, hay otra forma y es partiendo de los elementos en común. En general podemos tener elementos que no tengan ningún atributo en común, pero la lógica del negocio nos va a decir que esto debe considerarse como una clase más general, deben agruparse en una clase más general aunque y esa se puede llamar una clase padre.
+
+### Clase 16 *Aplicando Herencia a nuestro proyecto Uber*
+
+Aplicaremos lo aprendido en la clase anterior y eso es detectar todos los atributos que son redundantes en nuestro proyecto Uber.
+
+Tenemos plasmado nuestro proyecto en forma de diagrama de clase:
+
+![src/POO_49.png](src/POO_49.png)
+
+Y ahora vamos a detectar la redundancia entre estos elementos para aplicar la herencia.
+
+**USER – DRIVE**
+
+Comencemos por las clases User y Drive que tienen todos sus atributos en común. Si sacamos esos elementos comunes podemos crear la clase Account, que poseerá la jerarquía principal y se convertirá en la Super Clase o Clase Padre, mientras que User y Driver se heredaran de Account convirtiéndose en Sub Clases o Clases Hijas.
+
+Para ejemplificar la herencia usamos flechas vacías que apuntan hacia la Clase Padre.
+
+![src/POO_50.png](src/POO_50.png)
+
+**CARD – PAYPAL – CASH**
+
+En el caso de las clases Card, PayPal y Cash no tenemos ningún elemento en común, sin embargo, todos son del mismo tipo así aplicaremos la otra forma de herencia: según la lógica de negocios.
+
+![src/POO_51.png](src/POO_51.png)
+
+**UBERX – UBERPOOL – UBERBLACK – UBERVAN**
+En el caso de los automóviles, las cuatros clases Uber tienen cuatro atributos en común que formaran parte de la Super Clase, sin embargo, todavía existen elementos comunes entre UberX y UberPool, y UberBlack y UberVan así que podemos hacer uso nuevamente de la herencia para otra Sub Clase.
+
+![src/POO_52.png](src/POO_52.png)
+
+**Modelo Simplificado**
+
+Así es como estaría quedando nuestro sistema Uber.
+
+![src/POO_53.png](src/POO_53.png)
+
+### Clase 17 *Reto 2: analicemos un problema*
+
+Imagina que nuestro sistema de adopciones creció y ahora ofrece adoptar pericos, loros, gatos y hámsteres.
+
+Genera un nuevo análisis, aplica herencia para abstraer mejor el problema y lograr modularidad en el software.
+
+Comparte tus resultados en la sección de discusiones.
