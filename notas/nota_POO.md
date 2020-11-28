@@ -726,6 +726,7 @@ En el caso de las clases Card, PayPal y Cash no tenemos ningún elemento en com�
 ![src/POO_51.png](src/POO_51.png)
 
 **UBERX – UBERPOOL – UBERBLACK – UBERVAN**
+
 En el caso de los automóviles, las cuatros clases Uber tienen cuatro atributos en común que formaran parte de la Super Clase, sin embargo, todavía existen elementos comunes entre UberX y UberPool, y UberBlack y UberVan así que podemos hacer uso nuevamente de la herencia para otra Sub Clase.
 
 ![src/POO_52.png](src/POO_52.png)
