@@ -744,3 +744,404 @@ Imagina que nuestro sistema de adopciones creció y ahora ofrece adoptar pericos
 Genera un nuevo análisis, aplica herencia para abstraer mejor el problema y lograr modularidad en el software.
 
 Comparte tus resultados en la sección de discusiones.
+
+## Modulo 4. Clases, Objetos y Método Constructor
+### Clase 18 *Definiendo clases en Java y Python*
+
+Ahora que está listo nuestro modelo podemos comenzar con la etapa de programación de nuestro proyecto. Como vimos, todo el módulo anterior se basó en el análisis de los objetos; analizar y obtener los objetos, abstraerlos para convertirlos en clases y finalmente ejecutar un análisis de herencia para tener una mejor versión de nuestros objetos.
+
+**Visual Studio Code**
+
+![src/POO_54.png](src/POO_54.png)
+
+Primeramente estaremos creando cuatro carpetas llamadas Java, Python, JavaScript y PHP en donde iremos depositando los documentos para sus correspondientes lenguajes.
+
+Siguiendo nuestro diagrama de herencia que hicimos del proyecto estaremos creando cuatro archivos para las clases principales: Account, Car, Payment y Router. Además de un archivo **Main** que será donde generaremos el punto de entrada al programa, todo lo que queremos que funcione y sea visto debemos declararlo en este documento.
+
+**JAVA**
+
+- **Main:** Lo que debes saber en primer lugar es que el método main() es el punto de entrada de la aplicación, es decir, es el punto en el que comienza la ejecución de esta. Es por ello que ha de ser public (accesible desde fuera de la clase) y static (se puede ejecutar sin una instancia de la clase).
+
+	![src/POO_55.png](src/POO_55.png)
+		
+- **Account:** Es la super clase de la que se derivaran las clases Drive y User.
+  
+  ![src/POO_56.png](src/POO_56.png)
+
+  - Para declarar variables en Java ponemos primero el tipo de dato que estará manejando nuestro usuario y posteriormente el nombre.
+
+- **Car:** Es la super clase de la que se derivaran las clases UberX, UberPool, UberBlack y UberVan.
+	
+	![src/POO_57.png](src/POO_57.png)	
+	
+	- Momentáneamente estaremos declarando 'drive' de tipo string, aunque sabemos que es del tipo Drive.
+
+- **Payment:** Es la super clase de la que se derivaran las clases Card, PayPal y Cash.
+	
+	![src/POO_58.png](src/POO_58.png)
+
+- **Router:** Es la clase que contendrá las ubicaciones de nuestros puntos A y B.
+	
+	![src/POO_59.png](src/POO_59.png)
+
+	- Una opción muy conveniente cuando usamos una clase o interfaz de otro paquete, es el uso de la palabra clave import. Si usamos **import**, no es necesario escribir el nombre completo de la clase con el paquete incluido. Es suficiente con el nombre de la clase.
+	- En este caso, nosotros usaremos **ArrayList** que pertenece a la biblioteca java.util. Por tanto, para emplearla en nuestras clases o programas escribiremos como código en cabecera ***import java.util.ArrayList*** (o de forma más genérica import java.util.*).
+	- **ArrayList:** Es una clase que permite almacenar datos en memoria de forma similar a los Arrays, con la ventaja de que el número de elementos que almacena, lo hace de forma dinámica, es decir, que no es necesario declarar su tamaño como pasa con los Arrays.
+
+**PYTHON**
+
+- **Main:** Este main, básicamente, comprueba si un módulo *.py se está importando a nuestro código y establece, de ser así (y de ahí el condicional if) que sea el módulo actual el principal, el que asume el papel de main(), aquél que deberá ejecutarse primero, mientras que el módulo importado se ejecutará a continuación.
+
+	![src/POO_60.png](src/POO_60.png)
+
+- **Account:** Como podemos ver, somos capaces de declarar el tipo de dato que queremos que sean de esta forma.
+	
+	![src/POO_61.png](src/POO_61.png)
+
+	- Para declarar variables en Python, en cambio, va primero el nombre y después podemos asignarle el tipo de datos.
+
+- **Card**
+	
+	![src/POO_62.png](src/POO_62.png)
+
+- **Payment**
+	
+	![src/POO_63.png](src/POO_63.png)
+
+- **Router**
+	
+	![src/POO_64.png](src/POO_64.png)
+
+	- Las variables de tipo arrays en Python se declaran poniendo corchetes vacíos.
+
+### Clase 19 *Definiendo Clases en JavaScript*
+
+Si estás interesado en aprender JavaScript desde ahora debes saber que el concepto de clases no existía como tal hasta el nuevo estándar ECMAScript 6. El reto de encontrar sistemas construidos con este estándar es alto por esa razón te explicaré cuál fue por mucho tiempo su equivalente.
+
+Los Prototipos fue la forma de crear clases en JavaScript y las representaremos partiendo de la declaración de una función.
+
+Creemos nuestras clases:
+
+- Account
+- Car
+- Payment
+- Route
+
+Para esto crearemos el siguiente sistema de archivos dentro de la carpeta JS de nuestro proyecto:
+
+- Account.js
+- Car.js
+- Payment.js
+- Route.js
+- index.js
+
+El archivo index.js será el lugar equivalente al punto de entrada de la aplicación donde estaremos declarando nuestros objetos basado en las clases. Para esta clase lo dejaremos en blanco.
+
+Ahora veamos el código archivo por archivo:
+
+**Account.js**
+
+![src/POO_65.png](src/POO_65.png)
+
+**Car.js**
+
+![src/POO_66.png](src/POO_66.png)
+
+**Payment.js**
+
+![src/POO_67.png](src/POO_67.png)
+
+**Route.js**
+
+![src/POO_68.png](src/POO_68.png)
+
+[Aquí](https://github.com/anncode1/Curso-POO-Platzi/tree/f5725787165b36cae579f94e428068039b554b0b/JS "Aquí") podemos ver el código del proyecto.
+
+En este código notarás el uso de la palabra reservada this. Normalmente cuando usamos la sintaxis punto siempre lo haremos a partir de un objeto instanciado, en este caso con this, se hace una simulación al objeto en cuestión, a pesar de que en ese momento visualmente sigue siendo una clase.
+
+![src/POO_68.png](src/POO_68.png)
+
+Digamos que se adelanta un poco al momento de ejecución y visualiza al objeto con sus atributos, más adelante verás la forma en que podemos asignar datos a un atributo del objeto en otros lenguajes y verás que es exactamente la misma sintaxis.
+
+Si intentáramos poner this en el momento de ejecución nos traería un listado de todos los componentes de la clase que en este caso son solo estos tres: id, init y end.
+
+This hace referencia al objeto instanciado. Para comprender del todo esta última frase mira la siguiente clase donde hablamos de objetos.
+
+**Reto**
+
+- En la carpeta de nuestro proyecto PHP declara estas mismas clases: Puedes utilizar esta [clase](https://platzi.com/clases/1338-php/12929-programacion-orientada-a-objetos1172/ "clase") de apoyo.
+- Inténtalo y compártenos tus resultados, compáralos con tus compañeros.
+
+### Clase 20 *Objetos, método constructor y su sintaxis en código*
+
+Los objetos nos ayudan a crear instancia de una clase, el objeto es el resultado de lo que modelamos, de los parámetros declarados y usaremos los objetos para que nuestras clases cobren vida.
+
+Los métodos constructores dan un estado inicial al objeto y podemos añadirle algunos datos al objeto mediante estos métodos. Los atributos o elementos que pasemos a través del constructor serán los datos mínimos que necesita el objeto para que pueda vivir.
+
+Lo anteriormente hecho solo fueron clases, no pudimos nada en pantalla más que unos mensajes que decían "hola mundo", pero sin poder hacer verdaderamente nada. Para poder utilizar los elementos declarados dentro de esas clases empezaremos a trabajar con los objetos.
+
+Recordemos que los objetos nos ayudaran a crear instancias de una clase, es decir, es el resultado de lo que moldeamos, de los parámetros declarados y usaremos los objetos para que nuestras clases cobren vida.
+
+**Declarar objetos**
+
+![src/POO_69](src/POO_69.png)
+
+- **Java:** Al momento de crear objetos en Java, debemos tener claras dos cosas indispensables, la primera es el nombre de la clase para la cual vamos a crear el objeto y segundo el constructor que dicha clase posee, es decir, si el constructor recibe o no parámetros. Para crear objetos en Java, el lenguaje nos proporciona el comando new, con este comando le decimos a Java que vamos a crear un nuevo objeto de una clase en específico y le enviamos los parámetros (en caso de ser necesario) según el constructor.
+	
+	![src/POO_70](src/POO_70.png)
+		
+- **Python:** Haciendo valer su fama como un lenguaje flexible, para declarar un objeto es bastante sencillo ya que solo necesita el nombre del objeto y la clase a la que hara instancia.
+	
+	![src/POO_71](src/POO_71.png)
+		
+- **JavaScript:** Al igual que con muchas cosas en JavaScript, la creación de un objeto a menudo comienza con la definición e iniciación de una variable. También hacemos uso del comando new para crear un nuevo objeto de una clase específica.
+	
+	![src/POO_72](src/POO_72.png)
+		
+- **PHP:** Para crear una instancia de una clase, se debe emplear la palabra reservada new. Un objeto se creará siempre a menos que el objeto tenga un constructor que arroje una excepción en caso de error. Las clases deberían ser definidas antes de la instanciación (y en algunos casos esto es un requerimiento).
+		
+	![src/POO_73](src/POO_73.png)
+
+**Método constructor**
+
+Un constructor es un método especial de una clase que se llama automáticamente siempre que se declara un objeto de esa clase. Su función es inicializar el objeto y sirve para asegurarnos que los objetos siempre contengan valores válidos.
+
+Para nosotros, las paréntesis representaran los métodos.
+
+![src/POO_74](src/POO_74.png)
+
+- **Java:** En el lenguaje Java, si para una clase no se define ningún método constructor se crea uno automáticamente por defecto. El constructor por defecto es un constructor sin parámetros que no hace nada. Los atributos del objeto son iniciados con los valores predeterminados por el sistema.
+	
+	![src/POO_75](src/POO_75.png)
+	
+- **Python:** En Python, el método constructor siempre se llama __init__ (dos subrayados antes y después de init).
+	
+	![src/POO_76](src/POO_76.png)
+			
+- **JavaScript:** En JavaScript, la función sirve como el constructor del objeto, por lo tanto, no hay necesidad de definir explícitamente un método constructor. Cada acción declarada en la clase es ejecutada en el momento de la creación de la instancia.
+	
+	![src/POO_77](src/POO_77.png)
+
+- **PHP:** Debemos definir un método llamado __construct (es decir utilizamos dos caracteres de subrayado y la palabra construct). El constructor debe ser un método público (public function).
+	
+	![src/POO_78](src/POO_78.png)
+	
+***NOTA: No te preocupes por entender this, no te compliques, lo estaremos viendo más adelante.***
+
+**Pasar datos por parámetros**
+
+Dependiendo del tipo de dato que enviemos a la función, podemos diferenciar dos comportamientos: Paso por valor (se crea una copia local de la variable dentro de la función) y Paso por referencia (se maneja directamente la variable, los cambios realizados dentro de la función le afectarán también fuera).
+
+![src/POO_79](src/POO_79.png)
+
+- Java
+	
+	![src/POO_80](src/POO_80.png)
+		
+- Python
+	
+	![src/POO_81](src/POO_81.png)
+		
+- JavaScript
+	
+	![src/POO_82](src/POO_82.png)
+		
+- PHP
+	
+	![src/POO_83](src/POO_83.png)
+
+Como es visible en todos los casos, para enviar un valor es únicamente necesario ponerlos dentro de los paréntesis. Como en este caso estamos enviando un cadena de caracteres o string, ponemos comillas dobles, algo que no es necesario cuando enviamos como valor un número.
+
+### Clase 21 *Objetos. Dando vida a nuestras clases en Java y Python*
+
+Ya aprendimos la forma de crear objetos y sabemos la sintaxis básica en los cuatros lenguajes que vamos estudiando, ya es hora de ver como declarar esos objetos en Java y Python.
+
+Recordemos que anteriormente dejamos nuestras clases listas. Por el momento, y por el bien de la práctica, usaremos la clase Car ya que es la que más sentido se nos hace.
+
+**JAVA**
+
+Primeramente, para crear objetos en el lenguaje Java, debemos ir a nuestra clase Main que recordemos tiene actualmente esto:
+
+![src/POO_84](src/POO_84.png)
+
+Debemos recordar que para crear un objeto se sigue esta sintaxis: el tipo de la clase, nombre del objeto, igualamos (=), usamos la palabra reservada new y terminamos con el método constructor que trae por defecto las clases de Java.
+
+En nuestro caso quedaría así:
+
+![src/POO_85](src/POO_85.png)
+
+- **Car:** Sería la clase que estaríamos usando.
+- **car, car2:** Son el nombre de los objetos.
+- **new:** Palabra reservada para la creación de objetos.
+- **Car():** Es como llamamos al método constructor.
+- **Operador punto (.):** Nos permite acceder a los distintos atributos de la clase. Cuando tenemos un objeto de un tipo determinado y queremos acceder a uno de sus atributos solo tenemos que poner el identificar asociado al objeto seguido por un punto y por el identificador que hace referencia a un miembro concreto de la clase a la que pertenece el objeto.
+  
+	- **car.lincense():** Accedemos al atributo license en el que guardamos la licencia que tiene el vehículo.
+	- **car.driver ():** Accedemos al atributo driver en el que guardamos el valor del nombre que tiene nuestro conductor.
+	- **car.passenger():** Accedemos al atributo passenger en el que guardamos la cantidad de pasajeros que podrá llevar ese vehículo.
+
+- **System.out.println():** En Java hay algunos objetos que existen por defecto (en cualquier entorno de desarrollo). Uno de ellos es el objeto denominado System.out. Este objeto dispone de un método llamado println que nos permite imprimir algo por pantalla en una ventana de consola.
+	
+Para no tener que estar declarando System.out.println() cada vez que deseamos imprimir el valor de nuestro objeto, podemos crear un método en la clase Car:
+
+![src/POO_86](src/POO_86.png)
+	
+- Debajo de los atributos escribimos el método: primero el tipo y después el nombre, como no recibirá nada no necesita parámetros.
+- La palabra void indica que el método printDataCar no retorna ningún valor, solamente imprimirá en pantalla la licencia y el conductor.
+
+Finalmente, en nuestra clase Main cambiamos los System.out.println() por ***car.printDataCar()*** y ***car2.printDataCar().***
+
+De esta forma, con los objetos, estamos accediendo a los atributos y a los objetos. Reutilizamos código para imprimir datos de los objetos.
+
+**PYTHON**
+
+Para crear objetos dentro de Python es necesario importar la clase de la que estaremos usando los elementos eso se hace escribiendo al principio de toda la clase Main:
+
+![src/POO_87](src/POO_87.png)
+
+- Donde car es el nombre del archivo y Car es el nombre de la clase.
+
+Como en Python no es necesario escribir el tipo de clase y tampoco la palabra reservada new, simplemente creamos los objetos directo:
+
+![src/POO_88](src/POO_88.png)
+
+En general permanece bastante similar al Java, excepto por algunos cambios obvios:
+
+- **car, car2:** Son el nombre de los objetos.
+- **Car():** Es como llamamos al método constructor.
+- **Operador punto:** Nos permite acceder a los distintos atributos de la clase.
+
+El cambio está en la forma de imprimir un objeto, no necesitamos crear un método especial para poder hacerlo, sino que simplemente usamos vars dentro de un print y le pasamos el objeto como parámetro:
+
+- **print:** Es lo que nos permite mostrar texto en pantalla.
+- **vars:** Toma como máximo un parámetro y devuelve los atributos del objeto. En este caso lo imprime en formato JSON, pero si queremos otro formato ya podemos ponerle un método. Sin embargo, en este caso, para fines demostrativos, nos funciona super bien.
+
+### Clase 22 *Declarando un Método Constructor en Java y JavaScript*
+
+En la clase anterior vimos como declarar el método constructor en el caso de Java y Python, hoy vamos a ponerlo en acción para el caso particular de JavaScript y Java.
+
+**JAVA**
+
+Primeramente lo veremos en el caso de Java para entenderlo mejor, porque en JavaScript es bastante peculiar.
+
+Lo que haremos es ir a la clase Car en donde crearemos nuestro método constructor:
+
+![src/POO_89](src/POO_89.png)
+
+- **public:** Indica que es un método accesible a través de una instancia del objeto.
+- **Car():** Es el nombre que tendrá nuestro método.
+	- Dentro de las paréntesis van  los parámetros obligatorios para crear un objeto de tipo Car. En este caso, lo mínimo necesario es license y drive.
+- Dentro del constructor ponemos this., y esto no es más que una buena práctica porque se acostumbra mucho que los parámetros tengan el mismo nombre que las propiedades.
+
+	- **this.license:** Hace referencia al license, la variable global de la clase.
+	- **license:** Hace referencia al parámetro license, la variable local que existen únicamente dentro del método.
+
+-  Ahora en nuestro método printDataCar si lo dejamos tal cual no imprimirá lo que estamos queriendo, por eso debemos cambiarlo y poner **driver.name**.
+
+Hasta ahora también hemos estado manejando driver como un string, pero sabemos que en realidad es de tipo Account, así que debemos ir a la clase Account para crear su método constructor:
+	
+![src/POO_90](src/POO_90.png)
+
+Ya hecho una vez todo esto y ejecutamos nuestro programa nos indicara un error, porque no hemos realizado los demás cambios. Cuando sobrescribimos el método automáticamente el método vacío que teníamos se pierde, así que para pasar los datos debemos hacerlo dentro de las paréntesis:
+
+![src/POO_91](src/POO_91.png)
+
+- Como podemos ver, siendo nuestro driver del tipo Account debemos declararlo para que se cree un objeto.
+
+Con esto tenemos los datos mínimos necesarios para que un vehículo exista dentro de nuestra aplicación Uber.
+
+**JAVASCRIPT**
+
+Primero debemos crear un archivo HTML llamado index que funcionara como nuestro Main, esto es porque JavaScript necesita un navegador que nos permita visualizar todo.
+
+En nuestro archivo index.html tendremos lo siguiente:
+
+![src/POO_92](src/POO_92.png)
+
+Es un esqueleto básico del HTML, lo importante está dentro del body donde tenemos tres scripts que nos permitirá incluir o llamar nuestro código de tipo JavaScript. Es importante ponerlos en ese orden porque de lo contrario no nos funcionara, esto es porque JavaScript empieza a compilar y renderizar desde el principio a medida que va leyendo línea por línea.
+
+Ahora vamos a nuestra clase Car:
+
+![src/POO_93](src/POO_93.png)
+
+- Como podemos ver, no es necesitamos colocar el tipo de dato que tendrán los parámetros. Además los atributos que creamos ya son tomados como parte del método constructor y simplemente debemos igualar.
+- Es en la creación del método **printDataCar** donde esta lo interesante. Sabemos que JavaScript toma los métodos como funciones especiales y son declarados fuera.
+- Para imprimir nuestro resultado usamos el comando **console.log** que imprime en la consola.
+- Una forma de concatenar string es la interpolación de cadenas y utilizan las comillas invertidas o backticks para delimitar sus contenidos. Las partes variables se denominan placeholders y utilizan la sintaxis ${ } para diferenciarse del resto de la cadena.
+	
+Ahora vamos a nuestra clase Account para pasar el nombre y el documento:
+
+![src/POO_94](src/POO_94.png)
+
+¿Recuerdas a index.js? Hasta el momento ha permanecido vacío, pero lo usaremos para poner ahí todas las llamadas de nuestra clases y posteriormente mostrarlas. Entonces, vamos a index.js:
+	
+![src/POO_95](src/POO_95.png)
+
+- Declaramos un objeto **car** al que pasaremos los datos de la matrícula y del conductor.
+- Incluso podemos usar el operador punto para acceder a la cantidad de pasajeros y usar nuestro método printDataCar.
+
+Finalmente, para ver nuestros resultados, debemos abrir nuestro archivo HTML en un navegador. En el navegador damos click derecho, inspeccionar y vamos a consola, y ahí esta imprimido en pantalla nuestra clase de hoy.
+
+### Clase 23 *JavaScript orientado a objetos, lo más nuevo*
+
+A partir de las nuevas especificaciones del ECMAScript 6 ya podemos declarar una clase con la palabra reservada class, aunque es importante aclarar que estos no dejan de ser prototipos, sino todo lo contrario.
+
+Además tendremos una palabra clave para definir un constructor, y dentro de este estarán las propiedades de nuestra clase definidas listas para inicializarse.
+
+Transcribamos el código JavaScript que generamos en la clase anterior a este nuevo estándar.
+
+La clase Car quedaría así:
+
+![src/POO_96](src/POO_96.png)
+
+Si quisiéramos declarar un método, en esta nueva sintaxis dejaremos de utilizar la palabra clave function.
+
+Ahora veamos a la clase Account:
+
+![src/POO_97](src/POO_97.png)
+
+Y para finalizar aquí puedes ver las clases Route y Payment:
+
+![src/POO_98](src/POO_98.png)
+
+![src/POO_99](src/POO_99.png)
+
+Notarás que para instanciar un objeto seguiremos usando la palabra clave new.
+
+![src/POO_100](src/POO_100.png)
+
+Y los resultados serán los mismos:
+
+![src/POO_101](src/POO_101.png)
+
+### Clase 24 *Declarando un Método Constructor en Python*
+
+En Python encontrarás un concepto denominado Métodos Mágicos, estos métodos son llamados automáticamente y estrictamente bajo ciertas reglas. El método constructor en Python forma parte de esta familia de métodos y como aprendimos en la clase anterior lo declaramos usando __init__, aunque si nos ponemos estrictos este método no construye el objeto en sí. El encargado de hacer esto es __new__ y el método __init__ se encargará de personalizar la instanciación de la clase, esto significa que lo que esté dentro de __init__ será lo primero que se ejecute cuando se cree un objeto de esta clase.
+
+Para nuestro proyecto tenemos la necesidad de que algunas variables se inicialicen obligatoriamente cuando ocurra la instanciación. Así que declaremos el método __init__ en las clases de nuestro proyecto con las propiedades obligatorias.
+
+Para la clase Account quedaría algo así, notarás que usamos la palabra clave self, esta es muy parecida a lo que venimos trabajando a otros lenguajes con this. Y como su nombre lo dice hace referencia a los datos que componen la clase, en este caso self.name está llamando al atributo name que se encuentra en la línea 3 de la clase y, le está asignando el dato que se pasa en el método __init__ de la línea 8.
+
+![src/POO_102](src/POO_102.png)
+
+Ahora veamos la clase Car:
+
+![src/POO_103](src/POO_103.png)
+
+Lo que notarás de diferente es que cambiamos el tipo de dato de driver, ahora es de tipo Account y como ves está solicitando los dos datos obligatorios para instanciar un objeto de este tipo. Esto lo verás más en acción en el próximo fragmento de código del archivo main.py. Además, mucho ojo, en la primera línea observamos que es importante importar la clase para poderla usar.
+
+Nuestro archivo main.py ahora se verá así:
+
+![src/POO_104](src/POO_104.png)
+
+Observa que estamos importando las dos clases que usaremos y las estamos instanciando en los métodos constructores.
+
+Los resultados serán los siguientes:
+
+![src/POO_105](src/POO_105.png)
+
+El código de este ejemplo lo encuentras en este [enlace](https://www.wireshark.org/(https://github.com/anncode1/Curso-POO-Platzi/tree/3.2.ConstructorPython) "enlace").
+
+**Reto 3**
+
+- Ahora que ya viste cómo creamos un método constructor en Python, mira esta [clase](https://platzi.com/clases/1338-php/12930-constructor-y-metodos/ "clase") y hazlo también para PHP. Compártenos tus resultados en la sección de discusiones.
