@@ -1,4 +1,4 @@
-# Introducción a la Terminal y Línea de Comandos
+# Curso de Diseño para Programadores
 ## Modulo 1. Introducción
 ### Clase 1 *Expert Session: Diseño para Programadores*
 ### Clase 2 *Bienvenida*
