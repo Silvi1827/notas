@@ -101,7 +101,7 @@ Algunos contenidos más comunes son:
 - Canal de distribución
 - Cronograma
 
-El ejemplo de un brief para un restaurant de comida rapida es: [Steam Burger](http://https://github.com/mssroboto/diseno-para-programadores/blob/master/1-brief/Brief "steam burger")
+El ejemplo de un brief para un restaurant de comida rapida es: [Steam Burger](https://github.com/mssroboto/diseno-para-programadores/blob/master/1-brief/Brief..pdf "Steam Burger")
 
 ## Modulo 3. Aprender sobre Diseño Experiencia de usuario
 ### Clase 8 *Definición de diseño UX*
@@ -191,7 +191,7 @@ Cuando trabajamos con el diseño UX y el diseño UI de la mano podemos garantiza
 
 Moodboard es un documento o un tablero en el que empezamos a recopilar referencia visuales de estilos, colores y todo lo que nos parezca atractivo y llamativo que podamos añadirle a nuestra aplicación.
 
-No hay reglas con el Moodboard, puedes usar recortes o aplicaciones como [Pinterest](https://www.pinterest.es/..pdf "Pinterest").
+No hay reglas con el Moodboard, puedes usar recortes o aplicaciones como [Pinterest](https://www.pinterest.es/ "Pinterest").
 
 Si te gusta un color, una fuente, un estilo de fotografía o un estilo de ilustración, todo esto lo puedes guardar en tu Moodboard.
 
