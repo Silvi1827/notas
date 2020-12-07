@@ -1145,3 +1145,183 @@ El código de este ejemplo lo encuentras en este [enlace](https://www.wireshark.
 **Reto 3**
 
 - Ahora que ya viste cómo creamos un método constructor en Python, mira esta [clase](https://platzi.com/clases/1338-php/12930-constructor-y-metodos/ "clase") y hazlo también para PHP. Compártenos tus resultados en la sección de discusiones.
+
+## Modulo 5. Herencia
+### Clase 25 *Aplicando herencia en lenguaje Java y PHP*
+
+Ya sabemos cómo funciona la herencia de manera conceptual, pero aún lo hemos visto expresada en código dependiendo del lenguaje de programación que elijas. Y es que esto varía dependiendo de lo que estés eligiendo:
+
+![src/POO_106](src/POO_106.png)
+
+- **Java:** Para crear una subclase se usa la palabra reservada extends, esto le indica a la clase hija cual va a ser su clase padre.
+  
+	![src/POO_107](src/POO_107.png)
+		
+- **Python:** Usamos la palabra class seguido del nombre de la clase hija, se la pone entre paréntesis pasamos la clase padre como parámetro.
+  
+	![src/POO_108](src/POO_108.png)
+		
+- **JavaScript:** Ha sido nuestro amigo rebelde durante todo el curso, por lo que no es de extrañar que JavaScript herede de una manera peculiar y es que simplemente toma a la clase hija seguido de la palabra prototype e inmediatamente instancia la clase padre.
+
+	![src/POO_109](src/POO_109.png)
+		
+- **PHP:** Esté lenguaje maneja la herencia de manera similar a Java, usando la palabra extends.
+
+**JAVA**
+
+Siguiendo con la clase Car es tiempo de crear los objetos que descienden de esté, para eso creamos cuatro archivos que serán nuestras clases UberX, UberPool, UberBlack y UberVan.
+
+UberX y UberPool
+
+![src/POO_110](src/POO_110.png)
+
+![src/POO_111](src/POO_111.png)
+
+- Creamos las clases y usamos extends para señalar que estamos heredando de la clase Car, creamos los atributos propios y después creamos un constructor que reciba cuatros parámetros.
+- **super():** sirve para llamar al constructor de la clase padre.
+
+UberBack y UberVan
+
+![src/POO_112](src/POO_112.png)
+
+![src/POO_113](src/POO_113.png)
+
+- Importamos el ArrayList y Map de la biblioteca java.util
+- **Map:** Es una interfaz que define el conducta general de una estructura que se hace relación de clave/valor.
+- Creamos las clases y usamos extends para señalar que estamos heredando de la clase Car, creamos los atributos propios y después creamos un constructor que reciba cuatros parámetros.
+- **super():** sirve para llamar al constructor de la clase padre.
+
+
+**PHP**
+
+Al igual que en Java, también creamos cuatro archivos nuevos que serán nuestras clases.
+
+Tenemos nuestra clase Car:
+
+![src/POO_114](src/POO_114.png)
+
+Y ahora crearemos una clase UberX:
+
+![src/POO_115](src/POO_115.png)
+	
+- **require_once:** Inserta en nuestro programa un código procedente de otro archivo, si el archivo no existe o contiene errores, nuestro programa no funcionará y obtendremos un fatal error.
+- **extends:** Indicamos a la clase hija cual va a ser su clase padre.
+- Los constructores padres no son llamados implícitamente si la clase hija define un constructor. Para ejecutar un constructor padre, se requiere invocar a **parent::__construct()** desde el constructor hijo. Si el hijo no define un constructor, entonces se puede heredar de la clase madre como un método de clase normal (si no fue declarada como privada).
+
+**Reto 4**
+
+- Termina las clases de PHP en Uber.
+
+### Clase 26 *Solución del reto de herencia en PHP*
+
+En la clase anterior nos quedamos con el reto de terminar la composición de las demás clases que heredan de Car, ahora vamos a ver lo que debimos haber hecho.
+
+UberPool:
+
+![src/POO_116](src/POO_116.png)
+
+- **require_once:** Inserta en nuestro programa un código procedente de otro archivo, si el archivo no existe o contiene errores, nuestro programa no funcionará y obtendremos un fatal error.
+- **extends:** Indicamos a la clase hija cual va a ser su clase padre.
+- Los constructores padres no son llamados implícitamente si la clase hija define un constructor. Para ejecutar un constructor padre, se requiere invocar a **parent::__construct()** desde el constructor hijo. Si el hijo no define un constructor, entonces se puede heredar de la clase madre como un método de clase normal (si no fue declarada como privada).
+
+Y, las clases UberBlack y UberVan:
+
+![src/POO_117](src/POO_117.png)
+
+![src/POO_118](src/POO_118.png)
+
+- En el caso de UberBlack y UberVan existe una ventaja de que PHP no es estrictamente tipado, por lo que, a diferencia de Java en donde tuvimos que escribir toda la composición de la variable, en esta ocasión no es necesario.
+
+Ahora vamos a probar nuestro código:
+
+![src/POO_119](src/POO_119.png)
+
+- Usando **require_once()** traemos las clases Car, UberX, UberPool y Account.
+- El símbolo **$** seguido de un nombre representan a nuestras variables.
+  
+	- **$uberX, $uberPool:** Son los objetos de tipo UberX y UberPool respectivamente.
+
+- Entre las paréntesis van las variables que aceptan cada clase
+
+	- Primero va license (matricula), seguido del objeto Account que aceptan name (nombre) y document (documento), después va el brand (marca) del vehículo y finalmente el model (modelo).
+
+- La sintaxis para llamar a un método en PHP es: ***$variable -> método().***
+
+***Nota: Todavía no hemos ejemplificado en código la herencia de la clase Driver, pero con lo aprendido a estas alturas serías capaz de hacerlo por ti mismo.***
+
+Finalmente para ejecutar nuestro código damos click derecho en algún lugar del editor y vamos en PHP Server: Serve project para arrancar un servidor.
+
+![src/POO_120](src/POO_120.png)
+
+Una vez hecho eso nos aparecer un navegador con los datos imprimidos.
+
+![src/POO_121](src/POO_121.png)
+
+Como vez, todavía no imprimimos los datos de la marca y modelo, pero eso lo estaríamos viendo más adelante.
+
+### Clase 27 *Aplicando herencia en lenguaje Python y JavaScript*
+
+Recuerdas que en Python la herencia se expresa de manera muy similar a un método constructor de otros lenguajes. Apliquemos herencia para nuestra familia Car, para esto crearemos las siguientes clases:
+
+- UberX.py
+- UberPool.py
+- UberBlack.py
+- UberVan.py
+
+![src/POO_122](src/POO_122.png)
+
+![src/POO_123](src/POO_123.png)
+
+![src/POO_124](src/POO_124.png)
+
+![src/POO_125](src/POO_125.png)
+
+El código completo puedes verlo [aquí](https://github.com/anncode1/Curso-POO-Platzi/tree/2cbdf9db470a98323328f8a21bf6a9de941d008e/Python "aquí")
+
+**JavaScript**
+
+En clases anteriores te expliqué cómo ejecutar herencia en estándares anteriores al ECMAScript 6. Uno de los beneficios de utilizar este nuevo estándar que ejecutar herencia es tan simple como utilizar la palabra reservada extends.
+
+![src/POO_126](src/POO_126.png)
+
+![src/POO_127](src/POO_127.png)
+
+![src/POO_128](src/POO_128.png)
+
+![src/POO_129](src/POO_129.png)
+
+Ahora para utilizar una de las clases y crear un objeto, por ejemplo de UberX, no olvides declarar la clase en el archivo index.html.
+
+![src/POO_130](src/POO_130.png)
+
+Nuestro ejemplo se verá así:
+
+![src/POO_131](src/POO_131.png)
+
+El código completo puedes verlo [aquí]( https://github.com/anncode1/Curso-POO-Platzi/tree/9251101bdc2722ed13f9d93cb432ba8e9aba17b4/JS "aquí")
+
+### Clase 28 *Otros tipos de Herencia*
+
+A partir de ahora las clases que estén siendo heredades las llamaremos familias.
+
+Acabamos de aplicar herencia a la familia Car. Ahora apliquémosla a la familia Payment.
+
+En clases anteriores te mencioné que otro punto de partida que puedes tomar para aplicar herencia es del hecho de que hay clases que lógicamente deberían estar en una familia, como es el caso de Payment.
+
+Repasemos el diagrama de Payment
+
+![src/POO_132](src/POO_132.png)
+
+Notarás que a nivel de código parece inservible pero cuando estemos en el caso de uso Pagar un Viaje, probablemente en ese momento no sabremos cuál es el método de pago, y necesitemos ingresar un dato lo suficientemente genérico que conceptualmente nos dé la información que necesitamos, en este caso que es un Payment. Este es un tipo de Polimorfismo y uno de los principios SOLID del software que obedece a la Inyección de Dependencias. Lo veremos más adelante a detalle.
+
+Ahora nos faltará crear las clases y aplicar su herencia.
+
+### Clase 29 *Reto 4*
+
+Nos queda la Jerarquía Account pendiente.
+
+Tomando como referencia nuestros diagramas. Plásmala en tu lenguaje de programación favorito.
+
+Compártenos tus resultados.
+
+![src/POO_133](src/POO_133.png)
