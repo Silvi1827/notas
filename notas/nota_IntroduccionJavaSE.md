@@ -570,3 +570,573 @@ Ahora desde tu terminal escribe el siguiente comando para abrir nuestra ***jshe
 ![src/javaSE_75.png](src/javaSE_75.png)
 
 Ahora escribe la línea de código para imprimir un texto (no olvides poner ; y dar enter).
+
+## Modulo 2. Trabajar con Variables en Java
+### Clase 9 *Variables en Java*
+
+Empecemos por entender de qué se trata las variables porque, a partir de ahora, variable será lo que vamos a utilizar al por mayor y es importante que sepas, al menos de manera conceptual, de que se trata y cómo funcionan.
+
+**Variables**
+
+Son un espacio en memoria al que se le asigna un valor. El valor puede ser numérico, booleano, texto o datos más complejo.
+
+Imaginemos que nuestra siguiente imagen es nuestra variable:
+
+![src/javaSE_76.png](src/javaSE_76.png)
+
+El espacio en memoria literalmente es la memoria RAM, es el tipo de memoria que utilizan las variables.
+
+Supongamos que le asignamos el valor de 10 (es un dato numérico) y a ese dato lo identificamos a partir de un nombre, speed. De esta forma es como podemos entender que la manera de identificar esa localidad en memoria será a partir del nombre de la variable.
+
+Entonces, en resumen, una variables es un espacio de memoria al que podemos asignarle un valor y una manera sencilla de localizar ese espacio es identificándolo mediante una nombre.
+
+**Variables en Java**
+
+Las variables en Java se componen de un nombre y un valor, siempre. En general, en cualquier lenguaje de programación siempre van identificarse a través de un nombre único y un valor asignado. Puedes tener variables sin valores asignados, pero a medida que los vayas utilizando vas a tener que estarle rellenándole con datos, de ahí el nombre de variable porque sus datos pueden estar cambiando, pero siempre con la composición nombre-valor.
+
+**Ejercicio**
+
+Tenemos el «Hola Mundo» que hemos hecho en la clase anterior, vamos sobre la carpeta src y creamos un nuevo archivo llamado **Variables**, ahí será donde concentraremos todos los ejercicios hechos en esta clase.
+
+Dentro del archivo **Variables.java** creamos un método **main**, esencialmente en un programa podemos tener varios métodos main pero esto no debería pasar. En un programa formal de Java no debería existir varios métodos main, porque idealmente un programa debería tener un solo punto de entrada. Sin embargo, puedes tenerlo para definir cuál es el punto de entrada que queremos que nuestra aplicación tenga para tener múltiples opciones, ya sea para testear o desarrollar, entonces para correrlo simplemente nos posicionamos en la clase del cual queremos ejecutar el método main y ese será el que se ejecutara.
+
+Entonces, escribimos el siguiente código:
+
+![src/javaSE_77.png](src/javaSE_77.png)
+
+- Declaración y asignación de una variable: Para declarar una variable es necesario poner el tipo de dato que deseamos, seguido de su nombre, y después poner nuevamente el nombre de la variable seguido del operador de asignación y el valor que le daremos.
+	
+	- En este ejemplo, declaramos un tipo de dato entero (int) de nombre speed.
+		○ Luego a la variable speed le asignamos (=) el valor de 10.
+	- Finalmente imprimimos el valor que contiene la variable speed.
+- Inicialización de una variable: Para inicializar una variable ponemos primero el tipo de dato, seguido del nombre y finalmente el valor que contiene.
+	
+	- En el ejemplo declaramos una variable entera (int) de nombre salary y al instante le asignamos el valor de 1000.
+	- También declaramos otra variable, esta vez una cadena (string), de nombre employeeName y le asignamos el nombre del empleado (en este caso, Cale Henituse).
+	- Finalmente imprimimos el valor que contiene la variable employeeName.
+
+**Diferencias entre inicializar y declarar**
+
+Cuando declaramos una variable no le asignamos un valor inicial, en cambio cuando inicializamos una variables nosotros la estamos declarando y dándole un valor inicial.
+
+**String**
+
+Es una cadena de texto que no deja de ser más que la sucesión de un conjunto de caracteres alfanuméricos, signos de puntuación y espacios en blanco con más o menos sentido.
+
+A la hora de asignarle un valor a una string siempre usamos comillas dobles (" "), porque de lo contrario Java podría confundirlo con el nombre de una variable.
+
+***NOTA: No debemos confundir el operador de asignación (=) con el de comparación (==).***
+
+### Clase 10 *Actualizando variables*
+
+Las variables no solo pueden ser definidas y asignadas como vimos en la clase anterior, sino que también pueden ser alteradas, sus datos pueden ser redefinidos y se pueden agregar o quitar elementos de una variable dependiendo de las necesidades de la aplicación que estés construyendo.
+
+Existe también en Java otros tipos de variables que no vamos a cubrir en este curso, como las variables de instancia que precisamente son esas variables definidas a partir de las clases, es decir, los objetos de Java. También tenemos variables estáticas, que también se las conocen como variables de clase, son variables que pueden ser accedidas a partir del nombre de una clase y su alcance es mucho global.
+
+Miremos un poco de código para entender mejor como funciona:
+
+![src/javaSE_78.png](src/javaSE_78.png)
+
+Siguiendo con nuestro ejemplo de salario. Inicialmente el salario es de $1000, pero supongamos que consigue un bono de $200, esto significa que cuando calculemos su salario total ahora tendremos que agregarle ese bono al salario que normalmente gana. Es común que muchos calculen el nuevo salario de la siguiente forma:
+
+![src/javaSE_79.png](src/javaSE_79.png)
+
+Aunque teóricamente está bien, cuando en un futuro actualicemos el salario debemos recorrer por todo el programa para buscar donde más es utilizado para que no exista una incongruencia entre los datos. Otra forma común es declarando otra variable, pero esto tampoco está bien. Lo que debemos hacer es reutilizar variables para asignarles un nuevo valor, como es el caso de nuestro ejemplo.
+
+Nuestra variable salary originalmente tiene el valor 1000, después hacemos la suma para agregarle al bono:
+
+![src/javaSE_80.png](src/javaSE_80.png)
+
+Es decir, a la variable salary le asignamos un nuevo valor al hacer una suma entre el salary original (1000) y el bono (200).
+
+Después, supongamos que la persona deba pagar algunas obligaciones como lo es la pensión, entonces hacemos lo siguiente:
+
+![src/javaSE_81.png](src/javaSE_81.png)
+
+Al resultado anterior ahora le restamos la pensión que es $50. Es decir, de nuestra anterior operación nos queda 1200 y a ese valor le restamos 50.
+
+Siguiendo con el ejemplo, la persona ha trabajado dos horas extras y la hora extra tiene un valor de $30 cada uno. Además, esa persona utilizo un cupón de comida que cuesta $45:
+
+![src/javaSE_82.png](src/javaSE_82.png)
+
+Como vemos, nosotros podemos realizar varios operaciones en una misma línea, en este caso al resultado anterior de salary le sumamos la multiplicación de 30 por 2 y encima le restamos 45.
+
+Así es como nosotros podemos reutilizar variables y datos. Recordemos que nuestras variables viven específicamente en la memoria RAM, a medida que creemos nuevas variables serán espacios nuevos que se irán reservando para esos datos, para eso es importante utilizar y reutilizar variables para no desperdiciar o desaprovechar memoria RAM.
+
+**Actualizando cadenas de texto**
+
+Siguiendo también con el ejemplo anterior de nuestro empleado:
+
+![src/javaSE_83.png](src/javaSE_83.png)
+
+Supongamos que nuestro empleado tiene un nombre y apellido, pero es necesario agregarle su segundo apellido. Para concatenar o añadir una nueva cadena usamos el carácter de más (+), con el valor antes o después de la variable. También debemos agregar un espacio porque de lo contrario el nuevo texto quedara completamente pegado al anterior.
+
+Además, como vemos en el ejemplo, podemos agregar valores directamente antes de imprimir.
+
+### Clase 11 *Convención de Nombres en Java*
+
+Ya que aprendimos a definir variables y actualizar datos, también que los nombre de las variables deben ser específicamente únicos y para hacerlos único tenemos una serie de trucos o más bien tenemos una convención de nombre. Java es bastante estricto en cuanto a los nombres que se usan para las variables, existe un estándar que deben seguir las variables para ser definidas que nos ayuda a mantener el código organizado, entendible y sin repetidos.
+
+- El punto clave al seguir la convención es comprender que Java es sensible a mayúsculas y minúsculas.
+
+	Por ejemplo, esto está completamente mal:
+
+	![src/javaSE_84.png](src/javaSE_84.png)
+
+	Aunque el nombre de las variables sean iguales, el simple hecho de que una de las letras sea diferente provoca que Java los detecte como variables distintas y nos marca error.
+	
+	En cambio, esto está bien:
+
+	![src/javaSE_85.png](src/javaSE_85.png)
+	
+	Como vemos tenemos dos variables que parecen tener el mismo con el mismo nombre, pero sabemos que Java no las detectara de la misma forma. Para el lenguaje, esas dos variables son completamente diferentes y nos imprimirá valores distintos.
+
+- Todas las variables deben empezar con una letra, el símbolo $ o guion bajo ( _ ).
+  
+	![src/javaSE_86.png](src/javaSE_86.png)
+	
+	No es necesario que escribas unas con letras, otras con el símbolo de $ y otras con el guion bajo, sino que cualquiera de estas opciones está completamente bien y lo importante es que nunca comenzar el nombre de una variable con números.
+
+- No debemos utilizar el guion ( - ) en ninguna parte.
+	
+	![src/javaSE_87.png](src/javaSE_87.png)
+
+	Poner el guion entre una variable compuesta por dos palabras provoca que Java las considere variables distintas y no una misma.
+	
+	Si lo que nosotros queremos es separar las palabras debemos hacerlo de la siguiente forma:
+	
+	![src/javaSE_88.png](src/javaSE_88.png)
+
+- El ejemplo anterior pertenece a la convención de que lo posterior al primer carácter pueden ser letras, números, el símbolo $ y el guion bajo. Ya después del primer carácter nos es permitido colocar números entre las palabras, así como el símbolo $ o el guion bajo. Además, tampoco es completamente necesario que el símbolo $ o el guion bajo este como primer carácter, depende de nosotros si va al principio, en medio o al final.
+
+- En la cuestión de constante, y es que en Java podemos tener variables constantes cuyo valor nunca cambiaran, deben ser escritas en mayúsculas. Si el nombre de la variable está compuesto por dos palabras, en ese caso esas dos palabras deberían separadas por un guion bajo.	
+
+	![src/javaSE_89.png](src/javaSE_89.png)
+
+### Clase 12 *Técnica de Naming: Camel Case*
+
+Una convención de nombres muy popular en Java para nombras nuestras variables es la técnica del Camello, mejor conocida en inglés como Camel Case, en la cual básicamente tendremos dos formas de usarlas:
+
+- Upper Camel Case
+- Lower Camel Case
+
+La diferencia entre ambos se encuentra en la primera letra de la variable. En el caso del Upper Camel Case siempre vamos a comenzar el nombre de la variable con mayúscula, mientras que en el caso del Lower Camel Case la comenzaremos con minúscula. En ambos caso, si el nombre de la variable está compuesta por dos palabras entonces las separaremos con la inicial consecutiva en mayúscula.
+
+**¿En qué momento utilizo Upper Camel Case o Lower Camel Case?**
+
+Bueno es bastante sencillo, utilizaremos Upper Camel Case en los nombres de las clases y archivos. Mientras que Lower Camel Case serán para los nombres de variables o métodos.
+
+Tomemos en cuenta nuestro siguiente código como ejemplo:
+
+![src/javaSE_90.png](src/javaSE_90.png)
+
+En el caso del Upper Camel Case, el nombre de la clase NamingJava comienza con la letra mayúscula y al estar compuesta por más palabras es separada por la siguiente inicial en mayúscula.
+
+***RECUERDA: Todas las clases siempre deben tener esta convención de nombres. Si nosotros por ejemplo cambiáramos el nombre de la clase y la escribiéramos como namingJava (con la primera letra en minúscula), estaríamos violando una de las reglas de Java que dice que el nombre de la clase debe ser idéntico al nombre del archivo.***
+
+En el caso del Lower Camel Case, en el ejemplo tenemos una string llamada fullName. Podemos ver la primera letra está en minúscula mientras que, al ser compuesta por dos palabras, la siguiente tiene la inicial en mayúscula. Lo mismo ocurre con el segundo ejemplo, en el 'sizeInCentimeters' está compuesta por tres palabras: la primera inicial (size) es escrita en minúscula y las siguientes (In y Centimeters) son escritas en mayúsculas.
+
+### Clase 13 *Tipos de datos numéricos*
+
+Ahora que ya conocemos la convención de nombres que tiene Java estamos listos para crear todas la variables que queramos en nuestros programa, así que es tiempo de conocer los tipos de variables que tenemos. Hasta el momento solo vimos dos tipos de variables: **int** que es del tipo numérico y **string** que es una cadena de texto.
+
+Creamos un nuevo proyecto, para eso vamos en File después New y finalmente seleccionamos Project:
+
+![src/javaSE_91.png](src/javaSE_91.png)
+
+El resto del procedimiento es normal para crear el nuevo proyecto, esta vez usaremos la versión 11 del JDK y eso es para ver un secreto que ocurre en esa versión. El nombre del proyecto será ***DataTypesJava***. También creamos una nueva clase llamada ***DataTypes***.
+
+**Números Enteros**
+
+Los números enteros son todos aquellos números que NO sean decimales, sin importar que sean positivos o negativos.
+
+Ya hemos conocido un tipo de dato entero que es el int, pero algo que no sabíamos es que ese tipo de dato tiene un límite. No es que podamos almacenar la cantidad de números que deseemos en su interior, recordemos que los número son infinitos y por eso los tipos de dato tienen límites.
+
+En Java existe cuatro tipos de datos destinados a almacenar números enteros. La única diferencia entre ellos es el número de bytes usados para su almacenamiento y, en consecuencia, el rango de valores que es posible representar con ellos. Todos ellos emplean una representación que permite el almacenamiento de números negativos y positivos.
+
+- **byte:** Como su propio nombre denota, emplea un solo byte (8 bits) de almacenamiento. Esto permite almacenar valores en el rango [-128, 127].
+- **short:** Usa el doble de almacenamiento que el anterior, lo cual hace posible representar cualquier valor en el rango [-32.768, 32.767].
+- **int:** Es el tipo de dato comodín, usa 4 bytes de almacenamiento y es el tipo de dato entero más empleado. El rango de valores que puede representar [2,147,483,648 hasta 2,147,483,647].
+- **long:** Es el tipo entero de mayor tamaño, 8 bytes (64 bits), con un rango de valores de [9,223,372,036,854,775,808 hasta 9,223,372,036,854,775,807].
+
+Manejar números es muy delicado, cada tipo de dato va almacenando el doble que el anterior y por eso es importante definir el tipo de dato correcto para la cantidad de dígitos que deseamos que ocupe. Los más usuales a utilizar son los datos comodín que son datos ni tan grande ni tan pequeños como para desperdiciar memoria y sirven bien para operaciones matemáticas.
+
+Veamos el siguiente ejemplo entre los tipos de datos int y long:
+
+![src/javaSE_92.png](src/javaSE_92.png)
+
+El tipo de dato comodín para enteros es el int, que nos permite almacenar hasta diez dígitos. Sin embargo, si lo que haremos es manipular una base de datos grande o somos conscientes de que el cálculo a realizar es muy grande, entonces debemos optar por un tipo de dato long que viene con una peculiaridad y es que a este tipo de dato debemos asignarle una 'L' al final para que el compilador pueda reconocerlo.
+
+Si por ejemplo nosotros declaramos una variable long e ingresamos más de diez dígitos sin la 'L' nos marcara error, porque el compilador lo reconocerá como un tipo de dato int:
+
+![src/javaSE_93.png](src/javaSE_93.png)
+
+Lo mismo ocurre con el tipo de dato int, cuando ingresamos un número mayor a diez dígitos nos marca error:
+
+![src/javaSE_94.png](src/javaSE_94.png)
+
+**DATO CURIOSO**
+
+Hay una historia interesante que es el caso de Twitter. Cuando comenzaron como un startup, ellos decidieron definir los identificadores de usuarios con tipos de datos int creyendo que sería lo más conveniente, pues pensaron que solo tendrían usuarios con una cantidad de diez dígitos.
+
+Pero Twitter creció tanto que esto de repente sobrepaso el límite de espacio de memoria que podía almacenar esa variable por lo que tuvieron que migrar a otro tipo de dato que permita un almacenamiento mucho más grande y así puedan trabajar cantidades numéricas aún mayores que la cantidad de usuarios que tenían en esos momentos.
+
+Es por eso importante definir adecuadamente el tipo de dato para que, si en algún futuro como el caso de Twitter debas migrar, puedas tomar esa opción.
+
+**Números Flotantes**
+
+Los números flotantes son aquellos que se representan con una coma y que tienen una parte entera(a la izquierda de la coma) y otra parte decimal (a la derecha de la coma).
+
+Los tipos numéricos flotante permiten representar números tanto muy grandes como muy pequeños además de números decimales. Java dispone de 2 tipos concretos en esta categoría:
+
+- **float:** Conocido como tipo de precisión simple, emplea un total de 4 bytes de memoria. Con este tipo de datos es posible representar números en el rango de [1.40129846432481707e-45 hasta 3.40282346638528860e+38]
+- **double:** Sigue un esquema de almacenamiento similar al anterior, con la diferencia de que usando 8 bytes. Esto le permite representar valores en el rango de [4.94065645841246544e-324d hasta 1.79769313486231570e+308d]
+
+En este caso, para los números flotantes nuestro tipo de dato comodín será el double porque requiere más precisión. Double es usado en cálculos matemáticos que requieran mucha precisión, a diferencia de float que es un tipo de dato simple usando para cuando nosotros entendamos que el elemento o el cálculo a realizar no va a ser tan preciso, esto se debe a que abarca menor cantidad de dígitos.
+
+Observemos nuestro ejemplo:
+
+![src/javaSE_95.png](src/javaSE_95.png)
+
+Similar al tipo de dato long, float también requiere que pongamos una letra (en este caso 'F') al final. De no hacerlo:
+
+![src/javaSE_96.png](src/javaSE_96.png)
+
+El compilador automáticamente asumirá que es un tipo de dato double.
+
+### Clase 14 *Tipos de datos char y boolean*
+
+Ya conocemos la clasificación de datos numéricos, ahora aprenderemos un nuevo tipo de clasificación de datos específicamente para textos o, para ser más estrictos, para los caracteres.
+
+**Lógicos y caracteres**
+
+Aparte de los 6 tipos de datos que acabamos de ver, destinados a trabajar con números en distintos rangos, Java define otros dos tipos de datos primitivos:
+
+- **char:** Utilizado para almacenar caracteres individuales (letras, para entendernos). En realidad está considerado también un tipo numérico, si bien su representación habitual es la del carácter cuyo código almacena. Su tamaño oscila en los 2 bytes y se usa la codificación UTF-16 de Unicode. A diferencia del string, el tipo de dato char se usa con comilla simple.
+- **boolean:** Lo usamos para tomar decisiones que se representan con valores de "verdadero/falso"  o "true/false". Su tamaño también oscila entre los 2 bytes.
+
+Como estos dos tipos de datos son bastantes pequeños lo podemos usar bastante, conforme tenga la necesidad nuestro programa.
+
+**Cadenas de caracteres**
+
+Aunque las cadenas de caracteres no son un tipo simple en Java, sino una instancia de la clase ***String***, el lenguaje otorga un tratamiento bastante especial a este tipo de dato, lo cual provoca que, en ocasiones, nos parezca estar trabajando con un tipo primitivo.
+
+Aunque cuando declaramos una cadena estamos creando un objeto, su declaración no se diferencia de la de una variable de tipo primitivo.
+
+Las cadenas de caracteres se delimitan entre comillas dobles, en lugar de simples como los caracteres individuales.
+
+**Java 10**
+
+Existe una peculiaridad muy interesante sobre los tipos de datos que se dan a partir de la versión 10 de Java y es que, como vimos hasta ahora, para declarar una variable anteponemos el tipo de dato a declarar seguido del nombre. Pero a partir de Java 10 ya podemos ignorar el keyword que nos dice el tipo de dato que será la variable y sustituirlo por uno mucho más genérico, que es la palabra clave ***var***.
+
+Lo que haremos ahora para declarar variables será: primeramente poner var, a continuación el nombre que tendrá la variable e igualamos para asignarle un valor. Al hacer todo eso, Java automáticamente inferirá el tipo de dato que tendrá la variable, esto es una característica que comparten muchos lenguajes de programación como Kotlin, JavaScript y Python. Entonces, la inferencia de datos estará disponible desde Java 10 y fue algo que la comunidad estuvo solicitando mucho. 
+
+**EJEMPLO**
+
+Primeramente recordemos que para estos ejemplos estamos usando la versión 11 del JDK, ahora veremos cómo funciona los tipos de datos lógicos y de carácter:
+
+![src/javaSE_97.png](src/javaSE_97.png)
+
+Como vemos para declarar un tipo de dato char hacemos uso de las comillas simples, si por alguna razón usamos comillas dobles nos marcará error ya que Java lo detectara como un tipo de dato string. Mientras que los valores asignados a los tipos de datos booleanos son true (verdadero) o false (falso) sin necesidad de comillas.
+
+Tampoco podemos poner más de un único carácter:
+
+![src/javaSE_98.png](src/javaSE_98.png)
+
+Aquí una diferencia entre char y string para que se nos quede más claro:
+
+![src/javaSE_99.png](src/javaSE_99.png)
+
+Ahora veremos cómo funciona esta nueva forma de declarar variables:
+
+![src/javaSE_100.png](src/javaSE_100.png)
+
+Supongamos que tenemos un salario que al declarar con ***var*** e igualar con un entero (en este caso 1000) automáticamente Java sabe que un tipo de dato int. Si, por ejemplo, del salario debemos realizar el cálculo para ver el 3% que sería nuestra pensión, igualmente podemos realizar la operación y el resultado asignado a la variable pension se convertirá en un double.
+
+Y si queremos sacar el total de nuestro salario al realizar una resta, igualmente Java continuar aceptando hacer operaciones y entonces podemos ver que, de la resta entre un entero y un  con coma  flotante, nos saldrá otra variable con coma flotante.
+
+Inclusive, si declaramos variables con ***var*** y lo igualamos a un string para que sea una cadena de caracteres, con la magia de la inferencia nosotros seremos capaces de concatenar una cadena de caracteres con un tipo de dato double.
+
+***NOTA***
+
+***Un dato que debemos recordar es que si el ambiente de producción tiene un JDK con la versión 8 de Java y el programa es hecho con la versión 11 no seremos capaces de ejecutarlo. Compilar si es algo que haremos porque ya estará completamente compilado, pero si la JDK, la máquina virtual, es de una versión menor a la que fue compilado no seremos capaces de correr el programa.***
+
+***Es estrictamente necesario que la máquina virtual sea un versión similar o mayor en nuestro ambiente de trabajo. Por eso debemos tener mucho cuidado pues recordemos que la versión más utilizada es la de Java 8.***
+
+### Clase 15 *Operadores de Asignación, Incremento y Decremento*
+
+Conforme hemos avanzado vimos casi todo lo que podemos hacer con una variable: declararla, inicializarla, actualizarla, ponerle nombres únicos siguiendo la convención de Java y ya hasta hemos hecho un par de operaciones donde reutilizamos el valor de la variable para actualizarlas. A esas operaciones incluso podemos desglosarlas un poco más, además de que hablaremos de operadores especiales como lo son de incremento y decremento.
+
+**Operadores de Asignación**
+
+El operador de asignación (=) sirva para, tal como dice su nombre, asignar un valor a una variable. Combinado con otros operadores nos permite realizar asignaciones de operaciones de una forma más compacta.
+
+![src/javaSE_101.png](src/javaSE_101.png)
+
+Como podemos ver, es similar a como si estuviéramos reutilizando variables. Por ejemplo, si nosotros estuviéramos en nuestro ejemplo de salario y queremos darle un bono de 200, en vez de escribir salary = salary + 200**, podemos simplificar esa operación al escribirlo de la siguiente forma: **salary += 200**.
+
+***NOTA: Recordemos que el operador % sirve para obtener el residuo de una división.***
+
+**Operador de Incremento y Decremento**
+
+Los operadores de incremento y decremento son operadores unarios que agregan o sustraen uno de sus operandos, respectivamente.
+
+El operador de incremento aumenta su valor en 1, similarmente el operador de decremento disminuye en 1.
+
+![src/javaSE_102.png](src/javaSE_102.png)
+
+De estos operadores tenemos otra vez dos formas:
+
+![src/javaSE_103.png](src/javaSE_103.png)
+
+**EJEMPLO**
+
+Para comprender mejor como funciona las operaciones prefijas y posfijas veremos un ejemplo, entonces abrimos nuestro proyecto con la versión 8 de Java y creamos una nueva clase. En realidad podemos seguir trabajando con Java 11, pero para fines convencionales usaremos Java 8.
+
+![src/javaSE_104.png](src/javaSE_104.png)
+
+- Si se utiliza como postfijo, entonces devuelve el valor antes de incrementar.
+- Si se usa como un prefijo, entonces devuelve el valor después de incrementar.
+
+Ahora veamos otro ejemplo más práctico:
+
+![src/javaSE_105.png](src/javaSE_105.png)
+
+Ahora imaginemos que estamos en un juego como Mario Bros y queremos llevar el countdown de vida que tiene Mario, él puede ganar o perder vidas dependiendo de lo que este sucediendo en esos momentos.
+
+Entonces, primeramente creamos una variable lives con el valor de 5, será la vida llena de Mario. Después, por algún descuido, Mario pierde una vida, le restamos menos 1 para quitar esa vida, y ahora lives tiene el valor de 4. Seguimos, nuevamente perdemos una vida y ahí podemos ver cómo actúa el operador postfijo, lives se vuelve 3. Continuamos jugando y Mario gana una vida, nuevamente actúa el operador postfijo, y lives regresa a 4.
+
+Pero ahora Mario está en un nivel donde obtiene un regalo por cada vida gana. Entonces el creamos la variable del regalo que es gift con un valor de 100, pero nosotros queremos que a esos 100 le sumemos la cantidad de vida que tiene, entonces es cuando entra el operador prefijo. Si Mario gana una vida y usamos el operador postfijo para hacer las cuentas, el valor que nos entregara será 104, es decir: los 100 del regalo y las 4 vida, no cuenta nuestra nueva vida. En cambio con el operador prefijo tendremos 105, lo que hará es primeramente aumentar en 1 nuestra vida (es decir, hará lives = lives + 1 o más bien, lives = 4 + 1) volviendo nuestra vida en 5, y ese valor de 5 es el que sumará a los 100 que recibimos del gift.
+
+### Clase 16 *Operaciones matemáticas*
+
+Si continuamos trabajando con números, con Java tenemos la posibilidad de generar operaciones matemáticas un poco más complejas, como por ejemplos las operaciones trigonométricas (seno, coseno, etc.), y para ayudarnos tenemos una clase especial que debemos ver en este curso por si estamos interesado en realizar alguna aplicación que deba realizar operaciones más científicas o matemáticas que simples sumas y restas.
+
+**Math**
+
+La clase Math representa la librería matemática de Java. El constructor de la clase es privado, por los que no se pueden crear instancias de la clase. Sin embargo, Math es public para que se pueda llamar desde cualquier sitio y static para que no haya que inicializarla.
+
+Tiene muchos métodos, de cuales algunas son:
+
+![src/javaSE_106.png](src/javaSE_106.png)
+
+Y constantes como:
+
+![src/javaSE_107.png](src/javaSE_107.png)
+
+**EJEMPLO**
+
+Veamos la clase Math en acción, para eso creamos una nueva clase.
+
+![src/javaSE_108.png](src/javaSE_108.png)
+
+En nuestro ejemplo tenemos dos variables, recordemos que si queremos realizar operaciones matemáticas u obtener una mejor precisión en nuestras operaciones entonces el tipo dato que más nos conviene manejar es el punto flotante double. Y realizamos algunas operaciones sencillas para poder ver cómo funcionan algunos métodos de la clase Math.
+
+Pero también podemos realizar operaciones más complejas, como la de encontrar área o volumen:
+
+![src/javaSE_109.png](src/javaSE_109.png)
+
+### Clase 17 *Cast en variables: Estimación y Exactitud*
+
+Mientras veíamos alguna de las operaciones que podemos realizar con la clase Math notamos en la consola que usamos bastante los números decimales y a veces no es necesario ver esa cantidad literal de número decimales a menos que tu programa requiera ser preciso, pero esto podemos solucionarlo con un concepto llamado Cast, también conocido casteo o casting de variables.
+
+**Cast**
+
+En la programación hay situaciones donde debamos cambiar el tipo de dato, a veces vemos una gran cantidad de números decimales que no son completamente necesario o puede que nuestros números sean enteros pero necesitamos ser más precisos, aquí es donde hacemos uso del casteo.
+
+El casting es un procedimiento para transformar una variable primitiva de un tipo a otro. También se utiliza para transformar un objeto de una clase a otra clase siempre y cuando haya una relación de herencia entre ambas.
+
+Dentro se distinguen dos clases:
+
+- **Casting implícito**
+	
+	En este caso no se necesita escribir código para que la conversión se lleve a cabo. Ocurre cuando se realiza lo que se llama una conversión ancha, es decir, cuando se coloca un valor pequeño en un contenedor grande.
+
+- **Casting explícito**
+	
+	En el casting explícito sí es necesario escribir código. Ocurre cuando se realiza una conversión estrecha, es decir, cuando se coloca un valor grande en un contenedor pequeño. Son susceptibles de pérdida de datos.
+
+También, dependiendo de nuestra necesidad, podemos realizar un casting por:
+
+- **Estimación**
+
+	Lo usamos cuando no nos importa la cantidad de decimales que tiene un número, sino que simplemente queremos la parte entera.
+
+- **Exactitud**
+
+	Es para operaciones mucho más precisas en donde debemos saber el número exacto.
+
+**¿Cómo podemos identificar un casting?**
+
+Como hemos dicho anteriormente, en un casting implícito no es necesario escribir código para que la conversión se lleve a cabo.
+
+![src/javaSE_110.png](src/javaSE_110.png)
+
+En este caso tenemos una variable entera con valor de 100 y después una variable long al que asignamos el valor de la primera variables (es decir, el 100). No es necesario escribir nada más porque long no es nada más que un entero (int) con más espacio de memoria.
+
+Para un casting explícito, en cambio, es necesario escribir código.
+
+![src/javaSE_111.png](src/javaSE_111.png)
+
+En este caso tenemos una variable double con un valor de 86.45, pero supongamos que no nos importa ser exacto y solo queramos tener la parte entera de ese número. Para hacer la conversión escribimos el tipo de dato entre paréntesis, eso es el cast.
+
+Pero ¿cómo está siendo transformado? ¿qué le sucede a la parte decimal? ¿se redondea? ¿se trunca? Bueno vamos a verlo ahora en un ejercicio.
+
+**EJEMPLO**
+
+Primeramente creamos una nueva clase a la que llamaremos Casting.
+
+![src/javaSE_112.png](src/javaSE_112.png)
+
+Ahora imaginemos que nos dedicamos a ubicar a perritos en diferentes hogares y en el año hemos ubicado a 30 de esos perritos. Aquí nos queda la incógnita de saber cuántos perritos ubicamos al mes.
+
+Para resolver esa incógnita declaramos una variable double, para hacerlo más preciso, en donde dividimos 30.0 (la cantidad de perritos) por 12.0 (los meses del año). Pero si imprimimos el resultado de esa división nos saldrá en decimales y es ilógico porque no podemos entregar 2.5 perritos, aquí es donde debemos hacer uso del casting y convertir nuestro decimal en un entero. Cuando hacemos la conversión vemos que nos sale un 2, esa es la cantidad de perritos entregados al mes.
+
+Lo mismo podemos hacerlo para un casting con exactitud. En el segundo ejemplo tenemos dos variables enteras con los valores de 30 y 12, pero queremos ser precisos con nuestros cálculos y para eso lo volvemos un double.
+
+**¿Qué sucede en el casting?**
+
+Como vemos en el ejemplo de los perritos lo que en realidad hacemos es convertir un tipo de dato grande a uno más pequeño, es decir, truncamos el dato decimal. Si tuviéramos otro ejemplo como el área de una esfera:
+
+![src/javaSE_113.png](src/javaSE_113.png)
+
+Podemos ver que cuando realizamos la conversión esa parte decimal, lo que viene después del punto, es quitada y deja simplemente la parte entera del número.
+
+### Clase 18 *Casteo entre tipos de datos*
+
+La siguiente tabla resume las posibilidades de casting existentes:
+
+![src/javaSE_114.png](src/javaSE_114.png)
+
+Donde:
+
+- **no:** indica que no hay posibilidad de conversión.
+- **si:** indica que el casting es implícito.
+- **si*:** indica que el casting es implícito pero se puede producir pérdida de precisión.
+- **cast:** indica que hay que hacer casting explícito.
+
+**EJEMPLO**
+
+En la clase anterior viste la importancia de definir en tus programas según prefieras la estimación o la exactitud, ahora veremos cómo son ejecutadas el casting de manera implícita y explicita.
+
+![src/javaSE_115.png](src/javaSE_115.png)
+
+Seguimos con el ejemplo de nuestras dos variables enteras cuya división entre sí convertimos en un tipo double. Ahora creamos una tercera variable, esta vez de tipo double, en el que meteremos la división entre a y b sin escribir el código. Si imprimimos podemos ver una diferencia entre ambas operaciones, aunque parezcan iguales en realidad si nosotros forzamos a un tipo entero transformarse en un double sin decirle exactamente eso al lenguaje entonces se pierde la precisión y ya no son exactos nuestros números. Por eso debemos tener cuidado a la hora de hacer estas conversiones.
+
+Veamos otro ejemplo:
+
+![src/javaSE_116.png](src/javaSE_116.png)
+
+Tenemos dos variables, uno de tipo carácter o char y el otro un entero. Si nosotros convertimos ese char en un tipo int (entero) nos aceptara, pero a la hora de imprimirlo nos salen resultado completamente diferentes. ¿Qué significa el 49? El 49 es el equivalente en el código ASCII al número 1, si nosotros hacemos ALT + 49 conseguimos el número 1.
+
+En cambio si lo que queremos es que char se transforme en un short, nos marcara error y eso se debe a que el tipo short es más pequeño el tipo char:
+
+![src/javaSE_117.png](src/javaSE_117.png)
+
+Para hacer esta transformación debemos necesariamente realizar el casting explícito y poner el código o comando:
+
+
+![src/javaSE_118.png](src/javaSE_118.png)
+
+### Clase 19 *Archivos .JAR*
+
+Si estás trabajando con Java, algo que también debes de conocer son los archivo JAR: que son, como funcionan, como puedo crear uno y como puedo correr uno es algo que vamos a aprender.
+
+**Archivos JAR**
+
+Como hemos visto una aplicación en Java está compuesta por varios ficheros **.java**. Al compilarlos obtenemos varios ficheros **.class** (uno por fichero .java), y no un único fichero ejecutable como ocurre en otros lenguajes. Para colmo, a menudo la aplicación está formada no sólo por los ficheros .class sino que usa ficheros de sonido (usualmente **.au** en Java), iconos, etc., lo que multiplica la cantidad de ficheros que forman la aplicación compilada. Esto hace que "llevarse" la aplicación para ejecutarla en un ordenador diferente resulte un poco lioso: olvidar cualquiera de los ficheros que componen la aplicación significaría que ésta no va a funcionar correctamente. En el caso de un applet se añade el problema de la velocidad, al tener que viajar todos los ficheros a través de internet.
+
+Los ficheros Jar (Java ARchives) permiten recopilar en un sólo fichero varios ficheros diferentes, almacenándolos en un formato comprimido para que ocupen menos espacio. Es por tanto, algo similar a un fichero **.zip** (de hecho están basados en ficheros .zip). Entonces, ¿dónde está la "gracia"? ¿No se podrían usar directamente ficheros .zip? La particularidad de los ficheros **.jar** es que no necesitan ser descomprimidos para ser usados, es decir que el intérprete de Java es capaz de ejecutar los archivos comprimidos en un archivo JAR directamente.
+
+**EJEMPLO**
+
+Para ver cómo funcionan abriremos dos proyectos que ya hemos hecho, el HolaMundo con la versión 8 y el DataTypes con la versión 11, y generaremos un archivo JAR para cada uno, así probaremos ejecutarlo en diferentes entornos.
+
+**Archivo JAR en la versión 8**
+
+Ingresamos en nuestro proyecto de HolaMundo.java. Vamos al menú de File y damos click en Project Structure:
+
+![src/javaSE_119.png](src/javaSE_119.png)
+
+Esto nos abre una nueva ventana, nos dirigimos a la opción Artifacts y la encontraremos completamente vacío ya que es la primera vez que creamos un archivo JAR. Damos click al símbolo de +, seleccionamos JAR y finalmente From modules with dependencies:
+
+![src/javaSE_120.png](src/javaSE_120.png)
+
+Esto nos crea otra ventana, en Main Class debemos elegir el método main que queremos incluir:
+
+![src/javaSE_121.png](src/javaSE_121.png)
+
+Cuando damos click en Main Class se nos abre una ventana con todas las clases que tengan método main, en este caso aparecen todos porque, recordemos, a cada clase íbamos incluyendo un método main. Seleccionado el HolaMundo y damos click en OK:
+
+![src/javaSE_122.png](src/javaSE_122.png)
+
+Click en OK:
+
+![src/javaSE_123.png](src/javaSE_123.png)
+
+Y ya tenemos un archivo JAR, damos click en OK:
+
+![src/javaSE_124.png](src/javaSE_124.png)
+
+Aunque parece que no ha ocurrido nada, en realidad se ha creado una nueva carpeta llamada META-INF que contiene las instrucciones de cómo funciona nuestro archivo JAR. Ahora vamos al menú de Build y damos click en Build Artifacts:
+
+![src/javaSE_125.png](src/javaSE_125.png)
+
+Nos aparece una pequeña ventana, seleccionamos Build:
+
+![src/javaSE_126.png](src/javaSE_126.png)
+
+Y en la parte inferior de nuestro IDE podemos notar como vuelve a correrse nuestro proyecto. En la carpeta out nos aparece una nueva carpeta llamada artifacts que contiene en su interior otra carpeta *_jar y finalmente podemos ver nuestro archivo .jar:
+
+![src/javaSE_127.png](src/javaSE_127.png)
+
+Para ejecutar un archivo .jar es necesario hacerlo directamente de la terminal. Para eso ingresamos a la terminal (en mi caso utilizo Windows), verificamos que nuestra versión de Java sea igual o mayor y después nos movemos a la carpeta donde se encuentra alojado el archivo JAR. Para correrlo usamos el comando:
+
+**java -jar nombreArchivo.jar**
+
+![src/javaSE_128.png](src/javaSE_128.png)
+
+***NOTA: Para copiar la dirección completa del archivo JAR solamente debemos ir a nuestro IDE y darle click derecho la carpeta _jar, después hacemos click en Copy Path y Absolute Path.***
+
+**Archivo JAR en la versión 11**
+
+Crear un archivo en la versión es absolutamente similar a hacerlo con la versión 8, seguimos los mismos pasos y ya tenemos listo nuestro archivo JAR:
+
+![src/javaSE_129.png](src/javaSE_129.png)
+
+Y lo ejecutamos de la misma manera:
+
+![src/javaSE_130.png](src/javaSE_130.png)
+
+### Clase 20 *¡A practicar!*
+
+**Variables**
+
+**Ejercicio 1**
+
+Ponte creativo y preséntanos a tu familia con variables, utiliza todos los tipos y cantidad de variables que puedas, no olvides las convenciones de nombres Camel Case.
+
+**Casting**
+
+**Ejercicio 2**
+
+Usando los dos tipos de casting que aprendiste (implícito y explícito), resuelve los siguientes casteos indicando qué tipo es y si se está calculando estimación o exactitud.
+
+***char c = ‘z’; conviertelo a int***
+
+***int i = 250; conviertelo a long y luego de long a short***
+
+***double d = 301.067; conviertelo a long***
+
+***int i = 100; súmale 5000.66 y conviertelo a float***
+
+***int i = 737; multiplícalo por 100 y conviertelo a byte***
+
+***double d = 298.638; divídelo entre 25 y conviertelo a long***
+
+**Archivos JAR**
+
+**Ejercicio 3**
+
+- Explica cómo distribuirías y crearías un ambiente de producción para un programa compilado con la versión 9 de Java.
+- Incluye al menos dos Sistemas Operativos.
