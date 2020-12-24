@@ -572,7 +572,7 @@ Ahora desde tu terminal escribe el siguiente comando para abrir nuestra ***jshe
 Ahora escribe la línea de código para imprimir un texto (no olvides poner ; y dar enter).
 
 ## Modulo 2. Trabajar con Variables en Java
-### Clase 9 *Variables en Java*
+### Clase 10 *Variables en Java*
 
 Empecemos por entender de qué se trata las variables porque, a partir de ahora, variable será lo que vamos a utilizar al por mayor y es importante que sepas, al menos de manera conceptual, de que se trata y cómo funcionan.
 
@@ -627,7 +627,7 @@ A la hora de asignarle un valor a una string siempre usamos comillas dobles (" "
 
 ***NOTA: No debemos confundir el operador de asignación (=) con el de comparación (==).***
 
-### Clase 10 *Actualizando variables*
+### Clase 11 *Actualizando variables*
 
 Las variables no solo pueden ser definidas y asignadas como vimos en la clase anterior, sino que también pueden ser alteradas, sus datos pueden ser redefinidos y se pueden agregar o quitar elementos de una variable dependiendo de las necesidades de la aplicación que estés construyendo.
 
@@ -673,7 +673,7 @@ Supongamos que nuestro empleado tiene un nombre y apellido, pero es necesario ag
 
 Además, como vemos en el ejemplo, podemos agregar valores directamente antes de imprimir.
 
-### Clase 11 *Convención de Nombres en Java*
+### Clase 12 *Convención de Nombres en Java*
 
 Ya que aprendimos a definir variables y actualizar datos, también que los nombre de las variables deben ser específicamente únicos y para hacerlos único tenemos una serie de trucos o más bien tenemos una convención de nombre. Java es bastante estricto en cuanto a los nombres que se usan para las variables, existe un estándar que deben seguir las variables para ser definidas que nos ayuda a mantener el código organizado, entendible y sin repetidos.
 
@@ -713,7 +713,7 @@ Ya que aprendimos a definir variables y actualizar datos, también que los nombr
 
 	![src/javaSE_89.png](src/javaSE_89.png)
 
-### Clase 12 *Técnica de Naming: Camel Case*
+### Clase 13 *Técnica de Naming: Camel Case*
 
 Una convención de nombres muy popular en Java para nombras nuestras variables es la técnica del Camello, mejor conocida en inglés como Camel Case, en la cual básicamente tendremos dos formas de usarlas:
 
@@ -736,7 +736,7 @@ En el caso del Upper Camel Case, el nombre de la clase NamingJava comienza con l
 
 En el caso del Lower Camel Case, en el ejemplo tenemos una string llamada fullName. Podemos ver la primera letra está en minúscula mientras que, al ser compuesta por dos palabras, la siguiente tiene la inicial en mayúscula. Lo mismo ocurre con el segundo ejemplo, en el 'sizeInCentimeters' está compuesta por tres palabras: la primera inicial (size) es escrita en minúscula y las siguientes (In y Centimeters) son escritas en mayúsculas.
 
-### Clase 13 *Tipos de datos numéricos*
+### Clase 14 *Tipos de datos numéricos*
 
 Ahora que ya conocemos la convención de nombres que tiene Java estamos listos para crear todas la variables que queramos en nuestros programa, así que es tiempo de conocer los tipos de variables que tenemos. Hasta el momento solo vimos dos tipos de variables: **int** que es del tipo numérico y **string** que es una cadena de texto.
 
@@ -804,7 +804,7 @@ Similar al tipo de dato long, float también requiere que pongamos una letra (en
 
 El compilador automáticamente asumirá que es un tipo de dato double.
 
-### Clase 14 *Tipos de datos char y boolean*
+### Clase 15 *Tipos de datos char y boolean*
 
 Ya conocemos la clasificación de datos numéricos, ahora aprenderemos un nuevo tipo de clasificación de datos específicamente para textos o, para ser más estrictos, para los caracteres.
 
@@ -863,7 +863,7 @@ Inclusive, si declaramos variables con ***var*** y lo igualamos a un string para
 
 ***Es estrictamente necesario que la máquina virtual sea un versión similar o mayor en nuestro ambiente de trabajo. Por eso debemos tener mucho cuidado pues recordemos que la versión más utilizada es la de Java 8.***
 
-### Clase 15 *Operadores de Asignación, Incremento y Decremento*
+### Clase 16 *Operadores de Asignación, Incremento y Decremento*
 
 Conforme hemos avanzado vimos casi todo lo que podemos hacer con una variable: declararla, inicializarla, actualizarla, ponerle nombres únicos siguiendo la convención de Java y ya hasta hemos hecho un par de operaciones donde reutilizamos el valor de la variable para actualizarlas. A esas operaciones incluso podemos desglosarlas un poco más, además de que hablaremos de operadores especiales como lo son de incremento y decremento.
 
@@ -908,7 +908,7 @@ Entonces, primeramente creamos una variable lives con el valor de 5, será la vi
 
 Pero ahora Mario está en un nivel donde obtiene un regalo por cada vida gana. Entonces el creamos la variable del regalo que es gift con un valor de 100, pero nosotros queremos que a esos 100 le sumemos la cantidad de vida que tiene, entonces es cuando entra el operador prefijo. Si Mario gana una vida y usamos el operador postfijo para hacer las cuentas, el valor que nos entregara será 104, es decir: los 100 del regalo y las 4 vida, no cuenta nuestra nueva vida. En cambio con el operador prefijo tendremos 105, lo que hará es primeramente aumentar en 1 nuestra vida (es decir, hará lives = lives + 1 o más bien, lives = 4 + 1) volviendo nuestra vida en 5, y ese valor de 5 es el que sumará a los 100 que recibimos del gift.
 
-### Clase 16 *Operaciones matemáticas*
+### Clase 17 *Operaciones matemáticas*
 
 Si continuamos trabajando con números, con Java tenemos la posibilidad de generar operaciones matemáticas un poco más complejas, como por ejemplos las operaciones trigonométricas (seno, coseno, etc.), y para ayudarnos tenemos una clase especial que debemos ver en este curso por si estamos interesado en realizar alguna aplicación que deba realizar operaciones más científicas o matemáticas que simples sumas y restas.
 
@@ -936,7 +936,7 @@ Pero también podemos realizar operaciones más complejas, como la de encontrar 
 
 ![src/javaSE_109.png](src/javaSE_109.png)
 
-### Clase 17 *Cast en variables: Estimación y Exactitud*
+### Clase 18 *Cast en variables: Estimación y Exactitud*
 
 Mientras veíamos alguna de las operaciones que podemos realizar con la clase Math notamos en la consola que usamos bastante los números decimales y a veces no es necesario ver esa cantidad literal de número decimales a menos que tu programa requiera ser preciso, pero esto podemos solucionarlo con un concepto llamado Cast, también conocido casteo o casting de variables.
 
@@ -1002,7 +1002,7 @@ Como vemos en el ejemplo de los perritos lo que en realidad hacemos es convertir
 
 Podemos ver que cuando realizamos la conversión esa parte decimal, lo que viene después del punto, es quitada y deja simplemente la parte entera del número.
 
-### Clase 18 *Casteo entre tipos de datos*
+### Clase 19 *Casteo entre tipos de datos*
 
 La siguiente tabla resume las posibilidades de casting existentes:
 
@@ -1012,7 +1012,7 @@ Donde:
 
 - **no:** indica que no hay posibilidad de conversión.
 - **si:** indica que el casting es implícito.
-- **si*:** indica que el casting es implícito pero se puede producir pérdida de precisión.
+- **si***: indica que el casting es implícito pero se puede producir pérdida de precisión.
 - **cast:** indica que hay que hacer casting explícito.
 
 **EJEMPLO**
@@ -1038,7 +1038,7 @@ Para hacer esta transformación debemos necesariamente realizar el casting expl�
 
 ![src/javaSE_118.png](src/javaSE_118.png)
 
-### Clase 19 *Archivos .JAR*
+### Clase 20 *Archivos .JAR*
 
 Si estás trabajando con Java, algo que también debes de conocer son los archivo JAR: que son, como funcionan, como puedo crear uno y como puedo correr uno es algo que vamos a aprender.
 
@@ -1108,7 +1108,7 @@ Y lo ejecutamos de la misma manera:
 
 ![src/javaSE_130.png](src/javaSE_130.png)
 
-### Clase 20 *¡A practicar!*
+### Clase 21 *¡A practicar!*
 
 **Variables**
 
@@ -1140,3 +1140,168 @@ Usando los dos tipos de casting que aprendiste (implícito y explícito), resuel
 
 - Explica cómo distribuirías y crearías un ambiente de producción para un programa compilado con la versión 9 de Java.
 - Incluye al menos dos Sistemas Operativos.
+
+## Modulo 3. Aplicar condicionales en Java
+### Clase 22 *Sentencia if*
+
+Tomar decisiones es algo que nuestra computadora puede hacer, ya sabemos que los intérpretes ejecutan los códigos conforme aparecen en el programa de principio a fin, pero de seguro no sabías que puedes tener controles de flujos para ejecutar sentencias condicionales, repetir un conjunto de sentencias o, en general, cambiar el flujo secuencial de ejecución.
+
+Un lenguaje de programación utiliza instrucciones de control para controlar el flujo de ejecución del programa en función de ciertas condiciones. Estos se utilizan para hacer que el flujo de ejecución avance y se ramifique en función de los cambios en el estado de un programa.
+
+En esta ocasión veremos la estructura condicional más simple en Java llamada if que evalúa una condición y ejecuta cierto bloque de código cuando esa condición se cumple. La toma de decisiones en la programación es similar a la toma de decisiones en la vida real, tomamos las condiciones en cuestión de verdadero (true en inglés o 1 en binario) y falso (false o representado en binario como 0).
+
+En código, la condicional if lo veremos de la siguiente forma:
+
+![src/javaSE_131.png](src/javaSE_131.png)
+
+**EJEMPLO**
+
+Creemos una nueva clase y escribamos el siguiente ejemplo:
+
+![src/javaSE_132.png](src/javaSE_132.png)
+
+Ahora imaginemos que estamos en un dispositivo móvil cualquiera y deseamos enviar un archivo vía bluetooth. Para que ese archivo sea enviado primeramente necesitamos verificar que el bluetooth este habilitado o no, es ahí donde entra en juego la condicional If.
+
+Escribimos una variables booleana con el valor de verdadero, que será nuestro que compruebe si nuestro bluetooth está habilitado y para eso le damos el valor de true o false. También creamos otra variable, esta vez entrera, que va aumentado a medida que los archivos son enviados. Entonces, la condición dice que SI la variable isBluetoothEnable es verdadera podrá entrar dentro y ejecutar el código de su interior (como vimos nuestra condición se cumplió y nos imprimió en pantalla el mensaje de «Archivo Enviado»), pero si la variable era falsa la condición no se cumpliría y el código dentro de la condicional no se ejecutaría.
+
+Existe otra forma de escribir condicionales para cuando tengamos que realizar una acción alternativa y eso lo veremos en la siguiente clase.
+
+### Clase 23 *Alcance de las variables y Sentencia ELSE*
+
+Ahora que estamos en el tema de las condicionales, aprovecharemos para también aprender sobre el alcance de las variables.
+
+El alcance define las secciones de código donde una variable está disponible. Las variables declaradas dentro de unas llaves {}, es decir, dentro de un bloque de condiciones solo pueden existir dentro de ese mismo bloque de código. Fuera de la sección, una variable no puede ser accedida (no existe).
+
+Dos tipos de alcance más aplicado en las variables son:
+
+- **Locales:** Son aquellas que sólo pueden ser accedidas desde el bloque de código en el que han sido declaradas.
+- **Globales:** Son aquellas que pertenecen a cada instancia concreta de la clase donde han sido declaradas, y dependiendo del modificador de visibilidad usado podrían ser sólo accedidas desde la propia instancia a la que pertenecen.
+
+Tenemos el siguiente ejemplo:
+
+![src/javaSE_133.png](src/javaSE_133.png)
+
+Tenemos dos variables, una llamada condicion y la otra i. La variable **condicion** puede ser accedida desde cualquier parte, su alcance es global y puede ser utilizada dentro o fuera de la condicional IF. En cambio, la variable **i**  únicamente puede ser utilizada dentro de la sentencia, si nosotros intentáramos hace algo con esa variable, como por ejemplo imprimir su valor, fuera de la sentencia IF nos marcara error.
+
+**If… Else**
+
+Cuando nos encontramos en la necesidad de realizar una acción alternativa por si una condición no se cumple podemos utilizar la condicional If - Else.
+
+Con el if solo podemos hacer que se ejecute un fragmento de código o no, pero en el caso de que no se cumpla la condición no se hace nada (sigue el flujo normal de ejecución) por lo que si queremos que se ejecute otra cosa cuando no se cumpla la condición solo con el if tenemos que hacer otro con la condición inversa provocando que se tenga que comprobar la condición 2 veces mientras que si usamos el else solo necesitamos hacer la comprobación una sola vez.
+
+En código veremos la sentencia de esta forma:
+
+![src/javaSE_134.png](src/javaSE_134.png)
+
+Tenemos una condición que SI se cumple ejecuta la primera instrucción y SINO, es decir, la condición no se cumple entonces ejecuta la instrucción 2.
+
+**EJEMPLO**
+
+Veremos cómo funciona el alcance de la variable con el siguiente código:
+
+![src/javaSE_135.png](src/javaSE_135.png)
+
+Declaramos una nueva variable " i " y como vemos si lo intentamos imprimir fuera de la condicional IF nos marca error, algo que no sucede con las demás variables. Esto se debe a que tanto la variable isBluetoothEnable y fileSended son declaras fuera, al principio del código, por lo que existe en todo el programa, a diferencia de la variable " i " que es declarada en la condicional y solo existe dentro de la misma.
+
+Como ejemplo de la sentencia If-Else tenemos este código:
+
+![src/javaSE_136.png](src/javaSE_136.png)
+
+Aunque parezca que todo permaneció igual, ahora que agregamos else el programa nos imprimirá dos resultados completamente diferentes:
+
+- Si isBluetoothEnable es verdadero (true) entonces la variable fileSended aumentara en uno y nos avisara que nuestro archivo fue enviado.
+- Si isBluetoothEnable es falso (false) entonces como penitencia fileSended disminuirá y nos imprimirá un mensaje para que encendamos nuestro bluetooth.
+
+### Clase 24 *Operadores Lógicos y Expresiones booleanas*
+
+Ya vimos ejemplos de condicionales con variables booleanas, es decir, cuyo valor eran verdadero o falso. Pero hay momentos en los que necesitamos exigirle un poco más a nuestro programa, pedirle que genere una operación y que el resultado de esa operación sea verdadero o falso, y para hacer eso tenemos algunos operadores especiales.
+
+- Operadores de Igualdad y Relacionales: Son aquellos que nos permiten comparar el contenido de una variable contra otra atendiendo a si son variables con un valor igual o distinto o bien si los valores son mayores o menores.
+
+	- **==** (igual)
+	- **!=** (desigual)
+	- **<** (menor que)
+	- **>** (mayor que)
+	- **<=** (menor o igual que)
+	- **>=** (mayor o igual que)
+
+- Operadores Lógicos: Son los que nos permiten introducir nexos entre condiciones como “y se cumple también que” u, “o se cumple que”.
+
+	- **&&** (AND)
+	- **||** (OR)
+	- **!** (NOT)
+
+**EJEMPLO**
+
+Tenemos el siguiente código:
+
+![src/javaSE_137.png](src/javaSE_137.png)
+
+Como vemos, podemos poner directamente los operadores para imprimir true o false dependiendo de si se cumplen o no.
+
+Pero también podemos hacer las comparaciones mediante una escalera If-Else If:
+
+![src/javaSE_138.png](src/javaSE_138.png)
+
+En este ejemplo, tan pronto como cualquiera de las opciones se cumplan el resto dejara de ser ejecutada y nos imprimirá la respuesta.
+
+Para comprender aún mejor como funciona los operadores de comparación tenemos el siguiente código:
+
+![src/javaSE_139.png](src/javaSE_139.png)
+
+Declaramos dos variables, A y B, y le asignamos los valores de 8 y 5, respectivamente. Con este ejemplo podemos ver cada uno de los operadores relacionales:
+
+1. Evaluamos si el valor de A es igual al valor B.
+2. Evaluamos si el valor de A es diferente de B.
+3. Evaluamos si el valor de A es mayor al valor de B. Dado que el valor de A es 8 y el valor de B es 5, la condición es verdadera. ***Si por ejemplo, el valor de A sea igual al valor de B, entonces nos saldría falso porque la condición evalúa que el número sea estrictamente mayor para ser verdadera.**
+4. Evaluamos si el valor de A es menor al valor de B. Dado que el valor de A es 8 y el valor de B es 5, la condición es falsa.
+5. Evaluamos si el valor de A es mayor o igual al valor de B. Dado que el valor de A es 8 y el valor de B es 5, la condición es verdadera. ***Si por ejemplo, el valor de A sea igual al valor de B, entonces nos seguiría dando verdadero. Para que nos dé falso, el valor de A debe ser únicamente menor al valor de B.***
+6. Evaluamos si el valor de A es menor o igual al valor de B. Dado que el valor de A es 8 y el valor de B es 5, la condición es verdadera.
+
+Para los operadores lógicos, tenemos el siguiente ejemplo:
+
+![src/javaSE_140.png](src/javaSE_140.png)
+
+Evaluamos ciertas condiciones:
+
+1. ¿A es mayor a B **Y** B es igual a C? Verdadero, porque ambas condiciones se cumplen. Si al menos una de las condiciones no se cumple, entonces toda la sentencia es falsa.
+2. ¿A es diferente a B **O** A es menor o igual a C? Verdadero. Mientras una de las condiciones se cumpla nos seguirá dando verdadero, la única manera en que nos dé falso es que ambas condiciones NO se cumplan.
+3. ¿B **NO** es igual a C? Falso. Recordemos que tanto el valor de B como C es de 5, por obviedad sus valores SI son iguales y no se cumple la condición.
+
+**Diferencia entre If Anidados y Escaleras If-Else if**
+
+Un if anidado es una declaración if que se deriva de otro if o else. Las declaraciones if anidadas significan una instrucción if dentro de una declaración if. Sí, Java nos permite anidar las declaraciones if con if, es decir, podemos colocar una instrucción if dentro de otra instrucción if.
+
+Tiene la siguiente sintaxis:
+
+![src/javaSE_141.png](src/javaSE_141.png)
+
+En una escalera If-Else if, el usuario puede decidir entre múltiples opciones. Las sentencias if se ejecutan desde arriba hacia abajo. Tan pronto como una de las condiciones que controlan el if sea verdadera, se ejecuta la instrucción asociada con ese if, y el resto de la escalera se pasa por alto. Si ninguna de las condiciones es verdadera, se ejecutará la sentencia final else.
+
+![src/javaSE_142.png](src/javaSE_142.png)
+
+### Clase 25 *Sentencia Switch*
+
+Otra manera de controlar el flujo de un programa, es con una sentencia switch.
+
+La sentencia switch es una forma de expresión de un anidamiento múltiple de instrucciones if-else. Su uso no puede considerarse, por tanto, estrictamente necesario, puesto que siempre podrá ser sustituida por el uso de if-else complejas o excesivamente largas. No obstante, a veces nos resultará útil al introducir mayor claridad en el código.
+
+En vez de usar una expresión boolean, switch usa una expresión byte, short, char, int o un tipo enumerado. A partir de la versión 7 de Java, también se puede usar Enum, la clase String y las clases Wrapper.
+
+Mientras que su sintaxis básica hasta la versión 11 es la siguiente:
+
+![src/javaSE_143.png](src/javaSE_143.png)
+
+A partir de Java 12 tenemos una nueva forma para escribir:
+
+![src/javaSE_144.png](src/javaSE_144.png)
+
+Aunque solo puede encontrarse en beta y no lo puedes utilizar por defecto, sino que debemos descargarlo y hacer una serie de ajustes en el IDE ya que no está totalmente liberado.
+
+**EJEMPLO**
+
+Imaginemos que seleccionaremos los modos que puede tener una aplicación:
+
+![src/javaSE_145.png](src/javaSE_145.png)
+
+Para eso creamos una variable que tendrá como valor el modo que deseamos y con el switch vamos enlistando los modos que puede tener. Lo que pasa es que la variable entra al switch y recorre hasta encontrar el valor de colorModeSelected coincida con el valor de uno de los casos (case). La cláusula default es opcional, funciona por si el valor no se encuentra dentro de las opciones.
