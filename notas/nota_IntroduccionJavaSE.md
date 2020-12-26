@@ -1403,28 +1403,28 @@ Ahora que sabemos lo útil que es utiliza Javadoc, no podemos desaprovechar la o
 
 Documentado se vería así:
 
-![src/JavaSE_152.png](src/JavaSE_152.png)
+![src/javaSE_152.png](src/javaSE_152.png)
 
 Primeramente agregamos una descripción que nos diga para que sirve nuestra función. Después con la etiqueta (tag) @param agregamos una descripción para los parámetros que recibe esa función y finalmente con la etiqueta @return describimos lo que devuelve.
 
 La idea es que cuando nosotros escribimos, IntelliJ IDEA encuentra lo más cercano a lo que escribimos y al pasar el cursor encima nos debe mostrar nuestra documentación:
 
-![src/JavaSE_153.png](src/JavaSE_153.png)
+![src/javaSE_153.png](src/javaSE_153.png)
 
 Pero por defecto IntelliJ IDEA nos oculta la documentación, así que para activarlo vamos en File y después en Settings:
 
-![src/JavaSE_154.png](src/JavaSE_154.png)
+![src/javaSE_154.png](src/javaSE_154.png)
 
 Nos aparece una ventana de configuraciones, vamos en Editor > General > Code Completion y damos check a «Show the documentation popup in X ms»:
 
-![src/JavaSE_155.png](src/JavaSE_155.png)
+![src/javaSE_155.png](src/javaSE_155.png)
 
 Por defectos nos darán 1000 milisegundos (es decir, 1 segundo) en que debemos esperar para que aparezca la documentación. Pero podemos cambiarlo si así queremos.
 
 Volvemos a escribir hasta que IntelliJ IDEA nos sugiera una opción, pasamos el cursor encima y ahora sí, nos aparece la documentación que hemos creado:
 
-![src/JavaSE_156.png](src/JavaSE_156.png)
+![src/javaSE_156.png](src/javaSE_156.png)
 
 ### Clase 30 *Tags Java Docs*
 
-![src/JavaSE_157.png](src/JavaSE_157.png)
+![src/javaSE_157.png](src/javaSE_157.png)
