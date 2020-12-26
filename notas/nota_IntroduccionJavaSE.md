@@ -1305,3 +1305,126 @@ Imaginemos que seleccionaremos los modos que puede tener una aplicación:
 ![src/javaSE_145.png](src/javaSE_145.png)
 
 Para eso creamos una variable que tendrá como valor el modo que deseamos y con el switch vamos enlistando los modos que puede tener. Lo que pasa es que la variable entra al switch y recorre hasta encontrar el valor de colorModeSelected coincida con el valor de uno de los casos (case). La cláusula default es opcional, funciona por si el valor no se encuentra dentro de las opciones.
+
+## Modulo 4. Escribir funciones en Java
+### Clase 26 *¿Para qué sirven las funciones?*
+
+Las funciones son un conjunto de líneas de código (instrucciones), encapsulados en un bloque, usualmente reciben parámetros, cuyos valores utilizan para efectuar operaciones y adicionalmente retornan un valor. En otras palabras una función puede recibir parámetros o argumentos (algunas no reciben nada), hace uso de dichos valores recibidos como sea necesario y retorna un valor usando la instrucción return, si no retorna algo, entonces no es una función.
+
+Las funciones nos ayudan a:
+
+- Organizar y modularizar el código.
+- Reutilizar código.
+- Evitar código repetido.
+
+En código se verán así:
+
+![src/javaSE_146.png](src/javaSE_146.png)
+
+Como ejemplo queda así:
+
+![src/javaSE_147.png](src/javaSE_147.png)
+
+- **public:** Es el modificador de acceso más permisivo de todos. Si una función es pública significa que tendremos acceso a él desde cualquier clase o instancia.
+- **int:** Es el tipo de dato que tendrá la función. Recordemos que un método o función siempre retorna algo, por lo tanto es obligatorio declararle un tipo.
+- **suma:** Es el nombre ÚNICO que tiene la función.
+- int **a**, int b: Son los argumentos que recibe.
+- **return:** Es la palabra clave usada para devolver un valor.
+
+Para invocar a una función lo único que debemos hacer es llamarla a partir del nombre seguido de los datos que enviaremos entre paréntesis.
+
+![src/javaSE_148.png](src/javaSE_148.png)
+
+En este ejemplo asignamos el valor de la función a una variable. Aunque simplemente podemos poner **suma(5, 7)** sin la necesidad de guardarlos en variables.
+
+### Clase 27 *Implementa Funciones en Java*
+
+Recordemos nuestra clase de operaciones matemáticas donde utilizamos Math para generar el área de un círculo, y el área y volumen de una esfera.
+
+![src/javaSE_149.png](src/javaSE_149.png)
+
+Ahora, si nosotros deseáramos tener otro área del circulo u otro volumen de la esfera deberíamos copiar la línea de código, pegarlo y cambiar la variable. Eso mismo repetir la X cantidad de veces que deseamos tener algo, pero recordemos que en la clase anterior dijimos que el copiar y pegar líneas es un indicador de que tenemos código reutilizable.
+
+Entonces, para reutilizar el código hacemos uso de las funciones por lo que el código nos quedaría así:
+
+![src/javaSE_150.png](src/javaSE_150.png)
+
+Para declarar una función debemos salirnos del método main. Las funciones deben vivir al nivel de la clase, eso significa que el método lo podemos llamar dentro del alcance de las llave por lo que podemos llamarlo en el main. Además, esto solo aplica para métodos que comparten el método main, y es que debemos poner "static". Una directiva "static" permite el acceso a métodos y variables de clase sin la necesidad de instanciar un objeto de dicha clase, permitiendo la inicialización de forma cómoda y durante la carga de clase.
+
+Como vemos en nuestro ejemplo creamos diferentes métodos para el área del circulo y el área y volumen de la esfera. Para invocarlo, lo hacemos creando una nueva variable o llamamos directamente a la función.
+
+Ahora veamos otro ejemplo:
+
+![src/javaSE_151.png](src/javaSE_151.png)
+
+En este caso creamos una función que recibe dos parámetros en el que, dependiendo de lo que elijamos, podemos cambiar los pesos mexicanos o colombianos a dólares. En este caso la función recibe dos parámetros con tipos de datos diferentes, pero devuelve tan solo un tipo de dato que sería el double.
+
+Lo que hace la función converToDolar es recibir la cantidad X de pesos (double) con su procedencia (string). Se realiza el cálculo para pasar de peso a dólar y finalmente con return devolvemos el valor ya cambiado.
+
+### Clase 28 *Java Docs*
+
+Ya aprendimos algunas buenas prácticas como modularizas líneas de código, no darle toda la responsabilidad a un solo método o a una sola clase, entre otros. Pero otra buena práctica, y es la que aprenderemos ahora, se trata de documentar el código que estamos haciendo. Y, es que programar y  desarrollar requiere además de poseer diversos conocimientos disponer de una buena documentación de consulta y referencia
+
+Documentar un proyecto es algo fundamental de cara a su futuro mantenimiento. Cuando programamos una clase, debemos generar documentación lo suficientemente detallada sobre ella como para que otros programadores sean capaces de usarla sólo con su interfaz. No debe existir necesidad de leer o estudiar su implementación.
+
+Java tiene una manera bastante interesante de documentar el código y utilizando la herramienta Javadoc.
+
+**Javadoc**
+
+Es el estándar de la industria para documentar clases de Java. La mayoría de los IDEs los generan automáticamente.
+
+La documentación Javadoc es una colección de páginas HTML de todas las clases, métodos, parámetros y retornos junto con la información y especificaciones que quiera incluir el desarrollador de la API que en el caso de las clases de JDK incluye abundantes e interesantes detalles de implementación a tener en cuenta al usar las clases. El Javadoc es también es una herramienta de línea de comandos que permite generar la colección de páginas HTML a partir del código fuente Java.
+
+Se genera a partir del propio código fuente de las clases con los comentarios incluidos que siguen cierto formato precediendo la definición de las clases y métodos. Al estar código y documentación en el propio archivo de código fuente es más fácil mantener sincronizados el código y su documentación.
+
+La documentación en el código fuente se incluye en comentarios que preceden una clase o método, además, con anotaciones se pueden documentar los parámetros y el valor de retorno. Se pueden incluir etiquetas HTML junto con algunas de las anotaciones o doclets/taglets, algunas anotaciones Javadoc incluidas en el JDK son las siguientes pero también se pueden desarrollar doclets/taglets propios o personalizar los estilos de la documentación para cambiar el contenido, información incluida o adaptar los estilos a unos según los colores de la organización.
+
+Para generar API con Javadoc han de usarse etiquetas (tags) de HTML o ciertas palabras reservadas precedidas por el carácter "@". Estas etiquetas se escriben al principio de cada clase, miembro o método, dependiendo de qué objeto se desee describir, mediante un comentario iniciado con "/**" y acabado con "*/".
+
+**Comentarios**
+
+Hay tres formas de generar comentarios:
+
+- Usando doble barra inclinada.
+
+	// Comentario en una línea
+
+- Comentarios en múltiples líneas.
+
+	/* Comentario en múltiples líneas */
+
+- Comentario que provoca la creación de Javadoc.
+
+	/** Comentario con una descripción para Javadoc */
+
+### Clase 29 *Javadoc en funciones*
+
+Ahora que sabemos lo útil que es utiliza Javadoc, no podemos desaprovechar la oportunidad para comentar y documentar nuestro código. Especialmente comentaremos y documentaremos la función que convierte los pesos (mexicanos o colombianos) a dólares.
+
+Documentado se vería así:
+
+![src/JavaSE_152.png](src/JavaSE_152.png)
+
+Primeramente agregamos una descripción que nos diga para que sirve nuestra función. Después con la etiqueta (tag) @param agregamos una descripción para los parámetros que recibe esa función y finalmente con la etiqueta @return describimos lo que devuelve.
+
+La idea es que cuando nosotros escribimos, IntelliJ IDEA encuentra lo más cercano a lo que escribimos y al pasar el cursor encima nos debe mostrar nuestra documentación:
+
+![src/JavaSE_153.png](src/JavaSE_153.png)
+
+Pero por defecto IntelliJ IDEA nos oculta la documentación, así que para activarlo vamos en File y después en Settings:
+
+![src/JavaSE_154.png](src/JavaSE_154.png)
+
+Nos aparece una ventana de configuraciones, vamos en Editor > General > Code Completion y damos check a «Show the documentation popup in X ms»:
+
+![src/JavaSE_155.png](src/JavaSE_155.png)
+
+Por defectos nos darán 1000 milisegundos (es decir, 1 segundo) en que debemos esperar para que aparezca la documentación. Pero podemos cambiarlo si así queremos.
+
+Volvemos a escribir hasta que IntelliJ IDEA nos sugiera una opción, pasamos el cursor encima y ahora sí, nos aparece la documentación que hemos creado:
+
+![src/JavaSE_156.png](src/JavaSE_156.png)
+
+### Clase 30 *Tags Java Docs*
+
+![src/JavaSE_157.png](src/JavaSE_157.png)
