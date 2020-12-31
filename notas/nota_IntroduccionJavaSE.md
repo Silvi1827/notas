@@ -1428,3 +1428,339 @@ Volvemos a escribir hasta que IntelliJ IDEA nos sugiera una opción, pasamos el 
 ### Clase 30 *Tags Java Docs*
 
 ![src/javaSE_157.png](src/javaSE_157.png)
+
+## Modulo 5. Analizar e implementar Ciclos en Java
+### Clase 31 *Bucle do While*
+
+Ya aprendimos sobre cómo funciona el control de flujo con las sentencias, sabemos que básicamente nos ayuda a definir que líneas de código se ejecutaran, pero ahora aprenderemos otra versión del control de flujo que son los bucles.
+
+Los bucles, iteraciones o sentencias repetitivas modifican el flujo secuencial de un programa y son utilizados para ejecutar un conjunto de instrucciones varias veces basándose siempre en una condición que decidirá si se sigue repitiendo o no. En Java hay tres tipos diferentes de bucles: for, while y do-while.
+
+De estos tres, While y Do-While parecen hacer cosas similares, pero en realidad cada uno tiene su pequeña peculiaridad.
+
+**While**
+
+Es un bucle o sentencia repetitiva con una condición al principio. Se ejecuta una sentencia mientras sea cierta una condición. La sentencia puede que no se ejecute ni una sola vez.
+
+Su sintaxis es:
+
+![src/javaSE_158.png](src/javaSE_158.png)
+
+La estructura repetitiva while realiza una primera evaluación antes de ejecutar el bloque. Si la expresión es true pasa a ejecutar de forma repetida el bloque de sentencias. Cada vez que termina de ejecutar el bloque de sentencias vuelve a evaluar la expresión. Si la expresión sigue siendo true vuelve a ejecutar el bloque. En el caso de que la expresión sea false se saldrá del bucle.
+
+Es por ello que dentro del bloque de sentencias deberán de existir sentencias que modifiquen la evaluación de la expresión, ya que de no hacerse se podría entrar en un bucle infinito.
+
+Los casos de uso de una sentencia repetitiva while son variados, pero principalmente se utiliza para recorrer estructuras de datos o tener contadores.
+
+**Do-While**
+
+Es un bucle o sentencia repetitiva con una condición al final. Se ejecuta una sentencia mientras sea cierta una condición. En este caso, la sentencia se ejecuta al menos una vez.
+
+Su sintaxis es:
+
+![src/javaSE_159.png](src/javaSE_159.png)
+
+El bucle do while es prácticamente igual al while, pero con la diferencia de que el código del bucle se ejecutara al menos una vez ya que la comprobación se hace después de cada iteración y no antes como en el caso del while.
+
+Este tipo de bucle es el idóneo cuando necesitamos que un fragmento de código se ejecute al menos una vez y dependiendo de las circunstancias puede ser que se vuelva a repetir un número indeterminado de veces o ninguna. Un ejemplo claro del bucle do-while sería el ejemplo en el que le pedimos al usuario que introduzca números por teclado, los cuales mostraremos en forma de eco por pantalla, hasta que introduzca el cero. En ese caso saldremos del bucle.
+
+Utilizaremos la estructura do-while en vez de la while ya que al menos vamos a pedirle al usuario un número.
+
+**EJEMPLO**
+
+Uno de los ejemplos más utilizados y prácticos para entender cómo funciona el bucle do-while se trata de un menú de opciones.
+
+Imaginemos que tenemos una aplicación con un menú para que el usuario pueda elegir:
+
+![src/javaSE_160.png](src/javaSE_160.png)
+
+Para ingresar un dato por teclado usamos la clase Scanner. La clase Scanner es la clase más sencilla para poder leer datos de un programa de Java. Scanner, por tanto, se encarga de proporcionarnos un conjunto de métodos cuya finalidad es el permitirnos leer valores de entrada de distintas fuentes.
+
+Para utilizar Scanner en el programa tendremos que:
+
+1. Importarlo del paquete java.util para incluirlo en el programa.
+	
+	![src/javaSE_161.png](src/javaSE_161.png)
+
+2. Crear un objeto Scanner.
+	
+	![src/javaSE_162.png](src/javaSE_162.png)
+	
+3. Para diferentes tipos de datos tenemos diferentes métodos.
+   
+	![src/javaSE_163.png](src/javaSE_163.png)
+		
+***NOTA: El método valueOf es un método sobrecargado aplicable a numerosas clases de Java y que permite realizar conversiones de tipos. En este caso, Integer.valueOf() convierte un string a un valor entero (int).***
+
+**Tipos de datos entrada**
+
+Existen diferentes tipos de datos y por ello, la clase scanner en función del tipo de dato introducido, utiliza distintos métodos para capturar un tipo de dato u otros en función del tipo de datos que se introduzca:
+
+- **nextInt()** lee un valor int introducido por el usuario.
+- **nextLong()** lee un valor long introducido por el usuario.
+- **nextShort()** lee un valor short introducido por el usuario.
+- **nextDouble()** lee un valor double introducido por el usuario.
+- **nextByte()** lee un valor byte introducido por el usuario.
+- **nextBoolean()** lee un valor boolean introducido por el usuario.
+- **nextLine()** lee un valor String introducido por el usuario.
+
+
+### Clase 32 *Operador Ternario y Bucle While*
+
+Continuemos con un ejemplos del bucle while.
+
+Imaginemos que estamos atrapados en un lugar oscuro, sin nadie que hable nuestro idioma y lo único que tenemos a mano es un celular con poca batería. No podemos acceder a otra aplicación más que a la linterna, pero afortunadamente sabemos código morse y podemos aprovechar la linterna del celular para solicitar ayuda.
+
+Con ese contexto de ejemplo, crearemos un algoritmo con la lógica necesaria para encender la linterna, emitir un mensaje y detener las luces en algún momento.
+
+![src/javaSE_164.png](src/javaSE_164.png)
+
+Entonces, para nuestro código creamos dos funciones. La primera, printSOS, es una función void, es decir, no devuelve nada y solo nos imprime el código morse que tiene ahí dentro. La segunda función, turnOnOffLight, será el que verifique el estado de la lampara, en su interior evaluamos si la linterna esta encendida o no usando el operador ternario. Además tenemos una variable global que representa el estado de la linterna.
+
+En el método main, primeramente encendemos o pagamos nuestra linterna (isTurnOnLight). Después creamos una variable que nos ayudara a imprimir el código morse hasta que el usuario intervenga y apague la linterna, aunque por el bien del ejemplo agregamos otra condición y que nos imprima únicamente 10 veces. Para eso, y según la condición del bucle while, mientras isTurnOnLight sea verdadera y la variable " i " menor o igual a 10, nos imprimirá el código morse, de lo contrario se detiene el programa.
+
+***RECUERDA: En el interior del bucle debe ir la variable " i " sumando uno por cada vez que se ingresa o tendremos un bucle infinito hasta la intervención del usuario.***
+
+**Operador Ternario**
+
+Es un operador condicional que funciona como una forma reducida de describir If-Else If. Usado en Java para sustituir fácilmente la sentencia if y varias líneas de código.
+
+Tiene la siguiente forma:
+
+![src/javaSE_165.png](src/javaSE_165.png)
+
+Si observas la estructura, en la primera parte de la sentencia después de la asignación, evaluamos una condición, en la segunda asignamos un valor primerValor a la variable resultado si la condición es verdadera, o bien, un segundoValor, si la condición resulta falsa.
+
+Tomando el operador ternario de nuestro ejemplo, evaluamos si isTurnOnLight es verdadera o falsa, es decir, si la lampara esta encendida o apagada. Si isTurnOnLight es verdadera, entonces devolvemos falso, y si es falso, entonces devolvemos verdadera.
+
+### Clase 33 *Bucle For*
+
+En la clase anterior aprendimos cómo funciona el bucle while, pero cuando nosotros necesitamos capturar los índices o la cantidad de veces que da vueltas el ciclo es mucho más sencillo hacerlo con el bucle for.
+
+**For**
+
+El bucle for sirve para ejecutar un código un número conocido de veces, por ejemplo recorrer un array o cualquier otro tipo de colección o simplemente ejecutar el código un número concreto de veces.
+
+En java hay dos posibles tipos de bucle for, siendo esté el más habitual:
+
+![src/javaSE_166.png](src/javaSE_166.png)
+
+Como se puede ver, a diferencia de un ciclo while, una sentencia for consume la inicialización, la condición y el incremento/decremento en una línea, proporcionando así una estructura de bucle más corta y fácil de depurar.
+
+El otro formato, introducido en Java 5, proporciona una forma más sencilla de iterar a través de los elementos de una colección o matriz. Es inflexible y debe usarse solo cuando existe la necesidad de recorrer los elementos de forma secuencial sin conocer el índice del elemento procesado actualmente.
+
+![src/javaSE_167.png](src/javaSE_167.png)
+
+**EJEMPLO**
+
+Siguiendo con nuestro ejemplo del código morse:
+
+![src/javaSE_168.png](src/javaSE_168.png)
+
+En la clase anterior decidimos que nos imprimiría 10 veces, pero una forma más sencillas de escribirlo es con el bucle for. Como vemos, en el bucle primeramente inicializamos una variable en 0, después ponemos la condición (que sea menor a 10) y por último el incremento.
+
+**NOTA**
+
+Cuando nosotros escribimos for, IntelliJ IDEA nos proporciona tres opciones:
+
+![src/javaSE_169.png](src/javaSE_169.png)
+
+- El primer **for** nos escribe simplemente la palabra clave con los paréntesis.
+- El **foreach** nos genera el for para recorrer una colección o matriz.
+- El **fori** nos genera el for más habitual para ejecutar el código un número concreto de veces.
+
+### Clase 34 *Break, Continue y Return*
+
+Antes de pasar a uno de nuestros temas más importantes del curso es importante que sepas todas las opciones que tienes para detener ciclos y así seguir controlando el flujo de tus programas.
+
+**Break**
+
+En Java esta sentencia la verás en dos situaciones específicamente:
+
+- **En un Switch:** en esta situación break hace que el flujo del switch no continúe ejecutándose a la siguiente comparación, esto con el objetivo de que solo se cumpla una sola condición.
+	
+	![src/javaSE_170.png](src/javaSE_170.png)
+
+- **Para salir de un bucle:** Como acabamos de ver un break es capaz de detener el flujo en el código, en este caso detendremos el ciclo como tal terminándolo y haciendo que saltemos a la siguiente instrucción después del ciclo.
+
+**Continue**
+
+Continue en cierto modo también nos va a servir para detener un ciclo pero en lugar de terminarlo como en el caso de break, este volverá directo a la condición.
+
+El caso normal de uso de continue es cuando dentro de un bucle estamos haciendo muchas comprobaciones y en caso de que se cumpla alguna no hace falta seguir comprobando el resto pero no queremos meter unas comprobaciones anidadas dentro de otras para una mayor legibilidad.
+
+La sentencia continue siempre tiene que estar dentro de un bucle porque si no producirá un error de compilación, en cualquier caso no tiene sentido ponerla fuera de un bucle.
+
+**Return**
+
+Aunque en algunos lenguajes esta sentencia sirve como un tipo goto, dónde se rompe el flujo del programa la mejor forma de usarlo en Java es en **Funciones**, cuando lo usamos aquí siempre viene acompañado de un valor, el cual indica el dato que se estará devolviendo en la función.
+
+### Clase 35 *Arrays*
+
+Los tipos de variables que hemos visto hasta este momento son variables que nos permiten únicamente almacenar uno y solo un dato, pero a veces por las necesidades de nuestros programas o aplicaciones es importante tener una colección de datos que compartan el mismo tipo y manejarlos como si fueran una sola variable es aquí donde los **arreglos** son una pieza clave cuando estamos desarrollando en Java, porque justamente ellos son los que nos permiten almacenar más de un dato en una única variable. Esto va a variar mucho, pero en general es a partir de la lógica de negocio que estés manejando en esos momento, como sí por ejemplo quisiéramos manejar varios datos que son del tipo string, podríamos declarar muchas variables, pero también podemos solucionarlo al ponerlo todos juntos en un arreglo.
+
+**Array**
+
+Los arreglos o array son simplemente una variable que puede contener valores múltiples, a diferencia de una variable regular que solo puede contener un único valor. En Java, los arrays pueden tener una o más dimensiones, aunque el array unidimensional es el más común.
+
+El tamaño de los arrays se declara en un primer momento y no puede cambiar en tiempo de ejecución como puede producirse en otros lenguajes. Los arrays se usan para una variedad de propósitos porque ofrecen un medio conveniente de agrupar variables relacionadas. Por ejemplo, puede usar una matriz para mantener un registro de la temperatura alta diaria durante un mes, una lista de promedios de precios de acciones o una lista de tu colección de libros de programación.
+
+La ventaja principal de un array es que organiza los datos de tal manera que puede ser manipulado fácilmente. Por ejemplo, si tiene un array que contiene los ingresos de un grupo seleccionado de hogares, es fácil calcular el ingreso promedio haciendo un ciclo a través del array. Además, los arrays organizan los datos de tal manera que se pueden ordenar fácilmente.
+
+Aunque los arrays en Java se pueden usar como matrices en otros lenguajes de programación, tienen un atributo especial: se implementan como objetos. Este hecho es una de las razones por las que la discusión de los arrays se pospuso hasta que se introdujeron los objetos. Al implementar arrays como objetos, se obtienen varias ventajas importantes, una de las cuales es que los arrays no utilizados pueden ser recolectados.
+
+**Arreglo unidimensional**
+
+Un array unidimensional es una lista de variables relacionadas. Tales listas son comunes en la programación. Por ejemplo, puede usar un array unidimensional para almacenar los números de cuenta de los usuarios activos en una red. Otro array podría usarse para almacenar los promedios de bateo actuales para un equipo de béisbol.
+	
+Los array unidimensionales se declaran de la siguiente manera:
+	
+![src/javaSE_171.png](src/javaSE_171.png)
+	
+O también:
+
+![src/javaSE_172.png](src/javaSE_172.png)
+
+**Instanciando un array en Java**
+
+Cuando un array se declara, solo se crea una referencia del array. Para realmente crear o dar memoria al array (a partir de aquí solo mencionaré a array, y no matriz o arreglo), puede crear un array de la siguiente manera:
+
+![src/javaSE_173.png](src/javaSE_173.png)
+
+**Arreglo multidimensionales**
+
+Un array puede tener múltiples dimensiones. Esto que suena un poco a "cosa del demonio", en realidad no lo es tanto y nos ayudará mucho en nuestros proyectos futuros. Manejarlo es como jugar al hundir la flota. Para entender los Arrays multidimensionales o también llamados matrices tenemos que pensar en un array que contiene N dimensiones o ejes. Pero no te asustes, lo más común es encontrarnos ejes de dos o tres dimensiones. Rara vez necesitarás más. 
+
+Se crea una matriz multidimensional al agregar un conjunto de corchetes ([]) por dimensión:
+
+![src/javaSE_174.png](src/javaSE_174.png)
+
+### Clase 36 *Declarando Arreglos*
+
+Aprenderemos a como declarar arreglos:
+
+![src/javaSE_175.png](src/javaSE_175.png)
+
+Tomemos nuestro primer ejemplo, versiones de Android, para comprender la lógica de negocio. Si tuviéramos la necesidad de tener las versiones de Android (que hasta el momento son 17) tal vez debamos declarar 17 variables, aunque probablemente no lo usemos todas, pero una mejor forma de hacerlo es agrupándolas en una misma colección de datos.
+
+Lo mismo sucede con los días, no necesitamos crear siete variables para declarar cada día de la semana cuando podemos simplemente ponerlas todas en una misma variable.
+
+Si vemos nuestro ejemplos de arreglo dimensional, en el primer corchete ponemos la cantidad de columnas y en el segundo ponemos la cantidad de filas. Para saber cuántos elementos puede contener el arreglo simplemente multiplicamos las columnas por las filas.
+
+***RECORDAR:***
+
+- ***Usamos new porque en Java los arreglos son manejados como objetos.***
+- ***El tamaño (el número entre corchetes) funciona como un limitante. Es un número que no cambiara a menos que el programador intervenga y lo cambie él mismo.***
+- ***Por la convención, siendo los arreglos una colección de datos, llevaran nombres siempre en plural.***
+
+### Clase 37 *Indices y búsqueda de elementos en Arrays*
+
+Ahora que aprendimos a declarar arreglos y a definir la cantidad de elementos que puede contener los arreglos en su respectiva dimensión, es momento de ver cómo podemos insertar elementos en cualquiera de las posiciones que tiene el arreglo. El agregar datos a un arreglo lo estaremos logrando gracias a los índices.
+
+**Índices**
+
+El array no es más que un conjunto de variables del mismo tipo agrupadas todas ellas bajo un mismo nombre que distinguimos mediante un número entero al que llamamos índice o localizador. Dicho número identifica a cada variable del array sin formar parte en sentido estricto del nombre de la variable: por ello el número puede ser sustituido por una operación, otra variable, o una operación entre números y variables.
+
+Nosotros accedemos a cada elemento individual del array mediante ese número entero denominado índice. El 0 es el índice del primer elemento y n-1 es el índice del último elemento, siendo n el tamaño total del array.
+
+***RECORDEMOS: El tamaño de un array debe especificarse mediante un valor int y no, long o short.***
+
+Para asignar valores a un arreglo lo hacemos de la siguiente manera:
+
+![src/javaSE_176.png](src/javaSE_176.png)
+
+**EJEMPLO**
+
+Tenemos nuestro ejemplo con las versiones Android:
+
+![src/javaSE_177.png](src/javaSE_177.png)
+
+En este caso asignaremos las cuatro primeras versiones que tuvo Android. Como podemos ver, para asignar ponemos primeramente el nombre de la versión seguido del índice entre corchetes, el operador de asignación y finalmente la versión que guardara.
+
+Para acceder o imprimir el dato que contiene lo hacemos escribiendo simplemente el nombre de la versión con el número del índice entre corchetes.
+
+Lo mismo sucede si tenemos una variable de dos dimensiones:
+
+![src/javaSE_178.png](src/javaSE_178.png)
+
+La manera de asignar y acceder es similar, solo que ahora tendremos dos índices como si fuera una matriz. El primer número son las filas y el segundo número son las columnas.
+
+Ahora miremos esta imagen:
+
+![src/javaSE_179.png](src/javaSE_179.png)
+
+**¿En qué posición se encuentra el mono?**
+
+Pues el monito se encuentra en la posición ***[1][0][0][1]***
+
+Tenemos un arreglo de cuatro dimensiones, con el mono estando en la fila 1 y columna 0, dentro tiene la posición 0 y elemento 1.
+
+Si analizáramos esa imagen para ponerlo en código tendremos lo siguiente:
+
+![src/javaSE_180.png](src/javaSE_180.png)
+
+Tenemos 2 filas, 3 columnas, 2 posiciones y 2 elementos.
+
+Cuando empezamos a utilizar arreglos de muchas dimensiones, para ser más específicos a partir de las tres dimensiones en adelante, esto ya no es tan común en programas que manejen datos simples. Para estos tipos de arreglos con múltiples dimensiones es mejor usar una base de datos que este mejor estructurada, específica para controlar y manipular los datos. Sin embargo, eso no quiere decir que no se utiliza este tipo de arrays. Este tipo de arreglo se utiliza mucho en el área de las matemáticas cuando estamos resolviendo ecuaciones, sobre todo ese sistema de ecuaciones 3 x 3.
+
+### Clase 38 *Ciclos For anidados*
+
+Si recapitulamos un poco de nuestras clases anteriores recuerdas los bucles cuya principal función es repetir una línea de código tantas veces como la condición se lo exija. Y precisamente en los código que generamos detectamos algunas líneas repetidas, algunas líneas que ensucian nuestro código visualmente.
+
+Comencemos con nuestro ejemplo con las versiones de Android:
+
+![src/javaSE_181.png](src/javaSE_181.png)
+
+Una forma más bonita, más sencillas de imprimir nuestros datos cuando están dentro de un arreglo es con el bucle for. Recordemos que los índices son esos números que identifica a cada variable, pues dentro del bucle la variable ' i ' representaría al índice.
+
+También, una forma profesional para definir el número de vueltas que debe dar, es usando **length**. Debido a que los arreglos se implementan como objetos, cada array tiene asociado una variable de instancia de longitud (length) que contiene la cantidad de elementos que el array puede contener, es decir, length contiene el tamaño del array.
+
+En nuestro ejemplo, el ***androidVersion.length*** representa el número 17 que es el tamaño que definimos para nuestro arreglo. Algo interesante que podemos ver es que, a pesar del tamaño que nosotros definimos, solo hemos utilizamos cuatro espacios, por lo que cuando imprimimos de esta manera nos imprime los 17 espacios: los primeros cuatro con los datos que guardamos y el resto nos aparece null (porque el arreglo es de tipo string). No nos marca error, porque lo hemos inicializado todo aunque no los usamos.
+
+También tenemos otra forma de imprimirlo, la cual es usando foreach:
+
+![src/javaSE_182.png](src/javaSE_182.png)
+
+A diferencia del bucle for que vimos anteriormente, con el foreach no tendremos control sobre el índice. Lo que hace es for es que por un lado tenemos la colección que recorremos y por otro lado declaramos un elemento, mientras el for itera uno a uno la colección se lo ira asignando al elemento.
+
+Está es la sintaxis del foreach
+
+![src/javaSE_183.png](src/javaSE_183.png)
+
+En nuestro ejemplo, nosotros declaramos un elemento llamado androidVersion de una manera individual pues será el elemento al cual se le ira asignando los valores de la colección.
+
+Ahora pasemos a ver nuestro ejemplo de ciudades:
+
+![src/javaSE_184.png](src/javaSE_184.png)
+
+Cuando nosotros tenemos un arreglo de múltiples dimensiones, la manera en que la imprimimos son con bucles anidados.
+
+Un **bucle anidado** es un bucle dentro de otro bucle, debemos de tener en cuenta como lo podemos utilizar correctamente, esta práctica se suele utilizar para recorrer arrays multidimensionales o manejar coordenadas.
+
+En este caso tenemos un arreglos de dos dimensiones y lo que hacemos primero es ver la cantidad de filas que tenemos. Después, nosotros vemos la cantidad de columnas por cada filas, es por eso que tenemos ***cities[i].length***. El **cities[i]** representa en esos momentos el número de la fila en que nos encontramos y ve la cantidad de columnas que esa fila posee.
+
+También podemos usar un foreach con un arreglos multidimensional:
+
+![src/javaSE_185.png](src/javaSE_185.png)
+
+Le pasamos la primera colección, que es el cities completo, y si analizamos que es lo que nos trae pue es un arreglo. Recordemos que nosotros lo que traemos es una dimensión, traemos el par de datos que contiene la primera fila.
+
+Después hacemos otro foreach, en el que esta vez pasaremos pair (el arreglo que obtuvimos de cities) como la colección y cuando estemos iterando nos traerá el nombre.
+
+Finalmente veamos nuestro último ejemplo anterior que era el de cuatro dimensiones:
+
+![src/javaSE_186.png](src/javaSE_186.png)
+
+En este caso acomodamos números porque no deseamos recorrer todo el arreglo, simplemente queremos imprimir directamente.
+
+***NOTA: La ' i ' representa las filas, la ' j ' representa las columnas, la ' k ' representa las posiciones y la ' l ' representa los elementos.***
+
+### Clase 39 *Continua con el Curso de Programación Orientada a Objetos en Java*
+
+¡Felicitaciones por terminar el Curso de Introducción a Java SE!
+
+El objetivo de este curso es comprender el lenguaje: los fundamentos de Java, cómo declarar variables, métodos y estructuras de datos básicas, cómo funcionan las diferentes versiones de Java, qué son los JDK o JVM, entre muchas otras cosas.
+
+Recuerda resolver los ejercicios, completar el examen, darle 5 estrellas a la profesora y compartir tu proyecto, notas y todas tus dudas o comentarios en la sección de discusiones.
+
+No olvides que el siguiente paso en tu ruta de aprendizaje con Java es el [Curso de Java SE Orientado a Objetos](https://platzi.com/cursos/java-oop/ "Curso de Java SE Orientado a Objetos").
