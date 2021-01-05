@@ -40,6 +40,7 @@ Los **objetos** son todas las cosas que tienen propiedades y comportamientos, es
 Por ejemplo, un objeto físico puede ser User (usuario) o Car (auto). Y un objeto conceptual sería Session (sesión).
 
 **Propiedades**
+
 También llamadas atributos, son la clave para cuando estemos identificando a los objetos y siempre serán escritas sustantivos.
 
 Las Propiedades son las características de nuestros objetos y pueden tener diferentes valores que harán referencia a nombres, tamaños, formas, estados, etc.
