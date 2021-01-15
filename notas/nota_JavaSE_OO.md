@@ -135,7 +135,7 @@ El proyecto en este curso es construir un sistema que nos permita listar y agend
 
 Nuestro entorno de desarrollo será IntelliJ IDEA, creamos un nuevo proyecto **MyMedicalAppointments** y usaremos la versión 8 de Java:
 
-![src/JavaSE_28.png](src/JavaSE_28.png)
+![src/javaSE_28.png](src/javaSE_28.png)
 
 ***RECUERDA: La versión 8 es la más utilizada y, hasta diciembre del 2020, la que es totalmente gratuita.***
 
