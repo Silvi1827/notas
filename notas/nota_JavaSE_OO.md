@@ -397,7 +397,6 @@ Y creamos una nueva clase Patient (que estaremos viendo más adelante) para regi
 
 ![src/JavaOO_30.png](src/JavaOO_30.png)
 
-
 ### Clase 11 *¡Reto!*
 
 ***¡Has avanzado muy bien!***
@@ -425,3 +424,321 @@ height: double
 blood: String
 
 Patient(name: String, email: String)
+
+### Clase 12 *Sobrecarga de métodos y constructores*
+
+La firma de un método es la combinación del nombre y los tipos de los parámetros o argumentos.
+
+La sobrecarga (*overloading*) de métodos es la creación de varios métodos con el mismo nombre pero con diferente lista de tipos de parámetros. Java utiliza el número y tipo de parámetros para seleccionar cuál definición de método ejecutar.
+
+Java diferencia los métodos sobrecargados con base en el número y tipo de parámetros o argumentos que tiene el método y no por el tipo que devuelve.
+
+Las reglas para sobrecargar un método son las siguientes:
+
+- Los métodos sobrecargados deben de cambiar la lista de argumentos.
+- Pueden cambiar el tipo de retorno.
+- Un método puede ser sobrecargado en la misma clase o en una subclase.
+
+Por ejemplo:
+
+![src/JavaOO_31.png](src/JavaOO_31.png)
+
+Tenemos una clase Calculadora con tres métodos del mismo nombre, **suma()**, aquí podemos ver la sobrecarga ya que reciben y devuelven distintos valores.
+
+**Sobrecarga de Constructores**
+
+Cuando en una clase existen constructores múltiples, se dice que hay sobrecarga de constructores.
+
+Se utiliza para inicializar objetos, usando para definir los argumentos mínimos que son necesarios para construir un objeto.
+
+Miremos como funciona con un ejemplo:
+
+![src/JavaOO_32.png](src/JavaOO_32.png)
+
+En la clase Doctor tenemos dos métodos constructores, el primero tiene como parámetro únicamente el nombre y el segundo acepta como parámetros tanto el nombre como también la especialidad.
+
+Si nosotros imprimiéramos estos métodos constructores:
+
+![src/JavaOO_33.png](src/JavaOO_33.png)
+
+Tendremos dos impresiones correspondientes a los dos métodos constructores que hemos creado.
+
+**Palabra clave this**
+
+La palabra clave **this()** es un método miembro de un objeto está asociado al objeto. Cuando este se está ejecutando podemos usar this, para conseguir una referencia al objeto asociado. Usado para evitar conflictos de nombres en el método / constructor de su instancia / objeto.
+
+Dentro del método, podemos usar ***this.nombre*** para acceder al nombre del objeto asociado.
+
+La palabra clave this, funciona igual dentro de un constructor.
+
+En nuestro ejemplo anterior tenemos un ***this.name = name*** donde:
+
+- **this.name** hace referencia al atributo de la clase Doctor.
+- Cuando escribimos simplemente **name**, el compilador entiende que nos referimos es el parámetro del método.
+
+### Clase 13 *Encapsulamiento: Modificadores de acceso*
+
+Anteriormente tuvimos un reto que básicamente eran crear la clase Patient:
+
+![src/JavaOO_34.png](src/JavaOO_34.png)
+
+Si nosotros hiciéramos lo siguiente:
+
+![src/JavaOO_35.png](src/JavaOO_35.png)
+
+Creamos un objeto Patient con los datos mínimos para que exista y luego le agregamos la altura y el peso, e imprimiéramos todo funcionaria igual. Incluso podemos agregar que en la impresión del peso salga en kilogramo, pero si siguiéramos podemos modificar tal vez cambiar el peso por otro, que nuestro paciente ya no sea Jane sino que ahora sea un Juan e incluso en la impresión en vez de kilogramos sea en gramos.
+
+Según la lógica de negocios esto no son cosas que deban ocurrir, que un paciente cambie el peso de kg a g es una inconsistencia que podemos prevenir al hacer que nadie pueda alterar ese parámetro. La única forma de hacerlo en Java, que no se altere un parámetro y que nadie más tenga acceso, será escondiendo ese parámetro, dejarlo invisible o al menos invalidado para los demás implementando la encapsulación.
+
+**Encapsulamiento**
+
+Este concepto consiste en la ocultación del estado o de los datos miembro de un objeto, de forma que sólo es posible modificar los mismos mediante los métodos definidos para dicho objeto. Es decir, limitamos el acceso a las variables de nuestras clases.
+
+**¿Como se encapsulan los datos?**
+
+Cuando realizamos un abstracción en una clase para luego instanciarla y crear un objeto no se necesita conocer a fondo la implementación solo se necesita poder instanciar esa clase tampoco necesita conocer todas las propiedades de un objeto o acceder a ellas de forma directa, por ello podemos crear diferentes métodos y forzar a utilizar métodos definidos para modificar estas propiedades.
+
+Para realizar el proceso anterior se necesita conocer los **modificadores de acceso**. Los modificadores de acceso permiten dar un nivel de seguridad mayor a nuestras aplicaciones restringiendo el acceso a diferentes atributos, métodos, constructores asegurándonos que el usuario deba seguir una "ruta" especificada por nosotros para acceder a la información.
+
+Tengamos en cuenta la siguiente imagen:
+
+![src/JavaOO_36.png](src/JavaOO_36.png)
+
+- **Public:** Es el más permisivo de todos. Si el componente de una clase es público tendremos acceso a él desde cualquier clase o instancia sin importar el paquete o procedencia de ésta.
+- **Protected:** Nos permite acceso a los componentes con dicho modificador desde la misma clase, clases del mismo paquete y clases que hereden de ella (incluso en diferentes paquetes).
+- **Default:**  Java nos da la opción de no usar un modificador de acceso y al no hacerlo, el elemento tendrá un acceso conocido como default, acceso por defecto, que permite que tanto la propia clase como las clases del mismo paquete accedan a dichos componentes (de aquí la importancia de declararle siempre un paquete a nuestras clases).
+- **Private:** Es el más restrictivo de todos, básicamente cualquier elemento de una clase que sea privado puede ser accedido únicamente por la misma clase por nada más.
+
+**Encapsulando atributos**
+
+Ahora que ya entendemos sobre el encapsulamiento y conocemos los modificadores de acceso, vamos a encapsular los atributos de la clase Patient:
+
+![src/JavaOO_37.png](src/JavaOO_37.png)
+
+Una vez que todos nuestros atributos tengan el acceso private, automáticamente el archivo Main nos señalara varios errores:
+
+![src/JavaOO_38.png](src/JavaOO_38.png)
+
+Y es que ya no podemos simplemente modificar o imprimir nuestros atributos fuera de la clase. Pero los atributos siguen siendo válidos para la clase:
+
+![src/JavaOO_39.png](src/JavaOO_39.png)
+
+Nosotros podríamos incluso instanciar nuestra altura o peso y hacer las impresiones.
+
+### Clase 14 *Getters y Setters*
+
+En nuestra clase anterior dejamos encapsulados nuestros datos y quedaron invisibles para la capa de la clase Main, ya no podemos añadir datos a los demás atributos ni modificar lo que tenemos, pero tenemos una forma para seguir accediendo a los atributos sin tocarlos directamente y además también resuelve las validaciones de la lógica de negocio.
+
+**Getters & Setters**
+
+![src/JavaOO_40.png](src/JavaOO_40.png)
+
+Los Getters y Setters nos permiten leer y escribir (respectivamente) los valores de nuestras variables privadas desde fuera de la clase donde fueron creadas. Con los Getters obtenemos los datos de las variables y con los Setters asignamos o cambiamos su valor.
+
+Podemos crear los Getters o Setters manualmente:
+
+![src/JavaOO_41.png](src/JavaOO_41.png)
+
+Como vemos, el IDE ya nos sugiere los posibles nombres y eso se debe a que es una convención de nombres.
+
+Pero también tenemos atajos para generar los métodos getters y setters de todas o algunas de tus variables. Una de las formas es dando click derecho y seleccionamos Generate:
+
+![src/JavaOO_42.png](src/JavaOO_42.png)
+
+Después seleccionamos Getter and Setter, pero también podemos crearlos individualmente si elegimos solo Getter o Setter:
+
+![src/JavaOO_43.png](src/JavaOO_43.png)
+
+Nos aparece una ventaja con los atributos a seleccionar de los cuales crearemos los getter y setter:
+
+![src/JavaOO_44.png](src/JavaOO_44.png)
+
+Y eso nos generara automáticamente todo:
+
+![src/JavaOO_45.png](src/JavaOO_45.png)
+
+Ahora podemos realizar nuestras validaciones:
+
+![src/JavaOO_46.png](src/JavaOO_46.png)
+
+Podemos agregar directamente para que el peso se nos imprima en Kg o la altura en metros, también podemos validar que los números telefónicos sean exactamente de ocho dígitos.
+
+Y la manera en cómo enviaremos o imprimiremos nuestros datos será de la siguiente forma:
+
+![src/JavaOO_47.png](src/JavaOO_47.png)
+
+- **setNombre:** Enviamos por parámetros los datos para ser asignados o cambiados.
+- **getNombre:** Obtenemos los datos para ser imprimidos.
+
+### Clase 15 *Variable vs. Objeto*
+
+En este punto ya debemos entender que las variables son diferentes a los objetos:
+
+- Las **variables** son entidades elementales muy sencillas que pueden ser números, caracteres, booleanos, entre otras.
+- Los **objetos** son entidades complejas que pueden estar formadas por la agrupación de diferentes variables y métodos.
+
+Sin embargo, en el tema de los **arreglos** aprendimos que son elementos complejos y por esa razón eran tomadas como objetos. Su relación de una variable a muchos datos (relación uno a muchos) los obligaba a tener más operaciones para manipular esos datos.
+
+Por eso si tenemos esto:
+
+![src/JavaOO_48.png](src/JavaOO_48.png)
+
+Decimos que tenemos una **variable** «i» del tipo primitivo int, y tenemos un **objeto** «name» del tipo string.
+
+En ocasiones puede ser muy conveniente el poder tratar a los datos primitivos como objetos, pero los datos primitivos no son objetos, como bien ya sabemos, para resolver esta situación el API de Java incorpora las clases envoltorio (wrapper class), que no son más que dotar a los datos primitivos con un envoltorio que permita tratarlos como objetos.
+
+**Wrapper Class**
+
+La clase Wrapper o la clase de envoltura, son clases que representan un tipo primitivo de dato. Es decir, son un tipo de referencia que envuelve un tipo primitivo. Cada tipo de dato primitivo tiene un tipo de referencia que lo envuelve. Veamos a continuación la siguiente tabla:
+
+![src/JavaOO_49.png](src/JavaOO_49.png)
+
+### Clase 16 *Clases Anidadas*
+
+Otro tipo de datos con lo que podemos encontrarnos en el futuro, aunque no son tan utilizadas en general pero si podemos encontrarnos con ella cuando trabajamos con algún framework o SDK especifico que esté trabajando con Java, estas son las clases anidadas.
+
+Las **clases anidadas**, llamadas también **Clases Helper**, son clases que viven una dentro de otra. Tiene esta sintaxis:
+
+![src/JavaOO_50.png](src/JavaOO_50.png)
+
+En donde la clase padre, la que está más afuera, es llamada **Clase Exterior** y la clase hija, la que se encuentra anidada, será conocida como **Clase Interior**. Pero esto no significa que dos clases vivan a la par, porque esto violaría uno de los principios que es la modularidad.
+
+En el caso de las clases anidadas, estas deben vivir dentro de la clase exterior porque la lógica de su comportamiento esta directamente relacionada con la clase exterior. Aquí SI es válido y sigue cumpliendo con el principio de la modularidad, porque ambas están vinculadas directamente con la lógica y el comportamiento que van a tener.
+
+**Tipos de Clases Anidadas**
+
+Existen dos tipos de clases anidadas:
+
+- **Clases internas:** De estas se derivan nuevamente dos tipos de clases internas.
+	
+	- **Clases locales a un método:** Aunque es un poco extraño de ver, podemos tener clases declaradas dentro de un método.
+	- **Clases internas anónimas:** Son clases que profundizaremos en el curso de Java Funcional porque ahí es de donde precisamente nace su implementación.
+
+- **Clases estáticas anidadas:** Son clases no necesitan ser instanciadas para poder ser llamadas y ejecutadas, aunque debes recordar que solo permiten llamar a los métodos estáticos de sus clases padre.
+
+Esta es la sintaxis de las dos clases anidadas:
+
+![src/JavaOO_51.png](src/JavaOO_51.png)
+
+**Clases Anidadas Estáticas**
+
+Al igual que con los métodos y variables de clase, una clase anidada estática está asociada a su clase externa. Y al igual que los métodos de clase estáticos, una clase anidada estática no puede hacer referencia directamente a variables de instancia o métodos definidos en su clase adjunta: solo puede usarlos a través de una referencia de objeto.
+
+**Clases Anidadas Internas**
+
+El anidamiento de una clase tiene por objetivo favorecer el encapsulamiento. Una clase anidada se dice que es interna si se la declara dentro de otra clase pero fuera de cualquier método de la clase contenedora.
+
+Puede declararse con cualquiera de los modificadores: private, protected o public.
+
+Una característica fundamental es que una clase interna tiene acceso a todos los atributos de la clase que la contiene, luego para que exista una clase anidada interna es necesario que exista un objeto de la clase contenedora.
+
+Veamos un ejemplo para entender mejor las clases anidadas. Y es que de acuerdo a las reglas del negocio de nuestro proyecto, un doctor puede dejar disponible las citas de las cuales puede venir un paciente a agendar.
+
+Sin utilizar una clase anidada podemos crear unos atributos como fecha y hora que en conjunto representan el tiempo que el doctor se encuentra disponible. Para diferenciarlos también debemos poner un identificador y, si siguiéramos tratando las variables por separados, deberíamos crear un arreglo que tuviera la colección de todos los elementos.
+
+La mejor forma de trabajar con estos datos sería crear una clase con sus getters y setters de cada elementos, pero como estará vinculado con y únicamente con el doctor (obviamente el paciente no podrá poner la hora que está disponible el doctor). Y por esta razón, por compartir la lógica, es mejor ponerlo como una clase independiente.
+
+![src/JavaOO_52.png](src/JavaOO_52.png)
+
+De esta forma es más sencillo manejar o añadir una cita para el doctor. También podemos crear un método, esta vez al nivel de la clase Doctor, que reciba la fecha y la hora:
+
+![src/JavaOO_53.png](src/JavaOO_53.png)
+
+De esta forma vamos añadiendo una nueva cita disponible que se irán acumulando en el arreglo. Y si queremos ver las citas disponibles creamos un getters que simplemente nos devuelva el arreglo.
+
+Entonces, en el archivo Main, tenemos lo siguiente:
+
+![src/JavaOO_54.png](src/JavaOO_54.png)
+
+Creamos tres citas en el mismo día con diferentes horas. Y para imprimir las citas disponibles, por fines prácticos del ejemplo, lo haremos directamente con un forech.
+
+**NOTA**
+
+- **Clase Date:** Representa como su nombre indica a una fecha. La clase Date viene incluida en Java, localizada en el paquete java.util, por lo que para utilizarla debemos importarlo desde el principio con: import ***java.util.Date***;
+	
+	Para crear una fecha, debemos crear un objeto de esa clase.
+	
+	![src/JavaOO_55.png](src/JavaOO_55.png)
+
+	Si no le enviamos ningún parámetro, automáticamente tomara la fecha de hoy. Pero también podemos crear una fecha propia, indicándoselo por parámetro de la siguiente manera:
+
+	![src/JavaOO_56.png](src/JavaOO_56.png)
+	
+	En donde:
+	
+	- **116** es el año. Para poner el año debemos hacer las cuentas porque inicialmente empezamos desde 1900 y lo que se hace es restárselo al año que queremos (2016 - 1900 = 116. Si nosotros ponemos 2016 nos daría el año 3916).
+	- **5** es el mes. Pero cuidado, el 5 no es mayo. El mes empieza en 0, como un arreglo, por lo que 5 es el sexto mes (Junio).
+	- **3** es el día. Aquí sí, el día es tal cual pongamos.
+	
+	También podemos añadir la hora exacta:
+
+	![src/JavaOO_57.png](src/JavaOO_57.png)	
+	
+	En donde los tres últimos parámetros (10, 5 y 6) representan la hora, minuto y segundo.
+	
+- **ArrayList:** Es una clase de Java localizada en java.util, por lo que debe ser importada para ser utilizada. El ArrayList es una clase que permite almacenar datos en memoria de forma similar a los Arrays, con la ventaja de que el número de elementos que almacena, lo hace de forma dinámica, es decir, que no es necesario declarar su tamaño como pasa con los Arrays.
+
+### Clase 17 *Clases Internas y Locales a un método*
+
+Profundizaremos más en los tipos de clases que te podes encontrar con Java, ya vimos la clase estática anidada y, como este es un curso de programación orientada a objetos, veremos todos los posibles casos hablando específicamente de las clases porque aún nos queda pendientes las clases internas anónimas y las locales a un método.
+
+**Clases Internas Anónimas**
+
+También conocidas en internet o en algunos libros como clases no estáticas. Una clase interna anónima es una forma de clase interna que se declara y crea una instancia con una sola declaración. Como consecuencia, no hay un nombre para la clase que pueda usarse en otra parte del programa, es decir, es anónimo.
+
+Las clases anónimas se utilizan normalmente en situaciones en las que es necesario poder crear una clase de peso ligero que se pase como parámetro. Esto normalmente se hace con una interfaz.
+
+Por ejemplo:
+
+![src/JavaOO_58.png](src/JavaOO_58.png)	
+
+Tenemos una clase externa **Outer** cuyo interior contiene una clase anidada **Inner**, lo curioso está en nuestro archivo **Main** ya que para llamar a la clase interna aquí si es necesario instanciarla. Para instanciar una clase interna lo que hacemos es crear un objeto de tipo Outer y después un objeto de tipo Inner poniendo la palabra reservada **new** antes del nombre de la clase interna.
+
+**Clase Local a un Método**
+
+Una clase escrita dentro de un método llamado método clase interna local . En ese caso, el alcance de la clase interna está restringido dentro del método.
+
+Una clase interna de método local puede instanciarse solo dentro del método donde se define la clase interna.
+
+Por ejemplo:
+
+![src/JavaOO_59.png](src/JavaOO_59.png)	
+
+Supongamos que tenemos una clase externa **Enclosing** dentro del cual tenemos un método y dentro de ese método creamos una clase **Local** que tiene sus propias propiedades y comportamientos.
+
+**Diferencia entre clases estáticas e internas (anidadas no estáticas)**
+
+- Las **clases anidadas estáticas** no tienen acceso directo a otros miembros (variables y métodos no estáticos) de la clase adjunta porque, como es estática, debe acceder a los miembros no estáticos de su clase adjunta a través de un objeto. Es decir, no puede hacer referencia directamente a los miembros no estáticos de su clase adjunta. Debido a esta restricción, las clases anidadas estáticas rara vez se utilizan.
+- Las **clases anidadas no estáticas** (clases internas) tienen acceso a todos los miembros (variables y métodos estáticos y no estáticos, incluido el privado/private) de su clase externa y pueden referirse a ellos directamente de la misma manera que otros miembros no estáticos del exterior de la clase.
+
+### Clase 18 *Enumerations*
+
+Los enumerations son tipos de datos muy especiales pues este, es el único en su tipo que sirve para declarar una colección de constantes, al ser así estaremos obligados a escribirlos con mayúsculas.
+
+Usaremos enum cada vez que necesitemos representar un conjunto fijo de constantes. Por ejemplo los días de la semana.
+
+Así podemos declarar un enumeration usando la palabra reservada enum.
+
+![src/JavaOO_60.png](src/JavaOO_60.png)	
+
+Puedo crear referencias de enumerations de la siguiente forma:
+
+![src/JavaOO_61.png](src/JavaOO_61.png)
+
+Y puedo llamar un valor del enumeration así:
+
+![src/JavaOO_62.png](src/JavaOO_62.png)
+
+Los enumerations pueden tener atributos, métodos y constructores, como se muestra:
+
+![src/JavaOO_63.png](src/JavaOO_63.png)
+
+Y para utilizarlo lo podemos hacer así:
+
+![src/JavaOO_64.png](src/JavaOO_64.png)
+
+Imprimirá: **MONDAY**
+
+![src/JavaOO_65.png](src/JavaOO_65.png)
+
+Imprimirá: **Lunes**
