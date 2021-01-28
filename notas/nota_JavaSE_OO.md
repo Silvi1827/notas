@@ -742,3 +742,305 @@ Imprimirá: **MONDAY**
 ![src/JavaOO_65.png](src/JavaOO_65.png)
 
 Imprimirá: **Lunes**
+
+## Modulo 3. Reutilizar Código
+### Clase 19 *¿Qué es la Herencia? Don't repeat Yourself*
+
+Entramos a un nuevo módulo titulado "Reutilizar Código" en el que básicamente entenderemos porque es importante la reutilización de código porque, en primer lugar, esto es uno de los principios básicos de la programación orientada a objetos ya que en el momento en que detectemos que estamos copiando y pegando código es cuando debemos analizar para ver si ese código puede hacerse más abstracto o general para no estarlo escribiendo cada vez que lo necesitamos.
+
+**«Don’t repeat yourself»** es una filosofía que consiste en detectar cuando estamos repitiendo el mismo código una y otra vez para crear algún método o función que nos ayude a evitar estos repetidos. Esta es una de las bases de la programación que siempre debemos tener en cuenta, ya que nos ayuda a reducir la dificultad de nuestro código para implementar cambios y/o mejoras en nuestra aplicación.
+
+Y una de las piezas claves a la hora de reutilizar código a más no poder es la herencia.
+
+**Herencia**
+
+Básicamente consiste en crear nuevas clases a partir de otras clases, establecemos una relación padre e hijo entre nuestras clases. Es diferente a las clases anidadas, ya que, en vez de crear clases dentro de clases, le indicamos a nuestras subclases de qué superclase pueden heredar (extends) para reutilizar el código de algunos de sus métodos.
+
+![src/POO_46.png](src/POO_46.png)
+
+***RECUERDA: Las clases no pueden heredar de más de una clase.***
+
+Ya que estamos hablando de herencia, podemos recordar que nuestras clases Doctor y Patient comparte algunos atributos, este es un claro ejemplo de que podemos agruparlos, abstraemos esos atributos en común, para que ambos puedan heredarlo de una clase padre y así evitamos estar repitiendo esos atributos.
+
+### Clase 20 *Super y This*
+
+Si analizamos nuestro proyecto podemos ver que, hasta donde tenemos, nuestras entidades Doctor y Patient comparten algunos atributos que pueden servir por sí mismos y podemos agruparlos gracias a la herencia.
+
+Estos son los atributos que tenemos iguales:
+
+![src/JavaOO_66.png](src/JavaOO_66.png)
+
+![src/JavaOO_67.png](src/JavaOO_67.png)
+
+Lo que haremos es extraer esos atributos y ponerlos en una super clase llamada User. De acuerdo a nuestro sistema, nosotros podemos elegir si somos doctor o paciente y verificarlo según nuestro email, todo esto podemos hacerlo desde la super clase.
+
+![src/JavaOO_68.png](src/JavaOO_68.png)
+
+Ahora la clase User tiene los atributos que abstrajimos con sus propios constructores, getters y setters.
+
+Para que nuestra clase Doctor o Patient pueda tener esos mismos atributos debemos heredarlos y la forma en que lo hacemos es usando la palabra reservada **extends**:
+
+![src/JavaOO_69.png](src/JavaOO_69.png)
+
+![src/JavaOO_70.png](src/JavaOO_70.png)
+
+![src/JavaOO_71.png](src/JavaOO_71.png)
+
+Ahora que hemos extendido desde nuestra clase padre podemos suprimir los atributos abstraídos, así como sus getters y setters, y ahora accederemos al constructor de la clase padre (que se convertirá en nuestro constructor por defecto) usando la palabra reservada **super()**. Una cosa más importante es que 'super' puede llamar constructores tanto con parámetros como sin parámetros dependiendo de la situación.
+
+Si nosotros viéramos nuestro método Main, gracias a la reutilización de código, incluso después de todos nuestros cambios nada falla y nos seguiría funcionando todo perfectamente:
+
+![src/JavaOO_72.png](src/JavaOO_72.png)
+
+### Clase 21 *Polimorfismo: Sobreescritura de Métodos*
+
+En java hay una clase de la cual heredan todas las clases que nosotros creamos y ese es el Object. Cuando nosotros creamos nuestras el objeto de nuestras clases vimos que de repente aparecían métodos, variables y cosas que no habíamos creado:
+
+![src/JavaOO_73.png](src/JavaOO_73.png)
+
+Como en este ejemplo, en donde usamos el objeto **patient** y llamábamos a los métodos o variables, podemos ver cómo nos resalta en negrita algunos métodos, esto es porque nosotros hicimos uso de la reutilización de código y esos métodos indican cuales son los propios de la clase **Patient**. Pero si continuamos bajando ya vemos cosas extrañas como los métodos .toString, hashCode, finalize, notify, entre otros, que son los que heredamos de la clase object.
+
+Esos son métodos que podemos que podemos utilizar a pesar de que en ningún momento heredamos de Object, porque para nuestro IDE eso es una redundancia y lo hace automáticamente, sin obligarnos a hacer la herencia.
+
+***RECUERDA: Algo importante que debemos saber es que, en el caso de Java, no se permite hacer la herencia múltiple. Esto es algo que no nos permite hacer la herencia múltiple. Todas las clases hijas solo tendrán una sola y única clase padre.***
+
+Lo que haremos ahora será sobrescribir el método toString que está definido en la clase object, y para esto debemos comprender algunos conceptos.
+
+**Polimorfismo**
+
+Es una característica de la programación orientada a objetos que consiste en sobrescribir algunos métodos de la clase de la cual heredan nuestras subclases para asignar comportamientos diferentes.
+
+**Sobreescritura**
+
+Consiste en que, cuando tenemos una clase que hereda de otra, podemos redefinir un método para que tenga una implementación distinta.
+
+***NOTA: Los métodos marcados como final o static no se pueden sobrescribir.***
+
+**Sobreescritura de constructores**
+
+Consiste en usar los miembros heredados de una superclase, pero con argumentos diferentes.
+
+Ahora, sobrescribamos el método .toString y para eso vamos a la clase User que es donde trabajaremos:
+
+![src/JavaOO_74.png](src/JavaOO_74.png)
+
+Cuando nosotros escribimos **toString** nuestro IDE ya nos ayuda a poder completar todo y nos deja en como se muestra en la imagen. La notación @**Override** nos indica que ese método no es propio de la clase User, sino que es está siendo llamado de la super clase, también por eso tenemos el **super** que invoca al método de la clase padre.
+
+Si nosotros fueramos a ver que ocurre con el toString en la clase object podremos ver lo siguiente:
+
+![src/JavaOO_75.png](src/JavaOO_75.png)
+
+Lo que hace es el método es obtener el nombre de la clase y con ello consigue el hashCode que es como un identificador que saca la firma del objeto para hacer un par de validaciones y demás.
+
+Entonces, lo que nosotros queremos hacer es cambiar ese método y que siempre que imprimamos cualquier dato, como por ejemplo la de un paciente, nos salga la sobreescritura:
+
+![src/JavaOO_76.png](src/JavaOO_76.png)
+
+Es tan sencillo como cambiar y escribir lo que ahora querramos imprimir.
+
+Ahora, cada que nosotros escribamos para imprimir el objeto tendremos el resultado de la sobreescritura que nos mostrara el nombre, email, dirección y telefono:
+
+![src/JavaOO_77.png](src/JavaOO_77.png)
+
+Pero nuestra clase Patient, que hereda de User, debe tener un comportamiento ligeramente diferente. Y es que tal vez nosotros debamos imprimir también la altura o el peso (ambos atributos existentes dentro la clase Patient), para lograr eso podemos nuevamente sobrescribir el método:
+
+![src/JavaOO_78.png](src/JavaOO_78.png)
+
+Para eso hacemos lo mismo. Vamos a la clase en la queremos tener la sobreescritura (en este caso es la clase Patient) y realizamos los cambios deseados, de esta forma le estamos dando otro comportamiento.
+
+### Clase 22 *Polimorfismo: Sobreescribiendo el método toString*
+
+En la clase anterior ya estuvimos sobrescribiendo el método toString que, debemos recordar bien, heredamos de la clase Object. Ahora continuaremos sobrescribiendo ese método para ver que algunas cosas podemos añadirle.
+
+Sobrescribiremos el método en la clase Doctor, más precisamente en la clase interior, para imprimir las citas que tenemos disponibles:
+
+![src/JavaOO_79.png](src/JavaOO_79.png)
+
+También, en la clase exterior de Doctor, sobrescribiremos el método.
+
+![src/JavaOO_80.png](src/JavaOO_80.png)
+
+Como vemos, usamos super() para llamar al método padre y concatenamos el atributo Speciality (propia de la clase Doctor). Y, adicionalmente, llamamos el arrayList que tiene acumuladas nuestras citas y usamos el método toString() para tener una representación en cadena del contenido.
+
+Si queremos imprimir un objeto por lo general debemos de escribir nombreObjeto.toString(), pero ese no es el caso de Java pues el método toString se llama implícitamente, no es necesario que lo pongamos y podemos imprimir el objeto mediante el nombre como lo vimos cuando imprimimos el objeto **patient**.
+
+Si nosotros imprimimos nuestro objeto myDoctor tendremos lo siguiente:
+
+![src/JavaOO_81.png](src/JavaOO_81.png)
+
+Esta forma de poder sobrescribir un método y añadirle comportamiento nos lleva a un concepto importante de la programación orientada a objetos, el Polimorfismo.
+
+**Polimorfismo**
+
+Es la posibilidad de sobrescribir un método asignándole comportamientos diferentes.
+
+### Clase 23 *Interfaces*
+
+Lo que vemos a continuación es el resumen de nuestro proyecto:
+
+![src/JavaOO_82.png](src/JavaOO_82.png)
+
+Tenemos nuestra clase padre (User) y las dos clases hijas: Doctor y Patient. Idealmente debemos partir de un diagrama para luego plasmarlo en un programa, pero igual la imagen nos sirve como el resumen de nuestro curso hasta ahora.
+
+Hasta el momento hemos seguido las buenas prácticas de la programación orientada a objetos, dejando nuestro proyecto lo más modular posible. Tenemos completamente todo separados por capas, incluso separamos una capa para la interfaz de usuario que hasta el momento es todo modo consola, y ahora estamos construyendo una capa que encontraremos en algún momento, la capa de modelos.
+
+La capa de modelos es precisamente esto que tenemos, todos los objetos moldeaos en clase y que posteriormente son mapeados en una fuente de datos. Básicamente preparamos el proyecto para seguir el principio de modularidad, tanto así que si nosotros queremos podemos agregar una nueva entidad Nurse y otra entidad que contenga las citas agendadas, y en general esto es algo común. En muchas ocasiones la lógica de negocio cambia y debemos estar agregando o suprimiendo entidades.
+
+Entonces, ahora tenemos dos nuevas entidades y una de las cosas que necesitaremos es la acción de poder agendar una cita, para eso debemos detectar la acción entre dos clases. Esta acción de agendar una cita la debemos poner tanto en AppointmentDoctor como en AppointmentNurse y, si nosotros tuviéramos una tercera entidad, tendríamos que copiar y pegar.
+
+Para evitar eso, y dado que seguimos en el módulo de reutilización de código, veremos lo que son las interfaces.
+
+**Interfaz**
+
+Las interfaces son un tipo de referencia similar a una clase con solo constantes y definiciones de métodos, son de gran ayuda para definir los comportamientos que son redundantes y queremos reutilizar un más de una clase, incluso cuando tenemos muchas clases y no todas pertenecen a la misma "familia".
+
+Las interfaces establecen la forma de las clases que la implementan, así como sus nombres de métodos, listas de argumentos y listas de retorno, pero **NO sus bloques de código**, eso es responsabilidad de cada clase.
+
+Siguiendo nuestro diagrama, el comportamiento de agendar una cita con una enfermera puede ser completamente diferente al comportamiento de agendar una cita con un doctor. Desde los requerimientos hasta el tipo de funciones que visualizaremos, pueden ser radicalmente una diferente a la otra.
+
+El nombre de las interfaces van a estar totalmente ligadas a una actividad o acción. Las interfaces que terminen con **«able»** están enfocado a las actividades redundantes del programa, pero en otros casos también es común encontrarlas con la letra **«i»** al principio del nombre. Para implementarlo usaremos la palabra reservada **implements**:
+
+![src/JavaOO_83.png](src/JavaOO_83.png)
+
+NOTA:
+
+- Una peculiaridad es que podemos implementar varias interfaces al mismo tiempo.
+- El programa usado por la profesora para hacer el diagrama es [lucidchart](https://www.lucidchart.com/pages/es "lucidchart").
+
+### Clase 24 *Creando una interfaz para definir si una fecha es agendable*
+
+Vamos a trabajar con la implementación de la interfaz para agregarles comportamientos a una clase, a este concepto se le conoce como composición.
+
+**Composición de Interfaces en Clases**
+
+Básicamente es abstraer todos los métodos/comportamientos de una clase para modularizarlos (comprimirlos, encapsularlos) en una interfaz y reutilizar su código en diferentes clases.
+
+Hoy en día, muchos aconsejan utilizar el concepto de composición en viceversa a la herencia. Con la herencia podemos traer los métodos y la reutilización de código es lineal, mientras que la diferencia y ventaja que tenemos con las interfaces es que podemos hacerlo a cualquier nivel de la clase, sin importa a que nivel este la clase o a que familia pertenezca siempre podemos implementar el comportamiento abstraído.
+
+***RECUERDA:***
+
+- ***Las interfaces se crean utilizando la palabra reservada interface y se implementan en nuestras clases con implements.***
+- ***Podemos heredar (implementar) más de una interfaz, pero no podemos hacerlo de las clases padres o superclases.***
+
+Viendo nuestro diagrama, nosotros tenemos las nuevas entidades AppointmentDoctor y AppointmentNurse además de la interfaz IShedulable. Lo que haremos es crear y ordenar todo:
+
+![src/JavaOO_84.png](src/JavaOO_84.png)
+
+Primeramente creamos un paquete «model» para manejar todo en capas, en su interior guardamos todas nuestras entidades y la interfaz. Ahora tenemos dos paquete, model y ui, y el punto de entrada a nuestra aplicación.
+
+La interfaz Ischedulable con un único comportamiento que recibe como parámetro la fecha (date) y la hora (time):
+
+![src/JavaOO_85.png](src/JavaOO_85.png)
+
+Tenemos las clases AppointmentDoctor y AppointmentNurse, cada uno con sus atributos y sus getters & setters:
+
+![src/JavaOO_86.png](src/JavaOO_86.png)
+
+![src/JavaOO_87.png](src/JavaOO_87.png)
+
+En ambas clases implementamos la interfaz mediante la palabra reservada implements. Cuando nos marca error es necesario que presionemos Alt + Enter y elegimos "Implement methods":
+
+![src/JavaOO_88.png](src/JavaOO_88.png)
+
+Nos saldrá una ventana con todos los métodos que podemos implementar, elegimos y damos click en Ok:
+
+![src/JavaOO_89.png](src/JavaOO_89.png)
+
+Se nos generara lo siguiente:
+
+![src/JavaOO_90.png](src/JavaOO_90.png)
+
+Y con eso ya tenemos la interfaz implementada en nuestra clase.
+
+***NOTA: El error que nos marca en el método Main es porque debemos hacer público los métodos constructores. Eso es algo relacionado a los modificadores de acceso que como sabemos nos permite definir el nivel de restricción que tendrá el atributo o el método.***
+
+### Clase 25 *Collections*
+
+Otras interfaces que son muy importantes en Java son los llamados **Collections**.
+
+Los Collections nos van a servir para trabajar con colecciones de datos, específicamente y **solamente con objetos**, para esto recuerda que tenemos disponibles nuestras clases Wrapper que nos ayudan a convertir datos primitivos a objetos.
+
+Los collections se diferencian de los arrays en que su tamaño no es fijo y por el contrario es dinámico.
+
+A continuación te muestro un diagrama de su composición:
+
+![src/JavaOO_91.png](src/JavaOO_91.png)
+
+Como podemos observar el elemento más alto es la interfaz **Collection**, para lo cual, partiendo de su naturalidad de interface, entendemos que tiene una serie de métodos “básicos” dónde su comportamiento será definido a medida que se vaya implementando en más elementos. De ella se desprenden principalmente las interfaces **Set** y **List**.
+
+La interface Set tendrá las siguientes características:
+
+- Almacena objetos únicos, no repetidos.
+- La mayoría de las veces los objetos se almacenarán en desorden.
+- No tenemos índice.
+
+La interface List tiene éstas características:
+
+- Puede almacenar objetos repetidos.
+- Los objetos se almacenan en orden secuencial.
+- Tenemos acceso al índice.
+
+**Si seguimos analizando las familias tenemos que de Set se desprenden**
+
+- Clase HashSet
+- Interfaz SortedSet y de ella la clase TreeSet.
+
+**HashSet** los elementos se guardan en desorden y gracias al mecanismo llamado hashing (obtiene un identificador del objeto) permite almacenar objetos únicos.
+
+**TreeSet** almacena objetos únicos, y gracias a su estructura de árbol el acceso es sumamente rápido.
+
+**Ahora si analizamos la familia List, de ella se desprenden**
+
+- **Clase ArrayList** puede tener duplicados, no está sincronizada por lo tanto es más rápida
+- **Clase Vector** es sincronizada, los datos están más seguros pero es más lento.
+- **Clase LinkedList**, puede contener elementos duplicados, no está sincronizada (es más rápida) al ser una estructura de datos doblemente ligada podemos añadir datos por encima de la pila o por debajo.
+
+![src/JavaOO_92.png](src/JavaOO_92.png)
+
+**Sigamos con Map**
+
+Lo primero que debes saber es que tiene tres implementaciones:
+
+- HashTable
+- LinkedHashMap
+- HashMap
+- SortedMap ➡️ TreeMap
+
+![src/JavaOO_93.png](src/JavaOO_93.png)
+
+La interfaz **Map** no hereda de la interfaz Collection porque representa una estructura de datos de Mapeo y no de colección simple de objetos. Esta estructura es más compleja, pues cada elemento deberá venir en pareja con otro dato que funcionará como la llave del elemento.
+
+**Map**
+
+Donde:
+
+- K es el key o clave.
+- V es el value o valor.
+
+Podemos declarar un map de la siguiente forma:
+
+![src/JavaOO_94.png](src/JavaOO_94.png)
+
+Como observas solo se puede construir el objeto con tres elementos que implementan de ella: HashMap, TreeMap y LinkedHashMap dejando fuera HashTable y SortedMap. SortedMap estará fuera pues es una interfaz y HashTable ha quedado deprecada pues tiene métodos redundantes en otras clases. Mira la funcionalidad de cada uno.
+
+Como te conté hace un momento Map tiene implementaciones:
+
+- **HashMap:** Los elementos no se ordenan. No aceptan claves duplicadas ni valores nulos.
+- **LinkedHashMap:** Ordena los elementos conforme se van insertando; provocando que las búsquedas sean más lentas que las demás clases.
+- **TreeMap:** El Mapa lo ordena de forma “natural”. Por ejemplo, si la clave son valores enteros (como luego veremos), los ordena de menos a mayor.
+
+Para iterar alguno de estos será necesario utilizar la interface **Iterator** y para recorrerlo lo haremos un bucle while así como se muestra:
+
+- Para HashMap
+
+	![src/JavaOO_95.png](src/JavaOO_95.png)
+
+- Para LinkedHashMap
+
+	![src/JavaOO_96.png](src/JavaOO_96.png)
+
+- Para TreeMap
+
+	![src/JavaOO_97.png](src/JavaOO_97.png)
+
+Ahora [lee esta lectura](https://docs.oracle.com/javase/tutorial/collections/interfaces/deque.html "lee esta lectura") y en la sección de tutoriales cuéntanos en tus palabras cómo funciona Deque.
