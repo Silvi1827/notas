@@ -1044,3 +1044,209 @@ Para iterar alguno de estos será necesario utilizar la interface **Iterator**�
 	![src/JavaOO_97.png](src/JavaOO_97.png)
 
 Ahora [lee esta lectura](https://docs.oracle.com/javase/tutorial/collections/interfaces/deque.html "lee esta lectura") y en la sección de tutoriales cuéntanos en tus palabras cómo funciona Deque.
+
+## Modulo 4. Aplicar Abstracción
+### Clase 26 *Clases Abstractas*
+
+Hasta este momento hemos estado sobrescribiendo métodos a través de la herencia y las interfaces. Pero sucede que en algunos de estos casos, heredado comportamientos e una clase a otra o implementado el método de una interfaz a una clase, NO es necesario que implementemos todos los métodos. En casos anteriores el IDE nos subrayaba en rojo porque forzosamente nos pedía que implementemos todos los métodos, en ese ejemplo era solo un método pero si eran más, nuestra clase a fuerza tendría que componerse de todos los métodos declarados en la interfaz. Sin embargo, a veces, en nuestro código no necesitamos implementar todos esos métodos o, en el caso de la herencia, la clase podría no tener que heredar la implementación de un método. También, en el caso de la herencia, a veces no necesitamos crear instancias de una clases.
+
+Todos esos problemas pueden ser solucionados con las clases abstractas.
+
+**Clases Abstractas**
+
+Es una combinación entre interfaces y herencia donde no implementaremos todos los métodos ni tampoco crearemos instancias.
+
+Para crear una clase abstracta usamos la palabra reservada **abstract**, como en el siguiente ejemplo:
+
+![src/JavaOO_98.png](src/JavaOO_98.png)
+
+En este caso tenemos una clase abstracta llamada Figura de la cual pueden heredar una clase Triangulo:
+
+![src/JavaOO_99.png](src/JavaOO_99.png)
+
+Y otras clases más, como Cuadrados, Rectángulos, Hexágonos, etc. Pero según la lógica del programa, nosotros no tendríamos la necesidad de crear una instancia de la clase Figura o, tal vez, la clase Triangulo no necesaria heredar todos los comportamientos.
+
+En el proyecto que hemos trabajado hasta ahora tenemos una clase que podemos volverla abstracta y esa es la clase User. Según la lógica de negocio, las relaciones son de Paciente-Doctor o Paciente-Enfermera, en ningún lugar estaríamos manipulando la clase User como tal y eso es porque User están general, tan abstracto, que no es necesario ocupar una instancia u objeto.
+
+![src/JavaOO_100.png](src/JavaOO_100.png)
+
+Ahora, si nosotros tratáramos de instanciar la clase User:
+
+![src/JavaOO_101.png](src/JavaOO_101.png)
+
+Tendríamos que dar click sobre la primera opción, que nos abrirá una ventana:
+
+![src/JavaOO_102.png](src/JavaOO_102.png)
+
+Esa ventana nos muestra todas las opciones para poder instanciar, si elegimos uno nos genera un código:
+
+![src/JavaOO_103.png](src/JavaOO_103.png)
+
+Ahora no sabemos que significan precisamente este código, pero más adelante lo iremos descubriendo. Pero también podemos hacer uso de una forma de polimorfismo:
+
+![src/JavaOO_104.png](src/JavaOO_104.png)
+
+### Clase 27 *Miembros abstractos*
+
+Las clases abstractas y los métodos abstractos lo único que nos van a resolver, en general y de acuerdo a las reglas de nuestro negocio, la posibilidad de nunca más estar instanciando objetos de la clase padre.
+
+**Método Abstracto**
+
+Son los métodos que debemos implementar obligatoriamente cada vez que usemos nuestras clases abstractas, mientras que los métodos que no sean abstractos van a ser opcionales.
+
+Para dejar más claro volvamos a nuestro ejemplo anterior de la clase abstracta Figura que ahora tendrá un método abstracto:
+
+![src/JavaOO_105.png](src/JavaOO_105.png)
+
+De esa clase padre Figura pueden heredar múltiples cases hijas, como Cuadrado, Circulo, Triangulo y demás que obligatoriamente tendrán que heredar los métodos abstractos:
+
+![src/JavaOO_106.png](src/JavaOO_106.png)
+
+Pero si queremos ser más precisos, más definidps, podemos tener una clase hija abstracta:
+
+![src/JavaOO_107.png](src/JavaOO_107.png)
+	
+Y esa clase hija tendrá su propia subclase que heredara de ella:
+
+![src/JavaOO_108.png](src/JavaOO_108.png)
+
+**RECUERDA:**
+
+- **Las clases abstractas por defecto siempre serán clases padres y que estas nunca podremos crear objetos, solamente lo podremos hacer de las clases hijas que, por supuesto, estarán heredando de la clase abstracta padre.**
+- **Los métodos abstractos solo se pueden implementar en clases abstractas.**
+
+Ahora, de acuerdo a nuestro proyecto, nosotros tenemos únicamente una clase abstracta que es User e incluso dejamos una línea de código que dijimos era un tipo de polimorfismo:
+
+![src/JavaOO_104.png](src/JavaOO_104.png)
+
+Nosotros podemos ir a nuestra clase User y crear un método abstracto:
+
+![src/JavaOO_109.png](src/JavaOO_109.png)
+
+Los métodos abstracto ya no llevaran llaves, solo tendrán paréntesis. Cuando nosotros creamos showDataUser, nuestras clases hijas obligatoriamente tendrán que implementarlas y nos subrayara en rojo hasta que lo hagamos.
+
+El método showDataUser tendrá diferentes comportamientos dependiendo de la clase a la que pertenece. Por ejemplo, en la clase Doctor podemos imprimir el nombre del empleado, a que hospital pertenece y en qué departamento trabaja:
+
+![src/JavaOO_110.png](src/JavaOO_110.png)
+
+La clase Nurse podría imprimir el nombre del empleado, hospital al que pertenece y los departamentos asignados:
+
+![src/JavaOO_111.png](src/JavaOO_111.png)
+
+La clase Patient en cambio nos imprimirá el nombre del paciente y su historial completo, tal vez aquí podemos hacer que nos muestre su tipo de sangre o su fecha de nacimiento:
+
+![src/JavaOO_112.png](src/JavaOO_112.png)
+
+En cuanto a la línea que dejamos en el método Main lo que hace es que User adquiera la forma que otro objeto le está dando:
+
+![src/JavaOO_113.png](src/JavaOO_113.png)
+
+En este caso cree tres User que tomaran la forma del objeto Doctor, Nurse y Patient. Como podemos ver, cuando lo ejecutamos obtenemos tres distintas impresiones correspondientes a cada clase.
+
+### Clase 28 *Clases Anónimas*
+
+En este momento ya tenemos bastante claro que una de las reglas de las clases abstractas es no poder crear instancias, no poder crear objetos de ellas, pero digamos que hay un hack o una forma de instanciar una clase abstracta sin tener que utilizar sus clases hijas, aunque tienen algunas restricciones como que su ciclo de vida de la instanciación será corto, es decir, el cambio no será duradero y esto lo hacemos utilizando clases anónimas o dando una forma anónima a las clases abstractas.
+
+Las clases anónimas va totalmente de la mano con las clases abstractas, de hecho se podría decir que son lo mismo simplemente que es una forma de instanciar una clase abstracta, pero de una forma anónima sin que tenga ninguna clase hija construyendo la clase padre.
+
+En el método Main habíamos visto esté código:
+
+![src/JavaOO_103.png](src/JavaOO_103.png)
+
+Nosotros podemos hacer lo siguiente:
+
+![src/JavaOO_114.png](src/JavaOO_114.png)
+
+En donde tenemos un objeto User y es ahí mismo donde le damos el comportamiento que queremos que ese objeto tenga. Esto va a ser temporal, porque si nosotros vamos a la clase Doctor o Nurse y queremos reutilizar ese comportamiento ya no lo podemos hacer.
+
+Para llamar al comportamiento de nuestro objeto **«user»** es sencillo: nombre del objeto (**user**) seguido del operador punto y llamamos al método (**showDataUser**). 
+
+Las clases anónimas tienen muchas aplicaciones, como por ejemplo en Android con el método onclick de cuando tenemos un botón, texto o cualquier elemento que queremos sea clickable nosotros podemos hacer que automáticamente tenga el método OnClikcListener y darle el comportamiento que va a ser vigente únicamente para ese momento.
+
+Es importante mencionar que también puede ser usado en interfaces:
+
+![src/JavaOO_115.png](src/JavaOO_115.png)
+
+Podemos crear un método anónimo o podemos hacer uso del polimorfismo con algunas de las clases que hemos creado.
+
+Esto fue una de las molestias que causo la gran cantidad de código que estamos implementando que de hecho lo trae el IDE automáticamente y es una de las cosas que Java quiere mejorar por eso empezó a introducir características de la programación funcional y a partir de aquí fue el primer encuentro con Lambda.
+
+### Clase 29 *Diferencias entre las Interfaces y las Clases Abstractas*
+
+La diferencia es principalmente cuando podemos utilizar una clase abstracta y cuando utiliza una interfaz. Hablando de interfaces tenemos nuevos modificadores de acceso, default y private, esto significa que podemos añadir comportamientos a métodos de una interfaz. Entonces, una interfaz tendrá métodos con implementación y otros sin implementación exactamente igual a una clase abstracta.
+
+![src/JavaOO_116.png](src/JavaOO_116.png)
+
+Una **clase abstracta** únicamente se utiliza para definir subclases, es decir, siempre será heredada para poder ser reutilizada y rescribir métodos. Una restricción es que naturalmente no podemos crear instanciar u objetos, solamente podemos heredarla y la herencia de métodos se hará de manera lineal desde una clase padre a una clase hija. Podemos heredar métodos abstractos y no abstractos, por tanto, una clase abstracta solo servirá para redefinir nuevas clases sin necesidad de crear nuevos objetos.
+
+Una **interfaz** tendrá una estructura similar de métodos abstractos y no abstractos, pero aquí la principal diferencia será en los métodos. Estos métodos podrán implementarse en muchas familias de clases, la implementación dejara de ser lineal como se hace en las clases abstractas.
+
+![src/JavaOO_117.png](src/JavaOO_117.png)
+
+**¿Cuándo utilizaremos una Clase Abstracta o una Interfaz?**
+
+Las interfaces serán usadas para implementar métodos que se comparten entre familias, es decir, la relación va más allá de la herencia entre dos clases. En cambio, las clases abstractas serán usadas para evitar que los usuarios puedan crear objetos de la misma y nos ayuda a crear interfaces que luego pueden ser implementadas por las clases heredadas de la clase abstracta.
+
+**Nombrar una clase abstracta vs Nombrar una interfaz**
+
+![src/JavaOO_118.png](src/JavaOO_118.png)
+
+Para nombrar una clase abstracta pensaremos en los objectos, en cambio, en la interfaz pensaremos en las acciones que pueden tener en común muchos objetos.
+
+Es común encontrar interfaces con nombres como Drawable, Runnable, Callable, Visualizable. Mientras que las clases abstractas, como en nuestros proyecto, pueden tener nombres como Doctor, Nurse o Film, Publication, incluso puede haber una clase Figure de la cual heredan otras clases como Circle, Square, Triangle, etc.
+
+**Buenas Prácticas**
+
+Como vemos, la palabra que ambas compartes es **Abstracto**. 
+
+![src/JavaOO_119.png](src/JavaOO_119.png)
+
+Y algunas buenas prácticas para aplicar son:
+
+  - Que los diseños de las aplicaciones siempre estén orientados a interfaces, no a la implementación de clases.
+  - Concentrarse en crear buenas abstracciones.
+  - Intentar encontrar el comportamiento común.
+  - Enfocarse en la declaración de los métodos.
+
+Si tratamos de manera homogénea y con independencia los módulos, los programas serán mucho más escalables y eficientes.
+
+### Clase 30 *Interfaces en Java 8 y 9*
+
+Hasta el momento hemos visto diferentes niveles para aplicar la abstracción. Vimos como analizar un objeto para obtener sus atributos y propiedades de las cuales luego generaremos una clase, también tenemos un nivel que consiste en abstraer la clase para poder crear una clase aún más general que sería la clase padre y poder heredar de ella comportamientos y atributos (recordemos que las herencia no puede ser múltiple. Una clase hija solo puede tener una y solo UNA clase padre). Quien sí puede tener múltiples padres es la interfaz, este es otro tipo de abstracción, y consiste en analizar los comportamientos de una clase y abstraerlos para definir nuestras interfaces.
+
+Y esto es precisamente lo que busca la programación orientada a objetos, tener la posibilidad de estar agregando y quitando módulos, que ellos puedan vivir independientemente y que no tengamos problemas en crear nuevos. El objetivo del curso es eso, aprender a modularizar y fragmentar.
+
+Algo que debemos contar de las interfaces que han sufrido algunos cambios a partir de la versión 8 y 9 de Java. Lo que sabemos de las interfaces es que deben tener métodos abstractos y sí, todos sus métodos son abstractos incluso si no llevan la palabra reservada **abstract**, el simple hecho de que un método no tenga comportamiento ya se considera conceptualmente como un método abstracto. Sabemos también que las interfaces pueden ser implementadas, podemos generar un comportamiento a partir de la clase en la que este implementada.
+
+En Java, versión 8 y 9, vienen algunos cambios que son interesantes. El cambio está en que no todas las interfaces solamente contienen métodos abstractos, es decir, una interfaz ya no está compuesta únicamente por métodos abstractos sino que ahora podemos aplicarles modificadores de acceso (**default** para la versión 8 y **private** para la versión 9). Esto significa que ahora los métodos que viven dentro de nuestras interfaces pueden tener implementación y se les puede añadir un comportamiento, y al ser implementada esta interfaz en una clase, esa clase puede heredar el comportamiento y puede ser reutilizada.
+
+**Niveles de Acceso**
+
+Siguen las mismas reglas que hemos visto desde el comienzo del curso:
+
+![src/POO_136.png](src/POO_136.png)
+ 
+- **Modificador por defecto (default):** Es representado por el recuadro amarillo. Permite que tanto la propia clase como las clases del mismo paquete accedan a dichos componentes, es decir, puede traspasar un paquete o una carpeta (como lo son la carpeta model o ui de nuestro proyecto)
+- **Modificador privado (private):** Es representado por el recuadro rojo. Es el más restrictivo de todos, básicamente cualquier elemento de una clase que sea privado puede ser accedido únicamente por la misma clase por nada más. Es decir, si por ejemplo, un atributo es privado solo puede ser accedido por lo métodos o constructores de la misma clase. Ninguna otra clase sin importar la relación que tengan podrá tener acceso a ellos.
+
+**¿Como podemos ver esto en acción?**
+
+![src/JavaOO_120.png](src/JavaOO_120.png)
+
+Tenemos como ejemplo una interfaz genérica llamada **MyInterface** y en su interior contiene tres métodos; **defaultMethod** que es el método por defecto, **privateMehotd** que es el método privado y **normalMethod** el método abstracto.
+
+El método privateMethod vivirá únicamente dentro de la interfaz y es por eso que lo llamamos en el método default justo como lo hacemos en nuestros atributos privados. En cambio, el método defaultMethod puede ser llamado en la clase Main y nos imprimirá un saludo. El método abstracto, normalMethod, es el único que será obligatorio su implementación
+
+Y estos son los cambios que hay en las nuevas versiones. Más que cambios realmente cruciales lo que hace es abrirnos un poco el panorama y nos dice que podemos aprovecharlos o utilizarlos si queremos, pero sino también está bien. Lo que debemos hacer es usar lo que más se adapte a las reglas de nuestro negocio, de acuerdo a las abstracciones y los análisis que hayamos hecho de nuestro proyecto.
+
+### Clase 31 *Herencia en interfaces*
+
+Las interfaces pueden heredar de otras interfaces utilizando la palabra clave **extends**, el concepto de herencia se aplicará como naturalmente se practica en clases, es decir, la interfaz heredará y adquirirá los métodos de la interfaz padre.
+
+Una cosa interesante que sucede en caso de herencia con interfaces es que, aquí sí es permitido la herencia múltiple como ves a continuación:
+
+![src/JavaOO_121.png](src/JavaOO_121.png)
+
+Además siguiendo las implementaciones de métodos default y private de las versiones Java 8 y 9 respectivamente podemos sobrescribir métodos y añadirles comportamiento, si es el caso.
+
+![src/JavaOO_122.png](src/JavaOO_122.png)
