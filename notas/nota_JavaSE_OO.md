@@ -1250,3 +1250,306 @@ Una cosa interesante que sucede en caso de herencia con interfaces es que, aquí
 Además siguiendo las implementaciones de métodos default y private de las versiones Java 8 y 9 respectivamente podemos sobrescribir métodos y añadirles comportamiento, si es el caso.
 
 ![src/JavaOO_122.png](src/JavaOO_122.png)
+
+## Modulo 5. Ensamblando Objetos el proyecto
+### Clase 32 *Simulando autenticación de usuarios*
+
+Hasta el momento hemos estado trabajando en la capa de modelos durante todas nuestras clases anteriores. Recordemos que la capa de modelos maneja los objetos, las clases y tiene toda la lógica de negocio ahí impregnada, y en este momento la uniremos a la capa de User Interface que dejamos abandonado desde las primeras clases.
+
+Estuvimos haciendo ejemplos de los casos de uso que podríamos tener, como cuando un paciente agende una cita con tal doctor, así que lo primero que haremos es reorganizar nuestro menú y ahora le pondremos una simulación de autenticación. La forma en que se irán autenticando nuestros usuarios, ya sea Doctor o Paciente (porque en estos momentos serán esas dos entidades con las que estaremos trabajando) será a través de su correo electrónico.
+
+Esta es nuestra carpeta de interfaz de usuario:
+
+![src/JavaOO_123.png](src/JavaOO_123.png)
+
+A la que más adelante estaremos agregando más clases para que manejen los menú de los doctores o pacientes.
+
+En la clase UIMenu, reorganizamos nuestro método showMenu. Ahora llamaran a un nuevo método, authUser que servirá para autenticar al usuario:
+
+![src/JavaOO_124.png](src/JavaOO_124.png)
+
+El método authUser recibe un número, según la opción elegida en el método anterior showMenu. También agregamos, por el bien del ejemplo, dos listas de arreglos en donde la primera contiene a los doctores y la segunda contiene los pacientes:
+
+![src/JavaOO_125.png](src/JavaOO_125.png)
+
+Siguiendo en el método authUser, creamos una variable booleana que inicializa en falso y con un ciclo Do-While pedimos al usuario que ingrese su correo (si es correcto, la variable booleana se volverá verdadera). En el ciclo tenemos dos condicionales, para verificar si el usuario es doctor o paciente, y que además recorrerá el arrayList y nos mostrara los datos del usuario, finalmente nos redirigida al showDoctorMenu para ver las opciones que tenemos. Lo mismo ocurre con el Paciente:
+
+![src/JavaOO_126.png](src/JavaOO_126.png)
+
+Al principio de todo creamos dos variable estática global, una del tipo Doctor y otra del tipo Patient, que más tarde servirán para guardar los datos del objeto en el método authUser:
+
+![src/JavaOO_127.png](src/JavaOO_127.png)
+
+En este momentos estamos simulado que traemos datos de una fuente de datos, lo que vemos son tipos de datos que podemos usar para manejar esos datos. En este caso arrayList es excelente para manejar un arreglo de objetos.
+
+### Clase 33 *Modularizando la UI de Doctores*
+
+En estos momentos lo que estamos haciendo es la simulación de la autenticación de un usuario como si trajéramos datos de una fuente de datos, como por ejemplo una base de datos o un archivo, y por ahora la fuente de datos es invisible para nosotros y gracias a por cómo estamos acomodando este proyecto, esto será clave para que en el futuro podamos ensamblar una nueva fuente de datos.
+
+Entonces, en esta clase lo que haremos es manejar todo el menú del doctor y para eso modularizaremos creando una nueva clase:
+
+![src/JavaOO_128.png](src/JavaOO_128.png)
+
+Tenemos la clase **UIDoctorMenu** que contendrá todo lo relacionado con el menú del Doctor. Dentro creamos el método **showDoctorMenu** que nos, según la opción que elijamos, podemos realizar algunas de esas tres opciones (Agendar citas, ver las citas que tenemos programadas o salir del menú y regresar al menú principal). Además de estará la variable **response** que capturara nuestra respuesta.
+
+Después tenemos el método privado **showAddAvailableAppointmentsMenu**. Una buena práctica es poner el nombre de la clase lo más explicativa posible incluso si es largo, pero también podemos abreviarlo aunque es mejor tenerlo así para el próximo programador que vea el código o para el futuro tú:
+
+![src/JavaOO_129.png](src/JavaOO_129.png)
+
+Entonces, lo que hará este método privado es permitirnos agendar una fecha disponible para una futura cita. Nos muestra los 3 primeros meses del año (recordemos que así lo habíamos puesto) e incluso nos indica que podemos salir. Tenemos una condicional en la que ingresamos si elegimos un número del 1 al 3 (que son los números correspondientes a un mes) y nos muestra que mes hemos elegido agendar (siempre es bueno ir mostrándole al usuario su opción elegida). Ya dentro de la condicional podemos insertar la fecha y nuevamente nos muestra que fecha elegimos para agendar. Como no tenemos botones y nuestra interfaz sigue siendo por consola, nos manejaremos mediante la elección de 1 si esta correcta nuestra fecha o 2 si deseamos cambiarla.
+
+En la próxima clase podemos ver cómo funcionan las palabras reservadas **continue** o **break** para terminar de crear el menú.
+
+### Clase 34 *Definiendo las citas disponibles*
+
+En la clase anterior modularizamos la interfaz de usuario del menú del Doctor.
+
+**RECUERDA: La modularidad no solo se aplica en la capa de modelos (como lo estuvimos haciendo durante todo el curso) si no que lo podemos aplicar a todo en general y esto es una muy buena práctica que va muy de la mano con la arquitectura de software.**
+
+Entonces, continuaremos realizando toda la interfaz del usuario Doctor:
+
+![src/JavaOO_130.png](src/JavaOO_130.png)
+
+Nos quedamos en la confirmación de si es correcto o no la fecha que nuestro usuario doctor ingreso. Lo que haremos es crear una variable que capture esa respuesta (**responseDate**), después tenemos una condicional de que si la respuesta del Doctor es 2 usamos **continue** para que nos regrese nuevamente y vuelva a preguntarnos la fecha.
+
+**RECUERDA: Continue lo que hace es volver directamente al inicio sin salir del ciclo.**
+
+Lo siguiente en el menú es preguntar la hora, recordemos que lo que estuvimos haciendo para agendar se necesita fecha y hora. Y para eso creamos dos variable; una variable entera capturara la respuesta del Doctor (**responseTime**) y una variable cadena será la que capture la hora deseada (**time**).
+
+Para la hora usaremos un ciclo Do-While en le indicaremos al usuario que ingrese la hora (mostrando la fecha indicada y un ejemplo de cómo debe ser ingresado la hora). Capturamos la hora del Doctor y preguntamos nuevamente si esta correcta o no la hora ingresada, si la respuesta es 2 nos volverá nuevamente al inicio del ciclo Do-While para que podamos ingresar la hora.
+
+Ya cuando el usuario doctor indica que es correcto, es decir ingresar 1 y sale del ciclo, es cuando a nuestra variable **doctorLogged** (recordemos que es la variable estática global que guarda los datos del objeto) podrá añadir una cita (**addAvailableAppointment**) enviando los datos (**date** y **time**).
+
+Hasta este momento hemos manejado la fecha completamente como una cadena (string) y eso es lo que debemos ajustar.
+
+Nosotros habíamos dicho que toda la lógica de los datos (validaciones, etc.) debería hacerse en la clase correspondiente, por lo que no estaremos cambiando el tipo de dato en el menú del doctor, eso debemos hacerlo en la clase en donde tenemos nuestro método **addAvailableAppointment**. Y lo único que haremos es ponernos flexibles, y cambiar el Date por un String:
+
+![src/JavaOO_131.png](src/JavaOO_131.png)
+
+El cambio de tipo de dato ocurrirá en la clase anidada estática AvailableAppointment, más precisamente dentro de su método constructor:
+
+![src/JavaOO_132.png](src/JavaOO_132.png)
+
+Y lo que haremos es crear una variable (**format**) del tipo **SimpleDateFormat**, una clase que nos ayudara a darle un formato estándar a la fecha que manejara el programa.
+
+En cuanto a nuestro problema de convertir una cadena en un Date será nuestro objeto format quien nos dará la magia, específicamente nos dará dos métodos. El primero (**parse**) lo que hará es recibir una cadena y transformarlo en un tipo Date, en cambio, el segundo (**format**) lo que hace es recibir un Date y transformarlo en una cadena.
+
+![src/JavaOO_133.png](src/JavaOO_133.png)
+
+Por supuesto, como estamos transformando datos nos marcara error y es porque solicita que hagamos una prevención para manejar excepciones. Y para eso presionados Alt + Enter y elegimos el try/catch:
+
+![src/JavaOO_134.png](src/JavaOO_134.png)
+
+Hasta ahora no hemos visto que son las excepciones y esto porque lo estaremos trabajando en el curso de entrada y persistencia de datos, donde será mucho más claro y pertinente ver todos los tipos de excepciones que pueden ocurrir cuando lo estamos manejando con flujos de datos.
+
+Entonces, en este punto lo único que debemos saber que la primera parte (**try**) es donde pondremos un bloque de código que puede ser vulnerable a un error y la segunda parte (**catch**) captura el error o la excepción para evitar que se rompa el flujo del programa. El catch también nos permite tener una forma mucho más amigable de manejar los errores, como definir que nos cambie a una ventana o que valide un dato.
+
+En cuanto al caso de la hora (**time**) no debemos realizar ningún cambio ya que desde el principio trabajaos con cadenas.
+
+Aprovechando que seguimos en la clase anidada también debemos trabajar con el getDate:
+
+![src/JavaOO_135.png](src/JavaOO_135.png)
+
+Esto es porque en algunos casos necesitaremos que el **getDate** sea del tipo Date (como cuando ya estemos trabajando con fuentes de datos) mientras que en otros necesitaremos que el **getDate** sea una cadena (como cuando deseamos mostrar los datos). Y para eso usaremos el otro método de nuestro objeto format que transforma nuestro string en un tipo **Date** y pasamos como parámetro el objeto **date**. Para identificar que el getDate nos devolverá una cadena y que estamos haciendo una sobrecarga del método obligatoriamente debemos pasarle un parámetro.
+
+Entonces hasta el momento lo que estamos haciendo es insertar una fecha en el formato que deseamos, pero el objeto date persiste y nunca pierde su naturaleza, solamente ponemos validaciones para quesea mucho más amigable al trabajar con la interfaz de usuario.
+
+Lo último que haremos en esta clase es validar un arreglo de doctores con fechas disponibles, es decir, seleccionaremos únicamente a los doctores que asignaron fechas y luego lo almacenaremos en un arreglo, para eso creamos una variable estática (ya que necesitamos que el ciclo de vida de esos datos estén perdurando):
+
+![src/JavaOO_136.png](src/JavaOO_136.png)
+
+La variable será una lista de arreglo (arrayList) de objetos Doctor que contendrá únicamente los arreglos de los doctores que tienen citas disponibles. Esto será porque tal vez tengamos doctores que ingresen y revisen, pero que no quiere decir que tengan citas disponibles.
+
+Ahora crearemos un nuevo método para modularizar lo más posible nuestro programa. Recuerda, delegar responsabilidades es una buena práctica:
+
+![src/JavaOO_137.png](src/JavaOO_137.png)
+
+El método será privado ya que según su lógica existirá únicamente dentro del menú del doctor y recibirá como parámetro una variable del tipo Doctor.
+
+Dentro del método tendremos haremos la validación: si el tamaño de las citas disponibles (**AvailableAppointments**) es mayor a 0, es decir, si el doctor tiene citas **Y** si además ese doctor no existe previamente (**contains** es falso, es decir, no existe dentro de esa lista), solamente si esos dos casos se cumplen es cuando añadiremos al doctor al arreglo que hemos creado.
+
+El método **checkDoctorAvailableAppointments** lo estaremos llamando debajo de la asignación de la fecha y pasándole como parámetro el doctor logueado:
+
+![src/JavaOO_138.png](src/JavaOO_138.png)
+
+Con esto ya tenemos modularizado la interfaz del doctor y tenemos disponibles una interfaz para estar mostrando las opciones.
+
+**NOTA:**
+
+- **El método contains() es un método Java para verificar si string contiene otra subcadena o no. Devuelve un valor booleano para que pueda usarse directamente dentro de sentencias if.**
+- **La clase SimpleDateFormat nos ayuda a mostrar las fechas en el formato que queramos o a reconstruirlas a partir de una cadena de texto.**
+
+### Clase 35 *Modularizando la UI de Pacientes*
+
+Lo que haremos será correr nuestro proyecto y ver el flujo completo de la user interface del Doctor, para eso debemos primero en hacer algunas modificaciones como llamar los menús que acabamos de crear:
+
+![src/JavaOO_139.png](src/JavaOO_139.png)
+
+Tenemos listo la primera opción de nuestro menú, por lo que también debemos llamarlo en el método correspondiente:
+
+![src/JavaOO_140.png](src/JavaOO_140.png)
+
+También hemos detectado un problema en la selección del mes:
+
+![src/JavaOO_141.png](src/JavaOO_141.png)
+
+Y es que debemos el índice **monthSelected - 1**, esto porque las respuestas van desde **response** (que contiene la captura anterior a la respuesta del mes) hasta n. Por ejemplo, si nosotros eligiéramos el mes de Enero, response obtendría el valor de 1 y ese valor luego pasaría a monthSelected, pero nuestros índices van de 0 a 3 y en el arreglo el mes de Enero estaría en el índice 0, y para que corresponda entonces debemos restarle 1.
+
+Lo último es ver nuestro método Main:
+
+![src/JavaOO_142.png](src/JavaOO_142.png)
+
+En el método solo llamaremos al menú (**showMenu**) directamente, esto es una de las formas más simples y correctas de cómo debe ser manejado el método Main.
+
+Si nuestro programa corre como es debido y todo nos funciona bien sin errores, es tiempo de continuar construyendo nuestro proyecto y ahora trabajaremos con la user interfaces del Paciente, en donde haremos exactamente lo mismo que hemos estado haciendo con la interfaz del Doctor y modularizando lo más posible.
+
+Creamos una nueva clase, **UIPatientMenu**, que contendrá todo lo relacionado al menú:
+
+![src/JavaOO_143.png](src/JavaOO_143.png)
+
+Lo primero en esa clase será el método **showPatientMenu** que nos permitirá seleccionar lo que deseamos hacer, si reservamos una cita o vemos las citas que ya tenemos, similar a como lo hemos hecho con el menú del doctor.
+
+Dentro de la clase creamos un método privado que servirá para reservar las citas:
+
+![src/JavaOO_144.png](src/JavaOO_144.png)
+
+La mejor forma de guiar al usuario para seleccionar una cita disponibles que primero decirle que seleccione una fecha y es aquí en donde comienza lo interesante pues nuestro objeto Doctor tiene otra lógica.
+
+Si nos siguiéramos por el camino fácil lo que tendríamos que hacer es mostrar la lista de doctores, es lo que tenemos más a la mano según la lógica del negocio y con esto podremos solucionar nuestro problema. Y con esto podremos mostrar las fechas, solamente las fechas disponibles de los doctores que tienen citas disponibles. Entonces, lo que haremos es utilizar **Map** para tener una colección anidada, recordemos que Map se compone de un **clave-valor** y, en este caso, se compondrá por una clave y el valor será otro Map.
+
+### Clase 36 *Recorriendo estructuras de árbol en Java*
+
+Hasta el momento hemos modularizado y fragmentado nuestro proyectos en diferentes clases, esto lo hace más fácil de leer, entender y por supuesto, mucho más fácil de mantener. A continuación seguiremos trabajando con el flujo de la reservación de citas para un paciente y veremos una forma de aplicar las colecciones, específicamente los **Map** que, recordemos, son un tipo de colección de datos compuesto por **key-value**.
+
+Continuamos con nuestro proyecto y lo que haremos en crear nuestro Map:
+
+![src/JavaOO_145.png](src/JavaOO_145.png)
+
+De esta forma lo que haremos es crear una lista de doctores que agendaron fechas.
+
+Por ejemplo tenemos la siguiente lista:
+
+![src/JavaOO_146.png](src/JavaOO_146.png)
+	
+Lo que hará el Map es que, en el primer Integer o primer elemento, contendrá la numeración del Doctores disponibles (**Doctor_1**, **Doctor_2**, **Doctor_3**, etc., es decir, lo que tenemos resaltado en azul).
+
+Estos doctores a su vez tienen una lista de arreglos que contienen las fechas disponibles y es lo que contendrá el segundo Integer o segundo elemento (**Fecha-1**, **Fecha-2**, etc., es decir, lo que tenemos resaltado en naranja).
+
+Y el tercer elemento, el valor Doctor, contendrá todo lo relacionado al doctor (**Doctor_1** con sus **Fechas**, y así sucesivamente).
+
+También podemos aprovechar y dejar mejor estructurado nuestra clase Doctor llevando el **ArrayList** donde están los atributos y definiéndolo como privado:
+
+![src/JavaOO_147.png](src/JavaOO_147.png)
+
+Siguiendo con el menú del paciente, lo que haremos es crear un ciclo **for** que recorra el **doctorsAvailableAppointments**. Recordemos que ese es un ArrayList que contiene únicamente a los doctores que asignaron fechas disponibles. Para conseguir su tamaño lo que haremos es el método **size()** que nos retorna el número de elementos o el tamaño de un objeto de tipo ArrayList.
+
+Dentro del ciclo for creamos otro ArrayList, esta vez capturara únicamente las citas. Lo que hace este arreglo de lista es recorrer los doctores con citas disponibles, pide las citas y luego las asigna al ArrayList.
+
+![src/JavaOO_148.png](src/JavaOO_148.png)
+
+Creamos un nuevo Map llamado **doctorAppointments** y después otro ciclo for que recorrerá esta vez el **availableAppointments**, que es donde tenemos guardado todas las citas disponibles. Para capturar los primeros números (esos que enumeran al Doctor_1, Doctor_2, etc.) usaremos una variable entera llamada k que irá creciendo.
+
+Lo que haremos a continuación es imprimir las fechas disponibles. Y después usaremos nuestro Map, **doctorAppointments**, con el método **put()** insertaremos los de **key-value** en el mapa utilizando los valores pasados como parámetros. Es decir, nuestra **clave** (**key**) será el valor de j de nuestro ciclo en un Integer (recordemos que solo podemos usar clases, por lo que valores primitivos como int no funcionara) y nuestro **valor** (**value**) será el doctor con fechas disponibles.
+
+Luego repetimos el proceso nuevamente, pero esta vez usamos el método **put()** para pasar como clave (**key**) el valor de k y como valor (**value**) nuestro **doctorAppointments**:
+
+![src/JavaOO_149.png](src/JavaOO_149.png)
+
+Una vez que terminen todos los ciclos for, esperamos una respuesta por parte del usuario Paciente. Para eso utilizamos nuevamente el Scanner junto con una variable **responseDateSelected**, que capturara la respuesta:
+
+![src/JavaOO_150.png](src/JavaOO_150.png)
+
+**NOTA**
+
+- **Map: Nos permite representar una estructura de datos para almacenar pares "clave/valor"; de tal manera que para una clave solamente tenemos un valor.**
+- **TeeMap: Es la implementado como un árbol Rojo-Negro, un tipo de árbol binario de búsqueda equilibrada. Esto significa que se agrega un bit adicional a cada nodo que etiqueta al nodo como negro o rojo. Estas etiquetas son las que permiten que el árbol se equilibre cuando se agregan o eliminan elementos. Este equilibrio es importante porque el rendimiento está directamente relacionado con la altura del árbol. Un árbol desequilibrado tendrá una altura mayor de la necesaria, lo que comienza a afectar el rendimiento.**
+	
+	![src/JavaOO_151.png](src/JavaOO_151.png)
+
+	**Los TreeMaps en Java se ordenan automáticamente. De manera predeterminada, se ordenará según el orden natural de las claves, pero también se puede usar un comparador personalizado para crear los TreeMaps.**
+
+- **size(): Devuelve el tamaño de un ArrayList.**
+- **put(): Inserta un par clave/valor en el mapa utilizando los valores pasados como parámetros.**
+
+### Clase 37 *Agendando Citas*
+
+Continuemos recorriendo nuestro árbol **Map**, que fue una estructura de datos para lograr el requerimiento de mostrar las fechas primeros antes que los doctores, pues tuvimos que recorrer y crear una nueva estructura de datos así que la estuvimos recorriendo en la clase anterior. Vamos a seguir manejando la lógica para que nuestro paciente seleccione ya la fecha, hora y confirme la cita con el doctor.
+
+En la clase anterior nos quedamos en la variable **responseDateSeleted**:
+
+![src/JavaOO_152.png](src/JavaOO_152.png)
+
+Ahora que nuestro paciente ha seleccionado la fecha deseada, lo siguiente es guardar los datos confirmados y tener al doctor asignado a esa fecha. Para eso creamos un Map, **doctorAvailableSelected**, que obtiene los datos de la variable **doctors**. Lo siguiente es crear dos objetos, uno de tipo Integer (**indexDate**) y otro de tipo Doctor (**doctorSelected**), para luego recorrer nuestro Map recientemente creado.
+
+Para recorrer el Map usamos un foreach, en donde en **Map.Entry<K, V>** es utilizado en las iteraciones por los elementos de un Map y representa la entrada de un Map con su par clave/valor. Y **entrySe()** se utiliza para retorna un objeto de la interfaz interna Entry, que representa una pareja clave-valor.
+
+Con **getKey()** obtenemos la clave de la entrada y **getValue()** retorna el valor de la entrada:
+
+![src/JavaOO_153.png](src/JavaOO_153.png)
+
+Ya una vez obtenido los datos, lo siguiente que haremos es confirmar que están correctamente seleccionados y para eso imprimimos el nombre del doctor junto con la fecha y la hora de la cita. Y preguntamos al usuario si deseamos confirmar esa cita o si deseamos cambiar los datos, la respuesta la guardaremos en la variable **response**.
+
+A partir de aquí ya podemos poner la lógica de que si el usuario confirma, es decir, elige el 1 entonces agendamos la cita:
+
+![src/JavaOO_154.png](src/JavaOO_154.png)
+
+Para poder hacer la lógica de que confirmación tenemos que irnos a la clase **Patient** y crearnos un ArrayList que contendrá las citas ejecutadas por el usuario. Recordemos que podemos agendar citas tanto con doctores como con enfermeros, así que debemos tener dos arreglos.
+
+Generamos los Getters y Setters de los arreglos, en el setters es donde haremos uno cambios: en primer lugar el parámetro que recibe son el Doctor, fecha y tiempo, y en su interior creamos una instancia de **AppointmentDoctor** cuyos parámetros serán los datos del paciente y el doctor:
+
+![src/JavaOO_155.png](src/JavaOO_155.png)
+
+En **AppointmentDoctor** creamos nuestro método constructor que este habilitado con los datos del paciente y el doctor:
+
+![src/JavaOO_156.png](src/JavaOO_156.png)
+
+También podemos aprovechar para concatenar "**hrs.**" a nuestro **getTime()**, así cada vez que estemos obteniendo el tiempo se imprimirá directamente. Además, a nuestro método **schedule** le podemos instanciar la fecha y la hora, es decir, hasta que este método no sea llamado no se podrá verdaderamente guardar las fechas y horas de reservación para las citas:
+
+![src/JavaOO_157.png](src/JavaOO_157.png)
+
+Hasta el momento se puede decir que reservamos al doctor, pero sin seleccionar fecha u hora. Este es otro caso que puede ocurrir; reservar doctores sin fecha para las citas. Entonces, una vez sea elegido la fecha y hora, le pasamos esos datos al **scheduble** y una vez se ejecute completamente, lo agregamos a nuestro ArrayList, **appointmentDoctors()**, que acabamos de construir:
+
+![src/JavaOO_158.png](src/JavaOO_158.png)
+
+Ahora agregamos la lógica para que podamos guardar nuestras citas. Lo que haremos primero es ir a menú para acceder al paciente logeado y finalmente al **addAppointmentDoctors** en donde enviaremos por tres parámetros; el primero será el doctor seleccionado, el segundo será la fecha con el parámetro **null**, porque nos devolverá un objeto de tipo date que es necesario para el schedule de nuestra cita, y el tercera será la hora de la cita.
+
+Una vez que todo eso sea ejecutado y la cita sea guardada, mostraremos nuevamente el menú del paciente:
+
+![src/JavaOO_159.png](src/JavaOO_159.png)
+
+Ahora solo necesitamos llamar al **showBookAppointmentMenu** en nuestro menú principal, y como bono también trabajaremos en el menú para visualizar nuestras citas agendadas:
+
+![src/JavaOO_160.png](src/JavaOO_160.png)
+
+Para visualizar nuestra citas agendadas debemos crear un método público (public) y estático (static) llamado **showPatientMyAppointments** en el que crearemos la lógica del menú. También ponemos algo para indicarle al usuario que se encuentra en el menú de citas.
+
+Usando la condicional if, validaremos si nuestro usuario tiene citas disponibles o no para poder visualizarlo. Si el paciente NO tiene citas disponibles, nos imprimirá un mensaje en pantalla, pero en caso de que el paciente SI tenga citas disponibles creamos un for con el cual recorreremos el array de nuestras citas.
+
+Dentro del for tenemos una variable j que nos servirá únicamente para enumerar las citas cuando sean impresas en pantalla. Mientras que lo imprimido serán la fecha, hora y el doctor.
+
+Una vez finalizado todo, ya sea que tuviera o no citas, mostramos la opción de indicarle al usuario que puede regresar al menú principal del paciente:
+
+![src/JavaOO_161.png](src/JavaOO_161.png)
+
+### Clase 38 *Cierre del curso: Continúa con Programación Funcional en Java*
+
+Para terminar nuestro curso, solo necesitamos modificar algunas partes de la aplicación y ver cómo funciona. Para eso iremos al UIMenu, que es nuestro menú principal, y llamamos al menú del paciente:
+
+![src/JavaOO_162.png](src/JavaOO_162.png)
+
+Y adicional, cuando ingresamos como paciente nos trae el nombre completo (nombre y apellido), pero podemos modificarlo para que solo nos imprima el nombre.
+
+![src/JavaOO_163.png](src/JavaOO_163.png)
+
+Ahora sí…
+
+**¡Felicitaciones por terminar el Curso de Introducción a Java SE!**
+
+En este curso aprendimos a implementar los 4 pilares de la programación orientada a objetos en Java con un proyecto para agendar citas médicas.
+
+Recuerda resolver los ejercicios, completar el examen, darle 5 estrellas a la profesora y compartir tu proyecto, notas, dudas y comentarios en la sección de discusiones.
+
+No olvides que puedes continuar tu ruta de aprendizaje de Java con los siguientes cursos:
+
+- Curso de Java SE: Programación Funcional
+- Curso de Java SE: Persistencia de Datos
