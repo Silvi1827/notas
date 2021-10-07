@@ -894,3 +894,153 @@ Tomemos el siguiente código como ejemplo:
 Tenemos una variable **«nombre»** y deseamos imprimir el tamaño de caracteres, pero esa variable «nombre» también puede contener referencias nulas. Antes de conseguir el tamaño de caracteres, tenemos que verificar su nullabilidad. Para eso creamos una nueva variable, **«caracterNombre»**, que contendrá la longitud de caracteres y usamos el Operador Elvis.
 
 SI nuestra variable «nombre» es nula, entonces se devolverá el valor por defecto que en este caso es 0. Pero si «nombre» NO es nula, entonces obtendremos el tamaño de caracteres.
+
+## Modulo 15. Collections en Kotlin
+### Clase 21 *Listas*
+
+Una **lista** es una colección genérica de elementos que se caracteriza por almacenarlos de forma ordenada, donde pueden existir duplicados (incluso un ítem null) y se indexan los elementos con base 0.
+
+Su diseño es representado por la interfaz genérica **List< E >**, la cual hereda las operaciones base para colecciones de **Collection< E >**:
+
+![src/kotlinCero_55.png](src/kotlinCero_55.png)
+
+Si deseas crear una lista debes primero definir si será de solo lectura o mutable.
+
+**Lista de solo lectura**
+
+Similar a las variables de solo lectura o inmutables, una **lista de solo lectura** (***read-only list***) puede ser consultada luego de ser inicializada, pero no te permite el uso de comandos para cambiar su estado. Es decir, en una lista de solo lectura no seremos capaces de eliminar ni modificar elementos, solo agregarlos.
+
+Para crear una lista de solo lectura usa la función **listOf()**, la cual recibe como argumentos un grupo de ítems de un mismo tipo. Por ejemplo, crear una lista que contendrá nombres se vería así:
+
+![src/kotlinCero_56.png](src/kotlinCero_56.png)
+
+Al inicializar una lista cuyo contenido sea claro, es posible omitir el tipo parametrizado. Por lo que en el caso anterior puedes remover el **< String >**.
+
+![src/kotlinCero_57.png](src/kotlinCero_57.png)
+
+**Miembros de List**
+
+Para acceder al estado de la lista puedes usar los siguientes miembros básicos:
+
+- **size** para obtener la cantidad de elementos de la lista
+- **lista[index]** para obtener el elemento ubicado en ***index***. Esta es la construcción para el operador de acceso posicional **get(index)**
+- **indexOf(element)** para obtener el índice de la primera ocurrencia de ***element***. Si no se encuentra el elemento especificado dentro de la lista, nos devolverá un -1
+- **lastIndexOf(element)** para obtener el índice de la última ocurrencia del ***element***
+- **subList(fromIndex, toIndex)** para obtener una porción de la lista en el rango ***[fromIndex, toIndex)***
+
+![src/kotlinCero_58.png](src/kotlinCero_58.png)
+
+El tamaño de la lista es 5 como **size** lo indica. El operador **get(1)** retorna el nombre Mikey, pero nuestro IntelliJ IDEA nos recomendará usar la notación de corchetes como hicimos con **listaDeNombres[0]**.
+
+![src/kotlinCero_59.png](src/kotlinCero_59.png)
+
+El índice de **"Draken"** es 2, ya que usamos al 0 como base. **lastIndexOf("Chifuyu")** será 4, si por ejemplo el elemento **"Chifuyu"** no existiera dentro de la lista, entonces estaríamos recibiendo un -1. Y el **subList(0, 2)** obtiene los elementos "Takemichi" y "Mikey" debido a que el índice 2 se excluye de la obtención.
+
+**Lista Mutable**
+
+Una lista mutable es representada por la interfaz **MutableList< E >**. Como puedes intuir, este tipo de listas además ser consultadas como List< E >, te permiten añadir, cambiar y remover elementos.
+
+![src/kotlinCero_63.png](src/kotlinCero_63.png)
+
+Para crear una lista mutable usa la función **mutableListOf()** pasando el grupo de ítems de inicio. Y si deseas alterar el contenido usa los siguientes métodos:
+
+- **add(element)** para añadir un nuevo ítem en la parte superior de la lista
+- **add(index, element)** para insertar a ítem en un índice
+- **removeAt(index)** para eliminar ítem en un índice
+- **[index] = element**, para reemplazar un ítem en el índice. Esta construcción es equivalente al operador **set(index, element)**
+
+Por ejemplo, supón que tenemos una lista de strings vacía. Si practicamos las operaciones anteriores podríamos moldear el contenido de la lista así:
+
+![src/kotlinCero_60.png](src/kotlinCero_60.png)
+
+Las operaciones anteriores muestra el estado de los elementos en la lista y como varía su orden en cada comando. Se inicializa la lista completamente vacía, sin ningún elemento y por lo cual especificamos el tipo, luego añadimos los elementos "Tormenta" y "Lluvia", en ese orden. Después, al inicio añadimos "Cielo", removemos a "Lluvia" de la posición 2 y cambiamos "Tormenta" por "Nube".
+
+Al final usamos la función de extensión **sortDescending()** para ordenar en forma descendente a los ítems.
+
+**Arreglos**
+
+Si venimos de otros lenguajes de programación de seguro ya habremos conocido el concepto de arreglos. Los **arreglos** (***arrays***) es una estructura con valores de datos, que están almacenados de forma contigua en memoria. Todos los elementos son referenciados por un mismo nombre y tienen el mismo tipo de dato.
+
+Los elementos estarán indexados tomando como base el 0 y el tamaño declarado del arreglo será fijo.
+
+![src/kotlinCero_61.png](src/kotlinCero_61.png)
+
+Kotlin usa la clase genérica **Array< T >** para representar arreglos. Crear instancias con un tipo parametrizado usa los siguientes métodos:
+
+- **arrayOf(vararg elements : T):** recibe un argumento variables con elementos de tipo T y retorna el arreglo que los contiene.
+- **arrayOfNulls(size : Int):** crea un arreglo de tamaño size con elementos de tipo T e inicializa los valores con null
+- **emptyArray():** crear un arreglo vacío con el tipo T
+
+Por ejemplo, supongamos que tenemos un arreglo que contiene cinco elementos números:
+
+![src/kotlinCero_62.png](src/kotlinCero_62.png)
+
+Si nosotros imprimiéramos ese arreglo como normalmente lo haríamos obtendremos algo un poco extraño. Esto se debe a que el arreglo es una estructura de datos muy básica a diferencia de las listas no nos permite obtener una visualización exacta, sino que nos muestra el código en **bytecode**. Es sencillo confundirse con este tipo de cosas, por eso Kotlin nos aconseja que utilicemos lista.
+
+De todas formas, si nosotros quisiéramos imprimir el valor del arreglo lo que necesitaríamos hacer es convertirlo en lista con la función **toList()**.
+
+### Clase 22 *Como ordenar listas con las funciones que tiene Kotlin*
+
+En esta clase veremos algunas funciones de extensión que provee la librería entandar para ordenar nuestras listas en Kotlin. Esto con el fin de facilitar el manejo de las mismas en tus aplicaciones.
+
+**Orden Natural**
+
+El orden natural es el que se establece para aquellos tipos que implementan a la interfaz Comparable. La mayoría de tipos básicos de Kotlin tienen orden natural, por lo que son de gran utilidad al momento de usar funciones de ordenamiento.
+
+A continuación veremos dos funciones que te permiten aplicar este concepto:
+
+- **Función sorted():** Retorna una lista ordenada (en forma ascendente) de los elementos que se encuentran en la colección invocadora.
+- **Función sortedDescending():** Como el nombre lo sugiere, **sortedDescending()** hace exactamente lo mismo que **sorted()**, solo que con un orden descendente en los elementos de la colección invocadora.
+
+Considera la lista de número enteros para una lotería, **numerosDeLoteria = [27, 59, 80, 33, 18, 7, 69, 96]**, y la necesidad de ordenar a sus elementos en ordenes tanto ascendentes como descendentes según la recta numérica (orden natural). Aplicamos las funciones, sorted() y sortedDescending(), en Kotlin tendríamos el siguiente código:
+
+![src/kotlinCero_64.png](src/kotlinCero_64.png)
+
+**Orden Personalizado**
+
+El orden personalizado se refiere a determinar particularmente la preponderancia de un elemento de cualquier tipo frente a otro. Esto quiere decir que cuando el orden natural no satisface tus necesidades, entonces defines por tu cuenta el criterio de ordenamiento. O si deseas establecer orden para objetos no comparables.
+
+Las siguientes son funciones que materializan este mecanismo:
+
+- **Función sortedBy():** Ordena en forma ascendente los elementos de una colección, basado en el orden natural del selector pasado como parámetro. Esta retorna en una lista de solo lectura con el ordenamiento final.
+- **Función sortedByDescending():** **sortedByDescending()** es la versión de **sortedBy()** para en un ordenamiento descendente. Pasa como parámetro el selector que mapee a los elementos de una colección a instancias comparables y así retornar una lista de solo lectura.
+- **Función sortedWith():** Retorna en una lista ordenada de acuerdo a la instancia Comparator pasada como argumento.
+
+Siguiendo con nuestro ejemplo anterior, supongamos que deseamos ordenar nuestra lista de números de lotería según a aquellos números que son menores a 50:
+
+![src/kotlinCero_65.png](src/kotlinCero_65.png)
+
+**Función shuffled()**
+
+La función de extensión **shuffled()** baraja los elementos de una colección y retorna una lista con el nuevo orden aleatorio.
+
+Supongamos que tenemos una lista que contiene los números de lotería y deseamos ordenarlos aleatoriamente en una nueva lista, utilizando la función shuffled() tenemos el siguiente código:
+
+![src/kotlinCero_66.png](src/kotlinCero_66.png)
+
+**Función reversed()**
+
+La función de extensión **reversed()** retorna una lista con los elementos en orden invertido de la colección invocadora. Puedes invocarla en varios tipos como arreglos, listas y strings.
+
+Consideramos una lista que contiene a los números de lotería. Si deseamos invertir sus elementos escribimos el siguiente código:
+
+![src/kotlinCero_67.png](src/kotlinCero_67.png)
+
+**La Función map()**
+
+La función de orden superior **map{ }** nos permite aplicar una función sobre todos los elementos de una colección con el fin de una nueva colección con el cálculo final.
+
+Por ejemplo, tenemos la lista de números de enteros para una lotería, **numerosDeLoteria = [27, 59, 80, 33, 18, 7, 69, 96]**, y queremos generar una lista de mensajes con cada elemento:
+
+![src/kotlinCero_68.png](src/kotlinCero_68.png)
+
+**Función filter()**
+
+La función de extensión **filter()** te permite filtrar los ítems de una colección de elementos a partir de un predicado como argumento. El predicado afirma o niega expresiones sobre el sujeto (cada elemento de la colección). Si un elemento satisface al predicado, entonces es incluido en el resultado final.
+
+Teniendo en cuenta nuestra lista de números de lotería, supongamos que deseamos filtrar aquellos números que son mayores a 50:
+
+![src/kotlinCero_69.png](src/kotlinCero_69.png)
+
+### Clase 23 *Maps*
+### Clase 24 *Sets*
