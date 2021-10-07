@@ -1043,4 +1043,184 @@ Teniendo en cuenta nuestra lista de números de lotería, supongamos que deseamo
 ![src/kotlinCero_69.png](src/kotlinCero_69.png)
 
 ### Clase 23 *Maps*
+
+Un **maps** (***mapa***) es una colección que almacena sus elementos (entradas) en forma de pares clave-valor.
+
+Esto quiere decir que a cada clave le corresponde un solo valor y será única como si se tratase de un identificador.
+
+![src/kotlinCero_70.png](src/kotlinCero_70.png)
+
+La ilustración anterior muestra la correspondencia entre una colección de claves a una de valores. Por ejemplo, la entrada **«Name» -> «Catrina»** sería un habitante del mapa.
+
+***OBS.: Los mapas no tienen que ver con la función maps que hemos estado viendo en clases anteriores.***
+
+**Mapas Mutables e Inmutables**
+
+La interfaz que representa a los mapas inmutables en Kotlin es **Map< K, V >**. Donde los parámetros de tipo **K** y **V** representan a los tipos para claves (propiedad **keys**) y valores (propiedad **values**).
+
+![src/kotlinCero_71.png](src/kotlinCero_71.png)
+
+Esta definición solo te provee acceso de solo lectura, por lo que solo podrás usar comportamientos de consulta.
+
+Para crear un mapa de solo lectura usa una de las formas de la función **mapOf()**.
+
+Los mapas **mutables** te otorgan el poder de usar comandos de operaciones sobre los elementos como agregar, actualizar y remover entradas. El diseño de esta figura la encuentras en la interfaz **MutableMap< K, V >**, la cual extiende de **Map< K, V >**.
+
+![src/kotlinCero_72.png](src/kotlinCero_72.png)
+
+Crea una instancia de un mapa mutable con el método **mutableMapOf()**.
+
+Por ejemplo, crearemos dos mapas que contengan las edades de varios superhéroes:
+
+![src/kotlinCero_73.png](src/kotlinCero_73.png)
+
+En donde los nombres (***Tony Stark, Peter Parker, Rhodey Rhodes***) son las **claves** y las edades (***46, 15, 48***) son los **valores**.
+
+**RECUERDA: Las claves pueden tener múltiples valores, pero los valores solo pueden pertenecer a una única clave.**
+
+**Operaciones de lectura**
+
+Los siguientes son atributos y métodos que te permiten consultar el estado de tus mapas:
+
+- **entries:** retorna un tipo Set< Entry< K, V > > de solo lectura de todos los pares clave-valor
+- **keys:** retorna un Set< K > de solo lectura de todas las claves
+- **size:** retorna el número de entradas en el mapa
+- **values:** retornar una Collection< V > de solo lectura con los valores en el mapa
+
+Si imprimes todas las propiedades del ejemplo anterior tendrás lo siguiente:
+
+![src/kotlinCero_74.png](src/kotlinCero_74.png)
+
+Por el lado de los métodos de lectura tienes a:
+
+- **mapa[clave]:** Esta sintaxis permite obtener el valor a partir de la clave en el corchete. Es la construcción equivalente al operador get(clave)
+- **getOrDefault(key, defaultValue):** Obtiene el valor correspondiente a la clave, de lo contrario retorna a defaultValue
+- **isEmpty():** Retorna true si el mapa no contiene entradas y false en caso contrario
+- **containsKey(key):** Retorna true si key existe en el mapa. Esto es equivalente a usar el operador in al comprar la clave frente al mapa
+- **containsValue(value):** Retorna true si una o varias claves se relacionan con value
+
+Observa algunos ejemplos:
+
+![src/kotlinCero_75.png](src/kotlinCero_75.png)
+
+El tipo de retorno del operador **get()** es anulable, por lo que si no encuentra el elemento obtendrás **null** como se muestra en la segunda impresión.
+
+Tanto **containsKey()** como **containsValue()** pueden reemplazarse con el operador **in**.
+
+**Añadir y actualizar entradas**
+
+Usa el método **put(key, value)** para asociar la clave key con el valor value. Si la clave no existe la entrada es añadida al mapa, de lo contrario el valor es actualizado.
+
+![src/kotlinCero_76.png](src/kotlinCero_76.png)
+
+Sin embargo IntelliJ IDEA te recomendará usar al operador [ ] junto con la clave para añadir o actualizar.
+
+**Remover entradas**
+
+En este caso usa el método **remove(key)** para remover la entrada del mapa. Por ejemplo, eliminemos la entrada para "Rhodey Rhodes":
+
+![src/kotlinCero_77.png](src/kotlinCero_77.png)
+
+Otra variante del método es **remove(key, value)** donde se remueve el elemento con la clave key solo si su valor actual es value. El retorno será true si es eliminado o false en caso negativo.
+
+![src/kotlinCero_78.png](src/kotlinCero_78.png)
+
+**Recorrer un mapa**
+
+Debido a la naturaleza de los mapas en Kotlin, es posible desestructurar las declaraciones que comprometan a sus entradas en valores individuales.
+
+Un ejemplo claro de esto es recorrer sobre los elementos de un mapa en un **bucle for**:
+
+![src/kotlinCero_79.png](src/kotlinCero_79.png)
+
+Como ves, convertimos a la sintaxis (**hero**, **age**) cada entrada de **edadSuperHeroes**, con el fin de utilizar ambos elementos en el cuerpo del bucle.
+
+Esto también es aplicable para la declaración de lambdas. Es posible expresar como lista de parámetros el par clave-valor. Por ejemplo, si usamos la función **forEach()** sobre el mapa para imprimir su contenido:
+
+![src/kotlinCero_80.png](src/kotlinCero_80.png)
+
+Pasamos como sección de parámetros el combinado (**hero**, **age**) para que el cuerpo del lambda imprima en cada iteración a la entrada.
+
 ### Clase 24 *Sets*
+
+Un **conjunto** o **set** es una colección de elementos sin ordenar que no soporta duplicados. Puedes ver este diseño conceptual como el modelo de los conjuntos matemáticos.
+
+**Sets de solo lectura**
+La interfaz genérica **Set< E >** es la que representa a los conjuntos de solo lectura en el paquete **kotlin.collections**. Al igual que List, Set extiende de **Collection< E >**:
+	
+![src/kotlinCero_81.png](src/kotlinCero_81.png)
+
+Para crear un conjunto de solo lectura usa la función **setOf()** y pasa como argumento la cantidad de elementos que albergará.
+
+![src/kotlinCero_82.png](src/kotlinCero_82.png)
+
+**Igualdad de conjuntos**
+
+Dos conjuntos son iguales aunque sus elementos hayan sido incluidos en un orden diferente o la inicialización tenga copias.
+
+![src/kotlinCero_83.png](src/kotlinCero_83.png)
+
+El primer conjunto de números positivos contiene tres apariciones del número 4 al crear la instancia, sin embargo la construcción interna solo toma un valor.
+
+Y también puedes comprobar que {1, 2, 3} = {2, 3, 1}.
+
+**El Método contains()**
+
+Para expresar la notación **«a pertenece a A»** usa el método **contains(element)** sobre el conjunto, para determinar si **element** pertenece. El operador **in** también cumple con esta evaluación.
+
+Por ejemplo:
+
+![src/kotlinCero_84.png](src/kotlinCero_84.png)
+
+Ahora, si deseas comprobar si pertenece un subconjunto usa el método containsAll(elements):
+
+![src/kotlinCero_85.png](src/kotlinCero_85.png)
+
+**Sets mutables**
+
+Si necesitas añadir y remover elementos de un set debes crear instancias que implementen la interfaz **MutableSet< E >** a través del método **mutableSetOf()**.
+
+Al igual que **setOf()**, la función **mutableSetOf()** recibe los elementos que habitarán en el conjunto. También puedes optar por crear un conjunto vacío pero especificando el tipo parametrizado:
+
+![src/kotlinCero_86.png](src/kotlinCero_86.png)
+
+Si no especificas el argumento del tipo explícitamente para setVacio el compilador de Kotlin se quejará de la ausencia de información para la inferencia.
+
+**Añadir elementos**
+
+Agrega elementos al conjunto a través del método **add()** o usando los operadores de adición (**+**) o adición compuesta (**+=**) de las colecciones:
+
+![src/kotlinCero_87.png](src/kotlinCero_87.png)
+
+Recuerda que no se permiten los duplicados para los tipos Set, por lo que añadir un elemento existente no tendrá efecto.
+
+**Remover elementos**
+
+Como es normal usa el método **remove()** para remover elementos de un conjunto. O similar a la agregación, usa el operador de resta (**-**) o resta compuesta (**-=**) para conseguir el mismo resultado.
+
+![src/kotlinCero_88.png](src/kotlinCero_88.png)
+
+Tanto **add()** como **remove()** retornan un tipo Boolean, por lo que si las operaciones fueron exitosas tendrás true, de lo contrario false.
+
+**Operaciones entre conjuntos**
+
+- **La Función union()**
+  
+	La función infix **union()** toma como argumentos dos colecciones y retorna en un conjunto con todos los elementos que pertenezcan a ambas.
+
+	![src/kotlinCero_89.png](src/kotlinCero_89.png)
+	
+	La colección que actúa como operando izquierdo se ubica de primera en los índices.
+		
+- **La Función intersect()**
+  
+	Si deseas aislar solo los elementos que estén presentes en dos colecciones, entonces usa la función **intersect()**. El resultado será en conjunto intermedio de coincidencias:
+	
+	![src/kotlinCero_90.png](src/kotlinCero_90.png)
+	
+- **La Función subtract()**
+  
+	Cuando necesites calcular la diferencia entre dos colecciones usa la función **subtract()**. El valor de retorno de A subtract B es el conjunto que resulta de eliminar de A cualquier elemento que esté en B.
+
+	![src/kotlinCero_91.png](src/kotlinCero_91.png)
+		
