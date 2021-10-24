@@ -1076,7 +1076,7 @@ Por ejemplo, crearemos dos mapas que contengan las edades de varios superhéroes
 
 En donde los nombres (***Tony Stark, Peter Parker, Rhodey Rhodes***) son las **claves** y las edades (***46, 15, 48***) son los **valores**.
 
-**RECUERDA: Las claves pueden tener múltiples valores, pero los valores solo pueden pertenecer a una única clave.**
+***RECUERDA: Las claves pueden tener múltiples valores, pero los valores solo pueden pertenecer a una única clave.***
 
 **Operaciones de lectura**
 
@@ -1209,7 +1209,7 @@ Tanto **add()** como **remove()** retornan un tipo Boolean, por lo que si las op
 	La función infix **union()** toma como argumentos dos colecciones y retorna en un conjunto con todos los elementos que pertenezcan a ambas.
 
 	![src/kotlinCero_89.png](src/kotlinCero_89.png)
-	
+
 	La colección que actúa como operando izquierdo se ubica de primera en los índices.
 		
 - **La Función intersect()**
@@ -1222,5 +1222,573 @@ Tanto **add()** como **remove()** retornan un tipo Boolean, por lo que si las op
   
 	Cuando necesites calcular la diferencia entre dos colecciones usa la función **subtract()**. El valor de retorno de A subtract B es el conjunto que resulta de eliminar de A cualquier elemento que esté en B.
 
-	![src/kotlinCero_91.png](src/kotlinCero_91.png)
-		
+	
+	
+
+## Modulo 6. Libera el potencial de las funciones
+### Clase 25 *¿Qué son las funciones?*
+
+En clases anteriores ya hemos visto cómo utilizar funciones como maps, list, y en enteros y cadenas de textos, pero estas funciones vienen con el lenguaje. Ahora aprenderemos a como crear nuestras propias funciones desde cero.
+
+**¿Qué es una función?**
+
+Kotlin es un lenguaje que te permite aplicar estilos de programación funcional en tus aplicaciones. Por ello la función es una herramienta indispensable.
+
+Una **función** es un conjunto de instrucciones que realizan una tarea específica, empaquetadas como unidad. Esta puede ser llamada en el lugar donde sea que la necesites para ejecutar las sentencias.
+
+**Sintaxis de una función**
+
+El siguiente ejemplo muestra la sintaxis de declaración de una función en Kotlin:
+
+![src/kotlinCero_92.png](src/kotlinCero_92.png)
+
+La anterior función eleva al cuadrado un parámetro entero.
+
+La declaración comienza con la palabra clave fun y se conforma de:
+
+![src/kotlinCero_93.png](src/kotlinCero_93.png)
+
+- **Nombre de la función:** Es el nombre que eliges para la función con el fin de esclarecer su propósito
+- **Lista de parámetros:** Datos de entrada para la función. Defínelos como ***nombre:tipo*** y sepáralos por comas.
+- **Tipo de retorno:** Tipo de dato de salida de la función. Una función con un cuerpo de bloque de código, siempre debe tener su tipo definido.
+- **Cuerpo de la función:** Son todas las sentencias que realizan la tarea para llegar al resultado final de retorno. Usa la expresión ***return*** para devolver el valor.
+
+**Todas las funciones en Kotlin devuelven un valor**
+
+Ya sabemos que ***return*** es la expresión que utilizamos para que la función nos devuelva un valor, pero también tenemos ***unit***.
+
+**Unit** es la palabra reservada análoga a **void** en Java. Esto determina que una función no retorna valor.
+
+Por ejemplo, crear una función que imprima si un carácter es una vocal o no.
+
+![src/kotlinCero_94.png](src/kotlinCero_94.png)
+
+La solución propuesta, usa una expresión **when** para comprobar si el parámetro de tipo Char coincide con las vocales. Sin embargo, como no deseamos retornar un valor significativo hacia el exterior, usamos como tipo de retorno **Unit**.
+
+**Omitir tipo Unit**
+
+Aunque el compilador de Kotlin no puede realizar inferencias de tipos con funciones con cuerpo de bloques de código, el tipo Unit es una excepción, es posible omitirlo de la declaración debido a su naturaleza.
+
+La anterior función la puedes reescribir sin él:
+
+![src/kotlinCero_95.png](src/kotlinCero_95.png)
+
+### Clase 26 *Funciones y funciones de extensión*
+
+La forma de invocar a una función es escribir el nombre en el punto del flujo donde requieras ejecutar las instrucciones y pasarle los argumentos con que se declaró.
+
+Por ejemplo, creamos una función llamada **randomCase()** que transformara nuestra frase para que sea completamente mayúscula o minúscula dependiendo de un número aleatorio, y lo llamaríamos de esta forma:
+
+![src/kotlinCero_96.png](src/kotlinCero_96.png)
+
+Por supuesto, si nosotros solamente llamáramos a ***randomCase(fraseAleatoria)*** no nos imprimiría la frase, por lo que encerramos nuestra función invocada dentro de un println(). Otra forma sería creando una nueva variable que contendría el valor que nos devolvió nuestra función:
+
+![src/kotlinCero_97.png](src/kotlinCero_97.png)
+
+E imprimiéramos esa variable.
+
+Dependiendo de nuestro código, tendremos ocasiones en las que es mejor guardar el valor retornada de nuestra función en una variable o utilizarla directamente.
+
+También, podemos acortar nuestro código y modificar nuestro retorno. Similar a cuando asignamos nuestro **if** a una variable, podemos utilizar **return** y el resultado de nuestro if será lo devuelto por la función:
+
+![src/kotlinCero_98.png](src/kotlinCero_98.png)
+
+Ahora, digamos que queremos imprimir nuestra función con la randomCase(), para eso creamos otra función esta vez llamada **impimirFrase()**:
+
+![src/kotlinCero_99.png](src/kotlinCero_99.png)
+
+**Función de Extensión**
+
+Una **función de extensión** es una función que extiende las funcionalidades de una clase, con la introducción de un nuevo parámetro llamado: parámetro recibidor.
+
+Este parámetro se incorpora a la sintaxis, declarando su tipo, seguido de un punto y luego el nombre de la función:
+	
+![src/kotlinCero_103.png](src/kotlinCero_103.png)
+
+En otras palabras, una función de extensión es una función que puede ser llamada como miembro de una clase, pero está definida por fuera de ella.
+
+Por ejemplo, utilizamos nuevamente nuestra función **randomCase()**, pero en este caso como una función de extensión:
+
+![src/kotlinCero_100.png](src/kotlinCero_100.png)
+
+La función de extensión **randomCase()** usa como tipo de recibidor a ***String***. En su cuerpo puede acceder a ***this*** para referirse al objeto recibidor. Este te permitirá acceder a los miembros de los objetos que usarán esta función.
+
+![src/kotlinCero_101.png](src/kotlinCero_101.png)
+
+Llamamos a la función de extensión mediante el operador punto (.), donde no será necesario pasar ningún parámetro a diferencia de las funciones regulares. Por ejemplo:
+
+![src/kotlinCero_102.png](src/kotlinCero_102.png)
+
+### Clase 27 *Tipos de parámetros en las funciones*
+
+Hemos hablando sobre funciones y funciones de extensión, pero lo que no sabemos hasta ahora es que, dependiendo de la función que nosotros deseamos crear, podemos tener distintos tipos de parámetros. Como lo son los ***parámetros por defectos*** o los ***parámetros nombrados***.
+
+**Argumentos nombrados**
+
+Es posible especificar el nombre de los argumentos que deseas usar en la llamada de tu función.
+
+Para ello usamos la sintaxis de argumentos nombrados:
+
+![src/kotlinCero_104.png](src/kotlinCero_104.png)
+
+Por ejemplo, tenemos una función que imprime el nombre y el apellido que nosotros pasamos por los parámetros:
+
+![src/kotlinCero_105.png](src/kotlinCero_105.png)
+
+Pero esa especificaciones que vemos pertenecen a nuestro IntelliJ, si compartiéramos este código y lo abrieran en otro entorno de desarrollo no se sabría a qué parámetros pertenecen los valores que pasamos.
+
+Kotlin nos brinda la opción solucionar este problema, llamamos a **imprimirNombre()** pasando el valor de los parámetros con la sintaxis para argumentos nombrados:
+
+![src/kotlinCero_106.png](src/kotlinCero_106.png)
+
+Los argumentos nombrados pueden ser utilizados simplemente para que quede claro que es cada parámetro en una llamada a una función sin tener que mirar ni la definición ni la documentación. Pero también para pasar valores a los parámetros desordenados indicándolos por su nombre para no tener que utilizar la posición en la que están definidos.
+
+**Argumentos por defecto**
+
+Para declarar una función con valores por defecto en sus parámetros, usa el operador igual (=) seguido por el valor por defecto en la declaración.
+
+Por ejemplo, supongamos que tenemos un arreglo con los nombres de unos clientes y deseamos crear una función que retorne un elemento de acuerdo al índice. Además de ello, deseamos que retorne el ítem de la posición cero, si el argumento no es proveído.
+
+En el siguiente código ilustramos el caso:
+
+![src/kotlinCero_107.png](src/kotlinCero_107.png)
+
+Como vemos, al asignar el parámetro con un valor en su declaración, tienes la posibilidad de omitir el valor del argumento en la llamada de **loadCustomer()**.
+
+### Clase 28 *Lambdas*
+
+Una **función lambda** es un literal de función que puede ser usado como expresión. Esto quiere decir, una función que no está ligada a un identificador y que puedes usar como valor.
+
+Por ejemplo, si tenemos la función ***f(s) = s + 2***, en Kotlin podemos expresarla como una declaración de función separada, así:
+
+![src/kotlinCero_108.png](src/kotlinCero_108.png)
+
+Al ser reescrita como lambda, tendrías lo siguiente:
+
+![src/kotlinCero_109.png](src/kotlinCero_109.png)
+
+Definir la función de esta forma te permitirá usarla como un valor en diferentes situaciones, como pasarla como argumento de una función o almacenarla en una variable.
+
+La sintaxis de un literal lambda va al interior de dos llaves {}. Sus componentes son:
+
+- **Lista de parámetros:** Cada parámetro es una declaración de variable, aunque esta lista es opcional
+- **Operador de flecha ->:** Se omite si no usas lista de parámetros
+- **Cuerpo del lambda:** Son las sentencias que van luego del operador de flecha
+
+![src/kotlinCero_110.png](src/kotlinCero_110.png)
+
+La anterior sintaxis de la imagen se puede leer como **«para cada par de s y t corresponde el valor 2 * ( s + t )­»**.
+
+**Sintaxis de tipos función**
+
+La declaración de un tipo función en su forma base, se compone de los tipos de los argumentos que toma en paréntesis, el operador -> y el tipo que retorna.
+
+![src/kotlinCero_111.png](src/kotlinCero_111.png)
+
+Por ejemplo, un tipo función cuyo par de argumentos String corresponde un resultado String:
+
+![src/kotlinCero_112.png](src/kotlinCero_112.png)
+
+Uno que toma un entero como parámetro pero no tiene retorno particular sería:
+
+![src/kotlinCero_113.png](src/kotlinCero_113.png)
+
+O si existe un tipo función sin parámetros que retorna un Double:
+
+![src/kotlinCero_114.png](src/kotlinCero_114.png)
+
+**Almacenar lambda en variable**
+
+El tipo función nos abre un nuevo abanico de posibilidades. Y una de ellas es el almacenamiento de instancias tipo función en variables.
+
+Como caso particular, veamos instancias escritas como funciones lambda .
+
+Por ejemplo, si deseamos saber la cantidad caracteres que tiene una cadena de texto, podemos almacenar la lambda así y después imprimir su resultado en pantalla:
+
+![src/kotlinCero_115.png](src/kotlinCero_115.png)
+
+En este ejemplo pasamos un **String** como parámetro, pero retornamos un entero (**Int**).
+
+Otro ejemplo sería el siguiente:
+
+![src/kotlinCero_116.png](src/kotlinCero_116.png)
+
+En el que tenemos una lista de saludos en diferentes idiomas y aplicamos **map()** para pasarle por parámetro nuestra función lambda. Esto crea una conexión entre el map() y la lambda, el código ejecutara nuestra función pasando como argumento del String cada elemento de la lista.
+
+Nos resulta muy útil cuando queremos realizar una serie de operaciones para varias listas y, en lugar de estar repitiendo código, solo los estaremos definiéndolo una sola vez y devolviéndonos el resultado deseado.
+
+**Lambda como argumento**
+
+Tratar a la funciones como pequeñas piezas de código con lambdas, nos permite la flexibilidad de pasar funciones como argumentos de otras funciones (funciones de orden superior).
+
+Por ejemplo, supongamos que se nos presenta el problema de contar la cantidad de caracteres 'e' dentro de "develou.com".
+
+La solución más común sin refactorizar, sería recorrer en un bucle for la cadena, con un condicional en su interior. Sin embargo existe la función **CharSequence.count()**, a la cual podemos pasarle un lambda que represente el predicado propuesto en nuestro problema:
+
+![src/kotlinCero_117.png](src/kotlinCero_117.png)
+
+El predicado ***char -> char == 'e'*** se podría leer como «al parámetro char corresponde su resultado de igualdad con 'e'». Y el resultado de este código será la cantidad de 'e' que tiene la cadena de texto.
+
+**Omitir paréntesis de función**
+
+Si la expresión lambda es el último argumento en la función, puedes escribir las llaves por fuera del paréntesis:
+
+![src/kotlinCero_119.png](src/kotlinCero_119.png)
+
+Y si los paréntesis están vacíos, entonces puedes omitirlos completamente:
+
+![src/kotlinCero_120.png](src/kotlinCero_120.png)
+
+**Omitir tipo del parámetro**
+
+Si el contexto permite la inferencia de tipo del parámetro en la lambda, entonces puedes omitirlo del bloque.
+
+En nuestro ejemplo, el compilador puede llegar a determinar que el parámetro **char** es ***Char*** por la comparación de igualdad, por lo que podemos omitirlo:
+
+![src/kotlinCero_121.png](src/kotlinCero_121.png)
+
+**El identificador it**
+
+Cuando tu lambda usa un único argumento y no piensas cambiar su nombre por cuestiones de legibilidad, puedes usar el identificador it.
+
+Esta variable se deduce implícitamente con el tipo inferido por el compilador y puedes referirte a ella como tu parámetro.
+
+Por ejemplo, si cambiamos el parámetro explicito **char** por **it** tendrías:
+
+![src/kotlinCero_122.png](src/kotlinCero_122.png)
+
+**Lambdas con múltiples líneas**
+
+Es posible escribir una lambda con varias líneas en su cuerpo. Solo pon las expresiones dentro del paréntesis normalmente. La última línea será el resultado del lambda.
+
+Por ejemplo, expandamos el predicado para **count()** y antepongamos una línea donde imprimas cada carácter procesado:
+
+![src/kotlinCero_123.png](src/kotlinCero_123.png)
+
+### Clase 29 *High Order functions*
+
+Una **función de orden superior** (*High Order Function*), es una función que puede recibir como argumento una o más funciones y/o retornar una función como resultado.
+
+![src/kotlinCero_124.png](src/kotlinCero_124.png)
+
+Esto es posible gracias a los tipos función que Kotlin incluye en su gramática.
+
+**Tomar funciones como argumentos**
+
+Para recibir argumentos en una función, agrega a la firma uno o varios parámetros de tipo función.
+
+El fin es ejecutar la función entrante, realizarle una llamada y hacer el uso correspondiente de su resultado.
+
+Por ejemplo, supongamos que queremos obtener la longitud de una cadena de texto:
+
+![src/kotlinCero_125.png](src/kotlinCero_125.png)
+
+En este código creamos una función de orden superior cuyo primer parámetro es el valor (**valorInicial**) del String que será medido. El segundo parámetro **block** es una función del tipo **(String) -> Int**, es decir, que toma como parámetro un String y nos retorna un entero (Int).
+
+Al llamar a **superFuncion()** en **main()**, pasamos por el primer parámetro la cadena de texto a ser medida y por el segundo parámetro un lambda que se encargara de calcular la cantidad de caracteres que tiene nuestra String.
+
+Como en este ejemplo hemos pasado ***«Xiao, el guardián Yaksha»*** la impresión en pantalla será ***24***, su longitud total.
+
+**Retornar funciones desde funciones**
+
+Retornar un tipo función desde una función de orden superior tiene la misma sintaxis de un retorno regular.
+
+Defines el tipo en la firma de la función y en el bloque de código de la misma, usas la expresión **return** para especificar el literal de función o referencia que será devuelto como valor.
+
+Por ejemplo, tendremos una función al que enviaremos un nombre y nos ese mismo nombre junto a un saludo en pantalla:
+
+![src/kotlinCero_126.png](src/kotlinCero_126.png)
+
+Creamos una función de orden superior que recibe un parámetro **nombre**. Esta función nos devolverá una lambda del tipo **() -> String**, lo que significa que es una función sin parámetros que nos retorna una cadena de texto. En el **return** ponemos entre llaves **{ }** la cadena de texto que será devuelta.
+
+Finalmente en **main()** declaramos una **lambda** en la cual llamaremos a la **funcionInception()**, pero como el retorno es una función lo que necesitaremos hacer es invocar el valor de la lambda para poder obtener nuestro resultado, para eso creamos una variable **valorLambda** e invocamos nuestra **lambda()**. Y finalmente imprimimos el valorLambda.
+
+Como en este ejemplo el nombre que enviamos es ***«Hu Tao»***, en pantalla se imprimirá el 
+
+mensaje de ***Hola desde la lambda, Hu Tao***.
+
+## Modulo 7. Scope functions
+### Clase 30 *Let*
+
+La **función let** es una función que crea un alcance temporal para un objeto en el interior de un bloque de código. Esto quiere decir, que puedes referirte al objeto sin usar su nombre debido a que es el parámetro de la función lambda pasada a let.
+
+![src/kotlinCero_127.png](src/kotlinCero_127.png)	
+
+Como vez en su declaración, let:
+
+- Es una función genérica con argumentos **T** y **R**
+- Es una **función inline**
+- Es una función de extensión del tipo recibidor **T**
+- Recibe como parámetro un tipo función **(T)-> (R)**
+- Retorna como resultado a **R**
+	
+Ya que let ejecuta a block pasando la expresión this del objeto recibidor, es como si crearas un espacio de escritura para tus sentencias asociadas al objeto.
+
+![src/kotlinCero_128.png](src/kotlinCero_128.png)
+
+**Función let y tipos anulables**
+
+La función let también es de utilidad para ejecutar sentencias sobre tipos anulables en conjunto con el operador de acceso seguro(.?).
+
+Si el objeto recibidor no es null, entonces las sentencias del lambda que pasaste como bloque de código son ejecutadas, de lo contrario no habrá acción.
+
+Por ejemplo, tenemos una variable nombre del tipo nullable que queremos imprimir en pantalla:
+
+![src/kotlinCero_129.png](src/kotlinCero_129.png)
+
+La función let tratará a la variable como si fuese no aceptara nulos en todo el alcance del lambda, de esta forma te evitas la comprobación de nulidad en cada línea del bloque de código.
+
+Y si es null, entonces el parámetro block de let() no será ejecutado.
+
+### Clase 31 *With*
+
+La **función with** es otra de las funciones de alcance proveídas por la librería estándar de Kotlin. Su objetivo es ayudarte a simplificar el uso de múltiples operaciones sobre un objeto:
+
+![src/kotlinCero_130.png](src/kotlinCero_130.png)
+
+**with** toma como primer parámetro al objeto **receiver** y al tipo función **block**. De esta forma las sentencias de block son aplicadas sobre receiver y el resultado final será **R**.
+
+![src/kotlinCero_131.png](src/kotlinCero_131.png)
+
+Aunque la función provee un resultado, JetBrains recomienda ejecutarla para aislar las acciones sobre el contexto de un objeto y no tanto para especificar el resultado en la lambda pasada como argumento.
+
+**Ejemplo con función with**
+
+Para representar el uso de la función with en Kotlin, usaremos una lista llamada **colores**.
+
+Como es costumbre, accederíamos a la propiedad con el punto después del nombre de la instancia. Sin embargo, con la función with es posible pasar a nuestra lista como objeto recibidor y aplicar cada asignación omitiendo el nombre.
+
+![src/kotlinCero_132.png](src/kotlinCero_132.png)
+
+De esta forma evitamos llamar a nuestra variable en varias listas.
+
+Recuerda que podemos omitir los paréntesis del parámetro block de with y cambiarlo por la función lambda directamente, ya que es el último parámetro en la firma. Con eso en mente, el lambda con recibidor te permite acceder a la lista **colores** y obtener la cantidad de elementos. Esto mejora la legibilidad del bloque de código y acorta cada expresión.
+
+Cabe resaltar que **with** es similar a ***run***, solo que run es una función de extensión. Esto permite usar el operador de acceso seguro en el caso de que la variable estuviese definido con el tipo anulable:
+
+![src/kotlinCero_133.png](src/kotlinCero_133.png)
+
+### Clase 32 *Run*
+
+La **función run** hace parte de las funciones de alcance que Kotlin te provee para mejorar la legibilidad y hacer más conciso tu código.
+
+Al igual que la función let, toma una función lambda como parámetro, ejecuta sus sentencias y retorna como resultado el valor computado desde R.
+
+![src/kotlinCero_134.png](src/kotlinCero_134.png)
+
+La única diferencia es que el parámetro block es un tipo función con recibidor, por lo que debes usar la expresión this para referirte al objeto recibidor.
+
+![src/kotlinCero_135.png](src/kotlinCero_135.png)
+
+En el ejemplo anterior podemos usar this para referirnos al contenido del String y acceder directamente a length, ya que el objeto recibidor de la lambda es el contexto del alcance en el bloque de código.
+
+**Ejemplo con función run**
+
+Para representar el uso de la función run en Kotlin, usaremos una lista llamada **moviles**.
+
+Nuestra lista moviles contendrá una serie de elementos  (marcas y modelos de teléfonos móviles), y supongamos que nosotros deseamos eliminar de la lista todos los moviles con una marca especifica:
+
+![src/kotlinCero_136.png](src/kotlinCero_136.png)
+
+Como vemos, run nos permite una forma más sencilla y legible de sacar elementos no necesarios de nuestra lista. Esto resulta bastante útil cuando tengamos una llamada a servidor o librería, y de alguna forma lo hemos convertido en una lista y deseamos hacer alguna operación antes de utilizarla para algún otro propósito.
+
+**La función run sin lambda con recibidor**
+
+La **función run{}** tiene otra firma donde no está escrita como función de extensión, sino que simplemente ejecuta el bloque de código que le pasemos como lambda en el parámetro block:
+
+![src/kotlinCero_137.png](src/kotlinCero_137.png)
+
+Esta retorna el valor de la última línea en el cuerpo de la lambda proveída como argumento.
+
+Por ejemplo, supongamos que deseamos escribir las sentencias para obtener el promedio de la lectura de dos temperaturas.
+
+Ya que dicha expresión es asignable, podemos escribirlas al interior de run para verlas como un bloque asociado:
+
+![src/kotlinCero_138.png](src/kotlinCero_138.png)
+
+Como vemos, run nos permite empaquetar la asignación a computo, con el fin de comprender mejor la responsabilidad de la secuencia de pasos, a la hora de obtener el promedio.
+
+### Clase 33 *Apply*
+
+El propósito de la **función apply** es tomar como alcance al objeto recibidor T sobre el que es invocado, aplicar las sentencias del parámetro block que recibe sobre dicho contexto y retornar el mismo objeto modificado.
+
+![src/kotlinCero_139.png](src/kotlinCero_139.png)
+
+Como vemos, el cuerpo del tipo función a pasar es Unit, esto significa que no es necesario especificar un resultado en la última línea de la lambda con recibidor que pases como argumento.
+
+Para referirte al recibidor, usa la expresión this y así tendrás acceso a los miembros.
+
+![src/kotlinCero_140.png](src/kotlinCero_140.png)
+
+La función apply trabaja similar a with, solo que apply es una función de extensión y retorna al objeto recibidor como resultado.
+
+Esto te permite inicializar propiedades cuando creas u obtienes instancias de una clase e incluso encadenar operaciones subsecuentes.
+
+**Ejemplo con la función apply**
+
+Tomemos como ejemplo nuestra lista de móviles de la clase anterior:
+
+![src/kotlinCero_141.png](src/kotlinCero_141.png)
+
+Podemos ver que obtenemos el mismo resultado de la clase pasada y no tuvimos que poner el valor de this al final del lambda.
+
+La función apply es de una manera similar al with, excepto que apply si acepta valores nullables.
+
+Por ejemplo, tenemos una lista nullable llamada colores, con apply podemos acceder directamente a las propiedades:
+
+![src/kotlinCero_142.png](src/kotlinCero_142.png)
+
+Esto nos ayuda a evitar acceder a las propiedades y modificar variables, se recomienda que utilicemos apply para convertir tipos nullables a tipos no nullables.
+
+**Función apply en Android**
+
+La función apply es de gran utilidad cuando obtienes referencias de views en Android o las creamos desde el código.
+
+Por ejemplo, supongamos que requerimos crear un CheckBox dinámicamente en un fragmento que maneja la creación de cuentas para tus usuarios.
+
+Usando apply, puedes setear las propiedades necesarias para construcción:
+
+![src/kotlinCero_143.png](src/kotlinCero_143.png)
+
+Habrán propiedades cuyo mutador set() sea privado y no puedas acceder con el acceso de punto, por lo que debes usar directamente los métodos de asignación como setPadding().
+
+### Clase 34 *Also*
+
+La **función also** es otra función de alcance, cuyo objetivo es permitirte añadir acciones adicionales sobre un objeto, a través de una lambda regular como parámetro.
+
+Su uso se traduce a «y también hacer lo siguiente con el objeto».
+
+![src/kotlinCero_144.png](src/kotlinCero_144.png)
+
+La declaración de su firma es la siguiente:
+
+![src/kotlinCero_145.png](src/kotlinCero_145.png)
+
+Al igual que apply, also retorna al objeto recibidor T como resultado y es una función de extensión. Salvo que block es un tipo función regular y usaremos la referencia it para T.
+
+**Ejemplo con la función also**
+
+Para ejemplificar el uso de la función also{} podemos tomar nuestra lista de móviles:
+
+![src/kotlinCero_146.png](src/kotlinCero_146.png)
+
+En este caso usamos also para imprimir los elementos de nuestra lista en su orden original y luego encadenamos nuestra lista a asReversed() para que invierta el orden. Finalmente imprimimos nuevamente nuestra lista, en este caso tendremos como resultado dos mensajes en pantalla; nuestra lista con sus elementos ordenamos tal cual ingresamos y otra lista ya con los elementos invertidos.
+
+## Modulo 8. Proyecto: Bola 8 mágica
+### Clase 35 *Creando el menú de nuestra bola mágica*
+Creando el menú de nuestra bola mágica
+Hemos llegado al momento de trabajar en el proyecto de este curso, nuestra Magic 8-Ball creada en Kotlin.
+
+La **Magic 8-Ball** (en español, *Bola 8 Mágica*) se utiliza para adivinar o pedir consejo. Fue inventada en 1946 por Albert C. Carter y Abe Bookman. Consiste en que el usuario hace una pregunta sí-no a la bola para luego recibir una respuesta positiva, negativa o dudosa.
+
+En nuestro proyecto, el siguiente código contiene las once posibles respuestas que el usuario puede obtener:
+
+![src/kotlinCero_147.png](src/kotlinCero_147.png)
+
+Primeramente tenemos tres variables constantes; **Afirmativo**, **Negativo** y **Dudoso** en el que se agruparan nuestras respuestas. Después creamos una variable **respuestas** que contendrá la colección de nuestras posibles respuestas, almacenadas en los pares clave-valor.
+
+**Menú de nuestro proyecto**
+
+Lo primero que crearemos será el menú que el usuario visualizara cuando inicie el programa:
+
+![src/kotlinCero_148.png](src/kotlinCero_148.png)
+
+Imprimimos en pantalla el mensaje de bienvenida, luego con **do-while** creamos el menú donde tendremos un mensaje con las opciones que podemos realizar. Usar do-while nos ayudara a que nuestro programa no se detenga y nos muestre continuamente el menú hasta que ingresemos la opción para salir.
+
+Luego creamos una variable ***valorIngresado*** que contendrá el dato ingresado por el teclado del usuario a través de **readLine()**. Con el **when** realizamos algunas de las siguientes acciones dependiendo del valor ingresado por el usuario:
+
+- La opción **1** llamara a la función ***realizarPregunta()***
+- La opción **2** llamara a la función ***mostrarRespuestas()***
+- La opción **3** nos imprimirá un mensaje de despedida y se detendrá el programa
+- Por último, si ninguna de esas opciones es ingresada, el programa nos imprimirá un mensaje para selecciones una opción correcta.
+
+**Leer entradas del usuario**
+
+Para leer los datos desde el teclado del usuario, Kotlin utiliza la función ***readLine()***.
+
+redLine() monitorea indefinidamente el flujo de entrada, hasta que se confirme la escritura de bytes con la tecla ENTRAR. El resultado retornado es un String anulable.
+
+Si se quiere tomar el valor numérico del texto introducido, será necesario convertirlo (por ejemplo, usando **.toInt()**).
+
+### Clase 36 *Contestando aleatoriamente*
+
+**Haciendo las preguntas a nuestro proyecto**
+
+Siguiendo con nuestro proyecto, crearemos la función ***realizarPregunta()***:
+
+![src/kotlinCero_149.png](src/kotlinCero_149.png)
+
+Lo que hace esta función es imprimirnos un mensaje donde le pida al usuario ingresar la pregunta que desea realizarle a la Bola 8 Mágica.
+
+Después tenemos una variable **respuestaGenerada** que contendrá la respuesta aleatoriamente obtenida, para eso vamos a llamamos a nuestra colección **respuestas** con el método **keys** retornaremos una clave y la función de extensión **random()** nos aseguraremos de que sea un elemento aleatorio de la colección. Una vez obtenido la respuesta, lo imprimimos en pantalla con el **println()**.
+
+***RECOMENDACIÓN: Un truco útil que nos ayudara a ahorrar tiempo es situarnos sobre la función a crear y presionar Alt + Enter, IntelliJ IDEA nos dará la opción de que cree la función y esto nos permitirá salvar unos segundos que podemos utilizar para ser más productivos a la hora de crear código.***
+
+**Mostrando las respuestas que contiene el proyecto**
+
+La segunda función en la que trabajaremos será ***mostrarRespuesta()***:
+
+![src/kotlinCero_150.png](src/kotlinCero_150.png)
+
+Al llamar a esta función lo primero que tendremos será un mensaje donde le pediremos al usuario que seleccione que tipo de respuestas desea revisar y creamos una variable opcionIngresada que contendrá el dato que el usuario ha ingresado por teclado.
+
+Con **when** tendremos diferentes acciones dependiendo de la opción ingresada:
+
+- La opción **1** nos imprimirá todas las respuestas que contiene nuestro programa
+- La opción **2** nos imprimirá las respuestas afirmativas que contiene nuestro programa
+- La opción **3** nos imprimirá las respuestas dudosas que contiene nuestro programa
+- La opción **4** nos imprimirá las respuestas negativas que contiene nuestro programa
+- Finalmente, si el usuario ingresa otro dato que no está entre las opciones, el programa imprimirá un mensaje de que la opción no es válida y regresaremos al menú principal.
+
+Tal vez te preguntes por qué llamamos siempre a la misma función en diferentes opciones, y esto es porque, como vemos, enviamos a través del parámetro diferentes valores y esto provoca que el programa nos de diferentes respuestas.
+
+Siguiendo con nuestra función, ahora trabajaremos en la función ***mostrarRespuestaPorTipo()***:
+
+![src/kotlinCero_151.png](src/kotlinCero_151.png)
+
+Esta función tendrá como parámetro **tipoDeRespuesta** cuyo valor por defecto será la cadena **"TODOS"**. Dentro de la función tendremos un when que será la encargada de darnos nuestras respuestas diferentes:
+
+- En caso de que ningún valor sea proveído al parámetro, se utiliza el valor ***TODOS*** que llamara a la colección **respuesta** y con el método **keys** retornaremos las claves. Con el **forEach** recorreremos nuestra colección para imprimir las respuestas.
+- Si el valor proveído al parámetro es **RESPUESTA_AFIRMATIVA**, llamaremos a la colección **respuesta** y con **filterValues** filtraremos únicamente las respuestas cuyo valor sea positivo, es decir, cuyo value dentro de la colección sea RESPUESTA_AFIRMATIVA. Finalmente con **also** imprimiremos los valores de esta colección.
+- Si el valor proveído al parámetro es **RESPUESTA_NEGATIVA**, llamaremos a la colección **respuesta** y con **filterValues** filtraremos únicamente las respuestas cuyo valor sea negativo, es decir, cuyo value dentro de la colección sea RESPUESTA_NEGATIVA. Finalmente con **also** imprimiremos los valores de esta colección.
+- Si el valor proveído al parámetro es **RESPUESTA_DUDOSA**, llamaremos a la colección **respuesta** y con **filterValues** filtraremos únicamente las respuestas cuyo valor sea dudoso, es decir, cuyo value dentro de la colección sea RESPUESTA_DUDOSA. Finalmente con **also** imprimiremos los valores de esta colección.
+
+**Cadenas de líneas múltiples en Kotlin**
+
+En ocasiones es necesario crear literales de String que posean múltiples líneas y que sean interpretadas en su forma plana (raw strings). Esto puedes lograrlo usando la sintaxis de triple doble comillas (""") para encerrar el conjunto de caracteres.
+
+Una forma de ahorrarnos el llamar continuamente print() o println(), o incluso los "\n" que tenemos regados por todo nuestro código cuando queremos imprimir una cadena con múltiples líneas, es haciendo uso del **trimIndent()** o **trimMargin()**:
+
+- **trimIndent()**
+  
+	Detecta un sangrado mínimo común de todas las líneas de entrada, lo elimina de cada línea y también elimina la primera y la última línea si están en blanco (note la diferencia entre blanco y vacío).
+	
+	Tengamos en cuenta que las líneas en blanco no afectan al nivel de sangría detectado.
+	
+	En caso de que haya líneas no en blanco sin caracteres de espacio en blanco (sin ninguna sangría), entonces la sangría común es 0, y por lo tanto esta función no cambia la sangría.
+	
+	No conserva las terminaciones de línea originales.
+
+- **trimMargin()**
+  
+	Recorta los caracteres de espacio en blanco iniciales seguidos de marginPrefix de cada línea de una cadena de origen y elimina la primera y la última línea si están en blanco (observe la diferencia en blanco frente a vacío).
+	
+	No afecta a una línea si no contiene marginPrefix excepto la primera y la última línea en blanco.
+	
+	No conserva las terminaciones de línea originales.
+
+Pongamos el siguiente código como ejemplo, tenemos dos cadenas de líneas múltiples que deseamos imprimir en pantalla:
+
+![src/kotlinCero_152.png](src/kotlinCero_152.png)
+
+Como vemos, el **trimMargin()** elimina todos espacios en blanco usando usa como referencia el prefijo '|' como delimitador de las márgenes. Mientras que el **trimIndent()** nos entrega una sangría después del salto de línea.
+
+### Clase 37 *¿Cómo continuar tu camino en Kotlin?*
+
+**FELICIDADES!!! FELICIDADES!!! FELICIDADES!!!**
+
+Hasta aquí el curso de Kotlin desde Cero.
+
+A lo largo hemos aprendido sobre Kotlin, como función y sus sintaxis.
+
+Tal vez el proyecto no haya sido tan largo, pero nosotros seguiremos aprendiendo y utilizando este conocimiento para nuestros futuros proyectos de Backend o Android.
