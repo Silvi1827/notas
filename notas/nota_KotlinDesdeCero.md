@@ -1503,9 +1503,7 @@ Creamos una función de orden superior que recibe un parámetro **nombre**. Esta
 
 Finalmente en **main()** declaramos una **lambda** en la cual llamaremos a la **funcionInception()**, pero como el retorno es una función lo que necesitaremos hacer es invocar el valor de la lambda para poder obtener nuestro resultado, para eso creamos una variable **valorLambda** e invocamos nuestra **lambda()**. Y finalmente imprimimos el valorLambda.
 
-Como en este ejemplo el nombre que enviamos es ***«Hu Tao»***, en pantalla se imprimirá el 
-
-mensaje de ***Hola desde la lambda, Hu Tao***.
+Como en este ejemplo el nombre que enviamos es ***«Hu Tao»***, en pantalla se imprimirá el mensaje de ***Hola desde la lambda, Hu Tao***.
 
 ## Modulo 7. Scope functions
 ### Clase 30 *Let*
